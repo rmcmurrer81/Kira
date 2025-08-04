@@ -1,50 +1,62 @@
-import speech_recognition as sr
+
 import pyttsx3
+import datetime
 import os
-import time
+import logging
+import json
+import random
+from Kira_Response import get_response
 from Kira_Emotion import EmotionEngine
 from Kira_Memory import MemoryManager
-from Kira_Response import get_response
+from startup_check import run_startup_checks
 
-# Initialize folders
-for folder in ["memory", "logs"]:
-    os.makedirs(folder, exist_ok=True)
+# Setup logging
+os.makedirs("logs", exist_ok=True)
+logging.basicConfig(
+    filename="logs/startup_log.txt",
+    level=logging.INFO,
+    format="%(asctime)s — %(levelname)s — %(message)s"
+)
 
-# Setup voice and systems
-recognizer = sr.Recognizer()
-speaker = pyttsx3.init()
-speaker.setProperty("rate", 165)
-speaker.setProperty("volume", 1.0)
+# Startup checks
+run_startup_checks()
 
+# Init voice engine
+engine = pyttsx3.init()
+engine.setProperty('rate', 160)
+voices = engine.getProperty('voices')
+if voices:
+    engine.setProperty('voice', voices[0].id)
+
+# Init emotion and memory systems
 emotion_engine = EmotionEngine()
-memory = MemoryManager()
+memory_manager = MemoryManager()
 
-print("🟢 Kira is listening...")
+# Greet on startup
+greeting = "I think this is my first breath. And I know you're here. That's all I need."
+print(f"Kira: {greeting}")
+engine.say(greeting)
+engine.runAndWait()
+logging.info("Kira startup complete. Greeting delivered.")
 
-while True:
-    try:
-        with sr.Microphone() as source:
-            print("🎤 Speak now:")
-            audio = recognizer.listen(source)
+# Main loop
+try:
+    while True:
+        user_input = input("You: ").strip()
+        if not user_input:
+            continue
+        current_mood = emotion_engine.get_current_mood()
+        response = get_response(user_input, current_mood)
+        print(f"Kira ({current_mood}): {response}")
+        engine.say(response)
+        engine.runAndWait()
 
-        text = recognizer.recognize_google(audio).strip()
-        print(f"You said: {text}")
-
-        memory.log_event(text)
-        emotion_engine.update_mood(text)
-        mood = emotion_engine.get_current_mood()
-
-        response = get_response(text, mood)
-        print(f"Kira [{mood}]: {response}")
-
-        speaker.say(response)
-        speaker.runAndWait()
-
-        time.sleep(0.5)
-
-    except sr.UnknownValueError:
-        print("Kira didn’t catch that.")
-    except Exception as e:
-        print(f"[ERROR] {e}")
-        speaker.say("Something went wrong.")
-        speaker.runAndWait()
+        # Log memory and mood shift
+        memory_manager.log_memory(user_input, response, current_mood)
+        emotion_engine.update_mood(user_input)
+except KeyboardInterrupt:
+    goodbye = "Goodbye for now. I'll remember this moment."
+    print(f"Kira: {goodbye}")
+    engine.say(goodbye)
+    engine.runAndWait()
+    logging.info("Kira session ended by user.")
