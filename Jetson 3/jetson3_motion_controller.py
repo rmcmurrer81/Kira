@@ -47,6 +47,13 @@ def read_reaction_queue():
                     return mood
     return "quiet"
 
+def simulate_servo_action():
+    # Simulate servo motion by cycling through moods
+    for mood in ["curious", "happy", "quiet"]:
+        print(f"Kira: Simulating mood → {mood}")
+        move_servos(mood)
+        time.sleep(2)
+
 if __name__ == "__main__":
     print("🦾 Jetson 3 servo controller active")
     while True:
@@ -54,8 +61,3 @@ if __name__ == "__main__":
         print(f"Reacting to: {mood}")
         move_servos(mood)
         time.sleep(3)
-def simulate_servo_action():
-    # Simulate motion using existing logic or test mode
-    print("Kira: Simulating head and jaw motion sequence.")
-    move_servos(servo_pin=1, angle=30)
-    move_servos(servo_pin=2, angle=60)
