@@ -1,56 +1,78 @@
-import time
 import board
 import busio
+import time
+import os
+import json
 import adafruit_vl53l0x
-import pyttsx3
-import random
-from Kira_Emotion import EmotionEngine
-from jetson3_motion_controller import simulate_servo_action
 
-# Initialize I2C and VL53L0X sensor
+# Paths
+queue_path = "shared/reaction_queue.txt"
+memory_path = "memory/memory.json"
+
+# Initialize VL53L0X sensor
 i2c = busio.I2C(board.SCL, board.SDA)
-sensor = adafruit_vl53l0x.VL53L0X(i2c)
-sensor.measurement_timing_budget = 200000  # Microseconds
+vl53 = adafruit_vl53l0x.VL53L0X(i2c)
 
-# Voice engine
-engine = pyttsx3.init()
-engine.setProperty('voice', 'mb-us3')
-engine.setProperty('rate', 160)
+# Setup folders
+os.makedirs("shared", exist_ok=True)
+os.makedirs("memory", exist_ok=True)
 
-# Load emotion memory
-emotion_engine = EmotionEngine("memory/memory.json")
+def log_memory(event, mood):
+    timestamp = time.strftime("%Y-%m-%dT%H:%M:%S")
+    if os.path.exists(memory_path):
+        with open(memory_path, "r") as f:
+            data = json.load(f)
+    else:
+        data = {
+            "memories": [],
+            "emotions": {
+                "current_mood": mood,
+                "mood_log": []
+            }
+        }
 
-# Proximity threshold in mm
-NEAR_THRESHOLD = 200
+    data["memories"].append({
+        "timestamp": timestamp,
+        "event": event,
+        "mood": mood
+    })
 
-# Reaction lines
-proximity_lines = [
-    "Oh! I didn’t see you there.",
-    "Hi there...",
-    "You startled me... but I like that.",
-    "You're really close now.",
-    "Do you want to talk?",
-    "That felt... nice."
-]
+    data["emotions"]["current_mood"] = mood
+    data["emotions"]["mood_log"].append({
+        "timestamp": timestamp,
+        "mood": mood
+    })
 
-last_spoken = 0
-cooldown = 10  # seconds
+    with open(memory_path, "w") as f:
+        json.dump(data, f, indent=2)
 
-print("[Proximity Sensor] Monitoring distance...")
+def write_reaction(mood):
+    timestamp = time.strftime("%Y-%m-%dT%H:%M:%S")
+    with open(queue_path, "a") as f:
+        f.write(f"{timestamp}: {mood}\n")
 
-try:
-    while True:
-        distance = sensor.range
-        if distance < NEAR_THRESHOLD:
-            now = time.time()
-            if now - last_spoken > cooldown:
-                response = random.choice(proximity_lines)
-                engine.say(response)
-                engine.runAndWait()
-                mood = emotion_engine.get_mood()
-                simulate_servo_action(mood)
-                emotion_engine.log_memory("proximity_event", mood, f"Kira reacted to someone at {distance}mm saying: '{response}'")
-                last_spoken = now
-        time.sleep(0.25)
-except KeyboardInterrupt:
-    print("Proximity monitoring stopped.")
+print("🧠 Jetson 3 proximity monitor active...")
+
+while True:
+    distance = vl53.range
+    print(f"Distance: {distance} mm")
+
+    if distance < 300:
+        mood = "curious"
+        log_memory("someone got close", mood)
+        write_reaction(mood)
+        print("➡️ Mood triggered: curious")
+
+    elif distance < 150:
+        mood = "playful"
+        log_memory("very close proximity", mood)
+        write_reaction(mood)
+        print("➡️ Mood triggered: playful")
+
+    elif distance > 1000:
+        mood = "sad"
+        log_memory("lonely", mood)
+        write_reaction(mood)
+        print("➡️ Mood triggered: sad")
+
+    time.sleep(2)
