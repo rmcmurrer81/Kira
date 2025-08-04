@@ -54,3 +54,8 @@ if __name__ == "__main__":
         print(f"Reacting to: {mood}")
         move_servos(mood)
         time.sleep(3)
+def simulate_servo_action():
+    # Simulate motion using existing logic or test mode
+    print("Kira: Simulating head and jaw motion sequence.")
+    move_servos(servo_pin=1, angle=30)
+    move_servos(servo_pin=2, angle=60)
