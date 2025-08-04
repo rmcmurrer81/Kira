@@ -43,8 +43,10 @@ class MemoryManager:
             "mood": mood
         })
 
-        with open(self.file_path, "w") as f:
+        temp_path = self.file_path + ".tmp"
+        with open(temp_path, "w") as f:
             json.dump(data, f, indent=2)
+        os.replace(temp_path, self.file_path)
 
     def get_recent_inputs(self, count=5):
         try:
