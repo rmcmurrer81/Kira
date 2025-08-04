@@ -1,18 +1,15 @@
-import json
 import os
+import json
 
-config_path = "Jetson 4/bond_config.json"
-trust_threshold = 7  # Change this to raise/lower required trust level
+base_path = os.path.dirname(os.path.abspath(__file__))
+consent_path = os.path.join(base_path, "bond_config.json")
 
-def check_trust():
-    if not os.path.exists(config_path):
-        print("No bond config found. Locking all trust-based modes.")
+def has_consent(user_id):
+    if not os.path.exists(consent_path):
         return False
-
-    with open(config_path, "r") as f:
+    with open(consent_path, "r") as f:
         config = json.load(f)
+    return user_id in config.get("approved_users", [])
 
-    score = config.get("trust_score", 0)
-    print(f"🤝 Current trust score: {score}")
-
-    return score >= trust_threshold
+if __name__ == "__main__":
+    print("Jetson 4 consent check:", has_consent("default_user"))
