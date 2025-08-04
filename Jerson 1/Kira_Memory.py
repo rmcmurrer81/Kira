@@ -18,18 +18,13 @@ class MemoryManager:
                 "mood_log": []
             }
         }
-        with open(self.memory_path, 'w') as f:
+        with open(self.memory_path, "w") as f:
             json.dump(data, f, indent=2)
 
     def log_event(self, text, tag="spoken_input"):
         timestamp = time.strftime("%Y-%m-%dT%H:%M:%S")
-        if os.path.exists(self.memory_path):
-            with open(self.memory_path, 'r') as file:
-                data = json.load(file)
-        else:
-            self._initialize_memory()
-            with open(self.memory_path, 'r') as file:
-                data = json.load(file)
+        with open(self.memory_path, "r") as f:
+            data = json.load(f)
 
         data["memories"].append({
             "timestamp": timestamp,
@@ -37,5 +32,5 @@ class MemoryManager:
             "text": text
         })
 
-        with open(self.memory_path, 'w') as file:
-            json.dump(data, file, indent=2)
+        with open(self.memory_path, "w") as f:
+            json.dump(data, f, indent=2)
