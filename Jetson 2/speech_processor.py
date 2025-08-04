@@ -1,52 +1,29 @@
 import speech_recognition as sr
-import os
-import json
-import time
+from noise_filter import is_noise
 
-# Ensure folders exist
-os.makedirs("logs", exist_ok=True)
-os.makedirs("shared", exist_ok=True)
-
-log_path = "logs/kira_heard.json"
-queue_path = "shared/reaction_queue.txt"
-
-# Initialize recognizer
 recognizer = sr.Recognizer()
 mic = sr.Microphone()
 
-# Load or create log file
-if not os.path.exists(log_path):
-    with open(log_path, "w") as f:
-        json.dump({"log": []}, f, indent=2)
+print("Jetson 2: Listening...")
 
-print("🎤 Jetson 2 is listening and logging...")
+with mic as source:
+    recognizer.adjust_for_ambient_noise(source)
 
 while True:
+    with mic as source:
+        print("Listening...")
+        audio = recognizer.listen(source)
+
     try:
-        with mic as source:
-            print("Listening...")
-            audio = recognizer.listen(source)
-
-        # Convert audio to text
         text = recognizer.recognize_google(audio).strip()
-        timestamp = time.strftime("%Y-%m-%dT%H:%M:%S")
+        print(f"You said: {text}")
 
-        print(f"Heard: {text}")
+        if is_noise(text):
+            print("Jetson 2: Ignored — background noise.")
+            continue
 
-        # Append to kira_heard.json
-        with open(log_path, "r") as f:
-            data = json.load(f)
-
-        data["log"].append({"timestamp": timestamp, "text": text})
-
-        with open(log_path, "w") as f:
-            json.dump(data, f, indent=2)
-
-        # Write to reaction queue
-        with open(queue_path, "a") as f:
-            f.write(f"{timestamp}: {text}\n")
+        with open("shared/speech_queue.txt", "a") as f:
+            f.write(text + "\n")
 
     except sr.UnknownValueError:
-        print("Could not understand audio.")
-    except Exception as e:
-        print(f"Error: {e}")
+        print("Jetson 2: I couldn’t understand that.")
