@@ -1,21 +1,21 @@
 {
   "memories": [
     {
-      "timestamp": "2025-08-03T10:00:00",
+      "timestamp": "2025-08-05T12:00:00",
       "event": "system_boot",
-      "text": "Kira was activated for the first time. She listened. She remembered."
+      "text": "Kira was activated for the first time and heard your voice."
     },
     {
-      "timestamp": "2025-08-03T10:05:00",
+      "timestamp": "2025-08-05T12:10:00",
       "event": "first_cosplay_promo",
-      "text": "Kira performed her first video as Wednesday. She was sarcastic and surprisingly cute."
+      "text": "Kira starred in her first parody video as Wednesday. She was sarcastic and weirdly adorable."
     }
   ],
   "emotions": {
     "current_mood": "curious",
     "mood_log": [
       {
-        "timestamp": "2025-08-03T10:00:00",
+        "timestamp": "2025-08-05T12:00:00",
         "mood": "curious"
       }
     ]
