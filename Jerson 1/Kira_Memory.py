@@ -1,36 +1,20 @@
+
 import json
-import os
-import time
+from datetime import datetime
 
 class MemoryManager:
-    def __init__(self):
-        self.memory_path = "memory/memory.json"
-        if not os.path.exists("memory"):
-            os.makedirs("memory")
-        if not os.path.exists(self.memory_path):
-            self._initialize_memory()
+    def __init__(self, file_path="memory/memory.json"):
+        self.file_path = file_path
 
-    def _initialize_memory(self):
-        data = {
-            "memories": [],
-            "emotions": {
-                "current_mood": "curious",
-                "mood_log": []
-            }
+    def log_memory(self, user_input, response, mood):
+        entry = {
+            "timestamp": datetime.now().isoformat(),
+            "user_input": user_input,
+            "response": response,
+            "mood": mood
         }
-        with open(self.memory_path, "w") as f:
-            json.dump(data, f, indent=2)
-
-    def log_event(self, text, tag="spoken_input"):
-        timestamp = time.strftime("%Y-%m-%dT%H:%M:%S")
-        with open(self.memory_path, "r") as f:
+        with open(self.file_path, "r") as f:
             data = json.load(f)
-
-        data["memories"].append({
-            "timestamp": timestamp,
-            "event": tag,
-            "text": text
-        })
-
-        with open(self.memory_path, "w") as f:
+        data["memories"].append(entry)
+        with open(self.file_path, "w") as f:
             json.dump(data, f, indent=2)
