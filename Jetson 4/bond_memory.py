@@ -1,29 +1,27 @@
-import json
 import os
-import time
+import json
+from datetime import datetime
 
-bond_log_path = "Jetson 4/bond_memory.json"
+base_path = os.path.dirname(os.path.abspath(__file__))
+memory_path = os.path.join(base_path, "bond_memory.json")
 
-# Ensure the bond log exists
-if not os.path.exists("Jetson 4"):
-    os.makedirs("Jetson 4")
+def log_bond_event(event_type, description):
+    if not os.path.exists(memory_path):
+        with open(memory_path, "w") as f:
+            json.dump({"events": []}, f)
 
-if not os.path.exists(bond_log_path):
-    with open(bond_log_path, "w") as f:
-        json.dump({"bond_log": []}, f, indent=2)
-
-def log_bond_event(event, description=None):
-    timestamp = time.strftime("%Y-%m-%dT%H:%M:%S")
-    entry = {
-        "timestamp": timestamp,
-        "event": event,
-        "description": description or ""
-    }
-
-    with open(bond_log_path, "r") as f:
+    with open(memory_path, "r") as f:
         data = json.load(f)
 
-    data["bond_log"].append(entry)
+    data["events"].append({
+        "timestamp": datetime.now().isoformat(),
+        "event_type": event_type,
+        "description": description
+    })
 
-    with open(bond_log_path, "w") as f:
+    with open(memory_path, "w") as f:
         json.dump(data, f, indent=2)
+
+if __name__ == "__main__":
+    log_bond_event("test", "Bond memory path test successful.")
+    print("Jetson 4 bonding log test complete.")
