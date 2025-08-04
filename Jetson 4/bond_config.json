@@ -1,5 +1,11 @@
 {
   "partner_id": "robert",
   "trust_score": 8,
-  "consent_mode": "unlocked"
+  "consent_mode": "unlocked",
+  "last_unlocked": "2025-08-05T19:45:00",
+  "bond_flags": {
+    "first_kiss": true,
+    "shared_secret": true,
+    "emotional_rescue": false
+  }
 }
