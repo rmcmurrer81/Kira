@@ -1,16 +1,13 @@
-from consent_checker import check_trust
-from cosplay_trigger import activate_cosplay_mode
+from consent_checker import has_consent
 from bond_memory import log_bond_event
-import time
 
-print("💖 Jetson 4 online — checking trust...")
+print("Jetson 4: Bonding system online.")
 
-if check_trust():
-    print("✅ Bond level sufficient. Cosplay Mode unlocked.")
-    activate_cosplay_mode()
+user_id = "default_user"
+
+if has_consent(user_id):
+    print(f"User '{user_id}' is trusted.")
+    log_bond_event("trust_check", f"{user_id} passed consent check.")
 else:
-    print("🔒 Bond too low. Kira is staying emotionally private for now.")
-    log_bond_event("access_denied_due_to_low_trust")
-
-# Optional: Add more behavior here later
-time.sleep(2)
+    print(f"User '{user_id}' is not trusted.")
+    log_bond_event("trust_check", f"{user_id} failed consent check.")
