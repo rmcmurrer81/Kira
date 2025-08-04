@@ -1,4 +1,3 @@
-
 import json
 from datetime import datetime
 
@@ -18,3 +17,8 @@ class MemoryManager:
         data["memories"].append(entry)
         with open(self.file_path, "w") as f:
             json.dump(data, f, indent=2)
+
+    def get_recent_inputs(self, count=5):
+        with open(self.file_path, "r") as f:
+            data = json.load(f)
+        return [m["user_input"] for m in data["memories"][-count:]]
