@@ -1,9 +1,11 @@
 from jetson3_motion_controller import simulate_servo_action
 import time
 
-# Simulated emotional state loop
-moods = ["happy", "sad", "curious", "playful", "quiet"]
-for mood in moods:
-    print(f"Simulating mood: {mood}")
-    simulate_servo_action(mood)
-    time.sleep(2)
+print("Kira: Jetson 3 (Motion Control) is live.")
+
+try:
+    while True:
+        simulate_servo_action()
+        time.sleep(1)
+except KeyboardInterrupt:
+    print("Kira: Motion system paused.")
