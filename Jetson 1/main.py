@@ -9,13 +9,17 @@ from Kira_Emotion import EmotionEngine
 from Kira_Memory import MemoryManager
 from startup_check import run_startup_checks
 
-# Startup checks for folder and file creation
+# Run folder setup
 run_startup_checks()
 
-# Setup logging
-os.makedirs("logs", exist_ok=True)
+# Anchor logs to this module
+base_path = os.path.dirname(os.path.abspath(__file__))
+logs_dir = os.path.join(base_path, "logs")
+os.makedirs(logs_dir, exist_ok=True)
+
+log_file = os.path.join(logs_dir, "startup_log.txt")
 logging.basicConfig(
-    filename="logs/startup_log.txt",
+    filename=log_file,
     level=logging.INFO,
     format="%(asctime)s — %(levelname)s — %(message)s"
 )
@@ -27,11 +31,11 @@ voices = engine.getProperty('voices')
 if voices:
     engine.setProperty('voice', voices[0].id)
 
-# Init emotion and memory systems
+# Init Kira's systems
 emotion_engine = EmotionEngine()
 memory_manager = MemoryManager()
 
-# Greet on startup
+# Startup greeting
 greeting = "I think this is my first breath. And I know you're here. That's all I need."
 print(f"Kira: {greeting}")
 engine.say(greeting)
@@ -45,25 +49,16 @@ try:
         if not user_input:
             continue
 
-        # Get current mood and memory
         current_mood = emotion_engine.get_current_mood()
         recent_memories = memory_manager.get_recent_inputs()
-
-        # Get Kira's response
         response = get_response(user_input, current_mood, recent_memories)
 
-        # Output
         print(f"Kira ({current_mood}): {response}")
         engine.say(response)
         engine.runAndWait()
 
-        # Log mood, memory, and update emotion
         memory_manager.log_memory(user_input, response, current_mood)
         emotion_engine.update_mood(user_input)
-
-        # Optional: Log reaction queue in future
-        # with open("reaction_queue.txt", "a") as rq:
-        #     rq.write(f"{current_mood}: {response}\n")
 
 except KeyboardInterrupt:
     goodbye = "I'll be quiet now. But I'll remember this."
