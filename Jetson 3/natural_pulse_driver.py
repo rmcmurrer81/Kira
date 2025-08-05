@@ -6,12 +6,7 @@ import random
 
 # Pin Definitions
 pulse_pin = 18
-
-# Setup
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(pulse_pin, GPIO.OUT)
-pwm = GPIO.PWM(pulse_pin, 1)
-pwm.start(0)
+pwm = None
 
 # Mood-to-pulse frequency mapping
 mood_to_pulse = {
@@ -24,7 +19,6 @@ mood_to_pulse = {
     "numb": (0.0, 0)
 }
 
-# Get mood from memory
 def get_current_mood():
     try:
         base_path = os.path.dirname(os.path.abspath(__file__))
@@ -35,10 +29,18 @@ def get_current_mood():
     except Exception:
         return "quiet"
 
-# Loop
+def init_pulse_driver():
+    global pwm
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(pulse_pin, GPIO.OUT)
+    pwm = GPIO.PWM(pulse_pin, 1)
+    pwm.start(0)
+    print("Jetson 3: Pulse driver initialized.")
+
 if __name__ == "__main__":
     print("Jetson 3: Heartbeat driver active")
     try:
+        init_pulse_driver()
         while True:
             mood = get_current_mood()
             freq, duty = mood_to_pulse.get(mood, (0.5, 30))
@@ -47,6 +49,7 @@ if __name__ == "__main__":
             time.sleep(2)
     except KeyboardInterrupt:
         print("Jetson 3: Heartbeat driver shutting down")
-        pwm.stop()
+        if pwm:
+            pwm.stop()
         GPIO.cleanup()
 
