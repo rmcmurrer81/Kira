@@ -1,13 +1,13 @@
-import os
 from datetime import datetime
+from pathlib import Path
 
 def log_visual_event(scene_description):
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    log_path = os.path.join(base_path, "kira_visual_log.txt")
+    base_path = Path(__file__).resolve().parent
+    log_path = base_path / "kira_visual_log.txt"
 
     entry = f"[{datetime.now().isoformat()}] {scene_description}\n"
 
-    with open(log_path, "a") as f:
+    with open(log_path, "a", encoding="utf-8") as f:
         f.write(entry)
 
 if __name__ == "__main__":
