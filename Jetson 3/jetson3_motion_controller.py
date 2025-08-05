@@ -1,16 +1,9 @@
-from adafruit_pca9685 import PCA9685
-from board import SCL, SDA
-import busio
-import time
 import os
 import json
+import time
 
-# Setup I2C and PCA9685
-i2c = busio.I2C(SCL, SDA)
-pca = PCA9685(i2c)
-pca.frequency = 50
-
-# Servo channel mappings
+# Moved hardware setup into main logic to avoid running on import
+pca = None
 channels = {
     "head_tilt": 0,
     "eyebrow_left": 1,
@@ -18,7 +11,6 @@ channels = {
     "mouth": 3
 }
 
-# Mood to servo position mapping
 mood_map = {
     "happy": {"head_tilt": 410, "eyebrow_left": 500, "eyebrow_right": 500, "mouth": 530},
     "sad": {"head_tilt": 360, "eyebrow_left": 400, "eyebrow_right": 400, "mouth": 410},
@@ -29,14 +21,15 @@ mood_map = {
 }
 
 def move_servos(mood):
-    if mood in mood_map:
+    if pca and mood in mood_map:
         for part, pos in mood_map[mood].items():
             channel = channels.get(part)
             if channel is not None:
                 pca.channels[channel].duty_cycle = int(pos)
 
 def read_reaction_queue():
-    queue_path = "shared/reaction_queue.txt"
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    queue_path = os.path.join(base_path, "shared", "reaction_queue.txt")
     if os.path.exists(queue_path):
         with open(queue_path, "r") as f:
             lines = f.readlines()
@@ -48,16 +41,29 @@ def read_reaction_queue():
     return "quiet"
 
 def simulate_servo_action():
-    # Simulate servo motion by cycling through moods
     for mood in ["curious", "happy", "quiet"]:
         print(f"Kira: Simulating mood → {mood}")
         move_servos(mood)
         time.sleep(2)
 
 if __name__ == "__main__":
-    print("🦾 Jetson 3 servo controller active")
-    while True:
-        mood = read_reaction_queue()
-        print(f"Reacting to: {mood}")
-        move_servos(mood)
-        time.sleep(3)
+    print("🦾 Jetson 3: Servo controller active")
+
+    # Hardware setup moved here
+    try:
+        from adafruit_pca9685 import PCA9685
+        from board import SCL, SDA
+        import busio
+
+        i2c = busio.I2C(SCL, SDA)
+        pca = PCA9685(i2c)
+        pca.frequency = 50
+
+        while True:
+            mood = read_reaction_queue()
+            print(f"Reacting to: {mood}")
+            move_servos(mood)
+            time.sleep(3)
+
+    except Exception as e:
+        print(f"Hardware init failed: {e}")
