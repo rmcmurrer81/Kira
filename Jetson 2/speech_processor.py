@@ -1,17 +1,19 @@
 import speech_recognition as sr
 from noise_filter import is_noise
+from pathlib import Path
 import os
 
 recognizer = sr.Recognizer()
 mic = sr.Microphone()
 
-# Ensure the shared directory exists
-queue_path = os.path.join("shared", "speech_queue.txt")
-os.makedirs("shared", exist_ok=True)
+# Point to Jetson 3's shared folder using relative path
+base_path = Path(__file__).resolve().parents[1]  # One level up (../)
+shared_path = base_path / "Jetson 3" / "shared"
+queue_path = shared_path / "speech_queue.txt"
+shared_path.mkdir(parents=True, exist_ok=True)
 
 print("Jetson 2: Listening...")
 
-# Calibrate for background noise
 with mic as source:
     recognizer.adjust_for_ambient_noise(source)
 
@@ -24,13 +26,11 @@ while True:
         text = recognizer.recognize_google(audio).strip()
         print(f"You said: {text}")
 
-        # Filter background noise
         if is_noise(text):
             print("Jetson 2: Ignored — background noise.")
             continue
 
-        # Log speech to shared queue
-        with open(queue_path, "a") as f:
+        with open(queue_path, "a", encoding="utf-8") as f:
             f.write(text + "\n")
 
     except sr.UnknownValueError:
