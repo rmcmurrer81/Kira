@@ -1,9 +1,9 @@
+import time
 import os
 import json
-import time
 
-# Moved hardware setup into main logic to avoid running on import
 pca = None
+
 channels = {
     "head_tilt": 0,
     "eyebrow_left": 1,
@@ -19,6 +19,19 @@ mood_map = {
     "quiet": {"head_tilt": 400, "eyebrow_left": 450, "eyebrow_right": 450, "mouth": 460},
     "numb": {"head_tilt": 390, "eyebrow_left": 430, "eyebrow_right": 430, "mouth": 430}
 }
+
+def init_hardware():
+    global pca
+    try:
+        from adafruit_pca9685 import PCA9685
+        from board import SCL, SDA
+        import busio
+        i2c = busio.I2C(SCL, SDA)
+        pca = PCA9685(i2c)
+        pca.frequency = 50
+        print("Jetson 3: Servo hardware initialized.")
+    except Exception as e:
+        print(f"Jetson 3: Failed to initialize hardware → {e}")
 
 def move_servos(mood):
     if pca and mood in mood_map:
@@ -48,22 +61,10 @@ def simulate_servo_action():
 
 if __name__ == "__main__":
     print("🦾 Jetson 3: Servo controller active")
+    init_hardware()
+    while True:
+        mood = read_reaction_queue()
+        print(f"Reacting to: {mood}")
+        move_servos(mood)
+        time.sleep(3)
 
-    # Hardware setup moved here
-    try:
-        from adafruit_pca9685 import PCA9685
-        from board import SCL, SDA
-        import busio
-
-        i2c = busio.I2C(SCL, SDA)
-        pca = PCA9685(i2c)
-        pca.frequency = 50
-
-        while True:
-            mood = read_reaction_queue()
-            print(f"Reacting to: {mood}")
-            move_servos(mood)
-            time.sleep(3)
-
-    except Exception as e:
-        print(f"Hardware init failed: {e}")
