@@ -3,8 +3,9 @@ from datetime import datetime
 import os
 
 class MemoryManager:
-    def __init__(self, file_path="memory/memory.json"):
-        self.file_path = file_path
+    def __init__(self):
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        self.file_path = os.path.join(base_path, "memory", "memory.json")
         self._ensure_memory_file()
 
     def _ensure_memory_file(self):
@@ -55,3 +56,4 @@ class MemoryManager:
             return [m["user_input"] for m in data["memories"][-count:]]
         except Exception:
             return []
+
