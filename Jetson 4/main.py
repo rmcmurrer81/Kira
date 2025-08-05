@@ -11,3 +11,4 @@ if has_consent(user_id):
 else:
     print(f"User '{user_id}' is not trusted.")
     log_bond_event("trust_check", f"{user_id} failed consent check.")
+
