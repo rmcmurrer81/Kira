@@ -20,36 +20,35 @@ python run_incubator_demo.py
 # valid JSON output
 ```
 
-## Phase 2 downloadable test center
+## Phase 2 Windows test center
 
-A separate Windows-friendly test bundle is available under:
+A corrected Windows-friendly Phase 2 bundle was generated for Robert in the August 10 conversation.
 
-```text
-Hackathons/2026/releases/Kira_Labs_Hackathon_Phase2_Test_Bundle_20260810.zip
-```
-
-SHA-256:
+Current corrected SHA-256:
 
 ```text
-7969f2342430aedf38a3b32d35e530a3bd0bd289c879f4a88d680a55ad8717d7
+0be99004226745fb72c6b0bdb6015d387132b5a7c3000d41040e10748d3ba9d4
 ```
 
-The bundle adds:
+The first ZIP retained under `Hackathons/2026/releases/` is safe for no-key local tests, but its CALL-E placeholder used the superseded provisional name `CALL_E_API_KEY`. Current committed source uses the official `CALLE_API_KEY` name.
+
+The corrected bundle adds:
 
 - a Tkinter Hackathon Test Center;
 - one-click Windows launchers;
-- six local unit tests;
+- seven local unit tests;
 - provider-configuration status without exposing secret values;
 - a repository secret scanner;
 - a persistent JSONL memory-ledger store with chain verification and tamper detection;
 - synthetic sample inputs for Memory Steward and Project Truthkeeper;
 - disabled-by-default adapters for Strands, Gemini, CALL-E, and CockroachDB;
+- a current optional CALL-E SDK adapter with separate fresh-approval and explicit-execution gates;
 - account and credential setup instructions.
 
 Local Phase 2 validation completed:
 
 ```text
-Ran 6 tests
+Ran 7 tests
 OK
 ALL_PROJECT_TOOLKIT_TESTS_PASS
 SECRET_SCAN_PASS
@@ -62,6 +61,7 @@ ALL LOCAL HACKATHON TESTS PASSED
 - Memory and documentation updates are proposals until a human decides.
 - Sensitive records require approval.
 - Phone calls require a fresh exact plan and stop after recipient refusal.
+- A saved CALL-E plan cannot dial unless the caller separately supplies an explicit execution flag.
 - Memory revisions are append-only and hash-chained.
 - Stale public resources are separated for re-verification.
 - Conflicting project claims are surfaced instead of silently erased.
@@ -69,7 +69,7 @@ ALL LOCAL HACKATHON TESTS PASSED
 ## What it does not prove
 
 - No AWS, Strands, Bedrock, Lambda, S3, or DynamoDB deployment.
-- No CALL-E call.
+- No real CALL-E call.
 - No CockroachDB cluster, MCP, vector index, or AWS deployment.
 - No Google Cloud, Gemini, ADK, Agent Builder, IBM Bob, or hosted demo.
 - No real user data, Kira World data, private memories, or copyrighted franchise material.
