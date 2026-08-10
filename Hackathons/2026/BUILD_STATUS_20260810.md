@@ -2,7 +2,7 @@
 
 ## Tested shared core
 
-`incubator_core.py` now contains deterministic, synthetic-data-only foundations for five active projects:
+`incubator_core.py` contains deterministic, synthetic-data-only foundations for five active projects:
 
 - Kira Memory Steward
 - Kira AccessLine
@@ -18,6 +18,42 @@ python test_incubator_core.py
 # ALL_INCUBATOR_TESTS_PASS
 python run_incubator_demo.py
 # valid JSON output
+```
+
+## Phase 2 downloadable test center
+
+A separate Windows-friendly test bundle is available under:
+
+```text
+Hackathons/2026/releases/Kira_Labs_Hackathon_Phase2_Test_Bundle_20260810.zip
+```
+
+SHA-256:
+
+```text
+7969f2342430aedf38a3b32d35e530a3bd0bd289c879f4a88d680a55ad8717d7
+```
+
+The bundle adds:
+
+- a Tkinter Hackathon Test Center;
+- one-click Windows launchers;
+- six local unit tests;
+- provider-configuration status without exposing secret values;
+- a repository secret scanner;
+- a persistent JSONL memory-ledger store with chain verification and tamper detection;
+- synthetic sample inputs for Memory Steward and Project Truthkeeper;
+- disabled-by-default adapters for Strands, Gemini, CALL-E, and CockroachDB;
+- account and credential setup instructions.
+
+Local Phase 2 validation completed:
+
+```text
+Ran 6 tests
+OK
+ALL_PROJECT_TOOLKIT_TESTS_PASS
+SECRET_SCAN_PASS
+ALL LOCAL HACKATHON TESTS PASSED
 ```
 
 ## What the shared core proves
