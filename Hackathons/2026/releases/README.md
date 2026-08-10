@@ -1,11 +1,22 @@
-# Phase 2 local test bundle
+# Kira Labs hackathon test bundles
 
-The ZIP in this folder is the first local-only build. It remains safe for the no-key deterministic tests, but its CALL-E placeholder used the older provisional name `CALL_E_API_KEY`.
+## Phase 3 — current
 
-The current official provider name is `CALLE_API_KEY`. The corrected adapter, provider-status checker, optional dependency list, and `.env.example` are now committed directly under `Hackathons/2026/`.
+Download and extract:
 
-For the newest corrected Windows bundle, use the conversation download supplied on August 10, 2026. Extract it outside the active Kira World worktree, then double-click:
+`Kira_Labs_Hackathon_Phase3_Setup_Test_Bundle_20260810.zip`
 
-`Start_Kira_Labs_Hackathon_Test_Center.bat`
+SHA-256:
 
-No API key is needed for local tests. Never commit or paste a real credential.
+`513196800a28d6b29b5004189e2354db09f593f4413b9c92d3a1cdbf20e82b57`
+
+Then double-click:
+
+- `Start_Kira_Labs_Hackathon_Test_Center.bat` for synthetic local project tests.
+- `Start_Kira_Labs_Provider_Setup_Assistant.bat` for guided Google, AWS, CockroachDB, and CALL-E account setup.
+
+Phase 3 adds nine passing tests, secret-masked provider preflights, an AWS read-only STS/Bedrock check, a CockroachDB read-only SQL check, a CALL-E local configuration check, and an explicitly authorized minimal Google connectivity check. No real phone call is placed by these checks.
+
+## Phase 2 — superseded for setup work
+
+The earlier Phase 2 ZIP remains safe for local no-key tests, but Phase 3 is the current setup and testing package. Do not put credentials into either ZIP or commit a real `.env` file.
