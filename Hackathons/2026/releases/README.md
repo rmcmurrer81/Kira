@@ -1,8 +1,10 @@
 # Kira Labs hackathon test bundles
 
-## Phase 3 — current
+## Phase 3 — current source
 
-Download and extract:
+The Phase 3 source files are committed directly in this branch. The verified Windows ZIP is provided as a conversation download rather than stored here as an unverified binary.
+
+Verified Phase 3 ZIP filename:
 
 `Kira_Labs_Hackathon_Phase3_Setup_Test_Bundle_20260810.zip`
 
@@ -10,7 +12,7 @@ SHA-256:
 
 `513196800a28d6b29b5004189e2354db09f593f4413b9c92d3a1cdbf20e82b57`
 
-Then double-click:
+After downloading and extracting the verified bundle, double-click:
 
 - `Start_Kira_Labs_Hackathon_Test_Center.bat` for synthetic local project tests.
 - `Start_Kira_Labs_Provider_Setup_Assistant.bat` for guided Google, AWS, CockroachDB, and CALL-E account setup.
