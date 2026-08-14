@@ -1,0 +1,80 @@
+name: Restore exact Kira Labs site from ZIP
+
+on:
+  push:
+    paths:
+      - 'kira-labs-squarespace-v3.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Restore exact site package
+        shell: python
+        run: |
+          import os, shutil, zipfile
+
+          archive = 'kira-labs-squarespace-v3.zip'
+          if not os.path.exists(archive):
+              raise SystemExit(f'Missing {archive}. Upload the original ZIP to the repository root, then run this workflow.')
+
+          prefix = 'kira-labs-squarespace-v3\\'
+          docs = 'docs'
+          if os.path.isdir(docs):
+              shutil.rmtree(docs)
+          os.makedirs(docs, exist_ok=True)
+
+          with zipfile.ZipFile(archive) as zf:
+              for member in zf.namelist():
+                  if not member.startswith(prefix):
+                      continue
+                  rel = member[len(prefix):].replace('\\', '/')
+                  if not rel or rel.startswith('squarespace/'):
+                      continue
+                  target = os.path.join(docs, *rel.split('/'))
+                  os.makedirs(os.path.dirname(target), exist_ok=True)
+                  with open(target, 'wb') as out:
+                      out.write(zf.read(member))
+
+          # GitHub Pages should serve the static files exactly as supplied.
+          open(os.path.join(docs, '.nojekyll'), 'wb').close()
+
+          # Keep the repository clean after the exact site has been restored.
+          os.remove(archive)
+
+      - name: Verify required files
+        shell: bash
+        run: |
+          set -e
+          test -f docs/index.html
+          test -f docs/projects.html
+          test -f docs/about.html
+          test -f docs/styles.css
+          test -f docs/assets/kira-labs-hero.webp
+          test -f docs/assets/current-home-world-prototype.png
+          test -f docs/assets/kira-world-shell-actual.png
+          test -f docs/assets/louvre-bounded-study.png
+          test -f docs/assets/robert-mcmurrer-portrait.webp
+          test -f docs/assets/sarah-travel-concept.png
+          test -f docs/assets/video-studio-concept.png
+
+      - name: Commit exact restored site
+        shell: bash
+        run: |
+          set -e
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A docs kira-labs-squarespace-v3.zip || true
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Restore exact original Kira Labs website package'
+          git push
