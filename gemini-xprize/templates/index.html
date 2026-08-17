@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kira FounderOps</title>
+  <style>
+    :root { color-scheme: dark; --bg:#070b18; --panel2:#182238; --text:#f4f7ff; --muted:#aab4ce; --cyan:#54e5ff; --gold:#ffc85a; --green:#65e6a8; --red:#ff7b8d; --border:#2b3854; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,sans-serif; background:radial-gradient(circle at top,#13203a,var(--bg) 45%); color:var(--text); }
+    main { max-width:1180px; margin:0 auto; padding:30px 18px 70px; }
+    header { display:flex; gap:18px; align-items:center; margin-bottom:22px; }
+    .logo { width:64px; height:64px; display:grid; place-items:center; border-radius:17px; background:linear-gradient(135deg,var(--gold),#ff8a3d); color:#121525; font-weight:900; font-size:34px; box-shadow:0 0 28px #ffb44944; }
+    h1 { margin:0; font-size:clamp(2rem,6vw,4rem); letter-spacing:-0.05em; }
+    .tag { color:var(--cyan); font-weight:700; margin-top:4px; }
+    .notice { padding:12px 14px; border:1px solid var(--border); background:#10182bdd; border-radius:12px; color:var(--muted); margin-bottom:18px; }
+    .grid { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:18px; }
+    @media (max-width:900px) { .grid { grid-template-columns:1fr; } }
+    .card { background:#0e1628e8; border:1px solid var(--border); border-radius:18px; padding:20px; box-shadow:0 16px 45px #0005; }
+    label { display:block; font-weight:750; margin:14px 0 7px; }
+    input,textarea { width:100%; border:1px solid #344563; border-radius:11px; background:#09111f; color:var(--text); padding:12px; font:inherit; }
+    textarea { min-height:112px; resize:vertical; }
+    button { border:0; border-radius:11px; padding:12px 16px; font:inherit; font-weight:800; cursor:pointer; }
+    .primary { background:linear-gradient(135deg,var(--cyan),#5e9cff); color:#07101e; }
+    .secondary { background:#202c45; color:var(--text); border:1px solid #3b4d70; }
+    .approve { background:linear-gradient(135deg,var(--green),#a4f47e); color:#07130e; }
+    .actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
+    .status { min-height:26px; color:var(--muted); margin:12px 0 0; }
+    .hidden { display:none; }
+    .result-head { display:flex; justify-content:space-between; gap:10px; align-items:start; }
+    .badge { border:1px solid #3a4d71; background:#111c32; color:var(--cyan); padding:6px 9px; border-radius:999px; font-size:.78rem; }
+    h2,h3 { margin-top:0; } h3 { color:var(--gold); margin-bottom:8px; }
+    .section { margin:20px 0; padding-top:16px; border-top:1px solid var(--border); }
+    .item { background:var(--panel2); border:1px solid #2d3d5d; border-radius:12px; padding:12px; margin:9px 0; }
+    .meta { color:var(--muted); font-size:.88rem; }
+    .high { color:var(--red); } .medium { color:var(--gold); } .low { color:var(--green); }
+    pre { white-space:pre-wrap; word-break:break-word; background:#09111f; border:1px solid #293957; border-radius:10px; padding:13px; color:#dbe5ff; }
+    footer { margin-top:28px; color:var(--muted); text-align:center; }
+  </style>
+</head>
+<body>
+<main>
+  <header><div class="logo">K</div><div><h1>Kira FounderOps</h1><div class="tag">A Gemini-powered continuity agent for small businesses</div></div></header>
+  <div class="notice">The AI drafts decisions and actions. A human founder must approve before anything is treated as final. Model: <strong>{{ model }}</strong>.</div>
+  <div class="grid">
+    <section class="card">
+      <h2>Founder input</h2>
+      <label for="business_name">Business or project</label><input id="business_name" maxlength="120" placeholder="Kira Labs">
+      <label for="objective">Current objective</label><input id="objective" maxlength="300" placeholder="Prepare a credible demo and sponsor outreach plan">
+      <label for="notes">Messy notes</label><textarea id="notes" maxlength="12000" placeholder="Paste meeting notes, plans, constraints, deadlines, and open questions."></textarea>
+      <label for="metrics">Known metrics</label><textarea id="metrics" placeholder="Examples: website live, 1 founder, $0 product revenue, 3 upcoming events"></textarea>
+      <label for="customer_signals">Customer or user signals</label><textarea id="customer_signals" placeholder="Only include real feedback. Leave blank if none."></textarea>
+      <div class="actions"><button class="primary" id="runBtn">Run Gemini operations agent</button><button class="secondary" id="sampleBtn" type="button">Load Kira Labs sample</button></div>
+      <div class="status" id="status"></div>
+    </section>
+    <section class="card">
+      <div class="result-head"><h2>Operating brief</h2><span class="badge" id="runBadge">waiting for a live run</span></div>
+      <div id="emptyState" class="meta">Run the agent to create an evidence-grounded business brief.</div>
+      <div id="results" class="hidden">
+        <div class="section"><h3>Executive summary</h3><p id="summary"></p></div>
+        <div class="section"><h3>Decisions</h3><div id="decisions"></div></div>
+        <div class="section"><h3>Risks</h3><div id="risks"></div></div>
+        <div class="section"><h3>Next actions</h3><div id="nextActions"></div></div>
+        <div class="section"><h3>Outreach draft</h3><strong id="outreachSubject"></strong><pre id="outreachBody"></pre></div>
+        <div class="section"><h3>Unknowns</h3><div id="unknowns"></div></div>
+        <div class="actions"><button class="approve" id="approveBtn">Human approve action plan</button></div>
+        <div class="status" id="approvalStatus"></div>
+      </div>
+    </section>
+  </div>
+  <footer>Kira Labs · Small Business Services prototype · Gemini API + optional Cloud Run / Firestore</footer>
+</main>
+<script>
+  let currentRunId=null;
+  const $=id=>document.getElementById(id);
+  const escapeHtml=value=>String(value??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  $('sampleBtn').addEventListener('click',()=>{
+    $('business_name').value='Kira Labs';
+    $('objective').value='Choose the next three actions that most improve Kira World credibility and reduce founder overload.';
+    $('notes').value=`Kira World is a local-first AI continuity project. The public website is live. Current prototypes include local conversation, memory/identity workflows, voice experiments, Windows and Android interfaces, and an early walkable Home World. The founder has a Dell x NVIDIA hackathon on August 22 and a $1,000 pitch on September 15. Current hardware is 32GB DDR5 and an RTX 5060 Ti 16GB. The immediate priorities are a stable demo, a clear business use case, and careful sponsor outreach. Do not claim finished robotics, consciousness, customers, or revenue.`;
+    $('metrics').value='1 founder; public website live; product revenue: $0; institutional funding: $0; active prototypes: local conversation, voice, memory workflows, early 3D environment.';
+    $('customer_signals').value='No paying customers yet. Interest has come from startup programs, event organizers, and people who ask about persistent AI companionship.';
+  });
+  $('runBtn').addEventListener('click',async()=>{
+    const payload={business_name:$('business_name').value,objective:$('objective').value,notes:$('notes').value,metrics:$('metrics').value,customer_signals:$('customer_signals').value};
+    $('status').textContent='Gemini is analyzing the business context…'; $('runBtn').disabled=true;
+    try {
+      const response=await fetch('/api/brief',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      const data=await response.json(); if(!response.ok) throw new Error(data.detail||data.error||'Request failed');
+      currentRunId=data.run_id; renderResult(data.result); $('runBadge').textContent=`${data.gemini.model||'Gemini'} · ${data.storage}`; $('status').textContent=`Live run completed at ${new Date(data.created_at).toLocaleString()}`;
+    } catch(error) { $('status').textContent=`Error: ${error.message}`; } finally { $('runBtn').disabled=false; }
+  });
+  function renderResult(result){
+    $('emptyState').classList.add('hidden'); $('results').classList.remove('hidden'); $('summary').textContent=result.executive_summary||'';
+    $('decisions').innerHTML=(result.decisions||[]).map(d=>`<div class="item"><strong>${escapeHtml(d.decision)}</strong><div class="meta">Evidence: ${escapeHtml(d.evidence)} · Confidence: <span class="${escapeHtml(d.confidence)}">${escapeHtml(d.confidence)}</span></div></div>`).join('');
+    $('risks').innerHTML=(result.risks||[]).map(r=>`<div class="item"><strong class="${escapeHtml(r.severity)}">${escapeHtml(r.risk)}</strong><div class="meta">Evidence: ${escapeHtml(r.evidence)}</div><div>Mitigation: ${escapeHtml(r.mitigation)}</div></div>`).join('');
+    $('nextActions').innerHTML=(result.next_actions||[]).map(a=>`<div class="item"><strong>${escapeHtml(a.action)}</strong><div class="meta">Owner: ${escapeHtml(a.owner)} · Deadline: ${escapeHtml(a.deadline)} · Human approval: ${a.requires_human_approval?'required':'not required'}</div><div>${escapeHtml(a.why)}</div></div>`).join('');
+    $('outreachSubject').textContent=result.outreach_draft?.subject||''; $('outreachBody').textContent=result.outreach_draft?.body||'';
+    $('unknowns').innerHTML=(result.unknowns||[]).map(u=>`<div class="item">${escapeHtml(u)}</div>`).join(''); $('approvalStatus').textContent='Not approved yet.';
+  }
+  $('approveBtn').addEventListener('click',async()=>{
+    if(!currentRunId)return; $('approvalStatus').textContent='Saving human approval…';
+    try { const response=await fetch('/api/approve',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({run_id:currentRunId,approved_note:'Founder reviewed the output and approved it as a planning draft.'})}); const data=await response.json(); if(!response.ok) throw new Error(data.error||'Approval failed'); $('approvalStatus').textContent=`Approved by human founder at ${new Date(data.approval.approved_at).toLocaleString()} (${data.storage}).`; }
+    catch(error){ $('approvalStatus').textContent=`Error: ${error.message}`; }
+  });
+</script>
+</body>
+</html>
