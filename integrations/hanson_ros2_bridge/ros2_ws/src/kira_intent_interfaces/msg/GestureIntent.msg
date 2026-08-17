@@ -1,0 +1,10 @@
+std_msgs/Header header
+string intent_id
+string source_identity
+string gesture
+float32 intensity
+float32 speed
+uint32 duration_ms
+float32 confidence
+uint32 ttl_ms
+string evidence_ref
