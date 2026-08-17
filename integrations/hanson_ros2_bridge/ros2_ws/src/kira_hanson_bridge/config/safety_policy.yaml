@@ -1,0 +1,42 @@
+common:
+  minimum_confidence: 0.0
+  maximum_ttl_ms: 30000
+  reject_stale: true
+
+speech:
+  maximum_chars: 500
+  maximum_duration_ms: 20000
+  allowed_voices:
+    - default
+
+gaze:
+  allowed_frames:
+    - world
+    - person
+    - object
+    - camera
+    - head
+  maximum_abs_coordinate_m: 5.0
+  maximum_duration_ms: 10000
+
+expression:
+  allowed:
+    - neutral
+    - attentive
+    - curious
+    - smile
+    - concerned
+  maximum_intensity: 1.0
+  maximum_duration_ms: 10000
+
+gesture:
+  allowed:
+    - hands_rest
+    - nod
+    - shake_head
+    - wave
+    - point_left
+    - point_right
+  maximum_intensity: 1.0
+  maximum_speed: 0.7
+  maximum_duration_ms: 10000
