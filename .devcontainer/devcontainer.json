@@ -6,6 +6,11 @@
     "GEMINI_MODEL": "gemini-3.6-flash",
     "FIRESTORE_ENABLED": "false"
   },
+  "secrets": {
+    "GEMINI_API_KEY": {
+      "description": "Create this key in Google AI Studio. It is used only at runtime by the Kira FounderOps demo."
+    }
+  },
   "forwardPorts": [8080],
   "portsAttributes": {
     "8080": {
