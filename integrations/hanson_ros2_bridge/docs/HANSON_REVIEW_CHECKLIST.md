@@ -12,6 +12,8 @@ This checklist captures decisions needed to replace the generic simulator-first 
 
 ## 2. Target environment
 
+- [ ] Complete and validate a working copy of the [closed official-interface intake template](../hanson_interface_intake/official-hanson-interface-intake.template.json) against its [JSON Schema](../hanson_interface_intake/official-hanson-interface-intake.schema.json); do not replace unresolved values with guesses.
+
 - [ ] Target ROS 2 distribution and patch baseline: **TBD**
 - [ ] Target Hanson simulator name/version and access method: **TBD**
 - [ ] Supported operating system, architecture, Python version, and middleware/RMW: **TBD**
@@ -73,6 +75,8 @@ For each row, provide package/type, topic/action/service name, direction, QoS, u
 - [ ] Review the abuse cases and remaining gaps in [THREAT_MODEL.md](THREAT_MODEL.md).
 
 ## 7. Simulator acceptance demonstration
+
+Use the [official-simulator acceptance runbook](SIMULATOR_ACCEPTANCE_RUNBOOK.md) for the version-pinned record and pass criteria. The [hackathon demo checklist](HACKATHON_DEMO_CHECKLIST.md) is a presentation aid, not a substitute for acceptance evidence.
 
 - [ ] Build the two prototype ROS packages in the selected environment.
 - [ ] Run the standalone unit tests and record the commit SHA and command output.

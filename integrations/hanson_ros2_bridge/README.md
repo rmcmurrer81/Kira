@@ -79,6 +79,7 @@ python standalone/demo.py
 python standalone/session_demo.py
 python standalone/verify_evidence.py standalone/evidence.jsonl
 python standalone/verify_evidence.py standalone/session_evidence.jsonl --record-schema protocol_v0_2/execution-event.schema.json
+python standalone/validate_hanson_intake.py
 ```
 
 The policy demo admits four bounded examples and rejects `unbounded_spin`. The session demo records four complete mock lifecycles and one policy rejection. Both write ignored local evidence files whose hash chains are independently checked by `verify_evidence.py`.
@@ -136,7 +137,7 @@ See [SAFETY_MODEL.md](docs/SAFETY_MODEL.md), [DATA_BOUNDARY.md](docs/DATA_BOUNDA
 
 ## Mapping to official Hanson interfaces
 
-The [mapping template](docs/HANSON_MAPPING_TEMPLATE.md) intentionally leaves Hanson fields blank. The [review checklist](docs/HANSON_REVIEW_CHECKLIST.md) asks for:
+The [mapping template](docs/HANSON_MAPPING_TEMPLATE.md) intentionally leaves Hanson fields blank. Its machine-readable companion is a closed [official-interface intake template](hanson_interface_intake/official-hanson-interface-intake.template.json) plus [JSON Schema](hanson_interface_intake/official-hanson-interface-intake.schema.json) and [reference validator](standalone/validate_hanson_intake.py). The validator bounds file size, nesting, containers, strings, timestamps, and numbers; rejects unsafe or invisible-only Unicode; checks semantic roles, QoS channels and `keep_last` depth, lifecycle terminality, timer ordering, limits, frame parents, and simulator-evidence time/SHA integrity; and never echoes supplied values in CLI errors. A final reviewed or simulator-validated status automatically invokes the strict completeness checks. The [review checklist](docs/HANSON_REVIEW_CHECKLIST.md) asks for:
 
 - target ROS 2 and simulator versions;
 - official message/action/service types and namespaces;
@@ -147,6 +148,8 @@ The [mapping template](docs/HANSON_MAPPING_TEMPLATE.md) intentionally leaves Han
 - a simulator fixture for four valid intentions plus an intentional rejection.
 
 If no exact safe official mapping exists, the adapter must reject the request. It must never approximate an unsupported semantic request by inventing joint commands.
+
+Once Hanson supplies and confirms those values, the [official-simulator acceptance runbook](docs/SIMULATOR_ACCEPTANCE_RUNBOOK.md) defines four valid cases, one rejection, and disconnect/interruption evidence. The [simulator hackathon checklist](docs/HACKATHON_DEMO_CHECKLIST.md) provides a compact, truthful event flow and fallback plan.
 
 ## Open-source and data boundary
 

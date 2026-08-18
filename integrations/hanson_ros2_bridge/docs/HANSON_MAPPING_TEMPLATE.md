@@ -2,6 +2,16 @@
 
 This document intentionally leaves the Hanson side blank until official simulator and developer interfaces are available.
 
+Use the closed [official-interface intake template](../hanson_interface_intake/official-hanson-interface-intake.template.json) and its [Draft 2020-12 JSON Schema](../hanson_interface_intake/official-hanson-interface-intake.schema.json) as the machine-readable record. The JSON template begins entirely unresolved and must be populated only from public or explicitly authorized official sources. Validate a working copy with:
+
+```bash
+python standalone/validate_hanson_intake.py path/to/completed-intake.json --require-official
+```
+
+The Markdown table below remains a compact human review view; the validated JSON intake is the source-aware handoff record.
+
+`--require-official` can test a candidate final-status working copy before it is published: set that copy's `intake_status` to `hanson_reviewed` (or, only with matching pass evidence, `simulator_validated_for_named_versions`) and run the flag. The validator does not promote the file or change its status. Either final status activates the same strict gate automatically. Simulator validation and named-version pass evidence must agree in both directions. The validator checks structure and declared source/reference consistency; it cannot independently authenticate a source or prove an external simulator run.
+
 | Kira bounded input | Prototype topic | Official Hanson interface | Conversion notes | Completion signal |
 |---|---|---|---|---|
 | Speech | `<namespace>/kira/intents/speech` | TBD | Map text, voice, and duration without exposing credentials or arbitrary resources. | TBD |
@@ -33,3 +43,5 @@ This document intentionally leaves the Hanson side blank until official simulato
 - Cancellation and preemption semantics
 - Safety-state and emergency-stop interfaces
 - Simulator launch instructions and test fixtures
+
+After those values are confirmed, follow the [official-simulator acceptance runbook](SIMULATOR_ACCEPTANCE_RUNBOOK.md). For an event demonstration, use the [simulator hackathon checklist](HACKATHON_DEMO_CHECKLIST.md).

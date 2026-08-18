@@ -24,6 +24,9 @@ Start with:
 - [Data boundary](DATA_BOUNDARY.md)
 - [Threat model](THREAT_MODEL.md)
 - [Review checklist](HANSON_REVIEW_CHECKLIST.md)
+- [Closed official-interface intake template](../hanson_interface_intake/official-hanson-interface-intake.template.json)
+- [Official-simulator acceptance runbook](SIMULATOR_ACCEPTANCE_RUNBOOK.md)
+- [Simulator hackathon demo checklist](HACKATHON_DEMO_CHECKLIST.md)
 - [Validation report](VALIDATION_REPORT.md)
 
 ## Run the standalone review
@@ -37,9 +40,10 @@ python -m unittest discover -s standalone/tests -v
 python standalone/demo.py
 python standalone/session_demo.py
 python standalone/verify_evidence.py standalone/session_evidence.jsonl --record-schema protocol_v0_2/execution-event.schema.json
+python standalone/validate_hanson_intake.py
 ```
 
-The policy demo should admit speech, gaze, expression, and `wave`, reject `unbounded_spin`, and write the ignored local file `standalone/evidence.jsonl`. The session demo should complete the four valid intentions, reject the unsupported gesture, write `standalone/session_evidence.jsonl`, and report a valid evidence chain; the final command verifies that chain independently. Runtime evidence files are review artifacts and must not be committed.
+The policy demo should admit speech, gaze, expression, and `wave`, reject `unbounded_spin`, and write the ignored local file `standalone/evidence.jsonl`. The session demo should complete the four valid intentions, reject the unsupported gesture, write `standalone/session_evidence.jsonl`, and report a valid evidence chain; the evidence-verifier command checks that chain independently. The final command validates the unresolved official-interface template and its references. Runtime evidence files are review artifacts and must not be committed.
 
 ## Build the prototype ROS 2 workspace
 
@@ -82,6 +86,10 @@ The decisions are listed in [HANSON_REVIEW_CHECKLIST.md](HANSON_REVIEW_CHECKLIST
 4. Which frames, units, vocabularies, rate limits, duration limits, and QoS profiles are authoritative?
 5. How should one active physical embodiment session be authenticated, time-bounded for liveness (never ownership), disconnected, and replaced?
 6. Which simulator fixture can exercise an accepted sequence plus an intentional rejection without hardware?
+
+Hanson can record those answers in the source-aware, machine-validated [official-interface intake template](../hanson_interface_intake/official-hanson-interface-intake.template.json). The template begins entirely unresolved, rejects undeclared fields and values hidden under unresolved containers, and records packages, endpoints, QoS, frames, units, bounds, capability semantics, lifecycle, liveness, disconnect, and safeguards without asserting official values. Its [JSON Schema](../hanson_interface_intake/official-hanson-interface-intake.schema.json) and [reference validator](../standalone/validate_hanson_intake.py) also reject false reviewed/simulator promotion, reverse evidence status, unsafe/invisible Unicode, incomplete `keep_last` QoS, semantically wrong references, contradictory terminal/timer/bound mappings, null/future-dated run evidence, nonfinite or excessive inputs, and unsafe diagnostic echo.
+
+After official values are supplied, use the [simulator acceptance runbook](SIMULATOR_ACCEPTANCE_RUNBOOK.md) for the four valid intentions, one rejection, and disconnect/interruption. The [hackathon checklist](HACKATHON_DEMO_CHECKLIST.md) condenses the same boundaries into a five-minute, simulator-only demonstration.
 
 ## License and claim boundary
 

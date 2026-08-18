@@ -16,6 +16,8 @@
 - Privacy-reduced SHA-256-linked evidence plus an independent verifier.
 - A ROS-independent v0.2 session/lifecycle reference with capability negotiation, one in-flight action, monotonic sequence, idempotency, hard TTL, heartbeat/disconnect, and complete terminal states.
 - Draft JSON Schemas and a deterministic full-lifecycle mock session demo.
+- A closed, source-aware official-Hanson-interface intake schema/template plus bounded structural, Unicode-lexical, semantic-role, lifecycle/timer, QoS/depth, numeric, hierarchy, reference, evidence-time/SHA, promotion, and privacy-safe diagnostic validation; all official template values remain unresolved rather than guessed.
+- A version-pinned official-simulator acceptance runbook and a simulator-only hackathon demo checklist covering four valid intentions, one rejection, and disconnect/interruption.
 
 ## Deliberately not implemented
 
