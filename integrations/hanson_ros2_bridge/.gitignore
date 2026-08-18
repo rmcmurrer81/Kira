@@ -1,4 +1,5 @@
 standalone/evidence.jsonl
+standalone/session_evidence.jsonl
 __pycache__/
 *.py[cod]
 .pytest_cache/

@@ -1,7 +1,12 @@
 std_msgs/Header header
-string intent_id
-string category
+string<=128 intent_id
+string<=32 category
 bool accepted
-string reason_code
-string detail
-string executor
+string<=32 state
+bool terminal
+uint64 status_sequence
+string<=64 reason_code
+string<=512 detail
+string<=128 executor
+string<=128 official_request_id
+string<=64 evidence_record_hash

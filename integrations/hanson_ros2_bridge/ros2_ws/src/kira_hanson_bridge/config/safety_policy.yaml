@@ -1,7 +1,18 @@
 common:
   minimum_confidence: 0.0
   maximum_ttl_ms: 30000
+  maximum_future_skew_ms: 250
+  maximum_identifier_chars: 128
+  maximum_evidence_ref_chars: 256
   reject_stale: true
+  allowed_source_identities:
+    - kira
+  replay_cache_entries: 2048
+
+evidence:
+  include_speech_text: false
+  include_evidence_ref: false
+  include_gaze_coordinates: false
 
 speech:
   maximum_chars: 500

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -18,7 +17,9 @@ from kira_intent_interfaces.msg import (
     SpeechIntent,
 )
 
-from .policy import SafetyPolicy
+from .evidence import EvidenceChain, sanitize_payload
+from .policy import SafetyPolicy, ValidationResult
+from .request_guard import RequestGuard
 
 
 def utc_now() -> str:
@@ -40,39 +41,47 @@ class SimulatorAuthority(Node):
 
         policy_file = self.declare_parameter("policy_file", str(default_policy)).value
         evidence_file = self.declare_parameter(
-            "evidence_file", "/tmp/kira_hanson_bridge_evidence.jsonl"
+            "evidence_file", "/tmp/kira_hanson_bridge_evidence_v2.jsonl"
         ).value
+        topic_prefix = str(self.declare_parameter("topic_prefix", "kira").value).strip("/")
+        if not topic_prefix:
+            raise ValueError("topic_prefix must not be empty.")
 
         self.policy = SafetyPolicy.from_yaml(policy_file)
         self.evidence_file = Path(str(evidence_file))
-        self.evidence_file.parent.mkdir(parents=True, exist_ok=True)
+        self.evidence = EvidenceChain(self.evidence_file)
+        self.evidence_config = dict(self.policy.config.get("evidence", {}))
+        self.request_guard = RequestGuard(
+            int(self.policy.common.get("replay_cache_entries", 2048))
+        )
+        self.status_sequence = 0
 
         self.status_publisher = self.create_publisher(
-            ExecutionStatus, "/kira/execution_status", 10
+            ExecutionStatus, f"{topic_prefix}/execution_status", 10
         )
         self.create_subscription(
-            SpeechIntent, "/kira/intents/speech", self._on_speech, 10
+            SpeechIntent, f"{topic_prefix}/intents/speech", self._on_speech, 10
         )
         self.create_subscription(
-            GazeIntent, "/kira/intents/gaze", self._on_gaze, 10
+            GazeIntent, f"{topic_prefix}/intents/gaze", self._on_gaze, 10
         )
         self.create_subscription(
-            ExpressionIntent, "/kira/intents/expression", self._on_expression, 10
+            ExpressionIntent, f"{topic_prefix}/intents/expression", self._on_expression, 10
         )
         self.create_subscription(
-            GestureIntent, "/kira/intents/gesture", self._on_gesture, 10
+            GestureIntent, f"{topic_prefix}/intents/gesture", self._on_gesture, 10
         )
 
         self.get_logger().info(
             f"Bounded simulator authority ready. Policy={policy_file}; evidence={self.evidence_file}"
         )
 
-    def _age_ms(self, stamp_msg: Any) -> int:
+    def _age_ms(self, stamp_msg: Any) -> int | None:
         stamp = Time.from_msg(stamp_msg)
         if stamp.nanoseconds <= 0:
-            return 0
+            return None
         delta_ns = self.get_clock().now().nanoseconds - stamp.nanoseconds
-        return max(0, int(delta_ns / 1_000_000))
+        return int(delta_ns / 1_000_000)
 
     def _common(self, msg: Any) -> dict[str, Any]:
         return {
@@ -82,6 +91,7 @@ class SimulatorAuthority(Node):
             "ttl_ms": int(msg.ttl_ms),
             "age_ms": self._age_ms(msg.header.stamp),
             "evidence_ref": msg.evidence_ref,
+            "header_frame_id": msg.header.frame_id,
         }
 
     def _on_speech(self, msg: SpeechIntent) -> None:
@@ -127,47 +137,69 @@ class SimulatorAuthority(Node):
 
     def _decide(self, category: str, intent_id: str, payload: dict[str, Any]) -> None:
         result = self.policy.validate(category, payload)
+        request_digest = ""
+        if result.accepted:
+            replay = self.request_guard.assess(category, payload)
+            request_digest = replay.request_digest
+            if not replay.should_dispatch:
+                result = ValidationResult.reject(replay.reason_code, replay.detail)
 
         status = ExecutionStatus()
         status.header.stamp = self.get_clock().now().to_msg()
         status.intent_id = intent_id
         status.category = category
         status.accepted = result.accepted
+        status.state = "POLICY_ACCEPTED" if result.accepted else "REJECTED"
+        status.terminal = not result.accepted
+        self.status_sequence += 1
+        status.status_sequence = self.status_sequence
         status.reason_code = result.reason_code
         status.executor = "kira_simulator_authority"
+        status.official_request_id = ""
+        status.evidence_record_hash = ""
 
         if result.accepted:
             status.detail = (
-                "Accepted by bounded simulator authority. "
+                "Policy-admitted by bounded simulator authority. "
                 "No low-level motor command was emitted by this proof of concept."
             )
-            self.get_logger().info(f"ACCEPT {category} {intent_id}")
         else:
             status.detail = result.detail
-            self.get_logger().warning(
-                f"REJECT {category} {intent_id}: {result.reason_code} — {result.detail}"
-            )
 
-        self.status_publisher.publish(status)
-        self._append_evidence(
-            {
+        try:
+            evidence_record = {
                 "recorded_at": utc_now(),
                 "intent_id": intent_id,
                 "category": category,
-                "payload": payload,
+                "request_digest": request_digest,
+                "payload": sanitize_payload(category, payload, self.evidence_config),
                 "accepted": result.accepted,
                 "reason_code": result.reason_code,
                 "detail": status.detail,
                 "executor": status.executor,
+                "status_scope": "POLICY_ADMISSION_ONLY",
             }
-        )
+            status.evidence_record_hash = self.evidence.append(evidence_record)
+        except (OSError, OverflowError, TypeError, ValueError) as exc:
+            if result.accepted:
+                result = ValidationResult.reject(
+                    "EVIDENCE_UNAVAILABLE",
+                    "The authority withheld policy admission because evidence could not be persisted.",
+                )
+                status.accepted = False
+                status.state = "REJECTED"
+                status.terminal = True
+                status.reason_code = result.reason_code
+                status.detail = result.detail
+            self.get_logger().error(f"Could not persist evidence before status publication: {exc}")
 
-    def _append_evidence(self, record: dict[str, Any]) -> None:
-        try:
-            with self.evidence_file.open("a", encoding="utf-8") as handle:
-                handle.write(json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n")
-        except OSError as exc:
-            self.get_logger().error(f"Could not write evidence log: {exc}")
+        if result.accepted:
+            self.get_logger().info(f"ACCEPT {category} {intent_id}")
+        else:
+            self.get_logger().warning(
+                f"REJECT {category} {intent_id}: {result.reason_code} — {result.detail}"
+            )
+        self.status_publisher.publish(status)
 
 
 def main(args: list[str] | None = None) -> None:

@@ -5,7 +5,7 @@ package_name = "kira_hanson_bridge"
 
 setup(
     name=package_name,
-    version="0.1.0",
+    version="0.2.0",
     packages=find_packages(exclude=["test"]),
     data_files=[
         ("share/ament_index/resource_index/packages", ["resource/" + package_name]),
@@ -14,6 +14,7 @@ setup(
         ("share/" + package_name + "/config", glob("config/*.yaml")),
     ],
     install_requires=["setuptools", "PyYAML>=6.0"],
+    python_requires=">=3.10",
     zip_safe=True,
     maintainer="Robert McMurrer",
     maintainer_email="rmcmurrer@kiralabs.org",

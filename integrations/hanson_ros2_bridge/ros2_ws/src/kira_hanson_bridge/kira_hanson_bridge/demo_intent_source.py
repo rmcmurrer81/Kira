@@ -17,13 +17,16 @@ from kira_intent_interfaces.msg import (
 class DemoIntentSource(Node):
     def __init__(self) -> None:
         super().__init__("kira_demo_intent_source")
-        self.speech_pub = self.create_publisher(SpeechIntent, "/kira/intents/speech", 10)
-        self.gaze_pub = self.create_publisher(GazeIntent, "/kira/intents/gaze", 10)
+        topic_prefix = str(self.declare_parameter("topic_prefix", "kira").value).strip("/")
+        if not topic_prefix:
+            raise ValueError("topic_prefix must not be empty.")
+        self.speech_pub = self.create_publisher(SpeechIntent, f"{topic_prefix}/intents/speech", 10)
+        self.gaze_pub = self.create_publisher(GazeIntent, f"{topic_prefix}/intents/gaze", 10)
         self.expression_pub = self.create_publisher(
-            ExpressionIntent, "/kira/intents/expression", 10
+            ExpressionIntent, f"{topic_prefix}/intents/expression", 10
         )
         self.gesture_pub = self.create_publisher(
-            GestureIntent, "/kira/intents/gesture", 10
+            GestureIntent, f"{topic_prefix}/intents/gesture", 10
         )
 
         self.steps: list[Callable[[], None]] = [

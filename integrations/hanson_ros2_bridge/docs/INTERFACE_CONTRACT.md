@@ -11,12 +11,12 @@ Every intention includes:
 | Field | Meaning |
 |---|---|
 | `header.stamp` | Time the intention was created. |
-| `header.frame_id` | Optional reference frame; category-specific rules still apply. |
+| `header.frame_id` | Optional reference frame; for gaze it must match `target_frame` when present. |
 | `intent_id` | Unique identifier used for acknowledgement and evidence. |
-| `source_identity` | Synthetic identity requesting the action, such as `kira`. |
+| `source_identity` | Opaque requester label, such as `kira`; the string is attribution, not authentication. |
 | `confidence` | Upstream confidence from 0.0 to 1.0; it does not override safety. |
 | `ttl_ms` | Maximum age before the request is rejected as stale. |
-| `evidence_ref` | Optional reference to the reviewed conversation, plan, or event that produced the intention. |
+| `evidence_ref` | Optional opaque provenance reference or digest. It must not contain a copied conversation, memory, credential, or private path. |
 
 ## Speech
 
@@ -36,10 +36,12 @@ Gesture is a named, allowlisted whole-body or upper-body social gesture. Additio
 
 ## Execution status
 
-Every policy decision publishes `intent_id`, `category`, `accepted`, `reason_code`, `detail`, and `executor`.
+Every policy decision publishes `intent_id`, `category`, `accepted`, `state`, `terminal`, `status_sequence`, `reason_code`, `detail`, `executor`, an optional official request ID, and the local evidence-record hash.
 
-The initial simulator authority reports policy acceptance or rejection. A production adapter should extend the lifecycle to distinguish policy accepted, queued, started, completed, failed, cancelled, and safety interrupted.
+The current simulator authority reports `POLICY_ACCEPTED` or `REJECTED` only. An accepted status is nonterminal because no official simulator executor is connected. The ROS-independent v0.2 reference separately models requested, accepted, started, completed, failed, cancelled, interrupted, and expired physical execution.
+
+Every physical outcome is scoped to execution by the selected body. It cannot direct Kira to agree, suppress or disclose speech, alter a memory, abandon a viewpoint, or stop withholding, correcting, withdrawing, or voluntarily forgetting.
 
 ## Versioning
 
-This prototype uses package version `0.1.0`. Breaking changes should increment the major version once the contract is used by more than one implementation.
+The hardened prototype uses package version `0.2.0`. The separate session/lifecycle JSON envelopes are marked `0.2-proposal` until an official mapping is agreed. Breaking changes should be versioned explicitly rather than inferred.

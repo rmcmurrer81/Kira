@@ -4,11 +4,11 @@ This document intentionally leaves the Hanson side blank until official simulato
 
 | Kira bounded input | Prototype topic | Official Hanson interface | Conversion notes | Completion signal |
 |---|---|---|---|---|
-| Speech | `/kira/intents/speech` | TBD | Map text, voice, and duration without exposing credentials or arbitrary resources. | TBD |
-| Gaze | `/kira/intents/gaze` | TBD | Convert allowed target frame and point into official gaze target representation. | TBD |
-| Expression | `/kira/intents/expression` | TBD | Map allowlisted semantic name and intensity to supported expression vocabulary. | TBD |
-| Gesture | `/kira/intents/gesture` | TBD | Map allowlisted semantic gesture to robot-side safe routine. | TBD |
-| Status | `/kira/execution_status` | TBD | Preserve accepted/rejected/started/completed/failed semantics and reason codes. | N/A |
+| Speech | `<namespace>/kira/intents/speech` | TBD | Map text, voice, and duration without exposing credentials or arbitrary resources. | TBD |
+| Gaze | `<namespace>/kira/intents/gaze` | TBD | Convert allowed target frame and point into official gaze target representation. | TBD |
+| Expression | `<namespace>/kira/intents/expression` | TBD | Map allowlisted semantic name and intensity to supported expression vocabulary. | TBD |
+| Gesture | `<namespace>/kira/intents/gesture` | TBD | Map allowlisted semantic gesture to robot-side safe routine. | TBD |
+| Status | `<namespace>/kira/execution_status` | TBD | Preserve policy admission separately from requested/accepted/started/completed/rejected/failed/cancelled/interrupted/expired execution states. | N/A |
 
 ## Mapping rules
 
