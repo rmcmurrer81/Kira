@@ -4,7 +4,8 @@ This directory is a **simulator-first, vendor-neutral proof of concept** for con
 
 Kira emits only four bounded high-level intentions—**speech, gaze, facial expression, and gesture**—while the simulator or robot retains authority over physical safety, supported capabilities, low-level execution, interruption, and rejection.
 
-Start with the sanitized [Hanson technical handoff](docs/DAVID_HANDOFF.md).
+Start with [Run this first](RUN_THIS_FIRST.md), then read the sanitized
+[Hanson technical handoff](docs/DAVID_HANDOFF.md).
 
 ![Bounded Kira World to Little Sophia architecture](docs/KIRA_LITTLE_SOPHIA_BOUNDED_BRIDGE.svg)
 
