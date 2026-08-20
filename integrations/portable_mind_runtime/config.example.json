@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "profile_id": "kira",
+  "branch_id": "public_demo",
+  "backend": {
+    "kind": "stub"
+  },
+  "storage": {
+    "data_dir": "",
+    "persist_transcript": false,
+    "max_reviewed_memories": 50
+  },
+  "features": {
+    "voice": false,
+    "body_control": false,
+    "intent_proposals": false
+  }
+}

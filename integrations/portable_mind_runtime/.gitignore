@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.portable_mind_data/
+runtime_data/
+local_config.json
+*.jsonl
+*.lock
