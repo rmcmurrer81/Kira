@@ -4,6 +4,14 @@ This is a sanitized, simulator-first review package for a bounded Kira World to 
 
 ## What is ready to review
 
+- A separate [sanitized public text-only portable runtime](../../portable_mind_runtime/RUN_THIS_FIRST.md)
+  with rewritten Kira and fictional Synthetic Robert fixtures, branch-local
+  reviewed summaries, offline tests, and no private seed, voice, or body assets.
+- A [continuity-home proposal](KIRA_WORLD_CONTINUITY_HOME_PROPOSAL.md) for a
+  bounded virtual endpoint while a humanoid body is charging, repaired, or
+  upgraded. It is an architecture proposal, not a completed transfer or Hanson
+  integration.
+
 - Four high-level intention categories: **speech, gaze, expression, and gesture**.
 - Bounded prototype ROS 2 messages and a policy-only simulator authority.
 - Fail-closed validation for stale, malformed, out-of-range, unallowlisted, and replayed requests.

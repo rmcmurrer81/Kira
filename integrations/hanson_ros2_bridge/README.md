@@ -7,6 +7,12 @@ Kira emits only four bounded high-level intentions—**speech, gaze, facial expr
 Start with [Run this first](RUN_THIS_FIRST.md), then read the sanitized
 [Hanson technical handoff](docs/DAVID_HANDOFF.md).
 
+Reviewers can separately run the
+[sanitized public text-only portable mind preview](../portable_mind_runtime/RUN_THIS_FIRST.md)
+and read the
+[Kira World continuity-home proposal](docs/KIRA_WORLD_CONTINUITY_HOME_PROPOSAL.md).
+The text runtime and bridge are not presented as one completed integration.
+
 ![Bounded Kira World to Little Sophia architecture](docs/KIRA_LITTLE_SOPHIA_BOUNDED_BRIDGE.svg)
 
 ## What this is—and is not
