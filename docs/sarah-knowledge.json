@@ -169,6 +169,30 @@
     "book:B0CL2F9KKR": {
       "label": "Amazon · A Life of Monsters and Hope: The Life of Robert McMurrer",
       "url": "https://www.amazon.com/Life-Monsters-Hope-Robert-McMurrer/dp/B0CL2F9KKR"
+    },
+    "cutbrief": {
+      "label": "CutBrief · dated prototype notes",
+      "url": "projects.html#cutbrief"
+    },
+    "shiftbrief": {
+      "label": "ShiftBrief · dated prototype notes",
+      "url": "projects.html#shiftbrief"
+    },
+    "cleartrail": {
+      "label": "ClearTrail · dated prototype notes",
+      "url": "projects.html#cleartrail"
+    },
+    "carry-on": {
+      "label": "Carry On · dated prototype notes",
+      "url": "projects.html#carry-on"
+    },
+    "sequence-desk": {
+      "label": "Kira Sequence Desk · dated prototype notes",
+      "url": "projects.html#sequence-desk"
+    },
+    "prototypes": {
+      "label": "Kira Labs · prototype review status",
+      "url": "projects.html#current-prototypes"
     }
   },
   "topics": [
@@ -209,14 +233,14 @@
         "organization",
         "business"
       ],
-      "answer": "Kira Labs is Robert McMurrer’s independent research and creation studio. Kira World is its central project. Related work includes Sarah Travel and a local Video Studio. The aim is useful software with continuity and personal control, developed through prototypes and testing.",
+      "answer": "Kira Labs is Robert McMurrer’s independent research and creation studio. Kira World is its central project. Related work includes Sarah Travel and a local Video Studio. The aim is useful software with continuity and personal control, developed through prototypes and testing. Current prototypes also explore staffing, decision evidence, task readiness and simpler browser media planning.",
       "sources": [
         "about",
         "projects"
       ],
       "next": [
+        "What are the current project prototypes?",
         "How is Kira World different?",
-        "What can I try today?",
         "How can I contact Robert?"
       ]
     },
@@ -269,14 +293,14 @@
         "when can",
         "when will"
       ],
-      "answer": "Kira World remains a private experimental project. Local conversation, identity, memory and voice prototypes exist; the complete 3D experience is still being developed. Sarah Travel is a private debug build. Video Studio has a preserved local production pipeline, with newer conversation-led work still under development. No public launch date is confirmed in these notes.",
+      "answer": "Kira World remains a private experimental project. Local conversation, identity, memory and voice prototypes exist; the complete 3D experience is still being developed. Sarah Travel is a private debug build. Video Studio has a preserved local production pipeline, with newer conversation-led work still under development. No public launch date is confirmed in these notes. CutBrief, ShiftBrief, ClearTrail, Carry On and Kira Sequence Desk have free written browser prototypes under private owner review. Paid CutBrief generation is locked; public access and completed submissions are not announced.",
       "sources": [
         "projects",
         "world"
       ],
       "next": [
+        "What are the current project prototypes?",
         "Tell me about Video Studio",
-        "What is Sarah Travel?",
         "How can I follow the work?"
       ]
     },
@@ -385,7 +409,7 @@
         "models",
         "model"
       ],
-      "answer": "Robert’s AI work brings together local models, person-specific memory, speech and creative tools. Kira World explores continuity between conversations and digital places. Sarah Travel applies companion-style interaction to planning, while Video Studio coordinates local media work. These are independent development projects, with different levels of readiness.",
+      "answer": "Robert’s AI work brings together local models, person-specific memory, speech and creative tools. Kira World explores continuity between conversations and digital places. Sarah Travel applies companion-style interaction to planning, while Video Studio coordinates local media work. These are independent development projects, with different levels of readiness. The newer prototypes also include staffing, evidence and task-planning tools, with bounded written workflows that do not require a language model.",
       "sources": [
         "about",
         "projects"
@@ -597,6 +621,157 @@
       "next": [
         "What works today?",
         "How does memory work?"
+      ]
+    },
+    {
+      "id": "cutbrief",
+      "title": "CutBrief",
+      "label": "Prototype notes · September 7, 2026",
+      "terms": [
+        "cutbrief",
+        "cut brief",
+        "cut-brief"
+      ],
+      "project_names": [
+        "cutbrief",
+        "cut brief",
+        "cut-brief"
+      ],
+      "answer": "CutBrief helps turn a video idea into an editable shot plan, with actor and location references, saved takes, trimming, captions and stitched landscape, vertical and square exports. It supports business updates, tutorials, travel, family and social videos. The tested free workflow uses your supplied media and written planning; it needs no paid generation credits. Appearance references remain separate from opening frames. A composed-scene review path is prepared, but paid scene and video generation are locked pending owner review. No successful hosted generation or finished automatic movie workflow is claimed. The browser prototype is in private owner review, with no public download or judge-access link announced.",
+      "sources": [
+        "cutbrief"
+      ],
+      "next": [
+        "Does CutBrief spend credits?",
+        "How is CutBrief different from Kira Sequence Desk?",
+        "What other prototypes are being tested?"
+      ]
+    },
+    {
+      "id": "shiftbrief",
+      "title": "ShiftBrief",
+      "label": "Prototype notes · September 7, 2026",
+      "terms": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief"
+      ],
+      "project_names": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief"
+      ],
+      "answer": "ShiftBrief is a team-planning desk for stores, offices and other teams. It records employee availability, opening hours and staffing needs, then proposes a week for review. Coverage displays, lunch choices, sick-call replacement options and dated history use the saved team facts. Accepting a reviewed proposal saves it; asking does not contact anyone or claim a replacement agreed to work. Source notes and cited handoffs remain available. The standard written Sarah workflow is a bounded planner, with no model, API key or usage credits required. Its no-install browser prototype is in private owner review. It is not a payroll system, labor-law assessment or public released service.",
+      "sources": [
+        "shiftbrief"
+      ],
+      "next": [
+        "Does ShiftBrief contact employees?",
+        "What does Carry On organize?",
+        "What is being tested now?"
+      ]
+    },
+    {
+      "id": "cleartrail",
+      "title": "ClearTrail",
+      "label": "Prototype notes · September 7, 2026",
+      "terms": [
+        "cleartrail",
+        "clear trail",
+        "clear-trail"
+      ],
+      "project_names": [
+        "cleartrail",
+        "clear trail",
+        "clear-trail"
+      ],
+      "answer": "ClearTrail helps office, home, research and community projects keep evidence behind a decision. Import text or readable PDFs, retain revisions, compare exact changes and ask Sarah for matching source passages. Saved briefings keep their quotes and can be exported; older briefings are marked when the evidence changes. Possible disagreements remain for review, and a newer record is not automatically approved. The default written workflow is bounded retrieval and comparison, not a general language model. The browser prototype requires no installed model, API key or credits and remains in private owner review. It is not connected to an Alexa device and has no announced public access link.",
+      "sources": [
+        "cleartrail"
+      ],
+      "next": [
+        "How does ClearTrail preserve evidence?",
+        "What does ShiftBrief do?",
+        "Can I try the prototypes today?"
+      ]
+    },
+    {
+      "id": "carry-on",
+      "title": "Carry On",
+      "label": "Prototype notes · September 7, 2026",
+      "terms": [
+        "carry on",
+        "carry-on",
+        "carryon"
+      ],
+      "project_names": [
+        "carry on",
+        "carry-on",
+        "carryon"
+      ],
+      "answer": "Carry On organizes work, home, travel and other plans into tasks, dependencies and readiness checks. Written Sarah can help develop a plan and propose changes; reviewed confirmations apply supported changes while preserving task IDs and history. Dependency cycles and stale edits are rejected. The browser prototype saves work in this browser and supports real export, backup and restore. Its bounded planning core needs no installed model, API key, voice folder or usage credits. It is in private owner review, with no public judge-access link announced. Carry On does not book travel, send messages or run a connected Alexa assistant.",
+      "sources": [
+        "carry-on"
+      ],
+      "next": [
+        "Is Carry On only for travel?",
+        "How are Carry On plans saved?",
+        "Tell me about ClearTrail"
+      ]
+    },
+    {
+      "id": "sequence-desk",
+      "title": "Kira Sequence Desk",
+      "label": "Prototype notes · September 7, 2026",
+      "terms": [
+        "kira sequence desk",
+        "sequence desk",
+        "sequence-desk",
+        "kira studio ai builders",
+        "ai builders studio"
+      ],
+      "project_names": [
+        "kira sequence desk",
+        "sequence desk",
+        "sequence-desk",
+        "kira studio ai builders",
+        "ai builders studio"
+      ],
+      "answer": "Kira Sequence Desk is the smaller browser sequence-planning prototype for the AI Builders work. Turn your notes into timed, source-linked steps; revise wording, order and timing; attach your own images, audio or video; and review coverage gaps. Written approval applies to the exact plan and clears after edits. Export produces an editable ZIP with the plan, source map, review issues and selected original media. It does not render a finished movie or generate new footage. Written Sarah uses a bounded source planner, not a general language model, and requires no model, API key, account or voice installation. Work stays in browser storage with backup and restore. This is in private owner review, separate from the full personal Video Studio, with no public access link announced.",
+      "sources": [
+        "sequence-desk"
+      ],
+      "next": [
+        "Does Kira Sequence Desk render a movie?",
+        "How is CutBrief different from Kira Sequence Desk?",
+        "What can the personal Video Studio do?"
+      ]
+    },
+    {
+      "id": "prototypes",
+      "title": "Current project prototypes",
+      "label": "Private owner review · September 7, 2026",
+      "terms": [
+        "prototypes",
+        "hackathons",
+        "hackathon",
+        "other apps",
+        "new apps",
+        "new projects",
+        "current projects",
+        "current apps",
+        "what else is robert building",
+        "what is being tested",
+        "broader projects"
+      ],
+      "answer": "Five current prototypes explore practical work beyond entertainment: CutBrief plans and assembles supplied video; ShiftBrief organizes staffing; ClearTrail keeps decision evidence; Carry On tracks tasks and readiness; and Kira Sequence Desk prepares timed, source-linked media plans. Their free written browser workflows have engineering checks and remain in private owner review. The browser editions need no preinstalled model or API key. No public access or completed contest submission is announced here. Paid CutBrief generation stays locked. The full personal Video Studio is a separate local project still under development.",
+      "sources": [
+        "prototypes"
+      ],
+      "next": [
+        "Tell me about ShiftBrief",
+        "Tell me about ClearTrail",
+        "Tell me about Carry On"
       ]
     }
   ],

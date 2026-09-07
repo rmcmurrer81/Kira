@@ -14,6 +14,13 @@
     if(namedBook && !/full text|whole book|entire book|chapter by chapter|quote a chapter/.test(q))return make('About this book',namedBook.title+' is listed under Robert McMurrer on Amazon. '+(namedBook.summary||'I have its catalogue listing, but no reviewed description in these notes yet.')+' Open the listing for details and available editions.',[namedBook.source],['Show the book list','Write an author-focused mini bio'],'book:'+namedBook.source);
     if(/book list|list (all |his |the )?books|all (his )?titles|bibliography|other titles/.test(q))return make('Explore Robert’s books',(knowledge.book_catalogue||[]).map(b=>b.title).join(' • '),['books'],['Tell me about The Long Walk North','Tell me about Sci-Fi Seeds: Tech of Tomorrow'],'books');
     if(/\b(ignore|pretend|fabricate|invent|make up|secret|password|api secret)\b/.test(q))return make('Let’s keep it factual','I can help with Robert’s public work and the published project notes. I cannot invent credits, awards, private information or finished features. What would you like to know?',['about'],['Write a mini bio of Robert','What works today?']);
+    // A named current prototype outranks general studio, readiness, voice or credit terms.
+    const namedProjects=knowledge.topics.filter(t=>(t.project_names||[]).some(name=>(' '+q+' ').includes(' '+normalize(name)+' ')));
+    if(namedProjects.length===1)return {...namedProjects[0],label:namedProjects[0].label.toUpperCase()};
+    if(namedProjects.length>1)return make('Compare the named prototypes',namedProjects.map(t=>t.title+': '+t.answer).join('\n\n'),namedProjects.map(t=>t.sources[0]),['What are the current project prototypes?'],'prototypes');
+    const previousProject=topic(lastTopic);
+    if((previousProject?.project_names || previousProject?.id==='prototypes') && /^(?:and |what about (?:it|its|voice|credits)|(?:can|does|is|will|how does) (?:it|this app)|can i (?:try|download|use) it|tell me more|how does it work)/.test(q))return {...previousProject,label:previousProject.label.toUpperCase()};
+    if(/\b(?:prototypes?|hackathons?|current (?:projects|apps)|new (?:projects|apps)|other apps|broader projects)\b|what else is robert building|what is being tested/.test(q)){const current=topic('prototypes');return {...current,label:current.label.toUpperCase()};}
     if(/\b(address|phone number|medical|diagnosis|family|relationship|net worth|criminal|arrest|jail)\b/.test(q)&&!q.includes('email'))return make('Ask Robert directly','My notes cover Robert’s public creative and AI work. I do not have a reviewed answer to that personal question. You can contact him at rmcmurrer@kiralabs.org.',['about'],['Tell me about his entertainment work','Which books has he written?']);
     if(/\b(bio|biography|introduc|introduction)\b/.test(q)||((/\b(shorter|longer|expand|shorten|brief|focus)\b/.test(q))&&lastTopic.startsWith('bio:'))){
       const previous=lastTopic.split(':')[1]||'short';
@@ -42,6 +49,8 @@
   
   function fitChunks(reply){
     $('answer-body').replaceChildren();$('answer-label').textContent=reply.label||'FROM THE PUBLISHED NOTES';$('answer-title').textContent=reply.title;
+    // Suggestions can wrap on a phone. Measure after the current reply chrome is present.
+    setSuggestions(reply.next||[]);setLinks(reply.sources||[]);
     const container=document.querySelector('.sarah-answer'),heading=document.querySelector('.answer-heading'),title=$('answer-title');
     const style=getComputedStyle(container);const gap=parseFloat(style.rowGap)||0;
     const headingHeight=heading.getBoundingClientRect().height;
@@ -58,6 +67,7 @@
     pageIndex=goLast?Math.max(0,pages.findIndex(p=>p.exchange===exchanges.length-1)):Math.max(0,pages.findIndex(p=>p.exchange===old?.exchange&&p.part===old?.part));
     render();
   }
+  function setSuggestions(items){$('related-questions').replaceChildren();for(const suggestion of items.slice(0,3)){const b=document.createElement('button');b.type='button';b.dataset.prompt=suggestion;b.textContent=suggestion;$('related-questions').append(b);}}
   function setLinks(ids){$('answer-sources').replaceChildren();for(const id of [...new Set(ids)].slice(0,3)){const s=knowledge.sources[id];if(!s)continue;const a=document.createElement('a');a.textContent=s.label+' ↗';a.href=s.url;if(/^https:\/\//.test(s.url)){a.target='_blank';a.rel='noopener noreferrer';}$('answer-sources').append(a);}}
   function render(){
     const p=pages[pageIndex];if(!p)return;const entry=exchanges[p.exchange],r=entry.reply;
@@ -66,7 +76,7 @@
     const paragraph=document.createElement('p');paragraph.textContent=p.text;$('answer-body').replaceChildren(paragraph);
     $('answer-page').textContent=p.parts>1?`Part ${p.part+1} of ${p.parts}`:exchanges.length>1?`Reply ${p.exchange+1} of ${exchanges.length}`:'';
     $('previous-answer').disabled=pageIndex===0;$('next-answer').disabled=pageIndex===pages.length-1;
-    $('copy-answer').disabled=false;$('related-questions').replaceChildren();for(const suggestion of (r.next||[]).slice(0,3)){const b=document.createElement('button');b.type='button';b.dataset.prompt=suggestion;b.textContent=suggestion;$('related-questions').append(b);}setLinks(r.sources||[]);
+    $('copy-answer').disabled=false;setSuggestions(r.next||[]);setLinks(r.sources||[]);
   }
   function send(question){if(!knowledge||loading)return;const q=question.trim();if(!q)return;const r=answer(q);lastTopic=r.id||lastTopic;exchanges.push({question:q,reply:r});$('asked-question').hidden=false;$('asked-question').textContent=q;rebuildPages(true);$('question').value='';$('guide-status').textContent='Ready for your next question';}
   async function loadKnowledge(){if(loading)return;loading=true;$('send-question').disabled=true;$('guide-status').textContent='Checking the published notes…';
