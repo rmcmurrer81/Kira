@@ -1,0 +1,791 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-07",
+  "owner": {
+    "name": "Robert McMurrer",
+    "email": "rmcmurrer@kiralabs.org"
+  },
+  "sources": {
+    "about": {
+      "label": "Kira Labs · About Robert",
+      "url": "about.html"
+    },
+    "world": {
+      "label": "Kira World · current public status",
+      "url": "index.html#reality"
+    },
+    "projects": {
+      "label": "Kira Labs · project notes",
+      "url": "projects.html"
+    },
+    "imdb": {
+      "label": "IMDb · Robert’s biography",
+      "url": "https://www.imdb.com/name/nm2258412/bio/"
+    },
+    "credits": {
+      "label": "IMDb · Robert’s credits",
+      "url": "https://www.imdb.com/name/nm2258412/"
+    },
+    "books": {
+      "label": "Amazon · Robert’s books",
+      "url": "https://www.amazon.com/s?k=robert+mcmurrer&crid=2NB9TR6SF34R8&sprefix=robert+mcmurrer%2Caps%2C118&ref=nb_sb_noss_1"
+    },
+    "poetry": {
+      "label": "Poetry Madhouse · book record",
+      "url": "https://imusic.dk/books/9781456534325/robert-mcmurrer-2011-poetry-madhouse-paperback-bog"
+    },
+    "bookrecord": {
+      "label": "AbeBooks · Robert’s book records",
+      "url": "https://www.abebooks.com/book-search/author/mcmurrer-robert/"
+    },
+    "support": {
+      "label": "Robert’s Kira World fundraiser",
+      "url": "https://www.gofundme.com/f/help-robert-build-kira-world"
+    },
+    "linkedin": {
+      "label": "Robert on LinkedIn",
+      "url": "https://www.linkedin.com/in/rmcmurrer/"
+    },
+    "facebook": {
+      "label": "Robert’s professional Facebook",
+      "url": "https://www.facebook.com/rmcmurrer"
+    },
+    "worldfacebook": {
+      "label": "Kira World on Facebook",
+      "url": "https://www.facebook.com/KiraWorldProject"
+    },
+    "book:B0GH162D4H": {
+      "label": "Amazon · Trump and Epstein: Parties to Crimes",
+      "url": "https://www.amazon.com/Trump-Epstein-Parties-Robert-McMurrer-ebook/dp/B0GH162D4H"
+    },
+    "book:B0GL88V288": {
+      "label": "Amazon · The Path Less Traveled",
+      "url": "https://www.amazon.com/Path-Less-Traveled-Robert-McMurrer/dp/B0GL88V288"
+    },
+    "book:B0GHZYFFDQ": {
+      "label": "Amazon · The Trump Dynasty: Power, Wealth, and Controversy",
+      "url": "https://www.amazon.com/Trump-Dynasty-Power-Wealth-Controversy-ebook/dp/B0GHZYFFDQ"
+    },
+    "book:B0GH7BF9TT": {
+      "label": "Amazon · Trump’s Reign: A Chronicle of Controversy",
+      "url": "https://www.amazon.com/Trumps-Reign-Controversy-Robert-McMurrer-ebook/dp/B0GH7BF9TT"
+    },
+    "book:B0GGZWPX8C": {
+      "label": "Amazon · The Long Walk North",
+      "url": "https://www.amazon.com/Long-Walk-North-Robert-McMurrer-ebook/dp/B0GGZWPX8C"
+    },
+    "book:B0GJNX9B5Y": {
+      "label": "Amazon · Clinton Family Criminal Record",
+      "url": "https://www.amazon.com/Clinton-Family-Criminal-Record-McMurrer-ebook/dp/B0GJNX9B5Y"
+    },
+    "book:B0GK49V853": {
+      "label": "Amazon · ROBIN HOOD vs. VAMPIRES: The Dracula War",
+      "url": "https://www.amazon.com/ROBIN-HOOD-vs-VAMPIRES-Dracula-ebook/dp/B0GK49V853"
+    },
+    "book:B0GK2RYKJ5": {
+      "label": "Amazon · Dorothy’s Dark Return to Oz",
+      "url": "https://www.amazon.com/Dorothys-Dark-Return-Robert-McMurrer-ebook/dp/B0GK2RYKJ5"
+    },
+    "book:B0GJRM8VHQ": {
+      "label": "Amazon · 1933 Italian UFO Crash: Nazi Secrets",
+      "url": "https://www.amazon.com/1933-Italian-UFO-Crash-Secrets-ebook/dp/B0GJRM8VHQ"
+    },
+    "book:B0GHBJNL8K": {
+      "label": "Amazon · Lunar Colony: A New Frontier",
+      "url": "https://www.amazon.com/Lunar-Colony-Frontier-Robert-McMurrer-ebook/dp/B0GHBJNL8K"
+    },
+    "book:B0GL9T3VT2": {
+      "label": "Amazon · The Epic of Gilgamesh: A King’s Journey of Mortality",
+      "url": "https://www.amazon.com/Epic-Gilgamesh-Kings-Journey-Mortality-ebook/dp/B0GL9T3VT2"
+    },
+    "book:B0GKXZYG4Y": {
+      "label": "Amazon · Navigating the Globe with a Criminal Record",
+      "url": "https://www.amazon.com/Navigating-Criminal-Record-Robert-McMurrer/dp/B0GKXZYG4Y"
+    },
+    "book:B0GL8FYPX2": {
+      "label": "Amazon · Sci-Fi Seeds: Tech of Tomorrow",
+      "url": "https://www.amazon.com/Sci-Fi-Seeds-Tomorrow-Robert-McMurrer/dp/B0GL8FYPX2"
+    },
+    "book:B0GKC45W82": {
+      "label": "Amazon · The Line Between Love and Rage",
+      "url": "https://www.amazon.com/Line-Between-Love-Rage-ebook/dp/B0GKC45W82"
+    },
+    "book:B0GK6268R2": {
+      "label": "Amazon · Galactic Revelation: Humanity’s Unpreparedness",
+      "url": "https://www.amazon.com/Galactic-Revelation-Unpreparedness-Robert-McMurrer-ebook/dp/B0GK6268R2"
+    },
+    "book:B0GHCXLGXS": {
+      "label": "Amazon · The Dreamer’s Deportation",
+      "url": "https://www.amazon.com/Dreamers-Deportation-Robert-McMurrer-ebook/dp/B0GHCXLGXS"
+    },
+    "book:B0GH2XRM1T": {
+      "label": "Amazon · Robert’s Sicilian Dream",
+      "url": "https://www.amazon.com/Roberts-Sicilian-Dream-Robert-McMurrer-ebook/dp/B0GH2XRM1T"
+    },
+    "book:B00H055MC4": {
+      "label": "Amazon · The Dark Storm Inside Of Me",
+      "url": "https://www.amazon.com/Dark-Storm-Inside-Me-ebook/dp/B00H055MC4"
+    },
+    "book:B00H68CAA2": {
+      "label": "Amazon · Driving Into The Dark Storm",
+      "url": "https://www.amazon.com/Driving-Into-Storm-Robert-McMurrer-ebook/dp/B00H68CAA2"
+    },
+    "book:B0F71VH3S2": {
+      "label": "Amazon · Microwave Motel Meals",
+      "url": "https://www.amazon.com/Microwave-Motel-Meals-Robert-McMurrer-ebook/dp/B0F71VH3S2"
+    },
+    "book:B0GGY7N6SJ": {
+      "label": "Amazon · Ghostline: The Continental Network",
+      "url": "https://www.amazon.com/Ghostline-Continental-Network-Robert-McMurrer-ebook/dp/B0GGY7N6SJ"
+    },
+    "book:B0GK4M39TP": {
+      "label": "Amazon · Casanova’s Vampire Embrace",
+      "url": "https://www.amazon.com/Casanovas-Vampire-Embrace-Robert-McMurrer-ebook/dp/B0GK4M39TP"
+    },
+    "book:B0F6MKG8ZR": {
+      "label": "Amazon · The Tommy Westphall Universe: A Connected World",
+      "url": "https://www.amazon.com/Tommy-Westphall-Universe-Connected-World-ebook/dp/B0F6MKG8ZR"
+    },
+    "book:B0GKCHS6JQ": {
+      "label": "Amazon · Sicily: A Rational Relocation for Neurodivergent Adults",
+      "url": "https://www.amazon.com/Sicily-Rational-Relocation-Neurodivergent-Adults-ebook/dp/B0GKCHS6JQ"
+    },
+    "book:B004RZ28U4": {
+      "label": "Amazon · Poetry Madhouse",
+      "url": "https://www.amazon.com/Poetry-Madhouse-Robert-McMurrer-ebook/dp/B004RZ28U4"
+    },
+    "book:B0F6NT2QPD": {
+      "label": "Amazon · Recipes for Life: A Cookbook",
+      "url": "https://www.amazon.com/Recipes-Life-Cookbook-Robert-McMurrer/dp/B0F6NT2QPD"
+    },
+    "book:B0F7CL734B": {
+      "label": "Amazon · Bars Of Innocence",
+      "url": "https://www.amazon.com/Bars-Innocence-Robert-McMurrer-ebook/dp/B0F7CL734B"
+    },
+    "book:B0F6M9C56R": {
+      "label": "Amazon · Cosplay Cuisine",
+      "url": "https://www.amazon.com/Cosplay-Cuisine-Robert-McMurrer-ebook/dp/B0F6M9C56R"
+    },
+    "book:B0CL2F9KKR": {
+      "label": "Amazon · A Life of Monsters and Hope: The Life of Robert McMurrer",
+      "url": "https://www.amazon.com/Life-Monsters-Hope-Robert-McMurrer/dp/B0CL2F9KKR"
+    }
+  },
+  "topics": [
+    {
+      "id": "robert",
+      "title": "Meet Robert",
+      "label": "Founder · writer · creator",
+      "terms": [
+        "robert",
+        "mcmurrer",
+        "founder",
+        "creator",
+        "who made",
+        "who built",
+        "who started",
+        "your boss"
+      ],
+      "answer": "Robert McMurrer is the founder of Kira Labs and creator of Kira World, based in Newark, New Jersey. His background spans acting, independent film production and writing. His AI work explores how identity, memory and voice can continue across conversations and creative projects.",
+      "sources": [
+        "about",
+        "imdb"
+      ],
+      "next": [
+        "Write a mini bio of Robert",
+        "Tell me about his entertainment work",
+        "Which books has he written?"
+      ]
+    },
+    {
+      "id": "labs",
+      "title": "Kira Labs",
+      "label": "Independent research & creation",
+      "terms": [
+        "kira labs",
+        "company",
+        "studio",
+        "research lab",
+        "organization",
+        "business"
+      ],
+      "answer": "Kira Labs is Robert McMurrer’s independent research and creation studio. Kira World is its central project. Related work includes Sarah Travel and a local Video Studio. The aim is useful software with continuity and personal control, developed through prototypes and testing.",
+      "sources": [
+        "about",
+        "projects"
+      ],
+      "next": [
+        "How is Kira World different?",
+        "What can I try today?",
+        "How can I contact Robert?"
+      ]
+    },
+    {
+      "id": "world",
+      "title": "Kira World",
+      "label": "Working prototypes + ongoing research",
+      "terms": [
+        "kira world",
+        "synthetic people",
+        "synthetic person",
+        "companion",
+        "kira",
+        "lisa",
+        "persistent world"
+      ],
+      "answer": "Kira World explores distinct synthetic people whose identity, reviewed memories and voice can continue between sessions. Local conversation experiments and a basic walkable Home World exist. A polished shared 3D world, believable bodies and clothing, VR and compatible embodiment remain development goals. It is experimental software, not a finished public product.",
+      "sources": [
+        "world",
+        "projects"
+      ],
+      "next": [
+        "What works today?",
+        "How does memory work?",
+        "What about privacy?"
+      ]
+    },
+    {
+      "id": "status",
+      "title": "Where things stand",
+      "label": "Public information checked September 7, 2026",
+      "terms": [
+        "latest",
+        "update",
+        "up to date",
+        "up-to-date",
+        "progress",
+        "current",
+        "ready",
+        "finished",
+        "release",
+        "released",
+        "available",
+        "download",
+        "buy",
+        "launch",
+        "try today",
+        "works today",
+        "working today",
+        "when can",
+        "when will"
+      ],
+      "answer": "Kira World remains a private experimental project. Local conversation, identity, memory and voice prototypes exist; the complete 3D experience is still being developed. Sarah Travel is a private debug build. Video Studio has a preserved local production pipeline, with newer conversation-led work still under development. No public launch date is confirmed in these notes.",
+      "sources": [
+        "projects",
+        "world"
+      ],
+      "next": [
+        "Tell me about Video Studio",
+        "What is Sarah Travel?",
+        "How can I follow the work?"
+      ]
+    },
+    {
+      "id": "entertainment",
+      "title": "Entertainment work",
+      "label": "Acting · independent film · screenwriting",
+      "terms": [
+        "entertainment",
+        "actor",
+        "acting",
+        "actress",
+        "film career",
+        "filmography",
+        "screenwriter",
+        "screenwriting",
+        "hollywood",
+        "movies was",
+        "shows was",
+        "credits",
+        "background work"
+      ],
+      "answer": "Robert’s IMDb biography describes his background in acting and independent film production, followed by screenwriting. His first background acting job was a television advertisement in Indiana. His IMDb profile provides his film and television credits, with the roles and credit details attached to each production.",
+      "sources": [
+        "imdb",
+        "credits"
+      ],
+      "next": [
+        "Write an entertainment-focused mini bio",
+        "Tell me about his books",
+        "How does that connect to his AI work?"
+      ]
+    },
+    {
+      "id": "books",
+      "title": "Robert’s books",
+      "label": "Poetry · stories · other writing",
+      "terms": [
+        "book",
+        "books",
+        "author",
+        "writing",
+        "written",
+        "novel",
+        "novels",
+        "bibliography",
+        "poetry",
+        "cookbook"
+      ],
+      "answer": "Robert’s Amazon catalogue includes poetry, fiction, technology writing and cookbooks. Selected titles include Poetry Madhouse, Driving Into The Dark Storm, The Long Walk North, Sci-Fi Seeds: Tech of Tomorrow, The Path Less Traveled and Cosplay Cuisine. I can help you find 29 titles checked in the catalogue on September 7, 2026. Ask about a title or ask to see the book list.",
+      "sources": [
+        "books"
+      ],
+      "next": [
+        "Show the book list",
+        "Tell me about Cosplay Cuisine",
+        "Write an author-focused mini bio"
+      ]
+    },
+    {
+      "id": "poetry",
+      "title": "Poetry Madhouse",
+      "label": "Book · 2011",
+      "terms": [
+        "poetry madhouse"
+      ],
+      "answer": "Poetry Madhouse is by Robert McMurrer. A collection of poems by Robert McMurrer. Open the Amazon listing for available editions.",
+      "sources": [
+        "book:B004RZ28U4"
+      ],
+      "next": [
+        "What other books has he written?",
+        "Write a short author bio"
+      ]
+    },
+    {
+      "id": "driving",
+      "title": "Driving Into The Dark Storm",
+      "label": "Short stories · 2013",
+      "terms": [
+        "driving into the dark storm"
+      ],
+      "answer": "Driving Into The Dark Storm is by Robert McMurrer. A collection of short stories combining life-inspired drama with science-fiction ideas, including time travel and aliens. Open the Amazon listing for available editions.",
+      "sources": [
+        "book:B00H68CAA2"
+      ],
+      "next": [
+        "Tell me about Poetry Madhouse",
+        "What other books has he written?"
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "Robert’s work in AI",
+      "label": "Continuity · local tools · creative work",
+      "terms": [
+        " ai",
+        "artificial intelligence",
+        "machine learning",
+        "technology",
+        "programming",
+        "developer",
+        "software",
+        "connect",
+        "research",
+        "models",
+        "model"
+      ],
+      "answer": "Robert’s AI work brings together local models, person-specific memory, speech and creative tools. Kira World explores continuity between conversations and digital places. Sarah Travel applies companion-style interaction to planning, while Video Studio coordinates local media work. These are independent development projects, with different levels of readiness.",
+      "sources": [
+        "about",
+        "projects"
+      ],
+      "next": [
+        "Write an AI-focused mini bio",
+        "Tell me about Kira World",
+        "What works today?"
+      ]
+    },
+    {
+      "id": "memory",
+      "title": "Memory & identity",
+      "label": "Person-specific continuity",
+      "terms": [
+        "memory",
+        "memories",
+        "remember",
+        "identity",
+        "continuity",
+        "reset",
+        "start over",
+        "different people"
+      ],
+      "answer": "Kira World’s approach keeps person-specific identity and reviewed memory records separate from the immediate conversation. The aim is for Kira, Lisa and future residents to remain distinct and continue across sessions. Local continuity experiments exist; that does not yet establish a complete persistent life across every device or world.",
+      "sources": [
+        "world",
+        "about"
+      ],
+      "next": [
+        "What about privacy?",
+        "What is the Home World?",
+        "What works today?"
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "Local control",
+      "label": "Privacy & permission",
+      "terms": [
+        "privacy",
+        "private",
+        "data",
+        "recording",
+        "recorded",
+        "save my",
+        "send my",
+        "store my",
+        "secure",
+        "security",
+        "permission",
+        "offline"
+      ],
+      "answer": "This website’s Sarah answers in your browser from a small set of published notes. Your questions are not sent to an AI provider or emailed to Robert. This page keeps the current conversation in memory until you reload or clear it. Kira World’s wider design favors local control of personal state and permission for external actions.",
+      "sources": [
+        "about"
+      ],
+      "next": [
+        "How can I email Robert?",
+        "Do I need an API key?",
+        "Tell me about Kira World"
+      ]
+    },
+    {
+      "id": "voice",
+      "title": "Sarah on this website",
+      "label": "Text conversation · no setup",
+      "terms": [
+        "sarah",
+        "yourself",
+        "who are you",
+        "voice",
+        "speak",
+        "talk aloud",
+        "audio",
+        "api key",
+        "credits",
+        "free",
+        "cost",
+        "pay"
+      ],
+      "answer": "I’m Sarah, the Kira Labs website guide. I can help you explore Robert’s work, write a short factual bio and find project information. This text guide needs no account, API key, installed model or credits. My answers use the dated notes and sources shown here. I do not run Robert’s private Kira World or voice system in your browser.",
+      "sources": [],
+      "next": [
+        "Write a mini bio of Robert",
+        "What is Kira Labs?",
+        "What works today?"
+      ]
+    },
+    {
+      "id": "studio",
+      "title": "Video Studio",
+      "label": "Personal local production tool",
+      "terms": [
+        "video studio",
+        "video making",
+        "video production",
+        "music generator",
+        "movie maker",
+        "film maker"
+      ],
+      "answer": "Kira Labs Video Studio is Robert’s personal local production workspace. Its preserved pipeline organizes narrated video chapters and assembles images, audio and video. Newer work aims to make planning and revision conversational, with local models coordinating specialist media engines. The newer full workflow remains under development; a finished automatic movie studio is not being advertised here.",
+      "sources": [
+        "projects"
+      ],
+      "next": [
+        "What works today?",
+        "How does that connect to his entertainment work?",
+        "Can I contact Robert?"
+      ]
+    },
+    {
+      "id": "travel",
+      "title": "Sarah Travel",
+      "label": "Private Android & Windows experiments",
+      "terms": [
+        "sarah travel",
+        "travel app",
+        "trip planning",
+        "travel planning",
+        "routes",
+        "itinerary"
+      ],
+      "answer": "Sarah Travel is a private travel-planning experiment with Android and Windows debug builds. It combines conversation with route planning, protected online lookups and an offline fallback. It has not been released as a public service or on Google Play; device verification and release testing remain.",
+      "sources": [
+        "projects"
+      ],
+      "next": [
+        "What is Kira World?",
+        "What else is Robert building?",
+        "How can I follow the work?"
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "Contact Robert",
+      "label": "Ideas · questions · collaboration",
+      "terms": [
+        "contact",
+        "email",
+        "e-mail",
+        "reach",
+        "get in touch",
+        "collaborat",
+        "interview",
+        "press",
+        "hire",
+        "message robert"
+      ],
+      "answer": "You can contact Robert McMurrer directly at rmcmurrer@kiralabs.org about his books, entertainment work, AI projects or collaboration. Use the email link on this page. Talking with me does not send Robert a message, and I cannot promise a response time or make commitments on his behalf.",
+      "sources": [
+        "about"
+      ],
+      "next": [
+        "Write a mini bio for an introduction",
+        "Tell me about his work"
+      ]
+    },
+    {
+      "id": "support",
+      "title": "Follow & support",
+      "label": "Independent development",
+      "terms": [
+        "support",
+        "donat",
+        "fund",
+        "help out",
+        "follow",
+        "updates page",
+        "social",
+        "facebook",
+        "linkedin",
+        "social media"
+      ],
+      "answer": "Follow Robert’s professional work on LinkedIn and Facebook, and follow the Kira World Facebook page for project updates. His Profiles button keeps all five links together, including IMDb and Amazon. Kira Labs also links to Robert’s Kira World GoFundMe for independent development support.",
+      "sources": [
+        "linkedin",
+        "facebook",
+        "worldfacebook"
+      ],
+      "next": [
+        "What is being developed?",
+        "How can I email Robert?"
+      ]
+    },
+    {
+      "id": "home",
+      "title": "Home World & future worlds",
+      "label": "Basic walkable prototype · long-term vision",
+      "terms": [
+        "home world",
+        "notebook world",
+        "vr",
+        "virtual reality",
+        "3d",
+        "robot",
+        "body",
+        "clothing",
+        "garment",
+        "conscious",
+        "sentient",
+        "alive"
+      ],
+      "answer": "A basic walkable one-bedroom Home World is development evidence. Persistent residents, physical objects, believable clothing and bodies, VR and compatible embodiment remain research and future goals. The polished illustrations on the website are labeled concept art. Kira Labs does not claim its current systems are conscious.",
+      "sources": [
+        "world",
+        "projects"
+      ],
+      "next": [
+        "What works today?",
+        "How does memory work?"
+      ]
+    }
+  ],
+  "bio": {
+    "short": "Robert McMurrer is an author, entertainment creator and independent AI builder based in Newark, New Jersey. He founded Kira Labs and is developing Kira World, an experimental project exploring identity, memory, voice and continuity. His background includes acting, independent film production and screenwriting.",
+    "expanded": "Robert McMurrer is an author, entertainment creator and independent AI builder based in Newark, New Jersey. His background includes acting, independent film production and screenwriting, and his books include Poetry Madhouse and Driving Into The Dark Storm. As founder of Kira Labs, he is developing Kira World: an experimental approach to synthetic people with distinct identities, reviewed memories and continuing conversations. Related projects include Sarah Travel and a local Video Studio. His work connects an interest in storytelling with practical experiments in local AI, voice and creative software. Kira World remains an active research and development project.",
+    "entertainment": "Robert McMurrer is an entertainment creator and author with a background in acting, independent film production and screenwriting. His first background acting job was a television advertisement in Indiana. He also founded Kira Labs, where his interest in storytelling connects with experiments in local AI and creative tools. His IMDb profile documents his entertainment work.",
+    "books": "Robert McMurrer is an author whose writing spans poetry, fiction, technology and cookbooks. His titles include Poetry Madhouse, Driving Into The Dark Storm, The Long Walk North, Sci-Fi Seeds: Tech of Tomorrow and Cosplay Cuisine. He also works in entertainment and founded Kira Labs, where he is developing the experimental Kira World project.",
+    "ai": "Robert McMurrer is the independent founder of Kira Labs and creator of Kira World, an experimental project exploring person-specific identity, reviewed memory, voice and continuity across conversations. Based in Newark, New Jersey, he also works on Sarah Travel and a local Video Studio. His background in writing and entertainment informs his interest in useful, personal creative software.",
+    "sources": [
+      "about",
+      "imdb",
+      "books"
+    ]
+  },
+  "book_catalogue": [
+    {
+      "title": "Trump and Epstein: Parties to Crimes",
+      "source": "book:B0GH162D4H",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "The Path Less Traveled",
+      "source": "book:B0GL88V288",
+      "summary": "A reflective book about rebuilding after life disruptions, reconsidering conventional definitions of success and finding a sustainable way forward.",
+      "description_checked": true
+    },
+    {
+      "title": "The Trump Dynasty: Power, Wealth, and Controversy",
+      "source": "book:B0GHZYFFDQ",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Trump’s Reign: A Chronicle of Controversy",
+      "source": "book:B0GH7BF9TT",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "The Long Walk North",
+      "source": "book:B0GGZWPX8C",
+      "summary": "A coming-of-age novel following Alex, a teenager who escapes an abusive adoptive home and travels north. His encounters along the way explore survival, trust and self-discovery.",
+      "description_checked": true
+    },
+    {
+      "title": "Clinton Family Criminal Record",
+      "source": "book:B0GJNX9B5Y",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "ROBIN HOOD vs. VAMPIRES: The Dracula War",
+      "source": "book:B0GK49V853",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Dorothy’s Dark Return to Oz",
+      "source": "book:B0GK2RYKJ5",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "1933 Italian UFO Crash: Nazi Secrets",
+      "source": "book:B0GJRM8VHQ",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Lunar Colony: A New Frontier",
+      "source": "book:B0GHBJNL8K",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "The Epic of Gilgamesh: A King’s Journey of Mortality",
+      "source": "book:B0GL9T3VT2",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Navigating the Globe with a Criminal Record",
+      "source": "book:B0GKXZYG4Y",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Sci-Fi Seeds: Tech of Tomorrow",
+      "source": "book:B0GL8FYPX2",
+      "summary": "An exploration of how science fiction has influenced technological imagination, including artificial intelligence, communications, computing and space exploration.",
+      "description_checked": true
+    },
+    {
+      "title": "The Line Between Love and Rage",
+      "source": "book:B0GKC45W82",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Galactic Revelation: Humanity’s Unpreparedness",
+      "source": "book:B0GK6268R2",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "The Dreamer’s Deportation",
+      "source": "book:B0GHCXLGXS",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Robert’s Sicilian Dream",
+      "source": "book:B0GH2XRM1T",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "The Dark Storm Inside Of Me",
+      "source": "book:B00H055MC4",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Driving Into The Dark Storm",
+      "source": "book:B00H68CAA2",
+      "summary": "A collection of short stories combining life-inspired drama with science-fiction ideas, including time travel and aliens.",
+      "description_checked": true
+    },
+    {
+      "title": "Microwave Motel Meals",
+      "source": "book:B0F71VH3S2",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Ghostline: The Continental Network",
+      "source": "book:B0GGY7N6SJ",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Casanova’s Vampire Embrace",
+      "source": "book:B0GK4M39TP",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "The Tommy Westphall Universe: A Connected World",
+      "source": "book:B0F6MKG8ZR",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Sicily: A Rational Relocation for Neurodivergent Adults",
+      "source": "book:B0GKCHS6JQ",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Poetry Madhouse",
+      "source": "book:B004RZ28U4",
+      "summary": "A collection of poems by Robert McMurrer.",
+      "description_checked": true
+    },
+    {
+      "title": "Recipes for Life: A Cookbook",
+      "source": "book:B0F6NT2QPD",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Bars Of Innocence",
+      "source": "book:B0F7CL734B",
+      "summary": null,
+      "description_checked": false
+    },
+    {
+      "title": "Cosplay Cuisine",
+      "source": "book:B0F6M9C56R",
+      "summary": "A cookbook connecting food with fandom through themed recipes, creative presentation and ideas for hosting cosplay gatherings.",
+      "description_checked": true
+    },
+    {
+      "title": "A Life of Monsters and Hope: The Life of Robert McMurrer",
+      "source": "book:B0CL2F9KKR",
+      "summary": null,
+      "description_checked": false
+    }
+  ]
+}
