@@ -326,6 +326,19 @@
         },
         "status": {
           "answer": "Local conversation, person-specific continuity and speech experiments exist, along with a basic walkable apartment. Complete populated worlds, accessible VR and compatible physical embodiment remain goals. There is no confirmed public launch date for the full experience."
+        },
+        "components": {
+          "answer": "Kira World has several connected parts, at different stages. Minds are the distinct people: local identity, reviewed-memory and voice experiments support continuing conversations. Home World is their intended home; a basic walkable one-bedroom shell exists. Notebook Worlds are future settings for study, travel, creativity, history and play. Temporary Creator designs people for particular worlds or activities; public spoken tests exist, with factual errors and unfinished avatars or bodies still visible. VR is a future way to share those places, with no confirmed headset release. Robotics is a longer-term, simulation-first route to compatible physical embodiment—not a deployed autonomous robot. The work is to connect these foundations into a continuing shared experience.",
+          "sources": [
+            "world",
+            "creator-test-video",
+            "creator-factual-test"
+          ],
+          "next": [
+            "Tell me about minds",
+            "What are Notebook Worlds?",
+            "Tell me about Temporary Creator"
+          ]
         }
       }
     },
@@ -368,8 +381,8 @@
     },
     {
       "id": "entertainment",
-      "title": "Entertainment work",
-      "label": "Acting · independent film · screenwriting",
+      "title": "Robert’s movie & TV credits",
+      "label": "Selected public IMDb credits",
       "terms": [
         "entertainment",
         "actor",
@@ -385,16 +398,31 @@
         "credits",
         "background work"
       ],
-      "answer": "Robert’s IMDb biography describes his background in acting and independent film production, followed by screenwriting. His first background acting job was a television advertisement in Indiana. His IMDb profile provides his film and television credits, with the roles and credit details attached to each production.",
+      "answer": "IMDb lists film work including Blood Tulip (2019), as Sticks; Lunch with a Friend (2011 short), as John; and Director’s Cut (2016), as Charles Whitman (uncredited). Television and web-series entries on IMDb include Parks and Recreation, as Meeting Member (uncredited; 2011, one episode); Glee, as NY Audience Man (uncredited; 2011, one episode); and CollegeHumor Originals, as Partygoer (2016, one episode). These are selected listed credits, not a complete filmography.",
       "sources": [
-        "imdb",
         "credits"
       ],
       "next": [
         "Write an entertainment-focused mini bio",
         "Tell me about his books",
         "How does that connect to his AI work?"
-      ]
+      ],
+      "followups": {
+        "films": {
+          "answer": "IMDb lists film work including Blood Tulip (2019), as Sticks; Lunch with a Friend (2011 short), as John; and Director’s Cut (2016), as Charles Whitman (uncredited). These are selected listed film credits; the IMDb profile has the full listing.",
+          "next": [
+            "Which TV shows has he appeared in?",
+            "Write an entertainment-focused mini bio"
+          ]
+        },
+        "television": {
+          "answer": "Television and web-series entries on IMDb include Parks and Recreation, as Meeting Member (uncredited; 2011, one episode); Glee, as NY Audience Man (uncredited; 2011, one episode); and CollegeHumor Originals, as Partygoer (2016, one episode). These are selected listed appearances, not regular or starring roles.",
+          "next": [
+            "Which movies has Robert worked on?",
+            "Write an entertainment-focused mini bio"
+          ]
+        }
+      }
     },
     {
       "id": "books",

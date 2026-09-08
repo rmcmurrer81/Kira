@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "content_version": "2026-09-08.1",
+  "reviewed_on": "2026-09-08",
+  "base_sha256": "67b8957f95a9d08e22faefd8cc3fe040b7091b6018645a9bed5b208687822b32",
+  "packs": [
+    {
+      "id": "robert",
+      "path": "knowledge/robert-2026-09-08-1.json",
+      "sha256": "9e92a85edeb805eceff628aad576f4c55faff5e47ae50f2f8b4b438d001f293b"
+    },
+    {
+      "id": "kira-world",
+      "path": "knowledge/kira-world-2026-09-08-1.json",
+      "sha256": "8f0f9b9839780a7a49b8ad0efeedd5339fd15d07a57f19d788d217563fab88ed"
+    },
+    {
+      "id": "updates",
+      "path": "knowledge/updates-2026-09-08-1.json",
+      "sha256": "bebb715a2ff9fc4f6713988a4e793ea02e9704ae80aa7d4d42d4ad54c7bef85e"
+    }
+  ],
+  "notes_path": "knowledge.html"
+}
