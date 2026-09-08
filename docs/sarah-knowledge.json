@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-07",
+  "updated_at": "2026-09-08",
   "owner": {
     "name": "Robert McMurrer",
     "email": "rmcmurrer@kiralabs.org"
@@ -193,6 +193,42 @@
     "prototypes": {
       "label": "Kira Labs · prototype review status",
       "url": "projects.html#current-prototypes"
+    },
+    "cutbrief-live": {
+      "label": "CutBrief · public workspace",
+      "url": "https://cutbrief-workspace.rmcmurrer.chatgpt.site/"
+    },
+    "creator-video": {
+      "label": "TemporaryAI Creator · public explainer, July 24",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw"
+    },
+    "creator-test-video": {
+      "label": "Synthetic expert · public test, July 25",
+      "url": "https://www.youtube.com/watch?v=rYuwe1dgAeI"
+    },
+    "creator-factual-test": {
+      "label": "TemporaryAI factual test · public video, July 25",
+      "url": "https://www.youtube.com/watch?v=5Nllo6oAfYA"
+    },
+    "progress": {
+      "label": "Kira World · interactive progress timeline",
+      "url": "progress.html"
+    },
+    "equipment": {
+      "label": "Current equipment & next needs",
+      "url": "progress.html#hardware"
+    },
+    "hardware-email": {
+      "label": "Hardware or investment · rmcmurrer@kiralabs.org",
+      "url": "mailto:rmcmurrer@kiralabs.org?subject=Kira%20World%20hardware%20or%20investment"
+    },
+    "memory-support": {
+      "label": "ASUS · memory support",
+      "url": "https://rog.asus.com/motherboards/rog-maximus/rog-maximus-z890-hero/helpdesk_qvl_memory/"
+    },
+    "servers": {
+      "label": "Future shared worlds & servers",
+      "url": "progress.html#servers-next"
     }
   },
   "topics": [
@@ -242,6 +278,9 @@
         "What are the current project prototypes?",
         "How is Kira World different?",
         "How can I contact Robert?"
+      ],
+      "concept_names": [
+        "kira labs"
       ]
     },
     {
@@ -266,12 +305,34 @@
         "What works today?",
         "How does memory work?",
         "What about privacy?"
-      ]
+      ],
+      "concept_names": [
+        "kira world"
+      ],
+      "followups": {
+        "details": {
+          "answer": "Kira World connects three ideas: distinct people, continuity between conversations, and places in which to spend time. Home World is the continuing home, while future Notebook Worlds provide settings for activities. VR and compatible robotics are longer-term interfaces. Local conversation and continuity experiments and a basic apartment exist; that combination is not yet a finished shared world.",
+          "next": [
+            "Tell me about minds",
+            "What are Notebook Worlds?",
+            "What is Temporary Creator?"
+          ]
+        },
+        "how": {
+          "answer": "Person-specific identity and reviewed memory are kept separate from the immediate conversation. The intended next connection is to continuing places and activities. The public evidence describes bounded experiments rather than one completed system across every device and world."
+        },
+        "privacy": {
+          "answer": "The stated direction favors local control of personal state and permission for external actions. It does not establish that every future voice, device or world feature is offline, or supply a complete retention and sharing policy."
+        },
+        "status": {
+          "answer": "Local conversation, person-specific continuity and speech experiments exist, along with a basic walkable apartment. Complete populated worlds, accessible VR and compatible physical embodiment remain goals. There is no confirmed public launch date for the full experience."
+        }
+      }
     },
     {
       "id": "status",
       "title": "Where things stand",
-      "label": "Public information checked September 7, 2026",
+      "label": "Status notes · September 8, 2026",
       "terms": [
         "latest",
         "update",
@@ -293,8 +354,9 @@
         "when can",
         "when will"
       ],
-      "answer": "Kira World remains a private experimental project. Local conversation, identity, memory and voice prototypes exist; the complete 3D experience is still being developed. Sarah Travel is a private debug build. Video Studio has a preserved local production pipeline, with newer conversation-led work still under development. No public launch date is confirmed in these notes. CutBrief, ShiftBrief, ClearTrail, Carry On and Kira Sequence Desk have free written browser prototypes under private owner review. Paid CutBrief generation is locked; public access and completed submissions are not announced.",
+      "answer": "Kira World remains a private experimental project. Local conversation, identity, memory and voice prototypes exist; the complete 3D experience is still being developed. Sarah Travel is a private debug build. Video Studio has a preserved local production pipeline, with newer conversation-led work still under development. No public launch date is confirmed in these notes. Robert reports CutBrief submitted, with an approved public workspace link. ShiftBrief, ClearTrail, Carry On and Kira Sequence Desk remain described here as private owner-review prototypes. Paid CutBrief generation stays locked; no contest result is claimed.",
       "sources": [
+        "cutbrief-live",
         "projects",
         "world"
       ],
@@ -443,7 +505,26 @@
         "What about privacy?",
         "What is the Home World?",
         "What works today?"
-      ]
+      ],
+      "concept_names": [
+        "memory",
+        "memories",
+        "identity"
+      ],
+      "followups": {
+        "details": {
+          "answer": "A person’s identity provides a continuing reference for who is speaking; reviewed memory supplies context from earlier interactions. Keeping those records separate from the immediate conversation is intended to help Kira and Lisa remain distinct across sessions. It does not establish a complete life across every world or device."
+        },
+        "how": {
+          "answer": "The published distinction is between current conversation and retained, person-specific identity and reviewed-memory records. The notes do not specify a complete retrieval algorithm, database or automatic memory-selection policy. I should not invent those implementation details."
+        },
+        "privacy": {
+          "answer": "Reviewed memory and local control are stated design principles. The available public notes do not provide a complete policy for deletion, retention, sharing or device synchronization of resident memory."
+        },
+        "status": {
+          "answer": "Local continuity experiments exist. A complete persistent identity working across every device and world has not been established by these notes."
+        }
+      }
     },
     {
       "id": "privacy",
@@ -491,13 +572,33 @@
         "cost",
         "pay"
       ],
-      "answer": "I’m Sarah, the Kira Labs website guide. I can help you explore Robert’s work, write a short factual bio and find project information. This text guide needs no account, API key, installed model or credits. My answers use the dated notes and sources shown here. I do not run Robert’s private Kira World or voice system in your browser.",
+      "answer": "I’m Sarah, the Kira Labs website guide. I answer from these dated project notes and can help with Robert’s work and a short factual bio. Click Voice on once to hear the current answer and following replies until you choose Voice off or leave the page. It uses an available browser/device voice, not a custom clone, and does not request your microphone. The text guide needs no account, API key, installed model or credits.",
       "sources": [],
       "next": [
         "Write a mini bio of Robert",
         "What is Kira Labs?",
         "What works today?"
-      ]
+      ],
+      "followups": {
+        "details": {
+          "answer": "This website guide retrieves answers from its dated knowledge file. It can remember the current topic during this visit and use separate notes for follow-up questions. It is not running Robert’s private Kira World residents or their memories."
+        },
+        "how": {
+          "answer": "This page matches questions to dated topics and follow-up notes in the browser. Voice on enables browser/device read-aloud for the current and following answers until you turn it off or leave. It does not request microphone access, and this website is not running Robert’s private resident voice system."
+        },
+        "privacy": {
+          "answer": "Text questions stay in this page’s conversation memory until you reload or clear it; they are not emailed to Robert or sent to an AI provider for generated answers. The page does not request a microphone. Read-aloud uses browser/device speech, whose service behavior can vary, so an offline guarantee is not claimed."
+        },
+        "status": {
+          "answer": "The text guide is available here. One click on Voice on reads the current and following replies when browser/device speech is supported, until Voice off or leaving the page. No microphone or custom voice clone is used."
+        },
+        "cost": {
+          "answer": "The website text guide requires no account, API key, installed model or usage credits. It retrieves these notes in the browser."
+        },
+        "voice": {
+          "answer": "Choose Voice on once to read the current answer aloud and keep reading following replies. Voice off stops it, and leaving the page stops speech. Availability depends on your browser and device voices. No microphone is requested and no custom voice clone is claimed."
+        }
+      }
     },
     {
       "id": "studio",
@@ -519,6 +620,9 @@
         "What works today?",
         "How does that connect to his entertainment work?",
         "Can I contact Robert?"
+      ],
+      "concept_names": [
+        "video studio"
       ]
     },
     {
@@ -541,6 +645,9 @@
         "What is Kira World?",
         "What else is Robert building?",
         "How can I follow the work?"
+      ],
+      "concept_names": [
+        "sarah travel"
       ]
     },
     {
@@ -597,23 +704,18 @@
     },
     {
       "id": "home",
-      "title": "Home World & future worlds",
+      "title": "Home World",
       "label": "Basic walkable prototype · long-term vision",
       "terms": [
         "home world",
-        "notebook world",
-        "vr",
-        "virtual reality",
+        "apartment",
+        "walkable",
         "3d",
-        "robot",
         "body",
         "clothing",
-        "garment",
-        "conscious",
-        "sentient",
-        "alive"
+        "garment"
       ],
-      "answer": "A basic walkable one-bedroom Home World is development evidence. Persistent residents, physical objects, believable clothing and bodies, VR and compatible embodiment remain research and future goals. The polished illustrations on the website are labeled concept art. Kira Labs does not claim its current systems are conscious.",
+      "answer": "Home World is the intended continuing home for Kira World’s residents. A basic walkable one-bedroom apartment shell exists. Populated daily life, believable bodies and clothing, and continuity with future Notebook Worlds remain development goals. The polished illustrations on the site are concept art.",
       "sources": [
         "world",
         "projects"
@@ -621,12 +723,29 @@
       "next": [
         "What works today?",
         "How does memory work?"
-      ]
+      ],
+      "concept_names": [
+        "home world"
+      ],
+      "followups": {
+        "details": {
+          "answer": "Home World supplies the continuing-home part of the vision: a place to return to between conversations and activities. Notebook Worlds are proposed other settings for particular purposes. The apartment shell demonstrates a basic walkable space, not completed residents, physical interactions or autonomous daily routines."
+        },
+        "how": {
+          "answer": "The existing evidence is a basic walkable apartment. The intended connection to person-specific identity and memory is broader than that space. These notes do not document a completed system that gives residents ongoing daily lives there."
+        },
+        "status": {
+          "answer": "A basic walkable one-bedroom shell exists. A complete populated Home World is not established by the current public evidence."
+        },
+        "privacy": {
+          "answer": "The broader design favors local control of personal state. The public notes do not yet define a complete Home World access, sharing or retention policy."
+        }
+      }
     },
     {
       "id": "cutbrief",
       "title": "CutBrief",
-      "label": "Prototype notes · September 7, 2026",
+      "label": "Submitted prototype · public workspace · September 8, 2026",
       "terms": [
         "cutbrief",
         "cut brief",
@@ -637,15 +756,43 @@
         "cut brief",
         "cut-brief"
       ],
-      "answer": "CutBrief helps turn a video idea into an editable shot plan, with actor and location references, saved takes, trimming, captions and stitched landscape, vertical and square exports. It supports business updates, tutorials, travel, family and social videos. The tested free workflow uses your supplied media and written planning; it needs no paid generation credits. Appearance references remain separate from opening frames. A composed-scene review path is prepared, but paid scene and video generation are locked pending owner review. No successful hosted generation or finished automatic movie workflow is claimed. The browser prototype is in private owner review, with no public download or judge-access link announced.",
+      "answer": "CutBrief helps turn a video idea into an editable shot plan, with actor and location references, saved takes, trimming, captions and stitched landscape, vertical and square exports. It supports business updates, tutorials, travel, family and social videos. The tested free workflow uses your supplied media and written planning; it needs no paid generation credits. Appearance references remain separate from opening frames. A composed-scene review path is prepared, but paid scene and video generation are locked pending owner review. No successful hosted generation or finished automatic movie workflow is claimed. Robert reports that CutBrief has been submitted, and its approved public workspace link is now available below. This does not establish a contest result or unlock paid generation.",
       "sources": [
+        "cutbrief-live",
         "cutbrief"
       ],
       "next": [
         "Does CutBrief spend credits?",
         "How is CutBrief different from Kira Sequence Desk?",
         "What other prototypes are being tested?"
-      ]
+      ],
+      "followups": {
+        "details": {
+          "answer": "CutBrief’s supplied-media workflow connects an editable shot plan to actor and location references, takes, trimming, captions and stitched exports in landscape, vertical or square formats. Appearance references remain separate from opening frames. A composed-scene review path is prepared, but paid scene and video generation remain locked pending owner review."
+        },
+        "how": {
+          "answer": "Start from a video idea and written shot plan, add your own media and references, then review takes, timing, captions and the assembled result. The tested free path uses supplied media and written planning. It is not evidence that a hosted generator can automatically film an entire movie."
+        },
+        "status": {
+          "answer": "Robert reports that CutBrief has been submitted. The approved public workspace is linked below. This supersedes the older note saying no public access link was announced. Paid generation remains locked; submission is not a claim of a contest result.",
+          "sources": [
+            "cutbrief-live",
+            "cutbrief"
+          ]
+        },
+        "cost": {
+          "answer": "The tested written-planning and supplied-media workflow needs no paid generation credits. Paid scene and video generation remain locked pending owner review. Publishing the workspace and submitting it do not unlock that route."
+        },
+        "privacy": {
+          "answer": "The available CutBrief notes do not establish a complete policy for uploaded-media retention or sharing. A public workspace link is not a privacy guarantee. Check the workspace’s current information before supplying sensitive material."
+        },
+        "voice": {
+          "answer": "CutBrief’s supplied-media workflow can use your own media in an assembled export. The reviewed notes do not establish a released automatic voice or lip-sync generation service. The Sarah read-aloud voice on this website is separate."
+        },
+        "limits": {
+          "answer": "A public submitted prototype is available, but paid scene/video generation stays locked. Neither successful hosted generation nor a finished automatic movie workflow is claimed."
+        }
+      }
     },
     {
       "id": "shiftbrief",
@@ -764,14 +911,411 @@
         "what is being tested",
         "broader projects"
       ],
-      "answer": "Five current prototypes explore practical work beyond entertainment: CutBrief plans and assembles supplied video; ShiftBrief organizes staffing; ClearTrail keeps decision evidence; Carry On tracks tasks and readiness; and Kira Sequence Desk prepares timed, source-linked media plans. Their free written browser workflows have engineering checks and remain in private owner review. The browser editions need no preinstalled model or API key. No public access or completed contest submission is announced here. Paid CutBrief generation stays locked. The full personal Video Studio is a separate local project still under development.",
+      "answer": "Five current prototypes explore practical work beyond entertainment: CutBrief plans and assembles supplied video; ShiftBrief organizes staffing; ClearTrail keeps decision evidence; Carry On tracks tasks and readiness; and Kira Sequence Desk prepares timed, source-linked media plans. Their free written browser workflows have engineering checks. Robert reports that CutBrief has been submitted, and its approved public workspace is available below. The other four remain described here as private owner-review prototypes. The browser editions need no preinstalled model or API key. No contest result is claimed. Paid CutBrief generation stays locked. The full personal Video Studio is a separate local project still under development.",
       "sources": [
+        "cutbrief-live",
         "prototypes"
       ],
       "next": [
         "Tell me about ShiftBrief",
         "Tell me about ClearTrail",
         "Tell me about Carry On"
+      ]
+    },
+    {
+      "id": "minds",
+      "title": "Minds & distinct residents",
+      "label": "Kira World · published direction and current evidence",
+      "terms": [
+        "mind",
+        "minds",
+        "resident",
+        "residents",
+        "kira and lisa",
+        "synthetic people",
+        "synthetic person"
+      ],
+      "concept_names": [
+        "mind",
+        "minds",
+        "resident",
+        "residents",
+        "kira and lisa",
+        "synthetic people",
+        "synthetic person"
+      ],
+      "answer": "In Kira World, a “mind” means the software behind a distinct synthetic person. Kira and Lisa are intended to have their own identity, history, reviewed memories and voice, so a later conversation can continue with the same person. Local conversation and continuity experiments exist. This is not a claim that the software is conscious or has verified feelings.",
+      "sources": [
+        "world",
+        "projects"
+      ],
+      "next": [
+        "Tell me more",
+        "How does that work?",
+        "Is it working now?"
+      ],
+      "followups": {
+        "details": {
+          "answer": "The aim is continuity with an individual, rather than a new interchangeable character every time. Identity describes who the resident is; history and reviewed memories provide context from earlier interactions; a distinct voice helps preserve that identity in conversation. Kira and Lisa are separate residents in that design. The intended connection to Home World would give those continuing interactions a place, while future Notebook Worlds would provide other settings and activities. Local experiments support parts of this direction, but they do not establish a fully independent life across every world or device. “Mind” is a plain-language description here, not a scientific finding of consciousness."
+        },
+        "how": {
+          "answer": "The published approach separates a person’s identity and reviewed memory records from the immediate conversation. A later session can use that retained context to support continuity while keeping different people’s histories distinct. That explains the intended role of memory; the available public notes do not specify a complete mind architecture, exact model count or algorithm. Generated language about emotions is not, by itself, proof of a lived experience."
+        },
+        "privacy": {
+          "answer": "For residents, the stated direction is local control of personal state and reviewed memory, with permission for external actions. That is a design principle, not a verified guarantee that every future voice, world or device feature stays offline. These public notes do not establish a complete retention, deletion or device-sync policy for residents. This website guide is separate from Robert’s private resident histories."
+        },
+        "status": {
+          "answer": "Local person-specific conversation, identity, reviewed-memory continuity and speech experiments exist. The evidence does not establish finished persistent residents living independently in a shared 3D world, or one complete identity working across all devices. There is no confirmed public launch date for that full experience."
+        },
+        "voice": {
+          "answer": "A distinct voice is part of the intended identity of each resident, and local speech experiments exist. That is separate from the browser voice reading this website’s answers. The public notes do not establish a finished voice that follows each resident through every world and device."
+        },
+        "limits": {
+          "answer": "Separate identity records and convincing conversation do not prove consciousness, verified feelings or autonomous daily life. The current evidence supports bounded prototypes. A fully populated persistent world and cross-device embodiment remain goals."
+        }
+      }
+    },
+    {
+      "id": "notebook-worlds",
+      "title": "Notebook Worlds",
+      "label": "Kira World · published direction and current evidence",
+      "terms": [
+        "notebook world",
+        "notebook worlds"
+      ],
+      "concept_names": [
+        "notebook world",
+        "notebook worlds"
+      ],
+      "answer": "Notebook Worlds are proposed places within Kira World for particular activities: travel, learning, creative work, history and play. Home World is the continuing home; a Notebook World provides another setting for an activity. The aim is to retain the same people and continuity between places. Complete populated Notebook Worlds are a future goal, not a finished feature shown by the current apartment prototype.",
+      "sources": [
+        "world",
+        "projects"
+      ],
+      "next": [
+        "Tell me more",
+        "How does that work?",
+        "Is it working now?"
+      ],
+      "followups": {
+        "details": {
+          "answer": "The distinction is purpose. Home World provides a continuing home, while a Notebook World can focus on an activity or subject. The public examples include travel, study, creativity, history and play. The longer-term idea is that entering another setting would not mean abandoning the identity and history developed at home. That could make separate activities part of one continuing experience. Those examples describe the intended use, not a catalogue of worlds you can enter today. The present visible evidence is a basic walkable one-bedroom Home World shell."
+        },
+        "how": {
+          "answer": "Conceptually, a Notebook World gives an activity its own place while drawing on continuity with Home World. The public notes describe that relationship, but do not establish the implementation of world creation, transitions, shared sessions or memory exchange. I should not turn the concept into a claim that a working world generator or portal system is already available."
+        },
+        "privacy": {
+          "answer": "Continuity between places raises questions about which personal history accompanies a resident and who can access it. Local control and permission are the broader stated direction. The reviewed public notes do not yet define Notebook World-specific sharing, retention or access rules, so I cannot promise that all future worlds are private or offline."
+        },
+        "status": {
+          "answer": "Notebook Worlds remain future development. The basic walkable apartment is Home World evidence; it is not evidence that populated travel, study or historical worlds have been completed. No public Notebook World access link or release date is confirmed."
+        },
+        "voice": {
+          "answer": "The intended continuity includes the same resident identity and voice across activities and places. Local voice experiments do not prove that this already works inside completed Notebook Worlds."
+        },
+        "limits": {
+          "answer": "The listed activities are examples of the vision. They do not establish completed world libraries, live multiplayer, automatic world generation or historically accurate simulations."
+        }
+      }
+    },
+    {
+      "id": "temporary-creator",
+      "title": "Temporary Creator",
+      "label": "Public development tests · July 24–25, 2026",
+      "terms": [
+        "temporary creator",
+        "temporary ai",
+        "temporary synthetic people"
+      ],
+      "concept_names": [
+        "temporary creator",
+        "temporary ai",
+        "temporary synthetic people"
+      ],
+      "answer": "Temporary Creator, called TemporaryAI Creator in Robert’s public videos, is being developed to create synthetic people for particular worlds or activities. The aim is a coherent identity, knowledge, personality, appearance and voice. Public July 24–25 development videos describe actual voice-conversation tests, including mistakes and unfinished avatars or bodies. That is more than a written concept, but not a completed animated resident.",
+      "sources": [
+        "creator-video",
+        "creator-test-video",
+        "creator-factual-test"
+      ],
+      "next": [
+        "Tell me more",
+        "How does that work?",
+        "Is it working now?"
+      ],
+      "followups": {
+        "details": {
+          "answer": "The concept begins with a person’s purpose, identity, knowledge limits and personality, with appearance and voice belonging to the same design. Robert’s July 24 explainer describes creation types, source packs, historical dates and life stages, avatar references and voice evidence. The following public tests report both usable conversation and failures: invented details, internal system language appearing in speech, and claims of saved work that were not true. Some tests use individual test voices; others use generic Windows voices. These are development demonstrations, not a finished complete-person system. Temporary people are not automatically permanent Home World residents, and the name does not promise deletion when a chat closes."
+        },
+        "how": {
+          "answer": "The public explainer describes choosing a creation type, preparing sources, setting the relevant date or life stage, considering avatar references and evaluating voice evidence. Its proposed connection reaches world placement and Video Studio. The companion tests report voice conversations with concrete failures and unfinished avatars or bodies, so those described connections should not all be treated as completed. Historical variants are synthetic interpretations, not the literal people; voice and reference material still require appropriate evidence and authorization."
+        },
+        "privacy": {
+          "answer": "The name does not define a data-retention policy. The public explainer discusses authenticity, rights and authorization for source and voice material, but these notes do not establish a complete retention, deletion or sharing policy. I cannot promise that a temporary person is deleted after an interaction. The explanations here use public descriptions and general owner concepts, not private memories or person designs."
+        },
+        "status": {
+          "answer": "Public development videos published July 24–25, 2026 report actual TemporaryAI voice-conversation tests. They also document factual errors, incorrect saved-work claims, generic voice fallbacks and unfinished avatars or bodies. The dated videos establish demonstrated experiments, not today’s live runtime state or a completed animated person living in a world. No general public application release or completion date is confirmed here."
+        },
+        "voice": {
+          "answer": "Voice conversations appear in the public development tests. Some descriptions identify individualized test voices; others explicitly identify generic Windows voices while individual voices remain unfinished. These tests do not establish a finished body-and-voice creation pipeline. Historical or fictional test voices are not automatically authentic recordings or official performances."
+        },
+        "limits": {
+          "answer": "The public tests retain failures instead of presenting every answer as fact: they report invented details, internal language leaking into dialogue and incorrect claims that files were saved. Avatars, bodies and individual voices remain unfinished in the described tests. A demonstrated conversation is not proof of a complete animated resident or reliable research and file operations."
+        }
+      }
+    },
+    {
+      "id": "vr",
+      "title": "Virtual reality",
+      "label": "Kira World · published direction and current evidence",
+      "terms": [
+        "vr",
+        "virtual reality"
+      ],
+      "concept_names": [
+        "vr",
+        "virtual reality"
+      ],
+      "answer": "Virtual reality is a future way of sharing Kira World’s places with its residents. The ambition is accessible, multimodal presence while keeping the same identity and history across devices and worlds. The current public evidence does not establish a finished VR release, supported headset list or launch date.",
+      "sources": [
+        "world",
+        "projects"
+      ],
+      "next": [
+        "Tell me more",
+        "How does that work?",
+        "Is it working now?"
+      ],
+      "followups": {
+        "details": {
+          "answer": "The aspiration is presence in the same digital places, rather than losing the relationship and history whenever the interface changes. Accessibility and different ways of interacting are part of that direction. Home World and future Notebook Worlds give context to the idea. The polished world illustrations are concept art; they are not proof of a complete headset experience."
+        },
+        "how": {
+          "answer": "The intended connection is between the same resident identity and history and a different way of entering the world. The public notes do not specify completed headset integration, tracking, controls or accessibility features. Those details remain unconfirmed rather than something I can infer from the VR goal."
+        },
+        "privacy": {
+          "answer": "VR can involve device-specific tracking and voice services. The public Kira World notes do not define those future data flows or permissions. Local control is a design preference, not a promise that an unspecified headset or speech service keeps every signal on the device."
+        },
+        "status": {
+          "answer": "VR remains a future direction. A basic walkable Home World exists, but these notes do not establish a publicly available VR product, supported headset or release date."
+        },
+        "limits": {
+          "answer": "There is no confirmed device compatibility list, controller scheme, tracking specification or finished shared VR world in the reviewed notes."
+        }
+      }
+    },
+    {
+      "id": "robotics",
+      "title": "Robotics & physical embodiment",
+      "label": "Kira World · published direction and current evidence",
+      "terms": [
+        "robot",
+        "robots",
+        "robotics",
+        "physical embodiment",
+        "robot body"
+      ],
+      "concept_names": [
+        "robot",
+        "robots",
+        "robotics",
+        "physical embodiment",
+        "robot body"
+      ],
+      "answer": "Compatible physical embodiment is a longer-term Kira World goal: exploring whether a continuing identity could interact through suitable robotic hardware. The stated direction is simulation first, followed by controlled tests. The public evidence does not establish a deployed autonomous robot.",
+      "sources": [
+        "world",
+        "projects"
+      ],
+      "next": [
+        "Tell me more",
+        "How does that work?",
+        "Is it working now?"
+      ],
+      "followups": {
+        "details": {
+          "answer": "The connection to Kira World is continuity: a resident should not become an unrelated identity simply because the interface changes from a screen or virtual place to compatible hardware. This is an aspiration for future embodiment. Simulation and controlled testing come before a claim of physical capability. It does not mean Kira or Lisa currently has an operating robot body."
+        },
+        "how": {
+          "answer": "The published direction begins in simulation and proceeds through controlled tests of compatible embodiment. The reviewed notes do not identify a completed hardware integration, robot model, movement controller or autonomous task capability. I can explain the goal, but not provide a verified operating procedure for a robot that has not been established here."
+        },
+        "privacy": {
+          "answer": "Physical embodiment would introduce questions about sensors, recordings and permission for actions. The public notes do not establish a robot-specific data or access policy. The general preference for local control should not be read as a guarantee about unchosen hardware or future services."
+        },
+        "status": {
+          "answer": "Robotics is a longer-term goal, with simulation-first work as the stated approach. No deployed autonomous robot, supported hardware list or delivery date is confirmed by these public notes."
+        },
+        "limits": {
+          "answer": "A software identity or simulation is not evidence of a safe, capable physical robot. These notes do not verify autonomous real-world movement, household tasks or sensor access."
+        }
+      }
+    },
+    {
+      "id": "progress",
+      "title": "Kira World’s progress timeline",
+      "label": "Project notes · September 8, 2026",
+      "terms": [
+        "timeline",
+        "progress timeline",
+        "development timeline",
+        "milestones",
+        "progress page"
+      ],
+      "concept_names": [
+        "timeline",
+        "progress timeline",
+        "development timeline",
+        "milestones",
+        "progress page"
+      ],
+      "answer": "The interactive progress page brings together public development videos, working prototypes, current work and next goals. Choose a milestone or move the slider to read its story; the Completed, Working on and Next goals filters help separate those stages. Video dates are publication dates, while undated current items were reviewed September 8. The page also shows the workstation and ways to help.",
+      "followups": {
+        "details": {
+          "answer": "The journey includes public Kira World and TemporaryAI updates, spoken development tests, Studio demonstrations, the walkable Home World shell and conversation foundations. Current body and world integration work remains separate from the goals for Notebook Worlds, VR, shared servers and physical embodiment. Each selected card carries a short explanation, a relevant limit and source links."
+        },
+        "how": {
+          "answer": "Select a milestone in the constellation, use the arrow buttons or move the slider. The detail panel changes to that exact item. Filter the view to completed milestones, current work or next goals. On a small screen the milestones form a vertical list. Choose Watch video to load the selected YouTube player; it does not autoplay."
+        },
+        "status": {
+          "answer": "The timeline is a dated project journal, not a live runtime monitor. Completed marks a working prototype, published test or explanation; it does not mean the whole world is finished. Next goals have no promised dates or completion percentages."
+        },
+        "privacy": {
+          "answer": "The timeline loads its milestone notes and existing site images. A YouTube player is added only after you choose Watch video; opening it connects to YouTube. It is not a private resident conversation or a live view of Robert’s computer."
+        }
+      },
+      "sources": [
+        "progress"
+      ],
+      "next": [
+        "Show the equipment needs",
+        "Tell me about future servers",
+        "What are Notebook Worlds?"
+      ]
+    },
+    {
+      "id": "equipment",
+      "title": "The equipment behind Kira World",
+      "label": "Project notes · September 8, 2026",
+      "terms": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades"
+      ],
+      "concept_names": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades"
+      ],
+      "answer": "The workstation configuration checked September 8 is an Intel Core Ultra 9 285K with 24 cores, 32 GB DDR5 as 2 × 16 GB configured at 6000 MT/s, an RTX 5060 Ti with 16 GB VRAM, an ASUS ROG MAXIMUS Z890 HERO motherboard and a 2 TB drive. The first upgrade target is a compatible matched 64 GB memory kit; larger-VRAM and VR equipment are later priorities. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "followups": {
+        "details": {
+          "answer": "A local Studio motion test stopped at memory admission, making more system RAM the first engineering-headroom target. A matched 2 × 32 GB DDR5 kit would need checking against ASUS memory support and the current system. Later, measured workloads may justify 24–32 GB VRAM. VR equipment should follow a world prototype ready for device tests. No particular purchase is selected. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "how": {
+          "answer": "The next equipment choice should follow the actual workload and compatibility checks. Check the exact memory kit against ASUS support instead of assuming mixed modules work together. Benchmark heavier models before selecting a larger GPU, and test a ready world prototype before claiming headset support. Hardware adds capacity; it does not repair software defects. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "status": {
+          "answer": "The current checked configuration has 32 GB system RAM and 16 GB GPU memory. The 64 GB matched-kit target and later larger-VRAM, VR and server equipment are proposed needs, not completed purchases. These dated notes do not read live memory usage from the workstation. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "privacy": {
+          "answer": "The equipment section lists public configuration details, not serial numbers, private file paths or a live view of Robert’s machine. A hardware offer can be discussed directly with Robert; this guide does not arrange shipments or access anyone’s computer. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "technical": {
+          "answer": "The checked workstation uses an Intel Core Ultra 9 285K with 24 cores, 32 GB DDR5 as 2 × 16 GB at 6000 MT/s, an RTX 5060 Ti with 16 GB VRAM, an ASUS ROG MAXIMUS Z890 HERO and a 2 TB drive. The next RAM target is a matched 2 × 32 GB DDR5 kit, subject to exact compatibility checks. No GPU power-supply fit, headset compatibility or server specification is established here. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "cost": {
+          "answer": "No priced shopping list, selected purchase or investment return is promised. The equipment page explains tentative priorities and why they could help. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "voice": {
+          "answer": "No new voice-performance benchmark or voice-specific hardware purchase is established by these notes. Voice behavior and larger-model capacity still need testing on the selected setup. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "limits": {
+          "answer": "More RAM or VRAM can provide headroom but cannot guarantee a completed workflow, better acting, reliable software or headset compatibility. Exact parts and tests come before any purchase decision. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        }
+      },
+      "sources": [
+        "equipment",
+        "memory-support",
+        "hardware-email"
+      ],
+      "next": [
+        "Tell me more about equipment",
+        "Tell me about future servers",
+        "Show the progress timeline"
+      ]
+    },
+    {
+      "id": "servers",
+      "title": "Future servers & shared worlds",
+      "label": "Project notes · September 8, 2026",
+      "terms": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user"
+      ],
+      "concept_names": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user"
+      ],
+      "answer": "The longer-term goal is multiple synthetic people across multiple worlds, with people visiting through VR and responsive conversation. That will need shared world state and coordinated computing, voice and rendering. Low lag is a performance goal to measure, not a guarantee. No server count, price, user capacity or finished deployment is established. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "followups": {
+        "details": {
+          "answer": "Shared worlds would need to preserve who and what is present while conversations and activities happen at the same time. Distributed computing, consistent world state, recovery and the combined delays of voice, rendering and the network all matter. The right server capacity should come from actual multiuser and load tests, not an invented machine count. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "how": {
+          "answer": "The proposed direction is to coordinate computing across services while keeping shared world state consistent. Tests would need to measure concurrent people and visitors, recovery after interruption, and end-to-end latency. This describes the work required, not a deployed architecture already proven to support it. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "status": {
+          "answer": "Shared-server capacity for multiple populated worlds and VR visitors remains a future goal. The timeline does not claim a running public multiuser service, a supported user count or a low-latency result. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "privacy": {
+          "answer": "Shared worlds would need explicit decisions about access to people, conversations and world state. A completed server-specific privacy, retention and permission policy is not established in these notes. Local control remains a design preference rather than a guarantee about a future deployment. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "technical": {
+          "answer": "Exact server specifications, machine count and supported users are not yet established. Shared-state consistency and measured voice, render and network latency should guide the eventual design. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "cost": {
+          "answer": "There is no selected server package, price, capacity commitment or promised investment return. Server donations and investment conversations are welcome, with requirements to be discussed before equipment is sent. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "voice": {
+          "answer": "Concurrent voice conversations add both computing demand and delay to the shared-world design. End-to-end voice and rendering latency must be measured with the intended workload; no low-lag guarantee is claimed. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "limits": {
+          "answer": "A public conversation test or a walkable apartment does not demonstrate many residents and visitors in concurrent worlds. Multiuser, load, recovery and latency tests remain necessary. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        }
+      },
+      "sources": [
+        "servers",
+        "equipment",
+        "hardware-email"
+      ],
+      "next": [
+        "What equipment is being used now?",
+        "Tell me about VR",
+        "Show the progress timeline"
       ]
     }
   ],

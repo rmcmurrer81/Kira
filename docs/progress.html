@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a12">
+  <meta name="description" content="Explore Kira World's public development milestones, the work happening now, and the next goals. Watch the original updates and see the hardware behind the project.">
+  <link rel="canonical" href="https://kiralabs.org/progress.html">
+  <meta property="og:title" content="Kira World — The journey so far">
+  <meta property="og:description" content="An interactive development timeline: real milestones, ongoing work, and the next possibilities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kiralabs.org/progress.html">
+  <meta property="og:image" content="https://kiralabs.org/assets/social-card.jpg">
+  <title>The journey so far — Kira Labs</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="progress.css">
+  <script src="script.js" defer></script>
+  <script src="progress.js" defer></script>
+</head>
+<body class="progress-page">
+  <a class="skip-link" href="#main">Skip to the timeline</a>
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Kira Labs home"><span class="brand-mark" aria-hidden="true"><img src="assets/kira-world-k-logo-192.png" alt=""></span><span class="brand-copy"><strong>Kira Labs</strong><small>Independent AI research</small></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle><span class="sr-only">Open navigation</span><span></span><span></span><span></span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation" data-nav><a href="index.html">Kira World</a><a href="progress.html" aria-current="page">Progress</a><a href="projects.html">Projects</a><a href="about.html">About</a><a class="nav-contact" href="contact.html">Contact</a></nav>
+    </div>
+  </header>
+  <main id="main" class="shell progress-main">
+    <section class="journey-heading" aria-labelledby="journey-title">
+      <div><p class="eyebrow"><span class="live-dot"></span> Kira World / the development journal</p><h1 id="journey-title">A world,<br><em>taking shape.</em></h1></div>
+      <div class="journey-intro"><p>From the first continuing conversations to a place worth coming back to. Explore the milestones, see what is being built, and follow what comes next.</p><a href="#hardware">The machine behind the work <span aria-hidden="true">↗</span></a><p class="journal-date" id="reviewed-date">Public evidence and development goals</p></div>
+    </section>
+    <section class="journey-explorer" aria-labelledby="explorer-title">
+      <div class="explorer-toolbar"><h2 id="explorer-title">Explore the journey</h2><div class="status-filters" role="group" aria-label="Filter milestones"><button type="button" data-filter="all" aria-pressed="true">All milestones <span data-count="all"></span></button><button type="button" data-filter="completed" aria-pressed="false"><i aria-hidden="true"></i>Completed <span data-count="completed"></span></button><button type="button" data-filter="working" aria-pressed="false"><i aria-hidden="true"></i>Working on <span data-count="working"></span></button><button type="button" data-filter="next" aria-pressed="false"><i aria-hidden="true"></i>Next goals <span data-count="next"></span></button></div></div>
+      <div class="timeline-stage">
+        <div class="stage-caption"><span>THE MILESTONE CONSTELLATION</span><span id="visible-count"></span></div>
+        <p id="timeline-help" class="sr-only">Choose any milestone. Use the arrow keys, Home or End between milestone buttons, or use the slider below. The selected milestone’s full story follows the timeline.</p>
+        <div class="timeline-scroll" id="timeline-scroll" role="region" aria-label="Milestone constellation" aria-describedby="timeline-help" tabindex="0">
+          <div class="constellation" id="constellation"><svg id="connections" aria-hidden="true" focusable="false"></svg><ol id="milestones" aria-label="Milestones"></ol></div>
+        </div>
+        <div class="timeline-controls"><button id="previous-milestone" type="button" aria-label="Previous milestone" disabled>←</button><div class="scrubber"><label for="milestone-slider">Move through the journey <output id="selected-position" for="milestone-slider"></output></label><input type="range" id="milestone-slider" min="0" max="0" value="0" step="1" disabled aria-controls="milestone-detail"><div class="range-labels"><span id="range-start">Public milestones</span><span id="range-end">Next goals</span></div></div><button id="next-milestone" type="button" aria-label="Next milestone" disabled>→</button></div>
+      </div>
+      <p class="timeline-note">Completed covers working prototypes and published tests or explanations. Video dates mark publication; Now items were reviewed September 8. Goals have no promised completion date.</p>
+      <p id="load-status" role="status" aria-live="polite">Loading the development journal…</p>
+      <noscript><p class="timeline-fallback">This interactive timeline needs JavaScript. You can still read the <a href="projects.html">project notes</a> or watch <a href="https://www.youtube.com/@McMurrer">Robert’s public development videos</a>.</p></noscript>
+    </section>
+    <section class="milestone-detail" id="milestone-detail" aria-labelledby="detail-title" hidden>
+      <div class="detail-visual"><figure><img id="detail-image" alt="" width="1200" height="700"><figcaption id="image-caption"></figcaption></figure><div id="video-area"></div></div>
+      <div class="detail-story"><div class="detail-kicker"><span id="detail-status" class="status-pill"></span><span id="detail-date"></span></div><p id="detail-track" class="eyebrow"></p><h2 id="detail-title"></h2><p id="detail-summary" class="detail-summary"></p><div id="detail-body"></div><div class="evidence-boundary"><h3 id="boundary-label">What this establishes</h3><p id="detail-boundary"></p></div><div id="detail-sources" class="detail-sources"></div></div>
+    </section>
+    <section class="hardware-section" id="hardware" aria-labelledby="hardware-title">
+      <div class="hardware-heading"><div><p class="eyebrow">Independent work / real equipment</p><h2 id="hardware-title">The machine behind<br>the ambition.</h2></div><p>Kira World is being developed on one local workstation. More room for experiments can help—but hardware alone does not finish the software.</p></div>
+      <details class="hardware-details"><summary><span><strong>Inside the current workstation</strong><small>Processor, memory, graphics and storage</small></span><span class="expand-symbol" aria-hidden="true">+</span></summary><dl id="hardware-specs"></dl><p id="hardware-date" class="hardware-note"></p><div id="hardware-sources" class="detail-sources"></div></details>
+      <div class="needs-heading"><h3>What would help next</h3><span>Priorities, not a shopping list</span></div><div id="hardware-goals" class="hardware-goals"></div>
+      <div class="support-invitation"><div><h3>Help build what comes next.</h3><p>Robert is always looking for investors and people with spare RAM, VR headsets or other useful hardware. Have equipment, expertise or an investment conversation in mind? Get in touch.</p></div><a class="button button-primary" href="mailto:rmcmurrer@kiralabs.org?subject=Kira%20World%20%E2%80%94%20investment%20or%20hardware%20support">rmcmurrer@kiralabs.org <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer class="progress-footer shell"><a class="brand" href="index.html"><span class="brand-copy"><strong>Kira Labs</strong><small>A continuing person. A place to live.</small></span></a><p>Independent research by Robert McMurrer.<br><a href="contact.html">Ask Sarah about the project →</a></p><span>© <span data-year>2026</span> Kira Labs</span></footer>
+</body>
+</html>

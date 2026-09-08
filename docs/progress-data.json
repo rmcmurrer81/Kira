@@ -1,0 +1,592 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-09-08",
+  "default_id": "home-now",
+  "milestones": [
+    {
+      "id": "youtube-UYsKn8lzhWs",
+      "title": "A public look inside Kira World",
+      "date": "2026-07-23",
+      "date_basis": "Public video publication date",
+      "published_at": "2026-07-23T14:49:51-07:00",
+      "status": "completed",
+      "track": "Kira World",
+      "summary": "A public update reports the then-current continuity, voice, Home World and body work, including blocked blinking and unfinished embodiment.",
+      "body": [
+        "The update brings together identity, reviewed memory, local voice and the Home World build. It also follows gaze and mouth work, the separation of intended movement from completed action, and the project’s approach to privacy and choice."
+      ],
+      "boundary": "A dated progress report: natural blinking and parts of body and world integration were still unfinished.",
+      "image": {
+        "path": "assets/kira-world-shell-actual.png",
+        "caption": "Existing public development screenshot. It illustrates the project, not the exact date or scene in this video.",
+        "alt": "Actual Kira World Shell with a Home World view and conversation"
+      },
+      "video": {
+        "id": "UYsKn8lzhWs",
+        "title": "Kira World Update: What Works, What Is Still Blocked & What Comes Next"
+      },
+      "sources": [
+        {
+          "label": "Original public video",
+          "url": "https://www.youtube.com/watch?v=UYsKn8lzhWs"
+        }
+      ],
+      "evidence_kind": "published-progress-report"
+    },
+    {
+      "id": "youtube-8vjcEBJTwbM",
+      "title": "The Video Studio direction",
+      "date": "2026-07-23",
+      "date_basis": "Public video publication date",
+      "published_at": "2026-07-23T15:27:25-07:00",
+      "status": "completed",
+      "track": "Video Studio",
+      "summary": "A public explainer describes the preserved local v1.9 production workflow and a separately staged next version.",
+      "body": [
+        "The preserved local workflow organizes research, scripts, narration, captions and MP4 assembly. A separate next version explores versioned projects and corrections that preserve good work. The aim is to support Kira World updates, educational videos and interviews."
+      ],
+      "boundary": "The working local baseline and the proposed next interface are distinct; the illustrated future screens are concept art.",
+      "image": {
+        "path": "assets/video-studio-concept.png",
+        "caption": "Video Studio concept illustration — not the current application or a frame from this video.",
+        "alt": "Concept illustration of the future Kira Labs Video Studio"
+      },
+      "video": {
+        "id": "8vjcEBJTwbM",
+        "title": "Inside Kira Labs Video Studio: How Kira World Will Create Its Own Videos"
+      },
+      "sources": [
+        {
+          "label": "Original public video",
+          "url": "https://www.youtube.com/watch?v=8vjcEBJTwbM"
+        }
+      ],
+      "evidence_kind": "published-walkthrough"
+    },
+    {
+      "id": "youtube-h5RQiAlBVYw",
+      "title": "Temporary Creator explained",
+      "date": "2026-07-24",
+      "date_basis": "Public video publication date",
+      "published_at": "2026-07-24T14:52:01-07:00",
+      "status": "completed",
+      "track": "Temporary Creator",
+      "summary": "A public feature explains a source-based creation workflow: creation type, historical date, appearance references, voice evidence and intended world placement.",
+      "body": [
+        "The explainer follows creation type, source packs, historical date and life stage, appearance references and voice evidence. Its longer-term connection is to a person’s place in a world and to Video Studio. Historical versions are described as synthetic interpretations."
+      ],
+      "boundary": "The creation workflow is explained publicly; complete animated residents and world placement are not demonstrated by the description.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "caption": "Kira World concept illustration — not a screenshot of this milestone or a frame from its video.",
+        "alt": "Concept illustration connecting people, memory and digital worlds"
+      },
+      "video": {
+        "id": "h5RQiAlBVYw",
+        "title": "Inside Kira World’s TemporaryAI Creator: From Sources to a Synthetic Person"
+      },
+      "sources": [
+        {
+          "label": "Original public video",
+          "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw"
+        }
+      ],
+      "evidence_kind": "published-concept-explainer"
+    },
+    {
+      "id": "youtube-e3vaQFJ04Qo",
+      "title": "A continuing personal expert",
+      "date": "2026-07-24",
+      "date_basis": "Public video publication date",
+      "published_at": "2026-07-24T15:04:13-07:00",
+      "status": "completed",
+      "track": "Minds and learning",
+      "summary": "A public concept explores a continuing tutor who adapts explanations and conversation while retaining identity and permissioned memory.",
+      "body": [
+        "The concept is a tutor who adapts explanations, notices when a learner needs a break, and can move into ordinary conversation while remaining the same person. Permissioned memory, source grounding and student safeguards are part of the intended design."
+      ],
+      "boundary": "A published learning concept, not a validated tutoring product or measured educational outcome.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "caption": "Kira World concept illustration — not a screenshot of this milestone or a frame from its video.",
+        "alt": "Concept illustration connecting people, memory and digital worlds"
+      },
+      "video": {
+        "id": "e3vaQFJ04Qo",
+        "title": "Kira World: A Personal Expert Who Learns How You Learn"
+      },
+      "sources": [
+        {
+          "label": "Original public video",
+          "url": "https://www.youtube.com/watch?v=e3vaQFJ04Qo"
+        }
+      ],
+      "evidence_kind": "published-concept-explainer"
+    },
+    {
+      "id": "youtube-vNRTwMvkR3g",
+      "title": "A spoken character test",
+      "date": "2026-07-24",
+      "date_basis": "Public video publication date",
+      "published_at": "2026-07-24T16:25:46-07:00",
+      "status": "completed",
+      "track": "Temporary Creator",
+      "summary": "The public description reports Robert asking spoken questions and an individualized test voice answering as a synthetic interpretation of Peter Parker.",
+      "body": [
+        "Robert asks questions aloud and an individualized test voice answers as a synthetic interpretation set after No Way Home. The demonstration keeps a broken response visible and distinguishes generated continuation ideas from confirmed story details."
+      ],
+      "boundary": "The test reports an internal-language error and no finished avatar. The interpretation and voice are unofficial.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "caption": "Kira World concept illustration — not a screenshot of this milestone or a frame from its video.",
+        "alt": "Concept illustration connecting people, memory and digital worlds"
+      },
+      "video": {
+        "id": "vNRTwMvkR3g",
+        "title": "I Interviewed a Synthetic Peter Parker After No Way Home | Kira World TemporaryAI Test"
+      },
+      "sources": [
+        {
+          "label": "Original public video",
+          "url": "https://www.youtube.com/watch?v=vNRTwMvkR3g"
+        }
+      ],
+      "evidence_kind": "published-development-test"
+    },
+    {
+      "id": "youtube-nj2ZcdfxSWI",
+      "title": "An interview with the past",
+      "date": "2026-07-24",
+      "date_basis": "Public video publication date",
+      "published_at": "2026-07-24T17:44:09-07:00",
+      "status": "completed",
+      "track": "Temporary Creator",
+      "summary": "The public description reports a spoken interview with an 1894-set synthetic interpretation of H. H. Holmes.",
+      "body": [
+        "A spoken interview explores a historical interpretation set in 1894. The description identifies the voice as generic Windows speech, not an authentic recording of the historical person."
+      ],
+      "boundary": "The test retains a chronology error, disputed historical claims and evasive answers.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "caption": "Kira World concept illustration — not a screenshot of this milestone or a frame from its video.",
+        "alt": "Concept illustration connecting people, memory and digital worlds"
+      },
+      "video": {
+        "id": "nj2ZcdfxSWI",
+        "title": "I Interviewed an H. H. Holmes Historical TemporaryAI | What Worked and What Failed"
+      },
+      "sources": [
+        {
+          "label": "Original public video",
+          "url": "https://www.youtube.com/watch?v=nj2ZcdfxSWI"
+        }
+      ],
+      "evidence_kind": "published-development-test"
+    },
+    {
+      "id": "youtube-rYuwe1dgAeI",
+      "title": "Testing a synthetic expert",
+      "date": "2026-07-25",
+      "date_basis": "Public video publication date",
+      "published_at": "2026-07-25T11:35:35-07:00",
+      "status": "completed",
+      "track": "Temporary Creator and robotics",
+      "summary": "The public description reports a synthetic expert discussing robotics and producing a small OpenSCAD concept, with a spoken interface.",
+      "body": [
+        "The expert discusses mechanical structure, servos, sensors and low-voltage controls, and produces a small OpenSCAD concept. The test also asks what an expert needs beyond professional knowledge to become a more individual conversational person."
+      ],
+      "boundary": "False saved-file claims and a file-type error remain visible. The interview is not a working robot.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "caption": "Kira World concept illustration — not a screenshot of this milestone or a frame from its video.",
+        "alt": "Concept illustration connecting people, memory and digital worlds"
+      },
+      "video": {
+        "id": "rYuwe1dgAeI",
+        "title": "I Tested a Synthetic Robotics Engineer | What Worked, Failed & Was Missing"
+      },
+      "sources": [
+        {
+          "label": "Original public video",
+          "url": "https://www.youtube.com/watch?v=rYuwe1dgAeI"
+        }
+      ],
+      "evidence_kind": "published-development-test"
+    },
+    {
+      "id": "youtube-5Nllo6oAfYA",
+      "title": "Testing the limits of recall",
+      "date": "2026-07-25",
+      "date_basis": "Public video publication date",
+      "published_at": "2026-07-25T13:23:57-07:00",
+      "status": "completed",
+      "track": "Temporary Creator",
+      "summary": "The public description reports spoken questions and a generated test voice, with basic identity and interests followed by detailed factual testing.",
+      "body": [
+        "Basic identity, fashion interests and the Paris setting provide a starting point for spoken questions. More detailed questions expose invented memories and confused story facts, which Robert pauses to correct during the test."
+      ],
+      "boundary": "The spoken test reveals factual and internal-language failures; it does not establish reliable canon recall.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "caption": "Kira World concept illustration — not a screenshot of this milestone or a frame from its video.",
+        "alt": "Concept illustration connecting people, memory and digital worlds"
+      },
+      "video": {
+        "id": "5Nllo6oAfYA",
+        "title": "I Tested a Temporary Marinette AI — Her Canon Went Completely Off the Rails"
+      },
+      "sources": [
+        {
+          "label": "Original public video",
+          "url": "https://www.youtube.com/watch?v=5Nllo6oAfYA"
+        }
+      ],
+      "evidence_kind": "published-development-test"
+    },
+    {
+      "id": "youtube-nsfpHVfVfho",
+      "title": "A Studio workflow walkthrough",
+      "date": "2026-07-26",
+      "date_basis": "Public video publication date",
+      "published_at": "2026-07-26T19:22:39-07:00",
+      "status": "completed",
+      "track": "Video Studio",
+      "summary": "The public description presents a Moon-phase workflow from project setup through a package for owner review, including revisions and source audio.",
+      "body": [
+        "A Moon-phase example follows project setup, research, scripting, storyboard review, source audio and revisions into a package for owner review. The intended workflow preserves unaffected work when one section changes, with publication remaining under the user’s control."
+      ],
+      "boundary": "A published workflow demonstration, with owner review and no automatic publication.",
+      "image": {
+        "path": "assets/video-studio-concept.png",
+        "caption": "Video Studio concept illustration — not the current application or a frame from this video.",
+        "alt": "Concept illustration of the future Kira Labs Video Studio"
+      },
+      "video": {
+        "id": "nsfpHVfVfho",
+        "title": "How to Use Kira Labs Video Studio | From Idea to Finished Video"
+      },
+      "sources": [
+        {
+          "label": "Original public video",
+          "url": "https://www.youtube.com/watch?v=nsfpHVfVfho"
+        }
+      ],
+      "evidence_kind": "published-walkthrough"
+    },
+    {
+      "id": "youtube-TLe7dJhj7kE",
+      "title": "Production Director demo",
+      "date": "2026-08-31",
+      "date_basis": "Public video publication date",
+      "published_at": "2026-08-31T10:35:22-07:00",
+      "status": "completed",
+      "track": "Production Director",
+      "summary": "The public description presents an inspectable production-plan, storyboard, narrated-pitch and downloadable-package workflow for an All Things Agentic Hackathon entry.",
+      "body": [
+        "The hackathon demonstration turns an everyday-language story into an inspectable plan, storyboard, narrated pitch, shot list and downloadable package. This is a separate cloud-oriented Production Director project."
+      ],
+      "boundary": "A separate cloud planning demo, not proof that local Studio can generate complete acted films.",
+      "image": {
+        "path": "assets/video-studio-concept.png",
+        "caption": "Video Studio concept illustration — not the current application or a frame from this video.",
+        "alt": "Concept illustration of the future Kira Labs Video Studio"
+      },
+      "video": {
+        "id": "TLe7dJhj7kE",
+        "title": "Video Studio Production Director | All Things Agentic Hackathon"
+      },
+      "sources": [
+        {
+          "label": "Original public video",
+          "url": "https://www.youtube.com/watch?v=TLe7dJhj7kE"
+        }
+      ],
+      "evidence_kind": "published-demo"
+    },
+    {
+      "id": "continuity-prototype",
+      "title": "Conversation foundations",
+      "date": null,
+      "date_basis": "Working prototypes · reviewed September 8, 2026",
+      "status": "completed",
+      "track": "Minds & memory",
+      "summary": "Separate identities, reviewed memory, saved voice work and local conversation provide working foundations for continuing people.",
+      "body": [
+        "Public project notes describe person-specific continuity across bounded restarts and local speech experiments. These foundations support returning to the same identity instead of beginning with an interchangeable character every time."
+      ],
+      "boundary": "These are working prototypes. They do not yet establish a complete independent life in a shared world.",
+      "image": {
+        "path": "assets/kira-world-shell-actual.png",
+        "caption": "Existing public development screenshot. It illustrates the project, not the exact date or scene in this video.",
+        "alt": "Actual Kira World Shell with a Home World view and conversation"
+      },
+      "sources": [
+        {
+          "label": "Kira World public notes",
+          "url": "index.html#reality"
+        }
+      ],
+      "evidence_kind": "current-public-notes"
+    },
+    {
+      "id": "continuity-now",
+      "title": "Connecting people and worlds",
+      "date": null,
+      "date_basis": "Now · public development notes",
+      "status": "working",
+      "track": "Minds & memory",
+      "summary": "The next integration work connects continuing conversations to places, activities and a more complete sense of presence.",
+      "body": [
+        "Identity, reviewed memory and speech provide a working foundation. The continuing task is to bring those pieces together with world state, residents and useful shared activities.",
+        "Kira and Lisa retain distinct identities in the design. Moving between conversations, worlds and devices should preserve that distinction."
+      ],
+      "boundary": "A consistent shared daily life across worlds and devices still needs direct, complete demonstrations.",
+      "image": {
+        "path": "assets/kira-world-shell-actual.png",
+        "caption": "Existing public development screenshot. It illustrates the project, not the exact date or scene in this video.",
+        "alt": "Actual Kira World Shell with a Home World view and conversation"
+      },
+      "sources": [
+        {
+          "label": "Kira World public notes",
+          "url": "index.html#reality"
+        }
+      ],
+      "evidence_kind": "current-public-notes"
+    },
+    {
+      "id": "home-now",
+      "title": "A first place to walk",
+      "date": null,
+      "date_basis": "Working prototype · reviewed September 8, 2026",
+      "status": "completed",
+      "track": "Home World",
+      "summary": "A basic walkable one-bedroom Home World shell exists. It is a real starting point for the continuing home in the larger vision.",
+      "body": [
+        "The public development screenshot shows a basic one-bedroom space that can be navigated. It gives the larger Home World idea a concrete environment to build on."
+      ],
+      "boundary": "The completed prototype is the walkable shell. Populated rooms, persistent objects and shared everyday life remain further work.",
+      "image": {
+        "path": "assets/current-home-world-prototype.png",
+        "caption": "Actual public development screenshot: the basic one-bedroom Home World shell.",
+        "alt": "Walkable one-bedroom Home World development prototype"
+      },
+      "sources": [
+        {
+          "label": "Kira World public notes",
+          "url": "index.html#reality"
+        }
+      ],
+      "evidence_kind": "current-public-notes"
+    },
+    {
+      "id": "body-now",
+      "title": "A body before the clothing",
+      "date": null,
+      "date_basis": "Now · public development notes",
+      "status": "working",
+      "track": "Body & world interaction",
+      "summary": "Believable bodies, garments and objects need to work together. The public notes describe articulated test-body requirements and garment behavior fixtures.",
+      "body": [
+        "This work begins with how a body bends and moves, how a garment fits it, and what should happen when they interact.",
+        "Requirements, preparation and tests establish useful boundaries, but the concept dressing sequence should not be mistaken for a completed simulation."
+      ],
+      "boundary": "Requirements and test design are evidence of preparation, not finished clothing physics or a fully animated resident.",
+      "image": {
+        "path": "assets/garment-dressing-sequence-concept.png",
+        "caption": "Concept illustration of the intended dressing sequence — not a completed clothing simulation.",
+        "alt": "Illustrated concept for a garment dressing sequence"
+      },
+      "sources": [
+        {
+          "label": "Kira World public notes",
+          "url": "index.html#reality"
+        }
+      ],
+      "evidence_kind": "current-public-notes"
+    },
+    {
+      "id": "notebook-next",
+      "title": "One home. More worlds.",
+      "date": null,
+      "date_basis": "Next goal · timing not set",
+      "status": "next",
+      "track": "Notebook Worlds",
+      "summary": "Purpose-built places for learning, travel, creativity, history and play—with continuity back to Home World.",
+      "body": [
+        "The aim is to keep the same resident identity and shared history when entering another activity or setting.",
+        "These are proposed uses, not a catalogue of populated worlds that are ready to enter. World transitions and ongoing shared activity still need direct demonstrations."
+      ],
+      "boundary": "A completed Notebook World must show that its people, context and activities continue as intended. No release date is promised.",
+      "image": {
+        "path": "assets/kira-labs-hero.webp",
+        "caption": "Long-term Kira World concept visualization — not a finished world or VR product.",
+        "alt": "Concept visualization of connected Kira World experiences"
+      },
+      "sources": [
+        {
+          "label": "Kira World public notes",
+          "url": "index.html#reality"
+        }
+      ],
+      "evidence_kind": "future-goal"
+    },
+    {
+      "id": "vr-next",
+      "title": "Step into the same world",
+      "date": null,
+      "date_basis": "Next goal · timing not set",
+      "status": "next",
+      "track": "Accessible virtual reality",
+      "summary": "A future VR experience would let people share Kira World’s places while retaining the same identity and history.",
+      "body": [
+        "Accessibility and multiple ways to interact are part of the intended direction.",
+        "Headset work should follow a world prototype that is ready to test. No headset compatibility list or finished VR experience is claimed."
+      ],
+      "boundary": "Usable interaction, comfort, accessibility and device compatibility all need actual testing.",
+      "image": {
+        "path": "assets/kira-labs-hero.webp",
+        "caption": "Long-term Kira World concept visualization — not a finished world or VR product.",
+        "alt": "Concept visualization of connected Kira World experiences"
+      },
+      "sources": [
+        {
+          "label": "Kira World public notes",
+          "url": "index.html#reality"
+        }
+      ],
+      "evidence_kind": "future-goal"
+    },
+    {
+      "id": "servers-next",
+      "title": "More people. Shared worlds.",
+      "date": null,
+      "date_basis": "Next goal · timing not set",
+      "status": "next",
+      "track": "Future servers & connected worlds",
+      "summary": "The longer-term aim is multiple synthetic people across multiple worlds, with visitors joining through VR and responsive conversation.",
+      "body": [
+        "This calls for shared world state, distributed computing, and careful coordination of voice, rendering and network delays.",
+        "Low lag is a performance goal. Simultaneous users, persistent state, recovery and end-to-end latency need measured load tests before choosing server capacity or promising an experience."
+      ],
+      "boundary": "No server count, user capacity, latency guarantee or hardware purchase is established. Server hardware and investment conversations are welcome.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "caption": "Kira World concept illustration — not a screenshot of this milestone or a frame from its video.",
+        "alt": "Concept illustration connecting people, memory and digital worlds"
+      },
+      "sources": [
+        {
+          "label": "rmcmurrer@kiralabs.org — server support",
+          "url": "mailto:rmcmurrer@kiralabs.org?subject=Kira%20World%20%E2%80%94%20server%20hardware%20or%20investment%20support"
+        }
+      ],
+      "evidence_kind": "future-goal"
+    },
+    {
+      "id": "robotics-next",
+      "title": "Beyond the screen",
+      "date": null,
+      "date_basis": "Next goal · timing not set",
+      "status": "next",
+      "track": "Compatible physical embodiment",
+      "summary": "Explore whether a continuing identity could interact through compatible robotic hardware, starting in simulation.",
+      "body": [
+        "A synthetic robotics expert discussing a design is not a robot carrying it out. That distinction matters to this longer-term direction.",
+        "Simulation and controlled tests come first. Sensors, physical movement and permission for actions each need their own evidence."
+      ],
+      "boundary": "No deployed autonomous robot, supported hardware list or delivery date is claimed.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "caption": "Kira World concept illustration — not a screenshot of this milestone or a frame from its video.",
+        "alt": "Concept illustration connecting people, memory and digital worlds"
+      },
+      "sources": [
+        {
+          "label": "Kira World public notes",
+          "url": "index.html#reality"
+        }
+      ],
+      "evidence_kind": "future-goal"
+    }
+  ],
+  "hardware": {
+    "note": "Workstation configuration checked on September 8, 2026. These are dated hardware details, not live usage readings.",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Core Ultra 9 285K",
+        "note": "24 cores"
+      },
+      {
+        "label": "Memory",
+        "value": "32 GB DDR5",
+        "note": "2 × 16 GB · configured at 6000 MT/s"
+      },
+      {
+        "label": "Graphics",
+        "value": "NVIDIA GeForce RTX 5060 Ti",
+        "note": "16 GB video memory"
+      },
+      {
+        "label": "Motherboard",
+        "value": "ASUS ROG MAXIMUS Z890 HERO"
+      },
+      {
+        "label": "Storage",
+        "value": "2 TB drive",
+        "note": "Installed capacity; no live free-space claim"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Official motherboard specifications",
+        "url": "https://rog.asus.com/motherboards/rog-maximus/rog-maximus-z890-hero/spec/"
+      },
+      {
+        "label": "ASUS memory support",
+        "url": "https://rog.asus.com/motherboards/rog-maximus/rog-maximus-z890-hero/helpdesk_qvl_memory/"
+      }
+    ],
+    "goals": [
+      {
+        "priority": "First priority · engineering headroom",
+        "title": "64 GB of memory",
+        "target": "A matched 2 × 32 GB DDR5 kit",
+        "reason": "A local Studio motion test stopped at memory admission. More system memory is the first target for testing larger workflows.",
+        "caution": "Verify the exact kit against ASUS memory support and the current system before choosing it. Do not assume mixed modules will work together. More RAM does not fix software errors.",
+        "email_subject": "Kira World — 64 GB matched DDR5 memory support",
+        "sources": [
+          {
+            "label": "Check ASUS memory support",
+            "url": "https://rog.asus.com/motherboards/rog-maximus/rog-maximus-z890-hero/helpdesk_qvl_memory/"
+          }
+        ]
+      },
+      {
+        "priority": "Later · benchmark first",
+        "title": "More video memory",
+        "target": "Explore 24–32 GB VRAM",
+        "reason": "Heavier models may benefit from a larger GPU memory budget. The next choice should follow measured workload needs.",
+        "caution": "No GPU model, power-supply fit or purchase is selected. Extra VRAM is not a promise of better results or a completed workflow.",
+        "email_subject": "Kira World — larger VRAM GPU support"
+      },
+      {
+        "priority": "Next stage · world readiness first",
+        "title": "VR testing equipment",
+        "target": "Headsets and useful input devices",
+        "reason": "A ready world prototype will need practical tests of presence, interaction, comfort and accessibility.",
+        "caution": "No headset is claimed compatible yet. Please discuss spare equipment with Robert before sending it.",
+        "email_subject": "Kira World — spare VR headset or input equipment"
+      },
+      {
+        "priority": "Longer term · measured shared capacity",
+        "title": "Servers for shared worlds",
+        "target": "Capacity to be defined through tests",
+        "reason": "Multiple synthetic people, simultaneous worlds and VR visitors will need shared state and coordinated compute, voice and rendering.",
+        "caution": "Low latency is a goal to test, not a guarantee. No server count, specification, price or user capacity is established.",
+        "email_subject": "Kira World — server donation or investment conversation"
+      }
+    ]
+  }
+}
