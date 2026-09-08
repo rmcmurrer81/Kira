@@ -115,7 +115,7 @@
     if(result.id?.startsWith('compare:'))return metadata(knowledge,result,result.id.slice(8).split(','),'comparison',[]);
     if(result.id?.startsWith('bio:'))return metadata(knowledge,result,['robert'],'biography',knowledge.topics.find(t=>t.id==='robert').coverage?.overview||[]);
     if(result.id?.startsWith('book:'))return metadata(knowledge,result,['books'],'book',pack.facts.filter(f=>f.book_source===result.id.slice(5)).map(f=>f.id));
-    const more=/^(?:and\s+)?(?:tell me more\b|more(?: details?)?$|more detail\b|what else\b|go deeper\b|explain further\b|expand\b)/.test(q);
+    const more=/^(?:and\s+)?(?:tell me more\b|more(?: details?)?$|more detail\b|what else\b|go deeper\b|explain further\b|expand\b)/.test(q)&&(!t||t.id===lastTopic);
     const robert=/\b(roberts?|mcmurrers?)\b/.test(q)||((['robert','entertainment','books'].includes(lastTopic)||lastTopic.startsWith('bio:'))&&/\b(he|his|him)\b/.test(q));
     const routes=pack.routes.filter(r=>(r.scope==='any'||(r.scope==='robert'&&robert)||(r.scope==='previous'&&r.subject_id===lastTopic))&&r.matches.every(group=>group.some(s=>includes(q,s))));
     if(routes.length&&!more){
@@ -137,6 +137,11 @@
       const priorReply=[...exchanges].reverse().find(e=>e.reply.id===t.id)?.reply;
       const detailScope=routes.find(r=>r.subject_id===t.id)?.detail_fact_ids||priorReply?.retrieval?.detail_fact_ids;
       if(detailScope)pool=pool.filter(f=>detailScope.includes(f.id));
+      // Continue the kind of detail being discussed; a technical answer should
+      // not fall back to unrelated introductory facts on the next More.
+      const priorIntent=priorReply?.retrieval?.detail_intent||priorReply?.retrieval?.intent;
+      const detailIntent=['how','technical'].includes(priorIntent)?'technical':null;
+      if(!detailScope&&detailIntent)pool=pool.filter(f=>f.intents.includes(detailIntent));
       // After a TV-only or film-only answer, an unqualified More keeps that useful scope.
       if(t.id==='entertainment'){
         const last=[...exchanges].reverse().find(e=>e.reply.id===t.id)?.reply;
@@ -148,9 +153,15 @@
         const last=[...exchanges].reverse().find(e=>e.reply.id===t.id)?.reply;
         const intent=t.id==='entertainment'&&['television','films'].includes(last?.retrieval?.intent)?last.retrieval.intent:'details';
         const reply=factReply(knowledge,t,unseen,intent);
-        if(detailScope)reply.retrieval.detail_fact_ids=detailScope;return reply;
+        if(detailScope)reply.retrieval.detail_fact_ids=detailScope;
+        if(detailIntent)reply.retrieval.detail_intent=detailIntent;return reply;
       }
-      if(pool.length||exchanges.some(e=>e.reply.id===t.id&&e.reply.answer===result.answer))return metadata(knowledge,{...result,title:t.title+' · available detail',answer:'We have covered the reviewed details I can add about '+t.title+'. The source links below offer the original material. You can ask a specific question or choose another topic; I will say when its answer is not documented.',sources:t.sources,label:'LIMIT OF THE PUBLIC SOURCES',facet:'exhausted'},[t.id],'exhausted',[]);
+      if(pool.length||detailScope||detailIntent||exchanges.some(e=>e.reply.id===t.id&&e.reply.answer===result.answer)){
+        const exhausted=metadata(knowledge,{...result,title:t.title+' · available detail',answer:'We have covered the reviewed details I can add about '+t.title+'. The source links below offer the original material. You can ask a specific question or choose another topic; I will say when its answer is not documented.',sources:t.sources,label:'LIMIT OF THE PUBLIC SOURCES',facet:'exhausted'},[t.id],'exhausted',[]);
+        if(detailScope)exhausted.retrieval.detail_fact_ids=detailScope;
+        if(detailIntent)exhausted.retrieval.detail_intent=detailIntent;
+        return exhausted;
+      }
     }
     const intent=result.facet||'overview';
     return metadata(knowledge,result,[t.id],intent,t.coverage?.[intent]||[]);

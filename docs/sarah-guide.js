@@ -29,6 +29,8 @@
       /\b(limit|limits|limitation|limitations|cannot|cant|not do)\b/.test(q)?'limits':
       /tell me more|more detail|what else|expand|go deeper|explain further/.test(q)?'details':'overview';
     const replyFor=(t,requested=facet)=>{
+      // A newly named subject starts with its own introduction, even after More.
+      if(requested==='details'&&t.id!==lastTopic)requested='overview';
       const history=exchanges.filter(e=>e.reply.id===t.id).map(e=>e.reply);
       let chosen=(t.id==='privacy'&&requested==='privacy')||(t.id==='status'&&requested==='status')?'overview':requested;
       if(chosen==='details' && history.some(r=>r.facet==='details')){
@@ -54,12 +56,7 @@
     if(specific.length===1)return replyFor(specific[0],specific[0].id==='world'&&asksForParts?'components':facet);
     if(specific.length>1){const replies=specific.map(t=>replyFor(t));return make('The concepts you asked about',replies.map(t=>t.title+': '+t.answer).join('\n\n'),[...new Set(replies.flatMap(t=>t.sources))],specific.slice(0,3).map(t=>'Tell me more about '+t.title),'compare:'+specific.map(t=>t.id).join(','));}
     if(asksForCredits){const films=/\b(movies?|films?)\b/.test(q),television=/\b(tv|television|shows)\b|\b(?:what|which|a|the) show\b/.test(q);return replyFor(topic('entertainment'),films&&!television?'films':television&&!films?'television':'overview');}
-    const previous=topic(lastTopic);
-    const partsFollowup=asksForParts&&(/\b(it|its|this|that|these|those|they|their)\b/.test(q)||!q.replace(/\b(and|what|which|is|are|does|do|the|a|an|some|all|of|different|main|major|basic|various|other|each|parts?|components?|layers?|pieces|elements|sections|aspects|features|exist|have|explain|describe|list|show|tell|me|please)\b/g,'').trim());
-    if(previous?.id==='world'&&partsFollowup)return replyFor(previous,'components');
-    const continuation=/^(?:and\b|tell me more\b|more details?\b|what else\b|go deeper\b|explain further\b|expand\b|how (?:does|would) (?:it|that|this)\b|how do (?:they|those)\b|what about (?:it|its|that|their|privacy|security|voice|audio|credits|cost|pricing)\b|(?:is|does|can|will|would) (?:it|this|that|they)\b|are (?:they|these|those)\b|can i (?:try|download|use|access) it\b)/.test(q);
-    if(lastTopic.startsWith('compare:') && (continuation||partsFollowup)){const subjects=lastTopic.slice(8).split(',').map(topic).filter(Boolean);return make('Choose a topic to explore','Our last answer covered '+subjects.map(t=>t.title).join(' and ')+'. Choose one below so I can give the right follow-up rather than return to an older subject.',[...new Set(subjects.flatMap(t=>t.sources))],subjects.slice(0,3).map(t=>'Tell me more about '+t.title),lastTopic);}
-    if(previous && (continuation || (facet==='technical' && /\b(it|its|they|their|that)\b/.test(q))))return replyFor(previous,facet==='overview'?'details':facet);
+    // Specific requests keep their existing handling before subject selection.
     if(/\b(?:prototypes?|hackathons?|current (?:projects|apps)|new (?:projects|apps)|other apps|broader projects)\b|what else is robert building|what is being tested/.test(q)){const current=topic('prototypes');return replyFor(current);}
     if(/\b(address|phone number|medical|diagnosis|family|relationship|net worth|criminal|arrest|jail)\b/.test(q)&&!q.includes('email'))return make('Ask Robert directly','My notes cover Robert’s public creative and AI work. I do not have a reviewed answer to that personal question. You can contact him at rmcmurrer@kiralabs.org.',['about'],['Tell me about his entertainment work','Which books has he written?']);
     if(/\b(bio|biography|introduc|introduction)\b/.test(q)||((/\b(shorter|longer|expand|shorten|brief|focus)\b/.test(q))&&lastTopic.startsWith('bio:'))){
@@ -72,6 +69,17 @@
     if(/\b(send|email|tell|contact)\b.*\b(him|robert)\b/.test(q)&&/\b(send|message|tell him)\b/.test(q))return make('Contact Robert directly','This conversation stays in your browser; it is not a message to Robert. Use rmcmurrer@kiralabs.org to email him directly.',['about'],['Write a mini bio for an introduction']);
     if(/\b(award|awards|oscar|emmy|bestseller|best seller|sales|copies sold)\b/.test(q))return make('That isn’t confirmed in my notes','I do not have a verified record for that claim. I can share Robert’s published credits and book listings without inventing awards, sales totals or rankings.',['imdb','books'],['Show me his entertainment credits','Which books has he written?']);
     if(/\b(full text|whole book|entire book|chapter by chapter|quote a chapter)\b/.test(q))return make('I can help you find the book','I have book listings and brief descriptions, not the complete manuscripts. The Amazon link will help you find the available editions.',['books'],['Which books has he written?']);
+    // A named new subject outranks the generic 'tell me more' continuation.
+    const personalSubject=/\b(entertainment|acting|screenwriting|screenwriter|hollywood|filmography)\b|film career|background work/.test(q)?'entertainment':
+      /\b(books?|novels?|author|bibliography|cookbooks?|poetry)\b/.test(q)?'books':
+      namedRobert&&/\b(ai|artificial intelligence)\b/.test(q)?'ai':namedRobert?'robert':/\bsarah\b/.test(q)?'voice':null;
+    if(personalSubject&&/^(?:and\s+)?(?:tell me more\b|more detail\b|what else\b|go deeper\b|explain further\b|expand\b)/.test(q))return replyFor(topic(personalSubject));
+    const previous=topic(lastTopic);
+    const partsFollowup=asksForParts&&(/\b(it|its|this|that|these|those|they|their)\b/.test(q)||!q.replace(/\b(and|what|which|is|are|does|do|the|a|an|some|all|of|different|main|major|basic|various|other|each|parts?|components?|layers?|pieces|elements|sections|aspects|features|exist|have|explain|describe|list|show|tell|me|please)\b/g,'').trim());
+    if(previous?.id==='world'&&partsFollowup)return replyFor(previous,'components');
+    const continuation=/^(?:and\b|tell me more\b|more details?\b|what else\b|go deeper\b|explain further\b|expand\b|how (?:does|would) (?:it|that|this)\b|how do (?:they|those)\b|what about (?:it|its|that|their|privacy|security|voice|audio|credits|cost|pricing)\b|(?:is|does|can|will|would) (?:it|this|that|they)\b|are (?:they|these|those)\b|can i (?:try|download|use|access) it\b)/.test(q);
+    if(lastTopic.startsWith('compare:') && (continuation||partsFollowup)){const subjects=lastTopic.slice(8).split(',').map(topic).filter(Boolean);return make('Choose a topic to explore','Our last answer covered '+subjects.map(t=>t.title).join(' and ')+'. Choose one below so I can give the right follow-up rather than return to an older subject.',[...new Set(subjects.flatMap(t=>t.sources))],subjects.slice(0,3).map(t=>'Tell me more about '+t.title),lastTopic);}
+    if(previous && (continuation || (facet==='technical' && /\b(it|its|they|their|that)\b/.test(q))))return replyFor(previous,facet==='overview'?'details':facet);
     const scored=knowledge.topics.map(t=>({t,score:t.terms.reduce((s,x)=>s+(match(q,x)?Math.max(2,x.trim().split(' ').length*4):0),0)})).sort((a,b)=>b.score-a.score);
     let selected=scored[0]?.score?scored[0].t:null;
     // Specific book titles, product names and question intent outrank a generic name.
