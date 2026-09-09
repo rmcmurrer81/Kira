@@ -1,0 +1,52 @@
+name: Hanson ROS 2 bounded bridge standalone checks
+
+on:
+  push:
+    paths:
+      - "integrations/hanson_ros2_bridge/**"
+      - ".github/workflows/hanson-ros2-bounded-bridge.yml"
+  pull_request:
+    paths:
+      - "integrations/hanson_ros2_bridge/**"
+      - ".github/workflows/hanson-ros2-bounded-bridge.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  standalone:
+    name: Python ${{ matrix.python-version }} standalone contract
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    defaults:
+      run:
+        working-directory: integrations/hanson_ros2_bridge
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install standalone dependencies
+        run: python -m pip install --disable-pip-version-check -r standalone/requirements.txt
+
+      - name: Run fail-closed unit and hostile-path tests
+        run: python -m unittest discover -s standalone/tests -v
+
+      - name: Run policy-admission demonstration
+        run: python standalone/demo.py
+
+      - name: Run session and full-lifecycle demonstration
+        run: python standalone/session_demo.py
+
+      - name: Verify generated evidence chains
+        run: |
+          python standalone/verify_evidence.py standalone/evidence.jsonl
+          python standalone/verify_evidence.py standalone/session_evidence.jsonl --record-schema protocol_v0_2/execution-event.schema.json
