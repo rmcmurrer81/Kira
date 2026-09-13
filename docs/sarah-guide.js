@@ -53,7 +53,15 @@
     const asksForCredits=(screenWords&&personalCredits&&screenWork)||(namedRobert&&/\b(?:filmography|screen credits|acting credits)\b/.test(q));
     const named=knowledge.topics.filter(t=>[...(t.project_names||[]),...(t.concept_names||[])].some(name=>(' '+q+' ').includes(' '+normalize(name)+' ')));
     const specific=named.some(t=>!['world','labs','ai'].includes(t.id))?named.filter(t=>!['world','labs','ai'].includes(t.id)):named;
-    if(specific.length===1)return replyFor(specific[0],specific[0].id==='world'&&asksForParts?'components':facet);
+    const shiftFacet=/\b(save|backup|back up|restore|load saved)\b|another computer|move my business/.test(q)?'save':
+      /\b(quit|quits|fired|fire|terminated|replacement)\b|remaining shifts|coverage after|staff leaves/.test(q)?'departures':
+      /contact employees|message employees|send emails|change my|\b(payroll|labor law)\b/.test(q)?'limits':
+      /\b(install|installer|uninstall|shortcut|download)\b|python setup/.test(q)?'install':
+      /\b(blank|demo)\b|first time|first run|getting started|start using/.test(q)?'first_run':
+      /\b(model|models|ollama|bedrock)\b|need ai|without ai|ai setup/.test(q)?'ai':
+      /\b(benefit|benefits|useful)\b|help me|why use/.test(q)?'benefits':facet;
+    if(specific.length===1)return replyFor(specific[0],specific[0].id==='shiftbrief'?shiftFacet:specific[0].id==='world'&&asksForParts?'components':facet);
+    if(!specific.length&&lastTopic==='shiftbrief'&&!namedRobert&&shiftFacet!==facet)return replyFor(topic('shiftbrief'),shiftFacet);
     if(specific.length>1){const replies=specific.map(t=>replyFor(t));return make('The concepts you asked about',replies.map(t=>t.title+': '+t.answer).join('\n\n'),[...new Set(replies.flatMap(t=>t.sources))],specific.slice(0,3).map(t=>'Tell me more about '+t.title),'compare:'+specific.map(t=>t.id).join(','));}
     if(asksForCredits){const films=/\b(movies?|films?)\b/.test(q),television=/\b(tv|television|shows)\b|\b(?:what|which|a|the) show\b/.test(q);return replyFor(topic('entertainment'),films&&!television?'films':television&&!films?'television':'overview');}
     // Specific requests keep their existing handling before subject selection.
@@ -64,7 +72,7 @@
       const focus=/entertainment|acting|screen|film/.test(q)?'entertainment':/author|books|writing/.test(q)?'books':/\bai\b|technology/.test(q)?'ai':/longer|expand|more detail/.test(q)?'expanded':/shorter|shorten|brief|short/.test(q)?'short':lastTopic.startsWith('bio:')?previous:'short';
       return {...make('Robert McMurrer · mini bio',knowledge.bio[focus],knowledge.bio.sources,['Make it shorter','Give me a longer bio','Make it focus on AI'],'bio:'+focus),label:'A FACTUAL INTRODUCTION · READY TO COPY'};
     }
-    if(/^(hi|hello|hey|good morning|good evening|help|where (do|should) (i|we) start)[.! ]*$/.test(q))return make('Hi, I’m Sarah','I can introduce Robert, explain Kira Labs and Kira World, or help you find his books and entertainment credits. You can ask for a short biography, too.',[],['Write a mini bio of Robert','What is Kira World?','Tell me about his books']);
+    if(/^(hi|hello|hey|good morning|good evening|help|where (do|should) (i|we) start)[.! ]*$/.test(q))return make('Hi, I’m Sarah','I can explain ShiftBrief, Kira Labs and Kira World, introduce Robert, or help you find his books and entertainment credits. You can ask for a short biography, too.',[],['Write a mini bio of Robert','What is Kira World?','Tell me about his books']);
     if(/^(thanks|thank you|thankyou|great|ok|okay|cool)\b/.test(q))return make('You’re welcome','What would you like to explore next?',[],['His entertainment work','His books','His AI work']);
     if(/\b(send|email|tell|contact)\b.*\b(him|robert)\b/.test(q)&&/\b(send|message|tell him)\b/.test(q))return make('Contact Robert directly','This conversation stays in your browser; it is not a message to Robert. Use rmcmurrer@kiralabs.org to email him directly.',['about'],['Write a mini bio for an introduction']);
     if(/\b(award|awards|oscar|emmy|bestseller|best seller|sales|copies sold)\b/.test(q))return make('That isn’t confirmed in my notes','I do not have a verified record for that claim. I can share Robert’s published credits and book listings without inventing awards, sales totals or rankings.',['imdb','books'],['Show me his entertainment credits','Which books has he written?']);
@@ -94,7 +102,7 @@
     if(selected)return replyFor(selected);
     return make('Let’s find the right part of the story','I don’t have a documented answer to that question. I can help with Kira Labs, Kira World, Robert’s entertainment credits, books and AI work—or create a short factual bio. For details beyond those notes, email Robert directly.',['about'],['Write a mini bio of Robert','Tell me about his books','What works today?']);
   }
-  
+
   // Keep a complete answer in one scrollable card. History moves between replies only.
   function rebuildPages(goLast=false){
     pages=exchanges.map((e,i)=>({exchange:i,text:e.reply.answer}));

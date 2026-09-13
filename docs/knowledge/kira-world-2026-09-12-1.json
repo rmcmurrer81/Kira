@@ -1,0 +1,3038 @@
+{
+  "schema_version": 1,
+  "id": "kira-world",
+  "content_version": "2026-09-12.1",
+  "reviewed_on": "2026-09-12",
+  "sources": {
+    "about": {
+      "label": "Kira Labs · About Robert",
+      "url": "about.html"
+    },
+    "carry-on": {
+      "label": "Carry On · dated prototype notes",
+      "url": "projects.html#carry-on"
+    },
+    "cleartrail": {
+      "label": "ClearTrail · dated prototype notes",
+      "url": "projects.html#cleartrail"
+    },
+    "creator-factual-test": {
+      "label": "TemporaryAI factual test · public video, July 25",
+      "url": "https://www.youtube.com/watch?v=5Nllo6oAfYA"
+    },
+    "creator-test-video": {
+      "label": "Synthetic expert · public test, July 25",
+      "url": "https://www.youtube.com/watch?v=rYuwe1dgAeI"
+    },
+    "creator-video": {
+      "label": "TemporaryAI Creator · public explainer, July 24",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw"
+    },
+    "cutbrief": {
+      "label": "CutBrief · dated prototype notes",
+      "url": "projects.html#cutbrief"
+    },
+    "cutbrief-live": {
+      "label": "CutBrief · public workspace",
+      "url": "https://cutbrief-workspace.rmcmurrer.chatgpt.site/"
+    },
+    "projects": {
+      "label": "Kira Labs · project notes",
+      "url": "projects.html"
+    },
+    "prototypes": {
+      "label": "Kira Labs · prototype review status",
+      "url": "projects.html#current-prototypes"
+    },
+    "public-058f9313881c": {
+      "label": "Kira Labs · public notes",
+      "url": "https://kiralabs.org/about.html",
+      "publisher": "kiralabs.org",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-243b85fc7995": {
+      "label": "www.youtube.com",
+      "url": "https://www.youtube.com/watch?v=8vjcEBJTwbM",
+      "publisher": "www.youtube.com",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-07-23"
+    },
+    "public-24d7d2ce53c1": {
+      "label": "Kira Labs · public notes",
+      "url": "https://kiralabs.org/",
+      "publisher": "kiralabs.org",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-09-08"
+    },
+    "public-2f22b17e4106": {
+      "label": "Kira Labs · public notes",
+      "url": "https://kiralabs.org/sarah-guide.js",
+      "publisher": "kiralabs.org",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-09-08"
+    },
+    "public-3f219c5713a0": {
+      "label": "Kira Labs",
+      "url": "knowledge.html#technical",
+      "publisher": "Kira Labs",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-449712948020": {
+      "label": "Kira Labs · public notes",
+      "url": "https://kiralabs.org/projects.html",
+      "publisher": "kiralabs.org",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-09-08"
+    },
+    "public-6eaaf551623c": {
+      "label": "Kira Labs",
+      "url": "knowledge.html#proposals",
+      "publisher": "Kira Labs",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-708870acab04": {
+      "label": "Kira Labs · public notes",
+      "url": "https://kiralabs.org/sarah-knowledge.json",
+      "publisher": "kiralabs.org",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-7728ffeab39f": {
+      "label": "github.com",
+      "url": "https://github.com/rmcmurrer81/video-studio-production-director/blob/3123b887c981df049a15e60a5acbfccefc7f1589/all_things_cloud_app.py",
+      "publisher": "github.com",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-08-31"
+    },
+    "public-80481a045627": {
+      "label": "www.youtube.com",
+      "url": "https://www.youtube.com/watch?v=UYsKn8lzhWs",
+      "publisher": "www.youtube.com",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-07-23"
+    },
+    "public-8b0332b22c4c": {
+      "label": "Kira Labs · public notes",
+      "url": "https://kiralabs.org/progress-data.json",
+      "publisher": "kiralabs.org",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-90397b9d85ce": {
+      "label": "github.com",
+      "url": "https://github.com/rmcmurrer81/video-studio-production-director/blob/3123b887c981df049a15e60a5acbfccefc7f1589/kira_studio/all_things_agentic.py",
+      "publisher": "github.com",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-08-31"
+    },
+    "public-948a69b218b5": {
+      "label": "github.com",
+      "url": "https://github.com/rmcmurrer81/video-studio-production-director/blob/3123b887c981df049a15e60a5acbfccefc7f1589/README.md",
+      "publisher": "github.com",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-08-31"
+    },
+    "public-9ba75ace4d96": {
+      "label": "www.youtube.com",
+      "url": "https://www.youtube.com/watch?v=vNRTwMvkR3g",
+      "publisher": "www.youtube.com",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-b16560a2807b": {
+      "label": "github.com",
+      "url": "https://github.com/rmcmurrer81/video-studio-production-director",
+      "publisher": "github.com",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-c37805d0d16b": {
+      "label": "www.youtube.com",
+      "url": "https://www.youtube.com/watch?v=nj2ZcdfxSWI",
+      "publisher": "www.youtube.com",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-d2f4290db15f": {
+      "label": "github.com",
+      "url": "https://github.com/rmcmurrer81/video-studio-production-director/blob/3123b887c981df049a15e60a5acbfccefc7f1589/kira_studio/all_things_google.py",
+      "publisher": "github.com",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-08-31"
+    },
+    "public-e21bd2d57980": {
+      "label": "www.youtube.com",
+      "url": "https://www.youtube.com/watch?v=TLe7dJhj7kE",
+      "publisher": "www.youtube.com",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-08-31"
+    },
+    "public-fa29aef972d2": {
+      "label": "github.com",
+      "url": "https://github.com/rmcmurrer81/video-studio-production-director/blob/3123b887c981df049a15e60a5acbfccefc7f1589/docs/ALL_THINGS_AGENTIC_SETUP.md",
+      "publisher": "github.com",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-08-31"
+    },
+    "sequence-desk": {
+      "label": "Kira Sequence Desk · dated prototype notes",
+      "url": "projects.html#sequence-desk"
+    },
+    "shiftbrief": {
+      "label": "ShiftBrief · product and download",
+      "url": "projects.html#shiftbrief"
+    },
+    "world": {
+      "label": "Kira World · current public status",
+      "url": "index.html#reality"
+    }
+  },
+  "topics": [
+    {
+      "id": "labs",
+      "title": "Kira Labs",
+      "label": "Independent research & creation",
+      "terms": [
+        "kira labs",
+        "company",
+        "studio",
+        "research lab",
+        "organization",
+        "business"
+      ],
+      "answer": "Kira Labs is Robert McMurrer’s independent research and creation studio. Kira World is its central project. Related work includes Sarah Travel and a local Video Studio. The aim is useful software with continuity and personal control, developed through prototypes and testing. Current prototypes also explore staffing, decision evidence, task readiness and simpler browser media planning.",
+      "sources": [
+        "about",
+        "projects"
+      ],
+      "next": [
+        "What are the current project prototypes?",
+        "How is Kira World different?",
+        "How can I contact Robert?"
+      ],
+      "concept_names": [
+        "kira labs"
+      ],
+      "coverage": {}
+    },
+    {
+      "id": "world",
+      "title": "Kira World",
+      "label": "Working prototypes + ongoing research",
+      "terms": [
+        "kira world",
+        "synthetic people",
+        "synthetic person",
+        "companion",
+        "kira",
+        "lisa",
+        "persistent world"
+      ],
+      "answer": "Kira World explores distinct synthetic people whose identity, reviewed memories and voice can continue between sessions. Local conversation experiments and a basic walkable Home World exist. A polished shared 3D world, believable bodies and clothing, VR and compatible embodiment remain development goals. It is experimental software, not a finished public product.",
+      "sources": [
+        "world",
+        "projects"
+      ],
+      "next": [
+        "What works today?",
+        "How does memory work?",
+        "What about privacy?"
+      ],
+      "concept_names": [
+        "kira world"
+      ],
+      "followups": {
+        "details": {
+          "answer": "Kira World connects three ideas: distinct people, continuity between conversations, and places in which to spend time. Home World is the continuing home, while future Notebook Worlds provide settings for activities. VR and compatible robotics are longer-term interfaces. Local conversation and continuity experiments and a basic apartment exist; that combination is not yet a finished shared world.",
+          "next": [
+            "Tell me about minds",
+            "What are Notebook Worlds?",
+            "What is Temporary Creator?"
+          ]
+        },
+        "how": {
+          "answer": "Kira World is being built around separate responsibilities. The conversation model supplies dialogue: an August 10, 2026 roadmap selected qwen3.5:9b for normal Kira text conversation, but the model running today has not been verified. Per-person identity identifies who is speaking, while retained, reviewed memory provides context from earlier interactions. Local identity and continuity experiments exist.\n\nRuntime events and world state are separate from dialogue. The public design also separates permissioned actions; saying that something happened is not proof of a completed world action, and a generated statement does not automatically become a saved memory. Voice is another responsibility, with local speech and voice-reference experiments. The visible body and world provide presence: a basic walkable Home World shell exists, while believable bodies and clothing remain unfinished work.\n\nThis describes documented responsibilities, existing experiments and intended connections. It is not a claim that every part already works together as a finished resident or shared world. The reviewed notes do not establish a complete current model count, database design or implementation algorithm.",
+          "sources": [
+            "public-24d7d2ce53c1",
+            "public-80481a045627",
+            "public-3f219c5713a0"
+          ],
+          "label": "Documented components · prototypes and plans"
+        },
+        "privacy": {
+          "answer": "The stated direction favors local control of personal state and permission for external actions. It does not establish that every future voice, device or world feature is offline, or supply a complete retention and sharing policy."
+        },
+        "status": {
+          "answer": "Local conversation, person-specific continuity and speech experiments exist, along with a basic walkable apartment. Complete populated worlds, accessible VR and compatible physical embodiment remain goals. There is no confirmed public launch date for the full experience."
+        },
+        "components": {
+          "answer": "Kira World has several connected parts, at different stages. Minds are the distinct people: local identity, reviewed-memory and voice experiments support continuing conversations. Home World is their intended home; a basic walkable one-bedroom shell exists. Notebook Worlds are future settings for study, travel, creativity, history and play. Temporary Creator designs people for particular worlds or activities; public spoken tests exist, with factual errors and unfinished avatars or bodies still visible. VR is a future way to share those places, with no confirmed headset release. Robotics is a longer-term, simulation-first route to compatible physical embodiment—not a deployed autonomous robot. The work is to connect these foundations into a continuing shared experience.",
+          "sources": [
+            "world",
+            "creator-test-video",
+            "creator-factual-test"
+          ],
+          "next": [
+            "Tell me about minds",
+            "What are Notebook Worlds?",
+            "Tell me about Temporary Creator"
+          ]
+        },
+        "technical": {
+          "answer": "Kira World is being built around separate responsibilities. The conversation model supplies dialogue: an August 10, 2026 roadmap selected qwen3.5:9b for normal Kira text conversation, but the model running today has not been verified. Per-person identity identifies who is speaking, while retained, reviewed memory provides context from earlier interactions. Local identity and continuity experiments exist.\n\nRuntime events and world state are separate from dialogue. The public design also separates permissioned actions; saying that something happened is not proof of a completed world action, and a generated statement does not automatically become a saved memory. Voice is another responsibility, with local speech and voice-reference experiments. The visible body and world provide presence: a basic walkable Home World shell exists, while believable bodies and clothing remain unfinished work.\n\nThis describes documented responsibilities, existing experiments and intended connections. It is not a claim that every part already works together as a finished resident or shared world. The reviewed notes do not establish a complete current model count, database design or implementation algorithm.",
+          "sources": [
+            "public-24d7d2ce53c1",
+            "public-80481a045627",
+            "public-3f219c5713a0"
+          ],
+          "label": "Documented components · prototypes and plans"
+        }
+      },
+      "coverage": {
+        "overview": [
+          "world-distinct-people",
+          "world-continuity",
+          "world-voice",
+          "world-shell",
+          "world-shell-limit",
+          "world-body",
+          "world-clothing-limit",
+          "world-vr",
+          "world-robotics",
+          "world-private"
+        ],
+        "components": [
+          "world-distinct-people",
+          "world-continuity",
+          "world-voice",
+          "world-shell",
+          "world-shell-limit",
+          "world-notebooks",
+          "world-notebook-activities",
+          "world-vr",
+          "world-robotics",
+          "creator-spoken-tests",
+          "creator-avatars-unfinished"
+        ],
+        "how": [
+          "technical-kira-component-boundaries",
+          "technical-kira-state-types",
+          "authored-qwen-resident",
+          "world-distinct-people",
+          "world-continuity",
+          "world-voice",
+          "world-shell",
+          "world-body",
+          "world-clothing-limit"
+        ],
+        "privacy": [
+          "world-local-control",
+          "world-permission"
+        ],
+        "technical": [
+          "technical-kira-component-boundaries",
+          "technical-kira-state-types",
+          "authored-qwen-resident",
+          "world-distinct-people",
+          "world-continuity",
+          "world-voice",
+          "world-shell",
+          "world-body",
+          "world-clothing-limit"
+        ]
+      }
+    },
+    {
+      "id": "ai",
+      "title": "Robert’s work in AI",
+      "label": "Continuity · local tools · creative work",
+      "terms": [
+        " ai",
+        "artificial intelligence",
+        "machine learning",
+        "technology",
+        "programming",
+        "developer",
+        "software",
+        "connect",
+        "research",
+        "models",
+        "model"
+      ],
+      "answer": "Robert’s AI work brings together local models, person-specific memory, speech and creative tools. Kira World explores continuity between conversations and digital places. Sarah Travel applies companion-style interaction to planning, while Video Studio coordinates local media work. These are independent development projects, with different levels of readiness. The newer prototypes also include staffing, evidence and task-planning tools, with bounded written workflows that do not require a language model.",
+      "sources": [
+        "about",
+        "projects"
+      ],
+      "next": [
+        "Write an AI-focused mini bio",
+        "Tell me about Kira World",
+        "What works today?"
+      ],
+      "coverage": {}
+    },
+    {
+      "id": "memory",
+      "title": "Memory & identity",
+      "label": "Person-specific continuity",
+      "terms": [
+        "memory",
+        "memories",
+        "remember",
+        "identity",
+        "continuity",
+        "reset",
+        "start over",
+        "different people"
+      ],
+      "answer": "Kira World’s approach keeps person-specific identity and reviewed memory records separate from the immediate conversation. The aim is for Kira, Lisa and future residents to remain distinct and continue across sessions. Local continuity experiments exist; that does not yet establish a complete persistent life across every device or world.",
+      "sources": [
+        "world",
+        "about"
+      ],
+      "next": [
+        "What about privacy?",
+        "What is the Home World?",
+        "What works today?"
+      ],
+      "concept_names": [
+        "memory",
+        "memories",
+        "identity"
+      ],
+      "followups": {
+        "details": {
+          "answer": "A person’s identity provides a continuing reference for who is speaking; reviewed memory supplies context from earlier interactions. Keeping those records separate from the immediate conversation is intended to help Kira and Lisa remain distinct across sessions. It does not establish a complete life across every world or device."
+        },
+        "how": {
+          "answer": "Identity and memory have different jobs. A per-person identity keeps the reference to who Kira or Lisa is; retained, reviewed memory supplies context from earlier interactions, separate from the immediate conversation. The July 23 public update distinguishes spoken dialogue, private thoughts, runtime events and reviewed memory. A model reply is not automatically a saved memory or proof that an action happened.\n\nThese memory responsibilities sit alongside conversation, world state and permissioned actions, with voice and the visible body serving different roles. Local identity and continuity experiments exist; continuity across every world or device remains a goal. The dated August 10 roadmap selected qwen3.5:9b for text conversation, not a verified complete memory architecture or current running-model inventory. The reviewed notes do not specify a database engine, memory-search algorithm or complete storage schema.",
+          "sources": [
+            "public-24d7d2ce53c1",
+            "public-80481a045627",
+            "public-3f219c5713a0"
+          ],
+          "label": "Documented memory responsibilities"
+        },
+        "privacy": {
+          "answer": "Reviewed memory and local control are stated design principles. The available public notes do not provide a complete policy for deletion, retention, sharing or device synchronization of resident memory."
+        },
+        "status": {
+          "answer": "Local continuity experiments exist. A complete persistent identity working across every device and world has not been established by these notes."
+        },
+        "technical": {
+          "answer": "Identity and memory have different jobs. A per-person identity keeps the reference to who Kira or Lisa is; retained, reviewed memory supplies context from earlier interactions, separate from the immediate conversation. The July 23 public update distinguishes spoken dialogue, private thoughts, runtime events and reviewed memory. A model reply is not automatically a saved memory or proof that an action happened.\n\nThese memory responsibilities sit alongside conversation, world state and permissioned actions, with voice and the visible body serving different roles. Local identity and continuity experiments exist; continuity across every world or device remains a goal. The dated August 10 roadmap selected qwen3.5:9b for text conversation, not a verified complete memory architecture or current running-model inventory. The reviewed notes do not specify a database engine, memory-search algorithm or complete storage schema.",
+          "sources": [
+            "public-24d7d2ce53c1",
+            "public-80481a045627",
+            "public-3f219c5713a0"
+          ],
+          "label": "Documented memory responsibilities"
+        }
+      },
+      "coverage": {
+        "overview": [
+          "world-distinct-people",
+          "world-continuity"
+        ],
+        "technical": [
+          "world-distinct-people",
+          "world-continuity",
+          "technical-kira-state-types",
+          "technical-kira-component-boundaries",
+          "authored-qwen-resident"
+        ],
+        "how": [
+          "world-distinct-people",
+          "world-continuity",
+          "technical-kira-state-types",
+          "technical-kira-component-boundaries",
+          "authored-qwen-resident"
+        ]
+      }
+    },
+    {
+      "id": "privacy",
+      "title": "Local control",
+      "label": "Privacy & permission",
+      "terms": [
+        "privacy",
+        "private",
+        "data",
+        "recording",
+        "recorded",
+        "save my",
+        "send my",
+        "store my",
+        "secure",
+        "security",
+        "permission",
+        "offline"
+      ],
+      "answer": "This website’s Sarah answers in your browser from a small set of published notes. Your questions are not sent to an AI provider or emailed to Robert. This page keeps the current conversation in memory until you reload or clear it. Kira World’s wider design favors local control of personal state and permission for external actions.",
+      "sources": [
+        "about"
+      ],
+      "next": [
+        "How can I email Robert?",
+        "Do I need an API key?",
+        "Tell me about Kira World"
+      ],
+      "coverage": {}
+    },
+    {
+      "id": "voice",
+      "title": "Sarah on this website",
+      "label": "Text conversation · no setup",
+      "terms": [
+        "sarah",
+        "yourself",
+        "who are you",
+        "voice",
+        "speak",
+        "talk aloud",
+        "audio",
+        "api key",
+        "credits",
+        "free",
+        "cost",
+        "pay"
+      ],
+      "answer": "I’m Sarah, the Kira Labs website guide. I answer from these dated project notes and can help with Robert’s work and a short factual bio. Click Voice on once to hear the current answer and following replies until you choose Voice off or leave the page. It uses an available browser/device voice, not a custom clone, and does not request your microphone. The text guide needs no account, API key, installed model or credits.",
+      "sources": [],
+      "next": [
+        "Write a mini bio of Robert",
+        "What is Kira Labs?",
+        "What works today?"
+      ],
+      "followups": {
+        "details": {
+          "answer": "This website guide retrieves answers from its dated knowledge file. It can remember the current topic during this visit and use separate notes for follow-up questions. It is not running Robert’s private Kira World residents or their memories."
+        },
+        "how": {
+          "answer": "This page matches questions to dated topics and follow-up notes in the browser. Voice on enables browser/device read-aloud for the current and following answers until you turn it off or leave. It does not request microphone access, and this website is not running Robert’s private resident voice system."
+        },
+        "privacy": {
+          "answer": "Text questions stay in this page’s conversation memory until you reload or clear it; they are not emailed to Robert or sent to an AI provider for generated answers. The page does not request a microphone. Read-aloud uses browser/device speech, whose service behavior can vary, so an offline guarantee is not claimed."
+        },
+        "status": {
+          "answer": "The text guide is available here. One click on Voice on reads the current and following replies when browser/device speech is supported, until Voice off or leaving the page. No microphone or custom voice clone is used."
+        },
+        "cost": {
+          "answer": "The website text guide requires no account, API key, installed model or usage credits. It retrieves these notes in the browser."
+        },
+        "voice": {
+          "answer": "Choose Voice on once to read the current answer aloud and keep reading following replies. Voice off stops it, and leaving the page stops speech. Availability depends on your browser and device voices. No microphone is requested and no custom voice clone is claimed."
+        }
+      },
+      "coverage": {}
+    },
+    {
+      "id": "studio",
+      "title": "Video Studio",
+      "label": "Personal local production tool",
+      "terms": [
+        "video studio",
+        "video making",
+        "video production",
+        "music generator",
+        "movie maker",
+        "film maker"
+      ],
+      "answer": "Kira Labs Video Studio is Robert’s personal local production workspace. Its preserved pipeline organizes narrated video chapters and assembles images, audio and video. Newer work aims to make planning and revision conversational, with local models coordinating specialist media engines. The newer full workflow remains under development; a finished automatic movie studio is not being advertised here.",
+      "sources": [
+        "projects"
+      ],
+      "next": [
+        "What works today?",
+        "How does that connect to his entertainment work?",
+        "Can I contact Robert?"
+      ],
+      "concept_names": [
+        "video studio"
+      ],
+      "coverage": {}
+    },
+    {
+      "id": "travel",
+      "title": "Sarah Travel",
+      "label": "Private Android & Windows experiments",
+      "terms": [
+        "sarah travel",
+        "travel app",
+        "trip planning",
+        "travel planning",
+        "routes",
+        "itinerary"
+      ],
+      "answer": "Sarah Travel is a private travel-planning experiment with Android and Windows debug builds. It combines conversation with route planning, protected online lookups and an offline fallback. It has not been released as a public service or on Google Play; device verification and release testing remain.",
+      "sources": [
+        "projects"
+      ],
+      "next": [
+        "What is Kira World?",
+        "What else is Robert building?",
+        "How can I follow the work?"
+      ],
+      "concept_names": [
+        "sarah travel"
+      ],
+      "coverage": {}
+    },
+    {
+      "id": "home",
+      "title": "Home World",
+      "label": "Basic walkable prototype · long-term vision",
+      "terms": [
+        "home world",
+        "apartment",
+        "walkable",
+        "3d",
+        "body",
+        "clothing",
+        "garment"
+      ],
+      "answer": "Home World is the intended continuing home for Kira World’s residents. A basic walkable one-bedroom apartment shell exists. Populated daily life, believable bodies and clothing, and continuity with future Notebook Worlds remain development goals. The polished illustrations on the site are concept art.",
+      "sources": [
+        "world",
+        "projects"
+      ],
+      "next": [
+        "What works today?",
+        "How does memory work?"
+      ],
+      "concept_names": [
+        "home world"
+      ],
+      "followups": {
+        "details": {
+          "answer": "Home World supplies the continuing-home part of the vision: a place to return to between conversations and activities. Notebook Worlds are proposed other settings for particular purposes. The apartment shell demonstrates a basic walkable space, not completed residents, physical interactions or autonomous daily routines."
+        },
+        "how": {
+          "answer": "The existing evidence is a basic walkable apartment. The intended connection to person-specific identity and memory is broader than that space. These notes do not document a completed system that gives residents ongoing daily lives there."
+        },
+        "status": {
+          "answer": "A basic walkable one-bedroom shell exists. A complete populated Home World is not established by the current public evidence."
+        },
+        "privacy": {
+          "answer": "The broader design favors local control of personal state. The public notes do not yet define a complete Home World access, sharing or retention policy."
+        }
+      },
+      "coverage": {
+        "overview": [
+          "world-shell",
+          "world-shell-limit"
+        ]
+      }
+    },
+    {
+      "id": "minds",
+      "title": "Minds & distinct residents",
+      "label": "Kira World · published direction and current evidence",
+      "terms": [
+        "mind",
+        "minds",
+        "resident",
+        "residents",
+        "kira and lisa",
+        "synthetic people",
+        "synthetic person"
+      ],
+      "concept_names": [
+        "mind",
+        "minds",
+        "resident",
+        "residents",
+        "kira and lisa",
+        "synthetic people",
+        "synthetic person"
+      ],
+      "answer": "In Kira World, a “mind” means the software behind a distinct synthetic person. Kira and Lisa are intended to have their own identity, history, reviewed memories and voice, so a later conversation can continue with the same person. Local conversation and continuity experiments exist. This is not a claim that the software is conscious or has verified feelings.",
+      "sources": [
+        "world",
+        "projects"
+      ],
+      "next": [
+        "Tell me more",
+        "How does that work?",
+        "Is it working now?"
+      ],
+      "followups": {
+        "details": {
+          "answer": "The aim is continuity with an individual, rather than a new interchangeable character every time. Identity describes who the resident is; history and reviewed memories provide context from earlier interactions; a distinct voice helps preserve that identity in conversation. Kira and Lisa are separate residents in that design. The intended connection to Home World would give those continuing interactions a place, while future Notebook Worlds would provide other settings and activities. Local experiments support parts of this direction, but they do not establish a fully independent life across every world or device. “Mind” is a plain-language description here, not a scientific finding of consciousness."
+        },
+        "how": {
+          "answer": "The published approach separates a person’s identity and reviewed memory records from the immediate conversation. A later session can use that retained context to support continuity while keeping different people’s histories distinct. That explains the intended role of memory; the available public notes do not specify a complete mind architecture, exact model count or algorithm. Generated language about emotions is not, by itself, proof of a lived experience."
+        },
+        "privacy": {
+          "answer": "For residents, the stated direction is local control of personal state and reviewed memory, with permission for external actions. That is a design principle, not a verified guarantee that every future voice, world or device feature stays offline. These public notes do not establish a complete retention, deletion or device-sync policy for residents. This website guide is separate from Robert’s private resident histories."
+        },
+        "status": {
+          "answer": "Local person-specific conversation, identity, reviewed-memory continuity and speech experiments exist. The evidence does not establish finished persistent residents living independently in a shared 3D world, or one complete identity working across all devices. There is no confirmed public launch date for that full experience."
+        },
+        "voice": {
+          "answer": "A distinct voice is part of the intended identity of each resident, and local speech experiments exist. That is separate from the browser voice reading this website’s answers. The public notes do not establish a finished voice that follows each resident through every world and device."
+        },
+        "limits": {
+          "answer": "Separate identity records and convincing conversation do not prove consciousness, verified feelings or autonomous daily life. The current evidence supports bounded prototypes. A fully populated persistent world and cross-device embodiment remain goals."
+        },
+        "technical": {
+          "answer": "An August 10, 2026 technical roadmap selected qwen3.5:9b for normal Kira text conversation. That is a dated selection; the model currently running has not been verified. The reviewed public material does not establish the exact models currently powering Kira World residents, their count, or which are running at once. It describes identity, reviewed memory, voice and world responsibilities. Production Director’s published Gemini defaults belong to a separate cloud demo, so they should not be substituted for a resident model list.",
+          "sources": [
+            "public-3f219c5713a0",
+            "public-24d7d2ce53c1",
+            "public-449712948020"
+          ]
+        }
+      },
+      "coverage": {
+        "overview": [
+          "world-distinct-people",
+          "world-continuity",
+          "world-voice",
+          "world-consciousness"
+        ],
+        "technical": [
+          "current-resident-model-gap",
+          "authored-qwen-resident"
+        ]
+      }
+    },
+    {
+      "id": "notebook-worlds",
+      "title": "Notebook Worlds",
+      "label": "Kira World · published direction and current evidence",
+      "terms": [
+        "notebook world",
+        "notebook worlds"
+      ],
+      "concept_names": [
+        "notebook world",
+        "notebook worlds"
+      ],
+      "answer": "Notebook Worlds are proposed places within Kira World for particular activities: travel, learning, creative work, history and play. Home World is the continuing home; a Notebook World provides another setting for an activity. The aim is to retain the same people and continuity between places. Complete populated Notebook Worlds are a future goal, not a finished feature shown by the current apartment prototype.",
+      "sources": [
+        "world",
+        "projects"
+      ],
+      "next": [
+        "Tell me more",
+        "How does that work?",
+        "Is it working now?"
+      ],
+      "followups": {
+        "details": {
+          "answer": "The distinction is purpose. Home World provides a continuing home, while a Notebook World can focus on an activity or subject. The public examples include travel, study, creativity, history and play. The longer-term idea is that entering another setting would not mean abandoning the identity and history developed at home. That could make separate activities part of one continuing experience. Those examples describe the intended use, not a catalogue of worlds you can enter today. The present visible evidence is a basic walkable one-bedroom Home World shell."
+        },
+        "how": {
+          "answer": "Conceptually, a Notebook World gives an activity its own place while drawing on continuity with Home World. The public notes describe that relationship, but do not establish the implementation of world creation, transitions, shared sessions or memory exchange. I should not turn the concept into a claim that a working world generator or portal system is already available."
+        },
+        "privacy": {
+          "answer": "Continuity between places raises questions about which personal history accompanies a resident and who can access it. Local control and permission are the broader stated direction. The reviewed public notes do not yet define Notebook World-specific sharing, retention or access rules, so I cannot promise that all future worlds are private or offline."
+        },
+        "status": {
+          "answer": "Notebook Worlds remain future development. The basic walkable apartment is Home World evidence; it is not evidence that populated travel, study or historical worlds have been completed. No public Notebook World access link or release date is confirmed."
+        },
+        "voice": {
+          "answer": "The intended continuity includes the same resident identity and voice across activities and places. Local voice experiments do not prove that this already works inside completed Notebook Worlds."
+        },
+        "limits": {
+          "answer": "The listed activities are examples of the vision. They do not establish completed world libraries, live multiplayer, automatic world generation or historically accurate simulations."
+        }
+      },
+      "coverage": {
+        "overview": [
+          "world-notebooks",
+          "world-notebook-activities"
+        ]
+      }
+    },
+    {
+      "id": "temporary-creator",
+      "title": "Temporary Creator",
+      "label": "Public development tests · July 24–25, 2026",
+      "terms": [
+        "temporary creator",
+        "temporary ai",
+        "temporary synthetic people"
+      ],
+      "concept_names": [
+        "temporary creator",
+        "temporary ai",
+        "temporary synthetic people"
+      ],
+      "answer": "Temporary Creator, called TemporaryAI Creator in Robert’s public videos, is being developed to create synthetic people for particular worlds or activities. The aim is a coherent identity, knowledge, personality, appearance and voice. Public July 24–25 development videos describe actual voice-conversation tests, including mistakes and unfinished avatars or bodies. That is more than a written concept, but not a completed animated resident.",
+      "sources": [
+        "creator-video",
+        "creator-test-video",
+        "creator-factual-test"
+      ],
+      "next": [
+        "Tell me more",
+        "How does that work?",
+        "Is it working now?"
+      ],
+      "followups": {
+        "details": {
+          "answer": "The concept begins with a person’s purpose, identity, knowledge limits and personality, with appearance and voice belonging to the same design. Robert’s July 24 explainer describes creation types, source packs, historical dates and life stages, avatar references and voice evidence. The following public tests report both usable conversation and failures: invented details, internal system language appearing in speech, and claims of saved work that were not true. Some tests use individual test voices; others use generic Windows voices. These are development demonstrations, not a finished complete-person system. Temporary people are not automatically permanent Home World residents, and the name does not promise deletion when a chat closes."
+        },
+        "how": {
+          "answer": "The public explainer describes choosing a creation type, preparing sources, setting the relevant date or life stage, considering avatar references and evaluating voice evidence. Its proposed connection reaches world placement and Video Studio. The companion tests report voice conversations with concrete failures and unfinished avatars or bodies, so those described connections should not all be treated as completed. Historical variants are synthetic interpretations, not the literal people; voice and reference material still require appropriate evidence and authorization."
+        },
+        "privacy": {
+          "answer": "The name does not define a data-retention policy. The public explainer discusses authenticity, rights and authorization for source and voice material, but these notes do not establish a complete retention, deletion or sharing policy. I cannot promise that a temporary person is deleted after an interaction. The explanations here use public descriptions and general owner concepts, not private memories or person designs."
+        },
+        "status": {
+          "answer": "Public development videos published July 24–25, 2026 report actual TemporaryAI voice-conversation tests. They also document factual errors, incorrect saved-work claims, generic voice fallbacks and unfinished avatars or bodies. The dated videos establish demonstrated experiments, not today’s live runtime state or a completed animated person living in a world. No general public application release or completion date is confirmed here."
+        },
+        "voice": {
+          "answer": "Voice conversations appear in the public development tests. Some descriptions identify individualized test voices; others explicitly identify generic Windows voices while individual voices remain unfinished. These tests do not establish a finished body-and-voice creation pipeline. Historical or fictional test voices are not automatically authentic recordings or official performances."
+        },
+        "limits": {
+          "answer": "The public tests retain failures instead of presenting every answer as fact: they report invented details, internal language leaking into dialogue and incorrect claims that files were saved. Avatars, bodies and individual voices remain unfinished in the described tests. A demonstrated conversation is not proof of a complete animated resident or reliable research and file operations."
+        }
+      },
+      "coverage": {
+        "overview": [
+          "creator-spoken-tests",
+          "creator-avatars-unfinished"
+        ]
+      }
+    },
+    {
+      "id": "vr",
+      "title": "Virtual reality",
+      "label": "Kira World · published direction and current evidence",
+      "terms": [
+        "vr",
+        "virtual reality"
+      ],
+      "concept_names": [
+        "vr",
+        "virtual reality"
+      ],
+      "answer": "Virtual reality is a future way of sharing Kira World’s places with its residents. The ambition is accessible, multimodal presence while keeping the same identity and history across devices and worlds. The current public evidence does not establish a finished VR release, supported headset list or launch date.",
+      "sources": [
+        "world",
+        "projects"
+      ],
+      "next": [
+        "Tell me more",
+        "How does that work?",
+        "Is it working now?"
+      ],
+      "followups": {
+        "details": {
+          "answer": "The aspiration is presence in the same digital places, rather than losing the relationship and history whenever the interface changes. Accessibility and different ways of interacting are part of that direction. Home World and future Notebook Worlds give context to the idea. The polished world illustrations are concept art; they are not proof of a complete headset experience."
+        },
+        "how": {
+          "answer": "The intended connection is between the same resident identity and history and a different way of entering the world. The public notes do not specify completed headset integration, tracking, controls or accessibility features. Those details remain unconfirmed rather than something I can infer from the VR goal."
+        },
+        "privacy": {
+          "answer": "VR can involve device-specific tracking and voice services. The public Kira World notes do not define those future data flows or permissions. Local control is a design preference, not a promise that an unspecified headset or speech service keeps every signal on the device."
+        },
+        "status": {
+          "answer": "VR remains a future direction. A basic walkable Home World exists, but these notes do not establish a publicly available VR product, supported headset or release date."
+        },
+        "limits": {
+          "answer": "There is no confirmed device compatibility list, controller scheme, tracking specification or finished shared VR world in the reviewed notes."
+        }
+      },
+      "coverage": {
+        "overview": [
+          "world-vr",
+          "vr-compatibility-gap"
+        ]
+      }
+    },
+    {
+      "id": "robotics",
+      "title": "Robotics & physical embodiment",
+      "label": "Kira World · published direction and current evidence",
+      "terms": [
+        "robot",
+        "robots",
+        "robotics",
+        "physical embodiment",
+        "robot body"
+      ],
+      "concept_names": [
+        "robot",
+        "robots",
+        "robotics",
+        "physical embodiment",
+        "robot body"
+      ],
+      "answer": "Compatible physical embodiment is a longer-term Kira World goal: exploring whether a continuing identity could interact through suitable robotic hardware. The stated direction is simulation first, followed by controlled tests. The public evidence does not establish a deployed autonomous robot.",
+      "sources": [
+        "world",
+        "projects"
+      ],
+      "next": [
+        "Tell me more",
+        "How does that work?",
+        "Is it working now?"
+      ],
+      "followups": {
+        "details": {
+          "answer": "The connection to Kira World is continuity: a resident should not become an unrelated identity simply because the interface changes from a screen or virtual place to compatible hardware. This is an aspiration for future embodiment. Simulation and controlled testing come before a claim of physical capability. It does not mean Kira or Lisa currently has an operating robot body."
+        },
+        "how": {
+          "answer": "The published direction begins in simulation and proceeds through controlled tests of compatible embodiment. The reviewed notes do not identify a completed hardware integration, robot model, movement controller or autonomous task capability. I can explain the goal, but not provide a verified operating procedure for a robot that has not been established here."
+        },
+        "privacy": {
+          "answer": "Physical embodiment would introduce questions about sensors, recordings and permission for actions. The public notes do not establish a robot-specific data or access policy. The general preference for local control should not be read as a guarantee about unchosen hardware or future services."
+        },
+        "status": {
+          "answer": "Robotics is a longer-term goal, with simulation-first work as the stated approach. No deployed autonomous robot, supported hardware list or delivery date is confirmed by these public notes."
+        },
+        "limits": {
+          "answer": "A software identity or simulation is not evidence of a safe, capable physical robot. These notes do not verify autonomous real-world movement, household tasks or sensor access."
+        }
+      },
+      "coverage": {
+        "overview": [
+          "world-robotics",
+          "robotics-controlled-tests"
+        ]
+      }
+    },
+    {
+      "id": "avatar-bodies",
+      "title": "Avatar bodies & clothing",
+      "concept_names": [
+        "avatar",
+        "avatars",
+        "avatar builder",
+        "avatar body",
+        "avatar bodies",
+        "body builder",
+        "bodies",
+        "garment",
+        "garments",
+        "clothing"
+      ],
+      "terms": [
+        "avatar",
+        "avatars",
+        "avatar builder",
+        "avatar body",
+        "avatar bodies",
+        "body builder",
+        "bodies",
+        "garment",
+        "garments",
+        "clothing"
+      ],
+      "answer": "Avatar bodies and clothing are active development work. Public notes describe articulated test foundations, and the TemporaryAI Creator explainer includes appearance references and an intended Avatar Builder step. The July conversation tests still had unfinished individual bodies or avatars. A believable, fully animated resident with finished clothing behavior is not established by those demonstrations.",
+      "label": "Public development notes",
+      "sources": [
+        "public-24d7d2ce53c1",
+        "creator-video",
+        "creator-test-video"
+      ],
+      "next": [
+        "What is working on avatar bodies?",
+        "How would Avatar Builder work?",
+        "Tell me more about clothing"
+      ],
+      "followups": {
+        "status": {
+          "answer": "Public notes document body and garment test foundations. The July 24–25 TemporaryAI descriptions still report unfinished avatars or individual bodies. Those are development results, not a finished animated-resident release.",
+          "sources": [
+            "public-24d7d2ce53c1",
+            "creator-test-video"
+          ]
+        },
+        "how": {
+          "answer": "The public TemporaryAI explainer describes appearance references and an Avatar Builder step as part of the intended creation workflow. Separate body work calls for articulated non-person fixtures before believable garment behavior is claimed. It does not publish a complete verified body-building procedure.",
+          "sources": [
+            "creator-video",
+            "public-24d7d2ce53c1"
+          ]
+        },
+        "technical": {
+          "answer": "The reviewed public material does not establish a complete current avatar engine, rig specification or clothing-simulation stack. I can explain the described test goals without inventing those implementation details.",
+          "sources": [
+            "public-24d7d2ce53c1"
+          ]
+        }
+      },
+      "coverage": {
+        "overview": [
+          "world-body",
+          "world-clothing-limit",
+          "avatar-public-workflow",
+          "avatar-test-unfinished"
+        ],
+        "how": [
+          "avatar-public-workflow",
+          "body-articulated-tests"
+        ],
+        "status": [
+          "world-body",
+          "world-clothing-limit",
+          "avatar-test-unfinished"
+        ]
+      }
+    },
+    {
+      "id": "world-builder",
+      "title": "World Builder & future places",
+      "concept_names": [
+        "world builder",
+        "worldbuilder",
+        "world building",
+        "build a world",
+        "create a world",
+        "museum",
+        "meta museum"
+      ],
+      "terms": [
+        "world builder",
+        "worldbuilder",
+        "world building",
+        "build a world",
+        "create a world",
+        "museum",
+        "meta museum"
+      ],
+      "answer": "World Builder is a proposed direction for creating places, with Home World and future Notebook Worlds providing the context. The public evidence supports a basic walkable apartment shell; it does not yet establish a working general world editor or a verified creation procedure. Robert is also considering a museum experience for Meta as a future commercial idea. That is a new owner proposal, not a finished Meta application or a revenue claim.",
+      "label": "Public notes & new owner proposals",
+      "sources": [
+        "public-24d7d2ce53c1",
+        "public-6eaaf551623c"
+      ],
+      "next": [
+        "Is World Builder available now?",
+        "Tell me more about World Builder",
+        "What is the museum idea?"
+      ],
+      "followups": {
+        "status": {
+          "answer": "A basic walkable Home World shell is documented. A general World Builder, its tools and creation steps are not yet established by the reviewed public evidence. The museum direction is a proposal, with no finished Meta app or launch date.",
+          "sources": [
+            "public-24d7d2ce53c1",
+            "public-6eaaf551623c"
+          ]
+        },
+        "how": {
+          "answer": "The published idea is to have a continuing Home World and purpose-built Notebook Worlds for activities. I do not have a verified World Builder procedure, template list or file-format specification to walk you through.",
+          "sources": [
+            "public-24d7d2ce53c1"
+          ]
+        },
+        "cost": {
+          "answer": "Robert’s newly stated proposal is to explore a museum experience for Meta as a possible commercial direction. The format, platform support and business model still need definition and testing; these notes establish no finished app, platform agreement, customers or revenue.",
+          "sources": [
+            "public-6eaaf551623c"
+          ]
+        },
+        "technical": {
+          "answer": "No reviewed public source establishes World Builder’s engine, supported formats, generation model or Meta platform compatibility. Those details need a published implementation or supported plan before I can name them.",
+          "sources": [
+            "public-24d7d2ce53c1",
+            "public-6eaaf551623c"
+          ]
+        }
+      },
+      "coverage": {
+        "overview": [
+          "worldbuilder-public-gap"
+        ],
+        "cost": [
+          "proposal-meta-museum"
+        ]
+      }
+    },
+    {
+      "id": "production-director",
+      "title": "Production Director cloud demo",
+      "concept_names": [
+        "production director",
+        "cloud demo",
+        "gemini",
+        "chirp"
+      ],
+      "terms": [
+        "production director",
+        "cloud demo",
+        "gemini",
+        "chirp"
+      ],
+      "answer": "Production Director is a separate public cloud demo. Its August 31 source describes a structured production brief, planning images and a narrated pitch assembled with FFmpeg. The published defaults name Gemini for planning and images and Google Cloud speech for narration. Those defaults are not a current deployment check or Kira World’s resident model list.",
+      "label": "Dated public source",
+      "sources": [
+        "public-b16560a2807b"
+      ],
+      "next": [
+        "Which models does Production Director use?",
+        "How does the cloud demo work?",
+        "Tell me more about Production Director"
+      ],
+      "followups": {
+        "technical": {
+          "answer": "The public cloud-demo source defaults to gemini-3.5-flash for the structured production brief. The August 31 demo description also names Gemini 3.5 Flash. A configurable source default is not a measurement of the model currently serving a deployment. This name must not be described as Kira World’s resident conversation model. In the 2026-08-31 public source, the public cloud-demo source defaults to gemini-3.1-flash-image for storyboard planning images. The deployment can override this default. Planning panels do not establish generated acting or a finished dramatic film. In the 2026-08-31 public source, the public cloud-demo code uses Google Cloud Text-to-Speech Chirp 3 HD for narration and defaults to en-US-Chirp3-HD-Aoede. The configured voice can be changed; current deployed voice was not queried.",
+          "sources": [
+            "public-90397b9d85ce",
+            "public-e21bd2d57980",
+            "public-d2f4290db15f",
+            "public-948a69b218b5",
+            "public-fa29aef972d2"
+          ]
+        },
+        "how": {
+          "answer": "In the 2026-08-31 public source, the public Production Director code separates an HTTP API, durable jobs, task dispatch, and a private worker. Model responses supply a structured brief and planning images; ordinary code builds storyboard cards, checks coverage, and assembles the narrated pitch with FFmpeg. This is a separate cloud demo, not the local Studio or Kira World resident runtime. Published code and test results alone do not prove a current live deployment completed provider calls.",
+          "sources": [
+            "public-948a69b218b5",
+            "public-d2f4290db15f",
+            "public-7728ffeab39f"
+          ]
+        },
+        "status": {
+          "answer": "The public repository and August 31 demonstration are dated evidence. No current deployment or provider run was queried for these notes. The cloud demo is separate from local Video Studio and Kira World residents.",
+          "sources": [
+            "public-b16560a2807b"
+          ]
+        }
+      },
+      "coverage": {
+        "overview": [
+          "technical-director-cloud-architecture"
+        ],
+        "how": [
+          "technical-director-cloud-architecture"
+        ],
+        "technical": [
+          "technical-director-text-model",
+          "technical-director-image-model",
+          "technical-director-speech-model"
+        ]
+      }
+    },
+    {
+      "id": "local-studio-models",
+      "title": "Local Studio model roles",
+      "concept_names": [
+        "local studio models",
+        "studio models",
+        "photomaker",
+        "sdxl",
+        "musetalk",
+        "chatterbox",
+        "vace",
+        "svd",
+        "ace-step",
+        "whisper tiny",
+        "vae"
+      ],
+      "terms": [
+        "local studio models",
+        "studio models",
+        "photomaker",
+        "sdxl",
+        "musetalk",
+        "chatterbox",
+        "vace",
+        "svd",
+        "ace-step",
+        "whisper tiny",
+        "vae"
+      ],
+      "answer": "The September 8 authored technical notes distinguish tested local tools from configured support: PhotoMaker with SDXL generated a portrait; MuseTalk generated a speaking video; Chatterbox speech worked in one test and failed later. VACE, Stable Video Diffusion and ACE-Step have configuration or support evidence here, not a new successful generation claim. These are local Studio roles, separate from Kira residents and the Production Director cloud demo.",
+      "label": "Dated authored technical notes",
+      "sources": [
+        "public-3f219c5713a0"
+      ],
+      "next": [
+        "Tell me more about Studio models",
+        "What does MuseTalk do?",
+        "Is Chatterbox available now?"
+      ],
+      "followups": {},
+      "coverage": {
+        "overview": [
+          "authored-photomaker-sdxl",
+          "authored-musetalk-video",
+          "authored-chatterbox-speech"
+        ]
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "labs-world-distinction",
+      "subject_ids": [
+        "world",
+        "labs"
+      ],
+      "statement": "Kira Labs is the wider studio; Kira World is its central project.",
+      "status": "published-description",
+      "sources": [
+        "public-058f9313881c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "The builder",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "How are Kira Labs and Kira World different?"
+      ],
+      "revision": "7712deba206dd30271a3a737ccb11c8e15be2454d96f255a08d53a76713bf21c"
+    },
+    {
+      "id": "world-distinct-people",
+      "subject_ids": [
+        "world",
+        "minds"
+      ],
+      "statement": "Kira and Lisa are designed as separate identities.",
+      "status": "prototype-and-design",
+      "sources": [
+        "public-058f9313881c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "The builder",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Are Kira and Lisa the same assistant?"
+      ],
+      "revision": "5648c8bf6fc444f1505c8b8f1f13023158e515507d7449bf21c3bb9aadef4111"
+    },
+    {
+      "id": "world-local-control",
+      "subject_ids": [
+        "world",
+        "privacy"
+      ],
+      "statement": "Local control is a design preference where practical.",
+      "status": "design-principle",
+      "sources": [
+        "public-058f9313881c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Working principles / Local control",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Does local-first mean everything is offline?"
+      ],
+      "revision": "14c2ba41ca0e34707b18eecf574985b88467b70a037591ee3d1933803ca76394"
+    },
+    {
+      "id": "world-permission",
+      "subject_ids": [
+        "world",
+        "privacy"
+      ],
+      "statement": "External actions require bounded permission and evidence.",
+      "status": "design-principle",
+      "sources": [
+        "public-058f9313881c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Working principles / Permission",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Can residents act outside the app?"
+      ],
+      "revision": "37126d50d23964dcce16ccc15dfee9d04482ed9bf7eb216230bdcdeb167c2f6f"
+    },
+    {
+      "id": "world-continuity",
+      "subject_ids": [
+        "world",
+        "minds",
+        "memory"
+      ],
+      "statement": "Conversation records and reviewed memory support continuity across sessions.",
+      "status": "working-prototype",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Continuity",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "How can a later conversation remember earlier context?"
+      ],
+      "revision": "2c14aa6581554ce07e1493369e7f954d6d5b6b7faaa8863be954374e325aa30f"
+    },
+    {
+      "id": "world-separate-truth",
+      "subject_ids": [
+        "world",
+        "minds",
+        "memory"
+      ],
+      "statement": "The design separates speech, verifiable runtime events and reviewed memory.",
+      "status": "published-design",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "The technical spine",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Does something said in conversation automatically become a fact?"
+      ],
+      "revision": "1f12215dd9b6b912036b308182d3e6147ef1afae8c9eb9ef1da3370dadb90339"
+    },
+    {
+      "id": "world-voice",
+      "subject_ids": [
+        "world",
+        "minds"
+      ],
+      "statement": "Local speech and voice-reference experiments exist.",
+      "status": "working-prototype",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Conversation with continuity",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Does Kira World have voice work?"
+      ],
+      "revision": "4b050bb51a76c9da9aae587fd0c4b586500a735da3f8c703ab4126995ced9768"
+    },
+    {
+      "id": "world-shell",
+      "subject_ids": [
+        "world",
+        "home"
+      ],
+      "statement": "A navigable one-bedroom Home World shell exists.",
+      "status": "working-prototype",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "From concept to current build",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What part of Home World already works?"
+      ],
+      "revision": "e221bd457bae759fe1edfe25695c423ab841b2c55f8b24cfd0a5980301bcaad3"
+    },
+    {
+      "id": "world-shell-limit",
+      "subject_ids": [
+        "world",
+        "home"
+      ],
+      "statement": "The shell does not establish a fully populated, persistent shared life.",
+      "status": "current-boundary",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "From concept to current build",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Is the complete shared home finished?"
+      ],
+      "revision": "5037b6b827984ea8275128fd096d9e894d5edcf03367cf72145f2d1cc2e77a71"
+    },
+    {
+      "id": "world-body",
+      "subject_ids": [
+        "world",
+        "avatar-bodies"
+      ],
+      "statement": "Body and garment work includes test requirements and fixtures.",
+      "status": "active-engineering",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "World, body and clothing foundations",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What body and clothing work is underway?"
+      ],
+      "revision": "450ac78d73be1c2dc9c6dd6ca4ae5840fb930b8ed68dfeb947344c5666eaa370"
+    },
+    {
+      "id": "world-clothing-limit",
+      "subject_ids": [
+        "world",
+        "avatar-bodies"
+      ],
+      "statement": "A finished body and production clothing simulation are not claimed.",
+      "status": "current-boundary",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "World, body and clothing foundations",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Can clothing already behave naturally on a finished resident?"
+      ],
+      "revision": "9e81eab4eac5daaba286a8a105bc25ac23ad1918341f1c10400a4ea2f7c5a359"
+    },
+    {
+      "id": "world-notebooks",
+      "subject_ids": [
+        "world",
+        "notebook-worlds"
+      ],
+      "statement": "Notebook Worlds are proposed places for focused activities.",
+      "status": "future-goal",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "One home / Worlds",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What are Notebook Worlds?"
+      ],
+      "revision": "59d0595a9668e6ca66fcc825e522ee1bc70d740b8646ac04e3d8a8ce3fb3b6b6"
+    },
+    {
+      "id": "world-notebook-activities",
+      "subject_ids": [
+        "world",
+        "notebook-worlds"
+      ],
+      "statement": "Proposed activities include travel, study, creativity, history and play.",
+      "status": "future-goal",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "One home / Worlds",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What could Notebook Worlds be used for?"
+      ],
+      "revision": "fda26057759e74a6b24271de9d5321adacda8cc16109ca01e37f8d5084f05e2b"
+    },
+    {
+      "id": "world-vr",
+      "subject_ids": [
+        "world",
+        "vr"
+      ],
+      "statement": "Accessible VR and multimodal presence remain long-term directions.",
+      "status": "future-goal",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "A shared, persistent life",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Is VR already available?"
+      ],
+      "revision": "a64b6aac4e3d43d0ada623917fe035e87d557a6f09cec0072b7d201fe876073c"
+    },
+    {
+      "id": "world-robotics",
+      "subject_ids": [
+        "world",
+        "robotics"
+      ],
+      "statement": "Robotics follows a simulation-first direction.",
+      "status": "future-goal",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "A shared, persistent life",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Does Kira already operate a robot?"
+      ],
+      "revision": "5a8cee860aeb7dfe52c6c4a7bee3f7a0deaf68e670f5389a44443aae17f9a49f"
+    },
+    {
+      "id": "world-consciousness",
+      "subject_ids": [
+        "world",
+        "minds"
+      ],
+      "statement": "Kira Labs does not claim current systems are conscious.",
+      "status": "explicit-public-boundary",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Footer",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Do these prototypes prove consciousness?"
+      ],
+      "revision": "b2c2e40de181375b12dd811046c2b9670579f91acc7a0e3b147b4f3417cdd9d5"
+    },
+    {
+      "id": "world-platforms",
+      "subject_ids": [
+        "world",
+        "ai"
+      ],
+      "statement": "Public project notes identify Windows development and Android research.",
+      "status": "published-platform-scope",
+      "sources": [
+        "public-449712948020"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Kira World / Primary platforms",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Which platforms are involved?"
+      ],
+      "revision": "6d5f1eaae154c55c7d8533d953eed8c71476189c4c59056f9e864ebcd66fe84c"
+    },
+    {
+      "id": "world-private",
+      "subject_ids": [
+        "world",
+        "status"
+      ],
+      "statement": "Kira World is described as private prototypes, not a released public product.",
+      "status": "public-availability-boundary",
+      "sources": [
+        "public-449712948020"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Kira World / Current boundary",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Can I download the complete Kira World?"
+      ],
+      "revision": "f5962417178a91409a900d03694c47e48b572669fec1a119d6bede644d0d3632"
+    },
+    {
+      "id": "travel-debug",
+      "subject_ids": [
+        "travel"
+      ],
+      "statement": "Sarah Travel is a private Android and Windows debug project.",
+      "status": "private-debug-build",
+      "sources": [
+        "public-449712948020"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Sarah Travel",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Is Sarah Travel publicly released?"
+      ],
+      "revision": "466cf4b5d6b337a8e0e491c092bb95274f53c0f3dcd418abb093e67075f3f67f"
+    },
+    {
+      "id": "travel-route",
+      "subject_ids": [
+        "travel"
+      ],
+      "statement": "Sarah Travel’s described route test includes an online route and offline fallback.",
+      "status": "published-test-description",
+      "sources": [
+        "public-449712948020"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Sarah Travel / Route resilience",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What travel behavior has been tested?"
+      ],
+      "revision": "8507b732b3db3ef0ff8b275479f67232491501a7aca03818de75c257604f8a07"
+    },
+    {
+      "id": "studio-local",
+      "subject_ids": [
+        "studio"
+      ],
+      "statement": "The project page describes a retained local v1.9 video-production workflow. This is a historical published baseline, not a current certification of every feature.",
+      "status": "historical-working-baseline",
+      "sources": [
+        "public-449712948020"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Video Studio",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What Video Studio foundation exists?"
+      ],
+      "revision": "645af5bbdb14e5f2bd7e0e045bf5698164530a4be06d8e62c8bf8bab24e99da7"
+    },
+    {
+      "id": "studio-chapters",
+      "subject_ids": [
+        "studio"
+      ],
+      "statement": "The public page reports a preserved 14-chapter final output.",
+      "status": "published-output-report",
+      "sources": [
+        "public-449712948020"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Video Studio / Completed output",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Has the local workflow produced a long project?"
+      ],
+      "revision": "faed0408a3e9c98f06bc4fce24e7ef869dd20d2cc807dd18b2492607a9cd75f3"
+    },
+    {
+      "id": "studio-publication",
+      "subject_ids": [
+        "studio"
+      ],
+      "statement": "The page says that retained output was not posted publicly.",
+      "status": "dated-public-note",
+      "sources": [
+        "public-449712948020"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Video Studio / Public status",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Can I watch that specific 14-chapter output?"
+      ],
+      "revision": "b7c7d27448be41d5976fbfbcef23a506132e4b26b8f00ae1a4ba72daecdd37ae"
+    },
+    {
+      "id": "creator-types",
+      "subject_ids": [
+        "temporary-creator"
+      ],
+      "statement": "The public Creator explainer describes source packs, creation type and historical date or life stage.",
+      "status": "dated-public-development-evidence",
+      "sources": [
+        "creator-video"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-24",
+      "date_basis": "Publication date, not independent test date",
+      "provenance": {
+        "source_locator": "Public video description",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "How does TemporaryAI Creator organize a person’s design?"
+      ],
+      "revision": "ce48e734f7851b3001bf9542b4916aef02e1a0f29327718107cc8aef4a84f606"
+    },
+    {
+      "id": "creator-voice-evidence",
+      "subject_ids": [
+        "temporary-creator"
+      ],
+      "statement": "That explainer treats voice evidence, rights and authorization as part of preparation.",
+      "status": "dated-public-development-evidence",
+      "sources": [
+        "creator-video"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-24",
+      "date_basis": "Publication date, not independent test date",
+      "provenance": {
+        "source_locator": "Public video description",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What does it say about voice evidence?"
+      ],
+      "revision": "4f09121e228e155d909626ed523e30d27f23a280ca17d3b13918b8762f76d42b"
+    },
+    {
+      "id": "creator-spoken-tests",
+      "subject_ids": [
+        "temporary-creator"
+      ],
+      "statement": "Public July 24–25 descriptions report spoken TemporaryAI conversation tests.",
+      "status": "dated-public-development-evidence",
+      "sources": [
+        "public-9ba75ace4d96"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-24",
+      "date_basis": "Publication date, not independent test date",
+      "provenance": {
+        "source_locator": "Public video description",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Has Temporary Creator done more than produce a written plan?"
+      ],
+      "revision": "1201144d3932181bf719d1e71b0e47dd08887a510953f4613cd20b3290d17d62"
+    },
+    {
+      "id": "creator-avatars-unfinished",
+      "subject_ids": [
+        "temporary-creator"
+      ],
+      "statement": "The Peter Parker test description says a finished avatar and world location were absent.",
+      "status": "dated-public-development-evidence",
+      "sources": [
+        "public-9ba75ace4d96"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-24",
+      "date_basis": "Publication date, not independent test date",
+      "provenance": {
+        "source_locator": "Public video description",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Did the spoken test include a finished animated resident?"
+      ],
+      "revision": "3393686a4d4d31bcb02b8862343cb56f0bdcfe20de90ec0fc0ea6dd8873447d1"
+    },
+    {
+      "id": "creator-canon-errors",
+      "subject_ids": [
+        "temporary-creator"
+      ],
+      "statement": "The Marinette test description identifies invented story details and internal language in replies.",
+      "status": "dated-public-development-evidence",
+      "sources": [
+        "creator-factual-test"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-25",
+      "date_basis": "Publication date, not independent test date",
+      "provenance": {
+        "source_locator": "Public video description",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What failed during a character test?"
+      ],
+      "revision": "698c4315748b97eca9675b0663f16d8b47d02fb0b3baf569e4c3cd880dfde7fe"
+    },
+    {
+      "id": "creator-expert-file-errors",
+      "subject_ids": [
+        "temporary-creator"
+      ],
+      "statement": "The robotics-expert test description identifies false saved-file claims and a file-type error.",
+      "status": "dated-public-development-evidence",
+      "sources": [
+        "creator-test-video"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-25",
+      "date_basis": "Publication date, not independent test date",
+      "provenance": {
+        "source_locator": "Public video description",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What failed during the expert test?"
+      ],
+      "revision": "b368dfd53e3ec193847d4ee9c4bd37ab6ef8d8b604ca6c54b0d2c151f1767dad"
+    },
+    {
+      "id": "creator-expert-not-robot",
+      "subject_ids": [
+        "temporary-creator"
+      ],
+      "statement": "The robotics-expert video describes software conversation and design work, not deployed robotic movement.",
+      "status": "dated-public-development-evidence",
+      "sources": [
+        "creator-test-video"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-25",
+      "date_basis": "Publication date, not independent test date",
+      "provenance": {
+        "source_locator": "Public video description",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Does the robotics video show a working physical robot?"
+      ],
+      "revision": "a270cc89dfc6d4b91fb9ea58afd68ab930ce65311941128c6ad5f4df3279f2f4"
+    },
+    {
+      "id": "creator-generic-historical-voice",
+      "subject_ids": [
+        "temporary-creator"
+      ],
+      "statement": "The Holmes description explicitly identifies generic Windows speech rather than an authentic historical voice.",
+      "status": "dated-public-development-evidence",
+      "sources": [
+        "public-c37805d0d16b"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-24",
+      "date_basis": "Publication date, not independent test date",
+      "provenance": {
+        "source_locator": "Public video description",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Is the historical variant’s voice authentic?"
+      ],
+      "revision": "7823d755aa05507a9853a2867a0ba7f9d29238c1f2f63f157d03e0cb78765b26"
+    },
+    {
+      "id": "avatar-public-workflow",
+      "subject_ids": [
+        "avatar-bodies"
+      ],
+      "statement": "The public TemporaryAI explainer includes appearance references and Avatar Builder in the proposed creation workflow.",
+      "status": "published-workflow-description",
+      "sources": [
+        "creator-video"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-24",
+      "date_basis": "Publication date; not implementation completion",
+      "provenance": {
+        "source_locator": "Public description",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "How does Avatar Builder fit into Temporary Creator?"
+      ],
+      "revision": "4ea9c9c9d5b308b72660c2911e68c0241094f36ea7e2596ef2ff758dee99ef38"
+    },
+    {
+      "id": "avatar-test-unfinished",
+      "subject_ids": [
+        "avatar-bodies"
+      ],
+      "statement": "The public robotics-expert test says its individual body and voice were not yet complete.",
+      "status": "unfinished-in-dated-test",
+      "sources": [
+        "creator-test-video"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-25",
+      "date_basis": "Publication date",
+      "provenance": {
+        "source_locator": "Public description",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Did the synthetic expert have a completed body?"
+      ],
+      "revision": "9f77c7af99ecd7a11161be8db5acab0b87675d27e58ab5502af3334bdc7e9fb0"
+    },
+    {
+      "id": "body-articulated-tests",
+      "subject_ids": [
+        "avatar-bodies"
+      ],
+      "statement": "The public body work calls for articulated non-person fixtures before believable garment behavior is claimed.",
+      "status": "requirements-and-test-design",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": "Undated page observed September8",
+      "provenance": {
+        "source_locator": "World/body and clothing sections",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Why test a body before clothing?"
+      ],
+      "revision": "87f1148841ec6b5d86c23b9bd763830f059aa29c87deb20548c69a92dc2addea"
+    },
+    {
+      "id": "clothing-sequential-goal",
+      "subject_ids": [
+        "avatar-bodies"
+      ],
+      "statement": "The intended garment work includes dressing, undressing, folding, hanging and dropping separate clothing objects.",
+      "status": "future-interaction-goal",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": "Undated page observed September8",
+      "provenance": {
+        "source_locator": "Why clothing needs a body",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What should clothing eventually do?"
+      ],
+      "revision": "976e4d2b7fba8773f019e80c4ab1157519b78c7429045efa270ab24c51bcd6ef"
+    },
+    {
+      "id": "worldbuilder-public-gap",
+      "subject_ids": [
+        "world-builder"
+      ],
+      "statement": "The public material describes purpose-built Notebook Worlds but does not provide a verified World Builder procedure.",
+      "status": "published-detail-gap",
+      "sources": [
+        "public-24d7d2ce53c1"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": "Undated page observed September8",
+      "provenance": {
+        "source_locator": "One home / Purpose-built places",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Can I create my own world now?"
+      ],
+      "revision": "18f1e2a8348b669e519a726fd91bff1c976e1c72afc7ce4471258b12785ec2a8"
+    },
+    {
+      "id": "vr-compatibility-gap",
+      "subject_ids": [
+        "vr"
+      ],
+      "statement": "The published timeline does not claim a supported headset list or finished VR experience.",
+      "status": "future-goal-with-compatibility-gap",
+      "sources": [
+        "public-8b0332b22c4c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": "Notes reviewed September8",
+      "provenance": {
+        "source_locator": "milestones / vr-next",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Which headset can I use?"
+      ],
+      "revision": "b9b8451538c114ff9dad2101a1a78ae3622a96de59e3ed565d925036ead97556"
+    },
+    {
+      "id": "robotics-controlled-tests",
+      "subject_ids": [
+        "robotics"
+      ],
+      "statement": "The published timeline places simulation and controlled tests before physical embodiment claims.",
+      "status": "future-goal",
+      "sources": [
+        "public-8b0332b22c4c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": "Notes reviewed September8",
+      "provenance": {
+        "source_locator": "milestones / robotics-next",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What comes before a real robot?"
+      ],
+      "revision": "fff29086a7bb68a21a39292b92160dfea0577229f273837af359e80c16f9abf9"
+    },
+    {
+      "id": "proposal-meta-museum",
+      "subject_ids": [
+        "world-builder"
+      ],
+      "statement": "Museum walkthroughs and possible Meta experiences were proposed on September 8, 2026 as directions that might help fund future work. No existing Meta app, partnership, funding award or revenue is established.",
+      "status": "owner-proposal",
+      "sources": [
+        "public-6eaaf551623c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "cost"
+      ],
+      "available_date": "2026-09-08",
+      "date_basis": "Owner proposal authorized for this public release",
+      "revision": "05fb1daa5eeb4c7cb633acbe3cecb66dd80dbe37711381d3a6c6408942e126b9"
+    },
+    {
+      "id": "notebook-transitions",
+      "subject_ids": [
+        "notebook-worlds"
+      ],
+      "statement": "The public Notebook World concept does not yet establish implemented world creation, transitions, shared sessions or memory exchange. A working generator or portal system should not be inferred from the concept.",
+      "status": "published-concept-boundary",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "revision": "ccc3fc1f8506012b0b0347d1b76a0373806a8b0709468124b044df3543f42771"
+    },
+    {
+      "id": "notebook-voice",
+      "subject_ids": [
+        "notebook-worlds"
+      ],
+      "statement": "The intended continuity includes the same resident voice across activities. Existing local voice experiments do not prove that voice already operates inside completed Notebook Worlds.",
+      "status": "published-concept-boundary",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "revision": "656937e0575d4a730b505ada9ada62f42136bb41c5b55fd243b73a1d74260fe8"
+    },
+    {
+      "id": "notebook-library",
+      "subject_ids": [
+        "notebook-worlds"
+      ],
+      "statement": "The proposed activity examples are not a completed world library or a claim of historically accurate simulations.",
+      "status": "published-concept-boundary",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "revision": "2cfc0d6554d8ba8aa64aedc601004c739123f25c5dc7cc53147ffd4a6df8dc84"
+    },
+    {
+      "id": "technical-sarah-browser-guide",
+      "subject_ids": [
+        "voice"
+      ],
+      "statement": "Sarah’s website guide uses JavaScript and a published knowledge file to choose and show grounded answers. Optional read-aloud uses the browser speech system. This is separate from a Kira World resident’s conversation model. This describes the currently retrieved public guide, not an unseen future server or model integration. Browser read-aloud availability and voices depend on the visitor’s browser.",
+      "status": "published_implementation",
+      "sources": [
+        "public-2f22b17e4106"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": null,
+      "date_basis": "Date of published source/report; current execution not queried",
+      "publication_scope": "published_information",
+      "revision": "ec80b7b6ce70eb9c3064d97d45ba0506e94e89f0b2cd2a4689a8b1e79b8ab096"
+    },
+    {
+      "id": "technical-kira-component-boundaries",
+      "subject_ids": [
+        "world",
+        "minds"
+      ],
+      "statement": "Kira World separates identity, reviewed memory, voice and visible presence, world state, and permissioned action. These components are intended to work together while retaining distinct responsibilities. The overview does not prove every proposed ability is implemented.",
+      "status": "published_overview",
+      "sources": [
+        "public-24d7d2ce53c1",
+        "public-449712948020"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": null,
+      "date_basis": "Date of published source/report; current execution not queried",
+      "publication_scope": "published_information",
+      "revision": "e5d35d8fcbe76cde627fbe4994fa5536c319d056f87b10f66b70eb54fe91b6b2"
+    },
+    {
+      "id": "technical-kira-state-types",
+      "subject_ids": [
+        "world",
+        "minds",
+        "memory"
+      ],
+      "statement": "The July 23 update distinguishes spoken dialogue, private thoughts, runtime events, and reviewed memory. A generated statement is not automatically a saved memory or a completed world action. This is the dated public report, not a fresh audit of the resident runtime.",
+      "status": "dated_public_report",
+      "sources": [
+        "public-80481a045627"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-07-23",
+      "date_basis": "Date of published source/report; current execution not queried",
+      "publication_scope": "published_information",
+      "revision": "2cf2c446d245678d4cff0a6f8e993ebf6d593f189de621ae9563a7567c30bf45"
+    },
+    {
+      "id": "technical-kira-world-status",
+      "subject_ids": [
+        "world",
+        "avatar-bodies"
+      ],
+      "statement": "In the 2026-07-23 public source, the public update reports work on HomeWorld and visible embodiment, alongside unfinished blinking, movement, and body work. The roadmap should be read as a mixture of demonstrated steps and future work. No finished VR release, complete autonomous life, or consciousness claim follows from this evidence.",
+      "status": "dated_public_report",
+      "sources": [
+        "public-80481a045627"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-07-23",
+      "date_basis": "Date of published source/report; current execution not queried",
+      "publication_scope": "published_information",
+      "revision": "48cd864084665632197cb5daa4a5fac012bd296e594271924b167cc79d894bed"
+    },
+    {
+      "id": "technical-studio-public-workflow",
+      "subject_ids": [
+        "studio"
+      ],
+      "statement": "The July Studio overview describes versioned projects, source-backed research, visual candidates, scripts and storyboards, narration reuse, captions, local MP4 assembly, and review. It distinguishes the preserved release from separate development work. Do not relabel that historical overview as a complete inventory of today’s installed Studio.",
+      "status": "dated_public_report",
+      "sources": [
+        "public-243b85fc7995"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-07-23",
+      "date_basis": "Date of published source/report; current execution not queried",
+      "publication_scope": "published_information",
+      "revision": "65639787feef82db1d85713b5082a3d1e25cdee13130b1fad97604c8f3081194"
+    },
+    {
+      "id": "technical-director-cloud-architecture",
+      "subject_ids": [
+        "production-director"
+      ],
+      "statement": "In the 2026-08-31 public source, the public Production Director code separates an HTTP API, durable jobs, task dispatch, and a private worker. Model responses supply a structured brief and planning images; ordinary code builds storyboard cards, checks coverage, and assembles the narrated pitch with FFmpeg. This is a separate cloud demo, not the local Studio or Kira World resident runtime. Published code and test results alone do not prove a current live deployment completed provider calls.",
+      "status": "published_source_design",
+      "sources": [
+        "public-948a69b218b5",
+        "public-d2f4290db15f",
+        "public-7728ffeab39f"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-08-31",
+      "date_basis": "Date of published source/report; current execution not queried",
+      "publication_scope": "published_information",
+      "revision": "10b05e37f0cd7adcf9394ef7d56e3e8dfeaf09af8136d4f6455a624eba21256f"
+    },
+    {
+      "id": "technical-director-text-model",
+      "subject_ids": [
+        "production-director"
+      ],
+      "statement": "The public cloud-demo source defaults to gemini-3.5-flash for the structured production brief. The August 31 demo description also names Gemini 3.5 Flash. A configurable source default is not a measurement of the model currently serving a deployment. This name must not be described as Kira World’s resident conversation model.",
+      "status": "published_code_default",
+      "sources": [
+        "public-90397b9d85ce",
+        "public-e21bd2d57980"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-08-31",
+      "date_basis": "Date of published source/report; current execution not queried",
+      "publication_scope": "published_information",
+      "revision": "017290f5d0d046e54f85dafb90dbcaacc7e930d1b8e1eee1b1e8e51698b6d644"
+    },
+    {
+      "id": "technical-director-image-model",
+      "subject_ids": [
+        "production-director"
+      ],
+      "statement": "In the 2026-08-31 public source, the public cloud-demo source defaults to gemini-3.1-flash-image for storyboard planning images. The deployment can override this default. Planning panels do not establish generated acting or a finished dramatic film.",
+      "status": "published_code_default",
+      "sources": [
+        "public-90397b9d85ce",
+        "public-d2f4290db15f"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-08-31",
+      "date_basis": "Date of published source/report; current execution not queried",
+      "publication_scope": "published_information",
+      "revision": "cf0c5b0bdf2c8c55d3563a8b6db22c187334df4ec3080a69f58a47ca7ffa64a4"
+    },
+    {
+      "id": "technical-director-speech-model",
+      "subject_ids": [
+        "production-director"
+      ],
+      "statement": "In the 2026-08-31 public source, the public cloud-demo code uses Google Cloud Text-to-Speech Chirp 3 HD for narration and defaults to en-US-Chirp3-HD-Aoede. The configured voice can be changed; current deployed voice was not queried.",
+      "status": "published_code_default",
+      "sources": [
+        "public-90397b9d85ce",
+        "public-948a69b218b5",
+        "public-fa29aef972d2"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-08-31",
+      "date_basis": "Date of published source/report; current execution not queried",
+      "publication_scope": "published_information",
+      "revision": "84ad9fa8eaaacf272d65a04c282fb5f4171975af1ab51a2cf5679133c702da33"
+    },
+    {
+      "id": "current-resident-model-gap",
+      "subject_ids": [
+        "world",
+        "minds"
+      ],
+      "statement": "The reviewed public material does not establish the exact models currently powering Kira World residents, their count, or which are running at once. It describes identity, reviewed memory, voice and world responsibilities. Production Director’s published Gemini defaults belong to a separate cloud demo, so they should not be substituted for a resident model list.",
+      "status": "not-verified-from-public-sources",
+      "sources": [
+        "public-24d7d2ce53c1",
+        "public-449712948020"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "technical"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "revision": "f35501817648ec242a61275923b52e907f549a1e124d562e403caf6e89f966d8"
+    },
+    {
+      "id": "authored-qwen-resident",
+      "subject_ids": [
+        "world",
+        "minds"
+      ],
+      "statement": "An August 10, 2026 technical roadmap selected qwen3.5:9b for normal Kira text conversation. That is a dated selection; the model currently running has not been verified.",
+      "status": "dated_configuration",
+      "sources": [
+        "public-3f219c5713a0"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-08-10",
+      "date_basis": "Dated reviewed observation or owner proposal; not live status",
+      "publication_origin": "new_authored_note",
+      "model_names": [
+        "qwen3.5:9b"
+      ],
+      "role": "resident text conversation",
+      "revision": "d54b2bf9dbfb68ed52e9d2346e96e70aba54fd6a1a7cd643cc9d5d432bd9d94e"
+    },
+    {
+      "id": "authored-photomaker-sdxl",
+      "subject_ids": [
+        "local-studio-models",
+        "studio"
+      ],
+      "statement": "PhotoMaker v1 with Stable Diffusion XL base 1.0 completed a local portrait-generation test on September 8, 2026. This establishes tested generation, not likeness or visual-quality approval.",
+      "status": "executed_local_test",
+      "sources": [
+        "public-3f219c5713a0"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-09-08",
+      "date_basis": "Dated reviewed observation or owner proposal; not live status",
+      "publication_origin": "new_authored_note",
+      "model_names": [
+        "PhotoMaker v1",
+        "stabilityai/stable-diffusion-xl-base-1.0"
+      ],
+      "role": "reference-conditioned portrait generation",
+      "revision": "f1607e6a6149ca9193bab7b1031bb738702f006b92f2457e142ec60c4d7e4bf9"
+    },
+    {
+      "id": "authored-chatterbox-speech",
+      "subject_ids": [
+        "local-studio-models",
+        "studio"
+      ],
+      "statement": "Chatterbox completed a local speech-generation test on September 8, 2026; a later attempt failed. Fresh speech generation is therefore not confirmed currently available.",
+      "status": "executed_then_later_attempt_failed",
+      "sources": [
+        "public-3f219c5713a0"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-09-08",
+      "date_basis": "Dated reviewed observation or owner proposal; not live status",
+      "publication_origin": "new_authored_note",
+      "model_names": [
+        "ResembleAI/chatterbox"
+      ],
+      "role": "local speech synthesis",
+      "revision": "96e6036a98649898aeb119e530207e1f09847327e90d11d145cb9c61f724d862"
+    },
+    {
+      "id": "authored-musetalk-video",
+      "subject_ids": [
+        "local-studio-models",
+        "studio"
+      ],
+      "statement": "MuseTalk 1.5 completed a local audio-driven facial-video test on September 8, 2026. Natural mouth detail, speech alignment and likeness still require visual review.",
+      "status": "executed_local_test",
+      "sources": [
+        "public-3f219c5713a0"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-09-08",
+      "date_basis": "Dated reviewed observation or owner proposal; not live status",
+      "publication_origin": "new_authored_note",
+      "model_names": [
+        "MuseTalk 1.5"
+      ],
+      "role": "audio-conditioned facial video generation",
+      "revision": "c2c7a198c385206e0572a1e4c48334e3013d53efbdc7a6df8465a93ccdde215b"
+    },
+    {
+      "id": "authored-musetalk-audio-features",
+      "subject_ids": [
+        "local-studio-models",
+        "studio"
+      ],
+      "statement": "The tested MuseTalk integration uses Whisper tiny to encode audio features for facial animation. This use does not establish that a transcript was produced or understood.",
+      "status": "executed_as_pipeline_component",
+      "sources": [
+        "public-3f219c5713a0"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-09-08",
+      "date_basis": "Dated reviewed observation or owner proposal; not live status",
+      "publication_origin": "new_authored_note",
+      "model_names": [
+        "Whisper tiny"
+      ],
+      "role": "audio feature encoder inside MuseTalk",
+      "revision": "7bfa924197d57a0b7a62274dd91dca74cf5dbf2def62296ea7373471bce29455"
+    },
+    {
+      "id": "authored-musetalk-vae",
+      "subject_ids": [
+        "local-studio-models",
+        "studio"
+      ],
+      "statement": "The tested MuseTalk integration uses the Stable Diffusion ft-MSE VAE to encode and decode face imagery within the animation pipeline.",
+      "status": "executed_as_pipeline_component",
+      "sources": [
+        "public-3f219c5713a0"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-09-08",
+      "date_basis": "Dated reviewed observation or owner proposal; not live status",
+      "publication_origin": "new_authored_note",
+      "model_names": [
+        "Stable Diffusion ft-MSE VAE"
+      ],
+      "role": "face-image latent encoding and decoding inside MuseTalk",
+      "revision": "e2f8486deaa0ddc439ded27586fcedf2f3cc26107feb961acee9bc2bbdb694f3"
+    },
+    {
+      "id": "authored-vace-motion",
+      "subject_ids": [
+        "local-studio-models",
+        "studio"
+      ],
+      "statement": "Wan-AI/Wan2.1-VACE-1.3B-diffusers was selected in the local picture-motion configuration reviewed on September 8, 2026. Configuration does not establish a completed acting shot.",
+      "status": "cached_and_configured",
+      "sources": [
+        "public-3f219c5713a0"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-09-08",
+      "date_basis": "Dated reviewed observation or owner proposal; not live status",
+      "publication_origin": "new_authored_note",
+      "model_names": [
+        "Wan-AI/Wan2.1-VACE-1.3B-diffusers"
+      ],
+      "role": "guided picture-to-video motion",
+      "revision": "99b1b88a5d3c2f887158b13529c25ae863b802eb6dd241bfc44ebe0ce29d140a"
+    },
+    {
+      "id": "authored-svd-discovery",
+      "subject_ids": [
+        "local-studio-models",
+        "studio"
+      ],
+      "statement": "Local runtime-discovery code supports stabilityai/stable-video-diffusion-img2vid-xt for image-to-video. This review did not verify a fresh generation using that route.",
+      "status": "configured_discovery_only",
+      "sources": [
+        "public-3f219c5713a0"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-09-08",
+      "date_basis": "Dated reviewed observation or owner proposal; not live status",
+      "publication_origin": "new_authored_note",
+      "model_names": [
+        "stabilityai/stable-video-diffusion-img2vid-xt"
+      ],
+      "role": "image-to-video generation route",
+      "revision": "39ccd0489f881a4724bdb28107a81bdb7b63af2e9ce11fb2f78246ba19fb6cfc"
+    },
+    {
+      "id": "authored-ace-music",
+      "subject_ids": [
+        "local-studio-models",
+        "studio"
+      ],
+      "statement": "The music contract reviewed on September 8, 2026 names ACE-Step with the acestep-v15-base variant. This establishes configured support, not a newly verified music-generation result.",
+      "status": "configured_contract_only",
+      "sources": [
+        "public-3f219c5713a0"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-09-08",
+      "date_basis": "Dated reviewed observation or owner proposal; not live status",
+      "publication_origin": "new_authored_note",
+      "model_names": [
+        "ACE-Step"
+      ],
+      "role": "music generation",
+      "revision": "e1c199d55333b1afc63157d0010752175c9cce2069cf99fdef946e17e4a05e5a"
+    },
+    {
+      "id": "authored-worldbuilder-after-studio",
+      "subject_ids": [
+        "world-builder"
+      ],
+      "statement": "Robert’s proposed next focus after Studio is WorldBuilder. This direction was stated on September 8, 2026; it is not a completed product or release schedule.",
+      "status": "owner_proposal",
+      "sources": [
+        "public-6eaaf551623c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "technical"
+      ],
+      "available_date": "2026-09-08",
+      "date_basis": "Dated reviewed observation or owner proposal; not live status",
+      "publication_origin": "new_authored_note",
+      "model_names": [],
+      "role": "WorldBuilder after Studio",
+      "revision": "33afe72af68222d7dbd6029df7d5c7fb2a07ba80b04ad942ec4fbe8a8498f0a5"
+    }
+  ],
+  "routes": [
+    {
+      "id": "ask-museum",
+      "subject_id": "world-builder",
+      "matches": [
+        [
+          "museum"
+        ]
+      ],
+      "fact_ids": [
+        "proposal-meta-museum"
+      ],
+      "scope": "any",
+      "intent": "specific"
+    },
+    {
+      "id": "ask-world-creation",
+      "subject_id": "world-builder",
+      "matches": [
+        [
+          "create my own world",
+          "create our own world",
+          "make my own world",
+          "world builder procedure"
+        ]
+      ],
+      "fact_ids": [
+        "worldbuilder-public-gap"
+      ],
+      "scope": "any",
+      "intent": "specific"
+    },
+    {
+      "id": "resident-models",
+      "subject_id": "world",
+      "matches": [
+        [
+          "model",
+          "models",
+          "llm",
+          "llms",
+          "neural network"
+        ],
+        [
+          "kira world",
+          "minds",
+          "mind",
+          "residents",
+          "resident"
+        ]
+      ],
+      "fact_ids": [
+        "authored-qwen-resident",
+        "current-resident-model-gap"
+      ],
+      "scope": "any",
+      "intent": "specific"
+    },
+    {
+      "id": "resident-models-world",
+      "subject_id": "world",
+      "matches": [
+        [
+          "model",
+          "models",
+          "llm",
+          "llms",
+          "neural network"
+        ]
+      ],
+      "fact_ids": [
+        "authored-qwen-resident",
+        "current-resident-model-gap"
+      ],
+      "scope": "previous",
+      "intent": "technical"
+    },
+    {
+      "id": "resident-models-minds",
+      "subject_id": "minds",
+      "matches": [
+        [
+          "model",
+          "models",
+          "llm",
+          "llms",
+          "neural network"
+        ]
+      ],
+      "fact_ids": [
+        "authored-qwen-resident",
+        "current-resident-model-gap"
+      ],
+      "scope": "previous",
+      "intent": "technical"
+    },
+    {
+      "id": "resident-models-memory",
+      "subject_id": "memory",
+      "matches": [
+        [
+          "model",
+          "models",
+          "llm",
+          "llms",
+          "neural network"
+        ]
+      ],
+      "fact_ids": [
+        "authored-qwen-resident",
+        "current-resident-model-gap"
+      ],
+      "scope": "previous",
+      "intent": "technical"
+    },
+    {
+      "id": "director-models",
+      "subject_id": "production-director",
+      "matches": [
+        [
+          "production director",
+          "cloud demo"
+        ],
+        [
+          "model",
+          "models",
+          "use",
+          "uses"
+        ]
+      ],
+      "fact_ids": [
+        "technical-director-text-model",
+        "technical-director-image-model",
+        "technical-director-speech-model"
+      ],
+      "scope": "any",
+      "intent": "technical"
+    },
+    {
+      "id": "model-qwen-resident",
+      "subject_id": "world",
+      "matches": [
+        [
+          "qwen",
+          "qwen3.5",
+          "qwen3.5:9b"
+        ]
+      ],
+      "fact_ids": [
+        "authored-qwen-resident"
+      ],
+      "scope": "any",
+      "intent": "technical",
+      "detail_fact_ids": [
+        "authored-qwen-resident"
+      ]
+    },
+    {
+      "id": "model-photomaker-sdxl",
+      "subject_id": "local-studio-models",
+      "matches": [
+        [
+          "photomaker",
+          "sdxl",
+          "stable diffusion xl"
+        ]
+      ],
+      "fact_ids": [
+        "authored-photomaker-sdxl"
+      ],
+      "scope": "any",
+      "intent": "technical",
+      "detail_fact_ids": [
+        "authored-photomaker-sdxl"
+      ]
+    },
+    {
+      "id": "model-chatterbox-speech",
+      "subject_id": "local-studio-models",
+      "matches": [
+        [
+          "chatterbox"
+        ]
+      ],
+      "fact_ids": [
+        "authored-chatterbox-speech"
+      ],
+      "scope": "any",
+      "intent": "technical",
+      "detail_fact_ids": [
+        "authored-chatterbox-speech"
+      ]
+    },
+    {
+      "id": "model-musetalk-video",
+      "subject_id": "local-studio-models",
+      "matches": [
+        [
+          "musetalk"
+        ]
+      ],
+      "fact_ids": [
+        "authored-musetalk-video"
+      ],
+      "scope": "any",
+      "intent": "technical",
+      "detail_fact_ids": [
+        "authored-musetalk-video",
+        "authored-musetalk-audio-features",
+        "authored-musetalk-vae"
+      ]
+    },
+    {
+      "id": "model-musetalk-audio-features",
+      "subject_id": "local-studio-models",
+      "matches": [
+        [
+          "whisper",
+          "whisper tiny"
+        ]
+      ],
+      "fact_ids": [
+        "authored-musetalk-audio-features"
+      ],
+      "scope": "any",
+      "intent": "technical",
+      "detail_fact_ids": [
+        "authored-musetalk-video",
+        "authored-musetalk-audio-features",
+        "authored-musetalk-vae"
+      ]
+    },
+    {
+      "id": "model-musetalk-vae",
+      "subject_id": "local-studio-models",
+      "matches": [
+        [
+          "vae",
+          "ft-mse"
+        ]
+      ],
+      "fact_ids": [
+        "authored-musetalk-vae"
+      ],
+      "scope": "any",
+      "intent": "technical",
+      "detail_fact_ids": [
+        "authored-musetalk-video",
+        "authored-musetalk-audio-features",
+        "authored-musetalk-vae"
+      ]
+    },
+    {
+      "id": "model-vace-motion",
+      "subject_id": "local-studio-models",
+      "matches": [
+        [
+          "vace",
+          "wan2.1"
+        ]
+      ],
+      "fact_ids": [
+        "authored-vace-motion"
+      ],
+      "scope": "any",
+      "intent": "technical",
+      "detail_fact_ids": [
+        "authored-vace-motion"
+      ]
+    },
+    {
+      "id": "model-svd-discovery",
+      "subject_id": "local-studio-models",
+      "matches": [
+        [
+          "svd",
+          "stable video diffusion"
+        ]
+      ],
+      "fact_ids": [
+        "authored-svd-discovery"
+      ],
+      "scope": "any",
+      "intent": "technical",
+      "detail_fact_ids": [
+        "authored-svd-discovery"
+      ]
+    },
+    {
+      "id": "model-ace-music",
+      "subject_id": "local-studio-models",
+      "matches": [
+        [
+          "ace-step",
+          "acestep"
+        ]
+      ],
+      "fact_ids": [
+        "authored-ace-music"
+      ],
+      "scope": "any",
+      "intent": "technical",
+      "detail_fact_ids": [
+        "authored-ace-music"
+      ]
+    },
+    {
+      "id": "local-model-roles",
+      "subject_id": "local-studio-models",
+      "matches": [
+        [
+          "video studio",
+          "local studio",
+          "studio models"
+        ],
+        [
+          "model",
+          "models",
+          "under the hood"
+        ]
+      ],
+      "fact_ids": [
+        "authored-photomaker-sdxl",
+        "authored-chatterbox-speech",
+        "authored-musetalk-video"
+      ],
+      "scope": "any",
+      "intent": "technical",
+      "detail_fact_ids": [
+        "authored-photomaker-sdxl",
+        "authored-chatterbox-speech",
+        "authored-musetalk-video",
+        "authored-musetalk-audio-features",
+        "authored-musetalk-vae",
+        "authored-vace-motion",
+        "authored-svd-discovery",
+        "authored-ace-music"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2423 @@
+{
+  "schema_version": 1,
+  "id": "robert",
+  "content_version": "2026-09-12.1",
+  "reviewed_on": "2026-09-12",
+  "sources": {
+    "about": {
+      "label": "Kira Labs · About Robert",
+      "url": "about.html"
+    },
+    "book:B004RZ28U4": {
+      "label": "Amazon · Poetry Madhouse",
+      "url": "https://www.amazon.com/Poetry-Madhouse-Robert-McMurrer-ebook/dp/B004RZ28U4"
+    },
+    "book:B00H055MC4": {
+      "label": "Amazon · The Dark Storm Inside Of Me",
+      "url": "https://www.amazon.com/Dark-Storm-Inside-Me-ebook/dp/B00H055MC4"
+    },
+    "book:B00H68CAA2": {
+      "label": "Amazon · Driving Into The Dark Storm",
+      "url": "https://www.amazon.com/Driving-Into-Storm-Robert-McMurrer-ebook/dp/B00H68CAA2"
+    },
+    "book:B0CL2F9KKR": {
+      "label": "Amazon · A Life of Monsters and Hope: The Life of Robert McMurrer",
+      "url": "https://www.amazon.com/Life-Monsters-Hope-Robert-McMurrer/dp/B0CL2F9KKR"
+    },
+    "book:B0F6M9C56R": {
+      "label": "Amazon · Cosplay Cuisine",
+      "url": "https://www.amazon.com/Cosplay-Cuisine-Robert-McMurrer-ebook/dp/B0F6M9C56R"
+    },
+    "book:B0F6MKG8ZR": {
+      "label": "Amazon · The Tommy Westphall Universe: A Connected World",
+      "url": "https://www.amazon.com/Tommy-Westphall-Universe-Connected-World-ebook/dp/B0F6MKG8ZR"
+    },
+    "book:B0F6NT2QPD": {
+      "label": "Amazon · Recipes for Life: A Cookbook",
+      "url": "https://www.amazon.com/Recipes-Life-Cookbook-Robert-McMurrer/dp/B0F6NT2QPD"
+    },
+    "book:B0F71VH3S2": {
+      "label": "Amazon · Microwave Motel Meals",
+      "url": "https://www.amazon.com/Microwave-Motel-Meals-Robert-McMurrer-ebook/dp/B0F71VH3S2"
+    },
+    "book:B0F7CL734B": {
+      "label": "Amazon · Bars Of Innocence",
+      "url": "https://www.amazon.com/Bars-Innocence-Robert-McMurrer-ebook/dp/B0F7CL734B"
+    },
+    "book:B0GGY7N6SJ": {
+      "label": "Amazon · Ghostline: The Continental Network",
+      "url": "https://www.amazon.com/Ghostline-Continental-Network-Robert-McMurrer-ebook/dp/B0GGY7N6SJ"
+    },
+    "book:B0GGZWPX8C": {
+      "label": "Amazon · The Long Walk North",
+      "url": "https://www.amazon.com/Long-Walk-North-Robert-McMurrer-ebook/dp/B0GGZWPX8C"
+    },
+    "book:B0GH162D4H": {
+      "label": "Amazon · Trump and Epstein: Parties to Crimes",
+      "url": "https://www.amazon.com/Trump-Epstein-Parties-Robert-McMurrer-ebook/dp/B0GH162D4H"
+    },
+    "book:B0GH2XRM1T": {
+      "label": "Amazon · Robert’s Sicilian Dream",
+      "url": "https://www.amazon.com/Roberts-Sicilian-Dream-Robert-McMurrer-ebook/dp/B0GH2XRM1T"
+    },
+    "book:B0GH7BF9TT": {
+      "label": "Amazon · Trump’s Reign: A Chronicle of Controversy",
+      "url": "https://www.amazon.com/Trumps-Reign-Controversy-Robert-McMurrer-ebook/dp/B0GH7BF9TT"
+    },
+    "book:B0GHBJNL8K": {
+      "label": "Amazon · Lunar Colony: A New Frontier",
+      "url": "https://www.amazon.com/Lunar-Colony-Frontier-Robert-McMurrer-ebook/dp/B0GHBJNL8K"
+    },
+    "book:B0GHCXLGXS": {
+      "label": "Amazon · The Dreamer’s Deportation",
+      "url": "https://www.amazon.com/Dreamers-Deportation-Robert-McMurrer-ebook/dp/B0GHCXLGXS"
+    },
+    "book:B0GHZYFFDQ": {
+      "label": "Amazon · The Trump Dynasty: Power, Wealth, and Controversy",
+      "url": "https://www.amazon.com/Trump-Dynasty-Power-Wealth-Controversy-ebook/dp/B0GHZYFFDQ"
+    },
+    "book:B0GJNX9B5Y": {
+      "label": "Amazon · Clinton Family Criminal Record",
+      "url": "https://www.amazon.com/Clinton-Family-Criminal-Record-McMurrer-ebook/dp/B0GJNX9B5Y"
+    },
+    "book:B0GJRM8VHQ": {
+      "label": "Amazon · 1933 Italian UFO Crash: Nazi Secrets",
+      "url": "https://www.amazon.com/1933-Italian-UFO-Crash-Secrets-ebook/dp/B0GJRM8VHQ"
+    },
+    "book:B0GK2RYKJ5": {
+      "label": "Amazon · Dorothy’s Dark Return to Oz",
+      "url": "https://www.amazon.com/Dorothys-Dark-Return-Robert-McMurrer-ebook/dp/B0GK2RYKJ5"
+    },
+    "book:B0GK49V853": {
+      "label": "Amazon · ROBIN HOOD vs. VAMPIRES: The Dracula War",
+      "url": "https://www.amazon.com/ROBIN-HOOD-vs-VAMPIRES-Dracula-ebook/dp/B0GK49V853"
+    },
+    "book:B0GK4M39TP": {
+      "label": "Amazon · Casanova’s Vampire Embrace",
+      "url": "https://www.amazon.com/Casanovas-Vampire-Embrace-Robert-McMurrer-ebook/dp/B0GK4M39TP"
+    },
+    "book:B0GK6268R2": {
+      "label": "Amazon · Galactic Revelation: Humanity’s Unpreparedness",
+      "url": "https://www.amazon.com/Galactic-Revelation-Unpreparedness-Robert-McMurrer-ebook/dp/B0GK6268R2"
+    },
+    "book:B0GKC45W82": {
+      "label": "Amazon · The Line Between Love and Rage",
+      "url": "https://www.amazon.com/Line-Between-Love-Rage-ebook/dp/B0GKC45W82"
+    },
+    "book:B0GKCHS6JQ": {
+      "label": "Amazon · Sicily: A Rational Relocation for Neurodivergent Adults",
+      "url": "https://www.amazon.com/Sicily-Rational-Relocation-Neurodivergent-Adults-ebook/dp/B0GKCHS6JQ"
+    },
+    "book:B0GKXZYG4Y": {
+      "label": "Amazon · Navigating the Globe with a Criminal Record",
+      "url": "https://www.amazon.com/Navigating-Criminal-Record-Robert-McMurrer/dp/B0GKXZYG4Y"
+    },
+    "book:B0GL88V288": {
+      "label": "Amazon · The Path Less Traveled",
+      "url": "https://www.amazon.com/Path-Less-Traveled-Robert-McMurrer/dp/B0GL88V288"
+    },
+    "book:B0GL8FYPX2": {
+      "label": "Amazon · Sci-Fi Seeds: Tech of Tomorrow",
+      "url": "https://www.amazon.com/Sci-Fi-Seeds-Tomorrow-Robert-McMurrer/dp/B0GL8FYPX2"
+    },
+    "book:B0GL9T3VT2": {
+      "label": "Amazon · The Epic of Gilgamesh: A King’s Journey of Mortality",
+      "url": "https://www.amazon.com/Epic-Gilgamesh-Kings-Journey-Mortality-ebook/dp/B0GL9T3VT2"
+    },
+    "books": {
+      "label": "Amazon · Robert’s books",
+      "url": "https://www.amazon.com/s?k=robert+mcmurrer&crid=2NB9TR6SF34R8&sprefix=robert+mcmurrer%2Caps%2C118&ref=nb_sb_noss_1"
+    },
+    "credits": {
+      "label": "IMDb · Robert’s credits",
+      "url": "https://www.imdb.com/name/nm2258412/"
+    },
+    "imdb": {
+      "label": "IMDb · Robert’s biography",
+      "url": "https://www.imdb.com/name/nm2258412/bio/"
+    },
+    "poetry": {
+      "label": "Poetry Madhouse · book record",
+      "url": "https://imusic.dk/books/9781456534325/robert-mcmurrer-2011-poetry-madhouse-paperback-bog"
+    },
+    "public-058f9313881c": {
+      "label": "Kira Labs · public notes",
+      "url": "https://kiralabs.org/about.html",
+      "publisher": "kiralabs.org",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-708870acab04": {
+      "label": "Kira Labs · public notes",
+      "url": "https://kiralabs.org/sarah-knowledge.json",
+      "publisher": "kiralabs.org",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-df6dab2da21b": {
+      "label": "IMDb · public listing",
+      "url": "https://www.imdb.com/title/tt2056642/",
+      "publisher": "www.imdb.com",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-ec5d86d8e1a3": {
+      "label": "IMDb · public listing",
+      "url": "https://pro.imdb.com/title/tt1068680/",
+      "publisher": "pro.imdb.com",
+      "reviewed_on": "2026-09-08"
+    },
+    "shiftbrief": {
+      "label": "ShiftBrief · product and download",
+      "url": "projects.html#shiftbrief"
+    }
+  },
+  "topics": [
+    {
+      "id": "robert",
+      "title": "Meet Robert",
+      "label": "Founder · writer · creator",
+      "terms": [
+        "robert",
+        "mcmurrer",
+        "founder",
+        "creator",
+        "who made",
+        "who built",
+        "who started",
+        "your boss"
+      ],
+      "answer": "Robert McMurrer is the founder of Kira Labs and creator of Kira World, based in Newark, New Jersey. His background spans acting, independent film production and writing. His AI work explores how identity, memory and voice can continue across conversations and creative projects.",
+      "sources": [
+        "about",
+        "imdb"
+      ],
+      "next": [
+        "Write a mini bio of Robert",
+        "Tell me about his entertainment work",
+        "Which books has he written?"
+      ],
+      "coverage": {
+        "overview": [
+          "robert-founder",
+          "robert-creator",
+          "robert-base",
+          "robert-screen-background"
+        ]
+      }
+    },
+    {
+      "id": "entertainment",
+      "title": "Robert’s movie & TV credits",
+      "label": "Selected public IMDb credits",
+      "terms": [
+        "entertainment",
+        "actor",
+        "acting",
+        "actress",
+        "film career",
+        "filmography",
+        "screenwriter",
+        "screenwriting",
+        "hollywood",
+        "movies was",
+        "shows was",
+        "credits",
+        "background work"
+      ],
+      "answer": "IMDb lists film work including Blood Tulip (2019), as Sticks; Lunch with a Friend (2011 short), as John; and Director’s Cut (2016), as Charles Whitman (uncredited). Television and web-series entries on IMDb include Parks and Recreation, as Meeting Member (uncredited; 2011, one episode); Glee, as NY Audience Man (uncredited; 2011, one episode); and CollegeHumor Originals, as Partygoer (2016, one episode). These are selected listed credits, not a complete filmography.",
+      "sources": [
+        "credits"
+      ],
+      "next": [
+        "Write an entertainment-focused mini bio",
+        "Tell me about his books",
+        "How does that connect to his AI work?"
+      ],
+      "followups": {
+        "films": {
+          "answer": "IMDb lists film work including Blood Tulip (2019), as Sticks; Lunch with a Friend (2011 short), as John; and Director’s Cut (2016), as Charles Whitman (uncredited). These are selected listed film credits; the IMDb profile has the full listing.",
+          "next": [
+            "Which TV shows has he appeared in?",
+            "Write an entertainment-focused mini bio"
+          ]
+        },
+        "television": {
+          "answer": "Television and web-series entries on IMDb include Parks and Recreation, as Meeting Member (uncredited; 2011, one episode); Glee, as NY Audience Man (uncredited; 2011, one episode); and CollegeHumor Originals, as Partygoer (2016, one episode). These are selected listed appearances, not regular or starring roles.",
+          "next": [
+            "Which movies has Robert worked on?",
+            "Write an entertainment-focused mini bio"
+          ]
+        }
+      },
+      "coverage": {
+        "overview": [
+          "credit-blood-tulip",
+          "credit-lunch-john",
+          "credit-directors-cut",
+          "credit-parks",
+          "credit-glee",
+          "credit-collegehumor"
+        ],
+        "films": [
+          "credit-blood-tulip",
+          "credit-lunch-john",
+          "credit-directors-cut"
+        ],
+        "television": [
+          "credit-parks",
+          "credit-glee",
+          "credit-collegehumor"
+        ]
+      }
+    },
+    {
+      "id": "books",
+      "title": "Robert’s books",
+      "label": "Poetry · stories · other writing",
+      "terms": [
+        "book",
+        "books",
+        "author",
+        "writing",
+        "written",
+        "novel",
+        "novels",
+        "bibliography",
+        "poetry",
+        "cookbook"
+      ],
+      "answer": "Robert’s Amazon catalogue includes poetry, fiction, technology writing and cookbooks. Selected titles include Poetry Madhouse, Driving Into The Dark Storm, The Long Walk North, Sci-Fi Seeds: Tech of Tomorrow, The Path Less Traveled and Cosplay Cuisine. I can help you find 29 titles checked in the catalogue on September 7, 2026. Ask about a title or ask to see the book list.",
+      "sources": [
+        "books"
+      ],
+      "next": [
+        "Show the book list",
+        "Tell me about Cosplay Cuisine",
+        "Write an author-focused mini bio"
+      ],
+      "coverage": {}
+    },
+    {
+      "id": "poetry",
+      "title": "Poetry Madhouse",
+      "label": "Book · 2011",
+      "terms": [
+        "poetry madhouse"
+      ],
+      "answer": "Poetry Madhouse is by Robert McMurrer. A collection of poems by Robert McMurrer. Open the Amazon listing for available editions.",
+      "sources": [
+        "book:B004RZ28U4"
+      ],
+      "next": [
+        "What other books has he written?",
+        "Write a short author bio"
+      ],
+      "coverage": {}
+    },
+    {
+      "id": "driving",
+      "title": "Driving Into The Dark Storm",
+      "label": "Short stories · 2013",
+      "terms": [
+        "driving into the dark storm"
+      ],
+      "answer": "Driving Into The Dark Storm is by Robert McMurrer. A collection of short stories combining life-inspired drama with science-fiction ideas, including time travel and aliens. Open the Amazon listing for available editions.",
+      "sources": [
+        "book:B00H68CAA2"
+      ],
+      "next": [
+        "Tell me about Poetry Madhouse",
+        "What other books has he written?"
+      ],
+      "coverage": {}
+    },
+    {
+      "id": "contact",
+      "title": "Contact Robert",
+      "label": "Ideas · questions · collaboration",
+      "terms": [
+        "contact",
+        "email",
+        "e-mail",
+        "reach",
+        "get in touch",
+        "collaborat",
+        "interview",
+        "press",
+        "hire",
+        "message robert"
+      ],
+      "answer": "You can contact Robert McMurrer directly at rmcmurrer@kiralabs.org about his books, entertainment work, AI projects or collaboration. Use the email link on this page. Talking with me does not send Robert a message, and I cannot promise a response time or make commitments on his behalf.",
+      "sources": [
+        "about"
+      ],
+      "next": [
+        "Write a mini bio for an introduction",
+        "Tell me about his work"
+      ],
+      "coverage": {}
+    }
+  ],
+  "facts": [
+    {
+      "id": "robert-founder",
+      "subject_ids": [
+        "robert"
+      ],
+      "statement": "Robert McMurrer founded Kira Labs.",
+      "status": "published-statement",
+      "sources": [
+        "public-058f9313881c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Founder and builder sections",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Who founded Kira Labs?"
+      ],
+      "revision": "77a237774e116f411981abe9919bf4bc85f78293d4e0a5b98bced78eacfc457e"
+    },
+    {
+      "id": "robert-creator",
+      "subject_ids": [
+        "robert"
+      ],
+      "statement": "Robert McMurrer created the Kira World project.",
+      "status": "published-statement",
+      "sources": [
+        "public-058f9313881c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "The builder",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What is Robert building?"
+      ],
+      "revision": "fe7c9e6b08f018c876787e8b50f983ce112bd4831bfe9517f7438e746f87e825"
+    },
+    {
+      "id": "robert-base",
+      "subject_ids": [
+        "robert"
+      ],
+      "statement": "The current Kira Labs biography places Robert in Newark, New Jersey.",
+      "status": "published-statement",
+      "sources": [
+        "public-058f9313881c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Based in Newark / The builder",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where is Robert based?"
+      ],
+      "revision": "ce3c63ebe47eba1ba72884172489ae557af81834bf44836dc9cb2ce0a0ba3871"
+    },
+    {
+      "id": "robert-independent",
+      "subject_ids": [
+        "robert"
+      ],
+      "statement": "Kira Labs is described as independent work outside a large company or university laboratory.",
+      "status": "published-statement",
+      "sources": [
+        "public-058f9313881c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "The builder",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Is Kira Labs part of a university or large company?"
+      ],
+      "revision": "dd967eb38a3ed4218a3eb3d76d62d5e1e9bece8ecd4c31ce7e4fab9e5d9baaaf"
+    },
+    {
+      "id": "robert-motivation",
+      "subject_ids": [
+        "robert"
+      ],
+      "statement": "Robert describes continuity across conversations and ordinary life as a motivation for Kira World.",
+      "status": "published-statement",
+      "sources": [
+        "public-058f9313881c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Why I started",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Why did he start Kira World?"
+      ],
+      "revision": "a2fb1516e6cf6aaa2d7b5e69d924ddc5fca92560eb492c24ea0df4c33b6e1da8"
+    },
+    {
+      "id": "robert-contact",
+      "subject_ids": [
+        "robert"
+      ],
+      "statement": "The public contact email is rmcmurrer@kiralabs.org.",
+      "status": "published-statement",
+      "sources": [
+        "public-058f9313881c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Contact and follow",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "How can I contact Robert?"
+      ],
+      "revision": "27779713166a964ab4a1f100a949044c0aa03e85a0694a3919ef88b6decd2722"
+    },
+    {
+      "id": "robert-born",
+      "subject_ids": [
+        "robert"
+      ],
+      "statement": "IMDb lists Robert’s birth as June 1, 1981, in Indianapolis, Indiana.",
+      "status": "published-statement",
+      "sources": [
+        "imdb"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "1981-06-01",
+      "date_basis": "Public biographical date",
+      "provenance": {
+        "source_locator": "Overview / Born",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where and when was Robert born?"
+      ],
+      "revision": "84daf894c2cf4917c8d118e12317c240a3ddb534899c023ed16dbd8c6260eddc"
+    },
+    {
+      "id": "robert-screen-background",
+      "subject_ids": [
+        "robert"
+      ],
+      "statement": "IMDb describes experience in acting and independent film production, followed by screenwriting.",
+      "status": "published-statement",
+      "sources": [
+        "imdb"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Mini bio",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What is his entertainment background?"
+      ],
+      "revision": "a0d2ba3d4eaa1133341726289d678f928f92984f0f259727cdb77363f970a139"
+    },
+    {
+      "id": "robert-first-background-job",
+      "subject_ids": [
+        "robert"
+      ],
+      "statement": "IMDb says his first background acting job was an Indiana television advertisement.",
+      "status": "published-statement",
+      "sources": [
+        "imdb"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Trivia",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What was his first acting job?"
+      ],
+      "revision": "cf80f00f2f19922f65639d4318b0a931f4c740b5ba957c628f53ba9f7478c437"
+    },
+    {
+      "id": "robert-school-class",
+      "subject_ids": [
+        "robert"
+      ],
+      "statement": "IMDb associates him with Warren Central High School’s class of 2000 in Indianapolis. That association does not establish a graduation claim.",
+      "status": "published-statement",
+      "sources": [
+        "imdb"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2000",
+      "date_basis": "Public biographical date",
+      "provenance": {
+        "source_locator": "Trivia",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What school background is publicly documented?"
+      ],
+      "revision": "b758bdddc402b47ff308a1e222f023f2fa09003b82727be61ef8d4a263cfd0af"
+    },
+    {
+      "id": "robert-themepark-work",
+      "subject_ids": [
+        "robert"
+      ],
+      "statement": "IMDb describes rides-operation and later retail work at Universal Studios Theme Park in Universal City.",
+      "status": "published-statement",
+      "sources": [
+        "imdb"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "Trivia",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What other work has he done?"
+      ],
+      "revision": "1deb63ba9d88e3c1b7f0b3678aabf56763c610de4e69655808bb52bb5d442446"
+    },
+    {
+      "id": "credit-blood-tulip",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as Sticks in Blood Tulip (2019).",
+      "status": "published-credit-listing",
+      "sources": [
+        "credits"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2019",
+      "date_basis": "Appearance year in the accessed listing; not series premiere year",
+      "provenance": {
+        "source_locator": "Actor entry: Blood Tulip",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What did he do in Blood Tulip?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "Blood Tulip",
+      "revision": "ec422f901c2c928c168e6b923f8c6bd1488e1f66ffe061aa435c06ae1fee0aa2"
+    },
+    {
+      "id": "credit-lunch-john",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as John in Lunch with a Friend (2011).",
+      "status": "published-credit-listing",
+      "sources": [
+        "public-df6dab2da21b"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2011",
+      "date_basis": "Appearance year in the accessed listing; not series premiere year",
+      "provenance": {
+        "source_locator": "Actor entry: Lunch with a Friend",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What did he do in Lunch with a Friend?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "Lunch with a Friend",
+      "revision": "cb8c4c318caba7083a936e846b22e95343a3667c2f51dda1757de08741973227"
+    },
+    {
+      "id": "credit-this-girl-dazlyn",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as Cliff in This Girl Dazlyn (2016).",
+      "status": "published-credit-listing",
+      "sources": [
+        "credits"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2016",
+      "date_basis": "Appearance year in the accessed listing; not series premiere year",
+      "provenance": {
+        "source_locator": "Actor entry: This Girl Dazlyn",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What did he do in This Girl Dazlyn?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "This Girl Dazlyn",
+      "revision": "404750c007f47f4255f7d90d8e25c947da1be27c7a593369a561a3df9c91af7e"
+    },
+    {
+      "id": "credit-collegehumor",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as Partygoer in CollegeHumor Originals (2016, 1 episode).",
+      "status": "published-credit-listing",
+      "sources": [
+        "credits"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "television"
+      ],
+      "available_date": "2016",
+      "date_basis": "Appearance year in the accessed listing; not series premiere year",
+      "provenance": {
+        "source_locator": "Actor entry: CollegeHumor Originals",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What did he do in CollegeHumor Originals?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "CollegeHumor Originals",
+      "revision": "e57452ac87e26643f03fb4fabe22924f52068b9aa76d221840e04d893a313173"
+    },
+    {
+      "id": "credit-directors-cut",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as Charles Whitman in Director’s Cut (uncredited) (2016).",
+      "status": "published-credit-listing",
+      "sources": [
+        "credits"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2016",
+      "date_basis": "Appearance year in the accessed listing; not series premiere year",
+      "provenance": {
+        "source_locator": "Actor entry: Director’s Cut",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What did he do in Director’s Cut?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "Director’s Cut",
+      "revision": "2c39c87cae3dd7da9176f4e5069bb14f3f0ae7dcd9ac527f6671290bc3aa6b9e"
+    },
+    {
+      "id": "credit-truth-or-dare",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as Audience Member in Truth or Dare (2013).",
+      "status": "published-credit-listing",
+      "sources": [
+        "credits"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2013",
+      "date_basis": "Appearance year in the accessed listing; not series premiere year",
+      "provenance": {
+        "source_locator": "Actor entry: Truth or Dare",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What did he do in Truth or Dare?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "Truth or Dare",
+      "revision": "d09de4930af8946927c6e66207082288465aab2d124409cc3730b4812f196c5a"
+    },
+    {
+      "id": "credit-look-at-me",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as Pool Player in Look at Me (uncredited) (2012).",
+      "status": "published-credit-listing",
+      "sources": [
+        "credits"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2012",
+      "date_basis": "Appearance year in the accessed listing; not series premiere year",
+      "provenance": {
+        "source_locator": "Actor entry: Look at Me",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What did he do in Look at Me?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "Look at Me",
+      "revision": "e5dc85b6439256687c84845074543fa2aecdccf3ac3f34d15d1fca3f017ed9ae"
+    },
+    {
+      "id": "credit-parks",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as Meeting Member in Parks and Recreation (uncredited) (2011, 1 episode).",
+      "status": "published-credit-listing",
+      "sources": [
+        "credits"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "television"
+      ],
+      "available_date": "2011",
+      "date_basis": "Appearance year in the accessed listing; not series premiere year",
+      "provenance": {
+        "source_locator": "Actor entry: Parks and Recreation",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What did he do in Parks and Recreation?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "Parks and Recreation",
+      "revision": "be3fb2a809f933e9e3a8588b5adbd82293859f134e303bbdc949e8b10e07cd08"
+    },
+    {
+      "id": "credit-barely-legal",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as Party Attendee in Barely Legal (2011).",
+      "status": "published-credit-listing",
+      "sources": [
+        "credits"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2011",
+      "date_basis": "Appearance year in the accessed listing; not series premiere year",
+      "provenance": {
+        "source_locator": "Actor entry: Barely Legal",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What did he do in Barely Legal?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "Barely Legal",
+      "revision": "a1e25e2cc94284934f74f5fa6531f9af26e1505bae488534ed5647da0ae62cda"
+    },
+    {
+      "id": "credit-born-bad",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as Background Person in Born Bad (2011).",
+      "status": "published-credit-listing",
+      "sources": [
+        "credits"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2011",
+      "date_basis": "Appearance year in the accessed listing; not series premiere year",
+      "provenance": {
+        "source_locator": "Actor entry: Born Bad",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What did he do in Born Bad?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "Born Bad",
+      "revision": "2e1c91bef6d2aa5e5c5f665ecc3df5ce4864f7a582ebe26f2114979bf59dda1b"
+    },
+    {
+      "id": "credit-glee",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as NY Audience Man in Glee (uncredited) (2011, 1 episode).",
+      "status": "published-credit-listing",
+      "sources": [
+        "credits"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "television"
+      ],
+      "available_date": "2011",
+      "date_basis": "Appearance year in the accessed listing; not series premiere year",
+      "provenance": {
+        "source_locator": "Actor entry: Glee",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What did he do in Glee?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "Glee",
+      "revision": "615477566aa7cd35c209e9df6ebd2ef7ac6fb4d1ee4e0a496998c1437c754b89"
+    },
+    {
+      "id": "credit-circle",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as Student in Circle (2010).",
+      "status": "published-credit-listing",
+      "sources": [
+        "credits"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2010",
+      "date_basis": "Appearance year in the accessed listing; not series premiere year",
+      "provenance": {
+        "source_locator": "Actor entry: Circle",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What did he do in Circle?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "Circle",
+      "revision": "2ce7845dbce362579de571f24721f8607f59d562bea91f2c32855713030333c8"
+    },
+    {
+      "id": "credit-yes-man",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as Convention Patron in Yes Man, uncredited (2008).",
+      "status": "published-credit-listing",
+      "sources": [
+        "public-ec5d86d8e1a3"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2008",
+      "date_basis": "Production year",
+      "provenance": {
+        "source_locator": "Cast: Robert McMurrer",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What was his part in Yes Man?"
+      ],
+      "credit_kind": "actor",
+      "production_title": "Yes Man",
+      "revision": "8c3d60781598ee03fec9dc41542d2bf8bd98c6e8c6a62ff885de093571d02811"
+    },
+    {
+      "id": "lunch-director",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as director of Lunch with a Friend.",
+      "status": "published-credit-listing",
+      "sources": [
+        "public-df6dab2da21b"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2011",
+      "date_basis": "Production year",
+      "provenance": {
+        "source_locator": "Director",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Did Robert direct Lunch with a Friend?"
+      ],
+      "credit_kind": "director",
+      "production_title": "Lunch with a Friend",
+      "revision": "32587d965e7c6b09ed0bb2ee8929d3ac3be89294477d361d3b193110b80af76a"
+    },
+    {
+      "id": "lunch-writer",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists Robert as writer of Lunch with a Friend.",
+      "status": "published-credit-listing",
+      "sources": [
+        "public-df6dab2da21b"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2011",
+      "date_basis": "Production year",
+      "provenance": {
+        "source_locator": "Writer",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Did Robert write Lunch with a Friend?"
+      ],
+      "credit_kind": "writer",
+      "production_title": "Lunch with a Friend",
+      "revision": "1e0ff040aa61f681063e94db71cabc0a867b2073e6494b9fda0abcfec6614ee0"
+    },
+    {
+      "id": "lunch-release",
+      "subject_ids": [
+        "entertainment"
+      ],
+      "statement": "IMDb lists July 16, 2011 as the US release date of the short Lunch with a Friend.",
+      "status": "published-release-date",
+      "sources": [
+        "public-df6dab2da21b"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details",
+        "films"
+      ],
+      "available_date": "2011-07-16",
+      "date_basis": "Listed US release date",
+      "provenance": {
+        "source_locator": "Details / Release date",
+        "access": "public-indexed-page",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "When was Lunch with a Friend released?"
+      ],
+      "credit_kind": "release",
+      "production_title": "Lunch with a Friend",
+      "revision": "5bbe0d31c4f5cad9a17e325c1d22d7742916afe564f4ed2b074c25109b986c56"
+    },
+    {
+      "id": "book-b0gh162d4h",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Trump and Epstein: Parties to Crimes.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GH162D4H",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Trump and Epstein: Parties to Crimes?"
+      ],
+      "book_source": "book:B0GH162D4H",
+      "revision": "cf9190643fd118c92451b41aca94c5c94d7c8a25dbd653b3bd116f693337882a"
+    },
+    {
+      "id": "book-b0gl88v288",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists The Path Less Traveled.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GL88V288",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find The Path Less Traveled?"
+      ],
+      "book_source": "book:B0GL88V288",
+      "revision": "29d52921a209620990178a5e2a191fbaa5200848c58e408ae8f7e847a003ece9"
+    },
+    {
+      "id": "book-b0ghzyffdq",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists The Trump Dynasty: Power, Wealth, and Controversy.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GHZYFFDQ",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find The Trump Dynasty: Power, Wealth, and Controversy?"
+      ],
+      "book_source": "book:B0GHZYFFDQ",
+      "revision": "3128e79e39b37e9750dd70aa5623bd2713a878f9b514da2a601564acc59700b2"
+    },
+    {
+      "id": "book-b0gh7bf9tt",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Trump’s Reign: A Chronicle of Controversy.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GH7BF9TT",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Trump’s Reign: A Chronicle of Controversy?"
+      ],
+      "book_source": "book:B0GH7BF9TT",
+      "revision": "b9c596b12be12ca3b7668075a31c8bc2b09dc5d021d6103dcef7e4b35d0288b2"
+    },
+    {
+      "id": "book-b0ggzwpx8c",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists The Long Walk North.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GGZWPX8C",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find The Long Walk North?"
+      ],
+      "book_source": "book:B0GGZWPX8C",
+      "revision": "24256a0ba6e89d74006c7bf7916f593efe1d59ff37398a054eb90d4db71cef97"
+    },
+    {
+      "id": "book-b0gjnx9b5y",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Clinton Family Criminal Record.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GJNX9B5Y",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Clinton Family Criminal Record?"
+      ],
+      "book_source": "book:B0GJNX9B5Y",
+      "revision": "8dfe16890ea68649d6bd8ca447bd79592f670a72854483d704b6da6fac177350"
+    },
+    {
+      "id": "book-b0gk49v853",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists ROBIN HOOD vs. VAMPIRES: The Dracula War.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GK49V853",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find ROBIN HOOD vs. VAMPIRES: The Dracula War?"
+      ],
+      "book_source": "book:B0GK49V853",
+      "revision": "10e8c664a724e2605884d5e24c4094dc4539416386cfa77b586a21af1a34d8b8"
+    },
+    {
+      "id": "book-b0gk2rykj5",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Dorothy’s Dark Return to Oz.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GK2RYKJ5",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Dorothy’s Dark Return to Oz?"
+      ],
+      "book_source": "book:B0GK2RYKJ5",
+      "revision": "169d3be8c38ee23a2f468e235332a46b54cd28c6ee43274681cefc18060ba580"
+    },
+    {
+      "id": "book-b0gjrm8vhq",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists 1933 Italian UFO Crash: Nazi Secrets.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GJRM8VHQ",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find 1933 Italian UFO Crash: Nazi Secrets?"
+      ],
+      "book_source": "book:B0GJRM8VHQ",
+      "revision": "d0ef8fa21487e6989a48df3738862b9d0944e63623cf1d2e429594ceda1a3769"
+    },
+    {
+      "id": "book-b0ghbjnl8k",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Lunar Colony: A New Frontier.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GHBJNL8K",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Lunar Colony: A New Frontier?"
+      ],
+      "book_source": "book:B0GHBJNL8K",
+      "revision": "2100124a855b61b408a8c01fab37c4a5508b553816d07f1f637470a4e6b9774c"
+    },
+    {
+      "id": "book-b0gl9t3vt2",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists The Epic of Gilgamesh: A King’s Journey of Mortality.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GL9T3VT2",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find The Epic of Gilgamesh: A King’s Journey of Mortality?"
+      ],
+      "book_source": "book:B0GL9T3VT2",
+      "revision": "6b744b0040a4841bd054d9567f0d1683c65ab9fa7753f2b52396b8b7d4b47e7f"
+    },
+    {
+      "id": "book-b0gkxzyg4y",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Navigating the Globe with a Criminal Record.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GKXZYG4Y",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Navigating the Globe with a Criminal Record?"
+      ],
+      "book_source": "book:B0GKXZYG4Y",
+      "revision": "3c0d679ea851a01304d7c665e058687ca6c7a56733c402dddd06b68151545a18"
+    },
+    {
+      "id": "book-b0gl8fypx2",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Sci-Fi Seeds: Tech of Tomorrow.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GL8FYPX2",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Sci-Fi Seeds: Tech of Tomorrow?"
+      ],
+      "book_source": "book:B0GL8FYPX2",
+      "revision": "98be6496e333884734112dab2f1345f98b2f10c6ff020388d100ae4cb20de676"
+    },
+    {
+      "id": "book-b0gkc45w82",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists The Line Between Love and Rage.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GKC45W82",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find The Line Between Love and Rage?"
+      ],
+      "book_source": "book:B0GKC45W82",
+      "revision": "c903de85279264c1ea7ba52d20aa441efa5a021d57b109ec87ae0b130e114a94"
+    },
+    {
+      "id": "book-b0gk6268r2",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Galactic Revelation: Humanity’s Unpreparedness.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GK6268R2",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Galactic Revelation: Humanity’s Unpreparedness?"
+      ],
+      "book_source": "book:B0GK6268R2",
+      "revision": "639479cc6771ae6aeb3bf1c8894df5023508bf1fc1a861a2fbd874f082c05a6a"
+    },
+    {
+      "id": "book-b0ghcxlgxs",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists The Dreamer’s Deportation.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GHCXLGXS",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find The Dreamer’s Deportation?"
+      ],
+      "book_source": "book:B0GHCXLGXS",
+      "revision": "94bcf9705113ab12c8bbf1f23332f2510c059372d888e271d2918ee13f223c13"
+    },
+    {
+      "id": "book-b0gh2xrm1t",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Robert’s Sicilian Dream.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GH2XRM1T",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Robert’s Sicilian Dream?"
+      ],
+      "book_source": "book:B0GH2XRM1T",
+      "revision": "80736676c038e89c43952c1e4d5f4d36051a94b1f5434d28da69427f0da0d5dd"
+    },
+    {
+      "id": "book-b00h055mc4",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists The Dark Storm Inside Of Me.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B00H055MC4",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find The Dark Storm Inside Of Me?"
+      ],
+      "book_source": "book:B00H055MC4",
+      "revision": "42e134df7e48e9d56b3cc691ff601b630da6259ad4534bcee042f3e6e75641c9"
+    },
+    {
+      "id": "book-b00h68caa2",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Driving Into The Dark Storm.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B00H68CAA2",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Driving Into The Dark Storm?"
+      ],
+      "book_source": "book:B00H68CAA2",
+      "revision": "debe89c00e55101ae6e43203a1b3ff92396062f288ff06faddc7461e4d52a692"
+    },
+    {
+      "id": "book-b0f71vh3s2",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Microwave Motel Meals.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0F71VH3S2",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Microwave Motel Meals?"
+      ],
+      "book_source": "book:B0F71VH3S2",
+      "revision": "5e812231d16f2bd56a19a6b869b2881638ba0fd2a938ea8f1653a432c0c070e8"
+    },
+    {
+      "id": "book-b0ggy7n6sj",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Ghostline: The Continental Network.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GGY7N6SJ",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Ghostline: The Continental Network?"
+      ],
+      "book_source": "book:B0GGY7N6SJ",
+      "revision": "d154f3508d9b18845f788f2d14ee8fde3038d48a11f8838f02abf1aa52d5cddf"
+    },
+    {
+      "id": "book-b0gk4m39tp",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Casanova’s Vampire Embrace.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GK4M39TP",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Casanova’s Vampire Embrace?"
+      ],
+      "book_source": "book:B0GK4M39TP",
+      "revision": "b484c0c57ec6ecee840a5f461c69d0386a9ee5d9ad59042f2d77610e8432d5de"
+    },
+    {
+      "id": "book-b0f6mkg8zr",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists The Tommy Westphall Universe: A Connected World.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0F6MKG8ZR",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find The Tommy Westphall Universe: A Connected World?"
+      ],
+      "book_source": "book:B0F6MKG8ZR",
+      "revision": "f97c0a1a9a4563581e5c92b833911ca015831669ba158637c357b005c81a1e38"
+    },
+    {
+      "id": "book-b0gkchs6jq",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Sicily: A Rational Relocation for Neurodivergent Adults.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0GKCHS6JQ",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Sicily: A Rational Relocation for Neurodivergent Adults?"
+      ],
+      "book_source": "book:B0GKCHS6JQ",
+      "revision": "ac1768a71870cc221f964c5192a5f0b752db0280f87fdf4bdfda5540a8750486"
+    },
+    {
+      "id": "book-b004rz28u4",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Poetry Madhouse.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B004RZ28U4",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Poetry Madhouse?"
+      ],
+      "book_source": "book:B004RZ28U4",
+      "revision": "62bd01b9dc20e5778774fbde4639cbfe6014ca680dc2a019fb722522cee175c2"
+    },
+    {
+      "id": "book-b0f6nt2qpd",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Recipes for Life: A Cookbook.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0F6NT2QPD",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Recipes for Life: A Cookbook?"
+      ],
+      "book_source": "book:B0F6NT2QPD",
+      "revision": "96d81d7f834f25eb8ba21ef9fdcaeed602e52a207afff5e3cd70b3d7d5ae6628"
+    },
+    {
+      "id": "book-b0f7cl734b",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Bars Of Innocence.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0F7CL734B",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Bars Of Innocence?"
+      ],
+      "book_source": "book:B0F7CL734B",
+      "revision": "ed7371c5fb6ccd95b9a87789604c24381caadf5e1059474ef107cf4f7abe1f0e"
+    },
+    {
+      "id": "book-b0f6m9c56r",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists Cosplay Cuisine.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0F6M9C56R",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find Cosplay Cuisine?"
+      ],
+      "book_source": "book:B0F6M9C56R",
+      "revision": "e8561cb895d1b3e054704844ab0e613392b675d1f592214b111445ea98187d77"
+    },
+    {
+      "id": "book-b0cl2f9kkr",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Robert’s published catalogue lists A Life of Monsters and Hope: The Life of Robert McMurrer.",
+      "status": "published-catalogue-listing",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-09-07",
+      "date_basis": "Catalogue review date in the published notes; publication date not inferred",
+      "provenance": {
+        "source_locator": "book_catalogue entry book:B0CL2F9KKR",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Where can I find A Life of Monsters and Hope: The Life of Robert McMurrer?"
+      ],
+      "book_source": "book:B0CL2F9KKR",
+      "revision": "a3956613d8e8a1bdd1e9c738237a45ae343264c7ccbc1380eeca62c660ded49f"
+    },
+    {
+      "id": "book-description-b0gl88v288",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "The Path Less Traveled: Rebuilding after disruption and reconsidering conventional success.",
+      "status": "published-reviewed-description",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "book_catalogue book:B0GL88V288 summary",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What is The Path Less Traveled about?"
+      ],
+      "book_source": "book:B0GL88V288",
+      "revision": "c07b663d4defd46fb67dab0cd45a15b6b0b9d5019b6ab90e146b43da45ad4310"
+    },
+    {
+      "id": "book-description-b0ggzwpx8c",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "The Long Walk North: A teenager travels north after leaving an abusive home.",
+      "status": "published-reviewed-description",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "book_catalogue book:B0GGZWPX8C summary",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What is The Long Walk North about?"
+      ],
+      "book_source": "book:B0GGZWPX8C",
+      "revision": "312c3f4ce075cd1671a014bc2471431e457e5f147ca7620c1c1ccf1faac6ab66"
+    },
+    {
+      "id": "book-description-b0gl8fypx2",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Sci-Fi Seeds: Tech of Tomorrow: Science fiction’s influence on technological imagination.",
+      "status": "published-reviewed-description",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "book_catalogue book:B0GL8FYPX2 summary",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What is Sci-Fi Seeds: Tech of Tomorrow about?"
+      ],
+      "book_source": "book:B0GL8FYPX2",
+      "revision": "4bc0942ce564851e87af10593f437445ea4b176c2e70ac4aa1648e0ce687d0fa"
+    },
+    {
+      "id": "book-description-b00h68caa2",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Driving Into The Dark Storm: Short fiction combines personal drama with science-fiction ideas.",
+      "status": "published-reviewed-description",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "book_catalogue book:B00H68CAA2 summary",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What is Driving Into The Dark Storm about?"
+      ],
+      "book_source": "book:B00H68CAA2",
+      "revision": "eb1ce26aeab3f30ff6a1c4cd55f3ff6bbd6129144aa837625efd2cbb3a7f35d6"
+    },
+    {
+      "id": "book-description-b004rz28u4",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Poetry Madhouse: A poetry collection.",
+      "status": "published-reviewed-description",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "book_catalogue book:B004RZ28U4 summary",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What is Poetry Madhouse about?"
+      ],
+      "book_source": "book:B004RZ28U4",
+      "revision": "6e1e28d42fe7760429a734bb6500f29b8dfdce721c959a5918387e88934e2e31"
+    },
+    {
+      "id": "book-description-b0f6m9c56r",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "Cosplay Cuisine: Themed recipes connect cooking with fandom.",
+      "status": "published-reviewed-description",
+      "sources": [
+        "public-708870acab04"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": null,
+      "provenance": {
+        "source_locator": "book_catalogue book:B0F6M9C56R summary",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What is Cosplay Cuisine about?"
+      ],
+      "book_source": "book:B0F6M9C56R",
+      "revision": "6b70c0bc618152c7a841d9aaaee8ba6fdd4f9def3bf46ed017ad386b37266875"
+    },
+    {
+      "id": "poetry-print-edition",
+      "subject_ids": [
+        "books"
+      ],
+      "statement": "The bookseller lists a Poetry Madhouse paperback dated January 21, 2011, ISBN 9781456534325.",
+      "status": "public-bookseller-edition-metadata",
+      "sources": [
+        "poetry"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2011-01-21",
+      "date_basis": "This paperback edition only",
+      "provenance": {
+        "source_locator": "Edition table",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "When was the Poetry Madhouse paperback published?"
+      ],
+      "book_source": "book:B004RZ28U4",
+      "revision": "d7dd35b3c5eb4d85f4684ab9f3241d08a49ee2c394f828fe990c8dda20d06b74"
+    }
+  ],
+  "routes": [
+    {
+      "id": "ask-robert-born",
+      "subject_id": "robert",
+      "matches": [
+        [
+          "born",
+          "birth",
+          "birthday"
+        ]
+      ],
+      "fact_ids": [
+        "robert-born"
+      ],
+      "scope": "robert",
+      "intent": "specific"
+    },
+    {
+      "id": "ask-robert-base",
+      "subject_id": "robert",
+      "matches": [
+        [
+          "based",
+          "lives",
+          "live",
+          "located"
+        ]
+      ],
+      "fact_ids": [
+        "robert-base"
+      ],
+      "scope": "robert",
+      "intent": "specific"
+    },
+    {
+      "id": "ask-robert-school-class",
+      "subject_id": "robert",
+      "matches": [
+        [
+          "school",
+          "graduated",
+          "education"
+        ]
+      ],
+      "fact_ids": [
+        "robert-school-class"
+      ],
+      "scope": "robert",
+      "intent": "specific"
+    },
+    {
+      "id": "ask-robert-motivation",
+      "subject_id": "robert",
+      "matches": [
+        [
+          "why started",
+          "why did he start",
+          "why did robert start",
+          "motivation"
+        ]
+      ],
+      "fact_ids": [
+        "robert-motivation"
+      ],
+      "scope": "robert",
+      "intent": "specific"
+    },
+    {
+      "id": "ask-robert-first-background-job",
+      "subject_id": "robert",
+      "matches": [
+        [
+          "first acting job",
+          "first background job",
+          "first background acting job"
+        ]
+      ],
+      "fact_ids": [
+        "robert-first-background-job"
+      ],
+      "scope": "robert",
+      "intent": "specific"
+    },
+    {
+      "id": "ask-robert-themepark-work",
+      "subject_id": "robert",
+      "matches": [
+        [
+          "theme park",
+          "themepark",
+          "universal studios"
+        ]
+      ],
+      "fact_ids": [
+        "robert-themepark-work"
+      ],
+      "scope": "robert",
+      "intent": "specific"
+    },
+    {
+      "id": "production-293f69943cc7",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "Blood Tulip"
+        ]
+      ],
+      "fact_ids": [
+        "credit-blood-tulip"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "Blood Tulip",
+      "detail_fact_ids": [
+        "credit-blood-tulip"
+      ]
+    },
+    {
+      "id": "production-8024d3657954",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "Lunch with a Friend"
+        ]
+      ],
+      "fact_ids": [
+        "credit-lunch-john",
+        "lunch-director",
+        "lunch-writer",
+        "lunch-release"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "Lunch with a Friend",
+      "detail_fact_ids": [
+        "credit-lunch-john",
+        "lunch-director",
+        "lunch-writer",
+        "lunch-release"
+      ]
+    },
+    {
+      "id": "production-8e87100d76ea",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "This Girl Dazlyn"
+        ]
+      ],
+      "fact_ids": [
+        "credit-this-girl-dazlyn"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "This Girl Dazlyn",
+      "detail_fact_ids": [
+        "credit-this-girl-dazlyn"
+      ]
+    },
+    {
+      "id": "production-6b38ac0c87ee",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "CollegeHumor Originals"
+        ]
+      ],
+      "fact_ids": [
+        "credit-collegehumor"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "CollegeHumor Originals",
+      "detail_fact_ids": [
+        "credit-collegehumor"
+      ]
+    },
+    {
+      "id": "production-2956e99d0a7f",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "Director’s Cut"
+        ]
+      ],
+      "fact_ids": [
+        "credit-directors-cut"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "Director’s Cut",
+      "detail_fact_ids": [
+        "credit-directors-cut"
+      ]
+    },
+    {
+      "id": "production-1683aaed19c3",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "Truth or Dare"
+        ]
+      ],
+      "fact_ids": [
+        "credit-truth-or-dare"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "Truth or Dare",
+      "detail_fact_ids": [
+        "credit-truth-or-dare"
+      ]
+    },
+    {
+      "id": "production-ccce1499311d",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "Look at Me"
+        ]
+      ],
+      "fact_ids": [
+        "credit-look-at-me"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "Look at Me",
+      "detail_fact_ids": [
+        "credit-look-at-me"
+      ]
+    },
+    {
+      "id": "production-b130a829216e",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "Parks and Recreation"
+        ]
+      ],
+      "fact_ids": [
+        "credit-parks"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "Parks and Recreation",
+      "detail_fact_ids": [
+        "credit-parks"
+      ]
+    },
+    {
+      "id": "production-fe4874ff79f8",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "Barely Legal"
+        ]
+      ],
+      "fact_ids": [
+        "credit-barely-legal"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "Barely Legal",
+      "detail_fact_ids": [
+        "credit-barely-legal"
+      ]
+    },
+    {
+      "id": "production-69ba2a2b7ad8",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "Born Bad"
+        ]
+      ],
+      "fact_ids": [
+        "credit-born-bad"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "Born Bad",
+      "detail_fact_ids": [
+        "credit-born-bad"
+      ]
+    },
+    {
+      "id": "production-cb91968fab26",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "Glee"
+        ]
+      ],
+      "fact_ids": [
+        "credit-glee"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "Glee",
+      "detail_fact_ids": [
+        "credit-glee"
+      ]
+    },
+    {
+      "id": "production-b93d3bcecff5",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "Circle"
+        ]
+      ],
+      "fact_ids": [
+        "credit-circle"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "Circle",
+      "detail_fact_ids": [
+        "credit-circle"
+      ]
+    },
+    {
+      "id": "production-c4d312326812",
+      "subject_id": "entertainment",
+      "matches": [
+        [
+          "Yes Man"
+        ]
+      ],
+      "fact_ids": [
+        "credit-yes-man"
+      ],
+      "scope": "any",
+      "intent": "specific",
+      "credit_title": "Yes Man",
+      "detail_fact_ids": [
+        "credit-yes-man"
+      ]
+    }
+  ]
+}

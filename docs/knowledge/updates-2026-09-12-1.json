@@ -1,0 +1,705 @@
+{
+  "schema_version": 1,
+  "id": "updates",
+  "content_version": "2026-09-12.1",
+  "reviewed_on": "2026-09-12",
+  "sources": {
+    "creator-factual-test": {
+      "label": "TemporaryAI factual test · public video, July 25",
+      "url": "https://www.youtube.com/watch?v=5Nllo6oAfYA"
+    },
+    "creator-test-video": {
+      "label": "Synthetic expert · public test, July 25",
+      "url": "https://www.youtube.com/watch?v=rYuwe1dgAeI"
+    },
+    "creator-video": {
+      "label": "TemporaryAI Creator · public explainer, July 24",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw"
+    },
+    "cutbrief-live": {
+      "label": "CutBrief · public workspace",
+      "url": "https://cutbrief-workspace.rmcmurrer.chatgpt.site/"
+    },
+    "equipment": {
+      "label": "Current equipment & next needs",
+      "url": "progress.html#hardware"
+    },
+    "facebook": {
+      "label": "Robert’s professional Facebook",
+      "url": "https://www.facebook.com/rmcmurrer"
+    },
+    "hardware-email": {
+      "label": "Hardware or investment · rmcmurrer@kiralabs.org",
+      "url": "mailto:rmcmurrer@kiralabs.org?subject=Kira%20World%20hardware%20or%20investment"
+    },
+    "linkedin": {
+      "label": "Robert on LinkedIn",
+      "url": "https://www.linkedin.com/in/rmcmurrer/"
+    },
+    "memory-support": {
+      "label": "ASUS · memory support",
+      "url": "https://rog.asus.com/motherboards/rog-maximus/rog-maximus-z890-hero/helpdesk_qvl_memory/"
+    },
+    "progress": {
+      "label": "Kira World · interactive progress timeline",
+      "url": "progress.html"
+    },
+    "projects": {
+      "label": "Kira Labs · project notes",
+      "url": "projects.html"
+    },
+    "public-0a56605dc627": {
+      "label": "www.youtube.com",
+      "url": "https://www.youtube.com/watch?v=e3vaQFJ04Qo",
+      "publisher": "www.youtube.com",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-243b85fc7995": {
+      "label": "www.youtube.com",
+      "url": "https://www.youtube.com/watch?v=8vjcEBJTwbM",
+      "publisher": "www.youtube.com",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-07-23"
+    },
+    "public-79e307e77df0": {
+      "label": "www.youtube.com",
+      "url": "https://www.youtube.com/watch?v=nsfpHVfVfho",
+      "publisher": "www.youtube.com",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-80481a045627": {
+      "label": "www.youtube.com",
+      "url": "https://www.youtube.com/watch?v=UYsKn8lzhWs",
+      "publisher": "www.youtube.com",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-07-23"
+    },
+    "public-8b0332b22c4c": {
+      "label": "Kira Labs · public notes",
+      "url": "https://kiralabs.org/progress-data.json",
+      "publisher": "kiralabs.org",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-9ba75ace4d96": {
+      "label": "www.youtube.com",
+      "url": "https://www.youtube.com/watch?v=vNRTwMvkR3g",
+      "publisher": "www.youtube.com",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-c37805d0d16b": {
+      "label": "www.youtube.com",
+      "url": "https://www.youtube.com/watch?v=nj2ZcdfxSWI",
+      "publisher": "www.youtube.com",
+      "reviewed_on": "2026-09-08"
+    },
+    "public-e21bd2d57980": {
+      "label": "www.youtube.com",
+      "url": "https://www.youtube.com/watch?v=TLe7dJhj7kE",
+      "publisher": "www.youtube.com",
+      "reviewed_on": "2026-09-08",
+      "evidence_date": "2026-08-31"
+    },
+    "servers": {
+      "label": "Future shared worlds & servers",
+      "url": "progress.html#servers-next"
+    },
+    "world": {
+      "label": "Kira World · current public status",
+      "url": "index.html#reality"
+    },
+    "worldfacebook": {
+      "label": "Kira World on Facebook",
+      "url": "https://www.facebook.com/KiraWorldProject"
+    },
+    "shiftbrief": {
+      "label": "ShiftBrief · product and download",
+      "url": "projects.html#shiftbrief"
+    }
+  },
+  "topics": [
+    {
+      "id": "status",
+      "title": "Where things stand",
+      "label": "Status notes · September 12, 2026",
+      "terms": [
+        "latest",
+        "update",
+        "up to date",
+        "up-to-date",
+        "progress",
+        "current",
+        "ready",
+        "finished",
+        "release",
+        "released",
+        "available",
+        "download",
+        "buy",
+        "launch",
+        "try today",
+        "works today",
+        "working today",
+        "when can",
+        "when will"
+      ],
+      "answer": "ShiftBrief now has a free Windows desktop release and public source. It supports offline records, reviewed staffing drafts, business copies and complete backups; optional AI setup is separate. Kira World remains a private experimental project, Sarah Travel a private debug build, and the personal Video Studio remains under development. ClearTrail, Carry On and Kira Sequence Desk remain private owner-review prototypes in the published notes. CutBrief is retired; its earlier submission and workspace are historical, with paid generation still locked. No contest result or public Kira World launch is claimed.",
+      "sources": [
+        "shiftbrief-download",
+        "projects",
+        "world"
+      ],
+      "next": [
+        "What are the current project prototypes?",
+        "Tell me about Video Studio",
+        "How can I follow the work?"
+      ]
+    },
+    {
+      "id": "support",
+      "title": "Follow & support",
+      "label": "Independent development",
+      "terms": [
+        "support",
+        "donat",
+        "fund",
+        "help out",
+        "follow",
+        "updates page",
+        "social",
+        "facebook",
+        "linkedin",
+        "social media"
+      ],
+      "answer": "Follow Robert’s professional work on LinkedIn and Facebook, and follow the Kira World Facebook page for project updates. His Profiles button keeps all five links together, including IMDb and Amazon. Kira Labs also links to Robert’s Kira World GoFundMe for independent development support.",
+      "sources": [
+        "linkedin",
+        "facebook",
+        "worldfacebook"
+      ],
+      "next": [
+        "What is being developed?",
+        "How can I email Robert?"
+      ],
+      "coverage": {}
+    },
+    {
+      "id": "progress",
+      "title": "Kira World’s progress timeline",
+      "label": "Project notes · September 8, 2026",
+      "terms": [
+        "timeline",
+        "progress timeline",
+        "development timeline",
+        "milestones",
+        "progress page"
+      ],
+      "concept_names": [
+        "timeline",
+        "progress timeline",
+        "development timeline",
+        "milestones",
+        "progress page"
+      ],
+      "answer": "The interactive progress page brings together public development videos, working prototypes, current work and next goals. Choose a milestone or move the slider to read its story; the Completed, Working on and Next goals filters help separate those stages. Video dates are publication dates, while undated current items were reviewed September 8. The page also shows the workstation and ways to help.",
+      "followups": {
+        "details": {
+          "answer": "The journey includes public Kira World and TemporaryAI updates, spoken development tests, Studio demonstrations, the walkable Home World shell and conversation foundations. Current body and world integration work remains separate from the goals for Notebook Worlds, VR, shared servers and physical embodiment. Each selected card carries a short explanation, a relevant limit and source links."
+        },
+        "how": {
+          "answer": "Select a milestone in the constellation, use the arrow buttons or move the slider. The detail panel changes to that exact item. Filter the view to completed milestones, current work or next goals. On a small screen the milestones form a vertical list. Choose Watch video to load the selected YouTube player; it does not autoplay."
+        },
+        "status": {
+          "answer": "The timeline is a dated project journal, not a live runtime monitor. Completed marks a working prototype, published test or explanation; it does not mean the whole world is finished. Next goals have no promised dates or completion percentages."
+        },
+        "privacy": {
+          "answer": "The timeline loads its milestone notes and existing site images. A YouTube player is added only after you choose Watch video; opening it connects to YouTube. It is not a private resident conversation or a live view of Robert’s computer."
+        }
+      },
+      "sources": [
+        "progress"
+      ],
+      "next": [
+        "Show the equipment needs",
+        "Tell me about future servers",
+        "What are Notebook Worlds?"
+      ],
+      "coverage": {}
+    },
+    {
+      "id": "equipment",
+      "title": "The equipment behind Kira World",
+      "label": "Project notes · September 8, 2026",
+      "terms": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades"
+      ],
+      "concept_names": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades"
+      ],
+      "answer": "The workstation configuration checked September 8 is an Intel Core Ultra 9 285K with 24 cores, 32 GB DDR5 as 2 × 16 GB configured at 6000 MT/s, an RTX 5060 Ti with 16 GB VRAM, an ASUS ROG MAXIMUS Z890 HERO motherboard and a 2 TB drive. The first upgrade target is a compatible matched 64 GB memory kit; larger-VRAM and VR equipment are later priorities. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "followups": {
+        "details": {
+          "answer": "A local Studio motion test stopped at memory admission, making more system RAM the first engineering-headroom target. A matched 2 × 32 GB DDR5 kit would need checking against ASUS memory support and the current system. Later, measured workloads may justify 24–32 GB VRAM. VR equipment should follow a world prototype ready for device tests. No particular purchase is selected. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "how": {
+          "answer": "The next equipment choice should follow the actual workload and compatibility checks. Check the exact memory kit against ASUS support instead of assuming mixed modules work together. Benchmark heavier models before selecting a larger GPU, and test a ready world prototype before claiming headset support. Hardware adds capacity; it does not repair software defects. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "status": {
+          "answer": "The current checked configuration has 32 GB system RAM and 16 GB GPU memory. The 64 GB matched-kit target and later larger-VRAM, VR and server equipment are proposed needs, not completed purchases. These dated notes do not read live memory usage from the workstation. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "privacy": {
+          "answer": "The equipment section lists public configuration details, not serial numbers, private file paths or a live view of Robert’s machine. A hardware offer can be discussed directly with Robert; this guide does not arrange shipments or access anyone’s computer. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "technical": {
+          "answer": "The checked workstation uses an Intel Core Ultra 9 285K with 24 cores, 32 GB DDR5 as 2 × 16 GB at 6000 MT/s, an RTX 5060 Ti with 16 GB VRAM, an ASUS ROG MAXIMUS Z890 HERO and a 2 TB drive. The next RAM target is a matched 2 × 32 GB DDR5 kit, subject to exact compatibility checks. No GPU power-supply fit, headset compatibility or server specification is established here. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "cost": {
+          "answer": "No priced shopping list, selected purchase or investment return is promised. The equipment page explains tentative priorities and why they could help. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "voice": {
+          "answer": "No new voice-performance benchmark or voice-specific hardware purchase is established by these notes. Voice behavior and larger-model capacity still need testing on the selected setup. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "limits": {
+          "answer": "More RAM or VRAM can provide headroom but cannot guarantee a completed workflow, better acting, reliable software or headset compatibility. Exact parts and tests come before any purchase decision. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        }
+      },
+      "sources": [
+        "equipment",
+        "memory-support",
+        "hardware-email"
+      ],
+      "next": [
+        "Tell me more about equipment",
+        "Tell me about future servers",
+        "Show the progress timeline"
+      ],
+      "coverage": {}
+    },
+    {
+      "id": "servers",
+      "title": "Future servers & shared worlds",
+      "label": "Project notes · September 8, 2026",
+      "terms": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user"
+      ],
+      "concept_names": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user"
+      ],
+      "answer": "The longer-term goal is multiple synthetic people across multiple worlds, with people visiting through VR and responsive conversation. That will need shared world state and coordinated computing, voice and rendering. Low lag is a performance goal to measure, not a guarantee. No server count, price, user capacity or finished deployment is established. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "followups": {
+        "details": {
+          "answer": "Shared worlds would need to preserve who and what is present while conversations and activities happen at the same time. Distributed computing, consistent world state, recovery and the combined delays of voice, rendering and the network all matter. The right server capacity should come from actual multiuser and load tests, not an invented machine count. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "how": {
+          "answer": "The proposed direction is to coordinate computing across services while keeping shared world state consistent. Tests would need to measure concurrent people and visitors, recovery after interruption, and end-to-end latency. This describes the work required, not a deployed architecture already proven to support it. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "status": {
+          "answer": "Shared-server capacity for multiple populated worlds and VR visitors remains a future goal. The timeline does not claim a running public multiuser service, a supported user count or a low-latency result. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "privacy": {
+          "answer": "Shared worlds would need explicit decisions about access to people, conversations and world state. A completed server-specific privacy, retention and permission policy is not established in these notes. Local control remains a design preference rather than a guarantee about a future deployment. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "technical": {
+          "answer": "Exact server specifications, machine count and supported users are not yet established. Shared-state consistency and measured voice, render and network latency should guide the eventual design. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "cost": {
+          "answer": "There is no selected server package, price, capacity commitment or promised investment return. Server donations and investment conversations are welcome, with requirements to be discussed before equipment is sent. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "voice": {
+          "answer": "Concurrent voice conversations add both computing demand and delay to the shared-world design. End-to-end voice and rendering latency must be measured with the intended workload; no low-lag guarantee is claimed. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        },
+        "limits": {
+          "answer": "A public conversation test or a walkable apartment does not demonstrate many residents and visitors in concurrent worlds. Multiuser, load, recovery and latency tests remain necessary. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org."
+        }
+      },
+      "sources": [
+        "servers",
+        "equipment",
+        "hardware-email"
+      ],
+      "next": [
+        "What equipment is being used now?",
+        "Tell me about VR",
+        "Show the progress timeline"
+      ],
+      "coverage": {
+        "overview": [
+          "shared-servers-goal",
+          "low-lag-goal"
+        ]
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "history-UYsKn8lzhWs",
+      "subject_ids": [
+        "progress"
+      ],
+      "statement": "2026-07-23 publication: Robert published “Kira World Update: What Works, What Is Still Blocked & What Comes Next”. A public update reports the then-current continuity, voice, Home World and body work, including blocked blinking and unfinished embodiment. A historical progress report, not current certification of every capability. Its Studio illustrations are labeled concept art.",
+      "status": "published-progress-report",
+      "sources": [
+        "public-80481a045627"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-23",
+      "date_basis": "YouTube public publishDate; not independently established recording or implementation date",
+      "provenance": {
+        "source_locator": "YouTube video title and microformat publication timestamp",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What does the 2026-07-23 Kira World update show?"
+      ],
+      "revision": "e98e03d9c2500c937ac9e27cc98a79a9a02c74f5ef450143ff54dff00e2a1f9f"
+    },
+    {
+      "id": "history-8vjcEBJTwbM",
+      "subject_ids": [
+        "progress"
+      ],
+      "statement": "2026-07-23 publication: Robert published “Inside Kira Labs Video Studio: How Kira World Will Create Its Own Videos”. A public explainer describes the preserved local v1.9 production workflow and a separately staged next version. The description distinguishes the working baseline from future interface concepts; it does not prove all later functionality was finished.",
+      "status": "published-walkthrough",
+      "sources": [
+        "public-243b85fc7995"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-23",
+      "date_basis": "YouTube public publishDate; not independently established recording or implementation date",
+      "provenance": {
+        "source_locator": "YouTube video title and microformat publication timestamp",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What does the 2026-07-23 Video Studio update show?"
+      ],
+      "revision": "9c2ab81e5661f9959c649c4fb75ab417485dc996bbc5285a3961fe668f980e89"
+    },
+    {
+      "id": "history-h5RQiAlBVYw",
+      "subject_ids": [
+        "progress"
+      ],
+      "statement": "2026-07-24 publication: Robert published “Inside Kira World’s TemporaryAI Creator: From Sources to a Synthetic Person”. A public feature explains a source-based creation workflow: creation type, historical date, appearance references, voice evidence and intended world placement. This is an explanation of the workflow; its metadata alone does not demonstrate a finished animated resident or completed world placement.",
+      "status": "published-concept-explainer",
+      "sources": [
+        "creator-video"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-24",
+      "date_basis": "YouTube public publishDate; not independently established recording or implementation date",
+      "provenance": {
+        "source_locator": "YouTube video title and microformat publication timestamp",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What does the 2026-07-24 Temporary Creator update show?"
+      ],
+      "revision": "03bb772846a5b2c676b30b3b1de7037a4253faf15a0e0ddc700a48ca4e50cc3a"
+    },
+    {
+      "id": "history-e3vaQFJ04Qo",
+      "subject_ids": [
+        "progress"
+      ],
+      "statement": "2026-07-24 publication: Robert published “Kira World: A Personal Expert Who Learns How You Learn”. A public concept explores a continuing tutor who adapts explanations and conversation while retaining identity and permissioned memory. The description explicitly calls this a concept. It does not establish a validated learning product or measured educational outcomes.",
+      "status": "published-concept-explainer",
+      "sources": [
+        "public-0a56605dc627"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-24",
+      "date_basis": "YouTube public publishDate; not independently established recording or implementation date",
+      "provenance": {
+        "source_locator": "YouTube video title and microformat publication timestamp",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What does the 2026-07-24 Minds and learning update show?"
+      ],
+      "revision": "fcf9c39019353b9bdfca12632b3582cdaee90fa3178f0d54e4d962e59ba098c5"
+    },
+    {
+      "id": "history-vNRTwMvkR3g",
+      "subject_ids": [
+        "progress"
+      ],
+      "statement": "2026-07-24 publication: Robert published “I Interviewed a Synthetic Peter Parker After No Way Home | Kira World TemporaryAI Test”. The public description reports Robert asking spoken questions and an individualized test voice answering as a synthetic interpretation of Peter Parker. It retains an internal-language failure and unconfirmed continuation details; the description says no finished avatar or physical location. Unofficial interpretation, not the actor or an official voice.",
+      "status": "published-development-test",
+      "sources": [
+        "public-9ba75ace4d96"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-24",
+      "date_basis": "YouTube public publishDate; not independently established recording or implementation date",
+      "provenance": {
+        "source_locator": "YouTube video title and microformat publication timestamp",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What does the 2026-07-24 Temporary Creator update show?"
+      ],
+      "revision": "c51322e2d03cfb95aec1eaea66e800589623eeea8582903dabd1a5f666c88c96"
+    },
+    {
+      "id": "history-nj2ZcdfxSWI",
+      "subject_ids": [
+        "progress"
+      ],
+      "statement": "2026-07-24 publication: Robert published “I Interviewed an H. H. Holmes Historical TemporaryAI | What Worked and What Failed”. The public description reports a spoken interview with an 1894-set synthetic interpretation of H. H. Holmes. The video description identifies a chronology error, disputed history and evasive answers. Generic Windows speech is explicitly not an authentic historical voice.",
+      "status": "published-development-test",
+      "sources": [
+        "public-c37805d0d16b"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-24",
+      "date_basis": "YouTube public publishDate; not independently established recording or implementation date",
+      "provenance": {
+        "source_locator": "YouTube video title and microformat publication timestamp",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What does the 2026-07-24 Temporary Creator update show?"
+      ],
+      "revision": "4f346ce57711a22030040b37755524199d096a87817aa59e2698340de040fcbf"
+    },
+    {
+      "id": "history-rYuwe1dgAeI",
+      "subject_ids": [
+        "progress"
+      ],
+      "statement": "2026-07-25 publication: Robert published “I Tested a Synthetic Robotics Engineer | What Worked, Failed & Was Missing”. The public description reports a synthetic expert discussing robotics and producing a small OpenSCAD concept, with a spoken interface. It also reports false saved-file claims and a file-type error; live research was not verified and an individual voice/body was unfinished. This is expert conversation, not a working robot.",
+      "status": "published-development-test",
+      "sources": [
+        "creator-test-video"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-25",
+      "date_basis": "YouTube public publishDate; not independently established recording or implementation date",
+      "provenance": {
+        "source_locator": "YouTube video title and microformat publication timestamp",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What does the 2026-07-25 Temporary Creator and robotics update show?"
+      ],
+      "revision": "95ae1e3cd66601058ceab8e6e36d3bfe846d08dcc6d28f098614d31b6723c1f6"
+    },
+    {
+      "id": "history-5Nllo6oAfYA",
+      "subject_ids": [
+        "progress"
+      ],
+      "statement": "2026-07-25 publication: Robert published “I Tested a Temporary Marinette AI — Her Canon Went Completely Off the Rails”. The public description reports spoken questions and a generated test voice, with basic identity and interests followed by detailed factual testing. The description identifies invented canon, confused abilities and internal research language. It is an unofficial development test, not evidence of canon reliability or a completed resident.",
+      "status": "published-development-test",
+      "sources": [
+        "creator-factual-test"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-25",
+      "date_basis": "YouTube public publishDate; not independently established recording or implementation date",
+      "provenance": {
+        "source_locator": "YouTube video title and microformat publication timestamp",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What does the 2026-07-25 Temporary Creator update show?"
+      ],
+      "revision": "8873c10e25a3d82eaca3063213069e583361c325643da6591d16160d6c2657b2"
+    },
+    {
+      "id": "history-nsfpHVfVfho",
+      "subject_ids": [
+        "progress"
+      ],
+      "statement": "2026-07-26 publication: Robert published “How to Use Kira Labs Video Studio | From Idea to Finished Video”. The public description presents a Moon-phase workflow from project setup through a package for owner review, including revisions and source audio. The title is not proof of current general filmmaking capability. Metadata duration is 157 seconds while description chapter labels extend beyond six minutes; do not use those chapter offsets without inspecting the video. It states no automatic publishing.",
+      "status": "published-walkthrough",
+      "sources": [
+        "public-79e307e77df0"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-07-26",
+      "date_basis": "YouTube public publishDate; not independently established recording or implementation date",
+      "provenance": {
+        "source_locator": "YouTube video title and microformat publication timestamp",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What does the 2026-07-26 Video Studio update show?"
+      ],
+      "revision": "0a160d48798571d6631ae98b27a061b352cd4f55b49d3812cd31584ac1d91de9"
+    },
+    {
+      "id": "history-TLe7dJhj7kE",
+      "subject_ids": [
+        "progress"
+      ],
+      "statement": "2026-08-31 publication: Robert published “Video Studio Production Director | All Things Agentic Hackathon”. The public description presents an inspectable production-plan, storyboard, narrated-pitch and downloadable-package workflow for an All Things Agentic Hackathon entry. This is a separate cloud-oriented Production Director demo, not evidence that local Studio can generate complete acted films. Current availability of the linked app was not tested.",
+      "status": "published-demo",
+      "sources": [
+        "public-e21bd2d57980"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": "2026-08-31",
+      "date_basis": "YouTube public publishDate; not independently established recording or implementation date",
+      "provenance": {
+        "source_locator": "YouTube video title and microformat publication timestamp",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What does the 2026-08-31 Production Director update show?"
+      ],
+      "revision": "695374f842cfd5bd8e6eccd5a1a4d5e2f6d3d9adb2f3ee0ea514b5b098bed4b6"
+    },
+    {
+      "id": "shared-servers-goal",
+      "subject_ids": [
+        "servers"
+      ],
+      "statement": "The published progress notes propose multiple synthetic people and visitors across shared worlds.",
+      "status": "future-goal",
+      "sources": [
+        "public-8b0332b22c4c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": "Notes reviewed September8",
+      "provenance": {
+        "source_locator": "milestones / servers-next",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "What are the future server plans?"
+      ],
+      "revision": "a8bbc620eb609e1b350ac7c964de9a7c3df09f812f099fa15be0e557dd05e65f"
+    },
+    {
+      "id": "low-lag-goal",
+      "subject_ids": [
+        "servers"
+      ],
+      "statement": "The shared-server notes treat low lag as a target for future measured workload tests.",
+      "status": "unmeasured-performance-goal",
+      "sources": [
+        "public-8b0332b22c4c"
+      ],
+      "reviewed_on": "2026-09-08",
+      "intents": [
+        "details"
+      ],
+      "available_date": null,
+      "date_basis": "Notes reviewed September8",
+      "provenance": {
+        "source_locator": "milestones / servers-next",
+        "access": "public-page-or-static-file",
+        "form": "paraphrase"
+      },
+      "questions": [
+        "Will shared worlds be low lag?"
+      ],
+      "revision": "30a0f08e7655ce071b9df78608cda3028c88f0937fb2235a96489641bb82fbac"
+    }
+  ],
+  "routes": [],
+  "updates": [
+    {
+      "id": "public-packs-first-release",
+      "published_on": "2026-09-08",
+      "content_version": "2026-09-08.1",
+      "affected_topics": [
+        "robert",
+        "entertainment",
+        "world",
+        "avatar-bodies",
+        "world-builder",
+        "progress"
+      ],
+      "summary": "First source-labelled public packs: selected biography and credits, Kira World development evidence, new owner proposals, and follow-up fact history. Publication dates are distinguished from implementation dates."
+    },
+    {
+      "id": "shiftbrief-desktop-projects-pack",
+      "published_on": "2026-09-12",
+      "content_version": "2026-09-12.1",
+      "affected_topics": [
+        "shiftbrief",
+        "prototypes",
+        "status",
+        "cutbrief"
+      ],
+      "summary": "Added a separate projects pack and current ShiftBrief Windows installation, offline records, optional AI, business copy/backup and reviewed departure coverage notes. CutBrief is marked retired; unrelated dated Kira World and Robert facts are retained."
+    }
+  ]
+}

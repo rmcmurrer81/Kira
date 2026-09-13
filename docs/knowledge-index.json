@@ -1,23 +1,28 @@
 {
   "schema_version": 1,
-  "content_version": "2026-09-08.1",
-  "reviewed_on": "2026-09-08",
-  "base_sha256": "67b8957f95a9d08e22faefd8cc3fe040b7091b6018645a9bed5b208687822b32",
+  "content_version": "2026-09-12.1",
+  "reviewed_on": "2026-09-12",
+  "base_sha256": "f79498c0fb57089d80854a82a5a8b9cae4c07fc4274f550086daa2be2d7f8da1",
   "packs": [
     {
       "id": "robert",
-      "path": "knowledge/robert-2026-09-08-1.json",
-      "sha256": "9e92a85edeb805eceff628aad576f4c55faff5e47ae50f2f8b4b438d001f293b"
+      "path": "knowledge/robert-2026-09-12-1.json",
+      "sha256": "f01b30c01f403078572dbc997d31c343998048e124bee79252d035d3af1a5d5f"
     },
     {
       "id": "kira-world",
-      "path": "knowledge/kira-world-2026-09-08-1.json",
-      "sha256": "8f0f9b9839780a7a49b8ad0efeedd5339fd15d07a57f19d788d217563fab88ed"
+      "path": "knowledge/kira-world-2026-09-12-1.json",
+      "sha256": "dd737d39da152c2522b5a8369d6d23945dd763b8c4e80645724b4f5f934a1b89"
     },
     {
       "id": "updates",
-      "path": "knowledge/updates-2026-09-08-1.json",
-      "sha256": "bebb715a2ff9fc4f6713988a4e793ea02e9704ae80aa7d4d42d4ad54c7bef85e"
+      "path": "knowledge/updates-2026-09-12-1.json",
+      "sha256": "71f021a5af33a44724e1a4fbcf17027d1cb42a25a88318366949286f16beb983"
+    },
+    {
+      "id": "projects",
+      "path": "knowledge/projects-2026-09-12-1.json",
+      "sha256": "267a594a6a436145d7d8d5c76b69c8eca8fea04f2376da4497a2454706935a3a"
     }
   ],
   "notes_path": "knowledge.html"

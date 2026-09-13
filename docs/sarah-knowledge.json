@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-08",
+  "updated_at": "2026-09-12",
   "owner": {
     "name": "Robert McMurrer",
     "email": "rmcmurrer@kiralabs.org"
@@ -175,7 +175,7 @@
       "url": "projects.html#cutbrief"
     },
     "shiftbrief": {
-      "label": "ShiftBrief · dated prototype notes",
+      "label": "ShiftBrief · product and download",
       "url": "projects.html#shiftbrief"
     },
     "cleartrail": {
@@ -229,6 +229,18 @@
     "servers": {
       "label": "Future shared worlds & servers",
       "url": "progress.html#servers-next"
+    },
+    "shiftbrief-source": {
+      "label": "ShiftBrief · source and instructions",
+      "url": "https://github.com/rmcmurrer81/shiftbrief"
+    },
+    "shiftbrief-download": {
+      "label": "Download ShiftBrief 0.1.0 for Windows",
+      "url": "https://github.com/rmcmurrer81/shiftbrief/releases/download/v0.1.0/ShiftBrief-Setup-0.1.0.exe"
+    },
+    "shiftbrief-release": {
+      "label": "ShiftBrief 0.1.0 · release notes",
+      "url": "https://github.com/rmcmurrer81/shiftbrief/releases/tag/v0.1.0"
     }
   },
   "topics": [
@@ -345,7 +357,7 @@
     {
       "id": "status",
       "title": "Where things stand",
-      "label": "Status notes · September 8, 2026",
+      "label": "Status notes · September 12, 2026",
       "terms": [
         "latest",
         "update",
@@ -367,9 +379,9 @@
         "when can",
         "when will"
       ],
-      "answer": "Kira World remains a private experimental project. Local conversation, identity, memory and voice prototypes exist; the complete 3D experience is still being developed. Sarah Travel is a private debug build. Video Studio has a preserved local production pipeline, with newer conversation-led work still under development. No public launch date is confirmed in these notes. Robert reports CutBrief submitted, with an approved public workspace link. ShiftBrief, ClearTrail, Carry On and Kira Sequence Desk remain described here as private owner-review prototypes. Paid CutBrief generation stays locked; no contest result is claimed.",
+      "answer": "ShiftBrief now has a free Windows desktop release and public source. It supports offline records, reviewed staffing drafts, business copies and complete backups; optional AI setup is separate. Kira World remains a private experimental project, Sarah Travel a private debug build, and the personal Video Studio remains under development. ClearTrail, Carry On and Kira Sequence Desk remain private owner-review prototypes in the published notes. CutBrief is retired; its earlier submission and workspace are historical, with paid generation still locked. No contest result or public Kira World launch is claimed.",
       "sources": [
-        "cutbrief-live",
+        "shiftbrief-download",
         "projects",
         "world"
       ],
@@ -773,7 +785,7 @@
     {
       "id": "cutbrief",
       "title": "CutBrief",
-      "label": "Submitted prototype · public workspace · September 8, 2026",
+      "label": "Retired prototype · historical notes",
       "terms": [
         "cutbrief",
         "cut brief",
@@ -784,9 +796,8 @@
         "cut brief",
         "cut-brief"
       ],
-      "answer": "CutBrief helps turn a video idea into an editable shot plan, with actor and location references, saved takes, trimming, captions and stitched landscape, vertical and square exports. It supports business updates, tutorials, travel, family and social videos. The tested free workflow uses your supplied media and written planning; it needs no paid generation credits. Appearance references remain separate from opening frames. A composed-scene review path is prepared, but paid scene and video generation are locked pending owner review. No successful hosted generation or finished automatic movie workflow is claimed. Robert reports that CutBrief has been submitted, and its approved public workspace link is now available below. This does not establish a contest result or unlock paid generation.",
+      "answer": "CutBrief is retired. Its historical supplied-media prototype combined editable shot plans, actor and location references, trimming, captions and stitched exports. Robert previously reported a submission, but no contest result is claimed. Earlier public workspace links are historical, not a current supported download. Paid scene and video generation remain locked. It is separate from the personal Video Studio.",
       "sources": [
-        "cutbrief-live",
         "cutbrief"
       ],
       "next": [
@@ -796,20 +807,28 @@
       ],
       "followups": {
         "details": {
-          "answer": "CutBrief’s supplied-media workflow connects an editable shot plan to actor and location references, takes, trimming, captions and stitched exports in landscape, vertical or square formats. Appearance references remain separate from opening frames. A composed-scene review path is prepared, but paid scene and video generation remain locked pending owner review."
+          "answer": "The retired CutBrief prototype connected a written shot plan to supplied media, references, trimming, captions and stitched exports. These are historical prototype notes, not an actively supported release. Paid generation remains locked.",
+          "sources": [
+            "cutbrief"
+          ]
         },
         "how": {
-          "answer": "Start from a video idea and written shot plan, add your own media and references, then review takes, timing, captions and the assembled result. The tested free path uses supplied media and written planning. It is not evidence that a hosted generator can automatically film an entire movie."
+          "answer": "Historically, CutBrief used a written shot plan and supplied media, followed by human review of takes, timing, captions and the assembled result. CutBrief is now retired; these notes are not current setup instructions.",
+          "sources": [
+            "cutbrief"
+          ]
         },
         "status": {
-          "answer": "Robert reports that CutBrief has been submitted. The approved public workspace is linked below. This supersedes the older note saying no public access link was announced. Paid generation remains locked; submission is not a claim of a contest result.",
+          "answer": "CutBrief is retired. Its historical supplied-media prototype combined editable shot plans, actor and location references, trimming, captions and stitched exports. Robert previously reported a submission, but no contest result is claimed. Earlier public workspace links are historical, not a current supported download. Paid scene and video generation remain locked. It is separate from the personal Video Studio.",
           "sources": [
-            "cutbrief-live",
             "cutbrief"
           ]
         },
         "cost": {
-          "answer": "The tested written-planning and supplied-media workflow needs no paid generation credits. Paid scene and video generation remain locked pending owner review. Publishing the workspace and submitting it do not unlock that route."
+          "answer": "CutBrief is retired. The historical supplied-media path needed no paid generation credits, but paid scene and video generation remain locked.",
+          "sources": [
+            "cutbrief"
+          ]
         },
         "privacy": {
           "answer": "The available CutBrief notes do not establish a complete policy for uploaded-media retention or sharing. A public workspace link is not a privacy guarantee. Check the workspace’s current information before supplying sensitive material."
@@ -818,14 +837,17 @@
           "answer": "CutBrief’s supplied-media workflow can use your own media in an assembled export. The reviewed notes do not establish a released automatic voice or lip-sync generation service. The Sarah read-aloud voice on this website is separate."
         },
         "limits": {
-          "answer": "A public submitted prototype is available, but paid scene/video generation stays locked. Neither successful hosted generation nor a finished automatic movie workflow is claimed."
+          "answer": "CutBrief is retired. Its historical tests do not establish a supported current service, successful hosted generation or an automatic finished-movie workflow. Paid generation remains locked.",
+          "sources": [
+            "cutbrief"
+          ]
         }
       }
     },
     {
       "id": "shiftbrief",
       "title": "ShiftBrief",
-      "label": "Prototype notes · September 7, 2026",
+      "label": "Free Windows release · reviewed September 12, 2026",
       "terms": [
         "shiftbrief",
         "shift brief",
@@ -836,15 +858,173 @@
         "shift brief",
         "shift-brief"
       ],
-      "answer": "ShiftBrief is a team-planning desk for stores, offices and other teams. It records employee availability, opening hours and staffing needs, then proposes a week for review. Coverage displays, lunch choices, sick-call replacement options and dated history use the saved team facts. Accepting a reviewed proposal saves it; asking does not contact anyone or claim a replacement agreed to work. Source notes and cited handoffs remain available. The standard written Sarah workflow is a bounded planner, with no model, API key or usage credits required. Its no-install browser prototype is in private owner review. It is not a payroll system, labor-law assessment or public released service.",
+      "answer": "ShiftBrief is a free Windows business workspace for small teams. It brings employee availability, opening hours, schedules, completed-work records and source notes into one place. Sarah can answer from exact saved records and prepare staffing or coverage options for human review. Records · offline needs no AI model or account. The Windows installer includes the runtime; optional AI setup is separate. Start with a blank business or explicitly load the fictional eight-person demo.",
       "sources": [
-        "shiftbrief"
+        "shiftbrief",
+        "shiftbrief-source",
+        "shiftbrief-download"
       ],
       "next": [
-        "Does ShiftBrief contact employees?",
-        "What does Carry On organize?",
-        "What is being tested now?"
-      ]
+        "How do I install ShiftBrief?",
+        "How do I save and move my business?",
+        "What happens when an employee quits?"
+      ],
+      "followups": {
+        "status": {
+          "answer": "Download the free ShiftBrief 0.1.0 Windows installer, run it and follow the setup prompts. The installer includes the Python runtime and app dependencies, so no separate Python setup is needed. A desktop shortcut is optional. Open ShiftBrief to use its local browser interface. Uninstalling the app retains saved business data. The public source checkout is also available; its manual Python setup is separate from the installer.",
+          "sources": [
+            "shiftbrief-download",
+            "shiftbrief-release",
+            "shiftbrief-source"
+          ]
+        },
+        "install": {
+          "answer": "Download the free ShiftBrief 0.1.0 Windows installer, run it and follow the setup prompts. The installer includes the Python runtime and app dependencies, so no separate Python setup is needed. A desktop shortcut is optional. Open ShiftBrief to use its local browser interface. Uninstalling the app retains saved business data. The public source checkout is also available; its manual Python setup is separate from the installer.",
+          "sources": [
+            "shiftbrief-download",
+            "shiftbrief-release",
+            "shiftbrief-source"
+          ]
+        },
+        "cost": {
+          "answer": "ShiftBrief is free to download and use. Records · offline requires no account, model or usage credits. Optional cloud AI uses your own provider access and may cost money; optional local AI needs a separately installed model.",
+          "sources": [
+            "shiftbrief-source",
+            "shiftbrief-download"
+          ]
+        },
+        "first_run": {
+          "answer": "A first-time workspace starts with a blank business. You can create your own business, choose Load saved business, restore a complete backup from another computer, or explicitly Load demo. The optional Maple Street example is fictional: eight invented employees and sample records. It is not loaded automatically. Keep demo work separate from your own business and select the business you intend to edit.",
+          "sources": [
+            "shiftbrief",
+            "shiftbrief-source"
+          ]
+        },
+        "save": {
+          "answer": "Use Save business copy to download the selected business as a .shiftbrief.json file. On another computer, choose Load saved business to add it without removing businesses already there. The copy includes employees and history, availability, operating settings, planned schedules and recorded work. It excludes documents and conversations; use the complete backup for those.\n\nUse Back up all businesses for a complete .shiftbrief-workspace.json backup, including all businesses, documents and extracted revisions, handoffs and conversations. On the other computer choose Restore backup from previous computer, review the summary and confirm. Restore replaces that computer’s workspace after saving a backup of its previous state. Linked external documents stay disabled until you choose their paths again. Copy external original files separately; the backup does not include the app, models or credentials.",
+          "sources": [
+            "shiftbrief-source",
+            "shiftbrief"
+          ]
+        },
+        "how": {
+          "answer": "In Records · offline, Sarah uses supported questions and saved-record tools, not a general language model. You can prepare employee and availability forms, inspect planned and completed work, review weekly schedules, lunch and sick-call options, and find source-backed notes. Draft proposals require review and acceptance before they become saved schedules. Unknown availability is not invented, and asking a question does not send a message to employees.\n\nShiftBrief keeps employee records, dated availability, business hours, saved schedules and recorded work together. Sarah helps answer exact-record questions, prepare staffing drafts and inspect uncovered time, so you can compare options without reconstructing the facts from scattered notes. Its saved revisions and review steps make it easier to see what was proposed and what you accepted. It does not promise a particular time saving or staffing outcome.",
+          "sources": [
+            "shiftbrief-source",
+            "shiftbrief"
+          ]
+        },
+        "benefits": {
+          "answer": "ShiftBrief keeps employee records, dated availability, business hours, saved schedules and recorded work together. Sarah helps answer exact-record questions, prepare staffing drafts and inspect uncovered time, so you can compare options without reconstructing the facts from scattered notes. Its saved revisions and review steps make it easier to see what was proposed and what you accepted. It does not promise a particular time saving or staffing outcome.",
+          "sources": [
+            "shiftbrief",
+            "shiftbrief-source"
+          ]
+        },
+        "technical": {
+          "answer": "Records · offline works without an installed AI model, account, API key or usage credits. Optional AI · local Ollama uses a separately installed and configured local model; no model weights are bundled. Optional AI · cloud Bedrock requires your own configured AWS access and can incur provider charges. Cloud use sends the question, recent conversation and selected saved facts to that provider. Choosing an AI mode does not authorize schedule changes or employee contact.",
+          "sources": [
+            "shiftbrief-source"
+          ]
+        },
+        "ai": {
+          "answer": "Records · offline works without an installed AI model, account, API key or usage credits. Optional AI · local Ollama uses a separately installed and configured local model; no model weights are bundled. Optional AI · cloud Bedrock requires your own configured AWS access and can incur provider charges. Cloud use sends the question, recent conversation and selected saved facts to that provider. Choosing an AI mode does not authorize schedule changes or employee contact.",
+          "sources": [
+            "shiftbrief-source"
+          ]
+        },
+        "departures": {
+          "answer": "If you report an already-decided departure, such as “I fired Morgan Stone” or “Morgan Stone quit,” Sarah opens an employment-ending review. You enter or review the first unavailable date; the chat message alone does not change it. Preview remaining shifts reads saved schedules without saving the departure. After you explicitly record the date, the coverage review totals remaining saved shifts and net planned hours and suggests eligible off-schedule people or adjacent early-start/late-finish options. It checks saved qualifications, availability, time off, overlap, employment dates and weekly restrictions. These are independent alternatives for your review, not a combined reassignment plan or confirmation that anyone agreed. Earlier history stays intact, and Sarah does not decide whom to fire.",
+          "sources": [
+            "shiftbrief-source",
+            "shiftbrief"
+          ]
+        },
+        "privacy": {
+          "answer": "The installed app saves its workspace on your computer. Records · offline uses local saved records. Business copies and complete backups are files you choose to share or move; keep them somewhere you trust. Optional cloud AI sends selected context to the configured provider. The website guide is separate: it has no access to your installed businesses and does not send this chat to Robert.",
+          "sources": [
+            "shiftbrief-source",
+            "shiftbrief"
+          ]
+        },
+        "details": {
+          "answer": "In Records · offline, Sarah uses supported questions and saved-record tools, not a general language model. You can prepare employee and availability forms, inspect planned and completed work, review weekly schedules, lunch and sick-call options, and find source-backed notes. Draft proposals require review and acceptance before they become saved schedules. Unknown availability is not invented, and asking a question does not send a message to employees.\n\nA first-time workspace starts with a blank business. You can create your own business, choose Load saved business, restore a complete backup from another computer, or explicitly Load demo. The optional Maple Street example is fictional: eight invented employees and sample records. It is not loaded automatically. Keep demo work separate from your own business and select the business you intend to edit.",
+          "sources": [
+            "shiftbrief-source",
+            "shiftbrief"
+          ]
+        },
+        "voice": {
+          "answer": "The website’s Voice on button uses browser or device read-aloud. That is separate from ShiftBrief’s text workflow. The Windows installer does not include a personal voice model. Records · offline works through text without voice setup.",
+          "sources": [
+            "shiftbrief-source",
+            "shiftbrief"
+          ]
+        },
+        "limits": {
+          "answer": "ShiftBrief is an early desktop release. Coverage options depend on the dates, availability, qualifications and restrictions you saved; missing records are not guessed. Planned hours are not proof of attendance or payroll. It is not payroll software or a labor-law assessment, and it does not contact employees, choose whom to fire or automatically assign replacement shifts. Website Sarah only explains these published notes and cannot open or change your desktop businesses.",
+          "sources": [
+            "shiftbrief-source",
+            "shiftbrief"
+          ]
+        }
+      },
+      "coverage": {
+        "how": [
+          "shiftbrief-records"
+        ],
+        "save": [
+          "shiftbrief-business-copy",
+          "shiftbrief-workspace-backup"
+        ],
+        "limits": [
+          "shiftbrief-limits"
+        ],
+        "benefits": [
+          "shiftbrief-benefits"
+        ],
+        "ai": [
+          "shiftbrief-optional-ai"
+        ],
+        "departures": [
+          "shiftbrief-departures"
+        ],
+        "privacy": [
+          "shiftbrief-privacy"
+        ],
+        "cost": [
+          "shiftbrief-cost"
+        ],
+        "overview": [
+          "shiftbrief-overview"
+        ],
+        "install": [
+          "shiftbrief-install"
+        ],
+        "first_run": [
+          "shiftbrief-first-run"
+        ],
+        "status": [
+          "shiftbrief-install"
+        ],
+        "technical": [
+          "shiftbrief-optional-ai"
+        ],
+        "details": [
+          "shiftbrief-overview",
+          "shiftbrief-benefits",
+          "shiftbrief-install",
+          "shiftbrief-cost",
+          "shiftbrief-records",
+          "shiftbrief-first-run",
+          "shiftbrief-business-copy",
+          "shiftbrief-workspace-backup",
+          "shiftbrief-optional-ai",
+          "shiftbrief-departures",
+          "shiftbrief-limits",
+          "shiftbrief-privacy"
+        ]
+      }
     },
     {
       "id": "cleartrail",
@@ -924,8 +1104,8 @@
     },
     {
       "id": "prototypes",
-      "title": "Current project prototypes",
-      "label": "Private owner review · September 7, 2026",
+      "title": "Projects beyond Kira World",
+      "label": "Project notes · September 12, 2026",
       "terms": [
         "prototypes",
         "hackathons",
@@ -939,10 +1119,11 @@
         "what is being tested",
         "broader projects"
       ],
-      "answer": "Five current prototypes explore practical work beyond entertainment: CutBrief plans and assembles supplied video; ShiftBrief organizes staffing; ClearTrail keeps decision evidence; Carry On tracks tasks and readiness; and Kira Sequence Desk prepares timed, source-linked media plans. Their free written browser workflows have engineering checks. Robert reports that CutBrief has been submitted, and its approved public workspace is available below. The other four remain described here as private owner-review prototypes. The browser editions need no preinstalled model or API key. No contest result is claimed. Paid CutBrief generation stays locked. The full personal Video Studio is a separate local project still under development.",
+      "answer": "ShiftBrief is the free Windows business and staffing workspace, with a public source repository and installer. ClearTrail keeps evidence behind decisions, Carry On organizes tasks and readiness, and Kira Sequence Desk prepares timed, source-linked media plans; those three remain private owner-review prototypes in these notes. CutBrief is retired, with its prior submission preserved as history and paid generation locked. The personal Video Studio is a separate project still under development. No contest result is claimed.",
       "sources": [
-        "cutbrief-live",
-        "prototypes"
+        "shiftbrief",
+        "shiftbrief-source",
+        "projects"
       ],
       "next": [
         "Tell me about ShiftBrief",

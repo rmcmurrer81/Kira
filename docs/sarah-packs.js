@@ -5,7 +5,7 @@
   const VERSION=/^\d{4}-\d{2}-\d{2}\.\d+$/;
   const HASH=/^[a-f0-9]{64}$/;
   const DATE=/^\d{4}-\d{2}-\d{2}$/;
-  const PACK_IDS=['robert','kira-world','updates'];
+  const PACK_IDS=['robert','kira-world','updates','projects'];
   const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
   const object=x=>x&&typeof x==='object'&&!Array.isArray(x);
   const normalize=s=>String(s).toLowerCase().normalize('NFKC').replace(/[’']/g,'').replace(/[^a-z0-9\s-]/g,' ').replace(/\s+/g,' ').trim();
@@ -29,12 +29,12 @@
   async function assemble(base,baseText,index,packs){
     assert(object(index)&&index.schema_version===1&&VERSION.test(index.content_version)&&DATE.test(index.reviewed_on),'index invalid');
     assert(HASH.test(index.base_sha256)&&await sha(baseText)===index.base_sha256,'base version mismatch');
-    assert(Array.isArray(index.packs)&&index.packs.length===3&&packs.length===3,'pack set incomplete');
+    assert(Array.isArray(index.packs)&&index.packs.length===PACK_IDS.length&&packs.length===PACK_IDS.length,'pack set incomplete');
     const expected=PACK_IDS.map(id=>'knowledge/'+id+'-'+index.content_version.replaceAll('.','-')+'.json');
     const next=JSON.parse(JSON.stringify(base));
     const sources=Object.assign(Object.create(null),next.sources), topics=new Map(), facts=[], routes=[], seenFacts=new Set();
     const seenRoutes=new Set();
-    for(let i=0;i<3;i++){
+    for(let i=0;i<PACK_IDS.length;i++){
       const descriptor=index.packs[i],pack=packs[i];
       assert(descriptor.id===PACK_IDS[i]&&descriptor.path===expected[i]&&HASH.test(descriptor.sha256),'pack path invalid');
       assert(object(pack)&&pack.schema_version===1&&pack.id===descriptor.id&&pack.content_version===index.content_version&&pack.reviewed_on===index.reviewed_on,'pack version mismatch');
@@ -86,7 +86,7 @@
     try{
       const index=JSON.parse(await read(fetcher,'knowledge-index.json'));
       // Validate paths before fetching anything named by the index.
-      assert(index.schema_version===1&&VERSION.test(index.content_version)&&Array.isArray(index.packs)&&index.packs.length===3,'index invalid');
+      assert(index.schema_version===1&&VERSION.test(index.content_version)&&Array.isArray(index.packs)&&index.packs.length===PACK_IDS.length,'index invalid');
       const texts=await Promise.all(index.packs.map((p,i)=>{
         assert(p.id===PACK_IDS[i]&&p.path==='knowledge/'+p.id+'-'+index.content_version.replaceAll('.','-')+'.json'&&HASH.test(p.sha256),'pack path invalid');
         return read(fetcher,p.path);
@@ -117,7 +117,7 @@
     if(result.id?.startsWith('book:'))return metadata(knowledge,result,['books'],'book',pack.facts.filter(f=>f.book_source===result.id.slice(5)).map(f=>f.id));
     const more=/^(?:and\s+)?(?:tell me more\b|more(?: details?)?$|more detail\b|what else\b|go deeper\b|explain further\b|expand\b)/.test(q)&&(!t||t.id===lastTopic);
     const robert=/\b(roberts?|mcmurrers?)\b/.test(q)||((['robert','entertainment','books'].includes(lastTopic)||lastTopic.startsWith('bio:'))&&/\b(he|his|him)\b/.test(q));
-    const routes=pack.routes.filter(r=>(r.scope==='any'||(r.scope==='robert'&&robert)||(r.scope==='previous'&&r.subject_id===lastTopic))&&r.matches.every(group=>group.some(s=>includes(q,s))));
+    const routes=pack.routes.filter(r=>(r.scope==='any'||(r.scope==='robert'&&robert)||(r.scope==='previous'&&r.subject_id===lastTopic&&result.id===r.subject_id))&&r.matches.every(group=>group.some(s=>includes(q,s))));
     if(routes.length&&!more){
       const best=routes.sort((a,b)=>b.matches.flat().join(' ').length-a.matches.flat().join(' ').length)[0];
       const subject=knowledge.topics.find(t=>t.id===best.subject_id);
