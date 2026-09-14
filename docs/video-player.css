@@ -1,0 +1,20 @@
+/* Real video thumbnails with native watch-page links in the downloaded review. */
+.kl-video-card{margin-top:22px;min-width:0;border-top:1px solid var(--line);padding-top:20px}
+.kl-video-eyebrow{font-size:11px!important;font-weight:750;color:var(--cyan)!important;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px!important}
+.kl-video-poster{position:relative;display:block;width:100%;max-width:100%;overflow:hidden;min-height:208px;aspect-ratio:16/9;border:1px solid #79ebf343;border-radius:10px;background:radial-gradient(ellipse at 80% 0,#46376666,transparent 70%),#112333;text-decoration:none!important;color:#f7f5ef;isolation:isolate}
+.kl-video-poster:after{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(0deg,#07101aed,transparent 83%);pointer-events:none}
+.kl-video-poster .kl-video-thumbnail{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1}
+.kl-video-poster:hover{border-color:var(--cyan)}
+.kl-video-credit{position:absolute;top:12px;left:12px;right:12px;width:fit-content;max-width:calc(100% - 24px);padding:4px 8px;border-radius:4px;background:#080e18df;color:#d8e3f0;font-size:10px;z-index:1}
+.kl-video-play{position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:57px;height:43px;border-radius:12px;background:#e12732;color:white;font:22px/1 system-ui;box-shadow:0 4px 22px #0005;z-index:1}
+.kl-video-caption{position:absolute;left:18px;right:18px;bottom:16px;z-index:1;display:grid;gap:7px}
+.kl-video-caption strong{font-size:clamp(13px,1.2vw,16px);line-height:1.35;max-width:520px}
+.kl-video-action{font-size:12px;font-weight:750;color:var(--cyan)}
+.kl-video-links{display:flex;justify-content:space-between;gap:12px;margin-top:12px;font-size:12px}
+.kl-video-links a{color:var(--cyan);font-weight:650}
+.kl-video-status{font-size:12px!important;line-height:1.6;color:var(--muted)!important;margin:12px 0 0!important}
+.kl-video-screen{aspect-ratio:16/9;min-height:200px;width:100%;background:#101824;overflow:hidden;border-radius:9px}
+.kl-video-screen iframe,.kl-video-screen>div{width:100%;height:100%;min-height:200px;border:0;display:block}
+.kl-video-card [hidden]{display:none!important}
+@media(max-width:650px){.kl-video-poster{min-height:215px}.kl-video-credit{font-size:9px}.kl-video-caption{left:14px;right:14px;bottom:13px}.kl-video-caption strong{font-size:13px}.kl-video-play{top:36%}}
+@media(prefers-reduced-motion:reduce){.kl-video-poster{transition:none}}
