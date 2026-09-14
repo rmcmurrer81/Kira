@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kira-labs-iris-free",
+  "main": "entry.mjs",
+  "compatibility_date": "2026-09-14",
+  "workers_dev": true,
+  "observability": {"enabled": false},
+  "ai": {"binding": "AI"},
+  "d1_databases": [{"binding":"DB", "database_name":"iris-private", "database_id":"REPLACE_AFTER_FREE_DATABASE_CREATION"}],
+  "vars": {
+    "SERVICE_ENABLED": "false",
+    "FREE_PLAN_CONFIRMED": "false",
+    "DIGEST_ENABLED": "false",
+    "DIGEST_FROM": "Iris <iris@updates.kiralabs.org>"
+  },
+  "triggers": {"crons": ["0 4 * * *", "0 13 * * 1"]}
+}

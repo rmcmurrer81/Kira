@@ -1,0 +1,3869 @@
+{
+  "version": "iris-free-2026-09-14-0452cbfd0d6a",
+  "coverage": {
+    "complete": true,
+    "sourceVersion": "2026-09-12.1",
+    "topics": 30,
+    "books": 29,
+    "facts": 143
+  },
+  "entries": [
+    {
+      "id": "topic:robert",
+      "title": "Meet Robert",
+      "text": "Robert McMurrer is the founder of Kira Labs and creator of Kira World, based in Newark, New Jersey. His background spans acting, independent film production and writing. His AI work explores how identity, memory and voice can continue across conversations and creative projects.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "robert",
+      "tags": [
+        "robert",
+        "mcmurrer",
+        "founder",
+        "creator",
+        "who made",
+        "who built",
+        "who started",
+        "your boss"
+      ]
+    },
+    {
+      "id": "topic:entertainment",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists film work including Blood Tulip (2019), as Sticks; Lunch with a Friend (2011 short), as John; and Director’s Cut (2016), as Charles Whitman (uncredited). Television and web-series entries on IMDb include Parks and Recreation, as Meeting Member (uncredited; 2011, one episode); Glee, as NY Audience Man (uncredited; 2011, one episode); and CollegeHumor Originals, as Partygoer (2016, one episode). These are selected listed credits, not a complete filmography.",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "entertainment",
+        "actor",
+        "acting",
+        "actress",
+        "film career",
+        "filmography",
+        "screenwriter",
+        "screenwriting",
+        "hollywood",
+        "movies was",
+        "shows was",
+        "credits",
+        "background work"
+      ]
+    },
+    {
+      "id": "topic:entertainment:films",
+      "title": "Robert’s movie & TV credits · films",
+      "text": "IMDb lists film work including Blood Tulip (2019), as Sticks; Lunch with a Friend (2011 short), as John; and Director’s Cut (2016), as Charles Whitman (uncredited). These are selected listed film credits; the IMDb profile has the full listing.",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "entertainment",
+        "actor",
+        "acting",
+        "actress",
+        "film career",
+        "filmography",
+        "screenwriter",
+        "screenwriting",
+        "hollywood",
+        "movies was",
+        "shows was",
+        "credits",
+        "background work",
+        "films"
+      ]
+    },
+    {
+      "id": "topic:entertainment:television",
+      "title": "Robert’s movie & TV credits · television",
+      "text": "Television and web-series entries on IMDb include Parks and Recreation, as Meeting Member (uncredited; 2011, one episode); Glee, as NY Audience Man (uncredited; 2011, one episode); and CollegeHumor Originals, as Partygoer (2016, one episode). These are selected listed appearances, not regular or starring roles.",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "entertainment",
+        "actor",
+        "acting",
+        "actress",
+        "film career",
+        "filmography",
+        "screenwriter",
+        "screenwriting",
+        "hollywood",
+        "movies was",
+        "shows was",
+        "credits",
+        "background work",
+        "television"
+      ]
+    },
+    {
+      "id": "topic:books",
+      "title": "Robert’s books",
+      "text": "Robert’s Amazon catalogue includes poetry, fiction, technology writing and cookbooks. Selected titles include Poetry Madhouse, Driving Into The Dark Storm, The Long Walk North, Sci-Fi Seeds: Tech of Tomorrow, The Path Less Traveled and Cosplay Cuisine. I can help you find 29 titles checked in the catalogue on September 7, 2026. Ask about a title or ask to see the book list.",
+      "url": "https://www.amazon.com/s?k=robert+mcmurrer&crid=2NB9TR6SF34R8&sprefix=robert+mcmurrer%2Caps%2C118&ref=nb_sb_noss_1",
+      "topic": "books",
+      "tags": [
+        "book",
+        "books",
+        "author",
+        "writing",
+        "written",
+        "novel",
+        "novels",
+        "bibliography",
+        "poetry",
+        "cookbook"
+      ]
+    },
+    {
+      "id": "topic:poetry",
+      "title": "Poetry Madhouse",
+      "text": "Poetry Madhouse is by Robert McMurrer. A collection of poems by Robert McMurrer. Open the Amazon listing for available editions.",
+      "url": "https://www.amazon.com/Poetry-Madhouse-Robert-McMurrer-ebook/dp/B004RZ28U4",
+      "topic": "poetry",
+      "tags": [
+        "poetry madhouse"
+      ]
+    },
+    {
+      "id": "topic:driving",
+      "title": "Driving Into The Dark Storm",
+      "text": "Driving Into The Dark Storm is by Robert McMurrer. A collection of short stories combining life-inspired drama with science-fiction ideas, including time travel and aliens. Open the Amazon listing for available editions.",
+      "url": "https://www.amazon.com/Driving-Into-Storm-Robert-McMurrer-ebook/dp/B00H68CAA2",
+      "topic": "driving",
+      "tags": [
+        "driving into the dark storm"
+      ]
+    },
+    {
+      "id": "topic:labs",
+      "title": "Kira Labs",
+      "text": "Kira Labs is Robert McMurrer’s independent research and creation studio. Kira World is its central project. Related work includes Sarah Travel and a local Video Studio. The aim is useful software with continuity and personal control, developed through prototypes and testing. Current prototypes also explore staffing, decision evidence, task readiness and simpler browser media planning.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "labs",
+      "tags": [
+        "kira labs",
+        "company",
+        "studio",
+        "research lab",
+        "organization",
+        "business"
+      ]
+    },
+    {
+      "id": "topic:world",
+      "title": "Kira World",
+      "text": "Kira World explores distinct synthetic people whose identity, reviewed memories and voice can continue between sessions. Local conversation experiments and a basic walkable Home World exist. A polished shared 3D world, believable bodies and clothing, VR and compatible embodiment remain development goals. It is experimental software, not a finished public product.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "world",
+      "tags": [
+        "kira world",
+        "synthetic people",
+        "synthetic person",
+        "companion",
+        "kira",
+        "lisa",
+        "persistent world"
+      ]
+    },
+    {
+      "id": "topic:world:details",
+      "title": "Kira World · details",
+      "text": "Kira World connects three ideas: distinct people, continuity between conversations, and places in which to spend time. Home World is the continuing home, while future Notebook Worlds provide settings for activities. VR and compatible robotics are longer-term interfaces. Local conversation and continuity experiments and a basic apartment exist; that combination is not yet a finished shared world.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "world",
+      "tags": [
+        "kira world",
+        "synthetic people",
+        "synthetic person",
+        "companion",
+        "kira",
+        "lisa",
+        "persistent world",
+        "details"
+      ]
+    },
+    {
+      "id": "topic:world:how",
+      "title": "Kira World · how",
+      "text": "Kira World is being built around separate responsibilities. The conversation model supplies dialogue: an August 10, 2026 roadmap selected qwen3.5:9b for normal Kira text conversation, but the model running today has not been verified. Per-person identity identifies who is speaking, while retained, reviewed memory provides context from earlier interactions. Local identity and continuity experiments exist.\n\nRuntime events and world state are separate from dialogue. The public design also separates permissioned actions; saying that something happened is not proof of a completed world action, and a generated statement does not automatically become a saved memory. Voice is another responsibility, with local speech and voice-reference experiments. The visible body and world provide presence: a basic walkable Home World shell exists, while believable bodies and clothing remain unfinished work.\n\nThis describes documented responsibilities, existing experiments and intended connections. It is not a claim that every part already works together as a finished resident or shared world. The reviewed notes do not establish a complete current model count, database design or implementation algorithm.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "kira world",
+        "synthetic people",
+        "synthetic person",
+        "companion",
+        "kira",
+        "lisa",
+        "persistent world",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:world:privacy",
+      "title": "Kira World · privacy",
+      "text": "The stated direction favors local control of personal state and permission for external actions. It does not establish that every future voice, device or world feature is offline, or supply a complete retention and sharing policy.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "world",
+      "tags": [
+        "kira world",
+        "synthetic people",
+        "synthetic person",
+        "companion",
+        "kira",
+        "lisa",
+        "persistent world",
+        "privacy"
+      ]
+    },
+    {
+      "id": "topic:world:status",
+      "title": "Kira World · status",
+      "text": "Local conversation, person-specific continuity and speech experiments exist, along with a basic walkable apartment. Complete populated worlds, accessible VR and compatible physical embodiment remain goals. There is no confirmed public launch date for the full experience.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "world",
+      "tags": [
+        "kira world",
+        "synthetic people",
+        "synthetic person",
+        "companion",
+        "kira",
+        "lisa",
+        "persistent world",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:world:components",
+      "title": "Kira World · components",
+      "text": "Kira World has several connected parts, at different stages. Minds are the distinct people: local identity, reviewed-memory and voice experiments support continuing conversations. Home World is their intended home; a basic walkable one-bedroom shell exists. Notebook Worlds are future settings for study, travel, creativity, history and play. Temporary Creator designs people for particular worlds or activities; public spoken tests exist, with factual errors and unfinished avatars or bodies still visible. VR is a future way to share those places, with no confirmed headset release. Robotics is a longer-term, simulation-first route to compatible physical embodiment—not a deployed autonomous robot. The work is to connect these foundations into a continuing shared experience.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "world",
+      "tags": [
+        "kira world",
+        "synthetic people",
+        "synthetic person",
+        "companion",
+        "kira",
+        "lisa",
+        "persistent world",
+        "components"
+      ]
+    },
+    {
+      "id": "topic:world:technical",
+      "title": "Kira World · technical",
+      "text": "Kira World is being built around separate responsibilities. The conversation model supplies dialogue: an August 10, 2026 roadmap selected qwen3.5:9b for normal Kira text conversation, but the model running today has not been verified. Per-person identity identifies who is speaking, while retained, reviewed memory provides context from earlier interactions. Local identity and continuity experiments exist.\n\nRuntime events and world state are separate from dialogue. The public design also separates permissioned actions; saying that something happened is not proof of a completed world action, and a generated statement does not automatically become a saved memory. Voice is another responsibility, with local speech and voice-reference experiments. The visible body and world provide presence: a basic walkable Home World shell exists, while believable bodies and clothing remain unfinished work.\n\nThis describes documented responsibilities, existing experiments and intended connections. It is not a claim that every part already works together as a finished resident or shared world. The reviewed notes do not establish a complete current model count, database design or implementation algorithm.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "kira world",
+        "synthetic people",
+        "synthetic person",
+        "companion",
+        "kira",
+        "lisa",
+        "persistent world",
+        "technical"
+      ]
+    },
+    {
+      "id": "topic:ai",
+      "title": "Robert’s work in AI",
+      "text": "Robert’s AI work brings together local models, person-specific memory, speech and creative tools. Kira World explores continuity between conversations and digital places. Sarah Travel applies companion-style interaction to planning, while Video Studio coordinates local media work. These are independent development projects, with different levels of readiness. The newer prototypes also include staffing, evidence and task-planning tools, with bounded written workflows that do not require a language model.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "ai",
+      "tags": [
+        " ai",
+        "artificial intelligence",
+        "machine learning",
+        "technology",
+        "programming",
+        "developer",
+        "software",
+        "connect",
+        "research",
+        "models",
+        "model"
+      ]
+    },
+    {
+      "id": "topic:memory",
+      "title": "Memory & identity",
+      "text": "Kira World’s approach keeps person-specific identity and reviewed memory records separate from the immediate conversation. The aim is for Kira, Lisa and future residents to remain distinct and continue across sessions. Local continuity experiments exist; that does not yet establish a complete persistent life across every device or world.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "memory",
+      "tags": [
+        "memory",
+        "memories",
+        "remember",
+        "identity",
+        "continuity",
+        "reset",
+        "start over",
+        "different people"
+      ]
+    },
+    {
+      "id": "topic:memory:details",
+      "title": "Memory & identity · details",
+      "text": "A person’s identity provides a continuing reference for who is speaking; reviewed memory supplies context from earlier interactions. Keeping those records separate from the immediate conversation is intended to help Kira and Lisa remain distinct across sessions. It does not establish a complete life across every world or device.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "memory",
+      "tags": [
+        "memory",
+        "memories",
+        "remember",
+        "identity",
+        "continuity",
+        "reset",
+        "start over",
+        "different people",
+        "details"
+      ]
+    },
+    {
+      "id": "topic:memory:how",
+      "title": "Memory & identity · how",
+      "text": "Identity and memory have different jobs. A per-person identity keeps the reference to who Kira or Lisa is; retained, reviewed memory supplies context from earlier interactions, separate from the immediate conversation. The July 23 public update distinguishes spoken dialogue, private thoughts, runtime events and reviewed memory. A model reply is not automatically a saved memory or proof that an action happened.\n\nThese memory responsibilities sit alongside conversation, world state and permissioned actions, with voice and the visible body serving different roles. Local identity and continuity experiments exist; continuity across every world or device remains a goal. The dated August 10 roadmap selected qwen3.5:9b for text conversation, not a verified complete memory architecture or current running-model inventory. The reviewed notes do not specify a database engine, memory-search algorithm or complete storage schema.",
+      "url": "https://kiralabs.org/",
+      "topic": "memory",
+      "tags": [
+        "memory",
+        "memories",
+        "remember",
+        "identity",
+        "continuity",
+        "reset",
+        "start over",
+        "different people",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:memory:privacy",
+      "title": "Memory & identity · privacy",
+      "text": "Reviewed memory and local control are stated design principles. The available public notes do not provide a complete policy for deletion, retention, sharing or device synchronization of resident memory.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "memory",
+      "tags": [
+        "memory",
+        "memories",
+        "remember",
+        "identity",
+        "continuity",
+        "reset",
+        "start over",
+        "different people",
+        "privacy"
+      ]
+    },
+    {
+      "id": "topic:memory:status",
+      "title": "Memory & identity · status",
+      "text": "Local continuity experiments exist. A complete persistent identity working across every device and world has not been established by these notes.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "memory",
+      "tags": [
+        "memory",
+        "memories",
+        "remember",
+        "identity",
+        "continuity",
+        "reset",
+        "start over",
+        "different people",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:memory:technical",
+      "title": "Memory & identity · technical",
+      "text": "Identity and memory have different jobs. A per-person identity keeps the reference to who Kira or Lisa is; retained, reviewed memory supplies context from earlier interactions, separate from the immediate conversation. The July 23 public update distinguishes spoken dialogue, private thoughts, runtime events and reviewed memory. A model reply is not automatically a saved memory or proof that an action happened.\n\nThese memory responsibilities sit alongside conversation, world state and permissioned actions, with voice and the visible body serving different roles. Local identity and continuity experiments exist; continuity across every world or device remains a goal. The dated August 10 roadmap selected qwen3.5:9b for text conversation, not a verified complete memory architecture or current running-model inventory. The reviewed notes do not specify a database engine, memory-search algorithm or complete storage schema.",
+      "url": "https://kiralabs.org/",
+      "topic": "memory",
+      "tags": [
+        "memory",
+        "memories",
+        "remember",
+        "identity",
+        "continuity",
+        "reset",
+        "start over",
+        "different people",
+        "technical"
+      ]
+    },
+    {
+      "id": "topic:studio",
+      "title": "Video Studio",
+      "text": "Kira Labs Video Studio is Robert’s personal local production workspace. Its preserved pipeline organizes narrated video chapters and assembles images, audio and video. Newer work aims to make planning and revision conversational, with local models coordinating specialist media engines. The newer full workflow remains under development; a finished automatic movie studio is not being advertised here.",
+      "url": "https://kiralabs.org/projects.html",
+      "topic": "studio",
+      "tags": [
+        "video studio",
+        "video making",
+        "video production",
+        "music generator",
+        "movie maker",
+        "film maker"
+      ]
+    },
+    {
+      "id": "topic:travel",
+      "title": "Sarah Travel",
+      "text": "Sarah Travel is a private travel-planning experiment with Android and Windows debug builds. It combines conversation with route planning, protected online lookups and an offline fallback. It has not been released as a public service or on Google Play; device verification and release testing remain.",
+      "url": "https://kiralabs.org/projects.html",
+      "topic": "travel",
+      "tags": [
+        "sarah travel",
+        "travel app",
+        "trip planning",
+        "travel planning",
+        "routes",
+        "itinerary"
+      ]
+    },
+    {
+      "id": "topic:home",
+      "title": "Home World",
+      "text": "Home World is the intended continuing home for Kira World’s residents. A basic walkable one-bedroom apartment shell exists. Populated daily life, believable bodies and clothing, and continuity with future Notebook Worlds remain development goals. The polished illustrations on the site are concept art.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "home",
+      "tags": [
+        "home world",
+        "apartment",
+        "walkable",
+        "3d",
+        "body",
+        "clothing",
+        "garment"
+      ]
+    },
+    {
+      "id": "topic:home:details",
+      "title": "Home World · details",
+      "text": "Home World supplies the continuing-home part of the vision: a place to return to between conversations and activities. Notebook Worlds are proposed other settings for particular purposes. The apartment shell demonstrates a basic walkable space, not completed residents, physical interactions or autonomous daily routines.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "home",
+      "tags": [
+        "home world",
+        "apartment",
+        "walkable",
+        "3d",
+        "body",
+        "clothing",
+        "garment",
+        "details"
+      ]
+    },
+    {
+      "id": "topic:home:how",
+      "title": "Home World · how",
+      "text": "The existing evidence is a basic walkable apartment. The intended connection to person-specific identity and memory is broader than that space. These notes do not document a completed system that gives residents ongoing daily lives there.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "home",
+      "tags": [
+        "home world",
+        "apartment",
+        "walkable",
+        "3d",
+        "body",
+        "clothing",
+        "garment",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:home:status",
+      "title": "Home World · status",
+      "text": "A basic walkable one-bedroom shell exists. A complete populated Home World is not established by the current public evidence.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "home",
+      "tags": [
+        "home world",
+        "apartment",
+        "walkable",
+        "3d",
+        "body",
+        "clothing",
+        "garment",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:home:privacy",
+      "title": "Home World · privacy",
+      "text": "The broader design favors local control of personal state. The public notes do not yet define a complete Home World access, sharing or retention policy.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "home",
+      "tags": [
+        "home world",
+        "apartment",
+        "walkable",
+        "3d",
+        "body",
+        "clothing",
+        "garment",
+        "privacy"
+      ]
+    },
+    {
+      "id": "topic:minds",
+      "title": "Minds & distinct residents",
+      "text": "In Kira World, a “mind” means the software behind a distinct synthetic person. Kira and Lisa are intended to have their own identity, history, reviewed memories and voice, so a later conversation can continue with the same person. Local conversation and continuity experiments exist. This is not a claim that the software is conscious or has verified feelings.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "minds",
+      "tags": [
+        "mind",
+        "minds",
+        "resident",
+        "residents",
+        "kira and lisa",
+        "synthetic people",
+        "synthetic person"
+      ]
+    },
+    {
+      "id": "topic:minds:details",
+      "title": "Minds & distinct residents · details",
+      "text": "The aim is continuity with an individual, rather than a new interchangeable character every time. Identity describes who the resident is; history and reviewed memories provide context from earlier interactions; a distinct voice helps preserve that identity in conversation. Kira and Lisa are separate residents in that design. The intended connection to Home World would give those continuing interactions a place, while future Notebook Worlds would provide other settings and activities. Local experiments support parts of this direction, but they do not establish a fully independent life across every world or device. “Mind” is a plain-language description here, not a scientific finding of consciousness.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "minds",
+      "tags": [
+        "mind",
+        "minds",
+        "resident",
+        "residents",
+        "kira and lisa",
+        "synthetic people",
+        "synthetic person",
+        "details"
+      ]
+    },
+    {
+      "id": "topic:minds:how",
+      "title": "Minds & distinct residents · how",
+      "text": "The published approach separates a person’s identity and reviewed memory records from the immediate conversation. A later session can use that retained context to support continuity while keeping different people’s histories distinct. That explains the intended role of memory; the available public notes do not specify a complete mind architecture, exact model count or algorithm. Generated language about emotions is not, by itself, proof of a lived experience.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "minds",
+      "tags": [
+        "mind",
+        "minds",
+        "resident",
+        "residents",
+        "kira and lisa",
+        "synthetic people",
+        "synthetic person",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:minds:privacy",
+      "title": "Minds & distinct residents · privacy",
+      "text": "For residents, the stated direction is local control of personal state and reviewed memory, with permission for external actions. That is a design principle, not a verified guarantee that every future voice, world or device feature stays offline. These public notes do not establish a complete retention, deletion or device-sync policy for residents. This website guide is separate from Robert’s private resident histories.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "minds",
+      "tags": [
+        "mind",
+        "minds",
+        "resident",
+        "residents",
+        "kira and lisa",
+        "synthetic people",
+        "synthetic person",
+        "privacy"
+      ]
+    },
+    {
+      "id": "topic:minds:status",
+      "title": "Minds & distinct residents · status",
+      "text": "Local person-specific conversation, identity, reviewed-memory continuity and speech experiments exist. The evidence does not establish finished persistent residents living independently in a shared 3D world, or one complete identity working across all devices. There is no confirmed public launch date for that full experience.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "minds",
+      "tags": [
+        "mind",
+        "minds",
+        "resident",
+        "residents",
+        "kira and lisa",
+        "synthetic people",
+        "synthetic person",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:minds:voice",
+      "title": "Minds & distinct residents · voice",
+      "text": "A distinct voice is part of the intended identity of each resident, and local speech experiments exist. That is separate from the browser voice reading this website’s answers. The public notes do not establish a finished voice that follows each resident through every world and device.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "minds",
+      "tags": [
+        "mind",
+        "minds",
+        "resident",
+        "residents",
+        "kira and lisa",
+        "synthetic people",
+        "synthetic person",
+        "voice"
+      ]
+    },
+    {
+      "id": "topic:minds:limits",
+      "title": "Minds & distinct residents · limits",
+      "text": "Separate identity records and convincing conversation do not prove consciousness, verified feelings or autonomous daily life. The current evidence supports bounded prototypes. A fully populated persistent world and cross-device embodiment remain goals.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "minds",
+      "tags": [
+        "mind",
+        "minds",
+        "resident",
+        "residents",
+        "kira and lisa",
+        "synthetic people",
+        "synthetic person",
+        "limits"
+      ]
+    },
+    {
+      "id": "topic:minds:technical",
+      "title": "Minds & distinct residents · technical",
+      "text": "An August 10, 2026 technical roadmap selected qwen3.5:9b for normal Kira text conversation. That is a dated selection; the model currently running has not been verified. The reviewed public material does not establish the exact models currently powering Kira World residents, their count, or which are running at once. It describes identity, reviewed memory, voice and world responsibilities.",
+      "url": "https://kiralabs.org/knowledge.html#technical",
+      "topic": "minds",
+      "tags": [
+        "mind",
+        "minds",
+        "resident",
+        "residents",
+        "kira and lisa",
+        "synthetic people",
+        "synthetic person",
+        "technical"
+      ]
+    },
+    {
+      "id": "topic:notebook-worlds",
+      "title": "Notebook Worlds",
+      "text": "Notebook Worlds are proposed places within Kira World for particular activities: travel, learning, creative work, history and play. Home World is the continuing home; a Notebook World provides another setting for an activity. The aim is to retain the same people and continuity between places. Complete populated Notebook Worlds are a future goal, not a finished feature shown by the current apartment prototype.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "notebook-worlds",
+      "tags": [
+        "notebook world",
+        "notebook worlds"
+      ]
+    },
+    {
+      "id": "topic:notebook-worlds:details",
+      "title": "Notebook Worlds · details",
+      "text": "The distinction is purpose. Home World provides a continuing home, while a Notebook World can focus on an activity or subject. The public examples include travel, study, creativity, history and play. The longer-term idea is that entering another setting would not mean abandoning the identity and history developed at home. That could make separate activities part of one continuing experience. Those examples describe the intended use, not a catalogue of worlds you can enter today. The present visible evidence is a basic walkable one-bedroom Home World shell.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "notebook-worlds",
+      "tags": [
+        "notebook world",
+        "notebook worlds",
+        "details"
+      ]
+    },
+    {
+      "id": "topic:notebook-worlds:how",
+      "title": "Notebook Worlds · how",
+      "text": "Conceptually, a Notebook World gives an activity its own place while drawing on continuity with Home World. The public notes describe that relationship, but do not establish the implementation of world creation, transitions, shared sessions or memory exchange. I should not turn the concept into a claim that a working world generator or portal system is already available.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "notebook-worlds",
+      "tags": [
+        "notebook world",
+        "notebook worlds",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:notebook-worlds:privacy",
+      "title": "Notebook Worlds · privacy",
+      "text": "Continuity between places raises questions about which personal history accompanies a resident and who can access it. Local control and permission are the broader stated direction. The reviewed public notes do not yet define Notebook World-specific sharing, retention or access rules, so I cannot promise that all future worlds are private or offline.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "notebook-worlds",
+      "tags": [
+        "notebook world",
+        "notebook worlds",
+        "privacy"
+      ]
+    },
+    {
+      "id": "topic:notebook-worlds:status",
+      "title": "Notebook Worlds · status",
+      "text": "Notebook Worlds remain future development. The basic walkable apartment is Home World evidence; it is not evidence that populated travel, study or historical worlds have been completed. No public Notebook World access link or release date is confirmed.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "notebook-worlds",
+      "tags": [
+        "notebook world",
+        "notebook worlds",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:notebook-worlds:voice",
+      "title": "Notebook Worlds · voice",
+      "text": "The intended continuity includes the same resident identity and voice across activities and places. Local voice experiments do not prove that this already works inside completed Notebook Worlds.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "notebook-worlds",
+      "tags": [
+        "notebook world",
+        "notebook worlds",
+        "voice"
+      ]
+    },
+    {
+      "id": "topic:notebook-worlds:limits",
+      "title": "Notebook Worlds · limits",
+      "text": "The listed activities are examples of the vision. They do not establish completed world libraries, live multiplayer, automatic world generation or historically accurate simulations.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "notebook-worlds",
+      "tags": [
+        "notebook world",
+        "notebook worlds",
+        "limits"
+      ]
+    },
+    {
+      "id": "topic:temporary-creator",
+      "title": "Temporary Creator",
+      "text": "Temporary Creator, called TemporaryAI Creator in Robert’s public videos, is being developed to create synthetic people for particular worlds or activities. The aim is a coherent identity, knowledge, personality, appearance and voice. Public July 24–25 development videos describe actual voice-conversation tests, including mistakes and unfinished avatars or bodies. That is more than a written concept, but not a completed animated resident.",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw",
+      "topic": "temporary-creator",
+      "tags": [
+        "temporary creator",
+        "temporary ai",
+        "temporary synthetic people"
+      ]
+    },
+    {
+      "id": "topic:temporary-creator:details",
+      "title": "Temporary Creator · details",
+      "text": "The concept begins with a person’s purpose, identity, knowledge limits and personality, with appearance and voice belonging to the same design. Robert’s July 24 explainer describes creation types, source packs, historical dates and life stages, avatar references and voice evidence. The following public tests report both usable conversation and failures: invented details, internal system language appearing in speech, and claims of saved work that were not true. Some tests use individual test voices; others use generic Windows voices. These are development demonstrations, not a finished complete-person system. Temporary people are not automatically permanent Home World residents, and the name does not promise deletion when a chat closes.",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw",
+      "topic": "temporary-creator",
+      "tags": [
+        "temporary creator",
+        "temporary ai",
+        "temporary synthetic people",
+        "details"
+      ]
+    },
+    {
+      "id": "topic:temporary-creator:how",
+      "title": "Temporary Creator · how",
+      "text": "The public explainer describes choosing a creation type, preparing sources, setting the relevant date or life stage, considering avatar references and evaluating voice evidence. Its proposed connection reaches world placement and Video Studio. The companion tests report voice conversations with concrete failures and unfinished avatars or bodies, so those described connections should not all be treated as completed. Historical variants are synthetic interpretations, not the literal people; voice and reference material still require appropriate evidence and authorization.",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw",
+      "topic": "temporary-creator",
+      "tags": [
+        "temporary creator",
+        "temporary ai",
+        "temporary synthetic people",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:temporary-creator:privacy",
+      "title": "Temporary Creator · privacy",
+      "text": "The name does not define a data-retention policy. The public explainer discusses authenticity, rights and authorization for source and voice material, but these notes do not establish a complete retention, deletion or sharing policy. I cannot promise that a temporary person is deleted after an interaction. The explanations here use public descriptions and general owner concepts, not private memories or person designs.",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw",
+      "topic": "temporary-creator",
+      "tags": [
+        "temporary creator",
+        "temporary ai",
+        "temporary synthetic people",
+        "privacy"
+      ]
+    },
+    {
+      "id": "topic:temporary-creator:status",
+      "title": "Temporary Creator · status",
+      "text": "Public development videos published July 24–25, 2026 report actual TemporaryAI voice-conversation tests. They also document factual errors, incorrect saved-work claims, generic voice fallbacks and unfinished avatars or bodies. The dated videos establish demonstrated experiments, not today’s live runtime state or a completed animated person living in a world. No general public application release or completion date is confirmed here.",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw",
+      "topic": "temporary-creator",
+      "tags": [
+        "temporary creator",
+        "temporary ai",
+        "temporary synthetic people",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:temporary-creator:voice",
+      "title": "Temporary Creator · voice",
+      "text": "Voice conversations appear in the public development tests. Some descriptions identify individualized test voices; others explicitly identify generic Windows voices while individual voices remain unfinished. These tests do not establish a finished body-and-voice creation pipeline. Historical or fictional test voices are not automatically authentic recordings or official performances.",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw",
+      "topic": "temporary-creator",
+      "tags": [
+        "temporary creator",
+        "temporary ai",
+        "temporary synthetic people",
+        "voice"
+      ]
+    },
+    {
+      "id": "topic:temporary-creator:limits",
+      "title": "Temporary Creator · limits",
+      "text": "The public tests retain failures instead of presenting every answer as fact: they report invented details, internal language leaking into dialogue and incorrect claims that files were saved. Avatars, bodies and individual voices remain unfinished in the described tests. A demonstrated conversation is not proof of a complete animated resident or reliable research and file operations.",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw",
+      "topic": "temporary-creator",
+      "tags": [
+        "temporary creator",
+        "temporary ai",
+        "temporary synthetic people",
+        "limits"
+      ]
+    },
+    {
+      "id": "topic:vr",
+      "title": "Virtual reality",
+      "text": "Virtual reality is a future way of sharing Kira World’s places with its residents. The ambition is accessible, multimodal presence while keeping the same identity and history across devices and worlds. The current public evidence does not establish a finished VR release, supported headset list or launch date.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "vr",
+      "tags": [
+        "vr",
+        "virtual reality"
+      ]
+    },
+    {
+      "id": "topic:vr:details",
+      "title": "Virtual reality · details",
+      "text": "The aspiration is presence in the same digital places, rather than losing the relationship and history whenever the interface changes. Accessibility and different ways of interacting are part of that direction. Home World and future Notebook Worlds give context to the idea. The polished world illustrations are concept art; they are not proof of a complete headset experience.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "vr",
+      "tags": [
+        "vr",
+        "virtual reality",
+        "details"
+      ]
+    },
+    {
+      "id": "topic:vr:how",
+      "title": "Virtual reality · how",
+      "text": "The intended connection is between the same resident identity and history and a different way of entering the world. The public notes do not specify completed headset integration, tracking, controls or accessibility features. Those details remain unconfirmed rather than something I can infer from the VR goal.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "vr",
+      "tags": [
+        "vr",
+        "virtual reality",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:vr:privacy",
+      "title": "Virtual reality · privacy",
+      "text": "VR can involve device-specific tracking and voice services. The public Kira World notes do not define those future data flows or permissions. Local control is a design preference, not a promise that an unspecified headset or speech service keeps every signal on the device.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "vr",
+      "tags": [
+        "vr",
+        "virtual reality",
+        "privacy"
+      ]
+    },
+    {
+      "id": "topic:vr:status",
+      "title": "Virtual reality · status",
+      "text": "VR remains a future direction. A basic walkable Home World exists, but these notes do not establish a publicly available VR product, supported headset or release date.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "vr",
+      "tags": [
+        "vr",
+        "virtual reality",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:vr:limits",
+      "title": "Virtual reality · limits",
+      "text": "There is no confirmed device compatibility list, controller scheme, tracking specification or finished shared VR world in the reviewed notes.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "vr",
+      "tags": [
+        "vr",
+        "virtual reality",
+        "limits"
+      ]
+    },
+    {
+      "id": "topic:robotics",
+      "title": "Robotics & physical embodiment",
+      "text": "Compatible physical embodiment is a longer-term Kira World goal: exploring whether a continuing identity could interact through suitable robotic hardware. The stated direction is simulation first, followed by controlled tests. The public evidence does not establish a deployed autonomous robot.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "robotics",
+      "tags": [
+        "robot",
+        "robots",
+        "robotics",
+        "physical embodiment",
+        "robot body"
+      ]
+    },
+    {
+      "id": "topic:robotics:details",
+      "title": "Robotics & physical embodiment · details",
+      "text": "The connection to Kira World is continuity: a resident should not become an unrelated identity simply because the interface changes from a screen or virtual place to compatible hardware. This is an aspiration for future embodiment. Simulation and controlled testing come before a claim of physical capability. It does not mean Kira or Lisa currently has an operating robot body.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "robotics",
+      "tags": [
+        "robot",
+        "robots",
+        "robotics",
+        "physical embodiment",
+        "robot body",
+        "details"
+      ]
+    },
+    {
+      "id": "topic:robotics:how",
+      "title": "Robotics & physical embodiment · how",
+      "text": "The published direction begins in simulation and proceeds through controlled tests of compatible embodiment. The reviewed notes do not identify a completed hardware integration, robot model, movement controller or autonomous task capability. I can explain the goal, but not provide a verified operating procedure for a robot that has not been established here.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "robotics",
+      "tags": [
+        "robot",
+        "robots",
+        "robotics",
+        "physical embodiment",
+        "robot body",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:robotics:privacy",
+      "title": "Robotics & physical embodiment · privacy",
+      "text": "Physical embodiment would introduce questions about sensors, recordings and permission for actions. The public notes do not establish a robot-specific data or access policy. The general preference for local control should not be read as a guarantee about unchosen hardware or future services.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "robotics",
+      "tags": [
+        "robot",
+        "robots",
+        "robotics",
+        "physical embodiment",
+        "robot body",
+        "privacy"
+      ]
+    },
+    {
+      "id": "topic:robotics:status",
+      "title": "Robotics & physical embodiment · status",
+      "text": "Robotics is a longer-term goal, with simulation-first work as the stated approach. No deployed autonomous robot, supported hardware list or delivery date is confirmed by these public notes.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "robotics",
+      "tags": [
+        "robot",
+        "robots",
+        "robotics",
+        "physical embodiment",
+        "robot body",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:robotics:limits",
+      "title": "Robotics & physical embodiment · limits",
+      "text": "A software identity or simulation is not evidence of a safe, capable physical robot. These notes do not verify autonomous real-world movement, household tasks or sensor access.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "robotics",
+      "tags": [
+        "robot",
+        "robots",
+        "robotics",
+        "physical embodiment",
+        "robot body",
+        "limits"
+      ]
+    },
+    {
+      "id": "topic:avatar-bodies",
+      "title": "Avatar bodies & clothing",
+      "text": "Avatar bodies and clothing are active development work. Public notes describe articulated test foundations, and the TemporaryAI Creator explainer includes appearance references and an intended Avatar Builder step. The July conversation tests still had unfinished individual bodies or avatars. A believable, fully animated resident with finished clothing behavior is not established by those demonstrations.",
+      "url": "https://kiralabs.org/",
+      "topic": "avatar-bodies",
+      "tags": [
+        "avatar",
+        "avatars",
+        "avatar builder",
+        "avatar body",
+        "avatar bodies",
+        "body builder",
+        "bodies",
+        "garment",
+        "garments",
+        "clothing"
+      ]
+    },
+    {
+      "id": "topic:avatar-bodies:status",
+      "title": "Avatar bodies & clothing · status",
+      "text": "Public notes document body and garment test foundations. The July 24–25 TemporaryAI descriptions still report unfinished avatars or individual bodies. Those are development results, not a finished animated-resident release.",
+      "url": "https://kiralabs.org/",
+      "topic": "avatar-bodies",
+      "tags": [
+        "avatar",
+        "avatars",
+        "avatar builder",
+        "avatar body",
+        "avatar bodies",
+        "body builder",
+        "bodies",
+        "garment",
+        "garments",
+        "clothing",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:avatar-bodies:how",
+      "title": "Avatar bodies & clothing · how",
+      "text": "The public TemporaryAI explainer describes appearance references and an Avatar Builder step as part of the intended creation workflow. Separate body work calls for articulated non-person fixtures before believable garment behavior is claimed. It does not publish a complete verified body-building procedure.",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw",
+      "topic": "avatar-bodies",
+      "tags": [
+        "avatar",
+        "avatars",
+        "avatar builder",
+        "avatar body",
+        "avatar bodies",
+        "body builder",
+        "bodies",
+        "garment",
+        "garments",
+        "clothing",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:avatar-bodies:technical",
+      "title": "Avatar bodies & clothing · technical",
+      "text": "The reviewed public material does not establish a complete current avatar engine, rig specification or clothing-simulation stack. I can explain the described test goals without inventing those implementation details.",
+      "url": "https://kiralabs.org/",
+      "topic": "avatar-bodies",
+      "tags": [
+        "avatar",
+        "avatars",
+        "avatar builder",
+        "avatar body",
+        "avatar bodies",
+        "body builder",
+        "bodies",
+        "garment",
+        "garments",
+        "clothing",
+        "technical"
+      ]
+    },
+    {
+      "id": "topic:world-builder",
+      "title": "World Builder & future places",
+      "text": "World Builder is a proposed direction for creating places, with Home World and future Notebook Worlds providing the context. The public evidence supports a basic walkable apartment shell; it does not yet establish a working general world editor or a verified creation procedure. Robert is also considering a museum experience for Meta as a future commercial idea. That is a new owner proposal, not a finished Meta application or a revenue claim.",
+      "url": "https://kiralabs.org/",
+      "topic": "world-builder",
+      "tags": [
+        "world builder",
+        "worldbuilder",
+        "world building",
+        "build a world",
+        "create a world",
+        "museum",
+        "meta museum"
+      ]
+    },
+    {
+      "id": "topic:world-builder:status",
+      "title": "World Builder & future places · status",
+      "text": "A basic walkable Home World shell is documented. A general World Builder, its tools and creation steps are not yet established by the reviewed public evidence. The museum direction is a proposal, with no finished Meta app or launch date.",
+      "url": "https://kiralabs.org/",
+      "topic": "world-builder",
+      "tags": [
+        "world builder",
+        "worldbuilder",
+        "world building",
+        "build a world",
+        "create a world",
+        "museum",
+        "meta museum",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:world-builder:how",
+      "title": "World Builder & future places · how",
+      "text": "The published idea is to have a continuing Home World and purpose-built Notebook Worlds for activities. I do not have a verified World Builder procedure, template list or file-format specification to walk you through.",
+      "url": "https://kiralabs.org/",
+      "topic": "world-builder",
+      "tags": [
+        "world builder",
+        "worldbuilder",
+        "world building",
+        "build a world",
+        "create a world",
+        "museum",
+        "meta museum",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:world-builder:cost",
+      "title": "World Builder & future places · cost",
+      "text": "Robert’s newly stated proposal is to explore a museum experience for Meta as a possible commercial direction. The format, platform support and business model still need definition and testing; these notes establish no finished app, platform agreement, customers or revenue.",
+      "url": "https://kiralabs.org/knowledge.html#proposals",
+      "topic": "world-builder",
+      "tags": [
+        "world builder",
+        "worldbuilder",
+        "world building",
+        "build a world",
+        "create a world",
+        "museum",
+        "meta museum",
+        "cost"
+      ]
+    },
+    {
+      "id": "topic:world-builder:technical",
+      "title": "World Builder & future places · technical",
+      "text": "No reviewed public source establishes World Builder’s engine, supported formats, generation model or Meta platform compatibility. Those details need a published implementation or supported plan before I can name them.",
+      "url": "https://kiralabs.org/",
+      "topic": "world-builder",
+      "tags": [
+        "world builder",
+        "worldbuilder",
+        "world building",
+        "build a world",
+        "create a world",
+        "museum",
+        "meta museum",
+        "technical"
+      ]
+    },
+    {
+      "id": "topic:local-studio-models",
+      "title": "Local Studio model roles",
+      "text": "The September 8 authored technical notes distinguish tested local tools from configured support: PhotoMaker with SDXL generated a portrait; MuseTalk generated a speaking video; Chatterbox speech worked in one test and failed later. VACE, Stable Video Diffusion and ACE-Step have configuration or support evidence here, not a new successful generation claim.",
+      "url": "https://kiralabs.org/knowledge.html#technical",
+      "topic": "local-studio-models",
+      "tags": [
+        "local studio models",
+        "studio models",
+        "photomaker",
+        "sdxl",
+        "musetalk",
+        "chatterbox",
+        "vace",
+        "svd",
+        "ace-step",
+        "whisper tiny",
+        "vae"
+      ]
+    },
+    {
+      "id": "topic:status",
+      "title": "Where things stand",
+      "text": "ShiftBrief now has a free Windows desktop release and public source. It supports offline records, reviewed staffing drafts, business copies and complete backups; optional AI setup is separate. Kira World remains a private experimental project, Sarah Travel a private debug build, and the personal Video Studio remains under development. No contest result or public Kira World launch is claimed.",
+      "url": "https://github.com/rmcmurrer81/shiftbrief/releases/download/v0.1.0/ShiftBrief-Setup-0.1.0.exe",
+      "topic": "status",
+      "tags": [
+        "latest",
+        "update",
+        "up to date",
+        "up-to-date",
+        "progress",
+        "current",
+        "ready",
+        "finished",
+        "release",
+        "released",
+        "available",
+        "download",
+        "buy",
+        "launch",
+        "try today",
+        "works today",
+        "working today",
+        "when can",
+        "when will"
+      ]
+    },
+    {
+      "id": "topic:support",
+      "title": "Follow & support",
+      "text": "Follow Robert’s professional work on LinkedIn and Facebook, and follow the Kira World Facebook page for project updates. His Profiles button keeps all five links together, including IMDb and Amazon. Kira Labs also links to Robert’s Kira World GoFundMe for independent development support.",
+      "url": "https://www.linkedin.com/in/rmcmurrer/",
+      "topic": "support",
+      "tags": [
+        "support",
+        "donat",
+        "fund",
+        "help out",
+        "follow",
+        "updates page",
+        "social",
+        "facebook",
+        "linkedin",
+        "social media"
+      ]
+    },
+    {
+      "id": "topic:progress",
+      "title": "Kira World’s progress timeline",
+      "text": "The interactive progress page brings together public development videos, working prototypes, current work and next goals. Choose a milestone or move the slider to read its story; the Completed, Working on and Next goals filters help separate those stages. Video dates are publication dates, while undated current items were reviewed September 8. The page also shows the workstation and ways to help.",
+      "url": "https://kiralabs.org/progress.html",
+      "topic": "progress",
+      "tags": [
+        "timeline",
+        "progress timeline",
+        "development timeline",
+        "milestones",
+        "progress page"
+      ]
+    },
+    {
+      "id": "topic:progress:details",
+      "title": "Kira World’s progress timeline · details",
+      "text": "The journey includes public Kira World and TemporaryAI updates, spoken development tests, Studio demonstrations, the walkable Home World shell and conversation foundations. Current body and world integration work remains separate from the goals for Notebook Worlds, VR, shared servers and physical embodiment. Each selected card carries a short explanation, a relevant limit and source links.",
+      "url": "https://kiralabs.org/progress.html",
+      "topic": "progress",
+      "tags": [
+        "timeline",
+        "progress timeline",
+        "development timeline",
+        "milestones",
+        "progress page",
+        "details"
+      ]
+    },
+    {
+      "id": "topic:progress:how",
+      "title": "Kira World’s progress timeline · how",
+      "text": "Select a milestone in the constellation, use the arrow buttons or move the slider. The detail panel changes to that exact item. Filter the view to completed milestones, current work or next goals. On a small screen the milestones form a vertical list. Choose Watch video to load the selected YouTube player; it does not autoplay.",
+      "url": "https://kiralabs.org/progress.html",
+      "topic": "progress",
+      "tags": [
+        "timeline",
+        "progress timeline",
+        "development timeline",
+        "milestones",
+        "progress page",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:progress:status",
+      "title": "Kira World’s progress timeline · status",
+      "text": "The timeline is a dated project journal, not a live runtime monitor. Completed marks a working prototype, published test or explanation; it does not mean the whole world is finished. Next goals have no promised dates or completion percentages.",
+      "url": "https://kiralabs.org/progress.html",
+      "topic": "progress",
+      "tags": [
+        "timeline",
+        "progress timeline",
+        "development timeline",
+        "milestones",
+        "progress page",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:progress:privacy",
+      "title": "Kira World’s progress timeline · privacy",
+      "text": "The timeline loads its milestone notes and existing site images. A YouTube player is added only after you choose Watch video; opening it connects to YouTube. It is not a private resident conversation or a live view of Robert’s computer.",
+      "url": "https://kiralabs.org/progress.html",
+      "topic": "progress",
+      "tags": [
+        "timeline",
+        "progress timeline",
+        "development timeline",
+        "milestones",
+        "progress page",
+        "privacy"
+      ]
+    },
+    {
+      "id": "topic:equipment",
+      "title": "The equipment behind Kira World",
+      "text": "The workstation configuration checked September 8 is an Intel Core Ultra 9 285K with 24 cores, 32 GB DDR5 as 2 × 16 GB configured at 6000 MT/s, an RTX 5060 Ti with 16 GB VRAM, an ASUS ROG MAXIMUS Z890 HERO motherboard and a 2 TB drive. The first upgrade target is a compatible matched 64 GB memory kit; larger-VRAM and VR equipment are later priorities. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#hardware",
+      "topic": "equipment",
+      "tags": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades"
+      ]
+    },
+    {
+      "id": "topic:equipment:details",
+      "title": "The equipment behind Kira World · details",
+      "text": "A local Studio motion test stopped at memory admission, making more system RAM the first engineering-headroom target. A matched 2 × 32 GB DDR5 kit would need checking against ASUS memory support and the current system. Later, measured workloads may justify 24–32 GB VRAM. VR equipment should follow a world prototype ready for device tests. No particular purchase is selected. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#hardware",
+      "topic": "equipment",
+      "tags": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades",
+        "details"
+      ]
+    },
+    {
+      "id": "topic:equipment:how",
+      "title": "The equipment behind Kira World · how",
+      "text": "The next equipment choice should follow the actual workload and compatibility checks. Check the exact memory kit against ASUS support instead of assuming mixed modules work together. Benchmark heavier models before selecting a larger GPU, and test a ready world prototype before claiming headset support. Hardware adds capacity; it does not repair software defects. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#hardware",
+      "topic": "equipment",
+      "tags": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:equipment:status",
+      "title": "The equipment behind Kira World · status",
+      "text": "The current checked configuration has 32 GB system RAM and 16 GB GPU memory. The 64 GB matched-kit target and later larger-VRAM, VR and server equipment are proposed needs, not completed purchases. These dated notes do not read live memory usage from the workstation. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#hardware",
+      "topic": "equipment",
+      "tags": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:equipment:privacy",
+      "title": "The equipment behind Kira World · privacy",
+      "text": "The equipment section lists public configuration details, not serial numbers, private file paths or a live view of Robert’s machine. A hardware offer can be discussed directly with Robert; this guide does not arrange shipments or access anyone’s computer. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#hardware",
+      "topic": "equipment",
+      "tags": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades",
+        "privacy"
+      ]
+    },
+    {
+      "id": "topic:equipment:technical",
+      "title": "The equipment behind Kira World · technical",
+      "text": "The checked workstation uses an Intel Core Ultra 9 285K with 24 cores, 32 GB DDR5 as 2 × 16 GB at 6000 MT/s, an RTX 5060 Ti with 16 GB VRAM, an ASUS ROG MAXIMUS Z890 HERO and a 2 TB drive. The next RAM target is a matched 2 × 32 GB DDR5 kit, subject to exact compatibility checks. No GPU power-supply fit, headset compatibility or server specification is established here. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#hardware",
+      "topic": "equipment",
+      "tags": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades",
+        "technical"
+      ]
+    },
+    {
+      "id": "topic:equipment:cost",
+      "title": "The equipment behind Kira World · cost",
+      "text": "No priced shopping list, selected purchase or investment return is promised. The equipment page explains tentative priorities and why they could help. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#hardware",
+      "topic": "equipment",
+      "tags": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades",
+        "cost"
+      ]
+    },
+    {
+      "id": "topic:equipment:voice",
+      "title": "The equipment behind Kira World · voice",
+      "text": "No new voice-performance benchmark or voice-specific hardware purchase is established by these notes. Voice behavior and larger-model capacity still need testing on the selected setup. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#hardware",
+      "topic": "equipment",
+      "tags": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades",
+        "voice"
+      ]
+    },
+    {
+      "id": "topic:equipment:limits",
+      "title": "The equipment behind Kira World · limits",
+      "text": "More RAM or VRAM can provide headroom but cannot guarantee a completed workflow, better acting, reliable software or headset compatibility. Exact parts and tests come before any purchase decision. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#hardware",
+      "topic": "equipment",
+      "tags": [
+        "equipment",
+        "hardware",
+        "workstation",
+        "computer specs",
+        "ram",
+        "gpu",
+        "graphics card",
+        "processor",
+        "memory upgrade",
+        "upgrades",
+        "limits"
+      ]
+    },
+    {
+      "id": "topic:servers",
+      "title": "Future servers & shared worlds",
+      "text": "The longer-term goal is multiple synthetic people across multiple worlds, with people visiting through VR and responsive conversation. That will need shared world state and coordinated computing, voice and rendering. Low lag is a performance goal to measure, not a guarantee. No server count, price, user capacity or finished deployment is established. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#servers-next",
+      "topic": "servers",
+      "tags": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user"
+      ]
+    },
+    {
+      "id": "topic:servers:details",
+      "title": "Future servers & shared worlds · details",
+      "text": "Shared worlds would need to preserve who and what is present while conversations and activities happen at the same time. Distributed computing, consistent world state, recovery and the combined delays of voice, rendering and the network all matter. The right server capacity should come from actual multiuser and load tests, not an invented machine count. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#servers-next",
+      "topic": "servers",
+      "tags": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user",
+        "details"
+      ]
+    },
+    {
+      "id": "topic:servers:how",
+      "title": "Future servers & shared worlds · how",
+      "text": "The proposed direction is to coordinate computing across services while keeping shared world state consistent. Tests would need to measure concurrent people and visitors, recovery after interruption, and end-to-end latency. This describes the work required, not a deployed architecture already proven to support it. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#servers-next",
+      "topic": "servers",
+      "tags": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:servers:status",
+      "title": "Future servers & shared worlds · status",
+      "text": "Shared-server capacity for multiple populated worlds and VR visitors remains a future goal. The timeline does not claim a running public multiuser service, a supported user count or a low-latency result. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#servers-next",
+      "topic": "servers",
+      "tags": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:servers:privacy",
+      "title": "Future servers & shared worlds · privacy",
+      "text": "Shared worlds would need explicit decisions about access to people, conversations and world state. A completed server-specific privacy, retention and permission policy is not established in these notes. Local control remains a design preference rather than a guarantee about a future deployment. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#servers-next",
+      "topic": "servers",
+      "tags": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user",
+        "privacy"
+      ]
+    },
+    {
+      "id": "topic:servers:technical",
+      "title": "Future servers & shared worlds · technical",
+      "text": "Exact server specifications, machine count and supported users are not yet established. Shared-state consistency and measured voice, render and network latency should guide the eventual design. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#servers-next",
+      "topic": "servers",
+      "tags": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user",
+        "technical"
+      ]
+    },
+    {
+      "id": "topic:servers:cost",
+      "title": "Future servers & shared worlds · cost",
+      "text": "There is no selected server package, price, capacity commitment or promised investment return. Server donations and investment conversations are welcome, with requirements to be discussed before equipment is sent. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#servers-next",
+      "topic": "servers",
+      "tags": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user",
+        "cost"
+      ]
+    },
+    {
+      "id": "topic:servers:voice",
+      "title": "Future servers & shared worlds · voice",
+      "text": "Concurrent voice conversations add both computing demand and delay to the shared-world design. End-to-end voice and rendering latency must be measured with the intended workload; no low-lag guarantee is claimed. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#servers-next",
+      "topic": "servers",
+      "tags": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user",
+        "voice"
+      ]
+    },
+    {
+      "id": "topic:servers:limits",
+      "title": "Future servers & shared worlds · limits",
+      "text": "A public conversation test or a walkable apartment does not demonstrate many residents and visitors in concurrent worlds. Multiuser, load, recovery and latency tests remain necessary. Have spare hardware or want to discuss investment? Email rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/progress.html#servers-next",
+      "topic": "servers",
+      "tags": [
+        "future servers",
+        "server",
+        "servers",
+        "shared servers",
+        "multiple worlds",
+        "multiuser",
+        "multi-user",
+        "limits"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief",
+      "title": "ShiftBrief",
+      "text": "ShiftBrief is a free Windows business workspace for small teams. It brings employee availability, opening hours, schedules, completed-work records and source notes into one place. Sarah can answer from exact saved records and prepare staffing or coverage options for human review. Records · offline needs no AI model or account. The Windows installer includes the runtime; optional AI setup is separate. Start with a blank business or explicitly load the fictional eight-person demo.",
+      "url": "https://kiralabs.org/shiftbrief.html",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:status",
+      "title": "ShiftBrief · status",
+      "text": "Download the free ShiftBrief 0.1.0 Windows installer, run it and follow the setup prompts. The installer includes the Python runtime and app dependencies, so no separate Python setup is needed. A desktop shortcut is optional. Open ShiftBrief to use its local browser interface. Uninstalling the app retains saved business data. The public source checkout is also available; its manual Python setup is separate from the installer.",
+      "url": "https://github.com/rmcmurrer81/shiftbrief/releases/download/v0.1.0/ShiftBrief-Setup-0.1.0.exe",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "status"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:install",
+      "title": "ShiftBrief · install",
+      "text": "Download the free ShiftBrief 0.1.0 Windows installer, run it and follow the setup prompts. The installer includes the Python runtime and app dependencies, so no separate Python setup is needed. A desktop shortcut is optional. Open ShiftBrief to use its local browser interface. Uninstalling the app retains saved business data. The public source checkout is also available; its manual Python setup is separate from the installer.",
+      "url": "https://github.com/rmcmurrer81/shiftbrief/releases/download/v0.1.0/ShiftBrief-Setup-0.1.0.exe",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "install"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:cost",
+      "title": "ShiftBrief · cost",
+      "text": "ShiftBrief is free to download and use. Records · offline requires no account, model or usage credits. Optional cloud AI uses your own provider access and may cost money; optional local AI needs a separately installed model.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "cost"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:first_run",
+      "title": "ShiftBrief · first_run",
+      "text": "A first-time workspace starts with a blank business. You can create your own business, choose Load saved business, restore a complete backup from another computer, or explicitly Load demo. The optional Maple Street example is fictional: eight invented employees and sample records. It is not loaded automatically. Keep demo work separate from your own business and select the business you intend to edit.",
+      "url": "https://kiralabs.org/shiftbrief.html",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "first_run"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:save",
+      "title": "ShiftBrief · save",
+      "text": "Use Save business copy to download the selected business as a .shiftbrief.json file. On another computer, choose Load saved business to add it without removing businesses already there. The copy includes employees and history, availability, operating settings, planned schedules and recorded work. It excludes documents and conversations; use the complete backup for those.\n\nUse Back up all businesses for a complete .shiftbrief-workspace.json backup, including all businesses, documents and extracted revisions, handoffs and conversations. On the other computer choose Restore backup from previous computer, review the summary and confirm. Restore replaces that computer’s workspace after saving a backup of its previous state. Linked external documents stay disabled until you choose their paths again. Copy external original files separately; the backup does not include the app, models or credentials.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "save"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:how",
+      "title": "ShiftBrief · how",
+      "text": "In Records · offline, Sarah uses supported questions and saved-record tools, not a general language model. You can prepare employee and availability forms, inspect planned and completed work, review weekly schedules, lunch and sick-call options, and find source-backed notes. Draft proposals require review and acceptance before they become saved schedules. Unknown availability is not invented, and asking a question does not send a message to employees.\n\nShiftBrief keeps employee records, dated availability, business hours, saved schedules and recorded work together. Sarah helps answer exact-record questions, prepare staffing drafts and inspect uncovered time, so you can compare options without reconstructing the facts from scattered notes. Its saved revisions and review steps make it easier to see what was proposed and what you accepted. It does not promise a particular time saving or staffing outcome.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "how"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:benefits",
+      "title": "ShiftBrief · benefits",
+      "text": "ShiftBrief keeps employee records, dated availability, business hours, saved schedules and recorded work together. Sarah helps answer exact-record questions, prepare staffing drafts and inspect uncovered time, so you can compare options without reconstructing the facts from scattered notes. Its saved revisions and review steps make it easier to see what was proposed and what you accepted. It does not promise a particular time saving or staffing outcome.",
+      "url": "https://kiralabs.org/shiftbrief.html",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "benefits"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:technical",
+      "title": "ShiftBrief · technical",
+      "text": "Records · offline works without an installed AI model, account, API key or usage credits. Optional AI · local Ollama uses a separately installed and configured local model; no model weights are bundled. Optional AI · cloud Bedrock requires your own configured AWS access and can incur provider charges. Cloud use sends the question, recent conversation and selected saved facts to that provider. Choosing an AI mode does not authorize schedule changes or employee contact.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "technical"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:ai",
+      "title": "ShiftBrief · ai",
+      "text": "Records · offline works without an installed AI model, account, API key or usage credits. Optional AI · local Ollama uses a separately installed and configured local model; no model weights are bundled. Optional AI · cloud Bedrock requires your own configured AWS access and can incur provider charges. Cloud use sends the question, recent conversation and selected saved facts to that provider. Choosing an AI mode does not authorize schedule changes or employee contact.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "ai"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:departures",
+      "title": "ShiftBrief · departures",
+      "text": "If you report an already-decided departure, such as “I fired Morgan Stone” or “Morgan Stone quit,” Sarah opens an employment-ending review. You enter or review the first unavailable date; the chat message alone does not change it. Preview remaining shifts reads saved schedules without saving the departure. After you explicitly record the date, the coverage review totals remaining saved shifts and net planned hours and suggests eligible off-schedule people or adjacent early-start/late-finish options. It checks saved qualifications, availability, time off, overlap, employment dates and weekly restrictions. These are independent alternatives for your review, not a combined reassignment plan or confirmation that anyone agreed. Earlier history stays intact, and Sarah does not decide whom to fire.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "departures"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:privacy",
+      "title": "ShiftBrief · privacy",
+      "text": "The installed app saves its workspace on your computer. Records · offline uses local saved records. Business copies and complete backups are files you choose to share or move; keep them somewhere you trust. Optional cloud AI sends selected context to the configured provider. The website guide is separate: it has no access to your installed businesses and does not send this chat to Robert.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "privacy"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:details",
+      "title": "ShiftBrief · details",
+      "text": "In Records · offline, Sarah uses supported questions and saved-record tools, not a general language model. You can prepare employee and availability forms, inspect planned and completed work, review weekly schedules, lunch and sick-call options, and find source-backed notes. Draft proposals require review and acceptance before they become saved schedules. Unknown availability is not invented, and asking a question does not send a message to employees.\n\nA first-time workspace starts with a blank business. You can create your own business, choose Load saved business, restore a complete backup from another computer, or explicitly Load demo. The optional Maple Street example is fictional: eight invented employees and sample records. It is not loaded automatically. Keep demo work separate from your own business and select the business you intend to edit.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "details"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:voice",
+      "title": "ShiftBrief · voice",
+      "text": "The website’s Voice on button uses browser or device read-aloud. That is separate from ShiftBrief’s text workflow. The Windows installer does not include a personal voice model. Records · offline works through text without voice setup.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "voice"
+      ]
+    },
+    {
+      "id": "topic:shiftbrief:limits",
+      "title": "ShiftBrief · limits",
+      "text": "ShiftBrief is an early desktop release. Coverage options depend on the dates, availability, qualifications and restrictions you saved; missing records are not guessed. Planned hours are not proof of attendance or payroll. It is not payroll software or a labor-law assessment, and it does not contact employees, choose whom to fire or automatically assign replacement shifts. website guide Iris only explains these published notes and cannot open or change your desktop businesses.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "shift brief",
+        "shift-brief",
+        "limits"
+      ]
+    },
+    {
+      "id": "topic:prototypes",
+      "title": "The projects featured at Kira Labs",
+      "text": "Kira World is the flagship research project. ShiftBrief is a free Windows release. Video Studio is a private local creative tool in development, and Sarah Travel has private debug builds. Each project has its own page and status.",
+      "url": "https://kiralabs.org/projects.html",
+      "topic": "prototypes",
+      "tags": [
+        "prototypes",
+        "hackathons",
+        "hackathon",
+        "other apps",
+        "new apps",
+        "new projects",
+        "current projects",
+        "current apps",
+        "what else is robert building",
+        "what is being tested",
+        "broader projects"
+      ]
+    },
+    {
+      "id": "fact:robert-founder",
+      "title": "Meet Robert",
+      "text": "Robert McMurrer founded Kira Labs.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "robert",
+      "tags": [
+        "Who founded Kira Labs?"
+      ]
+    },
+    {
+      "id": "fact:robert-creator",
+      "title": "Meet Robert",
+      "text": "Robert McMurrer created the Kira World project.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "robert",
+      "tags": [
+        "What is Robert building?"
+      ]
+    },
+    {
+      "id": "fact:robert-base",
+      "title": "Meet Robert",
+      "text": "The current Kira Labs biography places Robert in Newark, New Jersey.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "robert",
+      "tags": [
+        "Where is Robert based?"
+      ]
+    },
+    {
+      "id": "fact:robert-independent",
+      "title": "Meet Robert",
+      "text": "Kira Labs is described as independent work outside a large company or university laboratory.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "robert",
+      "tags": [
+        "Is Kira Labs part of a university or large company?"
+      ]
+    },
+    {
+      "id": "fact:robert-motivation",
+      "title": "Meet Robert",
+      "text": "Robert describes continuity across conversations and ordinary life as a motivation for Kira World.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "robert",
+      "tags": [
+        "Why did he start Kira World?"
+      ]
+    },
+    {
+      "id": "fact:robert-contact",
+      "title": "Meet Robert",
+      "text": "The public contact email is rmcmurrer@kiralabs.org.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "robert",
+      "tags": [
+        "How can I contact Robert?"
+      ]
+    },
+    {
+      "id": "fact:robert-born",
+      "title": "Meet Robert",
+      "text": "IMDb lists Robert’s birth as June 1, 1981, in Indianapolis, Indiana.",
+      "url": "https://www.imdb.com/name/nm2258412/bio/",
+      "topic": "robert",
+      "tags": [
+        "Where and when was Robert born?"
+      ]
+    },
+    {
+      "id": "fact:robert-screen-background",
+      "title": "Meet Robert",
+      "text": "IMDb describes experience in acting and independent film production, followed by screenwriting.",
+      "url": "https://www.imdb.com/name/nm2258412/bio/",
+      "topic": "robert",
+      "tags": [
+        "What is his entertainment background?"
+      ]
+    },
+    {
+      "id": "fact:robert-first-background-job",
+      "title": "Meet Robert",
+      "text": "IMDb says his first background acting job was an Indiana television advertisement.",
+      "url": "https://www.imdb.com/name/nm2258412/bio/",
+      "topic": "robert",
+      "tags": [
+        "What was his first acting job?"
+      ]
+    },
+    {
+      "id": "fact:robert-school-class",
+      "title": "Meet Robert",
+      "text": "IMDb associates him with Warren Central High School’s class of 2000 in Indianapolis. That association does not establish a graduation claim.",
+      "url": "https://www.imdb.com/name/nm2258412/bio/",
+      "topic": "robert",
+      "tags": [
+        "What school background is publicly documented?"
+      ]
+    },
+    {
+      "id": "fact:robert-themepark-work",
+      "title": "Meet Robert",
+      "text": "IMDb describes rides-operation and later retail work at Universal Studios Theme Park in Universal City.",
+      "url": "https://www.imdb.com/name/nm2258412/bio/",
+      "topic": "robert",
+      "tags": [
+        "What other work has he done?"
+      ]
+    },
+    {
+      "id": "fact:credit-blood-tulip",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as Sticks in Blood Tulip (2019).",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "What did he do in Blood Tulip?"
+      ]
+    },
+    {
+      "id": "fact:credit-lunch-john",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as John in Lunch with a Friend (2011).",
+      "url": "https://www.imdb.com/title/tt2056642/",
+      "topic": "entertainment",
+      "tags": [
+        "What did he do in Lunch with a Friend?"
+      ]
+    },
+    {
+      "id": "fact:credit-this-girl-dazlyn",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as Cliff in This Girl Dazlyn (2016).",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "What did he do in This Girl Dazlyn?"
+      ]
+    },
+    {
+      "id": "fact:credit-collegehumor",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as Partygoer in CollegeHumor Originals (2016, 1 episode).",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "What did he do in CollegeHumor Originals?"
+      ]
+    },
+    {
+      "id": "fact:credit-directors-cut",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as Charles Whitman in Director’s Cut (uncredited) (2016).",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "What did he do in Director’s Cut?"
+      ]
+    },
+    {
+      "id": "fact:credit-truth-or-dare",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as Audience Member in Truth or Dare (2013).",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "What did he do in Truth or Dare?"
+      ]
+    },
+    {
+      "id": "fact:credit-look-at-me",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as Pool Player in Look at Me (uncredited) (2012).",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "What did he do in Look at Me?"
+      ]
+    },
+    {
+      "id": "fact:credit-parks",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as Meeting Member in Parks and Recreation (uncredited) (2011, 1 episode).",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "What did he do in Parks and Recreation?"
+      ]
+    },
+    {
+      "id": "fact:credit-barely-legal",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as Party Attendee in Barely Legal (2011).",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "What did he do in Barely Legal?"
+      ]
+    },
+    {
+      "id": "fact:credit-born-bad",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as Background Person in Born Bad (2011).",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "What did he do in Born Bad?"
+      ]
+    },
+    {
+      "id": "fact:credit-glee",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as NY Audience Man in Glee (uncredited) (2011, 1 episode).",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "What did he do in Glee?"
+      ]
+    },
+    {
+      "id": "fact:credit-circle",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as Student in Circle (2010).",
+      "url": "https://www.imdb.com/name/nm2258412/",
+      "topic": "entertainment",
+      "tags": [
+        "What did he do in Circle?"
+      ]
+    },
+    {
+      "id": "fact:credit-yes-man",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as Convention Patron in Yes Man, uncredited (2008).",
+      "url": "https://pro.imdb.com/title/tt1068680/",
+      "topic": "entertainment",
+      "tags": [
+        "What was his part in Yes Man?"
+      ]
+    },
+    {
+      "id": "fact:lunch-director",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as director of Lunch with a Friend.",
+      "url": "https://www.imdb.com/title/tt2056642/",
+      "topic": "entertainment",
+      "tags": [
+        "Did Robert direct Lunch with a Friend?"
+      ]
+    },
+    {
+      "id": "fact:lunch-writer",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists Robert as writer of Lunch with a Friend.",
+      "url": "https://www.imdb.com/title/tt2056642/",
+      "topic": "entertainment",
+      "tags": [
+        "Did Robert write Lunch with a Friend?"
+      ]
+    },
+    {
+      "id": "fact:lunch-release",
+      "title": "Robert’s movie & TV credits",
+      "text": "IMDb lists July 16, 2011 as the US release date of the short Lunch with a Friend.",
+      "url": "https://www.imdb.com/title/tt2056642/",
+      "topic": "entertainment",
+      "tags": [
+        "When was Lunch with a Friend released?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gh162d4h",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Trump and Epstein: Parties to Crimes.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Trump and Epstein: Parties to Crimes?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gl88v288",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists The Path Less Traveled.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find The Path Less Traveled?"
+      ]
+    },
+    {
+      "id": "fact:book-b0ghzyffdq",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists The Trump Dynasty: Power, Wealth, and Controversy.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find The Trump Dynasty: Power, Wealth, and Controversy?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gh7bf9tt",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Trump’s Reign: A Chronicle of Controversy.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Trump’s Reign: A Chronicle of Controversy?"
+      ]
+    },
+    {
+      "id": "fact:book-b0ggzwpx8c",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists The Long Walk North.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find The Long Walk North?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gjnx9b5y",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Clinton Family Criminal Record.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Clinton Family Criminal Record?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gk49v853",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists ROBIN HOOD vs. VAMPIRES: The Dracula War.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find ROBIN HOOD vs. VAMPIRES: The Dracula War?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gk2rykj5",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Dorothy’s Dark Return to Oz.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Dorothy’s Dark Return to Oz?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gjrm8vhq",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists 1933 Italian UFO Crash: Nazi Secrets.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find 1933 Italian UFO Crash: Nazi Secrets?"
+      ]
+    },
+    {
+      "id": "fact:book-b0ghbjnl8k",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Lunar Colony: A New Frontier.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Lunar Colony: A New Frontier?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gl9t3vt2",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists The Epic of Gilgamesh: A King’s Journey of Mortality.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find The Epic of Gilgamesh: A King’s Journey of Mortality?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gkxzyg4y",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Navigating the Globe with a Criminal Record.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Navigating the Globe with a Criminal Record?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gl8fypx2",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Sci-Fi Seeds: Tech of Tomorrow.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Sci-Fi Seeds: Tech of Tomorrow?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gkc45w82",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists The Line Between Love and Rage.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find The Line Between Love and Rage?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gk6268r2",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Galactic Revelation: Humanity’s Unpreparedness.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Galactic Revelation: Humanity’s Unpreparedness?"
+      ]
+    },
+    {
+      "id": "fact:book-b0ghcxlgxs",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists The Dreamer’s Deportation.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find The Dreamer’s Deportation?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gh2xrm1t",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Robert’s Sicilian Dream.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Robert’s Sicilian Dream?"
+      ]
+    },
+    {
+      "id": "fact:book-b00h055mc4",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists The Dark Storm Inside Of Me.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find The Dark Storm Inside Of Me?"
+      ]
+    },
+    {
+      "id": "fact:book-b00h68caa2",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Driving Into The Dark Storm.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Driving Into The Dark Storm?"
+      ]
+    },
+    {
+      "id": "fact:book-b0f71vh3s2",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Microwave Motel Meals.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Microwave Motel Meals?"
+      ]
+    },
+    {
+      "id": "fact:book-b0ggy7n6sj",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Ghostline: The Continental Network.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Ghostline: The Continental Network?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gk4m39tp",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Casanova’s Vampire Embrace.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Casanova’s Vampire Embrace?"
+      ]
+    },
+    {
+      "id": "fact:book-b0f6mkg8zr",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists The Tommy Westphall Universe: A Connected World.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find The Tommy Westphall Universe: A Connected World?"
+      ]
+    },
+    {
+      "id": "fact:book-b0gkchs6jq",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Sicily: A Rational Relocation for Neurodivergent Adults.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Sicily: A Rational Relocation for Neurodivergent Adults?"
+      ]
+    },
+    {
+      "id": "fact:book-b004rz28u4",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Poetry Madhouse.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Poetry Madhouse?"
+      ]
+    },
+    {
+      "id": "fact:book-b0f6nt2qpd",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Recipes for Life: A Cookbook.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Recipes for Life: A Cookbook?"
+      ]
+    },
+    {
+      "id": "fact:book-b0f7cl734b",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Bars Of Innocence.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Bars Of Innocence?"
+      ]
+    },
+    {
+      "id": "fact:book-b0f6m9c56r",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists Cosplay Cuisine.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find Cosplay Cuisine?"
+      ]
+    },
+    {
+      "id": "fact:book-b0cl2f9kkr",
+      "title": "Robert’s books",
+      "text": "Robert’s published catalogue lists A Life of Monsters and Hope: The Life of Robert McMurrer.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "Where can I find A Life of Monsters and Hope: The Life of Robert McMurrer?"
+      ]
+    },
+    {
+      "id": "fact:book-description-b0gl88v288",
+      "title": "Robert’s books",
+      "text": "The Path Less Traveled: Rebuilding after disruption and reconsidering conventional success.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "What is The Path Less Traveled about?"
+      ]
+    },
+    {
+      "id": "fact:book-description-b0ggzwpx8c",
+      "title": "Robert’s books",
+      "text": "The Long Walk North: A teenager travels north after leaving an abusive home.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "What is The Long Walk North about?"
+      ]
+    },
+    {
+      "id": "fact:book-description-b0gl8fypx2",
+      "title": "Robert’s books",
+      "text": "Sci-Fi Seeds: Tech of Tomorrow: Science fiction’s influence on technological imagination.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "What is Sci-Fi Seeds: Tech of Tomorrow about?"
+      ]
+    },
+    {
+      "id": "fact:book-description-b00h68caa2",
+      "title": "Robert’s books",
+      "text": "Driving Into The Dark Storm: Short fiction combines personal drama with science-fiction ideas.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "What is Driving Into The Dark Storm about?"
+      ]
+    },
+    {
+      "id": "fact:book-description-b004rz28u4",
+      "title": "Robert’s books",
+      "text": "Poetry Madhouse: A poetry collection.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "What is Poetry Madhouse about?"
+      ]
+    },
+    {
+      "id": "fact:book-description-b0f6m9c56r",
+      "title": "Robert’s books",
+      "text": "Cosplay Cuisine: Themed recipes connect cooking with fandom.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "books",
+      "tags": [
+        "What is Cosplay Cuisine about?"
+      ]
+    },
+    {
+      "id": "fact:poetry-print-edition",
+      "title": "Robert’s books",
+      "text": "The bookseller lists a Poetry Madhouse paperback dated January 21, 2011, ISBN 9781456534325.",
+      "url": "https://imusic.dk/books/9781456534325/robert-mcmurrer-2011-poetry-madhouse-paperback-bog",
+      "topic": "books",
+      "tags": [
+        "When was the Poetry Madhouse paperback published?"
+      ]
+    },
+    {
+      "id": "fact:labs-world-distinction",
+      "title": "Kira Labs",
+      "text": "Kira Labs is the wider studio; Kira World is its central project.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "world",
+      "tags": [
+        "How are Kira Labs and Kira World different?"
+      ]
+    },
+    {
+      "id": "fact:world-distinct-people",
+      "title": "Kira World",
+      "text": "Kira and Lisa are designed as separate identities.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "world",
+      "tags": [
+        "Are Kira and Lisa the same assistant?"
+      ]
+    },
+    {
+      "id": "fact:world-continuity",
+      "title": "Kira World",
+      "text": "Conversation records and reviewed memory support continuity across sessions.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "How can a later conversation remember earlier context?"
+      ]
+    },
+    {
+      "id": "fact:world-separate-truth",
+      "title": "Kira World",
+      "text": "The design separates speech, verifiable runtime events and reviewed memory.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "Does something said in conversation automatically become a fact?"
+      ]
+    },
+    {
+      "id": "fact:world-voice",
+      "title": "Kira World",
+      "text": "Local speech and voice-reference experiments exist.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "Does Kira World have voice work?"
+      ]
+    },
+    {
+      "id": "fact:world-shell",
+      "title": "Kira World",
+      "text": "A navigable one-bedroom Home World shell exists.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "What part of Home World already works?"
+      ]
+    },
+    {
+      "id": "fact:world-shell-limit",
+      "title": "Kira World",
+      "text": "The shell does not establish a fully populated, persistent shared life.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "Is the complete shared home finished?"
+      ]
+    },
+    {
+      "id": "fact:world-body",
+      "title": "Kira World",
+      "text": "Body and garment work includes test requirements and fixtures.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "What body and clothing work is underway?"
+      ]
+    },
+    {
+      "id": "fact:world-clothing-limit",
+      "title": "Kira World",
+      "text": "A finished body and production clothing simulation are not claimed.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "Can clothing already behave naturally on a finished resident?"
+      ]
+    },
+    {
+      "id": "fact:world-notebooks",
+      "title": "Kira World",
+      "text": "Notebook Worlds are proposed places for focused activities.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "What are Notebook Worlds?"
+      ]
+    },
+    {
+      "id": "fact:world-notebook-activities",
+      "title": "Kira World",
+      "text": "Proposed activities include travel, study, creativity, history and play.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "What could Notebook Worlds be used for?"
+      ]
+    },
+    {
+      "id": "fact:world-vr",
+      "title": "Kira World",
+      "text": "Accessible VR and multimodal presence remain long-term directions.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "Is VR already available?"
+      ]
+    },
+    {
+      "id": "fact:world-robotics",
+      "title": "Kira World",
+      "text": "Robotics follows a simulation-first direction.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "Does Kira already operate a robot?"
+      ]
+    },
+    {
+      "id": "fact:world-consciousness",
+      "title": "Kira World",
+      "text": "Kira Labs does not claim current systems are conscious.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": [
+        "Do these prototypes prove consciousness?"
+      ]
+    },
+    {
+      "id": "fact:world-platforms",
+      "title": "Kira World",
+      "text": "Public project notes identify Windows development and Android research.",
+      "url": "https://kiralabs.org/projects.html",
+      "topic": "world",
+      "tags": [
+        "Which platforms are involved?"
+      ]
+    },
+    {
+      "id": "fact:world-private",
+      "title": "Kira World",
+      "text": "Kira World is described as private prototypes, not a released public product.",
+      "url": "https://kiralabs.org/projects.html",
+      "topic": "world",
+      "tags": [
+        "Can I download the complete Kira World?"
+      ]
+    },
+    {
+      "id": "fact:travel-debug",
+      "title": "Sarah Travel",
+      "text": "Sarah Travel is a private Android and Windows debug project.",
+      "url": "https://kiralabs.org/projects.html",
+      "topic": "travel",
+      "tags": [
+        "Is Sarah Travel publicly released?"
+      ]
+    },
+    {
+      "id": "fact:travel-route",
+      "title": "Sarah Travel",
+      "text": "Sarah Travel’s described route test includes an online route and offline fallback.",
+      "url": "https://kiralabs.org/projects.html",
+      "topic": "travel",
+      "tags": [
+        "What travel behavior has been tested?"
+      ]
+    },
+    {
+      "id": "fact:studio-local",
+      "title": "Video Studio",
+      "text": "The project page describes a retained local v1.9 video-production workflow. This is a historical published baseline, not a current certification of every feature.",
+      "url": "https://kiralabs.org/projects.html",
+      "topic": "studio",
+      "tags": [
+        "What Video Studio foundation exists?"
+      ]
+    },
+    {
+      "id": "fact:studio-chapters",
+      "title": "Video Studio",
+      "text": "The public page reports a preserved 14-chapter final output.",
+      "url": "https://kiralabs.org/projects.html",
+      "topic": "studio",
+      "tags": [
+        "Has the local workflow produced a long project?"
+      ]
+    },
+    {
+      "id": "fact:studio-publication",
+      "title": "Video Studio",
+      "text": "The page says that retained output was not posted publicly.",
+      "url": "https://kiralabs.org/projects.html",
+      "topic": "studio",
+      "tags": [
+        "Can I watch that specific 14-chapter output?"
+      ]
+    },
+    {
+      "id": "fact:creator-types",
+      "title": "Temporary Creator",
+      "text": "The public Creator explainer describes source packs, creation type and historical date or life stage.",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw",
+      "topic": "temporary-creator",
+      "tags": [
+        "How does TemporaryAI Creator organize a person’s design?"
+      ]
+    },
+    {
+      "id": "fact:creator-voice-evidence",
+      "title": "Temporary Creator",
+      "text": "That explainer treats voice evidence, rights and authorization as part of preparation.",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw",
+      "topic": "temporary-creator",
+      "tags": [
+        "What does it say about voice evidence?"
+      ]
+    },
+    {
+      "id": "fact:creator-spoken-tests",
+      "title": "Temporary Creator",
+      "text": "Public July 24–25 descriptions report spoken TemporaryAI conversation tests.",
+      "url": "https://www.youtube.com/watch?v=vNRTwMvkR3g",
+      "topic": "temporary-creator",
+      "tags": [
+        "Has Temporary Creator done more than produce a written plan?"
+      ]
+    },
+    {
+      "id": "fact:creator-avatars-unfinished",
+      "title": "Temporary Creator",
+      "text": "The Peter Parker test description says a finished avatar and world location were absent.",
+      "url": "https://www.youtube.com/watch?v=vNRTwMvkR3g",
+      "topic": "temporary-creator",
+      "tags": [
+        "Did the spoken test include a finished animated resident?"
+      ]
+    },
+    {
+      "id": "fact:creator-canon-errors",
+      "title": "Temporary Creator",
+      "text": "The Marinette test description identifies invented story details and internal language in replies.",
+      "url": "https://www.youtube.com/watch?v=5Nllo6oAfYA",
+      "topic": "temporary-creator",
+      "tags": [
+        "What failed during a character test?"
+      ]
+    },
+    {
+      "id": "fact:creator-expert-file-errors",
+      "title": "Temporary Creator",
+      "text": "The robotics-expert test description identifies false saved-file claims and a file-type error.",
+      "url": "https://www.youtube.com/watch?v=rYuwe1dgAeI",
+      "topic": "temporary-creator",
+      "tags": [
+        "What failed during the expert test?"
+      ]
+    },
+    {
+      "id": "fact:creator-expert-not-robot",
+      "title": "Temporary Creator",
+      "text": "The robotics-expert video describes software conversation and design work, not deployed robotic movement.",
+      "url": "https://www.youtube.com/watch?v=rYuwe1dgAeI",
+      "topic": "temporary-creator",
+      "tags": [
+        "Does the robotics video show a working physical robot?"
+      ]
+    },
+    {
+      "id": "fact:creator-generic-historical-voice",
+      "title": "Temporary Creator",
+      "text": "The Holmes description explicitly identifies generic Windows speech rather than an authentic historical voice.",
+      "url": "https://www.youtube.com/watch?v=nj2ZcdfxSWI",
+      "topic": "temporary-creator",
+      "tags": [
+        "Is the historical variant’s voice authentic?"
+      ]
+    },
+    {
+      "id": "fact:avatar-public-workflow",
+      "title": "Avatar bodies & clothing",
+      "text": "The public TemporaryAI explainer includes appearance references and Avatar Builder in the proposed creation workflow.",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw",
+      "topic": "avatar-bodies",
+      "tags": [
+        "How does Avatar Builder fit into Temporary Creator?"
+      ]
+    },
+    {
+      "id": "fact:avatar-test-unfinished",
+      "title": "Avatar bodies & clothing",
+      "text": "The public robotics-expert test says its individual body and voice were not yet complete.",
+      "url": "https://www.youtube.com/watch?v=rYuwe1dgAeI",
+      "topic": "avatar-bodies",
+      "tags": [
+        "Did the synthetic expert have a completed body?"
+      ]
+    },
+    {
+      "id": "fact:body-articulated-tests",
+      "title": "Avatar bodies & clothing",
+      "text": "The public body work calls for articulated non-person fixtures before believable garment behavior is claimed.",
+      "url": "https://kiralabs.org/",
+      "topic": "avatar-bodies",
+      "tags": [
+        "Why test a body before clothing?"
+      ]
+    },
+    {
+      "id": "fact:clothing-sequential-goal",
+      "title": "Avatar bodies & clothing",
+      "text": "The intended garment work includes dressing, undressing, folding, hanging and dropping separate clothing objects.",
+      "url": "https://kiralabs.org/",
+      "topic": "avatar-bodies",
+      "tags": [
+        "What should clothing eventually do?"
+      ]
+    },
+    {
+      "id": "fact:worldbuilder-public-gap",
+      "title": "World Builder & future places",
+      "text": "The public material describes purpose-built Notebook Worlds but does not provide a verified World Builder procedure.",
+      "url": "https://kiralabs.org/",
+      "topic": "world-builder",
+      "tags": [
+        "Can I create my own world now?"
+      ]
+    },
+    {
+      "id": "fact:vr-compatibility-gap",
+      "title": "Virtual reality",
+      "text": "The published timeline does not claim a supported headset list or finished VR experience.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "vr",
+      "tags": [
+        "Which headset can I use?"
+      ]
+    },
+    {
+      "id": "fact:robotics-controlled-tests",
+      "title": "Robotics & physical embodiment",
+      "text": "The published timeline places simulation and controlled tests before physical embodiment claims.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "robotics",
+      "tags": [
+        "What comes before a real robot?"
+      ]
+    },
+    {
+      "id": "fact:proposal-meta-museum",
+      "title": "World Builder & future places",
+      "text": "Museum walkthroughs and possible Meta experiences were proposed on September 8, 2026 as directions that might help fund future work. No existing Meta app, partnership, funding award or revenue is established.",
+      "url": "https://kiralabs.org/knowledge.html#proposals",
+      "topic": "world-builder",
+      "tags": []
+    },
+    {
+      "id": "fact:notebook-transitions",
+      "title": "Notebook Worlds",
+      "text": "The public Notebook World concept does not yet establish implemented world creation, transitions, shared sessions or memory exchange. A working generator or portal system should not be inferred from the concept.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "notebook-worlds",
+      "tags": []
+    },
+    {
+      "id": "fact:notebook-voice",
+      "title": "Notebook Worlds",
+      "text": "The intended continuity includes the same resident voice across activities. Existing local voice experiments do not prove that voice already operates inside completed Notebook Worlds.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "notebook-worlds",
+      "tags": []
+    },
+    {
+      "id": "fact:notebook-library",
+      "title": "Notebook Worlds",
+      "text": "The proposed activity examples are not a completed world library or a claim of historically accurate simulations.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "notebook-worlds",
+      "tags": []
+    },
+    {
+      "id": "fact:technical-kira-component-boundaries",
+      "title": "Kira World",
+      "text": "Kira World separates identity, reviewed memory, voice and visible presence, world state, and permissioned action. These components are intended to work together while retaining distinct responsibilities. The overview does not prove every proposed ability is implemented.",
+      "url": "https://kiralabs.org/",
+      "topic": "world",
+      "tags": []
+    },
+    {
+      "id": "fact:technical-kira-state-types",
+      "title": "Kira World",
+      "text": "The July 23 update distinguishes spoken dialogue, private thoughts, runtime events, and reviewed memory. A generated statement is not automatically a saved memory or a completed world action. This is the dated public report, not a fresh audit of the resident runtime.",
+      "url": "https://www.youtube.com/watch?v=UYsKn8lzhWs",
+      "topic": "world",
+      "tags": []
+    },
+    {
+      "id": "fact:technical-kira-world-status",
+      "title": "Kira World",
+      "text": "In the 2026-07-23 public source, the public update reports work on HomeWorld and visible embodiment, alongside unfinished blinking, movement, and body work. The roadmap should be read as a mixture of demonstrated steps and future work. No finished VR release, complete autonomous life, or consciousness claim follows from this evidence.",
+      "url": "https://www.youtube.com/watch?v=UYsKn8lzhWs",
+      "topic": "world",
+      "tags": []
+    },
+    {
+      "id": "fact:technical-studio-public-workflow",
+      "title": "Video Studio",
+      "text": "The July Studio overview describes versioned projects, source-backed research, visual candidates, scripts and storyboards, narration reuse, captions, local MP4 assembly, and review. It distinguishes the preserved release from separate development work. Do not relabel that historical overview as a complete inventory of today’s installed Studio.",
+      "url": "https://www.youtube.com/watch?v=8vjcEBJTwbM",
+      "topic": "studio",
+      "tags": []
+    },
+    {
+      "id": "fact:authored-qwen-resident",
+      "title": "Kira World",
+      "text": "An August 10, 2026 technical roadmap selected qwen3.5:9b for normal Kira text conversation. That is a dated selection; the model currently running has not been verified.",
+      "url": "https://kiralabs.org/knowledge.html#technical",
+      "topic": "world",
+      "tags": []
+    },
+    {
+      "id": "fact:authored-photomaker-sdxl",
+      "title": "Video Studio",
+      "text": "PhotoMaker v1 with Stable Diffusion XL base 1.0 completed a local portrait-generation test on September 8, 2026. This establishes tested generation, not likeness or visual-quality approval.",
+      "url": "https://kiralabs.org/knowledge.html#technical",
+      "topic": "local-studio-models",
+      "tags": []
+    },
+    {
+      "id": "fact:authored-chatterbox-speech",
+      "title": "Video Studio",
+      "text": "Chatterbox completed a local speech-generation test on September 8, 2026; a later attempt failed. Fresh speech generation is therefore not confirmed currently available.",
+      "url": "https://kiralabs.org/knowledge.html#technical",
+      "topic": "local-studio-models",
+      "tags": []
+    },
+    {
+      "id": "fact:authored-musetalk-video",
+      "title": "Video Studio",
+      "text": "MuseTalk 1.5 completed a local audio-driven facial-video test on September 8, 2026. Natural mouth detail, speech alignment and likeness still require visual review.",
+      "url": "https://kiralabs.org/knowledge.html#technical",
+      "topic": "local-studio-models",
+      "tags": []
+    },
+    {
+      "id": "fact:authored-musetalk-audio-features",
+      "title": "Video Studio",
+      "text": "The tested MuseTalk integration uses Whisper tiny to encode audio features for facial animation. This use does not establish that a transcript was produced or understood.",
+      "url": "https://kiralabs.org/knowledge.html#technical",
+      "topic": "local-studio-models",
+      "tags": []
+    },
+    {
+      "id": "fact:authored-musetalk-vae",
+      "title": "Video Studio",
+      "text": "The tested MuseTalk integration uses the Stable Diffusion ft-MSE VAE to encode and decode face imagery within the animation pipeline.",
+      "url": "https://kiralabs.org/knowledge.html#technical",
+      "topic": "local-studio-models",
+      "tags": []
+    },
+    {
+      "id": "fact:authored-vace-motion",
+      "title": "Video Studio",
+      "text": "Wan-AI/Wan2.1-VACE-1.3B-diffusers was selected in the local picture-motion configuration reviewed on September 8, 2026. Configuration does not establish a completed acting shot.",
+      "url": "https://kiralabs.org/knowledge.html#technical",
+      "topic": "local-studio-models",
+      "tags": []
+    },
+    {
+      "id": "fact:authored-svd-discovery",
+      "title": "Video Studio",
+      "text": "Local runtime-discovery code supports stabilityai/stable-video-diffusion-img2vid-xt for image-to-video. This review did not verify a fresh generation using that route.",
+      "url": "https://kiralabs.org/knowledge.html#technical",
+      "topic": "local-studio-models",
+      "tags": []
+    },
+    {
+      "id": "fact:authored-ace-music",
+      "title": "Video Studio",
+      "text": "The music contract reviewed on September 8, 2026 names ACE-Step with the acestep-v15-base variant. This establishes configured support, not a newly verified music-generation result.",
+      "url": "https://kiralabs.org/knowledge.html#technical",
+      "topic": "local-studio-models",
+      "tags": []
+    },
+    {
+      "id": "fact:authored-worldbuilder-after-studio",
+      "title": "World Builder & future places",
+      "text": "Robert’s proposed next focus after Studio is WorldBuilder. This direction was stated on September 8, 2026; it is not a completed product or release schedule.",
+      "url": "https://kiralabs.org/knowledge.html#proposals",
+      "topic": "world-builder",
+      "tags": []
+    },
+    {
+      "id": "fact:history-UYsKn8lzhWs",
+      "title": "Kira World’s progress timeline",
+      "text": "2026-07-23 publication: Robert published “Kira World Update: What Works, What Is Still Blocked & What Comes Next”. A public update reports the then-current continuity, voice, Home World and body work, including blocked blinking and unfinished embodiment. A historical progress report, not current certification of every capability. Its Studio illustrations are labeled concept art.",
+      "url": "https://www.youtube.com/watch?v=UYsKn8lzhWs",
+      "topic": "progress",
+      "tags": [
+        "What does the 2026-07-23 Kira World update show?"
+      ]
+    },
+    {
+      "id": "fact:history-8vjcEBJTwbM",
+      "title": "Kira World’s progress timeline",
+      "text": "2026-07-23 publication: Robert published “Inside Kira Labs Video Studio: How Kira World Will Create Its Own Videos”. A public explainer describes the preserved local v1.9 production workflow and a separately staged next version. The description distinguishes the working baseline from future interface concepts; it does not prove all later functionality was finished.",
+      "url": "https://www.youtube.com/watch?v=8vjcEBJTwbM",
+      "topic": "progress",
+      "tags": [
+        "What does the 2026-07-23 Video Studio update show?"
+      ]
+    },
+    {
+      "id": "fact:history-h5RQiAlBVYw",
+      "title": "Kira World’s progress timeline",
+      "text": "2026-07-24 publication: Robert published “Inside Kira World’s TemporaryAI Creator: From Sources to a Synthetic Person”. A public feature explains a source-based creation workflow: creation type, historical date, appearance references, voice evidence and intended world placement. This is an explanation of the workflow; its metadata alone does not demonstrate a finished animated resident or completed world placement.",
+      "url": "https://www.youtube.com/watch?v=h5RQiAlBVYw",
+      "topic": "progress",
+      "tags": [
+        "What does the 2026-07-24 Temporary Creator update show?"
+      ]
+    },
+    {
+      "id": "fact:history-e3vaQFJ04Qo",
+      "title": "Kira World’s progress timeline",
+      "text": "2026-07-24 publication: Robert published “Kira World: A Personal Expert Who Learns How You Learn”. A public concept explores a continuing tutor who adapts explanations and conversation while retaining identity and permissioned memory. The description explicitly calls this a concept. It does not establish a validated learning product or measured educational outcomes.",
+      "url": "https://www.youtube.com/watch?v=e3vaQFJ04Qo",
+      "topic": "progress",
+      "tags": [
+        "What does the 2026-07-24 Minds and learning update show?"
+      ]
+    },
+    {
+      "id": "fact:history-vNRTwMvkR3g",
+      "title": "Kira World’s progress timeline",
+      "text": "2026-07-24 publication: Robert published “I Interviewed a Synthetic Peter Parker After No Way Home | Kira World TemporaryAI Test”. The public description reports Robert asking spoken questions and an individualized test voice answering as a synthetic interpretation of Peter Parker. It retains an internal-language failure and unconfirmed continuation details; the description says no finished avatar or physical location. Unofficial interpretation, not the actor or an official voice.",
+      "url": "https://www.youtube.com/watch?v=vNRTwMvkR3g",
+      "topic": "progress",
+      "tags": [
+        "What does the 2026-07-24 Temporary Creator update show?"
+      ]
+    },
+    {
+      "id": "fact:history-nj2ZcdfxSWI",
+      "title": "Kira World’s progress timeline",
+      "text": "2026-07-24 publication: Robert published “I Interviewed an H. H. Holmes Historical TemporaryAI | What Worked and What Failed”. The public description reports a spoken interview with an 1894-set synthetic interpretation of H. H. Holmes. The video description identifies a chronology error, disputed history and evasive answers. Generic Windows speech is explicitly not an authentic historical voice.",
+      "url": "https://www.youtube.com/watch?v=nj2ZcdfxSWI",
+      "topic": "progress",
+      "tags": [
+        "What does the 2026-07-24 Temporary Creator update show?"
+      ]
+    },
+    {
+      "id": "fact:history-rYuwe1dgAeI",
+      "title": "Kira World’s progress timeline",
+      "text": "2026-07-25 publication: Robert published “I Tested a Synthetic Robotics Engineer | What Worked, Failed & Was Missing”. The public description reports a synthetic expert discussing robotics and producing a small OpenSCAD concept, with a spoken interface. It also reports false saved-file claims and a file-type error; live research was not verified and an individual voice/body was unfinished. This is expert conversation, not a working robot.",
+      "url": "https://www.youtube.com/watch?v=rYuwe1dgAeI",
+      "topic": "progress",
+      "tags": [
+        "What does the 2026-07-25 Temporary Creator and robotics update show?"
+      ]
+    },
+    {
+      "id": "fact:history-5Nllo6oAfYA",
+      "title": "Kira World’s progress timeline",
+      "text": "2026-07-25 publication: Robert published “I Tested a Temporary Marinette AI — Her Canon Went Completely Off the Rails”. The public description reports spoken questions and a generated test voice, with basic identity and interests followed by detailed factual testing. The description identifies invented canon, confused abilities and internal research language. It is an unofficial development test, not evidence of canon reliability or a completed resident.",
+      "url": "https://www.youtube.com/watch?v=5Nllo6oAfYA",
+      "topic": "progress",
+      "tags": [
+        "What does the 2026-07-25 Temporary Creator update show?"
+      ]
+    },
+    {
+      "id": "fact:history-nsfpHVfVfho",
+      "title": "Kira World’s progress timeline",
+      "text": "2026-07-26 publication: Robert published “How to Use Kira Labs Video Studio | From Idea to Finished Video”. The public description presents a Moon-phase workflow from project setup through a package for owner review, including revisions and source audio. The title is not proof of current general filmmaking capability. Metadata duration is 157 seconds while description chapter labels extend beyond six minutes; do not use those chapter offsets without inspecting the video. It states no automatic publishing.",
+      "url": "https://www.youtube.com/watch?v=nsfpHVfVfho",
+      "topic": "progress",
+      "tags": [
+        "What does the 2026-07-26 Video Studio update show?"
+      ]
+    },
+    {
+      "id": "fact:shared-servers-goal",
+      "title": "Future servers & shared worlds",
+      "text": "The published progress notes propose multiple synthetic people and visitors across shared worlds.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "servers",
+      "tags": [
+        "What are the future server plans?"
+      ]
+    },
+    {
+      "id": "fact:low-lag-goal",
+      "title": "Future servers & shared worlds",
+      "text": "The shared-server notes treat low lag as a target for future measured workload tests.",
+      "url": "https://kiralabs.org/knowledge.html",
+      "topic": "servers",
+      "tags": [
+        "Will shared worlds be low lag?"
+      ]
+    },
+    {
+      "id": "fact:shiftbrief-overview",
+      "title": "ShiftBrief",
+      "text": "ShiftBrief is a free Windows business workspace for small teams. It brings employee availability, opening hours, schedules, completed-work records and source notes into one place. Sarah can answer from exact saved records and prepare staffing or coverage options for human review. Records · offline needs no AI model or account. The Windows installer includes the runtime; optional AI setup is separate. Start with a blank business or explicitly load the fictional eight-person demo.",
+      "url": "https://kiralabs.org/shiftbrief.html",
+      "topic": "shiftbrief",
+      "tags": []
+    },
+    {
+      "id": "fact:shiftbrief-benefits",
+      "title": "ShiftBrief",
+      "text": "ShiftBrief keeps employee records, dated availability, business hours, saved schedules and recorded work together. Sarah helps answer exact-record questions, prepare staffing drafts and inspect uncovered time, so you can compare options without reconstructing the facts from scattered notes. Its saved revisions and review steps make it easier to see what was proposed and what you accepted. It does not promise a particular time saving or staffing outcome.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": []
+    },
+    {
+      "id": "fact:shiftbrief-install",
+      "title": "ShiftBrief",
+      "text": "Download the free ShiftBrief 0.1.0 Windows installer, run it and follow the setup prompts. The installer includes the Python runtime and app dependencies, so no separate Python setup is needed. A desktop shortcut is optional. Open ShiftBrief to use its local browser interface. Uninstalling the app retains saved business data. The public source checkout is also available; its manual Python setup is separate from the installer.",
+      "url": "https://github.com/rmcmurrer81/shiftbrief/releases/download/v0.1.0/ShiftBrief-Setup-0.1.0.exe",
+      "topic": "shiftbrief",
+      "tags": []
+    },
+    {
+      "id": "fact:shiftbrief-cost",
+      "title": "ShiftBrief",
+      "text": "ShiftBrief is free to download and use. Records · offline requires no account, model or usage credits. Optional cloud AI uses your own provider access and may cost money; optional local AI needs a separately installed model.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": []
+    },
+    {
+      "id": "fact:shiftbrief-records",
+      "title": "ShiftBrief",
+      "text": "In Records · offline, Sarah uses supported questions and saved-record tools, not a general language model. You can prepare employee and availability forms, inspect planned and completed work, review weekly schedules, lunch and sick-call options, and find source-backed notes. Draft proposals require review and acceptance before they become saved schedules. Unknown availability is not invented, and asking a question does not send a message to employees.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": []
+    },
+    {
+      "id": "fact:shiftbrief-first-run",
+      "title": "ShiftBrief",
+      "text": "A first-time workspace starts with a blank business. You can create your own business, choose Load saved business, restore a complete backup from another computer, or explicitly Load demo. The optional Maple Street example is fictional: eight invented employees and sample records. It is not loaded automatically. Keep demo work separate from your own business and select the business you intend to edit.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": []
+    },
+    {
+      "id": "fact:shiftbrief-business-copy",
+      "title": "ShiftBrief",
+      "text": "Use Save business copy to download the selected business as a .shiftbrief.json file. On another computer, choose Load saved business to add it without removing businesses already there. The copy includes employees and history, availability, operating settings, planned schedules and recorded work. It excludes documents and conversations; use the complete backup for those.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": []
+    },
+    {
+      "id": "fact:shiftbrief-workspace-backup",
+      "title": "ShiftBrief",
+      "text": "Use Back up all businesses for a complete .shiftbrief-workspace.json backup, including all businesses, documents and extracted revisions, handoffs and conversations. On the other computer choose Restore backup from previous computer, review the summary and confirm. Restore replaces that computer’s workspace after saving a backup of its previous state. Linked external documents stay disabled until you choose their paths again. Copy external original files separately; the backup does not include the app, models or credentials.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": []
+    },
+    {
+      "id": "fact:shiftbrief-optional-ai",
+      "title": "ShiftBrief",
+      "text": "Records · offline works without an installed AI model, account, API key or usage credits. Optional AI · local Ollama uses a separately installed and configured local model; no model weights are bundled. Optional AI · cloud Bedrock requires your own configured AWS access and can incur provider charges. Cloud use sends the question, recent conversation and selected saved facts to that provider. Choosing an AI mode does not authorize schedule changes or employee contact.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": []
+    },
+    {
+      "id": "fact:shiftbrief-departures",
+      "title": "ShiftBrief",
+      "text": "If you report an already-decided departure, such as “I fired Morgan Stone” or “Morgan Stone quit,” Sarah opens an employment-ending review. You enter or review the first unavailable date; the chat message alone does not change it. Preview remaining shifts reads saved schedules without saving the departure. After you explicitly record the date, the coverage review totals remaining saved shifts and net planned hours and suggests eligible off-schedule people or adjacent early-start/late-finish options. It checks saved qualifications, availability, time off, overlap, employment dates and weekly restrictions. These are independent alternatives for your review, not a combined reassignment plan or confirmation that anyone agreed. Earlier history stays intact, and Sarah does not decide whom to fire.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": []
+    },
+    {
+      "id": "fact:shiftbrief-limits",
+      "title": "ShiftBrief",
+      "text": "ShiftBrief is an early desktop release. Coverage options depend on the dates, availability, qualifications and restrictions you saved; missing records are not guessed. Planned hours are not proof of attendance or payroll. It is not payroll software or a labor-law assessment, and it does not contact employees, choose whom to fire or automatically assign replacement shifts. Website Sarah only explains these published notes and cannot open or change your desktop businesses.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": []
+    },
+    {
+      "id": "fact:shiftbrief-privacy",
+      "title": "ShiftBrief",
+      "text": "The installed app saves its workspace on your computer. Records · offline uses local saved records. Business copies and complete backups are files you choose to share or move; keep them somewhere you trust. Optional cloud AI sends selected context to the configured provider. The website guide is separate: it has no access to your installed businesses and does not send this chat to Robert.",
+      "url": "https://kiralabs.org/shiftbrief.html#install",
+      "topic": "shiftbrief",
+      "tags": []
+    },
+    {
+      "id": "book:book:B0GH162D4H",
+      "title": "Trump and Epstein: Parties to Crimes",
+      "text": "Trump and Epstein: Parties to Crimes. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Trump-Epstein-Parties-Robert-McMurrer-ebook/dp/B0GH162D4H",
+      "topic": "books",
+      "tags": [
+        "Trump and Epstein: Parties to Crimes",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GL88V288",
+      "title": "The Path Less Traveled",
+      "text": "The Path Less Traveled. A reflective book about rebuilding after life disruptions, reconsidering conventional definitions of success and finding a sustainable way forward.",
+      "url": "https://www.amazon.com/Path-Less-Traveled-Robert-McMurrer/dp/B0GL88V288",
+      "topic": "books",
+      "tags": [
+        "The Path Less Traveled",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GHZYFFDQ",
+      "title": "The Trump Dynasty: Power, Wealth, and Controversy",
+      "text": "The Trump Dynasty: Power, Wealth, and Controversy. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Trump-Dynasty-Power-Wealth-Controversy-ebook/dp/B0GHZYFFDQ",
+      "topic": "books",
+      "tags": [
+        "The Trump Dynasty: Power, Wealth, and Controversy",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GH7BF9TT",
+      "title": "Trump’s Reign: A Chronicle of Controversy",
+      "text": "Trump’s Reign: A Chronicle of Controversy. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Trumps-Reign-Controversy-Robert-McMurrer-ebook/dp/B0GH7BF9TT",
+      "topic": "books",
+      "tags": [
+        "Trump’s Reign: A Chronicle of Controversy",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GGZWPX8C",
+      "title": "The Long Walk North",
+      "text": "The Long Walk North. A coming-of-age novel following Alex, a teenager who escapes an abusive adoptive home and travels north. His encounters along the way explore survival, trust and self-discovery.",
+      "url": "https://www.amazon.com/Long-Walk-North-Robert-McMurrer-ebook/dp/B0GGZWPX8C",
+      "topic": "books",
+      "tags": [
+        "The Long Walk North",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GJNX9B5Y",
+      "title": "Clinton Family Criminal Record",
+      "text": "Clinton Family Criminal Record. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Clinton-Family-Criminal-Record-McMurrer-ebook/dp/B0GJNX9B5Y",
+      "topic": "books",
+      "tags": [
+        "Clinton Family Criminal Record",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GK49V853",
+      "title": "ROBIN HOOD vs. VAMPIRES: The Dracula War",
+      "text": "ROBIN HOOD vs. VAMPIRES: The Dracula War. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/ROBIN-HOOD-vs-VAMPIRES-Dracula-ebook/dp/B0GK49V853",
+      "topic": "books",
+      "tags": [
+        "ROBIN HOOD vs. VAMPIRES: The Dracula War",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GK2RYKJ5",
+      "title": "Dorothy’s Dark Return to Oz",
+      "text": "Dorothy’s Dark Return to Oz. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Dorothys-Dark-Return-Robert-McMurrer-ebook/dp/B0GK2RYKJ5",
+      "topic": "books",
+      "tags": [
+        "Dorothy’s Dark Return to Oz",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GJRM8VHQ",
+      "title": "1933 Italian UFO Crash: Nazi Secrets",
+      "text": "1933 Italian UFO Crash: Nazi Secrets. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/1933-Italian-UFO-Crash-Secrets-ebook/dp/B0GJRM8VHQ",
+      "topic": "books",
+      "tags": [
+        "1933 Italian UFO Crash: Nazi Secrets",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GHBJNL8K",
+      "title": "Lunar Colony: A New Frontier",
+      "text": "Lunar Colony: A New Frontier. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Lunar-Colony-Frontier-Robert-McMurrer-ebook/dp/B0GHBJNL8K",
+      "topic": "books",
+      "tags": [
+        "Lunar Colony: A New Frontier",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GL9T3VT2",
+      "title": "The Epic of Gilgamesh: A King’s Journey of Mortality",
+      "text": "The Epic of Gilgamesh: A King’s Journey of Mortality. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Epic-Gilgamesh-Kings-Journey-Mortality-ebook/dp/B0GL9T3VT2",
+      "topic": "books",
+      "tags": [
+        "The Epic of Gilgamesh: A King’s Journey of Mortality",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GKXZYG4Y",
+      "title": "Navigating the Globe with a Criminal Record",
+      "text": "Navigating the Globe with a Criminal Record. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Navigating-Criminal-Record-Robert-McMurrer/dp/B0GKXZYG4Y",
+      "topic": "books",
+      "tags": [
+        "Navigating the Globe with a Criminal Record",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GL8FYPX2",
+      "title": "Sci-Fi Seeds: Tech of Tomorrow",
+      "text": "Sci-Fi Seeds: Tech of Tomorrow. An exploration of how science fiction has influenced technological imagination, including artificial intelligence, communications, computing and space exploration.",
+      "url": "https://www.amazon.com/Sci-Fi-Seeds-Tomorrow-Robert-McMurrer/dp/B0GL8FYPX2",
+      "topic": "books",
+      "tags": [
+        "Sci-Fi Seeds: Tech of Tomorrow",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GKC45W82",
+      "title": "The Line Between Love and Rage",
+      "text": "The Line Between Love and Rage. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Line-Between-Love-Rage-ebook/dp/B0GKC45W82",
+      "topic": "books",
+      "tags": [
+        "The Line Between Love and Rage",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GK6268R2",
+      "title": "Galactic Revelation: Humanity’s Unpreparedness",
+      "text": "Galactic Revelation: Humanity’s Unpreparedness. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Galactic-Revelation-Unpreparedness-Robert-McMurrer-ebook/dp/B0GK6268R2",
+      "topic": "books",
+      "tags": [
+        "Galactic Revelation: Humanity’s Unpreparedness",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GHCXLGXS",
+      "title": "The Dreamer’s Deportation",
+      "text": "The Dreamer’s Deportation. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Dreamers-Deportation-Robert-McMurrer-ebook/dp/B0GHCXLGXS",
+      "topic": "books",
+      "tags": [
+        "The Dreamer’s Deportation",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GH2XRM1T",
+      "title": "Robert’s Sicilian Dream",
+      "text": "Robert’s Sicilian Dream. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Roberts-Sicilian-Dream-Robert-McMurrer-ebook/dp/B0GH2XRM1T",
+      "topic": "books",
+      "tags": [
+        "Robert’s Sicilian Dream",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B00H055MC4",
+      "title": "The Dark Storm Inside Of Me",
+      "text": "The Dark Storm Inside Of Me. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Dark-Storm-Inside-Me-ebook/dp/B00H055MC4",
+      "topic": "books",
+      "tags": [
+        "The Dark Storm Inside Of Me",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B00H68CAA2",
+      "title": "Driving Into The Dark Storm",
+      "text": "Driving Into The Dark Storm. A collection of short stories combining life-inspired drama with science-fiction ideas, including time travel and aliens.",
+      "url": "https://www.amazon.com/Driving-Into-Storm-Robert-McMurrer-ebook/dp/B00H68CAA2",
+      "topic": "books",
+      "tags": [
+        "Driving Into The Dark Storm",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0F71VH3S2",
+      "title": "Microwave Motel Meals",
+      "text": "Microwave Motel Meals. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Microwave-Motel-Meals-Robert-McMurrer-ebook/dp/B0F71VH3S2",
+      "topic": "books",
+      "tags": [
+        "Microwave Motel Meals",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GGY7N6SJ",
+      "title": "Ghostline: The Continental Network",
+      "text": "Ghostline: The Continental Network. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Ghostline-Continental-Network-Robert-McMurrer-ebook/dp/B0GGY7N6SJ",
+      "topic": "books",
+      "tags": [
+        "Ghostline: The Continental Network",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GK4M39TP",
+      "title": "Casanova’s Vampire Embrace",
+      "text": "Casanova’s Vampire Embrace. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Casanovas-Vampire-Embrace-Robert-McMurrer-ebook/dp/B0GK4M39TP",
+      "topic": "books",
+      "tags": [
+        "Casanova’s Vampire Embrace",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0F6MKG8ZR",
+      "title": "The Tommy Westphall Universe: A Connected World",
+      "text": "The Tommy Westphall Universe: A Connected World. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Tommy-Westphall-Universe-Connected-World-ebook/dp/B0F6MKG8ZR",
+      "topic": "books",
+      "tags": [
+        "The Tommy Westphall Universe: A Connected World",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0GKCHS6JQ",
+      "title": "Sicily: A Rational Relocation for Neurodivergent Adults",
+      "text": "Sicily: A Rational Relocation for Neurodivergent Adults. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Sicily-Rational-Relocation-Neurodivergent-Adults-ebook/dp/B0GKCHS6JQ",
+      "topic": "books",
+      "tags": [
+        "Sicily: A Rational Relocation for Neurodivergent Adults",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B004RZ28U4",
+      "title": "Poetry Madhouse",
+      "text": "Poetry Madhouse. A collection of poems by Robert McMurrer.",
+      "url": "https://www.amazon.com/Poetry-Madhouse-Robert-McMurrer-ebook/dp/B004RZ28U4",
+      "topic": "books",
+      "tags": [
+        "Poetry Madhouse",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0F6NT2QPD",
+      "title": "Recipes for Life: A Cookbook",
+      "text": "Recipes for Life: A Cookbook. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Recipes-Life-Cookbook-Robert-McMurrer/dp/B0F6NT2QPD",
+      "topic": "books",
+      "tags": [
+        "Recipes for Life: A Cookbook",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0F7CL734B",
+      "title": "Bars Of Innocence",
+      "text": "Bars Of Innocence. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Bars-Innocence-Robert-McMurrer-ebook/dp/B0F7CL734B",
+      "topic": "books",
+      "tags": [
+        "Bars Of Innocence",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0F6M9C56R",
+      "title": "Cosplay Cuisine",
+      "text": "Cosplay Cuisine. A cookbook connecting food with fandom through themed recipes, creative presentation and ideas for hosting cosplay gatherings.",
+      "url": "https://www.amazon.com/Cosplay-Cuisine-Robert-McMurrer-ebook/dp/B0F6M9C56R",
+      "topic": "books",
+      "tags": [
+        "Cosplay Cuisine",
+        "book"
+      ]
+    },
+    {
+      "id": "book:book:B0CL2F9KKR",
+      "title": "A Life of Monsters and Hope: The Life of Robert McMurrer",
+      "text": "A Life of Monsters and Hope: The Life of Robert McMurrer. This is a published catalogue listing, not a full manuscript.",
+      "url": "https://www.amazon.com/Life-Monsters-Hope-Robert-McMurrer/dp/B0CL2F9KKR",
+      "topic": "books",
+      "tags": [
+        "A Life of Monsters and Hope: The Life of Robert McMurrer",
+        "book"
+      ]
+    },
+    {
+      "id": "bio:short",
+      "title": "Robert McMurrer · short",
+      "text": "Robert McMurrer is an author, entertainment creator and independent AI builder based in Newark, New Jersey. He founded Kira Labs and is developing Kira World, an experimental project exploring identity, memory, voice and continuity. His background includes acting, independent film production and screenwriting.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "robert",
+      "tags": [
+        "biography",
+        "short"
+      ]
+    },
+    {
+      "id": "bio:expanded",
+      "title": "Robert McMurrer · expanded",
+      "text": "Robert McMurrer is an author, entertainment creator and independent AI builder based in Newark, New Jersey. His background includes acting, independent film production and screenwriting, and his books include Poetry Madhouse and Driving Into The Dark Storm. As founder of Kira Labs, he is developing Kira World: an experimental approach to synthetic people with distinct identities, reviewed memories and continuing conversations. Related projects include Sarah Travel and a local Video Studio. His work connects an interest in storytelling with practical experiments in local AI, voice and creative software. Kira World remains an active research and development project.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "robert",
+      "tags": [
+        "biography",
+        "expanded"
+      ]
+    },
+    {
+      "id": "bio:entertainment",
+      "title": "Robert McMurrer · entertainment",
+      "text": "Robert McMurrer is an entertainment creator and author with a background in acting, independent film production and screenwriting. His first background acting job was a television advertisement in Indiana. He also founded Kira Labs, where his interest in storytelling connects with experiments in local AI and creative tools. His IMDb profile documents his entertainment work.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "robert",
+      "tags": [
+        "biography",
+        "entertainment"
+      ]
+    },
+    {
+      "id": "bio:books",
+      "title": "Robert McMurrer · books",
+      "text": "Robert McMurrer is an author whose writing spans poetry, fiction, technology and cookbooks. His titles include Poetry Madhouse, Driving Into The Dark Storm, The Long Walk North, Sci-Fi Seeds: Tech of Tomorrow and Cosplay Cuisine. He also works in entertainment and founded Kira Labs, where he is developing the experimental Kira World project.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "robert",
+      "tags": [
+        "biography",
+        "books"
+      ]
+    },
+    {
+      "id": "bio:ai",
+      "title": "Robert McMurrer · ai",
+      "text": "Robert McMurrer is the independent founder of Kira Labs and creator of Kira World, an experimental project exploring person-specific identity, reviewed memory, voice and continuity across conversations. Based in Newark, New Jersey, he also works on Sarah Travel and a local Video Studio. His background in writing and entertainment informs his interest in useful, personal creative software.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "robert",
+      "tags": [
+        "biography",
+        "ai"
+      ]
+    },
+    {
+      "id": "page-about.html-0",
+      "title": "Robert McMurrer.",
+      "text": "Author. Entertainment creator. Independent builder. Kira Labs is Robert’s software and AI research work in Newark, New Jersey.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "about",
+      "tags": [
+        "about",
+        "Robert McMurrer."
+      ]
+    },
+    {
+      "id": "page-about.html-1",
+      "title": "Something worth coming back to.",
+      "text": "Robert’s creative background starts with a love of movies and television. On LinkedIn, he describes background acting and learning filmmaking—an interest in storytelling that sits alongside his software work. Read Robert’s background on LinkedIn ↗ “Kira World began during one of the hardest periods of my life. I did not want technology that treated every conversation as disposable. I imagined someone who could remember, grow, share ordinary moments, and still be there when the next day began.” Robert McMurrer · why I started Kira World Kira Labs is the wider research and creation studio. Kira World is the flagship, alongside practical tools and experiments with their own purposes.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "about",
+      "tags": [
+        "about",
+        "Something worth coming back to."
+      ]
+    },
+    {
+      "id": "page-about.html-2",
+      "title": "A large idea. Verifiable pieces.",
+      "text": "The work brings together local AI models, person-specific memory, natural voice, Windows and Android software, digital homes and creative tools. Accessibility, virtual reality and simulator-first embodiment remain important research directions. Progress comes through prototypes, source records, failure analysis and tests. A working prototype, a designed feature and an imagined destination are different things—and the site labels them that way. “Built in the open” means sharing public progress and selected technical work. It does not mean every private workspace is published or every project shares the same release or license.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "about",
+      "tags": [
+        "about",
+        "A large idea. Verifiable pieces."
+      ]
+    },
+    {
+      "id": "page-about.html-3",
+      "title": "The ambition stays large. The claims stay precise.",
+      "text": "Identity, memories and useful work should survive the end of a session. Personal state stays under user control whenever practical. Homes, objects and activities need state that continues rather than resets. Suggestions, reviewed decisions and external effects remain separate.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "about",
+      "tags": [
+        "about",
+        "The ambition stays large. The claims stay precise."
+      ]
+    },
+    {
+      "id": "page-about.html-4",
+      "title": "Research is part of the story.",
+      "text": "Explore Robert’s published creative work and public profiles directly. Listings retain their own credits, qualifiers and descriptions. Read the public credit listings and their episode or uncredited qualifiers. Browse the public catalogue and descriptions for individual titles. Explore Robert’s public repositories and dated project notes.",
+      "url": "https://kiralabs.org/about.html",
+      "topic": "about",
+      "tags": [
+        "about",
+        "Research is part of the story."
+      ]
+    },
+    {
+      "id": "page-about.html-5",
+      "title": "About Kira Labs.",
+      "text": "Kira Labs is Robert McMurrer’s independent software research work in Newark, New Jersey. Its flagship, Kira World, explores continuing identity, reviewed memory, voice and persistent digital places. ShiftBrief is a separate free Windows product. Project pages distinguish working prototypes, active development and future goals. Send a press request · Professional biography · Professional Facebook View Robert’s existing site portrait — AI-assisted and approved for this website. Ask Robert before reusing it in other publications.",
+      "url": "https://kiralabs.org/about.html#press",
+      "topic": "about",
+      "tags": [
+        "about",
+        "About Kira Labs."
+      ]
+    },
+    {
+      "id": "page-kira-world.html-0",
+      "title": "A synthetic person should not have to start over.",
+      "text": "Flagship · experimental local-first research Not a better chatbot. A continuing person and a place to live. Kira World explores what changes when identity, reviewed memory, voice, relationships and place are designed as one connected system.",
+      "url": "https://kiralabs.org/kira-world.html",
+      "topic": "kira-world",
+      "tags": [
+        "kira-world",
+        "A synthetic person should not have to start over."
+      ]
+    },
+    {
+      "id": "page-kira-world.html-1",
+      "title": "Progress, without pretending.",
+      "text": "Working software, active engineering and future direction are different things. Every layer keeps its own status. Person-specific profiles, reviewed memory, bounded restart experiments and local voice work provide a continuing foundation. A basic walkable Home World shell also exists. These are prototypes, not a finished shared life. Requirements, evidence records, articulated test-body fixtures and garment behavior are being defined and tested. There is not yet a finished Kira body or production clothing simulation. Residents, digital homes, Notebook Worlds, accessible VR and compatible embodiment without losing identity. These are directions for research, not release dates or supported-hardware promises.",
+      "url": "https://kiralabs.org/kira-world.html#reality",
+      "topic": "kira-world",
+      "tags": [
+        "kira-world",
+        "Progress, without pretending."
+      ]
+    },
+    {
+      "id": "page-kira-world.html-2",
+      "title": "Continuity is an architecture, not a prompt.",
+      "text": "What a person says, what the runtime can verify, what becomes reviewed memory, and what may cause an external action remain separate. Person-specific profiles and lineage keep each resident distinct. Conversation records and reviewed memories create durable history. Speech, listening and future visual presence belong to the person. Homes, objects, clothing and activities need testable, persistent state. External effects require bounded authority and evidence of what occurred.",
+      "url": "https://kiralabs.org/kira-world.html",
+      "topic": "kira-world",
+      "tags": [
+        "kira-world",
+        "Continuity is an architecture, not a prompt."
+      ]
+    },
+    {
+      "id": "page-kira-world.html-3",
+      "title": "A real starting point.",
+      "text": "The walkable shell proves a basic navigable environment. It does not prove polished rooms, persistent residents or finished object behavior.",
+      "url": "https://kiralabs.org/kira-world.html",
+      "topic": "kira-world",
+      "tags": [
+        "kira-world",
+        "A real starting point."
+      ]
+    },
+    {
+      "id": "page-kira-world.html-4",
+      "title": "One home. Many worlds.",
+      "text": "Rooms, belongings, projects and shared memories that continue rather than reset. Purpose-built places for travel, study, creativity, history and play. Concept visualization: the illustration shows a destination, not a finished product. VR and physical embodiment follow simulator-first and compatibility testing.",
+      "url": "https://kiralabs.org/kira-world.html",
+      "topic": "kira-world",
+      "tags": [
+        "kira-world",
+        "One home. Many worlds."
+      ]
+    },
+    {
+      "id": "page-kira-world.html-5",
+      "title": "A shirt is not a texture.",
+      "text": "Openings, sleeves, fasteners, folds, friction and collision each need state. Dressing, folding, hanging and dropping a garment should produce different, testable results. Current work focuses on articulated test bodies and controlled fixtures before claiming believable fabric behavior.",
+      "url": "https://kiralabs.org/kira-world.html",
+      "topic": "kira-world",
+      "tags": [
+        "kira-world",
+        "A shirt is not a texture."
+      ]
+    },
+    {
+      "id": "page-kira-world.html-6",
+      "title": "Follow the next verifiable step.",
+      "text": "Read the dated evidence or ask Robert about the current boundary.",
+      "url": "https://kiralabs.org/kira-world.html",
+      "topic": "kira-world",
+      "tags": [
+        "kira-world",
+        "Follow the next verifiable step."
+      ]
+    },
+    {
+      "id": "page-shiftbrief.html-0",
+      "title": "A clearer view of your team’s week.",
+      "text": "Free product · Windows · version 0.1.0 Keep employee details, availability, schedules and recorded work together in one local Windows app. Core Records mode works without an AI model, account or API key. Windows 10/11 · 64-bit · early independent release · unsigned installer",
+      "url": "https://kiralabs.org/shiftbrief.html",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "A clearer view of your team’s week."
+      ]
+    },
+    {
+      "id": "page-shiftbrief.html-1",
+      "title": "Your records. Your decisions.",
+      "text": "Practical assistance without treating a suggestion as permission to change a schedule. Build around availability, review coverage gaps, and keep planned shifts separate from completed work. Sarah, the in-product records assistant, helps inspect saved evidence and suggestions. You decide which changes to accept. Begin with a blank business or open the fictional Maple Street example. The example is optional. Export one business, or save and restore a full workspace backup to move your records between computers.",
+      "url": "https://kiralabs.org/shiftbrief.html",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "Your records. Your decisions."
+      ]
+    },
+    {
+      "id": "page-shiftbrief.html-2",
+      "title": "A local workspace. A simple start.",
+      "text": "Download the installer, review the release notes, and open ShiftBrief from the Start menu. Python is included; a separate Python installation is not required. The initial installer is unsigned. Review its source and published checksums before running it. Do not bypass security checks merely because a website tells you to. Use the Windows installer above. A Desktop shortcut is optional. Your browser opens the local app; the new workspace starts blank. Select “Open example” to explore the fictional demo. Normal Records mode needs no model, account or API key. Optional model integration uses your separately installed Ollama and a suitable model. Model weights are not bundled. See the repository README for setup. “Save a copy” exports one business. “Full backup” and “Restore backup” move the saved workspace between computers. Keep backups before changing or clearing your data. Use Start → ShiftBrief → Close ShiftBrief before upgrading or uninstalling. Uninstall through Windows Installed apps. Saved business records remain in %LOCALAPPDATA%\\ShiftBrief\\data . Sarah works with supported questions about saved records. Employee-departure and replacement suggestions require review. She does not decide whom to fire, automatically reassign shifts, or contact employees. This is not payroll software or legal advice.",
+      "url": "https://kiralabs.org/shiftbrief.html",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "A local workspace. A simple start."
+      ]
+    },
+    {
+      "id": "page-shiftbrief.html-3",
+      "title": "Try it with the example. Keep what is useful.",
+      "text": "Iris is this website’s guide. Sarah inside ShiftBrief is a separate in-product role; Iris cannot access your business records. For developers: source code and license Source code, MIT license and setup instructions ↗",
+      "url": "https://kiralabs.org/shiftbrief.html",
+      "topic": "shiftbrief",
+      "tags": [
+        "shiftbrief",
+        "Try it with the example. Keep what is useful."
+      ]
+    },
+    {
+      "id": "page-video-studio.html-0",
+      "title": "Your story. Your next cut.",
+      "text": "Develop an idea, review the media, and assemble selected clips. A local creative workspace with a preserved working history and an ambitious next chapter. Private Windows build · not offered as a public download",
+      "url": "https://kiralabs.org/video-studio.html",
+      "topic": "video-studio",
+      "tags": [
+        "video-studio",
+        "Your story. Your next cut."
+      ]
+    },
+    {
+      "id": "page-video-studio.html-1",
+      "title": "Keep the work. Improve the next cut.",
+      "text": "Private Windows Studio / active development A local workspace for developing ideas, reviewing media, and assembling selected clip ranges. Develop written material and hand it into saved review steps. The conversation-led production workflow is still being connected and tested. Select source start points and durations, edit sequence rows, save and reopen them, and export the selected ranges. Local speech work uses Robert’s saved, approved voice reference with scripted sections and technical audio checks. The earlier v1.9 chapter workflow and 14-chapter output remain preserved. New work builds on that history rather than replacing the originals. Current boundary: This is a private tool in active development. Range and audio tests establish editing behavior; consistent photoreal scenes and the complete chat-to-finished-video workflow remain unfinished.",
+      "url": "https://kiralabs.org/video-studio.html",
+      "topic": "video-studio",
+      "tags": [
+        "video-studio",
+        "Keep the work. Improve the next cut."
+      ]
+    },
+    {
+      "id": "page-video-studio.html-2",
+      "title": "A project with a visible history.",
+      "text": "The preserved contact sheet contains 42 review visuals across a 14-chapter project. Open it to inspect the complete image. This is previously published output, not a new generation or a promise of current cinematic quality.",
+      "url": "https://kiralabs.org/video-studio.html",
+      "topic": "video-studio",
+      "tags": [
+        "video-studio",
+        "A project with a visible history."
+      ]
+    },
+    {
+      "id": "page-sarah-travel.html-0",
+      "title": "A more personal way to explore.",
+      "text": "Travel / private Android and Windows builds Travel conversations, practical route planning, and offline-fallback experiments—keeping the journey and its context together. Private debug build · not publicly released",
+      "url": "https://kiralabs.org/sarah-travel.html",
+      "topic": "sarah-travel",
+      "tags": [
+        "sarah-travel",
+        "A more personal way to explore."
+      ]
+    },
+    {
+      "id": "page-sarah-travel.html-1",
+      "title": "A journey with more continuity.",
+      "text": "Travel application / private debug build Private Android and Windows experiments pair travel conversations with practical planning and route resilience. Organize destinations and travel details in a companion-centered interface. A protected online route path includes an offline fallback when connectivity is unavailable. Private hackathon and debugging records cover Android and Windows builds. Security-token rotation, physical-device verification, and release-level testing remain further work. Current boundary: Sarah Travel is a private experimental build. It is not on Google Play or offered as a public service. Development screenshots are not a finished-release claim.",
+      "url": "https://kiralabs.org/sarah-travel.html",
+      "topic": "sarah-travel",
+      "tags": [
+        "sarah-travel",
+        "A journey with more continuity."
+      ]
+    },
+    {
+      "id": "page-sarah-travel.html-2",
+      "title": "The current build, not just the idea.",
+      "text": "This published Android debug screen shows a travel conversation and command center. Its role is to document the development work, not promise a production-ready travel service. Sarah Travel is a separate project. Iris guides this website and cannot see private trips or travel records.",
+      "url": "https://kiralabs.org/sarah-travel.html",
+      "topic": "sarah-travel",
+      "tags": [
+        "sarah-travel",
+        "The current build, not just the idea."
+      ]
+    },
+    {
+      "id": "page-support.html-0",
+      "title": "Independent work needs people.",
+      "text": "Support can mean funding, spare development equipment, a useful test, a thoughtful correction or an introduction. Following and sharing the work matters too.",
+      "url": "https://kiralabs.org/support.html",
+      "topic": "support",
+      "tags": [
+        "support",
+        "Independent work needs people."
+      ]
+    },
+    {
+      "id": "page-support.html-1",
+      "title": "support",
+      "text": "The existing campaign supports development hardware, software, testing and the path from prototypes toward a persistent shared world. It is not an investment or a product preorder. Discuss spare equipment, testing or relevant technical help with Robert before sending anything. Compatibility and the current development need matter. Read the lab timeline, watch a published demonstration, or share a project with someone who may find it useful.",
+      "url": "https://kiralabs.org/support.html",
+      "topic": "support",
+      "tags": [
+        "support",
+        "support"
+      ]
+    },
+    {
+      "id": "page-support.html-2",
+      "title": "The current published starting point.",
+      "text": "Configuration checked September 8, 2026. These are dated hardware details, not live readings. The September 8 notes name a matched 64 GB kit (2 × 32 GB) as the next target after a local motion test stopped at memory admission. Confirm the need and exact kit with Robert before buying anything. More RAM does not fix software errors. Larger GPU memory, VR equipment and servers are longer-term possibilities. They require measured workload needs, world readiness and compatibility testing. No GPU purchase, headset support list, server count or guaranteed latency is established.",
+      "url": "https://kiralabs.org/support.html#hardware",
+      "topic": "support",
+      "tags": [
+        "support",
+        "The current published starting point."
+      ]
+    },
+    {
+      "id": "page-support.html-3",
+      "title": "Have a useful question? That counts, too.",
+      "text": "Feedback does not require a donation. Neither funding nor equipment guarantees a feature, delivery date or response time.",
+      "url": "https://kiralabs.org/support.html",
+      "topic": "support",
+      "tags": [
+        "support",
+        "Have a useful question? That counts, too."
+      ]
+    },
+    {
+      "id": "enhanced:privacy",
+      "title": "Enhanced Iris privacy choices",
+      "text": "Enhanced matching processes your question and recent conversation through Cloudflare. Sharing future questions and answers with Robert is optional and off by default. Shared records expire within 30 days and may appear in his weekly email. Optional device memory keeps the conversation on your device. Delete saved conversation removes this session’s stored records, but cannot recall delivered email. New facts require Robert’s approval.",
+      "url": "https://kiralabs.org/privacy.html#enhanced-iris",
+      "topic": "privacy",
+      "tags": [
+        "privacy",
+        "saved",
+        "remember",
+        "learn",
+        "Iris",
+        "record",
+        "storage"
+      ]
+    },
+    {
+      "id": "enhanced:contact",
+      "title": "Contact Robert",
+      "text": "Use the contact form to send Robert a message directly. You can also call or text his public Google Voice number, (317) 586-8199. His public email is rmcmurrer@kiralabs.org. Chatting with Iris is not itself a direct contact request, even when you choose to share the chat for review.",
+      "url": "https://kiralabs.org/contact.html",
+      "topic": "contact",
+      "tags": [
+        "call",
+        "text",
+        "contact",
+        "phone",
+        "email",
+        "Robert"
+      ]
+    }
+  ]
+}
