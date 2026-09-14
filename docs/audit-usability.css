@@ -1,0 +1,2 @@
+/* Only navigation/accessibility refinements; the approved palette remains. */
+.audit-contact-link{padding-block:18px 28px;font-size:.88rem}.audit-contact-link a{color:#79ebf3}.footlinks{flex-wrap:wrap;max-width:640px;line-height:1.7}.footer .footrow{align-items:start}body:not(.js) .menubtn{display:none}body:not(.js) #primary-nav{display:flex!important;flex-wrap:wrap}body:not(.js) .navrow{flex-wrap:wrap}@media(max-width:790px){body:not(.js) #primary-nav{width:100%;gap:12px 20px}.footlinks{gap:12px 20px}}
