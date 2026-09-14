@@ -1,0 +1,43 @@
+name: Build and test free Iris review branch
+on:
+  push:
+    branches: [iris-free-upgrade-2026-09-14]
+permissions:
+  contents: write
+concurrency:
+  group: iris-free-review-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  test:
+    if: github.repository == 'rmcmurrer81/Kira' && github.ref == 'refs/heads/iris-free-upgrade-2026-09-14'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply public-source-only usability changes
+        run: node tools/apply-iris-site-audit.cjs
+      - name: Assemble original validated knowledge and current public pages
+        run: node tools/build-iris-knowledge.cjs
+      - name: Check private-service logic without external services or spend
+        run: node --test tests/test-iris-free.mjs
+      - name: Check complete original knowledge and readable navigation
+        run: |
+          node tests/test-iris-bank.cjs
+          node tests/test-sarah-projects.cjs
+          python3 tests/test-site-audit.py
+      - name: Save generated review files on this branch only
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -eu
+          test "$BRANCH" = 'iris-free-upgrade-2026-09-14'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/*.html docs/audit-usability.css services/iris-free/knowledge.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Apply audit fixes and compile full Iris bank on review branch only'
+            git push origin "HEAD:$BRANCH"
+          fi
