@@ -1,8 +1,42 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-09-08",
+  "reviewed_on": "2026-09-21",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "digital-twin-2026-09-20",
+      "title": "Synthetic Robert gains scoped recall",
+      "date": "2026-09-20",
+      "date_basis": "KiraWorld commit date",
+      "status": "completed",
+      "track": "Kira World",
+      "summary": "Owner-authorized Robert memory grounding and correction-aware topic recall were connected to the bounded Synthetic Robert chat path.",
+      "body": [
+        "The memory path selects query-relevant, owner-authorized records while retaining source attribution, corrections, audience/publication scope and uncertainty.",
+        "Topic-scoped recall is shared across Robert, Kira and Lisa and excludes explicitly superseded facts and unrelated recent history."
+      ],
+      "boundary": "Evidence covers context selection, policy, tests and bounded text / approved self-voice routing. It does not establish generated recall quality, a 3D body, world presence, life-loop activation, microphone/webcam use or a finished Digital Twin product.",
+      "image": {
+        "path": "assets/kira-world-shell-actual.png",
+        "caption": "Existing Kira World development screenshot — not a screenshot of a Synthetic Robert session.",
+        "alt": "Existing Kira World Shell development screenshot"
+      },
+      "sources": [
+        {
+          "label": "KiraWorld memory-grounding commit",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/commit/a2e5566768689009b889570eaac789692c0400fd"
+        },
+        {
+          "label": "KiraWorld topic-recall commit",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/commit/cfb3d5be07bd8edcbe7deae19a0b6e4d4cd755bf"
+        },
+        {
+          "label": "Readable development note",
+          "url": "updates.html#digital-twin-2026-09-20"
+        }
+      ],
+      "evidence_kind": "code-and-tests"
+    },
     {
       "id": "youtube-UYsKn8lzhWs",
       "title": "A public look inside Kira World",
