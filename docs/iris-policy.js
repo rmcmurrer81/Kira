@@ -119,6 +119,13 @@
     k.sources['iris-projects']={label:'Current Kira Labs projects',url:'projects.html'};
     k.sources['iris-privacy']={label:'Website privacy',url:'privacy.html'};
     k.sources['iris-knowledge']={label:'Iris sources and knowledge',url:'knowledge.html'};
+    // Reviewed public website extension, September 21, 2026. The legacy core
+    // snapshot remains pinned; these current-status answers are deliberately
+    // narrow and point back to public pages rather than private development.
+    k.sources['iris-healthspan-current']={label:'Healthspan Lab current status',url:'research.html#healthspan-lab'};
+    k.sources['iris-healthspan-privacy']={label:'Healthspan Lab privacy notes',url:'privacy.html#healthspan-privacy'};
+    k.sources['iris-digital-twin-current']={label:'Synthetic Robert / Digital Twin current status',url:'research.html#digital-twin'};
+    k.sources['iris-digital-twin-update']={label:'September 20 Digital Twin evidence',url:'updates.html#digital-twin-2026-09-20'};
     // Owner-supplied professional profile URLs, September 14, 2026.
     k.sources['robert-linkedin-current']={label:'Robert’s LinkedIn biography',url:'https://www.linkedin.com/in/rmcmurrer'};
     k.sources['robert-facebook-professional']={label:'Robert’s professional Facebook',url:'https://www.facebook.com/rmcmurrer/'};
@@ -183,6 +190,12 @@
         const make=(title,answer,id='')=>({title,answer,id,label:'FROM THE PUBLISHED NOTES',sources:['iris-contact','iris-projects'],next:['Write a mini bio of Robert','Tell me about Kira World','How do I install ShiftBrief?']});
         if(/\b(linkedin|linked in|facebook|professional profiles|social profiles|social pages|social accounts)\b/.test(q)||/where (?:can i|to) follow (?:robert|him)/.test(q)){
           return {...make('Robert’s professional profiles','Robert’s LinkedIn is his professional biography and background profile. His professional Facebook page is facebook.com/rmcmurrer. These are the profiles Robert supplied for this website. They are separate from the Kira World project page.','robert'),sources:['robert-linkedin-current','robert-facebook-professional'],next:['Write a mini bio of Robert','Tell me about his entertainment work','Which books has Robert written?']};
+        }
+        if(/\b(?:healthspan(?: lab)?|longevity lab|geroscience workspace)\b/.test(q)){
+          return {reply:{id:'healthspan-current',title:'Healthspan Lab · working prototype',answer:'Healthspan Lab is a public longevity and healthspan research prototype, with Version 2 still in development. The current code can search live PubMed / NCBI and ClinicalTrials.gov records, organize evidence into separate research lanes, keep optional household profiles locally, rank retrieved research for relevance, and review user-confirmed information from local PDF/image intake. Browser storage is not encrypted, live research queries go to external research services, and the project is not a medical device or a source of diagnosis or treatment advice. The source repository is public and is being developed toward open-source release; an explicit repository license is still pending.',label:'REVIEWED PUBLIC EXTENSION · 2026-09-21',sources:['iris-healthspan-current','iris-healthspan-privacy'],next:['What stays local in Healthspan Lab?','Tell me about the Digital Twin work']},context:'healthspan-current'};
+        }
+        if(/\b(?:digital twin|synthetic robert|robert(?:'s|s)? twin|twin chat)\b/.test(q)){
+          return {reply:{id:'digital-twin-current',title:'Synthetic Robert / Digital Twin · current boundary',answer:'KiraWorld currently has a bounded Synthetic Robert conversation route, distinct from biological Robert. The tested path supports text plus an approved self-voice route and can select owner-authorized, query-relevant Robert memory context while preserving corrections, source attribution, audience/publication scope, and uncertainty. The current route does not claim a 3D body, world presence, life-loop activation, microphone, webcam, or a finished Digital Twin product.',label:'REVIEWED PUBLIC EXTENSION · 2026-09-21',sources:['iris-digital-twin-current','iris-digital-twin-update'],next:['What changed on September 20?','Tell me about Kira World','What is Healthspan Lab?']},context:'digital-twin-current'};
         }
         if(excluded.test(question))return make('Explore the current Kira Labs projects','That project is not featured on the current website. Explore Kira World, ShiftBrief, Video Studio and Sarah Travel, or ask Robert directly.');
         if(/\b(iris|website guide|site guide|who are you|your name)\b/.test(q))return {...k.topics.find(t=>t.id==='voice'),id:'voice'};
