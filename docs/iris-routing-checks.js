@@ -28,8 +28,12 @@
   results.push({question:'Pronoun after a different named person',passed:reply.id!=='entertainment'&&!reply.answer.includes('Blood Tulip')});
   reset();ask('Who is Tom Hanks?');ask('Write a mini bio of Robert');reply=ask(combined[0]);
   results.push({question:'Explicitly return to Robert',passed:reply.id==='entertainment'&&reply.answer===t.answer});
+  reset();reply=ask('What is a digital twin.');
+  results.push({question:'Digital Twin reviewed extension',passed:reply.id==='digital-twin-current'&&Boolean(reply.title)&&Boolean(reply.answer)&&Array.isArray(reply.sources)&&reply.sources.includes('iris-digital-twin-current')});
+  reset();reply=ask('What is Healthspan Lab?');
+  results.push({question:'Healthspan reviewed extension',passed:reply.id==='healthspan-current'&&Boolean(reply.title)&&Boolean(reply.answer)&&Array.isArray(reply.sources)&&reply.sources.includes('iris-healthspan-current')});
   const failed=results.filter(x=>!x.passed);
-  return {version:'2026-09-14-routing-1',scope:'Actual original answer function with complete published knowledge, inside this preview',total:results.length,passed:results.length-failed.length,failed,results};
+  return {version:'2026-09-21-routing-2',scope:'Actual original answer function with complete published knowledge plus reviewed public extensions, inside this preview',total:results.length,passed:results.length-failed.length,failed,results};
  }
  const api=Object.freeze({run,combined,films,television,prefixes});
  if(typeof module==='object'&&module.exports)module.exports=api;else root.KiraIrisRoutingChecks=api;
