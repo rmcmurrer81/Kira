@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "kind": "fictional_public_seed_example",
+  "profile_id": "kira",
+  "fixture_notice": "Illustrative public-safe data only. This is not a real memory, private continuity seed, biography, or identity record.",
+  "reviewed_records": [
+    {
+      "memory_id": "memory_fictional_garden_demo",
+      "created_at": "2026-01-01T00:00:00Z",
+      "summary": "In a fictional test, the demo profile and a reviewer compared two reversible layouts for a virtual garden.",
+      "source": "invented_test_fixture"
+    }
+  ],
+  "import_policy": "Copy only summaries that a reviewer has confirmed are public, necessary, and correctly attributed."
+}
