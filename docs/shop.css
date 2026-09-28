@@ -1,0 +1,50 @@
+/* Shop support options; preserve the site's existing cyan/violet identity. */
+.support-funding-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 660px;
+  margin-top: 22px;
+}
+.support-funding-actions .button {
+  width: 100%;
+  min-height: 52px;
+  text-align: center;
+}
+.support-funding-actions .button.shop {
+  background: var(--violet, #aa8dff);
+  border-color: var(--violet, #aa8dff);
+  color: #120b24;
+}
+.support-funding-actions .button.shop:hover {
+  background: #c0abff;
+  border-color: #c0abff;
+  color: #120b24;
+}
+.support-contact-actions { margin-top: 12px; }
+.support-page .page-hero .support-intro {
+  max-width: 760px;
+  font-size: 16px;
+  color: var(--ink, #f7f5ef);
+  margin-bottom: 0;
+}
+.site-header.shop-navigation .shop-link,
+.footlinks .shop-link { color: var(--violet, #aa8dff); }
+.site-header.shop-navigation .shop-link:hover,
+.footlinks .shop-link:hover { color: var(--cyan, #79ebf3); }
+/* The extra navigation item must not squeeze the brand at tablet widths. */
+@media (min-width: 1001px) {
+  .site-header.shop-navigation .nav { display: flex; width: auto; gap: 20px; padding: 0; flex-wrap: nowrap; }
+  .site-header.shop-navigation .menubtn { display: none; }
+}
+@media (max-width: 1000px) {
+  .site-header.shop-navigation .navrow { flex-wrap: wrap; gap: 12px; min-height: 73px; padding: 12px 0; }
+  .site-header.shop-navigation .nav { width: 100%; padding: 10px 0 12px; flex-wrap: wrap; gap: 18px; }
+  .js .site-header.shop-navigation .menubtn { display: block; }
+  .js .site-header.shop-navigation .nav:not(.open) { display: none; }
+  .js .site-header.shop-navigation .nav.open { display: flex; }
+}
+@media (max-width: 600px) {
+  .support-funding-actions { grid-template-columns: minmax(0, 1fr); max-width: none; }
+  .support-contact-actions .button { width: 100%; min-height: 52px; }
+}

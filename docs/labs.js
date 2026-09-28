@@ -1,6 +1,24 @@
 /* Shared enhancements. Everything essential remains visible without JavaScript. */
 (() => {
   'use strict';
+  // Keep the shop available in the shared navigation on every current page.
+  // The Support page also has static links and styles for the no-JS path.
+  if (!document.querySelector('link[data-kira-shop-styles]')) {
+    const styles = document.createElement('link');
+    styles.rel = 'stylesheet';
+    styles.href = new URL('shop.css?v=20260928', document.currentScript?.src || document.baseURI).href;
+    styles.setAttribute('data-kira-shop-styles', '');
+    document.head.appendChild(styles);
+  }
+  document.querySelector('.site-header')?.classList.add('shop-navigation');
+  document.querySelectorAll('#primary-nav, .footlinks').forEach(links => {
+    if (links.querySelector('a[href="https://shop.kiralabs.org/"], a[href="https://shop.kiralabs.org"]')) return;
+    const shop = document.createElement('a');
+    shop.href = 'https://shop.kiralabs.org/';
+    shop.className = 'shop-link';
+    shop.textContent = 'Shop';
+    links.insertBefore(shop, links.querySelector('a.contact, a[href="contact.html"]'));
+  });
   document.body.classList.add('js');
   const menu = document.querySelector('.menu-toggle');
   const nav = document.getElementById('primary-nav');
@@ -9,7 +27,7 @@
     menu.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); nav.classList.toggle('open', open); menu.textContent = open ? 'Close' : 'Menu'; });
     nav.addEventListener('click', e => { if (e.target.closest('a')) close(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('open')) { close(); menu.focus(); } });
-    window.matchMedia('(min-width: 851px)').addEventListener('change', close);
+    window.matchMedia('(min-width: 1001px)').addEventListener('change', close);
   }
   document.querySelectorAll('img[data-existing-asset]').forEach(img => {
     const unavailable = () => {
