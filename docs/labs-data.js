@@ -1,12 +1,13 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-09-14",
+  "prepared_on": "2026-09-30",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
-  "note": "Published milestones for Kira Labs and the projects currently featured on this website. Video dates are publication dates. Undated work and future goals remain undated.",
+  "note": "Published milestones for Kira Labs and the projects currently featured on this website. Video dates are publication dates. NewBrain research is explicitly early-stage; undated work and future goals remain undated.",
   "projects": [
     "Kira World",
+    "NewBrain",
     "ShiftBrief",
     "Video Studio",
     "Sarah Travel",
@@ -715,6 +716,36 @@ window.KIRA_LABS_TIMELINE = {
         }
       ],
       "project_page": "sarah-travel.html"
+    },
+    {
+      "id": "newbrain-research-2026-09-29",
+      "title": "NewBrain research begins",
+      "project": "NewBrain",
+      "track": "Cognitive architecture research",
+      "status": "development",
+      "date": "2026-09-29",
+      "date_basis": "Dated repository and development records; the controlled learning benchmark was still in progress when reviewed September 30, 2026.",
+      "reviewed_on": "2026-09-30",
+      "summary": "NewBrain begins controlled testing as a possible reusable cognitive layer for Kira World and other synthetic people.",
+      "body": "The research combines source-traceable computational neuron models, neural-recording comparisons, external simulator checks and small engineered learning experiments. A current benchmark compares six approaches on learning, retention, reversal, interference and false associations, including simple indexed memory as a control.",
+      "boundary": "This is an early research prototype, not a recreated human brain. The current benchmark has not yet demonstrated an advantage, and Kira’s live identity, reviewed memories and public speech remain disconnected from the test.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "label": "Research concept visualization",
+        "caption": "Kira World concept art used to represent the NewBrain research milestone; not a brain scan, benchmark chart or finished cognitive system.",
+        "alt": "Concept visualization connecting synthetic people, memory and digital worlds"
+      },
+      "sources": [
+        {
+          "label": "Read this update",
+          "url": "updates.html#newbrain-research-2026-09-29"
+        },
+        {
+          "label": "NewBrain status in Kira World",
+          "url": "kira-world.html#newbrain"
+        }
+      ],
+      "project_page": "kira-world.html#newbrain"
     }
   ]
 };
