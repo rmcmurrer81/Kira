@@ -743,6 +743,10 @@ window.KIRA_LABS_TIMELINE = {
         {
           "label": "NewBrain status in Kira World",
           "url": "kira-world.html#newbrain"
+        },
+        {
+          "label": "Watch the NewBrain video playlist",
+          "url": "https://www.youtube.com/watch?v=YgV4m1xnK9A&list=PLGMVpR5GxXNw&pp=sAgC"
         }
       ],
       "project_page": "kira-world.html#newbrain"
