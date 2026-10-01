@@ -749,6 +749,49 @@ window.KIRA_LABS_TIMELINE = {
           "url": "https://www.youtube.com/watch?v=YgV4m1xnK9A&list=PLGMVpR5GxXNw&pp=sAgC"
         }
       ],
+"id": "newbrain-research-2026-09-29",
+      "title": "NewBrain research begins",
+      "project": "NewBrain",
+      "track": "Cognitive architecture research",
+      "status": "development",
+      "date": "2026-09-29",
+      "date_basis": "Dated repository and development records; the controlled learning benchmark was still in progress when reviewed September 30, 2026.",
+      "reviewed_on": "2026-09-30",
+      "summary": "NewBrain begins controlled testing as a possible reusable cognitive layer for Kira World and other synthetic people.",
+      "body": "The research combines source-traceable computational neuron models, neural-recording comparisons, external simulator checks and small engineered learning experiments. A current benchmark compares six approaches on learning, retention, reversal, interference and false associations, including simple indexed memory as a control.",
+      "boundary": "This is an early research prototype, not a recreated human brain. The current benchmark has not yet demonstrated an advantage, and Kira’s live identity, reviewed memories and public speech remain disconnected from the test.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "label": "Research concept visualization",
+        "caption": "Kira World concept art used to represent the NewBrain research milestone; not a brain scan, benchmark chart or finished cognitive system.",
+        "alt": "Concept visualization connecting synthetic people, memory and digital worlds"
+      },
+      "sources": [
+        {
+          "label": "Read this update",
+          "url": "updates.html#newbrain-research-2026-09-29"
+        },
+        {
+          "label": "NewBrain status in Kira World",
+          "url": "kira-world.html#newbrain"
+        },
+        {
+          "label": "Watch the NewBrain video playlist",
+          "url": "https://www.youtube.com/watch?v=YgV4m1xnK9A&list=PLGMVpR5GxXNw&pp=sAgC"
+        }
+      ],
+      "playlist": {
+        "id": "PLGMVpR5GxXNw",
+        "lead_video": "YgV4m1xnK9A",
+        "eyebrow": "NEWBRAIN · RESEARCH VIDEO COLLECTION",
+        "title": "NewBrain Research Updates",
+        "cover_title": "NEWBRAIN",
+        "cover_emphasis": "Research updates.",
+        "cover_bottom": "Learning · Memory · Vision · Hearing",
+        "description": "Follow NewBrain through benchmark results, delayed-feedback learning work, vision and hearing plans, and future cognitive-architecture experiments for Kira World and synthetic people.",
+        "open_label": "Open NewBrain playlist on YouTube ↗",
+        "episodes_label": "Explore the NewBrain videos"
+      },
       "project_page": "kira-world.html#newbrain"
     }
   ]
