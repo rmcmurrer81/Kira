@@ -33,12 +33,29 @@
   }
   function showVideo(m){
     const host=$('video-area');
+    if(window.KiraVideo)window.KiraVideo.clear(host);
+    host.replaceChildren();
+
+    if(m.playlist&&/^[A-Za-z0-9_-]+$/.test(m.playlist.id)&&/^[A-Za-z0-9_-]{11}$/.test(m.playlist.lead_video)){
+      const card=make('section',undefined,'timeline-playlist-card');
+      const preview=make('button',undefined,'timeline-playlist-preview');preview.type='button';preview.setAttribute('aria-label','Play '+m.playlist.title+' playlist');
+      const kicker=make('span',m.playlist.eyebrow,'timeline-playlist-kicker');
+      const coverTitle=make('strong',m.playlist.cover_title,'timeline-playlist-cover-title');
+      const coverEm=make('em',m.playlist.cover_emphasis,'timeline-playlist-cover-emphasis');
+      const bottom=make('span',undefined,'timeline-playlist-bottom');bottom.append(make('span',m.playlist.cover_bottom),make('span','▶','timeline-playlist-play'));
+      preview.append(kicker,coverTitle,coverEm,bottom);
+      const copy=make('div',undefined,'timeline-playlist-copy');copy.append(make('p',m.playlist.eyebrow,'timeline-playlist-eyebrow'),make('h3',m.playlist.title),make('p',m.playlist.description));
+      const open=link(m.playlist.open_label,'https://www.youtube.com/watch?v='+m.playlist.lead_video+'&list='+m.playlist.id);open.className='timeline-playlist-open';copy.append(open);
+      const details=document.createElement('details');details.className='timeline-playlist-episodes';const summary=document.createElement('summary');summary.textContent=m.playlist.episodes_label;details.append(summary);const p=make('p','The playlist opens with the newest NewBrain research update and can grow as new experiments are published.');details.append(p);copy.append(details);
+      const frameWrap=make('div',undefined,'timeline-playlist-frame');frameWrap.hidden=true;
+      preview.addEventListener('click',()=>{if(frameWrap.querySelector('iframe'))return;const frame=make('iframe');frame.src='https://www.youtube-nocookie.com/embed/videoseries?list='+m.playlist.id+'&rel=0';frame.title=m.playlist.title;frame.allow='encrypted-media; picture-in-picture; fullscreen';frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';frameWrap.append(frame);frameWrap.hidden=false;preview.hidden=true;});
+      card.append(preview,copy,frameWrap);host.append(card);return;
+    }
+
     if(window.KiraVideo){
-      window.KiraVideo.clear(host);
       if(m.video)window.KiraVideo.mount(host,{id:m.video.id,title:m.video.title,fallbackPoster:imageURL(m)});
-    }else{
-      host.replaceChildren();
-      if(m.video&&/^[a-zA-Z0-9_-]{11}$/.test(m.video.id))host.append(link('Watch on YouTube ↗','https://www.youtube.com/watch?v='+m.video.id));
+    }else if(m.video&&/^[a-zA-Z0-9_-]{11}$/.test(m.video.id)){
+      host.append(link('Watch on YouTube ↗','https://www.youtube.com/watch?v='+m.video.id));
     }
   }
   $('detail-image').addEventListener('load',()=>{$('detail-image').hidden=false;$('timeline-image-error').hidden=true;});
