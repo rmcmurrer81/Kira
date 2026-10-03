@@ -3,20 +3,21 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),asse
 const {webcrypto,createHash}=require('node:crypto');
 const docs=path.resolve(__dirname,'../docs');
 const projects=require('../docs/iris-projects.js');
-const notes=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-03.json'),'utf8'));
+const notes=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-03-2.json'),'utf8'));
 let checks=0;function check(fn){fn();checks++;}
 function element(){return {children:[],listeners:{},disabled:false,value:'',hidden:false,dataset:{},_text:'',set textContent(v){this._text=String(v);this.children=[];},get textContent(){return this._text+this.children.map(e=>e.textContent||'').join('');},replaceChildren(...nodes){this.children=nodes;this._text='';},append(...nodes){this.children.push(...nodes);},addEventListener(n,fn){this.listeners[n]=fn;},setAttribute(){},showModal(){},close(){},remove(){},select(){}};}
-async function ui({corrupt='',preview=false}={}){
+async function ui({corrupt='',preview=false,loaderSource='',overrides={}}={}){
  const els=new Map(),get=id=>{if(!els.has(id))els.set(id,element());return els.get(id);};
  const fetched=[],window={KIRA_LABS_PREVIEW:preview,crypto:webcrypto};
  const document={getElementById:get,createElement:element,querySelector:get,addEventListener(){},body:element()};window.document=document;
- const fetch=async url=>{fetched.push(String(url));const name=String(url).split('/docs/').pop().replace('https://iris.test/','');const p=path.join(docs,name);return {ok:fs.existsSync(p),text:async()=>fs.readFileSync(p,'utf8')+(name===corrupt?' BAD':'')};};window.fetch=fetch;
- const context=vm.createContext({window,document,fetch,location:{protocol:'https:',href:'https://iris.test/contact.html'},crypto:webcrypto,TextEncoder,URL,AbortController,setTimeout,clearTimeout,addEventListener(){},navigator:{},console});
- for(const file of ['iris-projects.js','iris-policy.js','iris-routing-checks.js','iris.js'])vm.runInContext(fs.readFileSync(path.join(docs,file),'utf8'),context);
+ let pageReloads=0;
+ const fetch=async url=>{fetched.push(String(url));const name=String(url).split('/docs/').pop().replace('https://iris.test/','');const p=path.join(docs,name);return {ok:fs.existsSync(p),text:async()=>(overrides[name]??fs.readFileSync(p,'utf8'))+(name===corrupt?' BAD':'')};};window.fetch=fetch;
+ const context=vm.createContext({window,document,fetch,location:{protocol:'https:',href:'https://iris.test/contact.html',reload:()=>{pageReloads++;}},crypto:webcrypto,TextEncoder,URL,AbortController,setTimeout,clearTimeout,addEventListener(){},navigator:{},console});
+ for(const file of ['iris-projects.js','iris-policy.js','iris-routing-checks.js','iris.js'])vm.runInContext(file==='iris.js'&&loaderSource?loaderSource:fs.readFileSync(path.join(docs,file),'utf8'),context);
  const deadline=Date.now()+5000;while(!get('sarah-form').listeners.submit&&!get('guide-status').textContent.includes('could not load')){if(Date.now()>deadline)throw Error(get('guide-status').textContent);await new Promise(r=>setTimeout(r,5));}
  while(get('send-question').disabled&&!get('guide-status').textContent.includes('could not load')){if(Date.now()>deadline)throw Error(get('guide-status').textContent);await new Promise(r=>setTimeout(r,5));}
  function ask(q){get('question').value=q;get('sarah-form').listeners.submit({preventDefault(){}});return {title:get('answer-title').textContent,answer:get('answer-body').textContent,label:get('answer-label').textContent,sources:get('answer-sources').children.map(e=>e.href)};}
- return {ask,get,window,context,fetched,reset:()=>get('clear-chat').onclick()};
+ return {ask,get,window,context,fetched,get pageReloads(){return pageReloads;},reset:()=>get('clear-chat').onclick()};
 }
 (async()=>{
  check(()=>projects.validate(notes));
@@ -63,7 +64,24 @@ async function ui({corrupt='',preview=false}={}){
  current.reset();current.ask('Tell me about NewBrain');check(()=>assert.match(current.ask('What works today?').answer,/NewBrain.*IdeaForge.*Humanoid Researcher.*Kira World.*BlueBook/s));
  current.reset();current.ask('Tell me about NewBrain');check(()=>assert.match(current.ask('What are the current projects?').answer,/NewBrain.*IdeaForge.*Humanoid Researcher.*Kira World.*BlueBook/s));
  check(()=>assert.match(current.ask('Who are you?').answer,/not connected to an AI model/));
- const broken=await ui({corrupt:'knowledge/iris-projects-2026-10-03.json'});check(()=>{assert.equal(broken.get('send-question').disabled,true);assert.match(broken.get('guide-status').textContent,/current project notes could not load/);assert.equal(broken.get('sarah-form').listeners.submit,undefined);});
+ const broken=await ui({corrupt:'knowledge/iris-projects-2026-10-03-2.json'});check(()=>{assert.equal(broken.get('send-question').disabled,true);assert.match(broken.get('guide-status').textContent,/current project notes could not load/);assert.equal(broken.get('sarah-form').listeners.submit,undefined);});
+ check(()=>assert.equal(broken.get('refresh-notes').textContent,'Reload page'));
+ broken.get('refresh-notes').onclick();check(()=>assert.equal(broken.pageReloads,1));
+ const oldLoader=fs.readFileSync(path.join(__dirname,'fixtures/iris-loader-2026-10-03-1.js'),'utf8');
+ const oldPack=fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-03.json'),'utf8');
+ const newPack=fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-03-2.json'),'utf8');
+ check(()=>assert.ok(oldLoader.includes(createHash('sha256').update(oldPack).digest('hex'))));
+ check(()=>assert.equal(JSON.parse(oldPack).content_version,'2026-10-03.1'));
+ const oldClient=await ui({loaderSource:oldLoader});
+ check(()=>assert.equal(oldClient.get('send-question').disabled,false));
+ check(()=>assert.match(oldClient.ask('What has been tested in NewBrain?').answer,/plasticity component’s 20 fixtures remain unrun/));
+ const mixedClient=await ui({loaderSource:oldLoader,overrides:{'knowledge/iris-projects-2026-10-03.json':newPack}});
+ check(()=>assert.equal(mixedClient.get('send-question').disabled,true));
+ check(()=>assert.match(mixedClient.get('guide-status').textContent,/could not load/));
+ check(()=>assert.ok(current.fetched.some(url=>url.endsWith('knowledge/iris-projects-2026-10-03-2.json'))));
+ check(()=>assert.ok(!current.fetched.some(url=>url.endsWith('knowledge/iris-projects-2026-10-03.json'))));
+ const contact=fs.readFileSync(path.join(docs,'contact.html'),'utf8');
+ for(const script of ['iris.js','iris-policy.js','iris-projects.js'])check(()=>assert.ok(contact.includes('src="'+script+'?v=2026-10-03.2"')));
  current.reset();const plasticity=current.ask('What has been tested in NewBrain?');
  check(()=>assert.match(plasticity.answer,/passed all 20 local pure-Python engineering checks, with independently reviewed saved evidence/));
  check(()=>assert.match(plasticity.answer,/delayed-cue, context\/rule-change and lesion\/sham scientific campaign remains unrun/));
@@ -73,7 +91,7 @@ async function ui({corrupt='',preview=false}={}){
  check(()=>assert.equal(notes.content_version,'2026-10-03.2'));
  const privateStrings=/bd576d5|ab021755|b3d673b5|a0c0f12d|github\.com\/rmcmurrer81\/(?:NewBrain|IdeaForge|Humanoid|BlueBook)|research\/dialogue|AppData|[A-Z]:\\|127\.0\.0\.1/i;
  check(()=>assert.doesNotMatch(JSON.stringify(notes),privateStrings));
- const raw=fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-03.json'),'utf8');check(()=>assert.ok(fs.readFileSync(path.join(docs,'iris.js'),'utf8').includes(createHash('sha256').update(raw).digest('hex'))));
+ const raw=fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-03-2.json'),'utf8');check(()=>assert.ok(fs.readFileSync(path.join(docs,'iris.js'),'utf8').includes(createHash('sha256').update(raw).digest('hex'))));
  check(()=>assert.ok(current.fetched.every(url=>!/[?]/.test(url))));
  for(const file of ['iris.js','iris-projects.js','iris-policy.js'])check(()=>assert.doesNotMatch(fs.readFileSync(path.join(docs,file),'utf8'),/localStorage|sessionStorage|indexedDB|sendBeacon|api\.openai|anthropic\.com/));
  console.log(JSON.stringify({status:'PASS',checks,legacyRoutingChecks:current.window.KIRA_IRIS_ROUTING_REPORT.total,reviewed_on:notes.reviewed_on,model_calls:0,scope:'Actual Iris loader, integrity validation, original core and current policy in a DOM fixture; separate browser smoke test required.'},null,2));
