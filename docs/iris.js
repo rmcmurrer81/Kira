@@ -19,6 +19,8 @@
   'knowledge/updates-2026-09-12-1.json':null,
   'knowledge/projects-2026-09-12-1.json':null
  });
+ const PROJECT_NOTES='knowledge/iris-projects-2026-10-03.json';
+ const PROJECT_SHA256='9fe3250ef67b6af442e5174f8bc4e74a2ee06d83b8b1843590feb68fcad6c779';
  const status=document.getElementById('guide-status'),send=document.getElementById('send-question');
  const nativeFetch=window.fetch.bind(window);
  async function blobHash(text){
@@ -47,16 +49,29 @@
   }
   throw last||Error('Original asset unavailable');
  }
+ async function readProjects(){
+  if(!window.KiraIrisProjects)throw Error('Project retrieval module unavailable');
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),10000);
+  try{
+   const url=new URL(PROJECT_NOTES,location.href).href;
+   const response=await nativeFetch(url,{method:'GET',credentials:'omit',cache:'no-store',signal:controller.signal});
+   if(!response.ok)throw Error('Current project notes unavailable');
+   const text=await response.text();if(text.length>100000)throw Error('Project notes too large');
+   const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text))),n=>n.toString(16).padStart(2,'0')).join('');
+   if(digest!==PROJECT_SHA256)throw Error('Project notes integrity mismatch');
+   return window.KiraIrisProjects.validate(JSON.parse(text));
+  }finally{clearTimeout(timer);}
+ }
  let started=false;
  async function start(){
   if(started)return;
   send.disabled=true;status.textContent='Loading the complete published knowledge…';
   try{
    if(!window.crypto?.subtle)throw Error('Secure integrity checks unavailable');
-   const [pack,core]=await Promise.all(['sarah-packs.js','sarah-guide.js'].map(async p=>(await readOriginal(p)).text()));
+   const [pack,core,projectNotes]=await Promise.all([readOriginal('sarah-packs.js').then(r=>r.text()),readOriginal('sarah-guide.js').then(r=>r.text()),readProjects()]);
    // Source code belongs to the user's fixed, hash-verified public repository.
    Function(pack)();
-   window.SarahPacks=window.KiraIrisPolicy.wrap(window.SarahPacks);
+   window.SarahPacks=window.KiraIrisPolicy.wrap(window.SarahPacks,projectNotes);
    const renamed=core.replaceAll('Hi, I’m Sarah','Hi, I’m Iris').replaceAll('Sarah is speaking','Iris is speaking');
    let executable=renamed;
    if(window.KIRA_LABS_PREVIEW&&window.KiraIrisRoutingChecks){
@@ -81,7 +96,7 @@
    Function('fetch',executable)(readOriginal);
    started=true;
   }catch(e){
-   status.textContent='The complete published knowledge could not load. Connect to the internet and press Reload notes. The message form still works independently.';
+   status.textContent='The complete published knowledge and current project notes could not load. Connect to the internet and press Reload notes. The message form still works independently.';
    document.getElementById('refresh-notes').onclick=start;
   }
  }
