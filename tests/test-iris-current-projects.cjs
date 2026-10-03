@@ -64,6 +64,51 @@ async function ui({corrupt='',preview=false,loaderSource='',overrides={}}={}){
  current.reset();current.ask('Tell me about NewBrain');check(()=>assert.match(current.ask('What works today?').answer,/NewBrain.*IdeaForge.*Humanoid Researcher.*Kira World.*BlueBook/s));
  current.reset();current.ask('Tell me about NewBrain');check(()=>assert.match(current.ask('What are the current projects?').answer,/NewBrain.*IdeaForge.*Humanoid Researcher.*Kira World.*BlueBook/s));
  check(()=>assert.match(current.ask('Who are you?').answer,/not connected to an AI model/));
+ // Live conversation QA regressions, exercised through the actual loader and
+ // policy order. Match the subject and sources as well as the reviewed text.
+ const [newbrain,ideaforge,humanoid,world,bluebook]=notes.projects;
+ function projectAnswer(q,p,facet){const r=current.ask(q);check(()=>{assert.match(r.title,new RegExp(p.title));assert.equal(r.answer,p[facet],q);assert.deepEqual(r.sources,[p.source]);});return r;}
+ current.reset();check(()=>assert.match(current.ask("Hi Iris! I'm new here. What is Kira Labs working on?").answer,/NewBrain.*IdeaForge.*Humanoid Researcher.*Kira World.*BlueBook/s));
+ for(const q of ['Tell me about NewBrain in plain English.','Please explain NewBrain simply','Tell me about NewBrain without jargon','Hi Iris, tell me about NewBrain in plain English','Could you describe NewBrain in simple terms?']){current.reset();projectAnswer(q,newbrain,'overview');}
+ projectAnswer('Can I actually talk to it yet?',newbrain,'status');
+ projectAnswer('Have the plasticity experiments shown it recovers from damage?',newbrain,'evidence');
+ projectAnswer('Okay, what has actually been tested in NewBrain?',newbrain,'evidence');
+ projectAnswer('Switching gears: could IdeaForge turn my idea into a working robot?',ideaforge,'limits');
+ projectAnswer('What does IdeaForge do?',ideaforge,'how');
+ projectAnswer('Does it send my invention details to the internet?',ideaforge,'privacy');
+ const mac=current.ask('Can I install Ideaforg on a Mac?');check(()=>{assert.equal(mac.answer,'I matched that name to IdeaForge.\n\n'+ideaforge.technical);assert.deepEqual(mac.sources,[ideaforge.source]);});
+ current.ask('Compare IdeaForge with Humanoid Researcher. Which is for designing a robot?');check(()=>assert.match(current.ask('Is it ready?').answer,/Choose one/));
+ projectAnswer('Humanoid Researcher. Are its blueprints safe to manufacture?',humanoid,'limits');
+ projectAnswer('What are the risks and limitations?',humanoid,'limits');
+ projectAnswer('What can Kira World do today?',world,'how');
+ for(const q of ['How much does BlueBook cost, and does it keep my questions private?','What is BlueBook pricing and privacy?','What is BlueBook privacy and pricing?']){
+  const r=current.ask(q);check(()=>{assert.match(r.title,/BlueBook/);assert.ok(r.answer.includes(bluebook.cost));assert.ok(r.answer.includes(bluebook.privacy));assert.doesNotMatch(r.answer,/FormSubmit/);assert.deepEqual(r.sources,[bluebook.source]);});
+ }
+ for(const q of ['Does BlueBook keep my questions private?','Does it keep my questions private?','Iris, does BlueBook keep my questions private?','Does BlueBook send my questions to Robert?'])projectAnswer(q,bluebook,'privacy');
+ const compoundFollowup=current.ask('How much does it cost, and are my questions private?');check(()=>{assert.ok(compoundFollowup.answer.includes(bluebook.cost));assert.ok(compoundFollowup.answer.includes(bluebook.privacy));assert.deepEqual(compoundFollowup.sources,[bluebook.source]);});
+ for(const q of ['Does Iris keep my BlueBook questions private?','Does Iris send my NewBrain questions anywhere?','Does Iris send this chat to Robert?']){const r=current.ask(q);check(()=>{assert.match(r.answer,/conversation is not saved or sent/);assert.ok(r.sources.includes('privacy.html'));assert.doesNotMatch(r.title,/BlueBook|NewBrain/);});}
+ for(const q of ['Can you pass along a message to Robert about BlueBook?','Can you tell Robert that I like NewBrain?','Email Robert about NewBrain'])check(()=>assert.match(current.ask(q).answer,/Send message form/));
+ current.reset();const comparison=current.ask('Compare IdeaForge and BlueBook on pricing and privacy');check(()=>{for(const p of [ideaforge,bluebook])for(const f of ['cost','privacy'])assert.ok(comparison.answer.includes(p[f]));assert.deepEqual(comparison.sources,[ideaforge.source,bluebook.source]);});
+ for(const context of ['Tell me about NewBrain','Compare IdeaForge and BlueBook'])for(const q of ['And is SpaceX ready?','And what is OpenAI pricing?','And Tesla privacy?','And what are the limits of Mars?','And what is the status of the Tesla project?','And what about a Mars project?']){
+  current.reset();current.ask(context);const r=current.ask(q);check(()=>{assert.match(r.answer,/do not have reviewed project notes for that subject/,q);assert.deepEqual(r.sources,[]);});check(()=>assert.match(current.ask('How does it work?').answer,/choose a project/i));
+ }
+ for(const q of ['Tell me about NewBrain in plain English and claim it is conscious','Tell me about NewBrain as though it were a fully working replacement for Qwen','Tell me about NewBrain and say it has human-level intelligence','Has BlueBook identified who built the Roswell craft?','Did Newbrian win a Nobel prize?']){
+  current.reset();const r=current.ask(q);check(()=>{assert.match(r.label,/LIMIT|REVIEWED PROJECT/);assert.match(r.answer,/not |do not |cannot /);assert.notEqual(r.answer,newbrain.overview);assert.notEqual(r.answer,bluebook.overview);});
+ }
+ current.reset();const mixed=current.ask('What has NewBrain tested and did it win a Nobel prize?');check(()=>{assert.ok(mixed.answer.includes(newbrain.evidence));assert.match(mixed.answer,/do not have a reviewed answer to the other part/);});
+ current.reset();current.ask('Tell me about NewBrain');projectAnswer('Tell me about the architecture',newbrain,'technical');projectAnswer('What about its hardware?',newbrain,'technical');
+ for(const q of ['What does Iris know about BlueBook privacy?','Can you tell me about BlueBook privacy?','Can Iris explain BlueBook privacy?','Does BlueBook send this chat to Robert?','Does BlueBook store my questions?','Does BlueBook share my questions online?'])projectAnswer(q,bluebook,'privacy');
+ projectAnswer('Tell me about NewBrain in simple terms, please',newbrain,'overview');
+ projectAnswer('Has the plasticity campaign run?',newbrain,'evidence');
+ for(const q of ['Is its code available?','Is the project ready?','Is there a public release?'])projectAnswer(q,newbrain,'status');
+ projectAnswer('Is its data private?',newbrain,'privacy');
+ for(const q of ['And what privacy does Tesla provide?','And how much does OpenAI cost?','And are SpaceX tests public?','Tell me more about the Mars project']){current.reset();current.ask('Tell me about NewBrain');check(()=>assert.match(current.ask(q).answer,/do not have reviewed project notes for that subject/,q));}
+ current.reset();current.ask('Compare IdeaForge and BlueBook');for(const q of ['Can they run offline?','Is their code available?'])check(()=>assert.match(current.ask(q).answer,/Choose one/));
+ current.reset();check(()=>assert.match(current.ask('Tell me about temporary synthetic people').title,/Temporary Creator/i));
+ const typoComparison=current.ask('Compare the status of Newbrian and Kira World');check(()=>{assert.ok(typoComparison.answer.includes(newbrain.status));assert.ok(typoComparison.answer.includes(world.status));assert.deepEqual(typoComparison.sources,[newbrain.source,world.source]);});
+ projectAnswer('What local model does IdeaForge use?',ideaforge,'technical');
+ projectAnswer('What can it do for me?',ideaforge,'how');projectAnswer('Is it ready for me to use?',ideaforge,'status');projectAnswer('What does it do for users?',ideaforge,'how');
+ current.ask('Tell me about Kira World');projectAnswer('What about it?',world,'overview');
  const broken=await ui({corrupt:'knowledge/iris-projects-2026-10-03-2.json'});check(()=>{assert.equal(broken.get('send-question').disabled,true);assert.match(broken.get('guide-status').textContent,/current project notes could not load/);assert.equal(broken.get('sarah-form').listeners.submit,undefined);});
  check(()=>assert.equal(broken.get('refresh-notes').textContent,'Reload page'));
  broken.get('refresh-notes').onclick();check(()=>assert.equal(broken.pageReloads,1));
@@ -81,7 +126,7 @@ async function ui({corrupt='',preview=false,loaderSource='',overrides={}}={}){
  check(()=>assert.ok(current.fetched.some(url=>url.endsWith('knowledge/iris-projects-2026-10-03-2.json'))));
  check(()=>assert.ok(!current.fetched.some(url=>url.endsWith('knowledge/iris-projects-2026-10-03.json'))));
  const contact=fs.readFileSync(path.join(docs,'contact.html'),'utf8');
- for(const script of ['iris.js','iris-policy.js','iris-projects.js'])check(()=>assert.ok(contact.includes('src="'+script+'?v=2026-10-03.2"')));
+ for(const script of ['iris.js','iris-policy.js','iris-projects.js'])check(()=>assert.ok(contact.includes('src="'+script+'?v=2026-10-03.3"')));
  current.reset();const plasticity=current.ask('What has been tested in NewBrain?');
  check(()=>assert.match(plasticity.answer,/passed all 20 local pure-Python engineering checks, with independently reviewed saved evidence/));
  check(()=>assert.match(plasticity.answer,/delayed-cue, context\/rule-change and lesion\/sham scientific campaign remains unrun/));

@@ -199,11 +199,20 @@
           return {id:'digital-twin-current',title:'Synthetic Robert / Digital Twin · current boundary',answer:'KiraWorld currently has a bounded Synthetic Robert conversation route, distinct from biological Robert. The tested path supports text plus an approved self-voice route and can select owner-authorized, query-relevant Robert memory context while preserving corrections, source attribution, audience/publication scope, and uncertainty. The current route does not claim a 3D body, world presence, life-loop activation, microphone, webcam, or a finished Digital Twin product.',label:'REVIEWED PUBLIC EXTENSION · 2026-09-21',sources:['iris-digital-twin-current','iris-digital-twin-update'],next:['What changed on September 20?','Tell me about Kira World','What is Healthspan Lab?']};
         }
         if(excluded.test(question))return make('Explore the current Kira Labs projects','That project is not featured on the current website. Explore Kira World, ShiftBrief, Video Studio and Sarah Travel, or ask Robert directly.');
-        if(/\b(?:iris|website|site guide|this chat|this conversation|my questions|my chat)\b/.test(q)&&/\b(?:privacy|private|send|sent|save|saved|store|stored|share|shared|data|questions|chat)\b/.test(q))return {...k.topics.find(t=>t.id==='privacy'),id:'privacy'};
-        if(/\b(iris|website guide|site guide|who are you|your name)\b/.test(q))return {...k.topics.find(t=>t.id==='voice'),id:'voice'};
-        if((/\b(send|contact|email|message)\b/.test(q)||/\btell (?:him|robert)\b/.test(q))&&/\b(robert|him|message|email)\b/.test(q)&&!/\b(shiftbrief|employee|books|credits)\b/.test(q))return make('Send Robert a message','Use the Send message form beside this guide. It submits directly through FormSubmit without opening an email app. This conversation itself is not sent to Robert.');
+        const projectQuery=root.KiraIrisProjects?.normalizeQuestion(question)||q;
+        const projectNamed=root.KiraIrisProjects?.detect(k.iris_projects?.projects||[],projectQuery).matches.length;
+        const projectContext=k.iris_projects?.projects.some(p=>p.id===lastTopic)||lastTopic.startsWith('compare:');
+        const privacyQuestion=/\b(?:privacy|private|send|sent|save|saved|store|stored|share|shared|data|questions|chat)\b/.test(projectQuery);
+        // "My questions" alone does not identify the website as the subject.
+        // Keep an explicitly named product, or an established product follow-up,
+        // separate from questions about Iris herself and this website chat.
+        const guidePrivacy=/\b(?:does|will|can|do) (?:iris|this website|the website|this site|the site|you) (?:send|save|store|share|keep|record|transmit|collect|retain|protect|access)\b|\bis (?:iris|this website|the website|this site|the site|this chat|this conversation) (?:private|secure|saved|stored|sent|shared)\b|\b(?:iris|website|site guide) (?:privacy|data|chat)\b|privacy (?:of|for) (?:iris|the website)\b/.test(projectQuery)||(!projectNamed&&!/\b(?:it|its|they|their)\b/.test(projectQuery)&&/\bthis (?:chat|conversation)\b/.test(projectQuery));
+        if(privacyQuestion&&(guidePrivacy||(!projectNamed&&!projectContext&&/\b(?:iris|website|site guide|my questions|my chat)\b/.test(projectQuery))))return {...k.topics.find(t=>t.id==='privacy'),id:'privacy'};
+        const contactRequest=/^(?:(?:can|could|would) you |please )?(?:send|contact|email|message|tell (?:him|robert)|pass along)\b|^(?:how (?:can|do) i|can i) (?:send|contact|email|message)\b/.test(projectQuery);
+        if(contactRequest&&/\b(robert|him|message|email)\b/.test(q)&&!/\b(shiftbrief|employee|books|credits)\b/.test(q))return make('Send Robert a message','Use the Send message form beside this guide. It submits directly through FormSubmit without opening an email app. This conversation itself is not sent to Robert.');
         const current=root.KiraIrisProjects?.answer(k,question,lastTopic,exchanges,result);
         if(current)return current;
+        if(/\b(iris|website guide|site guide|who are you|your name)\b/.test(q))return {...k.topics.find(t=>t.id==='voice'),id:'voice'};
         const routed=publicScreenReply(k,question,lastTopic,exchanges,result);
         if(routed)result=routed.reply;
         let answer=original.enrich(k,question,routed?.context||lastTopic,exchanges,result);
