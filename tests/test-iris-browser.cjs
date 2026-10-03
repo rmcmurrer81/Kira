@@ -41,6 +41,7 @@ const server=http.createServer((req,res)=>{
    assert.match(await ask('What are the risks and limitations?'),/not engineering certification or fabrication-ready geometry/);checks++;
    const costPrivacy=await ask('How much does BlueBook cost, and does it keep my questions private?');assert.match(costPrivacy,/No public BlueBook price/);assert.match(costPrivacy,/not fully offline/);assert.doesNotMatch(costPrivacy,/FormSubmit/);checks+=3;
    assert.equal(await page.locator('#answer-sources a').getAttribute('href'),'knowledge.html#bluebook');checks++;
+   await ask('What is Bluebok?');assert.match(await ask('So has it proven aliens are real?'),/does not prove extraterrestrial life/);checks++;
    assert.match(await ask('Does Iris send this chat to Robert?'),/conversation is not saved or sent/);checks++;
    assert.equal(await page.locator('#contact-name').inputValue(),'');assert.equal(await page.locator('#contact-message').inputValue(),'');checks+=2;
    await page.locator('#open-profiles').click();assert.equal(await page.locator('#profiles-dialog').isVisible(),true);await page.locator('#close-profiles').click();assert.equal(await page.locator('#profiles-dialog').isVisible(),false);checks+=2;

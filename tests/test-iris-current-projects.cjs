@@ -109,6 +109,12 @@ async function ui({corrupt='',preview=false,loaderSource='',overrides={}}={}){
  projectAnswer('What local model does IdeaForge use?',ideaforge,'technical');
  projectAnswer('What can it do for me?',ideaforge,'how');projectAnswer('Is it ready for me to use?',ideaforge,'status');projectAnswer('What does it do for users?',ideaforge,'how');
  current.ask('Tell me about Kira World');projectAnswer('What about it?',world,'overview');
+ // Live regression: a proposition inside a limits question is not a new
+ // subject. Keep nearby genuine new-subject and comparison boundaries.
+ for(const q of ['So has it proven aliens are real?','Has it proven extraterrestrial life is real?']){current.reset();current.ask('What is Bluebok?');projectAnswer(q,bluebook,'limits');}
+ current.reset();current.ask('What is Bluebok?');projectAnswer('So has BlueBook proven aliens are real?',bluebook,'limits');
+ for(const q of ['So has SpaceX proven aliens are real?','And are SpaceX tests public?','And what are the limits of Mars?']){current.reset();current.ask('What is Bluebok?');const r=current.ask(q);check(()=>{assert.match(r.answer,/do not have reviewed project notes for that subject/,q);assert.deepEqual(r.sources,[]);});}
+ current.reset();current.ask('Compare NewBrain and BlueBook');check(()=>assert.match(current.ask('So has it proven aliens are real?').answer,/Choose one/));
  const broken=await ui({corrupt:'knowledge/iris-projects-2026-10-03-2.json'});check(()=>{assert.equal(broken.get('send-question').disabled,true);assert.match(broken.get('guide-status').textContent,/current project notes could not load/);assert.equal(broken.get('sarah-form').listeners.submit,undefined);});
  check(()=>assert.equal(broken.get('refresh-notes').textContent,'Reload page'));
  broken.get('refresh-notes').onclick();check(()=>assert.equal(broken.pageReloads,1));
@@ -126,7 +132,7 @@ async function ui({corrupt='',preview=false,loaderSource='',overrides={}}={}){
  check(()=>assert.ok(current.fetched.some(url=>url.endsWith('knowledge/iris-projects-2026-10-03-2.json'))));
  check(()=>assert.ok(!current.fetched.some(url=>url.endsWith('knowledge/iris-projects-2026-10-03.json'))));
  const contact=fs.readFileSync(path.join(docs,'contact.html'),'utf8');
- for(const script of ['iris.js','iris-policy.js','iris-projects.js'])check(()=>assert.ok(contact.includes('src="'+script+'?v=2026-10-03.3"')));
+ for(const script of ['iris.js','iris-policy.js','iris-projects.js'])check(()=>assert.ok(contact.includes('src="'+script+'?v=2026-10-03.4"')));
  current.reset();const plasticity=current.ask('What has been tested in NewBrain?');
  check(()=>assert.match(plasticity.answer,/passed all 20 local pure-Python engineering checks, with independently reviewed saved evidence/));
  check(()=>assert.match(plasticity.answer,/delayed-cue, context\/rule-change and lesion\/sham scientific campaign remains unrun/));
