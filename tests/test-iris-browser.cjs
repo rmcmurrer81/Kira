@@ -20,7 +20,7 @@ const server=http.createServer((req,res)=>{
    await page.goto(origin+'/contact.html');await page.waitForFunction(()=>!document.getElementById('send-question').disabled);
    const ask=async q=>{await page.locator('#question').fill(q);await page.locator('#send-question').click();return page.locator('#answer-body').innerText();};
    assert.match(await ask('Tell me about Newbrian'),/matched that name to NewBrain/);checks++;
-   assert.match(await ask('What has been tested?'),/16 fixtures.*20 fixtures remain unrun/s);checks++;
+   const evidence=await ask('What has been tested?');assert.match(evidence,/16 fixtures remain unrun/);assert.match(evidence,/passed all 20 local pure-Python engineering checks/);assert.match(evidence,/scientific campaign remains unrun/);checks+=3;
    assert.match(await ask('Tell me about BlueBook'),/attribution and uncertainty/);checks++;
    assert.match(await ask('How does it work?'),/no probability or winner/);checks++;
    assert.match(await ask('Email Robert about NewBrain'),/Send message form/);checks++;

@@ -20,7 +20,7 @@
   'knowledge/projects-2026-09-12-1.json':null
  });
  const PROJECT_NOTES='knowledge/iris-projects-2026-10-03.json';
- const PROJECT_SHA256='9fe3250ef67b6af442e5174f8bc4e74a2ee06d83b8b1843590feb68fcad6c779';
+ const PROJECT_SHA256='36cdd0d08ebd80548c4468ab80c3f75afd6e776fb72e3319577c8d373eae05d2';
  const status=document.getElementById('guide-status'),send=document.getElementById('send-question');
  const nativeFetch=window.fetch.bind(window);
  async function blobHash(text){

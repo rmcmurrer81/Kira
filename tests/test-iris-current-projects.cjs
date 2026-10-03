@@ -64,6 +64,13 @@ async function ui({corrupt='',preview=false}={}){
  current.reset();current.ask('Tell me about NewBrain');check(()=>assert.match(current.ask('What are the current projects?').answer,/NewBrain.*IdeaForge.*Humanoid Researcher.*Kira World.*BlueBook/s));
  check(()=>assert.match(current.ask('Who are you?').answer,/not connected to an AI model/));
  const broken=await ui({corrupt:'knowledge/iris-projects-2026-10-03.json'});check(()=>{assert.equal(broken.get('send-question').disabled,true);assert.match(broken.get('guide-status').textContent,/current project notes could not load/);assert.equal(broken.get('sarah-form').listeners.submit,undefined);});
+ current.reset();const plasticity=current.ask('What has been tested in NewBrain?');
+ check(()=>assert.match(plasticity.answer,/passed all 20 local pure-Python engineering checks, with independently reviewed saved evidence/));
+ check(()=>assert.match(plasticity.answer,/delayed-cue, context\/rule-change and lesion\/sham scientific campaign remains unrun/));
+ check(()=>assert.match(plasticity.answer,/improved learning or damage recovery is not yet demonstrated/));
+ check(()=>assert.match(plasticity.answer,/dialogue component’s 16 fixtures remain unrun/));
+ check(()=>assert.doesNotMatch(plasticity.answer,/plasticity component’s 20 fixtures (?:are also|remain) unrun/));
+ check(()=>assert.equal(notes.content_version,'2026-10-03.2'));
  const privateStrings=/bd576d5|ab021755|b3d673b5|a0c0f12d|github\.com\/rmcmurrer81\/(?:NewBrain|IdeaForge|Humanoid|BlueBook)|research\/dialogue|AppData|[A-Z]:\\|127\.0\.0\.1/i;
  check(()=>assert.doesNotMatch(JSON.stringify(notes),privateStrings));
  const raw=fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-03.json'),'utf8');check(()=>assert.ok(fs.readFileSync(path.join(docs,'iris.js'),'utf8').includes(createHash('sha256').update(raw).digest('hex'))));
