@@ -144,7 +144,7 @@
       // The 'voice' subject is the legacy WEBSITE guide/speech subject, not a resident.
       if(t.id==='voice'){
         t.title='Iris · the Kira Labs website guide';
-        t.answer='I’m Iris, the automated Kira Labs website guide. I use the published biography, entertainment credits, book catalogue and project notes. I am not Kira or Sarah inside ShiftBrief or Sarah Travel. Optional Voice on reads my replies using your browser; I cannot access private records.';
+        t.answer='I’m Iris, the automated Kira Labs website guide. I use the published biography, entertainment credits, book catalogue and dated project notes, including NewBrain, IdeaForge, Humanoid Researcher, Kira World and BlueBook. I match questions, simple name typos and follow-ups inside this browser; I am not connected to an AI model, paid service or live project runtime. I am not Kira or Sarah inside ShiftBrief or Sarah Travel. Optional Voice on reads my replies using your browser; I cannot access private records.';
         t.sources=['iris-knowledge','iris-privacy'];t.terms=[...(t.terms||[]),'iris','website guide','site guide'];
         t.followups={...(t.followups||{}),overview:{answer:t.answer,sources:t.sources}};
       }
@@ -175,14 +175,15 @@
     k.iris_preservation={source_version:k.public_packs?.content_version||k.updated_at,original,retained:{topics:k.topics.length,books:(k.book_catalogue||[]).length,facts:(k.public_packs?.facts||[]).length}};
     return k;
   }
-  function wrap(original){
+  function wrap(original,projectNotes){
     return Object.freeze({
       async load(text,fetcher,previous){
         const loaded=await original.load(text,fetcher,previous);
         // Never silently substitute a smaller core-only bank for the full guide.
         if(!loaded.knowledge?.public_packs)throw new Error('Complete published knowledge did not load');
         const knowledge=prepare(loaded.knowledge);
-        if(root.document){const n=root.document.getElementById('knowledge-coverage');if(n){n.hidden=false;n.textContent='Published knowledge loaded · '+knowledge.iris_preservation.retained.topics+' topics · '+knowledge.iris_preservation.retained.books+' book listings';}}
+        if(projectNotes)root.KiraIrisProjects.prepare(knowledge,projectNotes);
+        if(root.document){const n=root.document.getElementById('knowledge-coverage');if(n){n.hidden=false;n.textContent='Published knowledge loaded · '+knowledge.topics.length+' topics · '+knowledge.iris_preservation.retained.books+' book listings'+(projectNotes?' · project review '+projectNotes.reviewed_on:'');}}
         return {...loaded,knowledge};
       },
       enrich(k,question,lastTopic,exchanges,result){
@@ -198,8 +199,11 @@
           return {id:'digital-twin-current',title:'Synthetic Robert / Digital Twin · current boundary',answer:'KiraWorld currently has a bounded Synthetic Robert conversation route, distinct from biological Robert. The tested path supports text plus an approved self-voice route and can select owner-authorized, query-relevant Robert memory context while preserving corrections, source attribution, audience/publication scope, and uncertainty. The current route does not claim a 3D body, world presence, life-loop activation, microphone, webcam, or a finished Digital Twin product.',label:'REVIEWED PUBLIC EXTENSION · 2026-09-21',sources:['iris-digital-twin-current','iris-digital-twin-update'],next:['What changed on September 20?','Tell me about Kira World','What is Healthspan Lab?']};
         }
         if(excluded.test(question))return make('Explore the current Kira Labs projects','That project is not featured on the current website. Explore Kira World, ShiftBrief, Video Studio and Sarah Travel, or ask Robert directly.');
+        if(/\b(?:iris|website|site guide|this chat|this conversation|my questions|my chat)\b/.test(q)&&/\b(?:privacy|private|send|sent|save|saved|store|stored|share|shared|data|questions|chat)\b/.test(q))return {...k.topics.find(t=>t.id==='privacy'),id:'privacy'};
         if(/\b(iris|website guide|site guide|who are you|your name)\b/.test(q))return {...k.topics.find(t=>t.id==='voice'),id:'voice'};
-        if(/\b(send|contact|email|message)\b/.test(q)&&/\b(robert|him|message|email)\b/.test(q)&&!/\b(shiftbrief|employee|books|credits)\b/.test(q))return make('Send Robert a message','Use the Send message form beside this guide. It submits directly through FormSubmit without opening an email app. This conversation itself is not sent to Robert.');
+        if((/\b(send|contact|email|message)\b/.test(q)||/\btell (?:him|robert)\b/.test(q))&&/\b(robert|him|message|email)\b/.test(q)&&!/\b(shiftbrief|employee|books|credits)\b/.test(q))return make('Send Robert a message','Use the Send message form beside this guide. It submits directly through FormSubmit without opening an email app. This conversation itself is not sent to Robert.');
+        const current=root.KiraIrisProjects?.answer(k,question,lastTopic,exchanges,result);
+        if(current)return current;
         const routed=publicScreenReply(k,question,lastTopic,exchanges,result);
         if(routed)result=routed.reply;
         let answer=original.enrich(k,question,routed?.context||lastTopic,exchanges,result);
