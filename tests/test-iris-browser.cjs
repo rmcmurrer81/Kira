@@ -32,6 +32,16 @@ const server=http.createServer((req,res)=>{
    await page.locator('#refresh-notes').click();await page.waitForFunction(()=>!document.getElementById('send-question').disabled);
    assert.match(await ask('What is the latest Avatar Builder status?'),/8 new.*18 inherited.*22 inherited.*unrun/s);checks++;
    assert.match(await ask('Does Iris send my NewBrain questions anywhere?'),/conversation is not saved or sent/);checks++;
+   assert.match(await ask('Tell me about NewBrain in plain English.'),/separate local-first research project/);checks++;
+   assert.match(await ask('Can I actually talk to it yet?'),/actual generated replies remain unrun/);checks++;
+   assert.match(await ask('Have the plasticity experiments shown it recovers from damage?'),/damage recovery is not yet demonstrated/);checks++;
+   assert.match(await ask('What does IdeaForge do?'),/Start with an idea/);checks++;
+   assert.match(await ask('Can I install Ideaforg on a Mac?'),/documented setup is Windows/);checks++;
+   assert.match(await ask('Humanoid Researcher. Are its blueprints safe to manufacture?'),/not engineering certification or fabrication-ready geometry/);checks++;
+   assert.match(await ask('What are the risks and limitations?'),/not engineering certification or fabrication-ready geometry/);checks++;
+   const costPrivacy=await ask('How much does BlueBook cost, and does it keep my questions private?');assert.match(costPrivacy,/No public BlueBook price/);assert.match(costPrivacy,/not fully offline/);assert.doesNotMatch(costPrivacy,/FormSubmit/);checks+=3;
+   assert.equal(await page.locator('#answer-sources a').getAttribute('href'),'knowledge.html#bluebook');checks++;
+   assert.match(await ask('Does Iris send this chat to Robert?'),/conversation is not saved or sent/);checks++;
    assert.equal(await page.locator('#contact-name').inputValue(),'');assert.equal(await page.locator('#contact-message').inputValue(),'');checks+=2;
    await page.locator('#open-profiles').click();assert.equal(await page.locator('#profiles-dialog').isVisible(),true);await page.locator('#close-profiles').click();assert.equal(await page.locator('#profiles-dialog').isVisible(),false);checks+=2;
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);checks++;
