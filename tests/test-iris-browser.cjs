@@ -47,7 +47,7 @@ const server=http.createServer((req,res)=>{
   }
   // Integrity failure is visible and a retry recovers without sending a form.
   const page=await browser.newPage();let corrupt=true;
-  await page.route('**/knowledge/iris-projects-2026-10-03.json',async route=>{if(corrupt)await route.fulfill({status:200,contentType:'application/json',body:'{}'});else await route.continue();});
+  await page.route('**/knowledge/iris-projects-2026-10-03-2.json',async route=>{if(corrupt)await route.fulfill({status:200,contentType:'application/json',body:'{}'});else await route.continue();});
   await page.goto(origin+'/contact.html');await page.waitForFunction(()=>document.getElementById('guide-status').textContent.includes('could not load'));
   assert.equal(await page.locator('#send-question').isDisabled(),true);checks++;
   assert.equal(await page.locator('#send-message').isDisabled(),false);checks++;
