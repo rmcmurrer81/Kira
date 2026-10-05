@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-09-30",
+  "prepared_on": "2026-10-05",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Published milestones for Kira Labs and the projects currently featured on this website. Video dates are publication dates. NewBrain research is explicitly early-stage; undated work and future goals remain undated.",
@@ -749,37 +749,6 @@ window.KIRA_LABS_TIMELINE = {
           "url": "https://www.youtube.com/watch?v=YgV4m1xnK9A&list=PLGMVpR5GxXNw&pp=sAgC"
         }
       ],
-"id": "newbrain-research-2026-09-29",
-      "title": "NewBrain research begins",
-      "project": "NewBrain",
-      "track": "Cognitive architecture research",
-      "status": "development",
-      "date": "2026-09-29",
-      "date_basis": "Dated repository and development records; the controlled learning benchmark was still in progress when reviewed September 30, 2026.",
-      "reviewed_on": "2026-09-30",
-      "summary": "NewBrain begins controlled testing as a possible reusable cognitive layer for Kira World and other synthetic people.",
-      "body": "The research combines source-traceable computational neuron models, neural-recording comparisons, external simulator checks and small engineered learning experiments. A current benchmark compares six approaches on learning, retention, reversal, interference and false associations, including simple indexed memory as a control.",
-      "boundary": "This is an early research prototype, not a recreated human brain. The current benchmark has not yet demonstrated an advantage, and Kira’s live identity, reviewed memories and public speech remain disconnected from the test.",
-      "image": {
-        "path": "assets/kira-world-ecosystem.webp",
-        "label": "Research concept visualization",
-        "caption": "Kira World concept art used to represent the NewBrain research milestone; not a brain scan, benchmark chart or finished cognitive system.",
-        "alt": "Concept visualization connecting synthetic people, memory and digital worlds"
-      },
-      "sources": [
-        {
-          "label": "Read this update",
-          "url": "updates.html#newbrain-research-2026-09-29"
-        },
-        {
-          "label": "NewBrain status in Kira World",
-          "url": "kira-world.html#newbrain"
-        },
-        {
-          "label": "Watch the NewBrain video playlist",
-          "url": "https://www.youtube.com/watch?v=YgV4m1xnK9A&list=PLGMVpR5GxXNw&pp=sAgC"
-        }
-      ],
       "playlist": {
         "id": "PLGMVpR5GxXNw",
         "lead_video": "YgV4m1xnK9A",
@@ -793,6 +762,40 @@ window.KIRA_LABS_TIMELINE = {
         "episodes_label": "Explore the NewBrain videos"
       },
       "project_page": "kira-world.html#newbrain"
+    },
+    {
+      "id": "newbrain-first-model-2026-10-05",
+      "title": "NewBrain becomes Kira Labs’ first internally developed model",
+      "project": "NewBrain",
+      "track": "Cognitive model research",
+      "status": "development",
+      "date": "2026-10-05",
+      "date_basis": "Kira Labs public-site milestone dated October 5, 2026; measured claims link to preserved NewBrain repository evidence.",
+      "reviewed_on": "2026-10-05",
+      "summary": "Kira Labs now presents NewBrain as its first internally developed experimental trainable cognitive model, while keeping current evidence and limitations explicit.",
+      "body": "NewBrain is a composite research-stage cognitive architecture with trainable components for language learning, plasticity, value learning and controlled hearing, plus episodic-memory and sensory research. On the exposed command-learning task, rehearsal retained all 216 earlier and 162 new examples in each of five repetitions. The result is task-specific, not evidence of unrestricted conversation.",
+      "boundary": "NewBrain is not yet a general conversational AI or Qwen replacement. Broad vision and hearing, genuine restart-persistent semantic memory, a functioning embodied avatar and a fair matched Qwen comparison remain unproved.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "label": "Research concept visualization",
+        "caption": "Kira World concept art used to represent NewBrain research; not a brain scan, model diagram or benchmark chart.",
+        "alt": "Concept visualization connecting synthetic people, memory and digital worlds"
+      },
+      "sources": [
+        {
+          "label": "NewBrain research repository",
+          "url": "https://github.com/rmcmurrer81/newbrain"
+        },
+        {
+          "label": "Five-run retention evidence",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/9a2588e507e75033fb3753fa33d989eecec0d769"
+        },
+        {
+          "label": "Controlled-hearing engineering result",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/1dc2d951ac310ce8b6d4cad7c1cb23a7dbc387ac"
+        }
+      ],
+      "project_page": "newbrain.html"
     }
   ]
 };
