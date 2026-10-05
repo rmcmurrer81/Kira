@@ -85,7 +85,7 @@
     if(/\b(limits?|limitations?|boundaries|boundary|cannot|cant|unsupported|not do|not yet)\b/.test(q))return 'limits';
     if(/\b(cost|costs|price|pricing|subscription|free|paid|pay|license|licence)\b/.test(q))return 'cost';
     if(/\b(status|progress|ready|finished|available|availability|download|install|release|released|launch|latest|current|new|update|updates|changed|done|implemented)\b|works (?:now|today)|working (?:now|today)|can i (?:actually )?(?:try|use|access|talk|speak|chat)|when (?:can|will)/.test(q))return 'status';
-    if(/\b(architecture|technical|implementation|models?|algorithms?|hardware|requirements|dependencies|built with|language|database|blender|pytorch|pybullet|windows)\b/.test(q))return 'technical';
+    if(/\b(architecture|technical|implementation|models?|algorithms?|hardware|requirements|dependencies|built with|language|database|blender|pytorch|pybullet|windows|ram|memory use|memory usage|latency|runtime|inference|response time|speed|fast|parameters?|parameter count|vram)\b/.test(q))return 'technical';
     if(/how (?:does|do|would|will|is|are|can)|how .*work|how it works|\b(workflow|capabilities|features|purpose|used for|useful|benefits)\b|what (?:can|does|do) .+ do\b/.test(q))return 'how';
     if(/^(?:and\s+)?(?:tell me more|more(?: details?)?|what else|go deeper|expand|explain further)\b/.test(q))return 'details';
     return 'overview';
