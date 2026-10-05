@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "content_version": "2026-10-05.1",
+  "reviewed_on": "2026-10-05",
+  "review_basis": "Reviewed high-level summaries of current public source and independently reviewed published evidence through October 5, 2026. Iris reports measured results with their limits; it is not a live runtime connection, safety certification, release promise or substitute for the underlying repositories.",
+  "projects": [
+    {
+      "id": "newbrain",
+      "title": "NewBrain",
+      "aliases": [
+        "NewBrain",
+        "new brain"
+      ],
+      "source": "knowledge.html#newbrain",
+      "overview": "NewBrain is Kira Labs’ first internally developed experimental trainable cognitive model. It is a local-first research architecture for learning, memory, plasticity, value learning and sensory processing, with the long-term goal of supporting distinct synthetic people while keeping each person’s identity and history separate. Current positive results are narrow, measured component results rather than general intelligence or conversation.",
+      "status": "Reviewed October 5, 2026: NewBrain has published controlled sound-learning, fresh-process retention and small language-component results. The learned spectral sound route scored 24/24 on held-out variations of two taught tones, while the raw-input learner scored 12/24 and strong DSP/indexed controls also scored 24/24. Saved classification state survived a fresh-process restart after roughly 38–39 minutes without retraining. In language work, a 4,802-parameter decoder stopped producing empty replies after 1,020 updates but remained 0/18 on complete held-out answers. A separately reviewed 10,530-parameter hidden64 decoder improved from its own 0/18 baseline to 1/18 exact answers per arm and reproduced all 18 outputs after fresh-process reopening. The full language criterion still failed, Maya has no qualified first personal lesson or birth record, and NewBrain is not the active Kira World backend.",
+      "how": "NewBrain tests learning in deliberately bounded components, preserves negative results and uses matched controls before making broader claims. Current language experiments give independently owned Maya/control arms matched starting parameters, data and update schedules, then score held-out questions separately from training and reopen saved state in fresh processes. Episodic-memory ON/OFF is kept separate from ordinary learned weights and current context so any later memory advantage can be measured instead of assumed.",
+      "technical": "Current research includes a from-scratch command learner, plasticity/value components, a controlled sound learner, visual-learning trials, GLIF/neural-data work and small prefix-conditioned recurrent language decoders. The latest public hidden64 language component uses 16-dimensional embeddings, 64 hidden units, 66 training-derived vocabulary tokens, 10,530 trainable parameters and 1,020 updates per matched arm. In that narrow run, sampled process-family memory was roughly 147–148 MiB while answering and about 166 MiB during training; answer-generation calls averaged about 0.20 ms each. Those measurements include the Python/NumPy test environment and do not establish whole-NewBrain or full-conversation resource use.",
+      "evidence": "Published October 5 evidence includes: the learned spectral sound route at 24/24 on held-out variations of two taught tones, frozen control 0/24, raw-input learner 12/24, and DSP/indexed controls 24/24; fresh-process retention that reproduced prior decisions without retraining and kept the spectral route at 24/24 on fresh variations; an EOS diagnostic showing EOS outranked the expected first word on 9/9 examined taught cases; a 4,802-parameter common-language run that removed empty replies but stayed 0/18 exact, with 4/18 first words correct per arm and full output/state restoration; and a 10,530-parameter hidden64 run that moved from its own 0/18 baseline to 1/18 exact per arm and reproduced all 18 outputs after reopening. The larger run does not establish that size caused the improvement because its seed and held-out questions differed. Earlier rehearsal experiments, plasticity engineering checks and other negative controls remain part of the record.",
+      "privacy": "NewBrain is local/private research rather than a visitor service. Iris receives only reviewed public summaries and cannot open private curricula, raw questions, model weights, identities, histories, media, local runtime state or unpublished experiment records. The Kira Labs website does not send Iris questions into NewBrain.",
+      "limits": "NewBrain is not yet a Qwen replacement, ordinary conversational model, complete human brain, robust open-world hearing/vision system or evidence of consciousness. The sound result is a controlled two-tone classification task; simple DSP/indexed controls also reached 24/24. The current language component is still weak at 1/18 exact held-out answers in the latest published hidden64 run. No useful personal Maya lesson, developmental age, general conversation, broad speech/music understanding, connected functioning body or causal advantage from larger capacity is established.",
+      "cost": "No public NewBrain product price, installable release, trained-weight download or reuse license is verified in these notes. Current research is designed to run locally and the tested language components are lightweight, but that does not establish the compute cost of a future full NewBrain system."
+    },
+    {
+      "id": "ideaforge",
+      "title": "IdeaForge",
+      "aliases": [
+        "IdeaForge",
+        "idea forge"
+      ],
+      "source": "knowledge.html#ideaforge",
+      "overview": "IdeaForge is a local-first invention research and project-planning workspace. It turns an idea into goals, subsystems, research questions, reference choices and staged prototype plans while distinguishing available technology, experimental work and fictional or undemonstrated goals.",
+      "status": "Implementation reviewed October 3, 2026: the source supports multiple persistent projects, typed/local-model chat, optional Windows voice, project variants and selected reference images, online research and a watch queue, equipment records, project memory, and text/image-assisted troubleshooting. The latest storage update gives new projects separate numeric identities so duplicate display names can remain separate. This is a source review, not a fresh end-to-end run or public packaged-release claim.",
+      "how": "Start with an idea and define its goals, known engineering facts and unknowns. Organize subsystems, compare research and reference images, and build a staged prototype plan. The research queue and recurring watch operate while the app is open. The automatic geometry path currently makes parametric enclosures only when required dimensions are supplied; other shapes need custom CAD. An optional PyBullet runner takes an existing URDF, rather than automatically validating an entire invention.",
+      "technical": "The documented setup is Windows with Python 3.11 or newer, a prepared Python environment and local Ollama with qwen3.5:9b for chat. qwen3-vl:8b is optional for image analysis. OpenSCAD can export enclosure STL when separately installed; PyBullet is a separate optional tool. Voice needs an explicitly built .NET/System.Speech helper, an installed English recognizer, a suitable Windows voice and a working microphone.",
+      "evidence": "Reviewed October 3, 2026 against current implementation and documented boundaries. Focused storage checks cover separate project identities and duplicate display names. They do not validate crash recovery, the native GUI, real model-answer quality or speech-recognition accuracy. Limited mesh/build-volume checks and a simulation plan do not prove an invention works or is safe. No new end-to-end run or engineering certification is claimed by this summary.",
+      "privacy": "Project files, equipment records and history are stored locally, and the default model endpoint is local. Research is online: outgoing searches can include the project name, subsystem questions and saved engineering facts. IdeaForge should not be described as fully offline or as guaranteeing that invention details never leave the computer. Voice records no raw microphone audio, but recognized questions enter ordinary chat/project records. Iris cannot access those records.",
+      "limits": "Automatic CAD is limited to the documented parametric enclosure path with known dimensions. Other geometry remains custom CAD or TBD. OpenSCAD output, a mesh check or an optional existing-URDF simulation does not certify an invention’s safety, manufacturability or real-world function. Speculative goals and unsupported technology must stay labeled.",
+      "cost": "These notes establish no public IdeaForge price, packaged installer or reuse-license grant. Its documented local models and optional CAD/simulation tools require their own setup and computing resources. Iris itself has no AI-service subscription or per-question model charge."
+    },
+    {
+      "id": "humanoid-researcher",
+      "title": "Humanoid Researcher",
+      "aliases": [
+        "Humanoid Researcher",
+        "humanoidresearcher",
+        "humanoid research"
+      ],
+      "source": "knowledge.html#humanoid-researcher",
+      "overview": "Humanoid Researcher is a local-first research library and candidate-design workspace for humanoid robotics and body subsystems. It organizes source material and proposed designs while keeping verified facts, candidates and unresolved details separate.",
+      "status": "Implementation reviewed October 3, 2026: the source collects papers, robotics news and public robot repositories with attribution, saves research locally, supports local research/design chat and optional screenshot interpretation, and produces candidate body revisions, conceptual parts lists and assembly/procurement packets. Candidate proposals do not replace the approved body. NewBrain integration remains disabled and unqualified; no fabrication-ready release is established.",
+      "how": "Collect and categorize research, retain source metadata, and compare possible body subsystems against recorded requirements and equipment. Candidate tools can propose revisions, BOM and fastener schedules, assembly documentation, supplier searches and diagrammatic blueprint sheets. Keep VERIFIED, CANDIDATE and TBD distinct. Supplier links and lower prices do not prove compatibility or authorize substitution.",
+      "technical": "The app is Windows-oriented Python 3.11 or newer. Chat defaults to local Ollama qwen3.5:9b; screenshot interpretation needs optional qwen3-vl:8b. Collection uses online sources. A daily Windows scan is separately opt-in. Optional Windows voice starts off and requires the speech helper, installed recognizer and voice, plus a microphone. Embodiment modes are planning architectures, not deployed hardware.",
+      "evidence": "Implementation and stated boundaries were reviewed October 3, 2026; this is not a fresh end-to-end run or robotics certification. Compatibility scoring is a heuristic over recorded interfaces and ratings. It does not establish mechanical, electrical or thermal safety. Blueprint views remain diagrammatic placeholders unless verified geometry exists. CAD-derived views, physics/electrical/thermal validation and a fabrication-ready release gate remain roadmap work.",
+      "privacy": "Research, media, library and equipment records remain local in the documented setup and are not website content. Source collection and supplier searches use online services. Paper and image reuse still depends on original rights. The daily scan is opt-in and voice is initially off. Iris sees only this public summary and cannot retrieve local equipment records or private project memories.",
+      "limits": "This is a research and candidate-design tool, not an autonomous safe robot builder. Heuristic compatibility scores, conceptual BOMs and diagrammatic blueprints are not engineering certification or fabrication-ready geometry. No demonstrated mind uploading, consciousness transfer, deployed robot or active qualified NewBrain integration is claimed.",
+      "cost": "No public Humanoid Researcher price, packaged consumer release or reuse-license grant is established by these notes. Local models, speech components and engineering tools need separate setup. Iris’s free browser-only answers do not certify or fund hardware construction."
+    },
+    {
+      "id": "world",
+      "title": "Kira World",
+      "aliases": [
+        "Kira World",
+        "KiraWorld",
+        "kira worlds",
+        "avatar builder",
+        "world builder",
+        "world shell",
+        "residents",
+        "synthetic people"
+      ],
+      "source": "knowledge.html#kira-world",
+      "overview": "Kira World is local-first research into continuing synthetic identities, reviewed memory, conversation, voice and virtual places. It has working local conversation and continuity prototypes plus a basic virtual-world shell. More complete bodies, shared worlds and NewBrain integration are still being developed and tested.",
+      "status": "Reviewed October 5, 2026: Kira World still provides the existing one-person-at-a-time text/voice workflow, selectable profiles and 3D World Shell, while Avatar Builder work is being advanced separately. Recent source corrections now pass explicit project/dependency paths instead of guessing folders and consume the Avatar load witness before later body/pose checks. These changes improve the test route, but a native Blender body run with accepted movement, save/reopen, deformation, skin, breathing and physiology feedback is still unfinished. NewBrain remains a separate research project rather than the active Kira World backend.",
+      "how": "Person-specific profiles, reviewed memories, conversation and world state remain distinct. The main interface selects one person at a time. The basic World Shell can show named orbs for profiles without accepted bodies. A draft World Builder records requests; it is not a finished autonomous builder. The current conversation baseline remains a local language model. NewBrain is a separate possible future backend and does not control the live system in this work.",
+      "technical": "The local conversational baseline is Ollama Qwen3.5:9b. Voice is a separately installed and authorized dependency. Clean source setup needs Git LFS and external dependencies; it is not a ready-to-install consumer package. Avatar Builder belongs to Kira World: its newest source trial would build and save an inactive generic carrier, reopen it separately, then check actual mesh movement and geometric feedback. Those trial steps are not yet executed.",
+      "evidence": "The documented portable offline lane and bridge tests remain bounded interface evidence rather than proof of natural conversation or physical embodiment. Recent Avatar Builder work corrected source/path handling and the load-witness chain so future native runs can be attributed more reliably. That is engineering progress, not a passed moving-body result. No accepted native Blender movement/save-reopen/body-physiology result has been published in the current reviewed notes.",
+      "privacy": "The source snapshot excludes private runtime state, raw conversations, model weights and unreviewed media. Individual identities and histories must stay isolated. Local-first describes the architecture, not a blanket guarantee that every optional dependency or authorized action is offline. Iris has only approved public notes and cannot access Kira World’s live memories, voice input or private state.",
+      "limits": "No finished anatomy/physiology package, accepted native moving body, completed shared life, working Video Studio production bridge or physical Hanson integration is established. NewBrain is not the active replacement for Qwen in Kira World. Source-reviewed body routes, compiler checks and preserved load witnesses do not by themselves establish an embodied synthetic person.",
+      "cost": "The Kira World source/review repository is public, but no packaged GitHub release or verified consumer price is documented here. Running it needs suitable hardware, Git LFS, model/runtime dependencies and authorized voice setup. Public source does not itself grant blanket reuse rights. Iris’s browser-only guide needs no paid AI service."
+    },
+    {
+      "id": "bluebook",
+      "title": "BlueBook",
+      "aliases": [
+        "BlueBook",
+        "blue book",
+        "bluebook research"
+      ],
+      "source": "knowledge.html#bluebook",
+      "overview": "BlueBook is a local-first workspace for investigating UAP and anomalous-phenomena records while preserving attribution and uncertainty. It organizes cases, sources and reported descriptions without treating an unresolved report as proof of an extraordinary explanation.",
+      "status": "Implementation reviewed October 3, 2026: the source includes imported case/source records, a 2D map and 3D globe, reported-entity cards, related cases, program/document records, chat, and a reconstruction gallery with provenance. Actual tabs are Map, Globe, Details, Library and Gallery. Discovery adds provisional records for review while running. The official-record library is a seeded, in-progress collection, not an exhaustive verified database or packaged-release claim.",
+      "how": "Read attributed case records, inspect source material and reported descriptions, and compare related cases. Competing-hypothesis templates list assumptions, missing evidence and falsifiable checks. They assign no probability or winner and cannot promote a hypothesis into a finding. Automatic discovery periodically checks configured feeds and archive pages while the app runs; discovered records remain provisional until reviewed.",
+      "technical": "BlueBook uses Python 3.11 or newer and a local server. Local Ollama qwen3.5:9b is optional because deterministic routing remains available. Reconstruction prompts work without an image backend; rendering requires a separately configured local AUTOMATIC1111-compatible API. Hands-free uses the server computer’s microphone and installed Windows speech components, starts off, stops when the page is hidden/closed, and allows only one app or tab to use the shared speech engine.",
+      "evidence": "Implementation and boundaries were reviewed October 3, 2026, not freshly validated end to end. A government document establishes that a record exists, not that every interpretation is true. Witness and news claims remain attributed; unresolved does not mean extraterrestrial, and descriptor similarity does not prove identity. AI reconstructions are visualizations based on reported descriptions, not photographs or evidence. Hypotheses have no assigned probability or winner.",
+      "privacy": "User media and generated images stay in local folders in the documented setup. Online archive/news requests, external map tiles and CDN scripts mean the application is not fully offline. Optional hands-free requires same-computer local access and permission to use that computer’s microphone. Iris cannot read BlueBook’s local case notes, media or chat history.",
+      "limits": "BlueBook does not prove extraterrestrial life or turn a reported entity into a verified identity. AI reconstructions are not evidence. The record library is incomplete, and full timeline or relationship-graph UI remains architectural planning rather than shipped tabs. Missing evidence, competing explanations and source reliability must remain visible.",
+      "cost": "No public BlueBook price, packaged release or reuse-license grant is verified in these notes. Optional local models and image generation need separately configured tools and computing resources. Iris itself uses no paid AI service or model subscription."
+    }
+  ]
+}
