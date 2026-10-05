@@ -152,8 +152,8 @@
     const p=k.topics.find(t=>t.id==='prototypes');
     if(p){
       p.title='The projects featured at Kira Labs';
-      p.answer='Kira World is the flagship research project. ShiftBrief is a free Windows release. Video Studio is a private local creative tool in development, and Sarah Travel has private debug builds. Each project has its own page and status.';
-      p.sources=['iris-projects'];p.next=['Tell me about Kira World','How do I install ShiftBrief?','Tell me about Video Studio'];p.coverage={};p.followups={};
+      p.answer='Kira Labs’ current public research includes NewBrain, its first internally developed experimental trainable cognitive model; Kira World; IdeaForge; Humanoid Researcher; and BlueBook. ShiftBrief is a free Windows release, while Video Studio and Sarah Travel remain separate private/local tools in development. Each documented project has its own reviewed status and limits.';
+      p.sources=['iris-projects'];p.next=['Tell me about NewBrain','Tell me about Kira World','How do I install ShiftBrief?'];p.coverage={};p.followups={};
     }
     const privacy=k.topics.find(t=>t.id==='privacy');
     if(privacy){
