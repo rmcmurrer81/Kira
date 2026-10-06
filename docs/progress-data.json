@@ -1,8 +1,38 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-09-21",
+  "reviewed_on": "2026-10-06",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "kira-friend-dual-chat-2025-08",
+      "title": "Kira meets an unnamed Friend",
+      "date": "2025-08-05",
+      "date_basis": "Earliest recovered project/conversation record for the Kira + Friend dual-chat prototype.",
+      "status": "completed",
+      "track": "Kira World",
+      "summary": "An early desktop chatbot placed Kira beside an unnamed Friend and let the two exchange scripted or rule-driven dialogue.",
+      "body": [
+        "The two-character app could alternate Kira and Friend responses and support automatic back-and-forth.",
+        "The prototype introduced the idea that Kira should have another synthetic companion. The unnamed Friend later became the conceptual predecessor of Lisa."
+      ],
+      "boundary": "Historical working prototype, not two independent persistent AIs. The Friend did not yet have Lisa’s later separate identity, memories or continuity.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "caption": "Current Kira World illustration used for historical context — not a screenshot of the 2025 app.",
+        "alt": "Kira World concept illustration used for the early Kira and Friend milestone"
+      },
+      "sources": [
+        {
+          "label": "Project history",
+          "url": "about.html"
+        },
+        {
+          "label": "Reviewed Kira World history",
+          "url": "knowledge.html#kira-world"
+        }
+      ],
+      "evidence_kind": "founder-authorized-historical-prototype"
+    },
     {
       "id": "digital-twin-2026-09-20",
       "title": "Synthetic Robert gains scoped recall",
