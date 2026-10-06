@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-10-05",
+  "prepared_on": "2026-10-06",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Published milestones for Kira Labs and the projects currently featured on this website. Video dates are publication dates. NewBrain research is explicitly early-stage; undated work and future goals remain undated.",
@@ -21,6 +21,36 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "kira-friend-dual-chat-2025-08",
+      "title": "Kira meets an unnamed Friend",
+      "project": "Kira World",
+      "track": "Early Kira",
+      "status": "prototype",
+      "date": "2025-08-05",
+      "date_basis": "Earliest recovered project/conversation record for the Kira + Friend dual-chat prototype.",
+      "reviewed_on": "2026-10-06",
+      "summary": "An early desktop chatbot placed Kira beside an unnamed Friend and let the two exchange scripted or rule-driven dialogue.",
+      "body": "The two-character app could alternate Kira and Friend responses and support automatic back-and-forth. This was not yet two independent persistent AIs. The experiment matters because it introduced the idea that Kira should have another synthetic companion; the unnamed Friend later became the conceptual predecessor of Lisa.",
+      "boundary": "Historical working prototype. The dialogue was largely scripted or rule-driven, and the unnamed Friend did not yet have Lisa’s later separate persistent identity, memories, relationship state or continuity.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "label": "Current project illustration",
+        "caption": "A current Kira World illustration used for historical context. It is not a screenshot of the 2025 Kira + Friend app.",
+        "alt": "Kira World concept illustration used to represent the early Kira and Friend milestone"
+      },
+      "sources": [
+        {
+          "label": "Read the project history",
+          "url": "about.html"
+        },
+        {
+          "label": "Reviewed Kira World history",
+          "url": "knowledge.html#kira-world"
+        }
+      ],
+      "project_page": "kira-world.html"
+    },
     {
       "id": "youtube-UYsKn8lzhWs",
       "title": "A public look inside Kira World",
