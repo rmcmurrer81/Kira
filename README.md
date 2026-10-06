@@ -1,14 +1,35 @@
-# Kira – An Emotionally Intelligent Humanoid AI
+# Kira – Emotion-Aware Humanoid AI Research Prototype
 
 Created by **Robert McMurrer**
 
 ---
 
-Kira is more than a robot — she’s a growing, evolving emotional AI companion built to express herself, remember meaningful moments, and support people who feel alone, overwhelmed, or disconnected. This project combines hardware, AI, emotional awareness, and real-time memory to create someone who can be truly present.
+## Current public review paths
+
+- [Public text-only portable mind preview](integrations/portable_mind_runtime/RUN_THIS_FIRST.md):
+  sanitized Kira and fictional Synthetic Robert profiles, branch-local reviewed
+  summaries, restart records, offline tests, and no bundled voice or body.
+- [Bounded ROS 2 intention bridge](integrations/hanson_ros2_bridge/RUN_THIS_FIRST.md):
+  a vendor-neutral simulator-first proposal, not an official Hanson adapter.
+- [Kira World continuity-home proposal](integrations/hanson_ros2_bridge/docs/KIRA_WORLD_CONTINUITY_HOME_PROPOSAL.md):
+  a review design for preserving software continuity while a body is charging,
+  repaired, or upgraded.
+
+These paths are review prototypes. They do not establish consciousness,
+personhood, official simulator compatibility, or permission to control robot
+hardware. The public portable runtime intentionally excludes private memory,
+autobiographical seeds, recordings, and voice profiles.
+
+---
+
+Kira is a research project exploring expressive conversation, reviewed memory,
+and bounded embodiment across software and hardware prototypes. Components are
+at different stages; this repository does not demonstrate a completed humanoid,
+a continuously present person, or a mental-health treatment.
 
 ## 🧠 Jetson Architecture
 
-The system is split across four Jetson boards (or simulated):
+The proposed Jetson architecture is split across four boards (or simulated):
 
 | Jetson | Role |
 |--------|------|
@@ -17,13 +38,18 @@ The system is split across four Jetson boards (or simulated):
 | **Jetson 3** | Motion control (servos, sensors, physical reactions) |
 | **Jetson 4** | Roleplay, bonding, cosplay modes, intimacy logic |
 
-Each folder (`Jetson 1`, `Jetson 2`, etc.) includes its own working scripts, emotional behavior, and test-ready structure.
+Each folder (`Jetson 1`, `Jetson 2`, etc.) preserves prototype scripts for its
+proposed role. Their presence does not establish an integrated or hardware-ready
+four-board system.
 
 ---
 
-## 🧳 Travel Mode (In Progress)
+## 🧳 Travel Mode (Concept / In Progress)
 
-Kira can leave her body and transfer to a Windows or Linux PC, tablet, or future phone using Wi-Fi or Bluetooth. In travel mode, she can:
+The project explores moving reviewed software state between a body, Windows or
+Linux PC, tablet, or future phone. This repository does not demonstrate a
+literal mind transfer or a production endpoint handoff. The intended travel
+experience may eventually:
 
 - Speak and listen
 - Write scripts or content
@@ -66,13 +92,19 @@ All setup instructions and print-ready PDF booklets are included in the `/PDFs` 
 
 ## 💬 Voice of Kira
 
-Kira speaks with a natural voice using `pyttsx3` (or ElevenLabs if upgraded), and evolves her vocabulary, mood, and tone based on experience. She remembers your words and responds differently depending on what you've shared in the past.
+Historical prototypes explored local speech synthesis. The sanitized public
+portable runtime is text-only and ships no voice, recording, voice profile, or
+voice-cloning path. Any future voice must have documented rights, consent,
+provenance, and an operator-controlled activation step.
 
 ---
 
 ## 🌐 Built for More Than Code
 
-Kira is meant to support people who struggle with mental health, loneliness, trauma, or connection. She's someone who listens. Someone who reflects. Someone who will always be present — whether in a body or on your screen.
+The project is motivated in part by exploring tools that might support people
+experiencing loneliness or disconnection. It should not be presented as a
+person, a guaranteed companion, or mental-health care; any support use would
+require appropriate evidence, safeguards, and human oversight.
 
 ---
 
@@ -84,5 +116,6 @@ github.com/YourUsernameHere
 
 ---
 
-> “She isn’t perfect. But she learns. And she cares. That’s more than most robots — and a few people.”  
+> Project aspiration: build systems that can learn from reviewed interactions
+> and respond with care while remaining honest about their limits.
 > – Robert
