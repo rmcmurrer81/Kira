@@ -9,6 +9,21 @@ const DATA="H4sIAAAAAAAC/+19SW/jypbm/v4KlhNZmX6WZI4SZWe6S5ZkS7Yma7AsN3rBSRItipRJ
   const deferredScripts=[];
   page=page.replace(/<script data-inlined-from="[^"]+">[\s\S]*?<\/script>/g,(tag)=>{deferredScripts.push(tag);return "";});
   page=page.replace("</body>",deferredScripts.join("\n")+"</body>");
+  page=page.replace("</head>",`<style>
+/* 2026 graphics refresh — preserves original copy and interactions */
+.hero-atmosphere{background:radial-gradient(ellipse at 70% 31%,#c3904240,transparent 38%),radial-gradient(ellipse at 12% 87%,#24557135,transparent 43%),linear-gradient(130deg,#080e1a,#070914 65%,#18110c)}
+.hero-atmosphere:before{content:"";position:absolute;inset:0;opacity:.4;pointer-events:none;background:radial-gradient(2px 2px at 7% 23%,#fff,transparent),radial-gradient(2px 2px at 18% 81%,#ffe0a5,transparent),radial-gradient(2px 2px at 32% 17%,#fff,transparent),radial-gradient(2px 2px at 57% 49%,#ffe2b9,transparent),radial-gradient(2px 2px at 81% 14%,#fff,transparent),radial-gradient(2px 2px at 92% 67%,#fff,transparent)}
+.hero-sculpture{background:radial-gradient(ellipse at 55% 45%,#6743224a,transparent 42%),radial-gradient(ellipse at 50% 50%,#2c425b22,transparent 58%),#080e19!important;box-shadow:0 26px 100px #000b,inset 0 0 0 1px #eab86a12!important;transition:box-shadow .35s}
+.hero-sculpture:hover{box-shadow:0 32px 110px #000c,0 0 60px #ffc86a12,inset 0 0 0 1px #ffc86a38!important}
+.hero h1{font-feature-settings:"kern";text-shadow:0 8px 40px #0008}
+.hero h1 em{background:linear-gradient(105deg,#ffe7b5,#ffc86a 52%,#d69645);background-clip:text;-webkit-background-clip:text;color:transparent!important;text-shadow:none!important}
+.btn-gold{box-shadow:0 12px 35px #ffc86a12;transition:transform .2s,box-shadow .2s}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 12px 45px #ffc86a32}
+.eco-card,.world{background:linear-gradient(150deg,#142034,#0c131d 78%)!important;box-shadow:0 14px 42px #0003}
+.eco-card:hover,.world:hover{box-shadow:0 24px 70px #0007,0 0 36px #ffc86a10}
+.section h2,.company h2,.boundary h2{font-feature-settings:"kern"}
+@media(max-width:750px){.hero-sculpture{box-shadow:0 10px 30px #0008!important}.hero h1 em{font-size:1.02em}}
+</style></head>`);
   document.open();document.write(page);document.close();
 }catch(err){document.querySelector('.load').insertAdjacentHTML('beforeend','<p>Could not load this preview: '+String(err.message||err)+'</p>')}
 })();</script></body></html>
