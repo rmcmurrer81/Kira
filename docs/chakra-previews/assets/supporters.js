@@ -14,7 +14,7 @@ const img=document.createElement('img');img.src=base+entry.id+'.png';img.alt=ent
 if(entry.caption){const cap=document.createElement('figcaption');cap.textContent=entry.caption;fig.append(cap);}
 grid.append(fig);
 }
-inner.append(grid);section.append(inner);
+inner.append(grid);section.append(inner);const anchor=document.createElement('span');anchor.id='support';anchor.setAttribute('aria-hidden','true');anchor.style.cssText='position:absolute;left:0;top:0;scroll-margin-top:90px';section.prepend(anchor);
 const old=document.getElementById('support');
 if(old&&old!==section&&(old.textContent.toLowerCase().includes('support')||old.classList.contains('institutions'))){old.replaceWith(section);return;}
 const contact=document.querySelector('main #contact, #contact');
