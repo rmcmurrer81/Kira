@@ -10,5 +10,7 @@ const DATA="H4sIAAAAAAAC/5y8aZOjSLI2+n1+Rd4eGzvTJys7WYSWqjOvmRCLhERILBEs39gkJIJF
   page=page.replace(/<script data-inlined-from="[^"]+">[\s\S]*?<\/script>/g,(tag)=>{deferredScripts.push(tag);return "";});
   page=page.replace("</body>",deferredScripts.join("\n")+"</body>");
   document.open();document.write(page);document.close();
+  const supportCSS=document.createElement('link');supportCSS.rel='stylesheet';supportCSS.href='../../assets/supporters.css';document.head.appendChild(supportCSS);
+  const supportScript=document.createElement('script');supportScript.src='../../assets/supporters.js';document.body.appendChild(supportScript);
 }catch(err){document.querySelector('.load').insertAdjacentHTML('beforeend','<p>Could not load this preview: '+String(err.message||err)+'</p>')}
 })();</script></body></html>

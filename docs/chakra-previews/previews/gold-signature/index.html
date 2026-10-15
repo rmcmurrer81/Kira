@@ -25,5 +25,7 @@ const DATA="H4sIAAAAAAAC/+19SW/jypbm/v4KlhNZmX6WZI4SZWe6S5ZkS7Yma7AsN3rBSRItipRJ
 @media(max-width:750px){.hero-sculpture{box-shadow:0 10px 30px #0008!important}.hero h1 em{font-size:1.02em}}
 </style></head>`);
   document.open();document.write(page);document.close();
+  const supportCSS=document.createElement('link');supportCSS.rel='stylesheet';supportCSS.href='../../assets/supporters.css';document.head.appendChild(supportCSS);
+  const supportScript=document.createElement('script');supportScript.src='../../assets/supporters.js';document.body.appendChild(supportScript);
 }catch(err){document.querySelector('.load').insertAdjacentHTML('beforeend','<p>Could not load this preview: '+String(err.message||err)+'</p>')}
 })();</script></body></html>

@@ -25,5 +25,7 @@ const DATA="H4sIAAAAAAAC/+19SW/jTJbgPX8Fy4msTJclmasWO9PdsiTbsq3FWizLhTpwk0SLImmS
 @media(max-width:750px){.odyssey-hero{min-height:680px}}
 </style></head>`);
   document.open();document.write(page);document.close();
+  const supportCSS=document.createElement('link');supportCSS.rel='stylesheet';supportCSS.href='../../assets/supporters.css';document.head.appendChild(supportCSS);
+  const supportScript=document.createElement('script');supportScript.src='../../assets/supporters.js';document.body.appendChild(supportScript);
 }catch(err){document.querySelector('.load').insertAdjacentHTML('beforeend','<p>Could not load this preview: '+String(err.message||err)+'</p>')}
 })();</script></body></html>
