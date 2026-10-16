@@ -1,13 +1,14 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-10-06",
+  "prepared_on": "2026-10-16",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
-  "note": "Published milestones for Kira Labs and the projects currently featured on this website. Video dates are publication dates. NewBrain research is explicitly early-stage; undated work and future goals remain undated.",
+  "note": "Published milestones reflect documented development only; the Patient Horizon planner is synthetic-only and the lung–NewBrain interface remains a future research requirement. Video dates are publication dates; measured NewBrain learning and geometric body tests stay separate from plans.",
   "projects": [
     "Kira World",
     "NewBrain",
+    "Patient Horizon",
     "ShiftBrief",
     "Video Studio",
     "Sarah Travel",
@@ -826,6 +827,74 @@ window.KIRA_LABS_TIMELINE = {
         }
       ],
       "project_page": "newbrain.html"
+    },
+    {
+      "id": "patient-horizon-starter-2026-10-15",
+      "title": "Patient Horizon begins with synthetic research planning",
+      "project": "Patient Horizon",
+      "track": "Patient records and medical-avatar research",
+      "status": "development",
+      "date": "2026-10-15",
+      "date_basis": "Patient Horizon repository initial setup October 15; continuous-record research requirements updated October 16, 2026.",
+      "reviewed_on": "2026-10-16",
+      "summary": "A synthetic-only scenario planner and four reported starter tests establish the first research framework for versioned patient records and future clinician-reviewed digital twins.",
+      "body": "The new private repository includes a Python request planner, fictional research examples, JSON schemas and provenance templates. Four local starter tests reportedly passed on October 15. An October 16 specification prioritizes authorized lab/scans updating versioned records and medical timelines, with dated medical research and clinical-trial evidence intended for physician review. The existing generic Avatar Builder source is a versioned snapshot, not an integrated medical body.",
+      "boundary": "This is not a deployed patient application. No real medical data, working intake, segmentation, disease simulator, evidence search, trial matching, treatment prediction or clinically validated medical model is present. The tests measure the synthetic planner only.",
+      "image": {
+        "path": "assets/kira-labs-hero.webp",
+        "label": "General Kira Labs concept art",
+        "caption": "Existing Kira Labs project illustration used for research context; not a screenshot of Patient Horizon, patient scans or a treatment prediction.",
+        "alt": "General Kira Labs concept artwork, not a medical-avatar result"
+      },
+      "sources": [
+        {
+          "label": "Read the project page",
+          "url": "patient-horizon.html"
+        },
+        {
+          "label": "Read the October 15 development note",
+          "url": "updates.html#patient-horizon-starter-2026-10-15"
+        },
+        {
+          "label": "Patient Horizon GitHub repository (private; access required)",
+          "url": "https://github.com/rmcmurrer81/Patient-Horizon"
+        }
+      ],
+      "project_page": "patient-horizon.html"
+    },
+    {
+      "id": "lung-body-requirements-2026-10-16",
+      "title": "Lung–body–NewBrain research requirements documented",
+      "project": "Kira World",
+      "track": "Anatomical embodiment research",
+      "status": "development",
+      "date": "2026-10-16",
+      "date_basis": "October 16, 2026 requirements documents in KiraWorld and Patient Horizon; no lung trial was qualified.",
+      "reviewed_on": "2026-10-16",
+      "summary": "The intended pathway from neural breathing control through diaphragm and lungs to blood gas exchange and return sensory signals is now specified for future testing.",
+      "body": "KiraWorld documents a prospective human-inspired pathway: neural commands through breathing muscles and mechanics, lung airflow, gas exchange, circulation and observed body inputs returning through a typed adapter. Each layer needs correct units, timestamps, provenance, validation and controlled tests. A separate forearm skin test moved and exactly restored 512 sampled weighted vertices in a geometric control. The current lung requirements do not demonstrate an operating organ.",
+      "boundary": "No breathing-lung prototype, working physiological lung, blood gas solver, patient-specific effect or two-way NewBrain–lung test has passed. The separate skin result is a geometric control and cannot be counted as lung or brain/body integration.",
+      "image": {
+        "path": "assets/garment-dressing-sequence-concept.png",
+        "label": "Avatar body concept illustration",
+        "caption": "Existing Avatar Builder concept art, not a screenshot of functioning lungs or a verified NewBrain–body connection.",
+        "alt": "Concept illustration for avatar body work, not an organ simulation"
+      },
+      "sources": [
+        {
+          "label": "Patient Horizon lung research overview",
+          "url": "patient-horizon.html#lung-research"
+        },
+        {
+          "label": "Read the October 16 lung milestone",
+          "url": "updates.html#lung-body-requirements-2026-10-16"
+        },
+        {
+          "label": "KiraWorld requirements (private; access required)",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/blob/main/Avatar/avatar_builder/research/LUNG_BRAIN_HUMAN_BODY_REQUIREMENTS_2026-10-16.md"
+        }
+      ],
+      "project_page": "patient-horizon.html#lung-research"
     }
   ]
 };
