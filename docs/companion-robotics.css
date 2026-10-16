@@ -1,0 +1,44 @@
+/* Future companion robotics: proposed architecture and verified local reference tests.
+   No hardware or live NewBrain integration is presented as complete. */
+.cr-page{scroll-margin-top:115px}
+.cr-lede{max-width:800px;color:#c3d0df;font-size:16px;line-height:1.75}
+.cr-overline{color:#92e8ee;font:700 12px/1.5 ui-sans-serif,system-ui,sans-serif;letter-spacing:.15em;text-transform:uppercase;margin:0 0 12px}
+.cr-hero{padding:58px 0 46px}
+.cr-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center}
+.cr-hero h1{font-size:clamp(44px,5vw,78px);letter-spacing:-.055em;line-height:1.02;max-width:700px;margin:0 0 26px}
+.cr-hero h1 em{font:400 1em/1.05 Georgia,serif;color:#a6eaf4}
+.cr-hero .lead{max-width:690px}
+.cr-hero-figure{background:#0c1727;border:1px solid #35465b;border-radius:16px;overflow:hidden}
+.cr-hero-figure img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover}
+.cr-hero-figure figcaption{padding:13px 17px;font-size:11px;line-height:1.6;color:#adbfd2}
+.cr-hero-figure figcaption strong{color:#edfcff}
+.cr-graph{margin:28px 0 15px;background:#0a1627;border:1px solid #394d65;border-radius:17px;overflow:hidden}
+.cr-graph img{width:100%;height:auto;display:block}
+.cr-graph figcaption{padding:17px 20px;color:#b6c9d8;font-size:12px;line-height:1.7}
+.cr-graph figcaption strong{color:#f3faff}
+.cr-diagram-link{display:inline-block;margin-top:7px;color:#8feefa;font-size:12px;font-weight:650}
+.cr-stat-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:28px 0}
+.cr-stat{padding:18px 20px;background:#121e2e;border:1px solid #304559;border-radius:13px;min-width:0}
+.cr-stat strong{display:block;font:700 25px/1.2 ui-sans-serif,system-ui;color:#f0fbff}
+.cr-stat span{display:block;color:#b6c7d7;font-size:12px;line-height:1.7;margin-top:5px}
+.cr-flow-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:24px 0}
+.cr-detail{border-top:1px solid #385367;padding-top:20px}
+.cr-detail strong{font-size:16px;color:#eef9fe}
+.cr-detail small{display:block;font-size:12px;color:#adc2d4;line-height:1.7;margin-top:9px}
+.cr-detail p{color:#bdcede;font-size:13px;line-height:1.75;margin:10px 0 0}
+.cr-detail a{color:#91e5ed}
+.cr-outline{border-left:3px solid #8ad5dd;background:#0f1d2f;padding:17px 20px;color:#c6d5e3;font-size:13px;line-height:1.8;margin:28px 0 0}
+.cr-outline strong{color:#edfcff}
+.cr-minipoints{display:flex;gap:9px 19px;flex-wrap:wrap;list-style:none;margin:20px 0 28px;padding:0}
+.cr-minipoints li{font-size:12px;color:#c8d8e9;padding:8px 0;border-bottom:1px solid #344759}
+.cr-brief{font-size:14px;line-height:1.85;color:#c2d2e2}
+.cr-source-list{font-size:13px;line-height:2;color:#aebfd0}
+.cr-source-list a{color:#9dedf4}
+.cr-card-callout{display:flex;gap:26px;align-items:center;border:1px solid #315366;background:linear-gradient(120deg,#102639,#12172b);padding:24px 28px;border-radius:13px}
+.cr-card-callout h3{margin:0 0 10px;color:#f4f9fc}
+.cr-card-callout p{margin:0;color:#c9d6e3;font-size:13px;line-height:1.75}
+.cr-card-callout .button{flex:0 0 auto}
+.cr-smallnote{color:#a9bbce;font:12px/1.7 ui-sans-serif,system-ui,sans-serif;margin:10px 0 0}
+@media(max-width:860px){.cr-hero-grid{grid-template-columns:1fr;gap:26px}.cr-hero{padding-top:38px}.cr-hero-figure img{max-height:370px}.cr-stat-strip{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.cr-flow-details,.cr-stat-strip{grid-template-columns:1fr}.cr-hero h1{font-size:42px}.cr-card-callout{display:block;padding:22px}.cr-card-callout .button{margin-top:15px}.cr-graph{overflow-x:auto}.cr-graph img{min-width:790px;width:100%}.cr-graph figcaption{min-width:0}}
+@media(prefers-reduced-motion:reduce){.cr-graph,.cr-card-callout{scroll-behavior:auto}}
