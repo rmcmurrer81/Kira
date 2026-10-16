@@ -4,7 +4,7 @@ window.KIRA_LABS_TIMELINE = {
   "prepared_on": "2026-10-16",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
-  "note": "Published milestones reflect documented development only; the Patient Horizon planner is synthetic-only and the lung–NewBrain interface remains a future research requirement. Video dates are publication dates; measured NewBrain learning and geometric body tests stay separate from plans.",
+  "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
   "projects": [
     "Kira World",
     "NewBrain",
@@ -895,6 +895,44 @@ window.KIRA_LABS_TIMELINE = {
         }
       ],
       "project_page": "patient-horizon.html#lung-research"
+    },
+    {
+      "id": "pulse-three-architecture-2026-10-16",
+      "title": "Pulse, Three.js and NewBrain: a proposed body-system bridge",
+      "project": "Kira World",
+      "track": "Physiology and embodied AI research",
+      "status": "development",
+      "date": "2026-10-16",
+      "date_basis": "October 16, 2026 KiraWorld architecture research record; software bridge and combined runtime not yet tested.",
+      "reviewed_on": "2026-10-16",
+      "summary": "Kira Labs documents a proposed integration: Pulse for model-based physiology, Three.js for the visible avatar and a local versioned bridge for future NewBrain commands and feedback.",
+      "body": "The research design assigns separate roles to Kitware's Pulse Physiology Engine, Three.js, Blender-generated body assets and NewBrain. The proposed local adapter must handle simulator time, units, provenance, per-avatar identity, disconnections and model limitations. Pulse's existing respiratory models do not automatically supply the desired neural-to-breathing-muscle controller. No concurrent Pulse–Three.js–NewBrain run has been verified. The separate measured 512-vertex forearm restoration is a geometric result, not evidence of lungs or a neural bridge.",
+      "boundary": "A design milestone only. No working Pulse-driven KiraWorld lung, clinical physiology model, live 3D physiological animation, two-way NewBrain input/output or disease prediction is demonstrated; NewBrain's last measured learning benchmark remains 2/12.",
+      "image": {
+        "path": "assets/pulse-threejs-visuals.webp",
+        "label": "Original concept illustrations",
+        "caption": "Original medical-style concept illustrations, not screenshots of Pulse, Three.js, an integrated bridge or patient data.",
+        "alt": "Concept imagery comparing a fictional medical physiology display and a translucent anatomical avatar; these are proposed technology roles, not running software"
+      },
+      "sources": [
+        {
+          "label": "Architecture explanation",
+          "url": "patient-horizon.html#physiology-bridge"
+        },
+        {
+          "label": "NewBrain body interface",
+          "url": "newbrain.html#body-interface"
+        },
+        {
+          "label": "Readable October 16 note",
+          "url": "updates.html#pulse-three-architecture-2026-10-16"
+        },
+        {
+          "label": "KiraWorld design requirements (private; access required)",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/blob/main/Avatar/avatar_builder/research/PULSE_THREE_NEWBRAIN_REUSABLE_LUNG_PLAN.md"
+        }
+      ],
+      "project_page": "patient-horizon.html#physiology-bridge"
     }
   ]
 };
