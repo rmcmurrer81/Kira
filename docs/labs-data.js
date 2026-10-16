@@ -933,6 +933,44 @@ window.KIRA_LABS_TIMELINE = {
         }
       ],
       "project_page": "patient-horizon.html#physiology-bridge"
+    },
+    {
+      "id": "companion-robot-ros2-bridge-2026-10-16",
+      "title": "A bounded ROS 2 bridge for future companion robots",
+      "project": "Kira World",
+      "track": "Robotics and simulated embodiment",
+      "status": "development",
+      "date": "2026-10-16",
+      "date_basis": "October 16, 2026 public website summary of an August 18, 2026 standalone bridge validation report and a separately proposed future NewBrain integration.",
+      "reviewed_on": "2026-10-16",
+      "summary": "KiraWorld documents a vendor-neutral high-level intention bridge for speech, gaze, expression and gesture, with 88 locally reported passing tests and a still-unbuilt NewBrain/robot connection.",
+      "body": "The standalone reference includes ROS 2 message definitions, fail-closed request validation, source-scoped mock sessions, terminal status models, duplicate/timeout checks and privacy-reduced evidence. The August 18 project report records 88 passing standalone tests, four admitted mock social intentions, one rejected gesture and 18 verified lifecycle records. A future companion robot would accept bounded requests through a confirmed official simulator/adapter; Kira World would preserve person-specific identity, memory and continuity. NewBrain could be tested as a separate future source of learning and decision inputs, but it is not currently connected.",
+      "boundary": "This milestone documents local policy/session software and an architecture plan, not a ROS 2 build in an approved target environment, authenticated Kira World session, live NewBrain-controlled action, physical robot movement or validated robot safety. Test outcomes do not imply a full humanoid integration.",
+      "image": {
+        "path": "assets/companion-robot-ros2-architecture.svg",
+        "label": "Research architecture diagram",
+        "caption": "New, original diagram of a proposed NewBrain / Kira World / ROS 2 / future companion robot architecture; it is not a screenshot or an executed hardware pathway.",
+        "alt": "Proposed connection from NewBrain research through Kira World and a bounded ROS 2 bridge to a future companion robot, with status feedback"
+      },
+      "sources": [
+        {
+          "label": "Companion robotics architecture",
+          "url": "companion-robotics.html#architecture"
+        },
+        {
+          "label": "Readable development journal",
+          "url": "updates.html#companion-robot-ros2-bridge-2026-10-16"
+        },
+        {
+          "label": "KiraWorld private development repository (access required)",
+          "url": "https://github.com/rmcmurrer81/KiraWorld"
+        },
+        {
+          "label": "ROS 2 official documentation",
+          "url": "https://docs.ros.org/en/rolling/index.html"
+        }
+      ],
+      "project_page": "companion-robotics.html"
     }
   ]
 };
