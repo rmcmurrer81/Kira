@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="740" viewBox="0 0 1440 740" role="img" aria-labelledby="title description">
+<title id="title">Kira Labs proposed NewBrain to companion robot architecture</title>
+<desc id="description">Concept only. Experimental NewBrain could contribute learning to Kira World. Kira World would select bounded social intentions, which a ROS 2 policy bridge would validate and submit to a future simulator or companion robot. Execution status would be returned. No live connected robot or NewBrain integration is demonstrated.</desc>
+<defs>
+ <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a2d"/><stop offset=".54" stop-color="#0d1226"/><stop offset="1" stop-color="#16142a"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#39d8e9" stop-opacity=".25"/><stop offset="1" stop-color="#39d8e9" stop-opacity="0"/></radialGradient>
+ <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#172a3d"/><stop offset=".6" stop-color="#101c31"/><stop offset="1" stop-color="#161b34"/></linearGradient>
+ <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#55e0e9"/><stop offset="1" stop-color="#b7a0fa"/></linearGradient>
+ <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#00030d" flood-opacity=".45"/></filter>
+ <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#71deeb"/></marker>
+ <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#98c7eb" stroke-opacity=".07"/></pattern>
+</defs>
+<rect width="1440" height="740" rx="30" fill="url(#ground)"/>
+<rect width="1440" height="740" rx="30" fill="url(#grid)"/>
+<ellipse cx="400" cy="240" rx="520" ry="300" fill="url(#glow)"/>
+<ellipse cx="1170" cy="530" rx="340" ry="340" fill="url(#glow)" opacity=".65"/>
+<path d="M64 54H142" stroke="#77e8ef" stroke-width="3" stroke-linecap="round"/>
+<text x="155" y="61" fill="#9fe6f1" font-family="Segoe UI,Arial,sans-serif" font-weight="700" font-size="15" letter-spacing="2.5">KIRA LABS  /  FUTURE EMBODIMENT RESEARCH</text>
+<text x="1364" y="60" text-anchor="end" fill="#ffc977" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="700">PROPOSED • NOT CONNECTED</text>
+<text x="68" y="123" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="41" font-weight="750">One continuing identity. A future companion robot.</text>
+<text x="70" y="157" fill="#aec6d6" font-family="Segoe UI,Arial,sans-serif" font-size="19">Four distinct layers — measurable requests, explicit limits, and return status.</text>
+<!-- connector pathways -->
+<g fill="none" stroke="url(#line)" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" opacity=".88">
+ <path d="M340 350H392" stroke-dasharray="7 9"/>
+ <path d="M688 350H740" stroke-dasharray="7 9"/>
+ <path d="M1036 350H1088" stroke-dasharray="7 9"/>
+</g>
+<g font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#adcfe5" text-anchor="middle">
+ <text x="366" y="326">FUTURE</text>
+ <text x="714" y="326">PLANNED</text>
+ <text x="1062" y="326">PLANNED</text>
+</g>
+<!-- node tiles -->
+<g filter="url(#shadow)">
+ <rect x="52" y="205" width="288" height="322" rx="24" fill="url(#tile)" stroke="#426c85" stroke-width="1.5"/>
+ <rect x="400" y="205" width="288" height="322" rx="24" fill="url(#tile)" stroke="#638aaf" stroke-width="1.5"/>
+ <rect x="748" y="205" width="288" height="322" rx="24" fill="url(#tile)" stroke="#5d9c9b" stroke-width="1.5"/>
+ <rect x="1096" y="205" width="288" height="322" rx="24" fill="url(#tile)" stroke="#9a83c5" stroke-width="1.5"/>
+</g>
+<!-- newbrain neural icon -->
+<g fill="none" stroke="#71ddeb" stroke-width="2.6" opacity=".95">
+ <path d="M147 297L185 265 227 285 239 325 192 347 151 321 185 265M192 347L227 285M147 297L239 325M151 321L227 285"/>
+</g>
+<g fill="#9ff5ed"><circle cx="147" cy="297" r="8"/><circle cx="185" cy="265" r="8"/><circle cx="227" cy="285" r="8"/><circle cx="239" cy="325" r="8"/><circle cx="192" cy="347" r="8"/><circle cx="151" cy="321" r="8"/></g>
+<!-- Kira World nested identities -->
+<g fill="none" stroke-linejoin="round" stroke="#b9c5ff" stroke-width="3"><circle cx="520" cy="290" r="20"/><path d="M486 348c0-27 15-40 34-40s34 13 34 40"/><circle cx="572" cy="284" r="16"/><path d="M552 333c3-18 12-30 30-30s28 11 29 29"/></g>
+<g fill="#a89fff"><circle cx="612" cy="260" r="5"/><circle cx="621" cy="287" r="3"/><circle cx="603" cy="303" r="4"/></g>
+<!-- ros2 shield icon -->
+<g fill="none" stroke="#6eefd9" stroke-width="3.2" stroke-linejoin="round"><path d="M891 259L948 281V321c0 31-23 50-57 66-34-16-57-35-57-66v-40z"/><path d="M863 324l20 19 38-42"/></g>
+<!-- robot line art -->
+<g fill="none" stroke="#d7bbff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+ <rect x="1186" y="253" width="103" height="93" rx="31"/><path d="M1237 239v14m-12-15h24m-63 59h-14m117 0h14"/><circle cx="1237" cy="232" r="5" fill="#c8aeff"/>
+ <path d="M1209 289h17m24 0h17"/><path d="M1212 317q25 18 49 0"/><path d="M1201 354v12m72-12v12m-92 22q53-42 108 0"/>
+</g>
+<g fill="#9aecef"><rect x="1209" y="285" width="17" height="8" rx="4"/><rect x="1250" y="285" width="17" height="8" rx="4"/></g>
+<!-- tile text -->
+<g font-family="Segoe UI,Arial,sans-serif">
+ <text x="76" y="239" fill="#8beaf0" font-size="13" letter-spacing="1.5" font-weight="700">01  /  RESEARCH LAYER</text>
+ <text x="424" y="239" fill="#c3b6ff" font-size="13" letter-spacing="1.5" font-weight="700">02  /  IDENTITY &amp; CONTEXT</text>
+ <text x="772" y="239" fill="#85e9d8" font-size="13" letter-spacing="1.5" font-weight="700">03  /  REQUEST GATE</text>
+ <text x="1120" y="239" fill="#d9c0ff" font-size="13" letter-spacing="1.5" font-weight="700">04  /  PHYSICAL ENDPOINT</text>
+ <text x="76" y="411" fill="#f3fbff" font-weight="750" font-size="29">NewBrain</text>
+ <text x="424" y="411" fill="#f3fbff" font-weight="750" font-size="29">Kira World</text>
+ <text x="772" y="411" fill="#f3fbff" font-weight="750" font-size="27">Bounded ROS 2</text>
+ <text x="1120" y="411" fill="#f3fbff" font-weight="750" font-size="26">Companion robot</text>
+ <g fill="#bfccda" font-size="17">
+  <text x="76" y="445">Learning and memory</text><text x="76" y="469">experiments; not connected</text>
+  <text x="424" y="445">Separate identity, context,</text><text x="424" y="469">memories, intentions</text>
+  <text x="772" y="445">Speech, gaze, expression,</text><text x="772" y="469">gesture policy checks</text>
+  <text x="1120" y="445">Future simulator/robot</text><text x="1120" y="469">executes within safe limits</text>
+ </g>
+ <g fill="#132536">
+  <rect x="72" y="484" width="157" height="27" rx="13.5" fill="#23364a"/><rect x="420" y="484" width="166" height="27" rx="13.5" fill="#2e2c4a"/><rect x="768" y="484" width="183" height="27" rx="13.5" fill="#1b484a"/><rect x="1116" y="484" width="181" height="27" rx="13.5" fill="#39314c"/>
+ </g>
+ <g font-size="12" font-weight="700" letter-spacing=".5">
+  <text x="86" y="502" fill="#b5e9ef">NOT CONNECTED</text>
+  <text x="435" y="502" fill="#d3c5ff">ACTIVE PROTOTYPES</text>
+  <text x="783" y="502" fill="#b7f3d9">LOCAL TESTS REPORTED</text>
+  <text x="1131" y="502" fill="#dfc9ff">NOT CONNECTED</text>
+ </g>
+</g>
+<!-- feedback return path -->
+<path d="M1250 545v66H543v-66" stroke="#8fd4e4" stroke-width="2.5" stroke-dasharray="9 8" fill="none" marker-end="url(#arrow)" opacity=".84"/>
+<rect x="683" y="583" width="432" height="54" rx="25" fill="#102438" stroke="#2c6676"/>
+<text x="900" y="606" text-anchor="middle" fill="#ddf7fc" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="700">Future response / execution feedback</text>
+<text x="900" y="623" text-anchor="middle" fill="#9ab9cd" font-family="Segoe UI,Arial,sans-serif" font-size="12">accepted · rejected · started · completed · interrupted</text>
+<rect x="54" y="670" width="1330" height="46" rx="13" fill="#091524" stroke="#355164"/>
+<text x="75" y="698" fill="#ced7e3" font-family="Segoe UI,Arial,sans-serif" font-size="16">Documented: 88 standalone local checks (Aug 2026). No live NewBrain link, authenticated robot session, or hardware control.</text>
+</svg>
