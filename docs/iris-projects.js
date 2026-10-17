@@ -4,7 +4,8 @@
  */
 (function(root){
   'use strict';
-  const IDS=['newbrain','ideaforge','humanoid-researcher','world','bluebook'];
+  const IDS=["newbrain","ideaforge","humanoid-researcher","world","bluebook","avatar-body","aster","patient-horizon","physiology-bridge","healthspan"];
+  const SOURCE={"newbrain":"knowledge.html#newbrain","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"knowledge.html#kira-world","bluebook":"knowledge.html#bluebook","avatar-body":"kira-world.html","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab"};
   const FACETS=['overview','status','how','technical','evidence','privacy','limits','cost'];
   const normalize=s=>String(s||'').toLowerCase().normalize('NFKC').replace(/[’']/g,'').replace(/[_-]/g,' ').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
   // Remove only conversational framing, never a factual clause or instruction.
@@ -22,8 +23,8 @@
     for(const p of data.projects){
       assert(IDS.includes(p.id)&&!seen.has(p.id),'invalid project');seen.add(p.id);
       assert(typeof p.title==='string'&&p.title.length<100,'invalid title');
-      assert(Array.isArray(p.aliases)&&p.aliases.length&&p.aliases.every(a=>typeof a==='string'&&a.length>=5&&a.length<80),'invalid aliases');
-      assert(p.source==='knowledge.html#'+(p.id==='world'?'kira-world':p.id),'invalid visitor source');
+      assert(Array.isArray(p.aliases)&&p.aliases.length&&p.aliases.every(a=>typeof a==='string'&&(a.length>=5||['Lisa','Maya'].includes(a))&&a.length<80),'invalid aliases');
+      assert(p.source===SOURCE[p.id],'invalid visitor source');
       for(const key of FACETS)assert(typeof p[key]==='string'&&p[key].trim()&&p[key].length<3000,'missing '+key);
     }
     return data;
