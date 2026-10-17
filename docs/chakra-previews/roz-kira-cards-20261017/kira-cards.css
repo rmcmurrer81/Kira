@@ -1,0 +1,30 @@
+
+/* Kira Labs-inspired card layout. This stylesheet changes ONLY the Information Gap. */
+.gap-screen{min-height:0!important;display:block!important;padding:85px 0 95px!important;background:linear-gradient(160deg,#081a2e,#081120 65%,#080b15)!important}
+.gap-screen .gap-layout{display:block!important;width:min(1540px,calc(100% - 7%))!important}
+.gap-screen .gap-layout>div:first-child{max-width:1100px}
+.gap-screen .kicker{font:750 11px/1.5 var(--kira-sans)!important;letter-spacing:.14em!important;margin:0 0 15px!important}
+.gap-screen .gap-main-title{font:650 clamp(33px,3vw,48px)/1.14 var(--kira-sans)!important;letter-spacing:-.045em!important}
+.gap-screen .gap-main-title em{display:inline!important;font:italic 400 1.03em/1.1 Georgia,serif!important;color:#aaa6ff!important}
+.gap-screen .gap-intro{font:400 16px/1.74 var(--kira-sans)!important;color:#b2bdcf!important;max-width:980px!important;margin:17px 0 0!important}
+.gap-screen .gap-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:25px 0 0!important}
+.gap-screen .gap-actions .pill{border-radius:4px!important;min-height:43px!important;padding:10px 18px!important;font:700 13px/1.45 var(--kira-sans)!important;letter-spacing:0!important}
+.gap-screen .gap-actions .pill.primary{background:#79ebf3!important;color:#08101b!important;box-shadow:none!important}
+.gap-screen .gap-actions .pill.outline{background:#0b1322!important;border:1px solid #ffffff45!important;color:#f7f5ef!important}
+.gap-screen .gap-cards{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:21px!important;border:0!important;border-radius:0!important;padding:0!important;background:none!important;margin:40px 0 0!important;align-items:stretch!important}
+.gap-screen .reason,.gap-screen .reason:nth-child(n+4){grid-column:auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;margin:0!important;padding:0!important;border:1px solid rgba(255,255,255,.13)!important;border-radius:0!important;background:linear-gradient(145deg,#13192a,#0c101a)!important;box-shadow:none!important;overflow:hidden!important;transition:transform .2s,border-color .2s}
+.gap-screen .reason:hover{transform:translateY(-3px);border-color:#79ebf368!important}
+.gap-screen .reason-cover{position:relative;aspect-ratio:2.3;overflow:hidden;background:#081323;flex:0 0 auto;width:100%}
+.gap-screen .reason-cover svg{width:100%;height:100%;display:block}
+.gap-screen .reason-picturetag{position:absolute;bottom:12px;left:13px;padding:5px 9px;background:#080a12ea;border:1px solid #ffc86a43;color:#ffc86a;font:500 10px/1.4 var(--kira-sans)!important}
+.gap-screen .reason-body{padding:23px 23px 20px;display:flex;flex-direction:column;flex:1;min-width:0}
+.gap-screen .reason-status{display:block;color:#79ebf3;font:750 10px/1.5 var(--kira-sans)!important;letter-spacing:.095em;margin-bottom:11px}
+.gap-screen .reason:nth-child(3) .reason-status{color:#ffc86a}
+.gap-screen .reason .reason-index{font:650 clamp(20px,1.4vw,25px)/1.2 var(--kira-sans)!important;letter-spacing:-.04em!important;text-transform:none!important;color:#f7f5ef!important;margin:0 0 11px!important}
+.gap-screen .reason p,.gap-screen .reason:nth-child(n+3) p{font:400 14px/1.65 var(--kira-sans)!important;color:#a7afc2!important;letter-spacing:normal!important;margin:0 0 22px!important}
+.gap-screen .reason-footer{margin-top:auto;padding-top:15px;border-top:1px solid #ffffff20;color:#79ebf3;font:650 11px/1.5 var(--kira-sans)!important}
+.gap-screen .reason:nth-child(3) .reason-footer{color:#ffc86a}
+@media(max-width:1480px){.gap-screen .gap-cards{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(max-width:1050px){.gap-screen .gap-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important}.gap-screen{padding:72px 0!important}.gap-screen .reason .reason-index{font-size:23px!important}}
+@media(max-width:660px){.gap-screen .gap-layout{width:calc(100% - 36px)!important}.gap-screen .gap-cards{grid-template-columns:1fr!important;gap:18px!important;margin-top:30px!important}.gap-screen .gap-main-title{font-size:clamp(32px,9vw,42px)!important}.gap-screen .gap-intro{font-size:15px!important}.gap-screen .reason-body{padding:20px 22px!important}.gap-screen .reason .reason-index{font-size:23px!important}.gap-screen .gap-actions .pill{font-size:12px!important;padding:10px 14px!important}}
+@media(prefers-reduced-motion:reduce){.gap-screen .reason{transition:none!important}.gap-screen .reason:hover{transform:none}}
