@@ -1,5 +1,6 @@
 
 (()=>{'use strict';
+document.querySelectorAll('a').forEach(a=>{if(a.textContent?.includes('View all proposals'))a.remove()});
 const hero=document.querySelector('section.hero');if(!hero)return;
 document.querySelector('.review-ribbon')?.setAttribute('hidden','');
 const header=document.querySelector('.site-header'),nav=document.querySelector('.site-nav');
