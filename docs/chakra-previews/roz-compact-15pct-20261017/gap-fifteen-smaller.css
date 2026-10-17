@@ -19,7 +19,7 @@
   font-size: clamp(31.45px, 3.315vw, 58.65px) !important;
 }
 .gap-screen .gap-main-title em {
-  font-size: .833em !important;
+  font-size: .98em !important;
 }
 .gap-screen .gap-intro {
   font-size: clamp(13.6px, 1.088vw, 17.85px) !important;
@@ -64,6 +64,7 @@
     min-height:0;
     padding:71.4px 0 61.2px !important;
   }
+  .gap-screen .reason, .gap-screen .reason:nth-child(n+4){ min-height: 0 !important; }
   .gap-screen .gap-main-title {
     font-size: clamp(29.75px, 7.565vw, 45.9px) !important;
   }
