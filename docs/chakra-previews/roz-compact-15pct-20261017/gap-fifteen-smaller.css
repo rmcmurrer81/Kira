@@ -1,0 +1,81 @@
+/*
+ Chakra's preferred five-box Information Readiness Gap, 15% smaller.
+ Loaded LAST after the previous compact-gap-fonts.css.
+ This is the only section affected. Every new dimension below is 85% of
+ the prior setting (except 44px minimum touch height on small screens).
+*/
+.gap-screen {
+  min-height: 654.5px;
+  padding: 93.5px 0 !important;
+}
+.gap-screen .gap-layout {
+  gap: 2.89vw;
+}
+.gap-screen .kicker {
+  font-size: 9.35px !important;
+  margin-bottom: 23.8px !important;
+}
+.gap-screen .gap-main-title {
+  font-size: clamp(31.45px, 3.315vw, 58.65px) !important;
+}
+.gap-screen .gap-main-title em {
+  font-size: .833em !important;
+}
+.gap-screen .gap-intro {
+  font-size: clamp(13.6px, 1.088vw, 17.85px) !important;
+  margin-top: 32.3px !important;
+}
+.gap-screen .gap-actions {
+  gap: 15.3px !important;
+  margin-top: 49.3px !important;
+}
+.gap-screen .gap-actions .pill {
+  font-size: 13.6px !important;
+  padding: 10.2px 23.8px !important;
+  min-height: 44.2px !important;
+}
+.gap-screen .gap-cards {
+  gap: 13.6px !important;
+  padding: 28.9px 22.1px !important;
+}
+.gap-screen .reason,
+.gap-screen .reason:nth-child(n+4) {
+  padding: 22.95px 20.4px !important;
+}
+.gap-screen .reason {
+  min-height: 212.5px !important;
+}
+.gap-screen .reason:nth-child(n+4) {
+  min-height: 185.3px !important;
+}
+.gap-screen .reason .reason-index {
+  font-size: 8.5px !important;
+  margin-bottom: 18.7px !important;
+}
+.gap-screen .reason p,
+.gap-screen .reason:nth-child(n+3) p {
+  font-size: 11.9px !important;
+  line-height: 1.61 !important;
+}
+/* The existing three-above/two-below grid, backgrounds, colors and borders
+   are intentionally inherited without overriding their layout. */
+@media(max-width:760px){
+  .gap-screen {
+    min-height:0;
+    padding:71.4px 0 61.2px !important;
+  }
+  .gap-screen .gap-main-title {
+    font-size: clamp(29.75px, 7.565vw, 45.9px) !important;
+  }
+  .gap-screen .gap-intro {
+    font-size: 13.6px !important;
+  }
+  .gap-screen .reason p,
+  .gap-screen .reason:nth-child(n+3) p {
+    font-size: 12.75px !important;
+  }
+  .gap-screen .gap-actions .pill {
+    font-size: 12.75px !important;
+    min-height:44px !important;
+  }
+}
