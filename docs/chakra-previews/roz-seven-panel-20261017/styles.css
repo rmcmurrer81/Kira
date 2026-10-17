@@ -120,3 +120,5 @@ button{font:inherit;cursor:pointer}a{color:inherit}a:focus-visible,button:focus-
 }
 @media(max-width:430px){.hero h1 .main-word{font-size:clamp(46px,11.9vw,64px)}.hero h1 .secondary-word{font-size:clamp(47px,13vw,63px)}.gap-main-title{font-size:46px}.tech-card{padding:19px}.tech-art{min-width:77px;width:26%}.tech-card .view-button{min-width:185px}.tech-card h3{font-size:24px}.tech-card .desc{font-size:15px}.tech-card .tech-index{font-size:10px}.tech-card .subtitle{font-size:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.star-cloud,.js .hero .main-word,.js .hero .secondary-word,.scroll-cue svg{animation:none!important}.js .hero .main-word{clip-path:none;filter:none}.js .hero .secondary-word{opacity:1;filter:none;transform:none}*{transition:none!important}}
+
+.site-nav .mobile-contact{display:none}@media(max-width:760px){.site-nav .mobile-contact{display:block;color:#ffe0a0;border-bottom:0;padding-top:16px}}
