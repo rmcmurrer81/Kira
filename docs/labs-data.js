@@ -125,6 +125,40 @@ window.KIRA_LABS_TIMELINE = {
       "project_page": "kira-world.html#temporary-ai-creator"
     },
     {
+      "id": "synthetic-robert-2026-07-12",
+      "title": "Synthetic Robert's first recorded day",
+      "project": "Kira World",
+      "track": "Digital Twin / distinct personal identities",
+      "status": "prototype",
+      "date": "2026-07-12",
+      "date_basis": "October 18, 2026 Codex review of the owner's local profile metadata, Windows file timestamps and preserved chat log. The private originals are not published or independently replicated.",
+      "reviewed_on": "2026-10-18",
+      "summary": "Synthetic Robert's separate profile and first completed local text exchange date to July 12, 2026; approved self-voice reference work followed July 14–17.",
+      "body": "The reported profile creation time is July 12 at 5:35:31 PM Eastern, with corroborating Windows file/folder creation at 5:37:24 PM. The earliest saved complete chat has Robert's message at 6:01:17 PM and Synthetic Robert's reply at 6:01:28 PM. The current Chatterbox reference WAV was created July 14 at 11:08:46 PM, with the saved private-use authorization dated July 17 at 3:05 AM. Subsequent work added owner-authorized, source-attributed recollections and correction-aware memory context. Synthetic Robert has a separate identity from the biological Robert.",
+      "boundary": "A saved first text conversation does not establish the date of first successful Chatterbox playback; that date remains unverified. Raw private chats and audio are not published. Local records were reviewed by Codex but have not been independently replicated. A completed 3D twin body, autonomous life loop, live NewBrain-backed learning and clinical outcomes are not demonstrated.",
+      "image": {
+        "path": "assets/kira-world-k-logo-512.png",
+        "label": "Kira Labs research milestone",
+        "caption": "The Kira Labs emblem identifies this early Synthetic Robert milestone; it is not an image of the July 12 chat or a portrait of the twin.",
+        "alt": "Kira Labs gold K emblem representing a dated Synthetic Robert development milestone"
+      },
+      "sources": [
+        {
+          "label": "Read the dated milestone",
+          "url": "updates.html#synthetic-robert-2026-07-12"
+        },
+        {
+          "label": "Chatterbox self-voice authorization (GitHub access may be required)",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/blob/main/Voice/authorizations/robert_self_voice_runtime_approval_20260717.json"
+        },
+        {
+          "label": "September memory development",
+          "url": "updates.html#digital-twin-2026-09-20"
+        }
+      ],
+      "project_page": "kira-world.html#digital-twin"
+    },
+    {
       "id": "kira-friend-dual-chat-2025-08",
       "title": "Kira meets an unnamed Friend",
       "project": "Kira World",
