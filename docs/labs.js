@@ -59,4 +59,13 @@
     img.addEventListener('error', failed, {once:true});
     if (img.complete && !img.naturalWidth) failed();
   });
+
+  // Partner path: show it in existing navigation, without duplicating static links.
+  const partnerNav=document.getElementById('primary-nav');
+  if(partnerNav&&!partnerNav.querySelector('a[href="partners.html"]')){
+    const supportLink=partnerNav.querySelector('a[href="support.html"]');
+    const item=document.createElement('a');item.href='partners.html';item.textContent='Partners';
+    if(supportLink)supportLink.insertAdjacentElement('afterend',item);
+    else partnerNav.appendChild(item);
+  }
 })();
