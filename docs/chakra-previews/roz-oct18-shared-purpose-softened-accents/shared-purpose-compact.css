@@ -1,0 +1,133 @@
+/* Roz's One Shared Purpose: compact desktop presentation.
+   These overrides are scoped ONLY to the technologies section; the rest of
+   the full website and animated information-readiness ecosystem are unchanged. */
+
+/* DESKTOP: show heading and all four cards together without vertical scrolling
+   on ordinary 720px–1080px displays. The height responds to shorter viewports. */
+@media (min-width: 941px) {
+  #technologies.purpose-screen {
+    padding: clamp(12px,2.2vh,22px) 0 clamp(16px,2.7vh,28px);
+    min-height: 0;
+  }
+  #technologies.purpose-screen .wrap {
+    width: min(1550px, calc(100% - 6%));
+  }
+  #technologies .purpose-trails {
+    top: -18px;
+    width: min(62%,990px);
+    height: 172px;
+  }
+  #technologies .purpose-heading {
+    font-size: clamp(41px,min(4.6vw,7.2vh),76px);
+    line-height: .99;
+    letter-spacing: -.055em;
+    margin: 0 0 clamp(9px,1.5vh,16px);
+  }
+  #technologies .purpose-heading em {
+    margin-top: 2px;
+    font-size: clamp(26px,min(2.95vw,4.65vh),48px);
+    line-height: 1.08;
+  }
+  #technologies .purpose-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    column-gap:clamp(10px,1.1vw,18px);
+    row-gap:clamp(8px,1.45vh,12px);
+  }
+  #technologies .purpose-grid .tech-card {
+    min-height:0;
+    height:clamp(192px,calc((100svh - 220px)/2),230px);
+    padding:clamp(12px,1.8vh,19px) clamp(15px,1.7vw,27px);
+    border-radius:16px;
+    gap:8px;
+  }
+  #technologies .purpose-grid .tech-index {
+    margin:0 0 clamp(7px,1.1vh,11px);
+    font-size:clamp(13px,1.0vw,16px);
+    letter-spacing:.018em;
+    line-height:1.18;
+  }
+  #technologies .purpose-grid .tech-card h3 {
+    font-size:clamp(29px,2.5vw,44px);
+    line-height:1.02;
+    margin:0 0 5px;
+  }
+  #technologies .purpose-grid .tech-card.di h3 {
+    font-size:clamp(27px,2.3vw,41px);
+  }
+  #technologies .purpose-grid .tech-card.rit h3 {
+    font-size:clamp(23px,2.05vw,36px);
+  }
+  #technologies .purpose-grid .tech-description {
+    font-size:clamp(13px,1.19vw,19px);
+    line-height:1.23;
+    margin:0 0 7px;
+    max-width:420px;
+  }
+  #technologies .purpose-grid .tech-card .view-button {
+    min-height:36px;
+    width:min(100%,218px);
+    padding:6px 13px 7px 16px;
+    border-width:1.5px;
+    font-size:clamp(12px,.93vw,16px);
+    line-height:1.1;
+    gap:10px;
+  }
+  #technologies .purpose-grid .tech-card.di .view-button {
+    width:min(100%,295px);
+  }
+  #technologies .purpose-grid .tech-art {
+    min-width:100px;
+    max-width:165px;
+    width:min(26%,165px);
+  }
+  #technologies .purpose-grid .tech-art .core {
+    font-size:clamp(30px,3vw,50px);
+  }
+  #technologies .purpose-grid .tech-card.rit .tech-art .core {
+    font-size:clamp(25px,2.55vw,42px);
+  }
+  #technologies .purpose-grid .tech-art .node {
+    width:9px;
+    height:9px;
+  }
+}
+
+/* TABLETS: preserve one column for legibility but reduce its footprint too. */
+@media (min-width: 581px) and (max-width: 940px) {
+  #technologies.purpose-screen {padding:48px 0 50px}
+  #technologies .purpose-heading {font-size:clamp(43px,6.8vw,68px);margin-bottom:18px}
+  #technologies .purpose-heading em {font-size:clamp(29px,4.5vw,44px)}
+  #technologies .purpose-grid {gap:12px}
+  #technologies .purpose-grid .tech-card {
+    height:236px;min-height:236px;
+    padding:19px 27px;
+    gap:10px;
+  }
+  #technologies .purpose-grid .tech-index {font-size:15px;margin-bottom:9px}
+  #technologies .purpose-grid .tech-card h3 {font-size:clamp(31px,4.7vw,42px);margin-bottom:6px}
+  #technologies .purpose-grid .tech-card.di h3 {font-size:clamp(29px,4.4vw,39px)}
+  #technologies .purpose-grid .tech-card.rit h3 {font-size:clamp(25px,4.1vw,35px)}
+  #technologies .purpose-grid .tech-description {font-size:clamp(15px,2.3vw,19px);margin-bottom:8px}
+  #technologies .purpose-grid .tech-card .view-button {min-height:39px;padding:7px 15px;font-size:14px}
+  #technologies .purpose-grid .tech-art {min-width:120px;max-width:180px;width:27%}
+}
+
+/* PHONES: stack cards without clipping copy or forcing tiny text. */
+@media (max-width: 580px) {
+  #technologies.purpose-screen {padding:50px 0}
+  #technologies .purpose-heading {font-size:clamp(37px,8.7vw,48px);margin-bottom:16px}
+  #technologies .purpose-heading em {font-size:clamp(25px,5.5vw,33px)}
+  #technologies .purpose-grid {gap:12px}
+  #technologies .purpose-grid .tech-card {
+    height:auto;min-height:225px;
+    padding:20px 17px;
+    gap:6px;
+  }
+  #technologies .purpose-grid .tech-index {font-size:13px;margin-bottom:9px}
+  #technologies .purpose-grid .tech-card h3 {font-size:clamp(27px,6.5vw,36px);margin-bottom:5px}
+  #technologies .purpose-grid .tech-card.di h3 {font-size:clamp(25px,5.9vw,33px)}
+  #technologies .purpose-grid .tech-card.rit h3 {font-size:clamp(20px,5.1vw,28px)}
+  #technologies .purpose-grid .tech-description {font-size:clamp(13px,3.5vw,16px);margin-bottom:8px}
+  #technologies .purpose-grid .tech-card .view-button {min-height:38px;font-size:12px}
+  #technologies .purpose-grid .tech-art {min-width:80px;max-width:120px;width:25%}
+}

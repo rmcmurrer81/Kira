@@ -1,0 +1,159 @@
+
+/*
+ * Contact panel based on the approved gold-orbit image concept:
+ * gold concentric rings, NO orbiting balls, original functional text and CTA.
+ * This stylesheet is scoped to #contact.gold-orbit-contact only.
+ * No other page section or animation is restyled.
+ */
+#contact.gold-orbit-contact{
+ position:relative;isolation:isolate;overflow:hidden;
+ min-height:832px!important;
+ display:flex!important;align-items:stretch!important;
+ padding:77px 0 89px!important;
+ border-top:1px solid rgba(138,224,212,.22);
+ background:
+  radial-gradient(ellipse 43% 58% at 75% 41%,rgba(180,144,67,.13),transparent 76%),
+  radial-gradient(ellipse 62% 82% at 89% 4%,rgba(72,157,146,.22),transparent 74%),
+  linear-gradient(128deg,#151e31 0%,#1a293a 58%,#172137 100%)!important;
+}
+#contact.gold-orbit-contact::before{content:none!important;display:none!important}
+#contact.gold-orbit-contact::after{content:none!important;display:none!important}
+#contact.gold-orbit-contact .contact-orbit-scene{
+ position:absolute;inset:0 0 0 40%;width:60%;height:100%;
+ pointer-events:none;z-index:0;opacity:.96;
+}
+#contact.gold-orbit-contact .contact-orbit-scene svg{
+ display:block;width:100%;height:100%;
+}
+#contact.gold-orbit-contact .contact-motto{
+ position:absolute;right:4.3%;top:100px;z-index:2;
+ font:600 12px/1.3 var(--kira-sans);
+ letter-spacing:.17em;color:#e5bb5c;white-space:nowrap;
+}
+#contact.gold-orbit-contact>.wrap{
+ position:relative;z-index:3;
+ max-width:1650px!important;width:calc(100% - 8.5%)!important;
+ margin:auto!important;
+}
+#contact.gold-orbit-contact .contact-layout{
+ display:block!important;position:static!important;
+ grid-template-columns:none!important;gap:0!important;
+}
+#contact.gold-orbit-contact .contact-copy{max-width:none}
+#contact.gold-orbit-contact .kicker{
+ margin:0!important;
+ color:#67f0f2!important;
+ font:700 12px/1.5 var(--kira-sans)!important;
+ letter-spacing:.16em!important;
+ text-transform:uppercase!important;
+}
+#contact.gold-orbit-contact .contact-title{
+ color:#f5f6f9!important;
+ font:700 clamp(60px,5.12vw,96px)/1.06 var(--kira-sans)!important;
+ letter-spacing:-.058em!important;
+ max-width:1100px!important;
+ margin:90px 0 0!important;
+}
+#contact.gold-orbit-contact .contact-title em{
+ display:block!important;
+ color:#71eaf2!important;
+ font:italic 400 clamp(63px,5.85vw,108px)/1.13 Georgia,"Times New Roman",serif!important;
+ letter-spacing:-.053em!important;
+ max-width:none!important;
+ margin:11px 0 0!important;
+}
+#contact.gold-orbit-contact .contact-main{
+ margin:46px 0 0!important;
+ max-width:1200px!important;
+ color:#f6f7ff!important;
+ font:700 clamp(19px,1.42vw,26px)/1.4 var(--kira-sans)!important;
+}
+#contact.gold-orbit-contact .contact-desc{
+ margin:28px 0 0!important;
+ max-width:1030px!important;
+ color:#cbd9ed!important;
+ font:400 clamp(15px,1.08vw,19px)/1.65 var(--kira-sans)!important;
+}
+#contact.gold-orbit-contact .contact-button{
+ position:absolute!important;
+ right:0!important;bottom:5px!important;
+ display:inline-flex!important;align-items:center!important;justify-content:space-between!important;
+ min-width:248px!important;min-height:73px!important;
+ padding:17px 28px!important;
+ border-radius:5px!important;
+ background:#68e6ed!important;color:#071825!important;
+ text-decoration:none!important;
+ font:700 16px/1.3 var(--kira-sans)!important;
+ gap:52px!important;
+ margin:0!important;
+}
+#contact.gold-orbit-contact .contact-button:hover{background:#a4f7fa!important}
+#contact.gold-orbit-contact .contact-button:focus-visible{
+ outline:3px solid #ffd077;outline-offset:5px;
+}
+@media(max-width:1050px){
+ #contact.gold-orbit-contact .contact-title{
+  font-size:clamp(56px,7.1vw,78px)!important;
+ }
+ #contact.gold-orbit-contact .contact-title em{
+  font-size:clamp(54px,6.7vw,78px)!important;
+ }
+ #contact.gold-orbit-contact .contact-main{max-width:800px!important}
+ #contact.gold-orbit-contact .contact-desc{max-width:700px!important}
+ #contact.gold-orbit-contact .contact-motto{top:60px}
+ #contact.gold-orbit-contact .contact-orbit-scene{
+  left:24%;width:76%;opacity:.55;
+ }
+}
+@media(max-width:760px){
+ #contact.gold-orbit-contact{
+  min-height:0!important;
+  display:block!important;
+  padding:74px 0 85px!important;
+ }
+ #contact.gold-orbit-contact>.wrap{
+  width:calc(100% - 40px)!important;
+ }
+ #contact.gold-orbit-contact .contact-motto{
+  position:absolute;top:111px;left:20px;right:auto;
+  display:block;text-align:left;margin:0!important;
+  padding:0!important;font-size:10px!important;
+ }
+ #contact.gold-orbit-contact .contact-title{
+  margin-top:48px!important;
+  font-size:clamp(46px,10vw,67px)!important;
+  line-height:1.07!important;
+  max-width:100%!important;
+ }
+ #contact.gold-orbit-contact .contact-title em{
+  margin-top:13px!important;
+  font-size:clamp(45px,9.4vw,63px)!important;
+  line-height:1.16!important;
+  overflow-wrap:normal;
+ }
+ #contact.gold-orbit-contact .contact-title em br{display:none}
+ #contact.gold-orbit-contact .contact-main{
+  margin-top:55px!important;
+  font-size:18px!important;
+ }
+ #contact.gold-orbit-contact .contact-desc{
+  margin-top:23px!important;
+  font-size:15px!important;
+ }
+ #contact.gold-orbit-contact .contact-orbit-scene{
+  inset:5% auto auto 16%;
+  width:115%;height:72%;opacity:.23;
+ }
+ #contact.gold-orbit-contact .contact-button{
+  position:static!important;
+  margin-top:36px!important;
+  min-height:60px!important;
+  min-width:220px!important;
+  width:min(100%,280px)!important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ #contact.gold-orbit-contact .contact-orbit-scene{
+  animation:none!important;
+ }
+}

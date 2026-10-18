@@ -1,0 +1,206 @@
+/* Roz Griffie, Sunday October 18 revised website slides.
+ * Replaces only the old Company, Information Gap and Ecosystem sections.
+ * Original hero, lower panels, contact and footer styles are untouched.
+ * Existing ecosystem-orbit.css and ecosystem-orbit.js are reused unchanged.
+ */
+.oct18-slide{
+ position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;
+ min-height:730px;padding:88px 0;background:#06172d;
+}
+.oct18-slide::before{
+ content:"";position:absolute;inset:0;z-index:-2;
+ background:url("oct18-nebula.svg") center center/cover no-repeat;
+ opacity:.69;pointer-events:none;
+}
+.oct18-slide::after{
+ content:"";position:absolute;inset:0;z-index:-1;
+ background:linear-gradient(100deg,#05102b26 0%,#05142b22 45%,#030d2059 100%);
+ pointer-events:none;
+}
+.oct18-slide .wrap{width:min(1500px,calc(100% - 7%));margin:auto;position:relative;z-index:1}
+.oct18-slide .oct18-eyebrow{
+ font:650 clamp(12px,1.05vw,17px)/1.5 var(--kira-sans);
+ color:#37eaf3;letter-spacing:.07em;margin:0 0 28px;text-transform:none;
+}
+.oct18-slide .oct18-display{
+ font:750 clamp(52px,5.25vw,89px)/1.02 var(--kira-sans);
+ color:#f7f9ff;letter-spacing:-.059em;margin:0;
+}
+.oct18-slide .oct18-display em{
+ display:block;font:italic 400 1.08em/1.07 Georgia,"Times New Roman",serif;
+ color:#3decf4;letter-spacing:-.035em;margin-top:4px;
+}
+.oct18-slide .oct18-intro{
+ font:400 clamp(17px,1.42vw,23px)/1.51 var(--kira-sans);
+ color:#e7effb;max-width:670px;margin:36px 0 0;
+}
+.oct18-company{min-height:675px;background:linear-gradient(135deg,#061a32,#071a32 75%)}
+.oct18-company::before{opacity:.52}
+.oct18-company-grid{
+ display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+ align-items:center;gap:clamp(35px,4vw,85px);
+}
+.oct18-company .oct18-company-title{
+ font:750 clamp(59px,5.45vw,97px)/1.03 var(--kira-sans);
+ letter-spacing:-.062em;color:#f7f9ff;margin:0;
+}
+.oct18-company-title em{
+ display:block;white-space:nowrap;margin-top:4px;
+ font:italic 400 .90em/1.06 Georgia,"Times New Roman",serif;
+ color:#59f0f2;letter-spacing:-.052em;
+}
+.oct18-company-panel{
+ border:1px solid rgba(21,223,245,.63);
+ background:linear-gradient(125deg,#04182bcb,#041426db);
+ border-radius:12px;padding:33px 40px 36px;box-shadow:0 17px 45px #0002;
+}
+.oct18-company-panel h3{
+ font:700 15px/1.4 var(--kira-sans);
+ letter-spacing:.19em;color:#26e5ed;margin:0 0 22px;
+}
+.oct18-company-panel p{
+ font:400 clamp(18px,1.48vw,25px)/1.5 var(--kira-sans);
+ color:#e6e9f7;margin:0;
+}
+.oct18-company-panel p+p{margin-top:29px}
+.oct18-readiness,.oct18-consequences{background:#04162e}
+.oct18-readiness-grid{
+ display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);
+ gap:clamp(36px,5vw,92px);align-items:center;
+}
+.oct18-readiness .oct18-display{font-size:clamp(52px,5.05vw,85px)}
+.oct18-readiness .oct18-intro{max-width:645px}
+.oct18-readiness-right h3{
+ color:#31e7f3;font:700 clamp(16px,1.42vw,22px)/1.35 var(--kira-sans);
+ margin:0 0 18px;letter-spacing:-.025em;
+}
+.oct18-stage{
+ background:rgba(2,17,34,.71);border:2px solid #22e5ef;
+ border-radius:17px;padding:20px 25px;margin-bottom:14px;
+ box-shadow:0 6px 22px #0015241f;
+}
+.oct18-stage:last-child{margin-bottom:0}
+.oct18-stage h4{
+ font:700 clamp(17px,1.26vw,22px)/1.28 var(--kira-sans);
+ color:#20e9f4;letter-spacing:.018em;margin:0 0 14px;
+}
+.oct18-stage p{
+ color:#ecf1fb;font:400 clamp(16px,1.16vw,20px)/1.48 var(--kira-sans);
+ margin:0;
+}
+.oct18-stage.stage-warning{border-color:#ffd62c}
+.oct18-stage.stage-warning h4{color:#ffdc2d}
+.oct18-action{
+ display:inline-flex;align-items:center;justify-content:center;
+ background:#ffdd35;color:#061021;font:750 16px/1.35 var(--kira-sans);
+ min-height:54px;padding:14px 32px;border-radius:100px;margin-top:43px;
+ text-decoration:none;box-shadow:0 0 27px #ffda2832;
+}
+.oct18-action:hover{background:#ffe775;transform:translateY(-2px)}
+.oct18-consequences-grid{
+ display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.32fr);
+ gap:clamp(30px,3.7vw,76px);align-items:center;
+}
+.oct18-consequences .oct18-display{font-size:clamp(55px,5.45vw,91px)}
+.oct18-consequences .oct18-intro{max-width:530px}
+.oct18-consequence-frame{
+ border:1px solid #39c5ef9c;border-radius:13px;
+ background:#0214297d;padding:16px;display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;
+}
+.oct18-impact{
+ border:2px solid #21e1eb;border-radius:16px;
+ background:#031329db;padding:23px 21px 25px;min-width:0;
+}
+.oct18-impact h3{
+ color:#27e2ef;font:700 clamp(16px,1.16vw,20px)/1.34 var(--kira-sans);
+ margin:0 0 20px;letter-spacing:.015em;min-height:48px;
+}
+.oct18-impact.human-impact h3{text-align:center}
+.oct18-impact p{
+ font:400 clamp(15px,1.18vw,19px)/1.4 var(--kira-sans);
+ margin:0 0 13px;color:#eff5ff;
+}
+.oct18-bullets{list-style:none;padding:0;margin:0;display:grid;gap:7px}
+.oct18-bullets li{
+ position:relative;padding-left:21px;
+ color:#e4ebf6;font:400 clamp(14px,1.03vw,17px)/1.36 var(--kira-sans);
+}
+.oct18-bullets li::before{
+ content:"";position:absolute;left:1px;top:.53em;width:10px;height:10px;
+ border-radius:50%;background:#26e8f3;
+}
+.oct18-solution{background:linear-gradient(110deg,#09214c,#06162f)}
+.oct18-solution-grid{
+ display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+ gap:clamp(32px,4.4vw,93px);align-items:center;
+}
+.oct18-solution .oct18-display{
+ font-size:clamp(57px,5.8vw,96px);line-height:.98;
+}
+.oct18-solution .oct18-intro{max-width:625px}
+.oct18-solution-art{
+ display:flex;flex-direction:column;align-items:center;min-width:0;
+ gap:20px;position:relative;isolation:isolate;
+}
+.oct18-solution-art h3{
+ font:650 clamp(15px,1.34vw,20px)/1.37 var(--kira-sans);
+ color:#f0f7ff;margin:0;text-align:center;
+}
+.oct18-solution-art h3 strong{color:#29e8f6}
+.oct18-solution-art .ecosystem-art{flex:0 0 auto}
+.oct18-wheel-caption{
+ display:flex;align-items:center;justify-content:center;gap:12px;
+ font:600 clamp(13px,1.15vw,18px)/1.32 var(--kira-sans);
+ text-align:center;color:#f5f7ff;margin:0;white-space:nowrap;
+}
+.oct18-wheel-caption::before,.oct18-wheel-caption::after{
+ content:"";display:inline-block;width:32px;height:2px;flex-shrink:0;
+ background:#61ddff;
+}
+@media(max-width:1100px){
+ .oct18-slide{min-height:0;padding:85px 0}
+ .oct18-company-grid,.oct18-readiness-grid,.oct18-consequences-grid,.oct18-solution-grid{
+  grid-template-columns:minmax(0,1fr);gap:38px
+ }
+ .oct18-company-panel{max-width:850px}
+ .oct18-readiness .oct18-intro,.oct18-consequences .oct18-intro{max-width:760px}
+ .oct18-readiness-right,.oct18-consequence-frame{max-width:900px;width:100%;margin-inline:auto}
+ .oct18-solution-art{margin-top:8px}
+ .oct18-solution .oct18-intro{max-width:850px}
+}
+@media(max-width:700px){
+ .oct18-slide{padding:69px 0 76px}
+ .oct18-slide .wrap{width:calc(100% - 38px)}
+ .oct18-slide .oct18-eyebrow{font-size:11px;line-height:1.6;letter-spacing:.09em;margin-bottom:21px}
+ .oct18-slide .oct18-display,.oct18-readiness .oct18-display,
+ .oct18-consequences .oct18-display,.oct18-solution .oct18-display{
+  font-size:clamp(42px,10vw,66px);line-height:1.01;
+ }
+ .oct18-slide .oct18-intro{font-size:16px;line-height:1.64;margin-top:24px}
+ .oct18-company .oct18-company-title{font-size:clamp(45px,11vw,71px)}
+ .oct18-company-panel{padding:25px 24px 27px;border-radius:9px}
+ .oct18-company-panel h3{font-size:13px;margin-bottom:16px}
+ .oct18-company-panel p{font-size:17px;line-height:1.58}
+ .oct18-company-panel p+p{margin-top:23px}
+ .oct18-readiness-right h3{font-size:16px}
+ .oct18-stage{padding:19px 20px;border-radius:12px}
+ .oct18-stage h4{font-size:15px}
+ .oct18-stage p{font-size:15px}
+ .oct18-action{font-size:14px;margin-top:30px}
+ .oct18-consequence-frame{grid-template-columns:1fr;padding:10px;gap:10px}
+ .oct18-impact{padding:21px 19px}
+ .oct18-impact h3{font-size:16px;min-height:0;margin-bottom:16px}
+ .oct18-impact p{font-size:15px}
+ .oct18-bullets li{font-size:15px;line-height:1.45}
+ .oct18-solution-art h3{font-size:15px}
+ .oct18-wheel-caption{font-size:12px;white-space:normal;gap:6px}
+ .oct18-wheel-caption::before,.oct18-wheel-caption::after{width:19px}
+}
+@media(max-width:390px){
+ .oct18-company .oct18-company-title{font-size:44px}
+ .oct18-company-title em{white-space:normal}
+ .oct18-slide .oct18-display{font-size:40px}
+ .oct18-wheel-caption::before,.oct18-wheel-caption::after{width:12px}
+}
+@media(prefers-reduced-motion:reduce){.oct18-action:hover{transform:none}}
