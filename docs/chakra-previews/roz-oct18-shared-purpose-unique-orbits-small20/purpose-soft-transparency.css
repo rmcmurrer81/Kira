@@ -1,0 +1,16 @@
+/* A separate, review-only change to Roz's compact technology cards.
+   Gold HCI is 20% more transparent and purple DI is 40% more transparent.
+   This reduces opacity of the colored fills, borders, ring artwork and glow.
+   Text, dark underlying panels, card layout and other card colors stay intact. */
+#technologies .purpose-grid .tech-card.hci {
+  --ring: rgba(255,207,33,0.8);
+  background:
+    radial-gradient(ellipse at 75% 42%,rgba(170,101,0,0.384),transparent 61%),
+    linear-gradient(115deg,#141314,#0d1016);
+}
+#technologies .purpose-grid .tech-card.di {
+  --ring: rgba(216,41,242,0.6);
+  background:
+    radial-gradient(ellipse at 76% 45%,rgba(112,17,193,0.27),transparent 58%),
+    linear-gradient(115deg,#060a23,#120725);
+}
