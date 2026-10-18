@@ -121,7 +121,7 @@
     if(found.ambiguous)return clarify(projects,'That spelling could refer to more than one project. Please choose the one you mean.');
     if(!projects.length){
       const legacyNamed=k.topics.some(t=>!IDS.includes(t.id)&&[...(t.project_names||[]),...(t.concept_names||[])].some(a=>includes(q,a))&&(['labs','studio','travel','shiftbrief','poetry','driving','home','notebook-worlds','temporary-creator','vr'].includes(t.id)||(!/\b(it|its|that|this|they|their)\b/.test(q)&&/\b(?:about|what is|what are|whats|explain|describe)\b/.test(q))));
-      const personal=/\b(robert|mcmurrer|books?|movies?|films?|tv|television|filmography|biography|bio|entertainment|he|his|him|she|her|healthspan|digital twin|synthetic robert|iris|website guide|contact|email)\b/.test(q);
+      const personal=/\b(robert|mcmurrer|books?|movies?|films?|tv|television|filmography|biography|bio|entertainment|he|his|him|she|her|healthspan|digital twin|digital robert|synthetic robert|iris|website guide|contact|email)\b/.test(q);
       const followup=/\b(it|its|that|this|they|their|them)\b|^(?:and\b|tell me more\b|more\b|what else\b|go deeper\b|expand\b|explain further\b)/.test(q)||/^(?:status|privacy|cost|price|evidence|tests|limits|architecture|what changed|whats new|what has (?:actually )?been tested|what is the current status|what is the status|how does it work|what are (?:the )?(?:risks?|limits?|limitations?)(?: and (?:risks?|limits?|limitations?))?|tell me about the (?:architecture|privacy|cost|status|evidence|limits)|has the plasticity campaign run|is the project ready|is there a public release)\s*$/.test(q);
       // An explicit new subject must never silently inherit a previous project.
       // In a known limits question, "aliens are real" is the claim being
