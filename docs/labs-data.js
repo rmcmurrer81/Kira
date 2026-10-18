@@ -23,6 +23,40 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-generation-diagnostic-2026-10-18",
+      "title": "A read-only diagnostic isolates loss accounting from early stopping",
+      "project": "NewBrain",
+      "track": "Learning diagnosis and reproducibility",
+      "status": "prototype",
+      "date": "2026-10-18",
+      "date_basis": "Internally independently audited diagnostic reported in NewBrain GitHub commit d686b298 dated October 18, 2026.",
+      "reviewed_on": "2026-10-18",
+      "summary": "All four execution controls qualified; three fixed loss measurements reconciled while multi-token generation still returned immediate EOS.",
+      "body": "The fixed two-example read-only experiment returned short-row loss 1.311648803935947 and long-row loss 2.4736415515825474, with combined batch loss 2.086310635700347. The combined value agreed with the target-count-weighted row average to within 1e-12. Generation was ball for the one-word target and an empty output with immediate EOS for cup word one. No model updates, scoring calls, parameter or counter changes occurred. The independent reviewer inspected saved evidence without new model calls.",
+      "boundary": "This is an internally audited fixed-point diagnostic, not a cause of early EOS, repair of Original12, new trained-on learning, delayed retention, Qwen comparison or external university replication. EOS-vs-word logits and position losses were not measured. The next fresh acquisition/stopping study remains proposed, not run.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "label": "NewBrain research concept",
+        "caption": "Concept artwork for a numerical learning diagnostic; not a screenshot of its measured loss values.",
+        "alt": "Illustration of a neural network as context for a completed narrow NewBrain diagnostic"
+      },
+      "sources": [
+        {
+          "label": "Read the public diagnostic summary",
+          "url": "results.html#objective-generation-2026-10-18"
+        },
+        {
+          "label": "Dated development note",
+          "url": "updates.html#newbrain-generation-diagnostic-2026-10-18"
+        },
+        {
+          "label": "GitHub NewBrain source record (access may be required)",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/d686b29810357b5f6c79c612c683e4158c140a5f"
+        }
+      ],
+      "project_page": "newbrain.html#latest-benchmarks-2026-10-18"
+    },
+    {
       "id": "newbrain-sampled-gradient-2026-10-18",
       "title": "Thirty sampled NewBrain gradients pass independent internal checking",
       "project": "NewBrain",
