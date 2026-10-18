@@ -1,0 +1,37 @@
+/* October 18 Chakra design refinement, scoped to consequence cards only.
+   Lift "INFORMATION BECOMES" into a centered connector above both panels. */
+.oct18-consequence-frame.consequence-bridge {
+  row-gap: 18px;
+}
+.consequence-bridge > .oct18-bridge-label {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 0 8px;
+  margin: 0;
+  color: #27e2ef;
+  font: 700 clamp(16px,1.16vw,20px)/1.34 var(--kira-sans);
+  letter-spacing: .018em;
+  text-align: center;
+}
+.consequence-bridge > .oct18-bridge-label::before,
+.consequence-bridge > .oct18-bridge-label::after {
+  content: "";
+  height: 1px;
+  min-width: 20px;
+  flex: 1 1 0;
+  background: #39c5ef9c;
+}
+.consequence-bridge .oct18-impact .oct18-include-label,
+.consequence-bridge .oct18-impact .oct18-include-label em {
+  font-style: italic;
+}
+@media(max-width:700px) {
+  .consequence-bridge > .oct18-bridge-label {
+    font-size: 15px;
+    gap: 10px;
+    padding: 0 2px;
+  }
+}
