@@ -1,0 +1,53 @@
+/*
+ * New review version of Roz's chosen five-box Information Readiness Gap.
+ * Typography sizes only. Colors, all five descriptions, geometry,
+ * borders, layouts and all other sections remain unchanged.
+ * Loaded after styles.css and kira-typography.css.
+ */
+.gap-screen .kicker {
+  font-size: 11px !important;
+  line-height: 1.6 !important;
+}
+.gap-screen .gap-main-title {
+  font-size: clamp(37px, 3.9vw, 69px) !important;
+  line-height: 1.04 !important;
+}
+.gap-screen .gap-main-title em {
+  font-size: .98em !important;
+  line-height: 1.10 !important;
+}
+.gap-screen .gap-intro {
+  font-size: clamp(16px, 1.28vw, 21px) !important;
+  line-height: 1.57 !important;
+}
+.gap-screen .gap-actions .pill {
+  font-size: 16px !important;
+  line-height: 1.42 !important;
+}
+.gap-screen .reason .reason-index {
+  font-size: 10px !important;
+  line-height: 1.55 !important;
+}
+.gap-screen .reason p,
+.gap-screen .reason:nth-child(n+3) p {
+  font-size: 14px !important;
+  line-height: 1.61 !important;
+  font-family: var(--kira-sans) !important;
+  letter-spacing: normal !important;
+}
+/* Keep small-screen text legible without changing the original layout. */
+@media (max-width: 760px) {
+  .gap-screen .gap-main-title {
+    font-size: clamp(35px, 8.9vw, 54px) !important;
+  }
+  .gap-screen .gap-intro {
+    font-size: 16px !important;
+  }
+  .gap-screen .reason p,
+  .gap-screen .reason:nth-child(n+3) p {
+    font-size: 15px !important;
+  }
+  .gap-screen .gap-actions .pill {
+    font-size: 15px !important;
+  }
+}

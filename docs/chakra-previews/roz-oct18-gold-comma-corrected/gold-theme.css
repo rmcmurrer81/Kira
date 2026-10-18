@@ -1,0 +1,26 @@
+/* Kira Labs brand-gold revision of Roz's complete October 18 website preview.
+   Uses the existing Kira Labs website's gold (#ffc86a), not bright yellow.
+   This final stylesheet is deliberately limited to color; structure, animations,
+   responsive behavior, slide text, and other website sections are unchanged. */
+:root { --gold: #ffc86a; }
+
+/* The Information Gap: third card and Explore the Solution button. */
+.oct18-stage.stage-warning { border-color: var(--gold); }
+.oct18-stage.stage-warning h4 { color: var(--gold); }
+.oct18-action {
+  background: var(--gold);
+  color: #061021;
+  box-shadow: 0 0 27px rgba(255,200,106,.22);
+}
+.oct18-action:hover { background: #ffda97; }
+
+/* Legacy gold-accent elements in the rest of the complete page. */
+.pill.primary {
+  background: var(--gold);
+  color: #0b1522;
+  box-shadow: 0 0 32px rgba(255,200,106,.20);
+}
+.tech-card.hci {
+  --ring: var(--gold);
+  --shine: #79501b;
+}
