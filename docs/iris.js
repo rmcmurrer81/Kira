@@ -72,7 +72,7 @@
    if(!LEGACY_SCRIPTS.has(path))return Promise.reject(Error('Unknown guide script'));
    return new Promise((resolve,reject)=>{
      const script=document.createElement('script');
-     script.src=new URL(path,location.href).href;
+     const url=new URL(path,location.href);url.searchParams.set('iris-core','2026-10-18.3');script.src=url.href;
      script.async=false;
      script.onload=()=>resolve();
      script.onerror=()=>reject(Error('A required guide script could not load: '+path));
@@ -130,7 +130,10 @@
    }catch(e){
      // Preserve readable pages and the independent contact form. Show a clear
      // recovery path instead of leaving an unexplained disabled Ask button.
-     status.textContent='Iris could not start the published knowledge on this visit. Reload the page to try again, or use the independent message form to contact Kira Labs.';
+     const cause=String(e?.message||'startup error');
+     const detail=/integrity mismatch/i.test(cause)?'A published file did not pass its integrity check.':/script could not load/i.test(cause)?'A required chat script did not load.':/unavailable|fetch|network|load failed|timeout|abort/i.test(cause)?'A required knowledge file could not be reached.':/secure knowledge verification/i.test(cause)?'Secure browser verification is unavailable.':'A required guide component could not initialize.';
+     status.textContent='Iris could not start: '+detail+' Tap Retry Iris below, or use the separate contact form to reach Kira Labs.';
+     const coverage=document.getElementById('knowledge-coverage');if(coverage){coverage.hidden=false;coverage.textContent='The guide has not loaded; this is a website issue, not a failure of the research projects. The contact form remains separate.';}
      const reload=document.getElementById('refresh-notes');
      if(reload){reload.textContent='Retry Iris';reload.onclick=()=>location.reload();}
      console.warn('Iris startup unavailable',e);
