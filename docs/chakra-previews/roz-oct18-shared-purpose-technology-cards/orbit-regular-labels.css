@@ -1,0 +1,14 @@
+/* October 18 website preview: regular-weight text for all six orbit labels.
+ * Apply after the existing ecosystem and gold-glow CSS; leave node symbols,
+ * animation speeds, layout, and the existing Kira Labs #ffc86a halo unchanged. */
+#ecosystem .ecosystem-art .wheel-node,
+#ecosystem .ecosystem-art .wheel-node > span:not(.icon) {
+  font-weight: 400 !important;
+}
+/* Make all six labels 18% larger than the prior 0.65em preview.
+   0.65 x 1.18 = 0.767em, relative to each responsive wheel-node font-size.
+   Icons, orbits, headings and animation remain unchanged. */
+#ecosystem .ecosystem-art .wheel-node > span:not(.icon) {
+  font-size: 0.767em !important;
+  line-height: 1.22;
+}
