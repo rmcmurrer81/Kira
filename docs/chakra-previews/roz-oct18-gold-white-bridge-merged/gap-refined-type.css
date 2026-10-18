@@ -1,0 +1,44 @@
+/* Review adjustment requested October 17, 2026.
+ * Only the Information Readiness Gap section is affected.
+ * Left-side main heading and intro: +18% from prior version.
+ * Content in all five boxes: 13px.
+ * Both section/box labels: 13px.
+ * Buttons: 12px.
+ * Grid, original wording, colors, borders, hero and orbital animations remain unchanged.
+ */
+.gap-screen .gap-main-title {
+  font-size: clamp(37.11px, 3.912vw, 69.21px) !important;
+}
+.gap-screen .gap-intro {
+  font-size: clamp(16.05px, 1.284vw, 21.06px) !important;
+}
+.gap-screen .kicker,
+.gap-screen .reason .reason-index {
+  font-size: 13px !important;
+}
+.gap-screen .reason p,
+.gap-screen .reason:nth-child(n+3) p {
+  font-size: 13px !important;
+}
+.gap-screen .gap-actions .pill {
+  font-size: 12px !important;
+}
+/* Responsive equivalent: the left-side copy grows 18% from its previous
+ * mobile setting; explicit 13px/12px labels, paragraphs, buttons persist. */
+@media (max-width: 760px) {
+  .gap-screen .gap-main-title {
+    font-size: clamp(35.11px, 8.927vw, 54.16px) !important;
+  }
+  .gap-screen .gap-intro {
+    font-size: 16.05px !important;
+  }
+  .gap-screen .kicker,
+  .gap-screen .reason .reason-index,
+  .gap-screen .reason p,
+  .gap-screen .reason:nth-child(n+3) p {
+    font-size: 13px !important;
+  }
+  .gap-screen .gap-actions .pill {
+    font-size: 12px !important;
+  }
+}
