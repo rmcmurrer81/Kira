@@ -185,7 +185,7 @@
         const coreOnly=!loaded.knowledge?.public_packs;
         const knowledge=prepare(loaded.knowledge);
         if(projectNotes)root.KiraIrisProjects.prepare(knowledge,projectNotes);
-        if(root.document){const n=root.document.getElementById('knowledge-coverage');if(n){n.hidden=false;n.textContent=(coreOnly?'Core knowledge available; older detail packs could not be verified on this visit':'Published knowledge loaded')+' · '+knowledge.topics.length+' topics · '+knowledge.iris_preservation.retained.books+' book listings'+(projectNotes?' · project review '+projectNotes.reviewed_on:'');}}
+        if(root.document){const n=root.document.getElementById('knowledge-coverage');if(n){n.hidden=false;n.textContent=(coreOnly?'Core knowledge available; older detail packs could not be verified on this visit':'Published knowledge loaded')+' · '+knowledge.topics.length+' topics · '+knowledge.iris_preservation.retained.books+' book listings'+(projectNotes?' · project review '+projectNotes.reviewed_on:'')+(root.KIRA_IRIS_PROJECT_EXTENSION_UNAVAILABLE?' · latest project update could not load; reload Iris to retry':'');}}
         return {...loaded,knowledge};
       },
       enrich(k,question,lastTopic,exchanges,result){
