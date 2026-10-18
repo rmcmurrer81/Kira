@@ -98,6 +98,7 @@
      let projectNotes=null,projectNoteProblem='';
      try{projectNotes=await readProjects();}
      catch(e){projectNoteProblem=e?.message||'Project extension unavailable';}
+     window.KIRA_IRIS_PROJECT_EXTENSION_UNAVAILABLE=Boolean(projectNoteProblem);
      // Verify exact core scripts from the preserved public snapshot first.
      const [pack,core]=await Promise.all([
        readOriginal('sarah-packs.js').then(r=>r.text()),
