@@ -23,6 +23,40 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-sampled-gradient-2026-10-18",
+      "title": "Thirty sampled NewBrain gradients pass independent internal checking",
+      "project": "NewBrain",
+      "track": "Numerical verification and accountable execution",
+      "status": "prototype",
+      "date": "2026-10-18",
+      "date_basis": "GitHub NewBrain commit dated October 18, 2026, reporting an independent internal saved-data review of the original numerical-gradient producer's fixed checkpoint.",
+      "reviewed_on": "2026-10-18",
+      "summary": "A separate reviewer verified 30/30 sampled derivatives at each of three step sizes. The result narrows the research questions without changing learning accuracy.",
+      "body": "An internal independent saved-data review accepted thirty selected primary coordinates across ten parameter arrays containing 11,914 scalars at a single Public2 checkpoint and public batch. Each of three step-size sweeps passed 30/30 (90 central differences from 181 original objective calls). The original producer ran once; the reviewer examined saved evidence without retraining or replaying model calls. Original12 stays 2/12 before training and 0/12 after a separate run; Public2 stays 0/2 to 1/2 trained-on after reload. The separate objective-versus-generation diagnostic has qualified its normal-execution and parent-exit controls while remaining scientific controls and generation evaluation are pending.",
+      "boundary": "A local derivative sample, not an exhaustive gradient proof, Original12 causal diagnosis, fresh Qwen comparison, delayed retention, external academic replication, or improved answer score. The earlier failed audit attempts remain preserved.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "label": "Cognitive research illustration",
+        "caption": "Illustrative model-research art, not a screenshot of the numerical audit or a brain scan.",
+        "alt": "Glowing synthetic neural network visualization used to represent a bounded numerical research milestone"
+      },
+      "sources": [
+        {
+          "label": "Current public research status",
+          "url": "research-status-2026-10-18.html#measured"
+        },
+        {
+          "label": "Read the Oct 18 verification summary",
+          "url": "updates.html#newbrain-gradient-2026-10-18"
+        },
+        {
+          "label": "NewBrain verification record (GitHub access may be required)",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/27c8460fd2acaf9b5eab24a140915e6f280d7f32"
+        }
+      ],
+      "project_page": "newbrain.html#latest-benchmarks-2026-10-18"
+    },
+    {
       "id": "newbrain-public2-2026-10-18",
       "title": "NewBrain acquires one trained-on public answer after reload",
       "project": "NewBrain",
