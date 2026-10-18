@@ -125,7 +125,7 @@
     k.sources['iris-healthspan-current']={label:'Healthspan Lab current status',url:'research.html#healthspan-lab'};
     k.sources['iris-healthspan-privacy']={label:'Healthspan Lab privacy notes',url:'privacy.html#healthspan-privacy'};
     k.sources['iris-digital-twin-current']={label:'Synthetic Robert / Digital Twin current status',url:'research.html#digital-twin'};
-    k.sources['iris-digital-twin-update']={label:'September 20 Digital Twin evidence',url:'updates.html#digital-twin-2026-09-20'};
+    k.sources['iris-digital-twin-update']={label:'October 18 research status and digital twin boundaries',url:'research-status-2026-10-18.html#people'};
     // Owner-supplied professional profile URLs, September 14, 2026.
     k.sources['robert-linkedin-current']={label:'Robert’s LinkedIn biography',url:'https://www.linkedin.com/in/rmcmurrer'};
     k.sources['robert-facebook-professional']={label:'Robert’s professional Facebook',url:'https://www.facebook.com/rmcmurrer/'};
@@ -144,7 +144,7 @@
       // The 'voice' subject is the legacy WEBSITE guide/speech subject, not a resident.
       if(t.id==='voice'){
         t.title='Iris · the Kira Labs website guide';
-        t.answer='I’m Iris, the automated Kira Labs website guide. I use the published biography, entertainment credits, book catalogue and dated project notes, including NewBrain, IdeaForge, Humanoid Researcher, Kira World and BlueBook. I match questions, simple name typos and follow-ups inside this browser; I am not connected to an AI model, paid service or live project runtime. I am not Kira or Sarah inside ShiftBrief or Sarah Travel. Optional Voice on reads my replies using your browser; I cannot access private records.';
+        t.answer='I’m Iris, the automated Kira Labs website guide. I use the published biography, entertainment credits, book catalogue and dated project notes, including NewBrain, the Temporary AI Creator, Avatar Builder, Digital Robert, IdeaForge, Humanoid Researcher, Kira World and BlueBook. I match questions, simple name typos and follow-ups inside this browser; I am not connected to an AI model, paid service or live project runtime. I am not Kira or Sarah inside ShiftBrief or Sarah Travel. Optional Voice on reads my replies using your browser; I cannot access private records.';
         t.sources=['iris-knowledge','iris-privacy'];t.terms=[...(t.terms||[]),'iris','website guide','site guide'];
         t.followups={...(t.followups||{}),overview:{answer:t.answer,sources:t.sources}};
       }
@@ -152,7 +152,7 @@
     const p=k.topics.find(t=>t.id==='prototypes');
     if(p){
       p.title='The projects featured at Kira Labs';
-      p.answer='Kira Labs’ current public research includes NewBrain, its first internally developed experimental trainable cognitive model; Kira World; IdeaForge; Humanoid Researcher; and BlueBook. ShiftBrief is a free Windows release, while Video Studio and Sarah Travel remain separate private/local tools in development. Each documented project has its own reviewed status and limits.';
+      p.answer='Kira Labs’ current public research includes experimental NewBrain learning tests, Kira World, Temporary AI Creator candidate experts and historical reconstructions, Avatar Builder body controls, Digital Robert, Patient Horizon, IdeaForge, Humanoid Researcher and BlueBook. ShiftBrief is a free Windows release, while Video Studio and Sarah Travel remain separate private/local tools in development. Each documented project has its own reviewed status and limits.';
       p.sources=['iris-projects'];p.next=['Tell me about NewBrain','Tell me about Kira World','How do I install ShiftBrief?'];p.coverage={};p.followups={};
     }
     const privacy=k.topics.find(t=>t.id==='privacy');
@@ -196,7 +196,7 @@
           return {id:'healthspan-current',title:'Healthspan Lab · working prototype',answer:'Healthspan Lab is a public longevity and healthspan research prototype, with Version 2 still in development. The current code can search live PubMed / NCBI and ClinicalTrials.gov records, organize evidence into separate research lanes, keep optional household profiles locally, rank retrieved research for relevance, and review user-confirmed information from local PDF/image intake. Browser storage is not encrypted, live research queries go to external research services, and the project is not a medical device or a source of diagnosis or treatment advice. The source repository is public and is being developed toward open-source release; an explicit repository license is still pending.',label:'REVIEWED PUBLIC EXTENSION · 2026-09-21',sources:['iris-healthspan-current','iris-healthspan-privacy'],next:['What stays local in Healthspan Lab?','Tell me about the Digital Twin work']};
         }
         if(/\b(?:digital twin|synthetic robert|robert(?:'s|s)? twin|twin chat)\b/.test(q)){
-          return {id:'digital-twin-current',title:'Synthetic Robert / Digital Twin · current boundary',answer:'KiraWorld currently has a bounded Synthetic Robert conversation route, distinct from biological Robert. The tested path supports text plus an approved self-voice route and can select owner-authorized, query-relevant Robert memory context while preserving corrections, source attribution, audience/publication scope, and uncertainty. The current route does not claim a 3D body, world presence, life-loop activation, microphone, webcam, or a finished Digital Twin product.',label:'REVIEWED PUBLIC EXTENSION · 2026-09-21',sources:['iris-digital-twin-current','iris-digital-twin-update'],next:['What changed on September 20?','Tell me about Kira World','What is Healthspan Lab?']};
+          return {id:'digital-twin-current',title:'Synthetic Robert / Digital Twin · October 18 evidence boundary',answer:'KiraWorld has a separate local Synthetic Robert identity and bounded chat path, with owner-authorized autobiographical sources and a Chatterbox self-voice configuration. Configuration and reference-file presence were inspected; the owner reports earlier conversations and that the voice resembles him. A new live conversation/voice-playback qualification, 3D body, NewBrain-backed memory learning and life-loop activation are not demonstrated. Source memories remain distinct from the synthetic twin’s later generated experiences.',label:'REVIEWED PUBLIC EXTENSION · 2026-10-18',sources:['iris-digital-twin-current','iris-digital-twin-update'],next:['What changed on September 20?','Tell me about Kira World','What is Healthspan Lab?']};
         }
         if(excluded.test(question))return make('Explore the current Kira Labs projects','That project is not featured on the current website. Explore Kira World, ShiftBrief, Video Studio and Sarah Travel, or ask Robert directly.');
         const projectQuery=root.KiraIrisProjects?.normalizeQuestion(question)||q;
