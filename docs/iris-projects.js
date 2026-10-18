@@ -150,6 +150,10 @@
       return {id:'compare:'+projects.map(p=>p.id).join(','),title:projects.map(p=>p.title).join(' and '),answer:correction+projects.map(p=>p.title+': '+(facets.length>1?facets.map(f=>f[0].toUpperCase()+f.slice(1)+': '+p[f]).join('\n\n'):p[chosen])).join('\n\n'),facet:facets.length>1?'compound':chosen,facets:facets.length>1?facets:undefined,label:'REVIEWED PROJECT NOTES · '+data.reviewed_on,sources:projects.map(p=>'iris-current-'+p.id),next:projects.map(p=>'Tell me about '+p.title)};
     }
     const p=projects[0];let selected=facet;
+    // Answer concrete questions from the appropriate reviewed evidence facet,
+    // rather than rejecting a well-defined subject because of conversational wording.
+    if(p.id==='newbrain'&&/\b(?:gradient|gradients|checker|arithmetic|30 30|numerical audit)\b/.test(q))selected='technical';
+    if(p.id==='temporary-creator'&&/\b(?:holmes|historical transcript)\b/.test(q)&&/\b(?:say|said|speak|spoke|talk|talked|conversation|interview|test|tested)\b/.test(q))selected='evidence';
     // Historical Kira/Lisa lineage is reviewed Kira World context. The early
     // unnamed Friend was a rule-driven dual-chat prototype, not modern Lisa.
     if(p.id==='world'&&/\b(?:lisa|unnamed friend|kira and friend|friend prototype)\b/.test(q)&&/\b(?:who|what|where|origin|history|come from|came from|before|started|begin|began|prototype|tell me about)\b/.test(q)){
