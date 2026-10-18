@@ -1,0 +1,7 @@
+/* October 18 website preview: regular-weight text for all six orbit labels.
+ * Apply after the existing ecosystem and gold-glow CSS; leave node symbols,
+ * animation speeds, layout, and the 30%-enhanced #ffc86a halo unchanged. */
+#ecosystem .ecosystem-art .wheel-node,
+#ecosystem .ecosystem-art .wheel-node > span:not(.icon) {
+  font-weight: 400 !important;
+}
