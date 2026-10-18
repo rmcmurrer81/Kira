@@ -20,8 +20,8 @@
   'knowledge/projects-2026-09-12-1.json':null
  });
  // Immutable release path: never overwrite a pack needed by a cached loader.
- const PROJECT_NOTES='knowledge/iris-projects-2026-10-17-1.json';
- const PROJECT_SHA256='803fbc6ec500f6914c7e371a09c53171e9b45824379c5f311b723202d00674b2';
+ const PROJECT_NOTES='knowledge/iris-projects-2026-10-18-1.json';
+ const PROJECT_SHA256='23d0265c70d212468767cce7f286041af49886653a15448bf61af7e489ccaf45';
  const status=document.getElementById('guide-status'),send=document.getElementById('send-question');
  const nativeFetch=window.fetch.bind(window);
  async function blobHash(text){
@@ -63,45 +63,78 @@
    return window.KiraIrisProjects.validate(JSON.parse(text));
   }finally{clearTimeout(timer);}
  }
+
+ // The published legacy scripts are served as normal same-origin scripts.
+ // Avoid dynamic Function() execution in production, which may be restricted by
+ // a visitor's browser security policy even when all knowledge files are valid.
+ const LEGACY_SCRIPTS=new Set(['sarah-packs.js','sarah-guide.js']);
+ function loadLocalScript(path){
+   if(!LEGACY_SCRIPTS.has(path))return Promise.reject(Error('Unknown guide script'));
+   return new Promise((resolve,reject)=>{
+     const script=document.createElement('script');
+     script.src=new URL(path,location.href).href;
+     script.async=false;
+     script.onload=()=>resolve();
+     script.onerror=()=>reject(Error('A required guide script could not load: '+path));
+     document.head.appendChild(script);
+   });
+ }
+ function keepGuideName(){
+   const el=document.getElementById('voice-status');
+   if(!el||!window.MutationObserver)return;
+   const rename=()=>{if(el.textContent.includes('Sarah is speaking'))el.textContent=el.textContent.replace('Sarah is speaking','Iris is speaking');};
+   new MutationObserver(rename).observe(el,{childList:true,characterData:true,subtree:true});
+   rename();
+ }
  let started=false;
  async function start(){
-  if(started)return;
-  send.disabled=true;status.textContent='Loading the complete published knowledge…';
-  try{
-   if(!window.crypto?.subtle)throw Error('Secure integrity checks unavailable');
-   const [pack,core,projectNotes]=await Promise.all([readOriginal('sarah-packs.js').then(r=>r.text()),readOriginal('sarah-guide.js').then(r=>r.text()),readProjects()]);
-   // Source code belongs to the user's fixed, hash-verified public repository.
-   Function(pack)();
-   window.SarahPacks=window.KiraIrisPolicy.wrap(window.SarahPacks,projectNotes);
-   const renamed=core.replaceAll('Hi, I’m Sarah','Hi, I’m Iris').replaceAll('Sarah is speaking','Iris is speaking');
-   let executable=renamed;
-   if(window.KIRA_LABS_PREVIEW&&window.KiraIrisRoutingChecks){
-    const marker='  loadKnowledge();';
-    if(!renamed.includes(marker))throw Error('Original startup anchor changed');
-    executable=renamed.replace(marker,`  loadKnowledge().then(()=>{
-      if(!knowledge)return;
-      const savedTopic=lastTopic,savedExchanges=exchanges;
-      try{
-        const report=window.KiraIrisRoutingChecks.run({knowledge,
-          reset:()=>{lastTopic='';exchanges=[];},
-          ask:q=>{const r=answer(q);lastTopic=r.id||lastTopic;exchanges.push({question:q,reply:r});return r;}
-        });
-        window.KIRA_IRIS_ROUTING_REPORT=report;
-        const n=document.getElementById('knowledge-coverage');
-        if(n)n.textContent+=report.failed.length?' · routing check needs attention':' · movie & TV checks passed';
-        if(report.failed.length)console.warn('Iris routing checks',report);
-      }catch(e){console.warn('Iris routing checks could not complete',e);}
-      finally{lastTopic=savedTopic;exchanges=savedExchanges;}
-    });`);
+   if(started)return;
+   send.disabled=true;status.textContent='Checking published knowledge…';
+   try{
+     if(!window.crypto?.subtle)throw Error('Secure knowledge verification is unavailable in this browser');
+     if(!window.KiraIrisPolicy||!window.KiraIrisProjects)throw Error('A required Iris module did not load');
+     // The independently reviewed project extension is optional at startup:
+     // missing updated notes must not disable the entire legacy guide.
+     let projectNotes=null,projectNoteProblem='';
+     try{projectNotes=await readProjects();}
+     catch(e){projectNoteProblem=e?.message||'Project extension unavailable';}
+     window.KIRA_IRIS_PROJECT_EXTENSION_UNAVAILABLE=Boolean(projectNoteProblem);
+     // Verify exact core scripts from the preserved public snapshot first.
+     const [pack,core]=await Promise.all([
+       readOriginal('sarah-packs.js').then(r=>r.text()),
+       readOriginal('sarah-guide.js').then(r=>r.text())
+     ]);
+     if(window.KIRA_LABS_PREVIEW){
+       // The existing review-only test route still runs with the pinned fetcher.
+       Function(pack)();
+       window.SarahPacks=window.KiraIrisPolicy.wrap(window.SarahPacks,projectNotes);
+       const renamed=core.replaceAll('Hi, I’m Sarah','Hi, I’m Iris').replaceAll('Sarah is speaking','Iris is speaking');
+       Function('fetch',renamed)(readOriginal);
+     }else{
+       await loadLocalScript('sarah-packs.js');
+       window.SarahPacks=window.KiraIrisPolicy.wrap(window.SarahPacks,projectNotes);
+       await loadLocalScript('sarah-guide.js');
+       keepGuideName();
+     }
+     started=true;
+     if(projectNoteProblem){
+       const coverage=document.getElementById('knowledge-coverage');
+       if(coverage){
+         coverage.hidden=false;
+         coverage.textContent='Iris is using the complete core guide; the latest project extension is temporarily unavailable. Select Check updates to retry.';
+       }
+       const reload=document.getElementById('refresh-notes');
+       if(reload){reload.textContent='Reload updated guide';reload.onclick=()=>location.reload();}
+       console.warn('Optional Iris extension unavailable',projectNoteProblem);
+     }
+   }catch(e){
+     // Preserve readable pages and the independent contact form. Show a clear
+     // recovery path instead of leaving an unexplained disabled Ask button.
+     status.textContent='Iris could not start the published knowledge on this visit. Reload the page to try again, or use the independent message form to contact Kira Labs.';
+     const reload=document.getElementById('refresh-notes');
+     if(reload){reload.textContent='Retry Iris';reload.onclick=()=>location.reload();}
+     console.warn('Iris startup unavailable',e);
    }
-   Function('fetch',executable)(readOriginal);
-   started=true;
-  }catch(e){
-   status.textContent='The complete published knowledge and current project notes could not load. Check your connection, then reload this page to fetch a consistent release. The message form still works independently.';
-   const reload=document.getElementById('refresh-notes');
-   reload.textContent='Reload page';
-   reload.onclick=()=>location.reload();
-  }
  }
  await start();
 })();

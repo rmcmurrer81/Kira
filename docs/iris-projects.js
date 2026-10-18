@@ -4,8 +4,8 @@
  */
 (function(root){
   'use strict';
-  const IDS=["newbrain","ideaforge","humanoid-researcher","world","bluebook","avatar-body","aster","patient-horizon","physiology-bridge","healthspan"];
-  const SOURCE={"newbrain":"knowledge.html#newbrain","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"knowledge.html#kira-world","bluebook":"knowledge.html#bluebook","avatar-body":"kira-world.html","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab"};
+  const IDS=["newbrain","ideaforge","humanoid-researcher","world","bluebook","avatar-body","aster","patient-horizon","physiology-bridge","healthspan","temporary-creator"];
+  const SOURCE={"newbrain":"research-status-2026-10-18.html#measured","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"research-status-2026-10-18.html#people","bluebook":"knowledge.html#bluebook","avatar-body":"research-status-2026-10-18.html#body","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"research-status-2026-10-18.html#people"};
   const FACETS=['overview','status','how','technical','evidence','privacy','limits','cost'];
   const normalize=s=>String(s||'').toLowerCase().normalize('NFKC').replace(/[’']/g,'').replace(/[_-]/g,' ').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
   // Remove only conversational framing, never a factual clause or instruction.
@@ -121,7 +121,7 @@
     if(found.ambiguous)return clarify(projects,'That spelling could refer to more than one project. Please choose the one you mean.');
     if(!projects.length){
       const legacyNamed=k.topics.some(t=>!IDS.includes(t.id)&&[...(t.project_names||[]),...(t.concept_names||[])].some(a=>includes(q,a))&&(['labs','studio','travel','shiftbrief','poetry','driving','home','notebook-worlds','temporary-creator','vr'].includes(t.id)||(!/\b(it|its|that|this|they|their)\b/.test(q)&&/\b(?:about|what is|what are|whats|explain|describe)\b/.test(q))));
-      const personal=/\b(robert|mcmurrer|books?|movies?|films?|tv|television|filmography|biography|bio|entertainment|he|his|him|she|her|healthspan|digital twin|synthetic robert|iris|website guide|contact|email)\b/.test(q);
+      const personal=/\b(robert|mcmurrer|books?|movies?|films?|tv|television|filmography|biography|bio|entertainment|he|his|him|she|her|healthspan|digital twin|digital robert|synthetic robert|iris|website guide|contact|email)\b/.test(q);
       const followup=/\b(it|its|that|this|they|their|them)\b|^(?:and\b|tell me more\b|more\b|what else\b|go deeper\b|expand\b|explain further\b)/.test(q)||/^(?:status|privacy|cost|price|evidence|tests|limits|architecture|what changed|whats new|what has (?:actually )?been tested|what is the current status|what is the status|how does it work|what are (?:the )?(?:risks?|limits?|limitations?)(?: and (?:risks?|limits?|limitations?))?|tell me about the (?:architecture|privacy|cost|status|evidence|limits)|has the plasticity campaign run|is the project ready|is there a public release)\s*$/.test(q);
       // An explicit new subject must never silently inherit a previous project.
       // In a known limits question, "aliens are real" is the claim being
@@ -150,6 +150,10 @@
       return {id:'compare:'+projects.map(p=>p.id).join(','),title:projects.map(p=>p.title).join(' and '),answer:correction+projects.map(p=>p.title+': '+(facets.length>1?facets.map(f=>f[0].toUpperCase()+f.slice(1)+': '+p[f]).join('\n\n'):p[chosen])).join('\n\n'),facet:facets.length>1?'compound':chosen,facets:facets.length>1?facets:undefined,label:'REVIEWED PROJECT NOTES · '+data.reviewed_on,sources:projects.map(p=>'iris-current-'+p.id),next:projects.map(p=>'Tell me about '+p.title)};
     }
     const p=projects[0];let selected=facet;
+    // Answer concrete questions from the appropriate reviewed evidence facet,
+    // rather than rejecting a well-defined subject because of conversational wording.
+    if(p.id==='newbrain'&&/\b(?:gradient|gradients|checker|arithmetic|30 30|numerical audit)\b/.test(q))selected='technical';
+    if(p.id==='temporary-creator'&&/\b(?:holmes|historical transcript)\b/.test(q)&&/\b(?:say|said|speak|spoke|talk|talked|conversation|interview|test|tested)\b/.test(q))selected='evidence';
     // Historical Kira/Lisa lineage is reviewed Kira World context. The early
     // unnamed Friend was a rule-driven dual-chat prototype, not modern Lisa.
     if(p.id==='world'&&/\b(?:lisa|unnamed friend|kira and friend|friend prototype)\b/.test(q)&&/\b(?:who|what|where|origin|history|come from|came from|before|started|begin|began|prototype|tell me about)\b/.test(q)){
