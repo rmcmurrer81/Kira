@@ -1,0 +1,64 @@
+/*
+ * Chakra original slim footer style — layout recreation from Roz's original
+ * screenshot and original HTML icon paths. Only the footer is restyled.
+ * The privacy/opt-out/email/back-to-top links are usable; social brand icons
+ * are visual placeholders until Roz provides real profile URLs.
+ */
+.chakra-slim-footer.site-footer{
+ display:flex!important;align-items:center!important;justify-content:flex-start!important;
+ flex-direction:row!important;flex-wrap:nowrap!important;
+ min-height:46px!important;
+ width:100%!important;max-width:none!important;
+ padding:9px 12px!important;gap:clamp(14px,2.15vw,34px)!important;
+ margin:0!important;
+ border-top:1px solid rgba(152,178,215,.26)!important;
+ border-bottom:1px solid rgba(152,178,215,.21)!important;
+ background:linear-gradient(100deg,#0e1935 0%,#070e22 73%,#060d1c 100%)!important;
+ color:#bbc8e0!important;
+ font:500 11px/1.4 "DM Mono",ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace!important;
+ letter-spacing:0!important;
+}
+.chakra-slim-footer *{box-sizing:border-box}
+.chakra-slim-footer a{font:inherit!important;text-decoration:none!important;color:inherit!important}
+.chakra-slim-footer a:hover{color:#7ce9f5!important}
+.chakra-slim-footer a:focus-visible{outline:2px solid #79ebf3;outline-offset:4px}
+.chakra-slim-footer .footer-legal{
+ display:flex!important;flex-wrap:nowrap!important;justify-content:flex-start!important;
+ align-items:center!important;gap:clamp(12px,1.4vw,24px)!important;
+ flex:0 0 auto!important;white-space:nowrap!important;
+}
+.chakra-slim-footer .footer-copyright{flex:0 0 auto;white-space:nowrap!important}
+.chakra-slim-footer .footer-social-icons{
+ display:flex!important;align-items:center!important;justify-content:flex-start!important;
+ gap:12px!important;flex:0 0 auto!important;white-space:nowrap!important;
+}
+.chakra-slim-footer .footer-social-icon{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ width:17px!important;height:20px!important;flex:0 0 17px!important;
+ color:#c6d0e4!important;text-decoration:none!important;line-height:0!important;
+}
+.chakra-slim-footer .footer-social-icon.pending{cursor:default}
+.chakra-slim-footer .footer-social-icon svg{width:16px!important;height:16px!important;display:block!important;fill:none}
+.chakra-slim-footer .footer-social-icon:not(.pending):hover svg{transform:translateY(-1px)}
+.chakra-slim-footer .footer-social-icon svg path[fill="currentColor"]{fill:currentColor}
+.chakra-slim-footer .footer-social-icon svg path[stroke="currentColor"]{stroke:currentColor}
+.chakra-slim-footer .footer-social-icon svg rect[stroke="currentColor"]{stroke:currentColor}
+.chakra-slim-footer .footer-backtop{
+ margin-left:auto!important;flex:0 0 auto!important;
+ white-space:nowrap!important;text-align:right!important;
+}
+@media(max-width:980px){
+ .chakra-slim-footer.site-footer{
+  flex-wrap:wrap!important;justify-content:center!important;
+  padding:12px 16px!important;
+  gap:9px 20px!important;font-size:11px!important;
+ }
+ .chakra-slim-footer .footer-backtop{margin-left:0!important}
+}
+@media(max-width:580px){
+ .chakra-slim-footer.site-footer{gap:13px 18px!important;text-align:center!important}
+ .chakra-slim-footer .footer-legal{width:100%;justify-content:center!important;gap:15px!important;flex-wrap:wrap!important}
+ .chakra-slim-footer .footer-copyright{order:2;white-space:normal!important;width:100%}
+ .chakra-slim-footer .footer-social-icons{order:3}
+ .chakra-slim-footer .footer-backtop{order:4}
+}

@@ -1,0 +1,80 @@
+/* Original-intro and animated-orbit revision. The seven-panel body is left untouched. */
+html.intro-pending .hero .main-word{color:transparent!important}
+html.intro-pending .hero .secondary-word{opacity:0!important}
+.hero .main-word,.js .hero .main-word{
+  animation:none!important;clip-path:none!important;filter:none!important;
+  font-weight:750;letter-spacing:-.075em;
+}
+.hero .secondary-word,.js .hero .secondary-word{
+  animation:none!important;
+  font-family:'Instrument Serif',Georgia,serif!important;font-style:italic!important;font-weight:400!important;
+  color:#a9d4ff!important;
+  opacity:0;
+  transform:translate(54px,18px) rotate(-3deg) scale(.97);
+  filter:blur(10px);
+}
+.hero .secondary-word.becomes-in,.js .hero .secondary-word.becomes-in{
+  animation:originalBecomesReveal 5.2s cubic-bezier(.22,.85,.22,1) forwards!important;
+}
+@keyframes originalBecomesReveal{
+  0%{opacity:0;transform:translate(54px,18px) rotate(-3deg) scale(.97);filter:blur(10px)}
+  18%{opacity:.18;transform:translate(42px,10px) rotate(-2deg) scale(.978);filter:blur(8px)}
+  40%{opacity:.46;transform:translate(24px,12px) rotate(-1deg) scale(.987);filter:blur(5px)}
+  65%{opacity:.75;transform:translate(10px,5px) rotate(-.4deg) scale(.997);filter:blur(2px)}
+  100%{opacity:1;transform:none;filter:none}
+}
+.hero h1{position:relative}
+.hero #hero-stars{position:absolute;inset:0;width:100%;height:100%;z-index:-3;pointer-events:none}
+.hero .statement-vapour{position:absolute;pointer-events:none;z-index:7}
+.hero .hero-center{z-index:4}
+.hero .scroll-cue{z-index:8}
+.hero .left-thread{z-index:3}
+/* Slow orbital motion — center letters remain independent and stationary. */
+.tech-card .tech-art .orbit{animation:orbitLineOne 27s linear infinite;will-change:transform}
+.tech-card .tech-art .orbit.two{animation:orbitLineTwo 34s linear infinite reverse}
+.tech-card .tech-art .orbit.three{animation:orbitLineThree 42s linear infinite}
+@keyframes orbitLineOne{
+ from{transform:rotate(22deg) scaleX(1.37)}
+ to{transform:rotate(382deg) scaleX(1.37)}
+}
+@keyframes orbitLineTwo{
+ from{transform:rotate(-43deg) scaleX(1.26)}
+ to{transform:rotate(317deg) scaleX(1.26)}
+}
+@keyframes orbitLineThree{
+ from{transform:rotate(69deg) scaleX(1.18)}
+ to{transform:rotate(429deg) scaleX(1.18)}
+}
+/* Three rotating carrier rings, each with a glowing dot along its circumference. */
+.tech-card .tech-art .node,
+.tech-card .tech-art .node.n1,
+.tech-card .tech-art .node.n2,
+.tech-card .tech-art .node.n3{
+ position:absolute;display:block;width:auto;height:auto;
+ border-radius:50%;border:0;background:transparent;box-shadow:none;
+ margin:0;pointer-events:none;will-change:transform
+}
+.tech-card .tech-art .node.n1{inset:7%;animation:dotOrbit 15s linear infinite -4s}
+.tech-card .tech-art .node.n2{inset:23%;animation:dotOrbitReverse 19s linear infinite -9s}
+.tech-card .tech-art .node.n3{inset:0;animation:dotOrbit 24s linear infinite -14s}
+.tech-card .tech-art .node::after{
+ content:"";position:absolute;right:-5px;top:calc(50% - 5px);height:11px;width:11px;
+ border-radius:50%;background:var(--ring);
+ box-shadow:0 0 9px var(--ring),0 0 19px var(--ring);
+}
+@keyframes dotOrbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes dotOrbitReverse{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
+.tech-card .tech-art .core{z-index:5;transform:none!important;animation:none!important}
+@media(max-width:760px){
+  .hero .secondary-word{margin-left:min(12vw,95px)}
+  .tech-card .tech-art .node::after{height:9px;width:9px;right:-4px;top:calc(50% - 4px)}
+}
+/* Reduced motion: all information and technology remain visible without animation. */
+@media(prefers-reduced-motion:reduce){
+  html.intro-pending .hero .main-word{color:#f5f7ff!important}
+  html.intro-pending .hero .secondary-word{opacity:1!important}
+  .hero .main-word,.hero .secondary-word,
+  .tech-card .tech-art .orbit,.tech-card .tech-art .node,
+  .hero .scroll-cue svg{animation:none!important;filter:none!important;transform:none}
+  .hero .secondary-word,.js .hero .secondary-word{opacity:1!important}
+}

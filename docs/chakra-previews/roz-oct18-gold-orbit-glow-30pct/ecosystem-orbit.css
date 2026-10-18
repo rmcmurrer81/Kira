@@ -1,0 +1,61 @@
+/*
+ * Six-part ecosystem restoration based on Roz's original
+ * Chakra_Consolidated_Refinements source ZIP (assets/app.js, site.css).
+ * This file only styles the diagram.
+ */
+#ecosystem .ecosystem-art {
+ width:min(88%,420px)!important;max-width:420px!important;aspect-ratio:1/1!important;
+ position:relative;isolation:isolate;margin-inline:auto
+}
+#ecosystem .ecosystem-art .orbit-guide{z-index:0}
+#ecosystem .ecosystem-art .orbit-guide.two{
+ animation:chakra-guide-backwards 220s linear infinite;transform-origin:50% 50%
+}
+#ecosystem .ecosystem-art .petals{
+ z-index:1;transform-origin:50% 50%;animation:chakra-petal-wheel 140s linear infinite
+}
+#ecosystem .ecosystem-art .inner-petals{
+ position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;
+ transform-origin:50% 50%;animation:chakra-petal-wheel 220s linear infinite reverse
+}
+#ecosystem .ecosystem-art .center-jewel{
+ z-index:4;width:80px!important;height:80px!important;border-radius:25px!important;
+ animation:chakra-core-wheel 90s linear infinite
+}
+#ecosystem .ecosystem-art .center-jewel::before{inset:19px!important;border-radius:11px!important}
+#ecosystem .ecosystem-art .center-jewel::after{inset:31px!important;border-radius:8px!important}
+#ecosystem .ecosystem-art .wheel-node{
+ width:99px!important;font-size:12.5px!important;line-height:1.22!important;
+ gap:6px!important;z-index:5
+}
+#ecosystem .ecosystem-art .wheel-node .icon{
+ width:57px!important;height:57px!important;border-radius:50%;margin:0 auto 6px!important;
+ font-size:23px!important
+}
+#ecosystem .ecosystem-art.orbit-ready .wheel-node{
+ left:0!important;top:0!important;right:auto!important;bottom:auto!important;
+ will-change:transform
+}
+@keyframes chakra-petal-wheel{to{transform:rotate(360deg)}}
+@keyframes chakra-guide-backwards{from{transform:rotate(21deg)}to{transform:rotate(381deg)}}
+@keyframes chakra-core-wheel{from{transform:rotate(45deg)}to{transform:rotate(405deg)}}
+@media(max-width:760px){
+ #ecosystem .ecosystem-art{width:min(88%,365px)!important;max-width:365px!important}
+ #ecosystem .ecosystem-art .wheel-node{width:83px!important;font-size:11.5px!important}
+ #ecosystem .ecosystem-art .wheel-node .icon{
+  width:49px!important;height:49px!important;font-size:21px!important;margin-bottom:4px!important
+ }
+ #ecosystem .ecosystem-art .center-jewel{width:67px!important;height:67px!important;border-radius:21px!important}
+ #ecosystem .ecosystem-art .center-jewel::before{inset:16px!important}
+ #ecosystem .ecosystem-art .center-jewel::after{inset:25px!important}
+}
+@media(max-width:420px){
+ #ecosystem .ecosystem-art{width:min(94%,320px)!important;max-width:320px!important}
+ #ecosystem .ecosystem-art .wheel-node{width:80px!important;font-size:11px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #ecosystem .ecosystem-art .orbit-guide.two,
+ #ecosystem .ecosystem-art .petals,
+ #ecosystem .ecosystem-art .inner-petals,
+ #ecosystem .ecosystem-art .center-jewel{animation:none!important}
+}
