@@ -179,11 +179,13 @@
     return Object.freeze({
       async load(text,fetcher,previous){
         const loaded=await original.load(text,fetcher,previous);
-        // Never silently substitute a smaller core-only bank for the full guide.
-        if(!loaded.knowledge?.public_packs)throw new Error('Complete published knowledge did not load');
+        // A partial network failure should not make every question impossible.
+        // The core knowledge is still the exact verified original; identify a
+        // degraded load so visitors know not all expanded notes were available.
+        const coreOnly=!loaded.knowledge?.public_packs;
         const knowledge=prepare(loaded.knowledge);
         if(projectNotes)root.KiraIrisProjects.prepare(knowledge,projectNotes);
-        if(root.document){const n=root.document.getElementById('knowledge-coverage');if(n){n.hidden=false;n.textContent='Published knowledge loaded · '+knowledge.topics.length+' topics · '+knowledge.iris_preservation.retained.books+' book listings'+(projectNotes?' · project review '+projectNotes.reviewed_on:'');}}
+        if(root.document){const n=root.document.getElementById('knowledge-coverage');if(n){n.hidden=false;n.textContent=(coreOnly?'Core knowledge available; older detail packs could not be verified on this visit':'Published knowledge loaded')+' · '+knowledge.topics.length+' topics · '+knowledge.iris_preservation.retained.books+' book listings'+(projectNotes?' · project review '+projectNotes.reviewed_on:'');}}
         return {...loaded,knowledge};
       },
       enrich(k,question,lastTopic,exchanges,result){
