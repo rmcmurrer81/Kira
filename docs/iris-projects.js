@@ -5,7 +5,7 @@
 (function(root){
   'use strict';
   const IDS=["newbrain","ideaforge","humanoid-researcher","world","bluebook","avatar-body","aster","patient-horizon","physiology-bridge","healthspan","temporary-creator"];
-  const SOURCE={"newbrain":"knowledge.html#newbrain","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"knowledge.html#kira-world","bluebook":"knowledge.html#bluebook","avatar-body":"kira-world.html","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"research-status-2026-10-18.html#people"};
+  const SOURCE={"newbrain":"research-status-2026-10-18.html#measured","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"research-status-2026-10-18.html#people","bluebook":"knowledge.html#bluebook","avatar-body":"research-status-2026-10-18.html#body","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"research-status-2026-10-18.html#people"};
   const FACETS=['overview','status','how','technical','evidence','privacy','limits','cost'];
   const normalize=s=>String(s||'').toLowerCase().normalize('NFKC').replace(/[’']/g,'').replace(/[_-]/g,' ').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
   // Remove only conversational framing, never a factual clause or instruction.
