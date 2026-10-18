@@ -1,0 +1,19 @@
+/* Review-only caption refinement, preserving orbit visuals and animations.
+   Caption type is 80% of the immediately prior preview size again (another 20% smaller; .8em → .64em). The thin cyan
+   side rules are unchanged. Black text gets a soft gold backing for contrast
+   with the dark navy section. */
+#ecosystem .oct18-wheel-caption .oct18-wheel-caption-copy {
+  display: inline-block;
+  font-size: .64em;
+  line-height: 1.25;
+  color: #000000;
+  background: #ffc86a;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+@media (max-width: 700px) {
+  #ecosystem .oct18-wheel-caption .oct18-wheel-caption-copy {
+    font-size: .64em;
+    white-space: normal;
+  }
+}
