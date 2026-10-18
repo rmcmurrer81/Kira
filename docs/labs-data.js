@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-10-16",
+  "prepared_on": "2026-10-18",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -22,6 +22,108 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-public2-2026-10-18",
+      "title": "NewBrain acquires one trained-on public answer after reload",
+      "project": "NewBrain",
+      "track": "Reproducible learning and numerical diagnostics",
+      "status": "development",
+      "date": "2026-10-18",
+      "date_basis": "Internally reviewed Kira Labs Public2 and Original12 research summaries through October 18, 2026.",
+      "reviewed_on": "2026-10-18",
+      "summary": "One single-token trained-on answer became correct and survived an immediate fresh-process reload; a separate 12-case learning study regressed.",
+      "body": "Public2: 0/2 baseline to 1/2 after 64 updates and 128 repeated presentations. The answer ball became exactly correct after reload, but the multi-token response stopped immediately. The separate Original12 study moved from 2/12 missing-information control passes to 0/12 after a different 64-update/384-presentation procedure. Four scoped execution controls have qualified. A gradient producer reported 30/30 checks within tolerance but the independent checker has not qualified them.",
+      "boundary": "Not broad language learning, held-out generalization, delayed retention, a fixed Qwen head-to-head or proof of human-equivalent intelligence. The 30/30 gradient report is preliminary and its independent arithmetic audit remains incomplete.",
+      "image": {
+        "path": "assets/kira-labs-hero.webp",
+        "label": "Kira Labs research concept art",
+        "caption": "Existing lab illustration; not a screenshot of NewBrain training or a verified gradient calculation.",
+        "alt": "Kira Labs research concept art used for context, not experimental evidence"
+      },
+      "sources": [
+        {
+          "label": "Current dated research status",
+          "url": "research-status-2026-10-18.html#measured"
+        },
+        {
+          "label": "Readable experiment journal",
+          "url": "updates.html#newbrain-learning-2026-10-18"
+        },
+        {
+          "label": "NewBrain repository (access may be required)",
+          "url": "https://github.com/rmcmurrer81/newbrain"
+        }
+      ],
+      "project_page": "newbrain.html#latest-benchmarks-2026-10-18"
+    },
+    {
+      "id": "avatar-synthetic-events-2026-10-18",
+      "title": "Skin geometry and eight synthetic sensory checks",
+      "project": "Kira World",
+      "track": "Avatar Builder / bounded sensory interfaces",
+      "status": "prototype",
+      "date": "2026-10-18",
+      "date_basis": "Internal October 18 re-review of distinct saved geometry and synthetic-event engineering tests.",
+      "reviewed_on": "2026-10-18",
+      "summary": "A recorded five-pose geometry test exactly restored 512 sampled skin vertices, while an isolated invented-input event component qualified 8/8 checks.",
+      "body": "The saved forearm experiment moved the declared sampled weighted vertices and restored original positions. The separate event component tested 0 V versus 0.00025 V on invented units, duplicate suppression, two-avatar isolation, session/epoch validation and explicit reset; it was internally audited without claiming an active NewBrain recipient.",
+      "boundary": "No calibrated biological nerves, passive skin mechanics, 3D naturalistic deformation, working physiology, live body-to-brain sensory ingestion or motor action is established.",
+      "image": {
+        "path": "assets/garment-dressing-sequence-concept.png",
+        "label": "Avatar concept illustration",
+        "caption": "Existing concept illustration, not the recorded five-pose skin result or a live nervous system.",
+        "alt": "Avatar-body concept art, not evidence of biological skin or touch"
+      },
+      "sources": [
+        {
+          "label": "October 18 avatar evidence",
+          "url": "research-status-2026-10-18.html#body"
+        },
+        {
+          "label": "Readable development note",
+          "url": "updates.html#avatar-synthetic-events-2026-10-18"
+        },
+        {
+          "label": "Kira World project",
+          "url": "kira-world.html"
+        }
+      ],
+      "project_page": "kira-world.html"
+    },
+    {
+      "id": "temporary-creator-education-2026-10-18",
+      "title": "Temporary AI Creator develops proposed educational companions",
+      "project": "Kira World",
+      "track": "Source-grounded expert and historical-persona research",
+      "status": "development",
+      "date": "2026-10-18",
+      "date_basis": "October 18 review of inspected KiraWorld draft profiles, Creator templates and historical-persona guard transcript.",
+      "reviewed_on": "2026-10-18",
+      "summary": "KiraWorld includes draft expert identities and an archived constrained H. H. Holmes historical test. A source-grounded Civil War tutor with student-paced continuity is a future evaluation goal.",
+      "body": "Temporary candidate profiles include programming, robotics, physics, legal-review and public-relations roles with distinct interests, knowledge/source plans and candidate life cycles. H. H. Holmes has a deterministic late-1893 guard transcript whose 12 accepted replies are largely identical; it does not demonstrate independent historical knowledge. A proposed classroom tutor would separate documented history and invented characterization while letting a learner ask for a break and later resume a verified step.",
+      "boundary": "No certified experts, realistic free-form historical conversation, automatic stress assessment, validated school lesson-resumption, live NewBrain cognitive backend or educational effectiveness is demonstrated.",
+      "image": {
+        "path": "assets/kira-world-ecosystem.webp",
+        "label": "Kira World concept illustration",
+        "caption": "Existing Kira World concept image; no deployed tutor or recreated historical person shown.",
+        "alt": "Kira World concept illustration of connected digital environments"
+      },
+      "sources": [
+        {
+          "label": "Temporary AI Creator discussion",
+          "url": "kira-world.html#temporary-ai-creator"
+        },
+        {
+          "label": "October 18 Creator journal entry",
+          "url": "updates.html#temporary-creator-2026-10-18"
+        },
+        {
+          "label": "Dated current project boundaries",
+          "url": "research-status-2026-10-18.html#people"
+        }
+      ],
+      "project_page": "kira-world.html#temporary-ai-creator"
+    },
     {
       "id": "kira-friend-dual-chat-2025-08",
       "title": "Kira meets an unnamed Friend",
