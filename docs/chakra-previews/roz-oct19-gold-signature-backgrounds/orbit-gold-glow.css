@@ -1,0 +1,42 @@
+/* Chakra design preview: Kira Labs' warm gold (#ffc86a) behind the animated ecosystem.
+   Gold opacity now 10% stronger than the preceding 30%-enhanced preview (1.10 x previous opacity). This is a visual effect only. All existing orbital movement, positions and text remain unchanged. */
+#ecosystem .ecosystem-art::before {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 49%,
+      rgba(255, 200, 106, .5291) 0%,
+      rgba(255, 200, 106, .3575) 20%,
+      rgba(255, 200, 106, .1859) 43%,
+      rgba(255, 200, 106, .06435) 61%,
+      rgba(255, 200, 106, 0) 78%);
+  filter: blur(18px);
+}
+
+/* Paint the original moving diagrams and labels above the gold light. */
+#ecosystem .ecosystem-art .orbit-guide {
+  z-index: 1;
+}
+#ecosystem .ecosystem-art .petals {
+  z-index: 2;
+}
+#ecosystem .ecosystem-art .inner-petals {
+  z-index: 3;
+}
+#ecosystem .ecosystem-art .center-jewel {
+  z-index: 4;
+}
+#ecosystem .ecosystem-art .wheel-node {
+  z-index: 5;
+}
+
+@media (max-width: 760px) {
+  #ecosystem .ecosystem-art::before {
+    inset: -8%;
+    filter: blur(15px);
+  }
+}

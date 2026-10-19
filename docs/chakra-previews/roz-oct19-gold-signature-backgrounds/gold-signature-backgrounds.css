@@ -1,0 +1,60 @@
+/*
+  Gold Signature background-only preview for Roz (October 19).
+  Map the first five existing page sections to the Gold Signature concepts,
+  EXCEPT slide five (#ecosystem, the completed Ferris wheel), which is untouched.
+  Signature source: docs/chakra-previews/previews/gold-signature/index.html.
+  Text, layouts, buttons, cards and existing animations other than Becomes stay.
+*/
+#top.hero {
+  background:
+    radial-gradient(ellipse at 70% 31%,#c3904240,transparent 38%),
+    radial-gradient(ellipse at 12% 87%,#24557135,transparent 43%),
+    linear-gradient(130deg,#080e1a,#070914 65%,#18110c);
+}
+#top.hero .star-cloud {
+  background-image:
+    radial-gradient(1px 1px at 12% 22%,#fff1db,transparent 90%),
+    radial-gradient(1.4px 1.4px at 33% 56%,#ffd99a,transparent 90%),
+    radial-gradient(1px 1px at 67% 33%,#fff4e1,transparent 90%),
+    radial-gradient(1px 1px at 86% 82%,#ffe2b9,transparent 90%);
+  opacity:.45;
+}
+#top.hero .star-cloud.second {opacity:.23}
+#top.hero .curtains {
+  background:repeating-linear-gradient(90deg,transparent 0 24px,#ffc86a09 46px,#cf963315 70px,transparent 104px);
+  opacity:.52;
+}
+#top.hero .left-thread {background:linear-gradient(#ffe5b58c,#ffc86a24 55%,transparent)}
+#top.hero .left-thread::before {background:#ffe2b9;box-shadow:0 0 17px 11px #ffc86a43}
+
+/* Signature company, gap and boundary backgrounds; foreground DOM stays intact. */
+#company.oct18-company {background:#10131c}
+#information-gap.oct18-readiness {background:#090c16}
+#consequences.oct18-consequences {background:#121014}
+#company.oct18-slide::before,
+#information-gap.oct18-slide::before,
+#consequences.oct18-slide::before {background:none;opacity:0}
+#company.oct18-slide::after,
+#information-gap.oct18-slide::after {background:none}
+#consequences.oct18-slide::after {
+  background:radial-gradient(ellipse at 91% 43%,#c8952740,transparent 65%);
+}
+/*
+  The existing "Information" particle-letter reveal remains in motion.js.
+  Only "Becomes." gets an independent stronger sweep/tilt/overshoot.
+*/
+html:not(.intro-pending) #top.hero .secondary-word.statement-b.becomes-in {
+  animation:signatureBecomesSurge 3.8s cubic-bezier(.14,.74,.18,1) both!important;
+}
+@keyframes signatureBecomesSurge {
+  0% {opacity:0;transform:translate3d(105px,74px,0) rotate(-10deg) scale(.79);filter:blur(18px)}
+  24% {opacity:.2;transform:translate3d(74px,49px,0) rotate(-7deg) scale(.84);filter:blur(12px)}
+  53% {opacity:.83;transform:translate3d(-13px,-9px,0) rotate(1.8deg) scale(1.055);filter:blur(2px)}
+  76% {opacity:1;transform:translate3d(5px,3px,0) rotate(-.4deg) scale(1.012);filter:blur(0)}
+  100% {opacity:1;transform:none;filter:none}
+}
+@media(prefers-reduced-motion:reduce) {
+  html #top.hero .secondary-word.statement-b.becomes-in {
+    animation:none!important;opacity:1!important;transform:none!important;filter:none!important;
+  }
+}
