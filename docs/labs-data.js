@@ -23,6 +23,40 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-three-token-reload-2026-10-18",
+      "title": "NewBrain acquires a complete three-token answer and preserves it after restart",
+      "project": "NewBrain",
+      "track": "Trained public-answer learning and fresh-process persistence",
+      "status": "prototype",
+      "date": "2026-10-18",
+      "date_basis": "NewBrain's independently internally audited result report in commit d46b8f46c9584893ae1edc469404a5183fd4b60d, October 18 at 10:51 PM Eastern.",
+      "reviewed_on": "2026-10-18",
+      "summary": "A new direct full-answer regimen moved two previously taught public examples from 1/2 to 2/2 correct, then reproduced both answers after a separate process restored the saved model.",
+      "body": "The fixed direct regimen began from a pinned previously trained 1/2 Public2 checkpoint. Following 64 updates and 128 repeated presentations, the saved long target cup word one was fully generated alongside ball. Both remained correct after a different worker reloaded the saved state, with no added training. A matched-start curriculum arm stayed 1/2 and generated cup word c. The direct arm received twice the full-long-answer exposures of the curriculum arm (64 vs 32); this is a regimen contrast, not an isolated test of learning order. Original saved results and a separate four-generation reload check were independently audited internally.",
+      "boundary": "Reacquisition of previously taught answers on two public examples, not unseen factual acquisition, delayed retention, resistance to interference, long-term identity memory, general conversation, verified advantage over curriculum learning, Original12 recovery or external university replication. Original12 remains 2/12 baseline and 0/12 after its separate trained/reloaded study.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "label": "Research concept illustration",
+        "caption": "Concept art representing a dated NewBrain trained-answer experiment, not a screenshot of the saved model or test logs.",
+        "alt": "Glowing neural network illustration accompanying NewBrain's new trained-answer persistence milestone"
+      },
+      "sources": [
+        {
+          "label": "Read the explained new result",
+          "url": "updates.html#newbrain-three-token-reload-2026-10-18"
+        },
+        {
+          "label": "View Public2 experiment comparison",
+          "url": "results.html#metrics"
+        },
+        {
+          "label": "Research method (GitHub sign-in may be required)",
+          "url": "https://github.com/rmcmurrer81/newbrain/blob/main/docs/research/2026-10-18-public2-persistence-result-and-method.md"
+        }
+      ],
+      "project_page": "newbrain.html#latest-benchmarks-2026-10-18"
+    },
+    {
       "id": "newbrain-generation-diagnostic-2026-10-18",
       "title": "A read-only diagnostic isolates loss accounting from early stopping",
       "project": "NewBrain",
