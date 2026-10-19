@@ -23,40 +23,6 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
-      "id": "newbrain-public2-persistence-2026-10-18",
-      "title": "NewBrain learns a complete three-token answer and preserves it across a restart",
-      "project": "NewBrain",
-      "track": "Exact trained-answer acquisition / restart persistence",
-      "status": "prototype",
-      "date": "2026-10-18",
-      "date_basis": "October 18 internal saved-data experimental audits published in NewBrain commit d46b8f46c9584893ae1edc469404a5183fd4b60d; website reviewed October 19.",
-      "reviewed_on": "2026-10-19",
-      "summary": "Direct full-answer training from a previously taught 1/2 Public2 checkpoint produced 2/2 exact answers; a separate fresh worker restored the saved state and confirmed 2/2. A curriculum regimen remained at 1/2.",
-      "body": "Two arms started from the same pinned previously taught Public2 checkpoint. Both had 64 updates and 128 presentations. The short target ball was initially correct; the three-token cup word one initially stopped immediately. After direct full-answer training the exact full answer appeared and was retained on fresh-process reload, without additional teaching during reload. The curriculum regimen produced cup word c and remained 1/2. The arms had unequal full-answer exposures: direct 64 and curriculum 32 presentations (384 vs 336 tokens including EOS). Original training and fresh worker output passed independent internal saved-evidence audits. The earlier Public2 stage 0/2 to 1/2 remains separately documented, as does Original12's 2/12 missing-information baseline versus trained 0/12.",
-      "boundary": "Previously taught public answers only, tested over an immediate fresh-process restart. Unequal long-answer exposure prevents a claim of curriculum-order superiority. No new facts, unfamiliar questions, delayed retention, interference resistance, external replication, Maya activation, or NewBrain-to-body integration was shown.",
-      "image": {
-        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
-        "label": "Cognitive research concept illustration",
-        "caption": "Illustrative neural network, not an actual screenshot of trained outputs or an experiment chart.",
-        "alt": "Concept image of a neural network representing NewBrain's targeted learning milestone"
-      },
-      "sources": [
-        {
-          "label": "Read the evidence and boundaries",
-          "url": "updates.html#newbrain-full-answer-2026-10-18"
-        },
-        {
-          "label": "Current metrics",
-          "url": "results.html#metrics"
-        },
-        {
-          "label": "Original GitHub research record (access may be required)",
-          "url": "https://github.com/rmcmurrer81/newbrain/commit/d46b8f46c9584893ae1edc469404a5183fd4b60d"
-        }
-      ],
-      "project_page": "newbrain.html#latest-benchmarks-2026-10-18"
-    },
-    {
       "id": "newbrain-three-token-reload-2026-10-18",
       "title": "NewBrain acquires a complete three-token answer and preserves it after restart",
       "project": "NewBrain",
