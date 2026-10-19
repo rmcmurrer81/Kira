@@ -24,20 +24,20 @@ window.KIRA_LABS_TIMELINE = {
   "milestones": [
     {
       "id": "newbrain-256-training-2026-10-19",
-      "title": "NewBrain reports 256 training updates; final accuracy assessment pending",
+      "title": "NewBrain completes 256-update Original12 study: 2/12 before and after",
       "project": "NewBrain",
       "track": "Controlled Original12 learning study and execution verification",
       "status": "development",
       "date": "2026-10-19",
-      "date_basis": "Kira Labs' dated October 19 university briefing reports 256 updates; the latest GitHub-committed internal verification establishes 192.",
+      "date_basis": "October 19 saved execution, score and evidence records documented in the NewBrain and KiraWorld GitHub research commits; scoped internal independent audits, not university replication.",
       "reviewed_on": "2026-10-19",
-      "summary": "The October 19 briefing reports four training blocks and fresh-process generation; the GitHub research record independently verifies three blocks. The final frozen Original12 accuracy score remains pending.",
-      "body": "Four current-profile execution controls (B0, B1, L0 and W0) qualified in scoped internal reviews. Prior failed attempts remain preserved. GitHub records 192 verified updates and 1,152 repeated presentations across three blocks, while the newer dated university briefing reports 256 updates and 1,536 presentations over four blocks and a separate fresh-process answer-generation step. The complete final answer set has not yet been independently released with a strict score.",
-      "boundary": "Training and execution progress does not establish accuracy gains. The preserved 2/12 Original12 baseline comprised two missing-information answers; a different earlier trained/reloaded study scored 0/12. Public2's 2/2 concerned previously taught public examples. Held-out acquisition, Qwen comparison, working nerves, lung physiology and clinical validation remain unproved.",
+      "summary": "Original12 scored 2/12 before training and 2/12 after 256 updates and a fresh-process reload. Two previously incorrect complete responses became correct while the two prior correct missing-information responses were lost. No net score gain.",
+      "body": "The frozen separate study completed four 64-update blocks (256 updates; 1,536 repeated example presentations). Saved model state and counters, final strict whole-sequence scoring, process cleanup and finite evidence/cost closure passed scoped internal independent review. A successor custody/scoring adapter was separately reviewed but is not byte-identical to the historical scorer wrapper. Four current-profile execution controls (B0, B1, L0 and W0) qualified within scope; earlier failed attempts remain documented. Qwen comparison has not run.",
+      "boundary": "This separate study did not improve total Original12 accuracy. Preserve the earlier Original12 2/12 baseline → 0/12 after separate 64-update training and the distinct Public2 0/2 → 1/2 earlier result plus 1/2 → 2/2 direct-trained/reload result. New gains displaced prior missing-information passes; the cause is unproven. No held-out generalization, long-term retention or external university replication was demonstrated.",
       "image": {
         "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
         "label": "Research concept illustration",
-        "caption": "Concept art representing a dated NewBrain training briefing, not a screenshot of saved logs or grading results.",
+        "caption": "Concept art for the internally audited 256-update Original12 research result, not an experiment screenshot.",
         "alt": "NewBrain neural architecture illustration for the October 19 experimental training report"
       },
       "sources": [
@@ -50,12 +50,12 @@ window.KIRA_LABS_TIMELINE = {
           "url": "updates.html#newbrain-training-2026-10-19"
         },
         {
-          "label": "GitHub internal evidence through 192 updates (private access may be required)",
-          "url": "https://github.com/rmcmurrer81/newbrain/commit/a8b9f2ffbea24ed533a3963f1d53eefa235111fc"
-        },
-        {
           "label": "GitHub four-control closure (private access may be required)",
           "url": "https://github.com/rmcmurrer81/newbrain/commit/3f3697568cf4d28ebaeb4ab08669dcee085b3b4d"
+        },
+        {
+          "label": "GitHub completed 256-update Original12 study (access may require sign-in)",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/bff3d65869341c0ba537a40a5e5ca66b469342a7"
         }
       ],
       "project_page": "newbrain.html#newbrain-current-2026-10-19"
