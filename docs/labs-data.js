@@ -23,6 +23,44 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-256-training-2026-10-19",
+      "title": "NewBrain reports 256 training updates; final accuracy assessment pending",
+      "project": "NewBrain",
+      "track": "Controlled Original12 learning study and execution verification",
+      "status": "development",
+      "date": "2026-10-19",
+      "date_basis": "Kira Labs' dated October 19 university briefing reports 256 updates; the latest GitHub-committed internal verification establishes 192.",
+      "reviewed_on": "2026-10-19",
+      "summary": "The October 19 briefing reports four training blocks and fresh-process generation; the GitHub research record independently verifies three blocks. The final frozen Original12 accuracy score remains pending.",
+      "body": "Four current-profile execution controls (B0, B1, L0 and W0) qualified in scoped internal reviews. Prior failed attempts remain preserved. GitHub records 192 verified updates and 1,152 repeated presentations across three blocks, while the newer dated university briefing reports 256 updates and 1,536 presentations over four blocks and a separate fresh-process answer-generation step. The complete final answer set has not yet been independently released with a strict score.",
+      "boundary": "Training and execution progress does not establish accuracy gains. The preserved 2/12 Original12 baseline comprised two missing-information answers; a different earlier trained/reloaded study scored 0/12. Public2's 2/2 concerned previously taught public examples. Held-out acquisition, Qwen comparison, working nerves, lung physiology and clinical validation remain unproved.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "label": "Research concept illustration",
+        "caption": "Concept art representing a dated NewBrain training briefing, not a screenshot of saved logs or grading results.",
+        "alt": "NewBrain neural architecture illustration for the October 19 experimental training report"
+      },
+      "sources": [
+        {
+          "label": "October 19 evidence summary",
+          "url": "research-status-2026-10-19.html"
+        },
+        {
+          "label": "Readable development update",
+          "url": "updates.html#newbrain-training-2026-10-19"
+        },
+        {
+          "label": "GitHub internal evidence through 192 updates (private access may be required)",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/a8b9f2ffbea24ed533a3963f1d53eefa235111fc"
+        },
+        {
+          "label": "GitHub four-control closure (private access may be required)",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/3f3697568cf4d28ebaeb4ab08669dcee085b3b4d"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-current-2026-10-19"
+    },
+    {
       "id": "newbrain-three-token-reload-2026-10-18",
       "title": "NewBrain acquires a complete three-token answer and preserves it after restart",
       "project": "NewBrain",
