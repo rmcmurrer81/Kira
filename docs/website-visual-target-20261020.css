@@ -458,3 +458,35 @@
      width:calc(74% + (100vw - min(1480px, 100vw - 88px))/2)!important;
   }
 }
+
+/* final high-resolution source framing — no hero crops */
+@media (min-width:901px){
+  .xf-page.xf-brain .xf-hero-brain .xf-hero-visual{
+    background:linear-gradient(90deg,#061321 0%,#0c2440 80%)!important;
+  }
+  .xf-page.xf-brain .xf-hero-brain .xf-hero-visual>img{
+    position:absolute!important;top:0!important;bottom:0!important;right:0!important;left:auto!important;
+    display:block!important;width:100%!important;height:100%!important;
+    object-fit:contain!important;object-position:right center!important;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 34%,#000 100%)!important;
+    mask-image:linear-gradient(90deg,transparent 0%,#000 34%,#000 100%)!important;
+    filter:none!important;
+  }
+  .xf-page.xf-robot .xf-hero-robot .xf-hero-visual{
+    background:linear-gradient(90deg,#061421,#12304a 70%,#0b1a32)!important;
+  }
+  .xf-page.xf-robot .xf-hero-robot .xf-hero-visual>img{
+    display:block!important;width:100%!important;height:100%!important;
+    object-fit:contain!important;object-position:right center!important;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 32%,#000 100%)!important;
+    mask-image:linear-gradient(90deg,transparent 0%,#000 32%,#000 100%)!important;
+    filter:none!important;
+  }
+}
+@media(max-width:900px){
+  .xf-page.xf-brain .xf-hero-brain .xf-hero-visual>img,
+  .xf-page.xf-robot .xf-hero-robot .xf-hero-visual>img{
+    object-fit:contain!important;object-position:center center!important;
+    -webkit-mask-image:none!important;mask-image:none!important;
+  }
+}
