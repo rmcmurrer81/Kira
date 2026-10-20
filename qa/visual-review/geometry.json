@@ -247,6 +247,252 @@
   },
   {
     "page": "kira-world.html",
+    "device": "wide",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 83,
+        "w": 1980,
+        "h": 513
+      },
+      ".xf-hero-copy": {
+        "x": 250,
+        "y": 83,
+        "w": 540,
+        "h": 512
+      },
+      ".xf-hero-visual": {
+        "x": 546,
+        "y": 83,
+        "w": 1434,
+        "h": 512
+      },
+      ".xf-hero-visual>img": {
+        "x": 546,
+        "y": 83,
+        "w": 1434,
+        "h": 512
+      },
+      ".xf-display": {
+        "x": 250,
+        "y": 136,
+        "w": 540,
+        "h": 200
+      },
+      ".xf-world-panorama": {
+        "x": 265,
+        "y": 1221,
+        "w": 1450,
+        "h": 230
+      },
+      ".xf-section": {
+        "x": 0,
+        "y": 596,
+        "w": 1980,
+        "h": 904
+      },
+      ".xf-card-grid": {
+        "x": 265,
+        "y": 812,
+        "w": 1450,
+        "h": 393
+      },
+      "scrollWidth": 1980,
+      "viewportWidth": 1980,
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 796
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-wide.jpg"
+  },
+  {
+    "page": "about.html",
+    "device": "wide",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 83,
+        "w": 1980,
+        "h": 598
+      },
+      ".xf-hero-copy": {
+        "x": 250,
+        "y": 83,
+        "w": 560,
+        "h": 597
+      },
+      ".xf-hero-visual": {
+        "x": 590,
+        "y": 83,
+        "w": 1390,
+        "h": 597
+      },
+      ".xf-hero-visual>img": {
+        "x": 590,
+        "y": 83,
+        "w": 1390,
+        "h": 597
+      },
+      ".xf-display": {
+        "x": 250,
+        "y": 141,
+        "w": 560,
+        "h": 153
+      },
+      ".xf-section": {
+        "x": 0,
+        "y": 681,
+        "w": 1980,
+        "h": 691
+      },
+      ".xf-card-grid": {
+        "x": 265,
+        "y": 893,
+        "w": 1450,
+        "h": 343
+      },
+      "scrollWidth": 1980,
+      "viewportWidth": 1980,
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 690
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/about-wide.jpg"
+  },
+  {
+    "page": "contact.html",
+    "device": "wide",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 83,
+        "w": 1980,
+        "h": 366
+      },
+      ".xf-hero-copy": {
+        "x": 250,
+        "y": 118,
+        "w": 655,
+        "h": 296
+      },
+      ".xf-hero-visual": {
+        "x": 472,
+        "y": 83,
+        "w": 1508,
+        "h": 365
+      },
+      ".xf-hero-visual>img": {
+        "x": 472,
+        "y": 83,
+        "w": 1508,
+        "h": 365
+      },
+      ".xf-display": {
+        "x": 250,
+        "y": 172,
+        "w": 655,
+        "h": 91
+      },
+      "scrollWidth": 1980,
+      "viewportWidth": 1980,
+      "heroImgNaturalWidth": 2172,
+      "heroImgNaturalHeight": 724
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/contact-wide.jpg"
+  },
+  {
+    "page": "companion-robotics.html",
+    "device": "wide",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 83,
+        "w": 1980,
+        "h": 450
+      },
+      ".xf-hero-copy": {
+        "x": 250,
+        "y": 83,
+        "w": 655,
+        "h": 449
+      },
+      ".xf-hero-visual": {
+        "x": 635,
+        "y": 83,
+        "w": 1345,
+        "h": 449
+      },
+      ".xf-hero-visual>img": {
+        "x": 635,
+        "y": 83,
+        "w": 1345,
+        "h": 449
+      },
+      ".xf-display": {
+        "x": 250,
+        "y": 138,
+        "w": 655,
+        "h": 150
+      },
+      "scrollWidth": 1980,
+      "viewportWidth": 1980,
+      "heroImgNaturalWidth": 1672,
+      "heroImgNaturalHeight": 941
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/companion-robotics-wide.jpg"
+  },
+  {
+    "page": "newbrain.html",
+    "device": "wide",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 83,
+        "w": 1980,
+        "h": 446
+      },
+      ".xf-hero-copy": {
+        "x": 250,
+        "y": 96,
+        "w": 655,
+        "h": 418
+      },
+      ".xf-hero-visual": {
+        "x": 724,
+        "y": 83,
+        "w": 1256,
+        "h": 445
+      },
+      ".xf-hero-visual>img": {
+        "x": 1075,
+        "y": 83,
+        "w": 905,
+        "h": 445
+      },
+      ".xf-display": {
+        "x": 250,
+        "y": 151,
+        "w": 655,
+        "h": 150
+      },
+      ".xf-section": {
+        "x": 0,
+        "y": 529,
+        "w": 1980,
+        "h": 942
+      },
+      "scrollWidth": 1980,
+      "viewportWidth": 1980,
+      "heroImgNaturalWidth": 886,
+      "heroImgNaturalHeight": 804
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/newbrain-wide.jpg"
+  },
+  {
+    "page": "kira-world.html",
     "device": "mobile",
     "geometry": {
       ".xf-hero": {
