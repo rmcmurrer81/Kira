@@ -201,3 +201,35 @@
   .xf-page.xf-about .xf-hero-about .xf-hero-inner{width:calc(100% - 54px);min-height:540px!important}
   .xf-page.xf-kira .xf-hero-kira .xf-hero-visual{width:78%!important}
 }
+
+/* Live-browser QA correction #2: overlay must sit BEHIND the real HTML copy.
+   Ensure imagery remains vivid, text has contrast, and hero matches the concept proportions. */
+@media(min-width:901px){
+ .xf-page.xf-kira .xf-hero-kira .xf-hero-inner,
+ .xf-page.xf-about .xf-hero-about .xf-hero-inner{
+   z-index:4!important;
+   min-height:505px!important;
+ }
+ .xf-page.xf-kira .xf-hero-kira .xf-hero-copy,
+ .xf-page.xf-about .xf-hero-about .xf-hero-copy{padding:28px 0!important}
+ .xf-page.xf-kira .xf-hero-kira .xf-hero-visual{width:80%!important}
+ .xf-page.xf-kira .xf-hero-kira .xf-hero-visual>img{object-position:left center!important}
+ .xf-page.xf-kira .xf-hero-kira .xf-display{
+   font-size:clamp(3.45rem,5.1vw,5.35rem)!important;
+ }
+ .xf-page.xf-kira .xf-hero-kira .xf-display em{
+   font-size:clamp(2.45rem,3.18vw,3.15rem)!important;
+ }
+ .xf-page.xf-about .xf-hero-about .xf-display{
+   font-size:clamp(3.4rem,5vw,5.4rem)!important;
+ }
+ .xf-page.xf-about .xf-hero-about .xf-display em{
+   font-size:clamp(2.5rem,3.45vw,3.55rem)!important;
+ }
+ .xf-page.xf-about .xf-hero-about .xf-hero-inner{min-height:525px!important}
+}
+@media(max-width:900px){
+ .xf-page.xf-kira .xf-hero-kira .xf-hero-inner,
+ .xf-page.xf-about .xf-hero-about .xf-hero-inner{z-index:4!important}
+ .xf-page.xf-about .xf-hero-about{background:#061322!important}
+}
