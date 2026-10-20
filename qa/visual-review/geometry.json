@@ -1,0 +1,494 @@
+[
+  {
+    "page": "kira-world.html",
+    "device": "desktop",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 83,
+        "w": 1440,
+        "h": 701
+      },
+      ".xf-hero-copy": {
+        "x": 35,
+        "y": 125,
+        "w": 624,
+        "h": 616
+      },
+      ".xf-hero-visual": {
+        "x": 702,
+        "y": 217,
+        "w": 703,
+        "h": 432
+      },
+      ".xf-hero-visual>img": {
+        "x": 702,
+        "y": 217,
+        "w": 703,
+        "h": 432
+      },
+      ".xf-display": {
+        "x": 35,
+        "y": 175,
+        "w": 624,
+        "h": 225
+      },
+      ".xf-world-panorama": {
+        "x": 35,
+        "y": 1412,
+        "w": 1370,
+        "h": 240
+      },
+      ".xf-section": {
+        "x": 0,
+        "y": 784,
+        "w": 1440,
+        "h": 936
+      },
+      ".xf-card-grid": {
+        "x": 35,
+        "y": 1011,
+        "w": 1370,
+        "h": 401
+      },
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 796
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-desktop.jpg"
+  },
+  {
+    "page": "about.html",
+    "device": "desktop",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 83,
+        "w": 1440,
+        "h": 687
+      },
+      ".xf-hero-copy": {
+        "x": 35,
+        "y": 125,
+        "w": 624,
+        "h": 602
+      },
+      ".xf-hero-visual": {
+        "x": 702,
+        "y": 210,
+        "w": 703,
+        "h": 432
+      },
+      ".xf-hero-visual>img": {
+        "x": 702,
+        "y": 210,
+        "w": 703,
+        "h": 432
+      },
+      ".xf-display": {
+        "x": 35,
+        "y": 175,
+        "w": 624,
+        "h": 144
+      },
+      ".xf-section": {
+        "x": 0,
+        "y": 1412,
+        "w": 1440,
+        "h": 769
+      },
+      ".xf-card-grid": {
+        "x": 35,
+        "y": 1640,
+        "w": 1370,
+        "h": 372
+      },
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 1080
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/about-desktop.jpg"
+  },
+  {
+    "page": "contact.html",
+    "device": "desktop",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 83,
+        "w": 1440,
+        "h": 441
+      },
+      ".xf-hero-copy": {
+        "x": 35,
+        "y": 107,
+        "w": 624,
+        "h": 392
+      },
+      ".xf-hero-visual": {
+        "x": 702,
+        "y": 161,
+        "w": 703,
+        "h": 285
+      },
+      ".xf-hero-visual>img": {
+        "x": 702,
+        "y": 161,
+        "w": 703,
+        "h": 285
+      },
+      ".xf-display": {
+        "x": 35,
+        "y": 157,
+        "w": 624,
+        "h": 144
+      },
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "heroImgNaturalWidth": 2172,
+      "heroImgNaturalHeight": 724
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/contact-desktop.jpg"
+  },
+  {
+    "page": "companion-robotics.html",
+    "device": "desktop",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 83,
+        "w": 1440,
+        "h": 553
+      },
+      ".xf-hero-copy": {
+        "x": 35,
+        "y": 125,
+        "w": 624,
+        "h": 468
+      },
+      ".xf-hero-visual": {
+        "x": 702,
+        "y": 179,
+        "w": 703,
+        "h": 360
+      },
+      ".xf-hero-visual>img": {
+        "x": 702,
+        "y": 179,
+        "w": 703,
+        "h": 360
+      },
+      ".xf-display": {
+        "x": 35,
+        "y": 175,
+        "w": 624,
+        "h": 144
+      },
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "heroImgNaturalWidth": 1672,
+      "heroImgNaturalHeight": 941
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/companion-robotics-desktop.jpg"
+  },
+  {
+    "page": "newbrain.html",
+    "device": "desktop",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 83,
+        "w": 1440,
+        "h": 540
+      },
+      ".xf-hero-copy": {
+        "x": 35,
+        "y": 137,
+        "w": 624,
+        "h": 430
+      },
+      ".xf-hero-visual": {
+        "x": 702,
+        "y": 137,
+        "w": 703,
+        "h": 432
+      },
+      ".xf-hero-visual>img": {
+        "x": 702,
+        "y": 137,
+        "w": 703,
+        "h": 432
+      },
+      ".xf-display": {
+        "x": 35,
+        "y": 187,
+        "w": 624,
+        "h": 144
+      },
+      ".xf-section": {
+        "x": 0,
+        "y": 623,
+        "w": 1440,
+        "h": 921
+      },
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "heroImgNaturalWidth": 886,
+      "heroImgNaturalHeight": 804
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/newbrain-desktop.jpg"
+  },
+  {
+    "page": "kira-world.html",
+    "device": "mobile",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 74,
+        "w": 390,
+        "h": 956
+      },
+      ".xf-hero-copy": {
+        "x": 14,
+        "y": 112,
+        "w": 362,
+        "h": 617
+      },
+      ".xf-hero-visual": {
+        "x": 14,
+        "y": 749,
+        "w": 394,
+        "h": 260
+      },
+      ".xf-hero-visual>img": {
+        "x": 14,
+        "y": 749,
+        "w": 394,
+        "h": 260
+      },
+      ".xf-display": {
+        "x": 14,
+        "y": 158,
+        "w": 362,
+        "h": 77
+      },
+      ".xf-world-panorama": {
+        "x": 16,
+        "y": 2923,
+        "w": 358,
+        "h": 240
+      },
+      ".xf-section": {
+        "x": 0,
+        "y": 1030,
+        "w": 390,
+        "h": 2201
+      },
+      ".xf-card-grid": {
+        "x": 16,
+        "y": 1405,
+        "w": 358,
+        "h": 1518
+      },
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 796
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-mobile.jpg"
+  },
+  {
+    "page": "about.html",
+    "device": "mobile",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 74,
+        "w": 390,
+        "h": 985
+      },
+      ".xf-hero-copy": {
+        "x": 14,
+        "y": 112,
+        "w": 362,
+        "h": 646
+      },
+      ".xf-hero-visual": {
+        "x": 14,
+        "y": 778,
+        "w": 394,
+        "h": 260
+      },
+      ".xf-hero-visual>img": {
+        "x": 14,
+        "y": 778,
+        "w": 394,
+        "h": 260
+      },
+      ".xf-display": {
+        "x": 14,
+        "y": 142,
+        "w": 362,
+        "h": 77
+      },
+      ".xf-section": {
+        "x": 0,
+        "y": 2237,
+        "w": 390,
+        "h": 2035
+      },
+      ".xf-card-grid": {
+        "x": 16,
+        "y": 2519,
+        "w": 358,
+        "h": 1514
+      },
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 1080
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/about-mobile.jpg"
+  },
+  {
+    "page": "contact.html",
+    "device": "mobile",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 74,
+        "w": 390,
+        "h": 692
+      },
+      ".xf-hero-copy": {
+        "x": 14,
+        "y": 106,
+        "w": 362,
+        "h": 359
+      },
+      ".xf-hero-visual": {
+        "x": 14,
+        "y": 485,
+        "w": 394,
+        "h": 260
+      },
+      ".xf-hero-visual>img": {
+        "x": 14,
+        "y": 485,
+        "w": 394,
+        "h": 260
+      },
+      ".xf-display": {
+        "x": 14,
+        "y": 136,
+        "w": 362,
+        "h": 77
+      },
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "heroImgNaturalWidth": 2172,
+      "heroImgNaturalHeight": 724
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/contact-mobile.jpg"
+  },
+  {
+    "page": "companion-robotics.html",
+    "device": "mobile",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 74,
+        "w": 390,
+        "h": 794
+      },
+      ".xf-hero-copy": {
+        "x": 14,
+        "y": 112,
+        "w": 362,
+        "h": 455
+      },
+      ".xf-hero-visual": {
+        "x": 14,
+        "y": 587,
+        "w": 394,
+        "h": 260
+      },
+      ".xf-hero-visual>img": {
+        "x": 14,
+        "y": 587,
+        "w": 394,
+        "h": 260
+      },
+      ".xf-display": {
+        "x": 14,
+        "y": 142,
+        "w": 362,
+        "h": 77
+      },
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "heroImgNaturalWidth": 1672,
+      "heroImgNaturalHeight": 941
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/companion-robotics-mobile.jpg"
+  },
+  {
+    "page": "newbrain.html",
+    "device": "mobile",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 74,
+        "w": 390,
+        "h": 784
+      },
+      ".xf-hero-copy": {
+        "x": 14,
+        "y": 112,
+        "w": 362,
+        "h": 445
+      },
+      ".xf-hero-visual": {
+        "x": 14,
+        "y": 577,
+        "w": 394,
+        "h": 260
+      },
+      ".xf-hero-visual>img": {
+        "x": 14,
+        "y": 577,
+        "w": 394,
+        "h": 260
+      },
+      ".xf-display": {
+        "x": 14,
+        "y": 142,
+        "w": 362,
+        "h": 77
+      },
+      ".xf-section": {
+        "x": 0,
+        "y": 858,
+        "w": 390,
+        "h": 1707
+      },
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "heroImgNaturalWidth": 886,
+      "heroImgNaturalHeight": 804
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/newbrain-mobile.jpg"
+  }
+]
