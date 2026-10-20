@@ -264,3 +264,19 @@
 @media(max-width:900px){
  .xf-page.xf-about .xf-about-gallery{padding-top:30px}
 }
+
+/* Live capture #4: do not crop away the founder's face or fade out the right edge. */
+@media(min-width:901px){
+ .xf-page.xf-about .xf-hero-about .xf-hero-visual>img{
+    object-position:right center!important;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 27%,#000 100%)!important;
+    mask-image:linear-gradient(90deg,transparent 0%,#000 27%,#000 100%)!important;
+ }
+ .xf-page.xf-about .xf-hero-about .xf-hero-visual{right:0!important;width:77%!important}
+}
+@media(max-width:900px){
+ .xf-page.xf-about .xf-hero-about .xf-hero-visual>img{
+   object-position:right center!important;object-fit:cover!important;
+   -webkit-mask-image:none!important;mask-image:none!important
+ }
+}
