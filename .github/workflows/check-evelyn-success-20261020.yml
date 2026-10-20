@@ -1,0 +1,55 @@
+name: Check Evelyn October 20 published milestone
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/check-evelyn-success-20261020.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install live browser
+        run: |
+          python -m pip install playwright
+          python -m playwright install chromium --with-deps
+      - name: Check published interactive milestone and related pages
+        run: |
+          python - <<'PY'
+          from playwright.sync_api import sync_playwright
+          slug="evelyn-visible-three-angle-compatibility-preview-2026-10-20"
+          with sync_playwright() as p:
+              browser=p.chromium.launch(headless=True,args=["--no-sandbox"])
+              for width,height in [(1440,900),(390,844)]:
+                  context=browser.new_context(viewport={"width":width,"height":height},device_scale_factor=1)
+                  page=context.new_page()
+                  errors=[]
+                  page.on("pageerror",lambda err: errors.append(str(err)))
+                  page.goto(f"https://kiralabs.org/progress.html?project=Evelyn%20Hart#{slug}",wait_until="domcontentloaded",timeout=60000)
+                  page.wait_for_function("window.KIRA_LABS_TIMELINE && window.KIRA_LABS_TIMELINE.milestones.some(m=>m.id==='evelyn-visible-three-angle-compatibility-preview-2026-10-20')",timeout=35000)
+                  page.wait_for_function("document.querySelector('#detail-title')?.textContent.includes('3D head')",timeout=25000)
+                  title=page.locator("#detail-title").inner_text()
+                  print("TIMELINE",width,title)
+                  assert "3D head" in title
+                  assert page.locator("[data-project='Evelyn Hart']").get_attribute("aria-pressed")=="true"
+                  page.goto("https://kiralabs.org/evelyn-hart.html",wait_until="domcontentloaded",timeout=60000)
+                  page.locator("#evelyn-visible-head-2026-10-20").wait_for(timeout=25000)
+                  assert "three-quarter" in page.locator("#evelyn-visible-head-2026-10-20").inner_text()
+                  print("EVELYN PAGE",width,"new visible-head section present")
+                  page.goto("https://kiralabs.org/index.html",wait_until="domcontentloaded",timeout=60000)
+                  assert "three-angle 3D head preview visible" in page.locator("body").inner_text()
+                  print("HOME",width,"project status present")
+                  assert not errors,errors
+                  overflow=page.evaluate("document.documentElement.scrollWidth-innerWidth")
+                  assert overflow<=2,(width,overflow)
+                  print("CHECKED",width,"no page script errors, no horizontal overflow")
+                  context.close()
+              browser.close()
+          PY
