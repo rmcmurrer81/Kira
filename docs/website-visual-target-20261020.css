@@ -1,0 +1,203 @@
+/* Website visual recovery — 2026-10-20.
+   Restore immersive page heroes; retain live links, tested status text and accessible HTML.
+   This sheet runs AFTER the earlier generic two-column patch and only changes these pages. */
+.xf-page.xf-kira .xf-hero-kira,
+.xf-page.xf-about .xf-hero-about{
+  padding:0!important;
+  min-height:0;
+  display:block;
+  position:relative;
+  isolation:isolate;
+  background:#061322;
+  overflow:hidden;
+}
+.xf-page.xf-kira .xf-hero-kira .xf-hero-inner,
+.xf-page.xf-about .xf-hero-about .xf-hero-inner{
+  display:flex!important;
+  align-items:center!important;
+  position:relative;
+  gap:0!important;
+  margin:0 auto;
+  width:min(1480px,calc(100% - 88px));
+  min-height:555px!important;
+  height:auto!important;
+  z-index:1;
+}
+.xf-page.xf-kira .xf-hero-kira .xf-hero-copy,
+.xf-page.xf-about .xf-hero-about .xf-hero-copy{
+  flex:0 0 min(41%,540px);
+  width:min(41%,540px);
+  max-width:540px!important;
+  position:relative!important;
+  z-index:5!important;
+  padding:46px 0!important;
+  grid-column:auto;
+  grid-row:auto;
+}
+.xf-page.xf-kira .xf-hero-kira .xf-hero-visual,
+.xf-page.xf-about .xf-hero-about .xf-hero-visual{
+  position:absolute!important;
+  z-index:1!important;
+  top:0!important;
+  bottom:0!important;
+  right:-30px!important;
+  left:auto!important;
+  display:block!important;
+  width:79%!important;
+  height:100%!important;
+  margin:0!important;
+  padding:0!important;
+  min-height:0!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+  pointer-events:none;
+}
+.xf-page.xf-kira .xf-hero-kira .xf-hero-visual>img,
+.xf-page.xf-about .xf-hero-about .xf-hero-visual>img{
+  width:100%!important;height:100%!important;display:block;
+  object-fit:cover!important;object-position:left center!important;
+  border-radius:0!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 22%,#000 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 0%,#000 22%,#000 100%)!important;
+  filter:none!important;
+}
+.xf-page.xf-kira .xf-hero-kira:before{
+  display:none!important;
+  content:none!important;
+}
+.xf-page.xf-kira .xf-hero-kira:after,
+.xf-page.xf-about .xf-hero-about:after{
+  content:"";position:absolute;inset:0;
+  z-index:2;pointer-events:none;
+  background:linear-gradient(90deg,#05101dfd 0%,#05101df5 24%,#05101dce 35%,#05101d4c 52%,transparent 70%)!important;
+}
+.xf-page.xf-kira .xf-hero-kira .xf-hero-copy .xf-display,
+.xf-page.xf-about .xf-hero-about .xf-hero-copy .xf-display{
+  font-size:clamp(3.3rem,5.4vw,5.9rem);
+  letter-spacing:-.055em;
+  line-height:1.02;
+  margin-bottom:12px;
+}
+.xf-page.xf-kira .xf-hero-kira .xf-display em,
+.xf-page.xf-about .xf-hero-about .xf-display em{
+  font-size:clamp(2.3rem,3.45vw,3.65rem);
+  line-height:1.08;
+  max-width:520px;
+  margin-top:4px;
+  letter-spacing:-.045em;
+}
+.xf-page.xf-kira .xf-hero-kira .xf-subheading,
+.xf-page.xf-about .xf-hero-about .xf-subheading{
+  font-size:.96rem;
+  line-height:1.65;
+  max-width:515px;
+  color:#e0ecf6;
+}
+.xf-page.xf-kira .xf-hero-kira .xf-hero-actions,
+.xf-page.xf-about .xf-hero-about .xf-hero-actions{
+  margin-top:19px;
+}
+.xf-page.xf-kira .xf-hero-kira .xf-hero-actions .button,
+.xf-page.xf-about .xf-hero-about .xf-hero-actions .button{
+  padding:10px 15px;
+}
+.xf-page.xf-kira .xf-hero-kira .xf-hero-visual figcaption,
+.xf-page.xf-about .xf-hero-about .xf-hero-visual figcaption{
+  z-index:2;right:18px;bottom:8px;
+  font-size:.62rem;padding:5px 9px;
+  background:#04111fb8;
+}
+.xf-page.xf-kira .xf-hero-kira .xf-note{
+  margin-top:12px!important;
+  max-width:445px;
+  font-size:.72rem;
+  line-height:1.4;
+  padding-left:11px;
+}
+.xf-page.xf-kira .xf-hero-kira .xf-status-pills{margin:17px 0 0;gap:7px}
+.xf-page.xf-kira .xf-hero-kira .xf-status-pills span{font-size:.68rem;padding:5px 8px}
+.xf-page.xf-kira .xf-world-intro{padding-top:38px;padding-bottom:48px}
+.xf-page.xf-kira .xf-world-intro .xf-section-top{margin-bottom:19px}
+.xf-page.xf-kira .xf-world-intro .xf-card-grid{gap:12px}
+.xf-page.xf-kira .xf-world-intro .xf-card>img{height:clamp(160px,13vw,205px);object-fit:cover}
+.xf-page.xf-kira .xf-world-intro .xf-card-copy{padding:14px 15px 17px}
+.xf-page.xf-kira .xf-world-panorama{
+  min-height:230px;
+  background-image:linear-gradient(to top,#02111ae9 0%,#02111a48 52%,transparent 100%),url("assets/kira-future-city-hd-20261020.webp")!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  margin-top:16px;
+}
+/* About — full-bleed cinematic waterfront with approved founder reference face in the hero asset. */
+.xf-page.xf-about .xf-hero-about{
+  background:#071626 url("assets/kira-future-city-hd-20261020.webp") center/cover no-repeat!important;
+}
+.xf-page.xf-about .xf-hero-about .xf-hero-inner{min-height:555px!important}
+.xf-page.xf-about .xf-hero-about .xf-hero-copy{
+  flex-basis:min(43%,560px);width:min(43%,560px);max-width:560px!important
+}
+.xf-page.xf-about .xf-hero-about .xf-hero-visual{width:67%!important;right:-25px!important}
+.xf-page.xf-about .xf-hero-about .xf-hero-visual>img{
+  object-position:50% 29%!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 2%,#000 32%,#000 89%,transparent 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 2%,#000 32%,#000 89%,transparent 100%)!important;
+}
+.xf-page.xf-about .xf-hero-about:after{
+  background:linear-gradient(90deg,#05101ff8 0%,#05101fee 21%,#05101fbe 36%,#05101f30 57%,transparent 82%)!important;
+}
+.xf-page.xf-about .xf-role{line-height:1.55}
+.xf-page.xf-about .founder-profiles{display:flex;gap:10px 16px;flex-wrap:wrap;margin-top:14px}
+.xf-page.xf-about .founder-profiles a{font-size:.76rem}
+.xf-page.xf-about .xf-note{max-width:500px;font-size:.72rem;line-height:1.45;margin-top:13px}
+.xf-page.xf-about .xf-hero-about .xf-hero-visual figcaption{bottom:9px}
+
+/* On mobile text is separate from art for readability. */
+@media(max-width:900px){
+  .xf-page.xf-kira .xf-hero-kira,
+  .xf-page.xf-about .xf-hero-about{padding:0!important}
+  .xf-page.xf-kira .xf-hero-kira .xf-hero-inner,
+  .xf-page.xf-about .xf-hero-about .xf-hero-inner{
+    width:calc(100% - 34px)!important;display:flex!important;
+    flex-direction:column!important;align-items:stretch!important;
+    min-height:0!important;gap:0!important
+  }
+  .xf-page.xf-kira .xf-hero-kira .xf-hero-copy,
+  .xf-page.xf-about .xf-hero-about .xf-hero-copy{
+    width:100%!important;max-width:100%!important;flex:none!important;
+    padding:36px 0 22px!important
+  }
+  .xf-page.xf-kira .xf-hero-kira .xf-hero-visual,
+  .xf-page.xf-about .xf-hero-about .xf-hero-visual{
+    display:block!important;position:relative!important;
+    left:-17px!important;right:auto!important;top:auto!important;bottom:auto!important;
+    width:calc(100% + 34px)!important;height:clamp(245px,60vw,460px)!important;
+    margin:0!important;border-radius:0!important
+  }
+  .xf-page.xf-kira .xf-hero-kira .xf-hero-visual>img,
+  .xf-page.xf-about .xf-hero-about .xf-hero-visual>img{
+    object-fit:cover!important;object-position:center center!important;
+    -webkit-mask-image:none!important;mask-image:none!important
+  }
+  .xf-page.xf-kira .xf-hero-kira:after,
+  .xf-page.xf-about .xf-hero-about:after{background:none!important}
+  .xf-page.xf-about .xf-hero-about .xf-hero-visual{height:330px!important}
+  .xf-page.xf-about .xf-hero-about .xf-hero-visual>img{object-position:center 26%!important}
+  .xf-page.xf-kira .xf-hero-kira .xf-hero-copy .xf-display,
+  .xf-page.xf-about .xf-hero-about .xf-hero-copy .xf-display{
+    font-size:clamp(2.8rem,10vw,4.7rem)!important
+  }
+  .xf-page.xf-kira .xf-hero-kira .xf-display em,
+  .xf-page.xf-about .xf-hero-about .xf-display em{
+    font-size:clamp(2.15rem,8vw,3.35rem)!important
+  }
+  .xf-page.xf-kira .xf-world-intro{padding-top:32px}
+}
+@media(min-width:901px) and (max-width:1150px){
+  .xf-page.xf-kira .xf-hero-kira .xf-hero-copy{flex-basis:43%;width:43%}
+  .xf-page.xf-about .xf-hero-about .xf-hero-copy{flex-basis:43%;width:43%}
+  .xf-page.xf-kira .xf-hero-kira .xf-hero-inner,
+  .xf-page.xf-about .xf-hero-about .xf-hero-inner{width:calc(100% - 54px);min-height:540px!important}
+  .xf-page.xf-kira .xf-hero-kira .xf-hero-visual{width:78%!important}
+}
