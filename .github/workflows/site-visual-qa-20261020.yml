@@ -8,6 +8,9 @@ on:
       - 'docs/website-visual-target-20261020.css'
       - 'docs/kira-world.html'
       - 'docs/about.html'
+      - 'docs/newbrain.html'
+      - 'docs/contact.html'
+      - 'docs/companion-robotics.html'
       - 'docs/fidelity-website-20261020.css'
   workflow_dispatch:
 permissions:
