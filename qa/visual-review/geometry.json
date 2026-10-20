@@ -16,15 +16,15 @@
         "h": 490
       },
       ".xf-hero-visual": {
-        "x": 344,
+        "x": 314,
         "y": 83,
-        "w": 1082,
+        "w": 1126,
         "h": 490
       },
       ".xf-hero-visual>img": {
-        "x": 344,
+        "x": 314,
         "y": 83,
-        "w": 1082,
+        "w": 1126,
         "h": 490
       },
       ".xf-display": {
@@ -57,7 +57,7 @@
       "heroImgNaturalHeight": 796
     },
     "errors": [],
-    "screenshot": "qa/visual-review/kira-world-desktop-live.jpg"
+    "screenshot": "qa/visual-review/kira-world-desktop.jpg"
   },
   {
     "page": "about.html",
@@ -78,13 +78,13 @@
       ".xf-hero-visual": {
         "x": 355,
         "y": 83,
-        "w": 1041,
+        "w": 1085,
         "h": 574
       },
       ".xf-hero-visual>img": {
         "x": 355,
         "y": 83,
-        "w": 1041,
+        "w": 1085,
         "h": 574
       },
       ".xf-display": {
@@ -111,7 +111,7 @@
       "heroImgNaturalHeight": 690
     },
     "errors": [],
-    "screenshot": "qa/visual-review/about-desktop-live.jpg"
+    "screenshot": "qa/visual-review/about-desktop.jpg"
   },
   {
     "page": "contact.html",
@@ -130,15 +130,15 @@
         "h": 281
       },
       ".xf-hero-visual": {
-        "x": 272,
+        "x": 247,
         "y": 83,
-        "w": 1149,
+        "w": 1193,
         "h": 365
       },
       ".xf-hero-visual>img": {
-        "x": 272,
+        "x": 247,
         "y": 83,
-        "w": 1149,
+        "w": 1193,
         "h": 365
       },
       ".xf-display": {
@@ -153,7 +153,7 @@
       "heroImgNaturalHeight": 724
     },
     "errors": [],
-    "screenshot": "qa/visual-review/contact-desktop-live.jpg"
+    "screenshot": "qa/visual-review/contact-desktop.jpg"
   },
   {
     "page": "companion-robotics.html",
@@ -172,15 +172,15 @@
         "h": 428
       },
       ".xf-hero-visual": {
-        "x": 421,
+        "x": 396,
         "y": 83,
-        "w": 1000,
+        "w": 1044,
         "h": 438
       },
       ".xf-hero-visual>img": {
-        "x": 421,
+        "x": 396,
         "y": 83,
-        "w": 1000,
+        "w": 1044,
         "h": 438
       },
       ".xf-display": {
@@ -195,7 +195,7 @@
       "heroImgNaturalHeight": 941
     },
     "errors": [],
-    "screenshot": "qa/visual-review/companion-robotics-desktop-live.jpg"
+    "screenshot": "qa/visual-review/companion-robotics-desktop.jpg"
   },
   {
     "page": "newbrain.html",
@@ -214,15 +214,15 @@
         "h": 397
       },
       ".xf-hero-visual": {
-        "x": 502,
+        "x": 477,
         "y": 83,
-        "w": 919,
+        "w": 963,
         "h": 445
       },
       ".xf-hero-visual>img": {
-        "x": 759,
+        "x": 746,
         "y": 83,
-        "w": 662,
+        "w": 694,
         "h": 445
       },
       ".xf-display": {
@@ -243,7 +243,7 @@
       "heroImgNaturalHeight": 804
     },
     "errors": [],
-    "screenshot": "qa/visual-review/newbrain-desktop-live.jpg"
+    "screenshot": "qa/visual-review/newbrain-desktop.jpg"
   },
   {
     "page": "kira-world.html",
@@ -303,7 +303,7 @@
       "heroImgNaturalHeight": 796
     },
     "errors": [],
-    "screenshot": "qa/visual-review/kira-world-mobile-live.jpg"
+    "screenshot": "qa/visual-review/kira-world-mobile.jpg"
   },
   {
     "page": "about.html",
@@ -357,7 +357,7 @@
       "heroImgNaturalHeight": 690
     },
     "errors": [],
-    "screenshot": "qa/visual-review/about-mobile-live.jpg"
+    "screenshot": "qa/visual-review/about-mobile.jpg"
   },
   {
     "page": "contact.html",
@@ -399,7 +399,7 @@
       "heroImgNaturalHeight": 724
     },
     "errors": [],
-    "screenshot": "qa/visual-review/contact-mobile-live.jpg"
+    "screenshot": "qa/visual-review/contact-mobile.jpg"
   },
   {
     "page": "companion-robotics.html",
@@ -441,7 +441,7 @@
       "heroImgNaturalHeight": 941
     },
     "errors": [],
-    "screenshot": "qa/visual-review/companion-robotics-mobile-live.jpg"
+    "screenshot": "qa/visual-review/companion-robotics-mobile.jpg"
   },
   {
     "page": "newbrain.html",
@@ -489,6 +489,6 @@
       "heroImgNaturalHeight": 804
     },
     "errors": [],
-    "screenshot": "qa/visual-review/newbrain-mobile-live.jpg"
+    "screenshot": "qa/visual-review/newbrain-mobile.jpg"
   }
 ]
