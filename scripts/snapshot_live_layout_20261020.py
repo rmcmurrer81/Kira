@@ -1,6 +1,9 @@
 from pathlib import Path
 import json
 import time
+import os
+BASE_URL=os.environ.get('KIRA_QA_BASE','http://127.0.0.1:8765/').rstrip('/')+'/'
+MODE_SUFFIX='-live' if 'kiralabs.org' in BASE_URL else ''
 from playwright.sync_api import sync_playwright
 
 out=Path("qa/visual-review")
@@ -15,9 +18,9 @@ with sync_playwright() as p:
             page=context.new_page()
             errors=[]
             page.on("pageerror",lambda err: errors.append(str(err)))
-            page.goto("http://127.0.0.1:8765/"+name,wait_until="domcontentloaded",timeout=45000)
+            page.goto(BASE_URL+name+"?visual_qa=20261020-final-4",wait_until="domcontentloaded",timeout=45000)
             page.wait_for_timeout(750)
-            path=out/(name.replace(".html","")+"-"+device+".jpg")
+            path=out/(name.replace(".html","")+"-"+device+MODE_SUFFIX+".jpg")
             page.screenshot(path=str(path),quality=87,type="jpeg",full_page=False)
             geometry=page.evaluate("""() => {
               const sel=['.xf-hero','.xf-hero-copy','.xf-hero-visual','.xf-hero-visual>img','.xf-display','.xf-world-panorama','.xf-section','.xf-card-grid'];
@@ -33,7 +36,7 @@ with sync_playwright() as p:
             if name in ("kira-world.html","about.html"):
                 page.evaluate("window.scrollTo(0, Math.min(520, document.body.scrollHeight - innerHeight))")
                 page.wait_for_timeout(180)
-                second=out/(name.replace(".html","")+"-"+device+"-below-hero.jpg")
+                second=out/(name.replace(".html","")+"-"+device+MODE_SUFFIX+"-below-hero.jpg")
                 page.screenshot(path=str(second),quality=87,type="jpeg",full_page=False)
                 print("Below-hero screenshot:",second)
             page.close()
