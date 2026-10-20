@@ -1,0 +1,53 @@
+name: Replace About portrait with original outdoor pub frame
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-original-pub-portrait-20261020.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image crop and visual integrity checks
+        run: python -m pip install --disable-pip-version-check pillow numpy
+      - name: Use the original pub video frame and its background-removal output
+        run: python scripts/restore_about_pub_original_20261020.py
+      - name: Check subject origin, required site references and original screenshots
+        run: |
+          python - <<'PY'
+          from PIL import Image,ImageStat
+          from pathlib import Path
+          import re
+          root=Path('docs')
+          hero=root/'assets/robert-real-pub-outside-city-20261020.webp'
+          still=root/'assets/robert-real-pub-outside-still-20261020.webp'
+          with Image.open(hero) as im:
+              assert im.size==(1920,760),im.size
+              assert ImageStat.Stat(im.crop((1120,100,1800,660))).stddev[0]>20
+              im.verify()
+          with Image.open(still) as im:
+              assert im.width>=1900 and im.height>=700
+              im.verify()
+          html=(root/'about.html').read_text(encoding='utf8')
+          assert 'assets/'+hero.name+'?v=1' in html
+          assert 'assets/'+still.name in html
+          assert 'video-referenced cinematic illustration' not in html
+          print('About uses actual extracted original pub frame and no generative face.')
+          PY
+      - name: Publish actual site with original footage, never a different face
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/about.html docs/assets/robert-real-pub-outside-city-20261020.webp docs/assets/robert-real-pub-outside-still-20261020.webp
+          git diff --cached --stat
+          git commit -m 'Display Robert original outdoor-pub frame on About page'
+          git pull --rebase origin main
+          git push origin HEAD:main
