@@ -1,0 +1,34 @@
+name: Publish reviewed Robert portrait to website
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-checked-robert-20261020.yml'
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace rough photo with quality-checked clean cutout
+        run: |
+          test -s qa/visual-review/robert-founder-cutout-reviewed.webp
+          cp qa/visual-review/robert-founder-cutout-reviewed.webp docs/assets/robert-founder-skyline-real-likeness-20261020.webp
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('docs/about.html')
+          h=p.read_text(encoding='utf8')
+          assert 'robert-founder-skyline-real-likeness-20261020.webp' in h
+          h=h.replace('robert-founder-skyline-real-likeness-20261020.webp','robert-founder-skyline-real-likeness-20261020.webp?v=3')
+          p.write_text(h,encoding='utf8')
+          PY
+      - name: Publish inspected media and trigger browser visual QA
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/about.html docs/assets/robert-founder-skyline-real-likeness-20261020.webp
+          git commit -m 'Replace rough About collage with verified Robert cutout'
+          git pull --rebase origin main
+          git push origin HEAD:main
