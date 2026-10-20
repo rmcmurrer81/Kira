@@ -21,8 +21,8 @@ jobs:
           python -m pip install playwright
           python -m playwright install chromium --with-deps
       - name: Give Pages deployment time to finish
-        run: sleep 40
-      - name: Capture actual public site, not preview, on desktop and mobile
+        run: sleep 55
+      - name: Capture actual selected Kira Labs homepage and project pages at three sizes
         env:
           KIRA_QA_BASE: https://kiralabs.org/
         run: python scripts/snapshot_live_layout_20261020.py
