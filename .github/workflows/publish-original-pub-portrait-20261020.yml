@@ -53,3 +53,5 @@ jobs:
           git push origin HEAD:main
 
 # Retry after validation updated to match actual subject bounding box.
+
+# Includes social preview and main hero as two references to the same pub cutout.
