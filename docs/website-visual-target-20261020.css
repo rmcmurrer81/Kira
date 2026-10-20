@@ -233,3 +233,34 @@
  .xf-page.xf-about .xf-hero-about .xf-hero-inner{z-index:4!important}
  .xf-page.xf-about .xf-hero-about{background:#061322!important}
 }
+
+/* Browser review #3: remove the baked-in image button and use the shorter hero proportions of approved mockup. */
+@media(min-width:901px){
+ .xf-page.xf-kira .xf-hero-kira .xf-hero-inner{
+  min-height:480px!important
+ }
+ .xf-page.xf-kira .xf-hero-kira .xf-hero-copy{
+  padding:23px 0!important
+ }
+ .xf-page.xf-kira .xf-hero-kira .xf-hero-visual:after{
+  content:"";position:absolute;z-index:1;pointer-events:none;
+  left:0;bottom:0;width:265px;height:140px;
+  background:linear-gradient(90deg,#05111cf4 0%,#05111cdc 65%,transparent 100%)
+ }
+ .xf-page.xf-kira .xf-hero-kira .xf-hero-visual figcaption{z-index:3}
+ .xf-page.xf-kira .xf-hero-kira .xf-note{
+  font-size:.69rem;line-height:1.32;margin:8px 0 0!important
+ }
+}
+/* Below the About hero: show existing illustrated work first, as the reference design does. */
+.xf-page.xf-about .xf-about-gallery{padding-top:34px;padding-bottom:47px;background:linear-gradient(180deg,#061625,#081323)!important}
+.xf-page.xf-about .xf-about-gallery .xf-section-top{align-items:end;gap:30px;margin-bottom:20px}
+.xf-page.xf-about .xf-about-gallery .xf-card-grid{gap:12px}
+.xf-page.xf-about .xf-about-gallery .xf-card>img{height:clamp(160px,12.5vw,185px)}
+.xf-page.xf-about .xf-about-gallery .xf-card-copy{padding:14px 15px 16px}
+.xf-page.xf-about .xf-about-gallery .xf-card-copy p{line-height:1.5;font-size:.85rem}
+.xf-page.xf-about .xf-about-gallery .xf-card h3{font-size:1.18rem}
+.xf-page.xf-about .xf-feature-quote{margin-top:16px;text-align:left;padding:20px 30px;line-height:1.4;font-size:1.35rem}
+@media(max-width:900px){
+ .xf-page.xf-about .xf-about-gallery{padding-top:30px}
+}
