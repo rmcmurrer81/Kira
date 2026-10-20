@@ -1,0 +1,38 @@
+name: Deployed Kira Labs Browser Check
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/deployed-site-qa-20261020.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install the real Chromium browser
+        run: |
+          python -m pip install playwright
+          python -m playwright install chromium --with-deps
+      - name: Give Pages deployment time to finish
+        run: sleep 40
+      - name: Capture actual public site, not preview, on desktop and mobile
+        env:
+          KIRA_QA_BASE: https://kiralabs.org/
+        run: python scripts/snapshot_live_layout_20261020.py
+      - name: Preserve final live screenshots for inspection
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add qa/visual-review
+          git diff --cached --stat
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Verified live: Kira Labs desktop and mobile page captures'
+          git pull --rebase origin main
+          git push origin HEAD:main
