@@ -1,0 +1,94 @@
+/* Kira Labs — Oct 20 visual QA: keep true HTML text separate from photography.
+   Scoped hero-layout correction; no research status or contact behavior changes. */
+.xf-page .xf-hero .xf-hero-inner{max-width:1480px}
+@media (min-width:901px){
+  .xf-page .xf-hero{padding-block:42px}
+  .xf-page .xf-hero .xf-hero-inner{
+    display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);
+    column-gap:clamp(26px,3vw,54px);
+    align-items:center;min-height:430px
+  }
+  .xf-page .xf-hero .xf-hero-copy{
+    grid-column:1;grid-row:1;position:relative;z-index:3;
+    width:100%;max-width:100%;min-width:0;padding-right:0
+  }
+  .xf-page .xf-hero .xf-hero-visual,
+  .xf-page .xf-hero-kira .xf-hero-visual,
+  .xf-page .xf-hero-about .xf-hero-visual,
+  .xf-page .xf-hero-contact .xf-hero-visual,
+  .xf-page .xf-hero-brain .xf-hero-visual{
+    grid-column:2;grid-row:1;position:relative;z-index:2;
+    top:auto;right:auto;bottom:auto;left:auto;
+    width:100%;height:clamp(345px,30vw,520px);
+    margin:0;min-width:0;overflow:hidden;isolation:isolate;
+    border-radius:8px;background:#081827;
+    box-shadow:0 20px 55px #0004
+  }
+  .xf-page .xf-hero .xf-hero-visual>img,
+  .xf-page .xf-hero-kira .xf-hero-visual>img,
+  .xf-page .xf-hero-about .xf-hero-visual>img,
+  .xf-page .xf-hero-contact .xf-hero-visual>img{
+    width:100%;height:100%;display:block;
+    object-fit:cover;object-position:center;
+    -webkit-mask-image:none;mask-image:none
+  }
+  .xf-page .xf-hero-kira .xf-hero-visual>img{object-position:50% 48%}
+  .xf-page .xf-hero-about .xf-hero-visual>img{object-position:50% 27%}
+  .xf-page .xf-hero-brain .xf-hero-visual>img{
+    object-fit:contain;object-position:center;
+    -webkit-mask-image:none;mask-image:none
+  }
+  .xf-page .xf-hero-kira:after,
+  .xf-page .xf-hero-about:after{background:none}
+  .xf-page .xf-hero-contact{padding-block:24px;min-height:0}
+  .xf-page .xf-hero-contact .xf-hero-inner{min-height:280px}
+  .xf-page .xf-hero-contact .xf-hero-visual{height:285px}
+  .xf-page .xf-hero-contact .xf-hero-visual>img{object-position:50% 55%}
+  .xf-page .xf-hero-about .xf-hero-inner{min-height:445px}
+  .xf-page .xf-hero-robot .xf-hero-visual>img{
+    width:100%;height:100%;object-fit:contain;object-position:center;
+    -webkit-mask-image:none;mask-image:none;background:#071523
+  }
+  .xf-page .xf-hero-robot .xf-hero-visual{height:clamp(330px,25vw,435px)}
+}
+@media (min-width:901px) and (max-width:1120px){
+  .xf-page .xf-hero .xf-hero-inner{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:22px}
+  .xf-page .xf-hero .xf-display{font-size:clamp(2.6rem,5.3vw,4.5rem)}
+  .xf-page .xf-hero .xf-subheading{font-size:.96rem}
+  .xf-page .xf-hero .xf-hero-visual{height:400px}
+}
+@media (max-width:900px){
+  .xf-page .xf-hero{min-height:0;display:block;padding:38px 0 0}
+  .xf-page .xf-hero .xf-hero-inner{
+    width:calc(100% - 36px);display:flex;flex-direction:column;
+    align-items:stretch;gap:20px;min-height:0
+  }
+  .xf-page .xf-hero .xf-hero-copy{position:relative;z-index:3;max-width:100%;padding:0}
+  .xf-page .xf-hero .xf-hero-visual,
+  .xf-page .xf-hero-kira .xf-hero-visual,
+  .xf-page .xf-hero-about .xf-hero-visual,
+  .xf-page .xf-hero-contact .xf-hero-visual{
+    position:relative;left:auto;right:auto;top:auto;bottom:auto;
+    width:100%;height:clamp(235px,48vw,395px);
+    margin:0 0 20px;overflow:hidden;border-radius:8px
+  }
+  .xf-page .xf-hero .xf-hero-visual>img{
+    width:100%;height:100%;object-fit:cover;object-position:center;
+    -webkit-mask-image:none;mask-image:none
+  }
+  .xf-page .xf-hero-about .xf-hero-visual>img{object-position:50% 25%}
+  .xf-page .xf-hero-brain .xf-hero-visual>img{object-fit:contain}
+  .xf-page .xf-hero-robot .xf-hero-visual>img{object-fit:contain}
+  .xf-page .xf-hero-kira:after,.xf-page .xf-hero-about:after{background:none}
+  .xf-page .xf-hero-contact{padding-top:32px}
+  .xf-page .xf-hero-contact .xf-hero-inner{min-height:0}
+}
+@media (max-width:520px){
+  .xf-page .xf-hero .xf-hero-inner{width:calc(100% - 28px)}
+  .xf-page .xf-hero .xf-display{font-size:clamp(2.6rem,10vw,4rem)}
+  .xf-page .xf-hero .xf-hero-visual{height:260px}
+  .xf-page .xf-hero-visual figcaption{right:8px;bottom:8px;font-size:.65rem}
+}
+/* Restore card framing at its native aspect; prevents soft, distorted thumbnails. */
+.xf-page .xf-world-intro .xf-card>img{image-rendering:auto}
+.xf-page .xf-world-panorama{background-position:center 52%;background-repeat:no-repeat}
