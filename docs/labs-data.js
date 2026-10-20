@@ -23,6 +23,40 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-sampled-gradient-pass-2026-10-19",
+      "title": "NewBrain sampled gradient check passes 80 coordinates and four directions",
+      "project": "NewBrain",
+      "track": "Frozen numerical-gradient check and scoped evidence audit",
+      "status": "development",
+      "date": "2026-10-19",
+      "date_basis": "NewBrain and KiraWorld GitHub research documentation plus university October 19 PDF61; separate project-internal reviewers, external replication pending.",
+      "reviewed_on": "2026-10-19",
+      "summary": "All 80 sampled coordinate comparisons, four directional comparisons and two deliberately incorrect controls passed. All ten groups including Q/K/V met the fixed signal floor; maximum absolute error ≈2.08×10⁻⁹. Original12 unchanged 2/12.",
+      "body": "The separately frozen diagnostic followed corrected metadata setup and performed 170 objective evaluations, no training, generation or scoring. Its archived execution, file evidence, cleanup, initial model checkpoint and counters were checked by separate internal roles. This supports the sampled raw derivatives of the specified objective but does not prove full optimizer correctness. The earlier inconclusive and metadata-stopped attempts stay documented.",
+      "boundary": "No main learning improvement or external replication; Original12 latest 2/12 baseline→2/12 after 256 updates, two gained and two lost. Earlier Original12 2/12→0/12 and separate Public2/Public4/30-of-30 histories are preserved. Qwen comparison still unrun.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "label": "Research concept illustration",
+        "caption": "Concept art, not a saved-gradient plot.",
+        "alt": "Concept rendering illustrating NewBrain research."
+      },
+      "sources": [
+        {
+          "label": "GitHub successful numerical follow-up",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/b497fe43dd50ef3c0a2e9fab0a682bac43e402e3"
+        },
+        {
+          "label": "Prior inconclusive numerical attempt",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/8aca55998eb88d2a23e8f1c0661328c449710e3"
+        },
+        {
+          "label": "Current results and limits",
+          "url": "results.html#sampled-gradient-pass-2026-10-19"
+        }
+      ],
+      "project_page": "newbrain.html#sampled-gradient-pass-2026-10-19"
+    },
+    {
       "project": "NewBrain",
       "date": "2026-10-19",
       "reviewed_on": "2026-10-19",
