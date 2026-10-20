@@ -30,6 +30,12 @@ with sync_playwright() as p:
             }""")
             report.append({"page":name,"device":device,"geometry":geometry,"errors":errors,"screenshot":str(path)})
             print(f"{name} {device}: {path}, hero {geometry.get('.xf-hero')}, media {geometry.get('.xf-hero-visual')}, overflow={geometry['scrollWidth']-geometry['viewportWidth']}")
+            if name in ("kira-world.html","about.html"):
+                page.evaluate("window.scrollTo(0, Math.min(520, document.body.scrollHeight - innerHeight))")
+                page.wait_for_timeout(180)
+                second=out/(name.replace(".html","")+"-"+device+"-below-hero.jpg")
+                page.screenshot(path=str(second),quality=87,type="jpeg",full_page=False)
+                print("Below-hero screenshot:",second)
             page.close()
         context.close()
     browser.close()
