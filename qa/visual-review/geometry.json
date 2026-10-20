@@ -103,25 +103,25 @@
         "x": 0,
         "y": 83,
         "w": 1440,
-        "h": 575
+        "h": 592
       },
       ".xf-hero-copy": {
         "x": 44,
         "y": 83,
         "w": 560,
-        "h": 574
+        "h": 591
       },
       ".xf-hero-visual": {
         "x": 355,
         "y": 83,
         "w": 1085,
-        "h": 574
+        "h": 591
       },
       ".xf-hero-visual>img": {
         "x": 355,
         "y": 83,
         "w": 1085,
-        "h": 574
+        "h": 591
       },
       ".xf-display": {
         "x": 44,
@@ -131,20 +131,20 @@
       },
       ".xf-section": {
         "x": 0,
-        "y": 658,
+        "y": 675,
         "w": 1440,
         "h": 673
       },
       ".xf-card-grid": {
         "x": 35,
-        "y": 858,
+        "y": 874,
         "w": 1370,
         "h": 338
       },
       "scrollWidth": 1440,
       "viewportWidth": 1440,
-      "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 760
     },
     "errors": [],
     "screenshot": "qa/visual-review/about-desktop-live.jpg"
@@ -385,25 +385,25 @@
         "x": 0,
         "y": 83,
         "w": 1980,
-        "h": 598
+        "h": 614
       },
       ".xf-hero-copy": {
         "x": 250,
         "y": 83,
         "w": 560,
-        "h": 597
+        "h": 613
       },
       ".xf-hero-visual": {
         "x": 590,
         "y": 83,
         "w": 1390,
-        "h": 597
+        "h": 613
       },
       ".xf-hero-visual>img": {
         "x": 590,
         "y": 83,
         "w": 1390,
-        "h": 597
+        "h": 613
       },
       ".xf-display": {
         "x": 250,
@@ -413,20 +413,20 @@
       },
       ".xf-section": {
         "x": 0,
-        "y": 681,
+        "y": 697,
         "w": 1980,
         "h": 691
       },
       ".xf-card-grid": {
         "x": 265,
-        "y": 893,
+        "y": 910,
         "w": 1450,
         "h": 343
       },
       "scrollWidth": 1980,
       "viewportWidth": 1980,
-      "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 760
     },
     "errors": [],
     "screenshot": "qa/visual-review/about-wide-live.jpg"
@@ -667,23 +667,23 @@
         "x": 0,
         "y": 74,
         "w": 390,
-        "h": 986
+        "h": 1003
       },
       ".xf-hero-copy": {
         "x": 17,
         "y": 74,
         "w": 356,
-        "h": 655
+        "h": 672
       },
       ".xf-hero-visual": {
         "x": 0,
-        "y": 729,
+        "y": 746,
         "w": 390,
         "h": 330
       },
       ".xf-hero-visual>img": {
         "x": 0,
-        "y": 729,
+        "y": 746,
         "w": 390,
         "h": 330
       },
@@ -695,20 +695,20 @@
       },
       ".xf-section": {
         "x": 0,
-        "y": 1060,
+        "y": 1077,
         "w": 390,
         "h": 1778
       },
       ".xf-card-grid": {
         "x": 16,
-        "y": 1355,
+        "y": 1372,
         "w": 358,
         "h": 1286
       },
       "scrollWidth": 390,
       "viewportWidth": 390,
-      "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 760
     },
     "errors": [],
     "screenshot": "qa/visual-review/about-mobile-live.jpg"
