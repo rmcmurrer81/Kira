@@ -12,7 +12,7 @@ pages=["kira-world.html","about.html","contact.html","companion-robotics.html","
 report=[]
 with sync_playwright() as p:
     browser=p.chromium.launch(headless=True,args=["--no-sandbox"])
-    for device,viewport in [("desktop",{"width":1440,"height":900}),("mobile",{"width":390,"height":844})]:
+    for device,viewport in [("desktop",{"width":1440,"height":900}),("wide",{"width":1980,"height":900}),("mobile",{"width":390,"height":844})]:
         context=browser.new_context(viewport=viewport,device_scale_factor=1)
         for name in pages:
             page=context.new_page()
