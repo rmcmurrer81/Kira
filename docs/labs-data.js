@@ -24,6 +24,40 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "evelyn-visible-three-angle-compatibility-preview-2026-10-20",
+      "title": "Evelyn's 3D head becomes visible in three distinct camera views",
+      "project": "Evelyn Hart",
+      "track": "Compatibility head-render preview: front, three-quarter and side captures",
+      "date": "2026-10-20",
+      "reviewed_on": "2026-10-20",
+      "status": "development",
+      "date_basis": "October 20, 2026 local Codex development screenshots provided by Robert at approximately 7:40–7:47 PM Eastern; the latest published NewBrain research commit still documents the earlier failed render and has not independently published this successful preview.",
+      "summary": "A corrected compatibility render showed Evelyn's face and eyes in distinct front, three-quarter and side views. The developer's independent image checks reported all three nonblank and matching their direct canvas captures. Blinking, voice, mouth movement and combined conversation remain unverified.",
+      "body": "Earlier Evelyn preview runs were blank or failed with shader and graphics-context errors. In a subsequent separately recorded compatibility render, a licensed Base Female Character candidate (BlackProject, CC BY 4.0) was displayed using modified materials and reduced textures. The saved front, three-quarter and side screenshots visibly show a face and eyes, with different camera angles. The contemporaneous local development review reported that all three saved views passed the blank-screen checks and matched direct canvas captures. The completed run and its cleanup were recorded, with the earlier failed outputs preserved. A separate post-render audit was described as accepting the scoped head-render evidence and closing that test. This is a head-preview milestone, not a speaking or interactive Evelyn demonstration.",
+      "boundary": "This success is grounded in user-supplied screenshots of the local test, not yet a new public GitHub research commit or an external replication. Original PBR materials remain unqualified. Blinking, generated voice, lip synchronization, conversational memory, and a public installer have not been verified. Next tests should measure blinking, generated speech with mouth movement, a short introduction, and visitor recall after restart. The previous failed graphics experiments remain preserved as a separate historical milestone.",
+      "image": {
+        "path": "assets/evelyn-hart-demo-concept-2026-10-19.webp",
+        "label": "Evelyn concept artwork (not the captured head)",
+        "alt": "Previously published illustrative Evelyn historian design, not one of the three successful 3D head captures",
+        "caption": "Existing concept image only; the three-view result is reported from locally reviewed screenshots, not shown here as a runtime capture."
+      },
+      "sources": [
+        {
+          "label": "Evelyn development status and planned next tests",
+          "url": "evelyn-hart.html#status"
+        },
+        {
+          "label": "Previously documented head-render failure (historical)",
+          "url": "progress.html#evelyn-head-render-graphics-and-evidence-2026-10-20"
+        },
+        {
+          "label": "NewBrain research record pending addition of this latest successful preview",
+          "url": "https://github.com/rmcmurrer81/newbrain/blob/main/docs/research/2026-10-20-current-status-and-patient-horizon-plan.md"
+        }
+      ],
+      "project_page": "evelyn-hart.html#status"
+    },
+    {
       "id": "evelyn-head-render-graphics-and-evidence-2026-10-20",
       "title": "Evelyn head rendering: graphics and file-accounting failures identified",
       "project": "Evelyn Hart",
