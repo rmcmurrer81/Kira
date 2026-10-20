@@ -6,6 +6,7 @@ on:
       - '.github/workflows/site-visual-qa-20261020.yml'
       - 'scripts/snapshot_live_layout_20261020.py'
       - 'docs/website-visual-target-20261020.css'
+      - 'docs/index.html'
       - 'docs/kira-world.html'
       - 'docs/about.html'
       - 'docs/newbrain.html'
