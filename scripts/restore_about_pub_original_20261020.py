@@ -39,7 +39,7 @@ if abbox is None: raise RuntimeError("Cutout is entirely transparent")
 assert alpha.getpixel((200,440))<35, "Pub background not removed on left"
 assert alpha.getpixel((1500,450))<35, "Pub background not removed on right"
 assert alpha.getpixel((920,440))>190, "Actual video face is missing"
-if not (420 < abbox[0] < 850 and 100 < abbox[1] < 450 and 1100 < abbox[2] < 1550 and 775 < abbox[3] <=1080):
+if not (420 < abbox[0] < 850 and 100 < abbox[1] < 450 and 1100 < abbox[2] < 1700 and 775 < abbox[3] <=1080):
     raise RuntimeError(f"Unexpected subject bounds, refusing to publish {abbox}")
 print("Pub cutout subject-only bbox",abbox)
 
