@@ -23,6 +23,70 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "project": "NewBrain",
+      "date": "2026-10-19",
+      "reviewed_on": "2026-10-19",
+      "status": "development",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "label": "Concept illustration",
+        "caption": "Artwork illustrating the research topic, not a screenshot of experimental results.",
+        "alt": "Abstract illustration for NewBrain learning and diagnostic research"
+      },
+      "id": "newbrain-numerical-limited-2026-10-19",
+      "title": "NewBrain numerical diagnostic inconclusive; private evidence publication failed",
+      "track": "Numerical diagnostics and evidence-quality limits",
+      "date_basis": "October 19 NewBrain/GitHub record of a completed limited diagnostic and failed evidence publication.",
+      "summary": "170 objective evaluations produced no saved sampled mismatches, but Q/K/V signals were below the frozen floor; final private evidence publication failed, so full qualification remains on hold.",
+      "body": "The saved 40 coordinate-pair and two direction-pair comparisons found no mismatches and rejected two deliberately wrong-gradient controls. These signals were below the required 1e-6 nontriviality floor. Final private-owner execution evidence was not published. A subsequent metadata-only follow-up stopped before any model/worker started and made zero evaluations. No training updates occurred, and a stronger frozen probe remains unrun.",
+      "boundary": "Scientific result INCONCLUSIVE; execution qualification HOLD. Older 30/30 sampled-gradient result is a different historical test. No improved Original12 score, generalized learning, Qwen comparison, optimizer fix or external university replication demonstrated.",
+      "sources": [
+        {
+          "label": "Limited numerical diagnostic method",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/8aca55998eb88d2a23e8f1c0661328c449710e3b"
+        },
+        {
+          "label": "Follow-up metadata-only hold",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/4be85fb73176a1d8f5ec7e26672557b0af9e594c"
+        },
+        {
+          "label": "Read dashboard analysis",
+          "url": "results.html#numerical-diagnostic-2026-10-19"
+        }
+      ],
+      "project_page": "newbrain.html#numerical-diagnostic-2026-10-19"
+    },
+    {
+      "project": "NewBrain",
+      "date": "2026-10-19",
+      "reviewed_on": "2026-10-19",
+      "status": "development",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "label": "Concept illustration",
+        "caption": "Artwork illustrating the research topic, not a screenshot of experimental results.",
+        "alt": "Abstract illustration for NewBrain learning and diagnostic research"
+      },
+      "id": "newbrain-public4-retention-2026-10-19",
+      "title": "NewBrain Public4 retention pilot: different outcomes, both 2/4 after reload",
+      "track": "Public taught-answer acquisition and missing-information retention",
+      "date_basis": "October 19 internally reviewed NewBrain four-response pilot and saved execution/cost closure documented on GitHub.",
+      "summary": "Both 64-update training arms finished 2/4 after fresh reload. Supported-only teaching gained one supported answer and lost one missing-information pass; mixed teaching retained both controls but gained neither supported answer.",
+      "body": "Separate from Public2 and Original12. Two training arms began at 2/4, used 64 updates each and ended at 2/4. All eight final response endpoints survived a distinct fresh-process reload with zero additional training. The mixed arm added 128 presentations and changed token-normalized loss weighting, so the comparison cannot isolate rehearsal content as the cause. Project-internal separate roles audited saved execution; independent university replication has not happened.",
+      "boundary": "No net accuracy gain, unfamiliar-fact learning, held-out generalization or long-term retention established. Rehearsed missing-information controls are not learned facts. The older Original12 2/12 → 0/12 result, newer Original12 2/12 → 2/12 study and distinct Public2 1/2 → 2/2 follow-up retain their own benchmark histories.",
+      "sources": [
+        {
+          "label": "Public4 saved method and scores",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/4da30cbc108624cf9253ae4f9e2c12840e0266f1"
+        },
+        {
+          "label": "Read dashboard comparison",
+          "url": "results.html#retention-pilot-2026-10-19"
+        }
+      ],
+      "project_page": "newbrain.html#retention-pilot-2026-10-19"
+    },
+    {
       "id": "newbrain-256-training-2026-10-19",
       "title": "NewBrain completes 256-update Original12 study: 2/12 before and after",
       "project": "NewBrain",
