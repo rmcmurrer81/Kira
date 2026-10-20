@@ -95,4 +95,4 @@ h=h.replace("AI-assisted cinematic portrait based on Robert's supplied video fra
 h=h.replace("Founder portrait · video-referenced cinematic illustration","Actual pub-video frame · skyline composite")
 p.write_text(h,encoding="utf-8")
 print("About page actual footage references verified:",h.count(hero_path.name),h.count(still_path.name))
-assert h.count(hero_path.name)==1 and h.count(still_path.name)==1
+assert h.count(hero_path.name)==2 and h.count(still_path.name)==1 # hero + social card
