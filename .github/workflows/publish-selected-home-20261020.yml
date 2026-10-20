@@ -1,0 +1,60 @@
+name: Publish selected research-first Kira Labs home
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-selected-home-20261020.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-real-site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image validation and HTML tools
+        run: python -m pip install pillow beautifulsoup4
+      - name: Publish approved home-page layout with EXISTING high-resolution assets
+        env:
+          KIRA_EXISTING_NEURAL_URL: https://at.adobe.com/ieoYccdnMoekoXos
+          KIRA_EXISTING_ROBOT_URL: https://at.adobe.com/qUNPCa0QvUrNGoT3
+        run: python scripts/publish_selected_home_20261020.py
+      - name: Confirm HTML, images and pages are readable
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          from bs4 import BeautifulSoup
+          root=Path('docs')
+          page=BeautifulSoup((root/'index.html').read_text(encoding='utf8'),'html.parser')
+          assert page.select_one('.hl-hero h1').get_text(' ',strip=True).startswith('Research today.')
+          assert len(page.select('.hl-program'))==5
+          assert len(page.select('.hl-metric'))==4
+          assert page.select_one('.hl-mission h2')
+          for name in ['home-neural-highres-20261020.webp','companion-robot-highres-20261020.webp']:
+              path=root/'assets'/name
+              with Image.open(path) as im:
+                  assert im.width>=1500 and im.height>=850, (name,im.size)
+                  im.verify()
+          for name in ['newbrain.html','companion-robotics.html']:
+              h=(root/name).read_text(encoding='utf8')
+              assert 'website-visual-target-20261020.css?v=20261020-final-8' in h
+          assert 'no hero crops' in (root/'website-visual-target-20261020.css').read_text()
+          print('Selected home and high-resolution fixes structurally validated')
+          PY
+      - name: Commit the ACTUAL website update
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/index.html docs/newbrain.html docs/companion-robotics.html docs/website-visual-target-20261020.css docs/assets/home-neural-highres-20261020.webp docs/assets/companion-robot-highres-20261020.webp
+          git diff --cached --stat
+          test -n "$(git diff --cached --name-only)"
+          git commit -m "Publish selected research-first home and crisp NewBrain/robot hero art"
+          git pull --rebase origin main
+          git push origin HEAD:main
