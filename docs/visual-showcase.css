@@ -136,3 +136,67 @@
  .ks-world .ks-world-hero .project-lead-art .media-frame img[src*="kira-lisa-companions"]{height:420px;}
  .cr-page .cr-graph{border-radius:10px;}
 }
+
+/* October 20 visual corrections: the web pages must match the approved immersive visual direction. */
+/* Kira World: large, continuous scene with character concept, not a tiny headshot box. */
+.ks-world .kw-world-hero{position:relative;isolation:isolate;overflow:hidden;padding:0;border-bottom:1px solid rgba(121,235,243,.19);background:#080c17}
+.ks-world .kw-world-backdrop{position:absolute;inset:-20px;z-index:-2;background:url("assets/kira-world-companionship-concept-2026-10-18.jpg") 56% 46% / cover no-repeat;opacity:.33;filter:blur(2px) saturate(1.32)}
+.ks-world .kw-world-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#06111fee 4%,#071426c9 34%,#0b112090 68%,#090e176b),radial-gradient(ellipse at 72% 45%,rgba(114,65,165,.18),transparent 63%);pointer-events:none}
+.ks-world .kw-world-hero-grid{width:min(1450px,calc(100% - 72px));display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:32px;align-items:center;min-height:660px}
+.ks-world .kw-world-hero-copy{position:relative;z-index:2;padding:68px 0 76px;min-width:0}
+.ks-world .kw-world-hero h1{font-size:clamp(3.25rem,5.3vw,6rem);letter-spacing:-.057em;line-height:1.04;max-width:740px;margin:12px 0 25px}
+.ks-world .kw-world-hero h1 em{display:block;font-family:Georgia,serif;font-weight:400;font-size:.72em;font-style:italic;color:#7ceaf3;letter-spacing:-.046em;line-height:1.18;margin-top:9px}
+.ks-world .kw-world-hero .lead{max-width:700px;font-size:clamp(1.04rem,1.36vw,1.2rem);line-height:1.78;color:#dce6ef}
+.ks-world .kw-world-hero .ks-triad{margin:21px 0 26px}
+.ks-world .kw-world-hero .button-row{display:flex;flex-wrap:wrap;gap:10px}
+.ks-world .kw-reality-boundary{color:#b8c9d8;font-size:.82rem;line-height:1.68;max-width:620px;border-left:3px solid #ffc86a;padding-left:13px;margin:27px 0 0}
+.ks-world .kw-world-hero-art{position:relative;z-index:1;align-self:end;margin:0;display:flex;flex-direction:column;align-items:flex-end;justify-content:end;min-height:630px;max-width:100%;overflow:visible}
+.ks-world .kw-world-hero-art img{display:block;width:min(100%,580px);height:auto;max-height:650px;object-fit:contain;object-position:50% 50%;mask-image:linear-gradient(to bottom,black 0%,black 89%,transparent 100%);filter:drop-shadow(0 12px 36px rgba(0,0,0,.6))}
+.ks-world .kw-world-hero-art figcaption{position:absolute;right:0;bottom:20px;max-width:375px;text-align:right;color:#b9cedb;font-size:.71rem;line-height:1.6;background:#071222a3;padding:7px 13px;border-right:2px solid #8ae7ef}
+.ks-world .kw-world-vision{padding:74px 0 85px;background:linear-gradient(150deg,#0b192b,#080d19)}
+.ks-world .kw-world-vision>.wrap{width:min(1420px,calc(100% - 72px))}
+.ks-world .kw-world-vision .section-head h2{font-size:clamp(2.3rem,3.6vw,3.6rem);letter-spacing:-.04em}
+.ks-world .kw-world-vision .section-head h2 em{font-family:Georgia,serif;font-weight:400;color:#79ebf3}
+.ks-world .kw-world-vision-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:24px 0 27px}
+.ks-world .kw-world-vision-card{overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(160deg,#122940,#0a1424);border:1px solid rgba(121,235,243,.2);border-radius:13px;min-width:0}
+.ks-world .kw-world-vision-card figure{margin:0;position:relative;background:#0c1728}
+.ks-world .kw-world-vision-card figure img{width:100%;height:258px;object-fit:cover;object-position:50% 45%;display:block}
+.ks-world .kw-world-vision-card:first-child figure img{object-fit:contain;background:#071523}
+.ks-world .kw-world-vision-card:last-child figure img{object-fit:contain;background:radial-gradient(circle at center,#182c44,#0b182b)}
+.ks-world .kw-world-vision-card figcaption{position:absolute;left:10px;bottom:11px;max-width:calc(100% - 20px);padding:6px 9px;background:#081524ec;border:1px solid rgba(121,235,243,.34);color:#d5eff5;font-size:.69rem;border-radius:4px}
+.ks-world .kw-world-vision-card>div{padding:25px 25px 27px;display:flex;flex-direction:column;gap:12px;flex:1}
+.ks-world .kw-world-vision-card h3{font-size:1.53rem;line-height:1.2;margin:0}
+.ks-world .kw-world-vision-card p{color:#c0d1df;font-size:.92rem;line-height:1.72;margin:0 0 8px}
+.ks-world .kw-world-vision-card a{font-size:.8rem;font-weight:740;color:#80eff5;margin-top:auto}
+.ks-world .kw-world-vision .boundary{font-size:.82rem}
+/* NewBrain no crop: preserve the complete original brain illustration. */
+.ks-brain .ks-showcase-hero .ks-hero-figure{display:grid;grid-template-rows:auto auto;min-width:0;max-width:none;background:#081424;border:1px solid rgba(121,235,243,.28)}
+.ks-brain .ks-showcase-hero .ks-hero-figure img{width:100%;height:auto;aspect-ratio:auto;max-height:475px;object-fit:contain;object-position:center;display:block;background:#081424}
+.ks-brain .ks-architecture-media{background:linear-gradient(90deg,#081626,#07111b)}
+.ks-brain .ks-architecture-media img{width:57%;height:100%;left:0;object-fit:contain;object-position:left center;opacity:1}
+.ks-brain .ks-architecture-media:before{background:linear-gradient(90deg,#06101b00 30%,#081420ed 58%,#081420 100%);z-index:1}
+.ks-brain .ks-architecture-media>div{grid-column:2}
+@media(max-width:1000px){
+ .ks-world .kw-world-hero-grid{gap:10px;min-height:590px;grid-template-columns:minmax(0,1fr) minmax(0,.84fr)}
+ .ks-world .kw-world-hero-art{min-height:580px}
+ .ks-world .kw-world-hero-art img{width:100%;max-height:580px}
+}
+@media(max-width:760px){
+ .ks-world .kw-world-hero-grid{width:calc(100% - 38px);grid-template-columns:1fr;gap:0;min-height:0}
+ .ks-world .kw-world-hero-copy{padding:46px 0 10px}
+ .ks-world .kw-world-hero-art{justify-content:center;align-items:center;min-height:0;margin:0 auto;width:min(100%,480px)}
+ .ks-world .kw-world-hero-art img{max-height:450px;object-fit:contain}
+ .ks-world .kw-world-hero-art figcaption{right:0;bottom:10px;text-align:right}
+ .ks-world .kw-world-vision>.wrap{width:calc(100% - 32px)}
+ .ks-world .kw-world-vision-grid{grid-template-columns:1fr 1fr}
+ .ks-brain .ks-architecture-media img{width:100%;height:65%;object-fit:contain;object-position:center top}
+ .ks-brain .ks-architecture-media:before{background:linear-gradient(to bottom,#07131b00 0%,#07131bd9 60%,#07131b 100%)}
+ .ks-brain .ks-architecture-media>div{bottom:0;left:0;width:100%;padding:22px}
+}
+@media(max-width:550px){
+ .ks-world .kw-world-hero h1{font-size:clamp(2.7rem,11vw,4.5rem)}
+ .ks-world .kw-world-hero-art img{max-height:405px}
+ .ks-world .kw-world-vision-grid{grid-template-columns:1fr}
+ .ks-world .kw-world-vision-card figure img{height:245px}
+ .ks-world .kw-world-vision{padding:47px 0}
+}
