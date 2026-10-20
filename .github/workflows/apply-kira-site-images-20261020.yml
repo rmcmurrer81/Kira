@@ -1,0 +1,62 @@
+name: Apply Kira Labs image fixes
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-kira-site-images-20261020.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out public website
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Set up media tooling
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image processing dependencies
+        run: python -m pip install --disable-pip-version-check pillow numpy opencv-python-headless
+      - name: Replace images on the real website
+        env:
+          KIRA_CITY_IMAGE_URL: 'https://at.adobe.com/rUu0K2PMeLSNuLTk'
+          KIRA_ROBOT_IMAGE_URL: 'https://at.adobe.com/A7uQFd1POWCcUMnq'
+        run: python scripts/publish_kira_site_media_20261020.py
+      - name: Verify output is suitable for the actual website
+        run: |
+          python - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          names = [
+              'kira-future-city-hd-20261020.webp',
+              'kira-humanoid-robot-hd-20261020.webp',
+              'robert-cinematic-waterfront-20261020.webp',
+          ]
+          for name in names:
+              p = Path('docs/assets') / name
+              with Image.open(p) as im:
+                  im.verify()
+              with Image.open(p) as im:
+                  assert im.width >= 1600 and im.height >= 700, (name, im.size)
+              print('Image verified:', p, p.stat().st_size)
+          for path in ['kira-world.html','companion-robotics.html','about.html','contact.html']:
+              content=(Path('docs')/path).read_text(encoding='utf8')
+              assert 'hero-layout-fix-20261020.css?v=2' in content, path
+          assert 'kira-future-city-hd-20261020.webp' in Path('docs/fidelity-website-20261020.css').read_text()
+          PY
+      - name: Publish images and fix site references
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs
+          git diff --cached --stat
+          if git diff --cached --quiet; then echo 'No website changes'; exit 0; fi
+          git commit -m 'Publish sharp new skyline, robot and founder images to Kira Labs'
+          git push origin HEAD:main
