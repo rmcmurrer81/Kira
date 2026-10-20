@@ -51,3 +51,5 @@ jobs:
           git commit -m 'Display Robert original outdoor-pub frame on About page'
           git pull --rebase origin main
           git push origin HEAD:main
+
+# Retry after validation updated to match actual subject bounding box.
