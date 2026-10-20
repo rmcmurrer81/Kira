@@ -123,3 +123,16 @@
   .phs .phs-editorial-figure img[src*="patient-horizon-scan-concept"]{height:260px}
 }
 @media(prefers-reduced-motion:reduce){.ks-brain *, .ks-world *, .ks-partners *{scroll-behavior:auto}}
+
+/* October 20 user-selected Kira & Lisa visual: use the actual preview art, not the former cream diagram. */
+.ks-world .ks-world-hero .project-lead-art .media-frame{background:radial-gradient(circle at 50% 35%,#15344d,#07111f 68%);border-color:#7de9f440;}
+.ks-world .ks-world-hero .project-lead-art .media-frame img[src*="kira-lisa-companions"]{width:100%;height:clamp(470px,41vw,640px);aspect-ratio:auto;object-fit:contain;object-position:50% 35%;background:radial-gradient(circle at 55% 36%,#132841,#081423 70%);}
+.ks-world .ks-world-hero .project-lead-art .media-frame figcaption{display:grid;gap:5px;}
+.ks-world .ks-world-hero .project-lead-art .media-frame figcaption strong{display:block;color:#b9f3f6;}
+.ks-world .ks-world-progress-card:last-child .ks-status-photo img{object-fit:cover;object-position:50% 42%;background:#0a1828;}
+.cr-page .cr-graph{max-width:100%;border-radius:18px;overflow:hidden;border:1px solid rgba(121,235,243,.32);background:#09172a;box-shadow:0 22px 75px rgba(0,0,0,.36);}
+.cr-page .cr-graph img[src*="companion-robot-ros2-architecture-visual"]{display:block;width:100%;height:auto;aspect-ratio:2048/1244;object-fit:contain;object-position:center;}
+@media(max-width:690px){
+ .ks-world .ks-world-hero .project-lead-art .media-frame img[src*="kira-lisa-companions"]{height:420px;}
+ .cr-page .cr-graph{border-radius:10px;}
+}

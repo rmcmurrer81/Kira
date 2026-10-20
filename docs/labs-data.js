@@ -23,6 +23,36 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "iris-standalone-site-guide-2026-10-20",
+      "title": "Iris becomes a separate public website guide, distinct from Contact",
+      "project": "Lab & website",
+      "track": "Public research navigation and accurate visitor expectations",
+      "date": "2026-10-20",
+      "reviewed_on": "2026-10-20",
+      "status": "demo",
+      "date_basis": "Kira Labs website source change creating an Iris guide page, with the original guide scripts and knowledge checks kept intact.",
+      "summary": "Iris now has her own website page where visitors can explore published Kira Labs information. Contact remains reserved for messages to Robert.",
+      "body": "The existing published Iris interface was moved from the Contact page without changing its form controls, guide scripts or knowledge-loading logic. The navigation and contact page link to the guide, but Iris chat does not send messages to the founder. Iris is a public information guide rather than a NewBrain benchmark or KiraWorld personality release.",
+      "boundary": "A dedicated page is not evidence of enhanced language-model capability, new research results or independent verification of every conversational response. No website message is delivered through Iris chat.",
+      "image": {
+        "path": "assets/kira-labs-hero.webp",
+        "label": "Kira Labs digital-world concept",
+        "alt": "Illustrative Kira Labs digital spaces, not a live Iris application screenshot",
+        "caption": "Concept artwork of the lab, distinct from the functional site guide."
+      },
+      "sources": [
+        {
+          "label": "Ask Iris website guide",
+          "url": "iris.html"
+        },
+        {
+          "label": "Contact Robert directly",
+          "url": "contact.html"
+        }
+      ],
+      "project_page": "iris.html"
+    },
+    {
       "id": "newbrain-sampled-gradient-pass-2026-10-19",
       "title": "NewBrain sampled gradient check passes 80 coordinates and four directions",
       "project": "NewBrain",

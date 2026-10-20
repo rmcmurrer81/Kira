@@ -19,6 +19,17 @@
     shop.textContent = 'Shop';
     links.insertBefore(shop, links.querySelector('a.contact, a[href="contact.html"]'));
   });
+  // Give the public guide its own navigation destination. It does not send messages.
+  document.querySelectorAll('#primary-nav, .footlinks').forEach(links => {
+    if (links.querySelector('a[href="iris.html"]')) return;
+    const a=document.createElement('a');a.href='iris.html';a.textContent='Ask Iris';
+    if (location.pathname.endsWith('/iris.html')) a.setAttribute('aria-current','page');
+    links.insertBefore(a, links.querySelector('a[href="contact.html"],a.contact') || null);
+  });
+  // Contact is a message channel; Iris is a separate informational guide.
+  document.querySelectorAll('.footlinks a[href="contact.html"]').forEach(a=>{
+    if(a.textContent.includes('Iris')) a.textContent='Contact Robert';
+  });
   document.body.classList.add('js');
   const menu = document.querySelector('.menu-toggle');
   const nav = document.getElementById('primary-nav');

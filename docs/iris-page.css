@@ -1,0 +1,21 @@
+/* Dedicated public site guide. No server-action or new AI behavior introduced. */
+.kb-iris-page .kb-iris-hero{padding:65px 0 57px;background:radial-gradient(circle at 80% 10%,#22466a55,transparent 55%),linear-gradient(140deg,#081322,#0b1020);border-bottom:1px solid #79ebf336;}
+.kb-iris-page .kb-iris-hero h1{font-size:clamp(3rem,6vw,5.8rem);letter-spacing:-.045em;margin:0 0 15px;}
+.kb-iris-page .kb-iris-hero h1 em{color:#79ebf3;font-family:Georgia,serif;font-weight:400;}
+.kb-iris-page .kb-iris-hero .lead{max-width:920px;color:#d1e0ed;line-height:1.76;}
+.kb-iris-page .kb-iris-hero .button-row{margin-top:25px;display:flex;gap:10px;flex-wrap:wrap;}
+.kb-iris-page .kb-iris-main .kb-iris-layout{display:grid;grid-template-columns:minmax(260px,.79fr) minmax(0,1.21fr);gap:30px;align-items:start;max-width:1390px;}
+.kb-iris-page .kb-iris-overview{position:sticky;top:104px;background:linear-gradient(160deg,#132943,#0b1525);border:1px solid #79ebf331;border-radius:15px;padding:25px;color:#c5d8e6;line-height:1.72;}
+.kb-iris-page .kb-iris-overview figure{margin:-25px -25px 24px;border-bottom:1px solid #79ebf331;background:#0a1828;}
+.kb-iris-page .kb-iris-overview img{width:100%;height:220px;object-fit:contain;display:block;}
+.kb-iris-page .kb-iris-overview figcaption{padding:9px 15px;font-size:.73rem;color:#accedc;}
+.kb-iris-page .kb-iris-overview h2{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.12;color:#f5faff;letter-spacing:-.03em;}
+.kb-iris-page .kb-iris-overview h2 em{font-family:Georgia,serif;color:#79ebf3;font-weight:400;}
+.kb-iris-page .kb-iris-overview p{font-size:.95rem;}
+.kb-iris-page .kb-iris-overview strong{color:#e2f8ff;}
+.kb-iris-page .kb-iris-overview a{color:#79ebf3;}
+.kb-iris-page .kb-iris-related{display:grid;gap:9px;border-top:1px solid #79ebf32c;padding-top:20px;margin-top:20px;font-size:.88rem;}
+.kb-iris-page .kb-iris-layout .kb-contact-iris-card{min-width:0;scroll-margin-top:105px;}
+.kb-iris-page .kb-iris-layout #iris-title{scroll-margin-top:100px;}
+@media(max-width:900px){.kb-iris-page .kb-iris-main .kb-iris-layout{grid-template-columns:1fr}.kb-iris-page .kb-iris-overview{position:static}.kb-iris-page .kb-iris-main .contact-card{width:100%;}}
+@media(max-width:650px){.kb-iris-page .kb-iris-hero{padding:43px 0}.kb-iris-page .kb-iris-main .kb-iris-layout{width:calc(100% - 32px)}.kb-iris-page .kb-iris-overview{padding:19px}.kb-iris-page .kb-iris-overview figure{margin:-19px -19px 20px}.kb-iris-page .kb-iris-overview img{height:174px}}

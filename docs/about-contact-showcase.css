@@ -222,3 +222,20 @@
  .kb-about .kb-field{transition:none}
  .kb-about .kb-field:hover{transform:none}
 }
+
+/* Authentic, self-provided Robert photograph replaces prior synthetic portrait. */
+.kb-about .kb-about-hero-art{background:radial-gradient(circle at center,#224458,#091322);border:1px solid #7ce5f35c;}
+.kb-about .kb-about-hero-art img[src*="robert-authentic"]{width:100%;height:clamp(410px,44vw,610px);object-fit:contain;object-position:center center;background:#121a23;}
+.kb-about .kb-about-hero-art figcaption small{color:#a6d9e7;}
+.kb-contact .kb-iris-contact-preview{display:flex;flex-direction:column;gap:15px;overflow:hidden;}
+.kb-contact .kb-iris-contact-preview figure{margin:-31px -31px 12px;overflow:hidden;background:#081727;}
+.kb-contact .kb-iris-contact-preview figure img{display:block;width:100%;height:240px;object-fit:cover;object-position:center;}
+.kb-contact .kb-iris-contact-preview figcaption{background:#0b2434;color:#adcddd;font-size:.75rem;padding:9px 15px;}
+.kb-contact .kb-iris-contact-preview h2{line-height:1.2;}
+.kb-contact .kb-iris-contact-preview h2 em{color:#79ebf3;font-family:Georgia,serif;}
+.kb-contact .kb-iris-contact-preview p{line-height:1.75;color:#c5d6e4;}
+.kb-contact .kb-iris-contact-preview .button-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;}
+@media(max-width:670px){
+ .kb-about .kb-about-hero-art img[src*="robert-authentic"]{height:400px;}
+ .kb-contact .kb-iris-contact-preview figure{margin:-22px -18px 12px;}
+}
