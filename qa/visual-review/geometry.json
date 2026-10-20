@@ -25,7 +25,7 @@
         "x": 0,
         "y": 927,
         "w": 1440,
-        "h": 496
+        "h": 507
       },
       "scrollWidth": 1440,
       "viewportWidth": 1440,
@@ -33,7 +33,7 @@
       "heroImgNaturalHeight": null
     },
     "errors": [],
-    "screenshot": "qa/visual-review/index-desktop-live.jpg"
+    "screenshot": "qa/visual-review/index-desktop.jpg"
   },
   {
     "page": "kira-world.html",
@@ -93,7 +93,7 @@
       "heroImgNaturalHeight": 796
     },
     "errors": [],
-    "screenshot": "qa/visual-review/kira-world-desktop-live.jpg"
+    "screenshot": "qa/visual-review/kira-world-desktop.jpg"
   },
   {
     "page": "about.html",
@@ -147,7 +147,7 @@
       "heroImgNaturalHeight": 760
     },
     "errors": [],
-    "screenshot": "qa/visual-review/about-desktop-live.jpg"
+    "screenshot": "qa/visual-review/about-desktop.jpg"
   },
   {
     "page": "contact.html",
@@ -189,7 +189,7 @@
       "heroImgNaturalHeight": 724
     },
     "errors": [],
-    "screenshot": "qa/visual-review/contact-desktop-live.jpg"
+    "screenshot": "qa/visual-review/contact-desktop.jpg"
   },
   {
     "page": "companion-robotics.html",
@@ -231,7 +231,7 @@
       "heroImgNaturalHeight": 941
     },
     "errors": [],
-    "screenshot": "qa/visual-review/companion-robotics-desktop-live.jpg"
+    "screenshot": "qa/visual-review/companion-robotics-desktop.jpg"
   },
   {
     "page": "newbrain.html",
@@ -279,7 +279,7 @@
       "heroImgNaturalHeight": 941
     },
     "errors": [],
-    "screenshot": "qa/visual-review/newbrain-desktop-live.jpg"
+    "screenshot": "qa/visual-review/newbrain-desktop.jpg"
   },
   {
     "page": "index.html",
@@ -307,7 +307,7 @@
         "x": 0,
         "y": 957,
         "w": 1980,
-        "h": 517
+        "h": 528
       },
       "scrollWidth": 1980,
       "viewportWidth": 1980,
@@ -315,7 +315,7 @@
       "heroImgNaturalHeight": null
     },
     "errors": [],
-    "screenshot": "qa/visual-review/index-wide-live.jpg"
+    "screenshot": "qa/visual-review/index-wide.jpg"
   },
   {
     "page": "kira-world.html",
@@ -375,7 +375,7 @@
       "heroImgNaturalHeight": 796
     },
     "errors": [],
-    "screenshot": "qa/visual-review/kira-world-wide-live.jpg"
+    "screenshot": "qa/visual-review/kira-world-wide.jpg"
   },
   {
     "page": "about.html",
@@ -429,7 +429,7 @@
       "heroImgNaturalHeight": 760
     },
     "errors": [],
-    "screenshot": "qa/visual-review/about-wide-live.jpg"
+    "screenshot": "qa/visual-review/about-wide.jpg"
   },
   {
     "page": "contact.html",
@@ -471,7 +471,7 @@
       "heroImgNaturalHeight": 724
     },
     "errors": [],
-    "screenshot": "qa/visual-review/contact-wide-live.jpg"
+    "screenshot": "qa/visual-review/contact-wide.jpg"
   },
   {
     "page": "companion-robotics.html",
@@ -513,7 +513,7 @@
       "heroImgNaturalHeight": 941
     },
     "errors": [],
-    "screenshot": "qa/visual-review/companion-robotics-wide-live.jpg"
+    "screenshot": "qa/visual-review/companion-robotics-wide.jpg"
   },
   {
     "page": "newbrain.html",
@@ -561,7 +561,7 @@
       "heroImgNaturalHeight": 941
     },
     "errors": [],
-    "screenshot": "qa/visual-review/newbrain-wide-live.jpg"
+    "screenshot": "qa/visual-review/newbrain-wide.jpg"
   },
   {
     "page": "index.html",
@@ -589,7 +589,7 @@
         "x": 0,
         "y": 1789,
         "w": 390,
-        "h": 1219
+        "h": 1238
       },
       "scrollWidth": 390,
       "viewportWidth": 390,
@@ -597,7 +597,7 @@
       "heroImgNaturalHeight": null
     },
     "errors": [],
-    "screenshot": "qa/visual-review/index-mobile-live.jpg"
+    "screenshot": "qa/visual-review/index-mobile.jpg"
   },
   {
     "page": "kira-world.html",
@@ -657,7 +657,7 @@
       "heroImgNaturalHeight": 796
     },
     "errors": [],
-    "screenshot": "qa/visual-review/kira-world-mobile-live.jpg"
+    "screenshot": "qa/visual-review/kira-world-mobile.jpg"
   },
   {
     "page": "about.html",
@@ -711,7 +711,7 @@
       "heroImgNaturalHeight": 760
     },
     "errors": [],
-    "screenshot": "qa/visual-review/about-mobile-live.jpg"
+    "screenshot": "qa/visual-review/about-mobile.jpg"
   },
   {
     "page": "contact.html",
@@ -753,7 +753,7 @@
       "heroImgNaturalHeight": 724
     },
     "errors": [],
-    "screenshot": "qa/visual-review/contact-mobile-live.jpg"
+    "screenshot": "qa/visual-review/contact-mobile.jpg"
   },
   {
     "page": "companion-robotics.html",
@@ -795,7 +795,7 @@
       "heroImgNaturalHeight": 941
     },
     "errors": [],
-    "screenshot": "qa/visual-review/companion-robotics-mobile-live.jpg"
+    "screenshot": "qa/visual-review/companion-robotics-mobile.jpg"
   },
   {
     "page": "newbrain.html",
@@ -843,6 +843,6 @@
       "heroImgNaturalHeight": 941
     },
     "errors": [],
-    "screenshot": "qa/visual-review/newbrain-mobile-live.jpg"
+    "screenshot": "qa/visual-review/newbrain-mobile.jpg"
   }
 ]
