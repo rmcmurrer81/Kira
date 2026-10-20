@@ -9,6 +9,7 @@ window.KIRA_LABS_TIMELINE = {
     "Kira World",
     "NewBrain",
     "Patient Horizon",
+    "Evelyn Hart",
     "ShiftBrief",
     "Video Studio",
     "Sarah Travel",
@@ -22,6 +23,36 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "evelyn-head-render-graphics-and-evidence-2026-10-20",
+      "title": "Evelyn head rendering: graphics and file-accounting failures identified",
+      "project": "Evelyn Hart",
+      "track": "Avatar renderer visual acceptance and saved-evidence review",
+      "date": "2026-10-20",
+      "reviewed_on": "2026-10-20",
+      "status": "development",
+      "date_basis": "October 20, 2026 NewBrain/KiraWorld/Patient-Horizon synchronized research-status documentation and saved browser evidence; one development track, not three independent successful experiments.",
+      "summary": "Evelyn's head preview is not yet visible. A corrected capture encountered shader errors for eye-moisture and eyebrow materials and then WebGL context loss; an independent Chrome-profile file-accounting race also stopped a supervisor.",
+      "body": "An earlier render-only run exited and cleaned up, but its front, three-quarter and side captures showed no head and were byte-identical despite camera changes, so visual acceptance failed. A distinct later capture then logged shader-validation errors for the eye-moisture and eyebrow materials and lost the WebGL context at the first front-view capture. Separately, an owned Chrome-profile temporary file disappeared between enumeration and inspection, stopping its file-accounting supervisor. The only saved follow-up images are blank baseline page/canvas captures. A saved-only review accepted the available evidence and closure records; all chosen run and review allowances closed, with some child I/O counters unknown.",
+      "boundary": "These are verified observations and diagnostic evidence, not a working avatar, a confirmed root cause of WebGL context loss, successful head screenshots, tested speech or lip motion, or a released Evelyn installer. The next work is a graphics-material compatibility correction and a safer transient-file accounting path, followed by a fresh separately recorded render test with visible front, three-quarter and side views. No successful new test is claimed.",
+      "image": {
+        "path": "assets/evelyn-hart-demo-concept-2026-10-19.webp",
+        "label": "Evelyn illustrative concept",
+        "alt": "Concept portrait of the planned Evelyn Hart historian character; not a screenshot of a rendered or functioning avatar",
+        "caption": "Existing concept artwork only. The tested head renders were blank or failed, so no successful render image is shown."
+      },
+      "sources": [
+        {
+          "label": "Evelyn project status and planned features",
+          "url": "evelyn-hart.html#status"
+        },
+        {
+          "label": "Dated NewBrain audit and observed failures",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/417aba66018214bc35c8205efecc62d1d41b0f89"
+        }
+      ],
+      "project_page": "evelyn-hart.html"
+    },
     {
       "id": "newbrain-longer-answer-audit-2026-10-20",
       "title": "Longer-answer teaching fixes the first token, but complete answer stays 2/3",
