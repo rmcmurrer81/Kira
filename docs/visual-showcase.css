@@ -1,0 +1,125 @@
+/* Kira Labs visual refresh — NewBrain, Kira World, Research Partners, Evelyn crops.
+   Concept visuals are not application screenshots or external affiliation claims. */
+.ks-brain,.ks-world,.ks-partners{--ks-cyan:#79ebf3;--ks-edge:rgba(121,235,243,.20);--ks-panel:#0d1a2c}
+.ks-brain .page-hero,.ks-world .page-hero,.ks-partners .page-hero{background:radial-gradient(ellipse at 85% 13%,rgba(93,68,159,.21),transparent 53%),radial-gradient(ellipse at 20% 75%,rgba(15,123,151,.12),transparent 49%),#080d18;border-bottom:1px solid rgba(121,235,243,.12)}
+.ks-brain .ks-showcase-hero,.ks-partners .ks-partners-hero{padding:64px 0 76px;isolation:isolate;overflow:hidden}
+.ks-brain .ks-hero-layout,.ks-partners .ks-hero-layout{display:grid;grid-template-columns:minmax(0,1.07fr) minmax(0,.93fr);align-items:center;gap:clamp(28px,4.5vw,80px);width:min(1370px,calc(100% - 72px))}
+.ks-brain .ks-hero-copy,.ks-partners .ks-hero-copy{min-width:0}
+.ks-brain .ks-hero-copy h1,.ks-partners .ks-hero-copy h1{font-size:clamp(3.2rem,5.2vw,5.8rem);letter-spacing:-.061em;line-height:1.03;margin-bottom:23px}
+.ks-brain .ks-hero-copy h1 em,.ks-partners .ks-hero-copy h1 em{color:var(--ks-cyan);font-family:Georgia,serif;font-weight:400;font-size:.76em}
+.ks-brain .ks-hero-copy .lead,.ks-partners .ks-hero-copy .lead{font-size:1.04rem;max-width:720px;line-height:1.76;color:#d6e2ee}
+.ks-brain .ks-hero-figure,.ks-partners .ks-hero-figure{margin:0;min-width:0;border:1px solid var(--ks-edge);background:radial-gradient(ellipse at center,#1b3951,#07121c);border-radius:17px;overflow:hidden;box-shadow:0 25px 75px rgba(0,0,0,.45)}
+.ks-brain .ks-hero-figure img{width:100%;display:block;aspect-ratio:640 / 406;object-fit:contain}
+.ks-partners .ks-hero-figure img{width:100%;height:clamp(350px,36vw,475px);display:block;object-fit:cover;object-position:50% 48%}
+.ks-brain .ks-hero-figure figcaption,.ks-partners .ks-hero-figure figcaption{padding:12px 16px;background:#0b1a2b;color:#b4cfda;font-size:.76rem;line-height:1.5;border-top:1px solid rgba(121,235,243,.15)}
+.ks-brain .ks-factline{display:flex;flex-wrap:wrap;gap:11px;margin:19px 0 24px}
+.ks-brain .ks-factline>div{min-width:163px;flex:1 1 165px;display:flex;flex-direction:column;gap:6px;border:1px solid var(--ks-edge);border-radius:10px;background:#102236b9;padding:14px 17px}
+.ks-brain .ks-factline small{color:#adc1d5;font-size:.70rem;font-weight:600}
+.ks-brain .ks-factline strong{font-size:1.6rem;color:var(--ks-cyan);font-variant-numeric:tabular-nums;letter-spacing:-.03em;white-space:nowrap}
+.ks-brain .ks-hero-copy .button-row,.ks-partners .ks-hero-copy .button-row{gap:10px;display:flex;flex-wrap:wrap}
+.ks-brain .ks-hero-copy .button-row .button,.ks-partners .ks-hero-copy .button-row .button{min-height:43px}
+.ks-brain .ks-architecture .wrap{width:min(1350px,calc(100% - 72px))}
+.ks-brain .ks-architecture-media{position:relative;margin:14px 0 22px;min-height:330px;border:1px solid var(--ks-edge);border-radius:15px;overflow:hidden;background:#0d192b;display:grid;grid-template-columns:1fr 1fr;align-items:end}
+.ks-brain .ks-architecture-media:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,13,25,.22) 0%,rgba(6,13,25,.46) 36%,#07121df2 100%);z-index:1;pointer-events:none}
+.ks-brain .ks-architecture-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 48%;opacity:.90;display:block}
+.ks-brain .ks-architecture-media>div{position:relative;z-index:2;grid-column:2;align-self:center;padding:32px clamp(20px,4vw,54px)}
+.ks-overline{display:block;font-size:.71rem;letter-spacing:.17em;text-transform:uppercase;font-weight:850;color:var(--ks-cyan);margin-bottom:12px}
+.ks-brain .ks-architecture-media strong,.ks-partners .ks-pilot-visual strong{display:block;font-size:clamp(1.7rem,2.5vw,2.6rem);font-weight:700;line-height:1.1;letter-spacing:-.03em;margin-bottom:12px}
+.ks-brain .ks-architecture-media p,.ks-partners .ks-pilot-visual p{color:#d4dfed;line-height:1.7;font-size:.97rem;margin:0}
+.ks-brain .ks-architecture .three-grid .info-card{background:linear-gradient(160deg,#142942,#0b1729);border:1px solid rgba(121,235,243,.14);padding:26px}
+.ks-brain .ks-architecture .three-grid .info-card::before{content:"";display:block;width:32px;height:3px;border-radius:4px;background:var(--ks-cyan);box-shadow:0 0 12px rgba(121,235,243,.6);margin-bottom:20px}
+.ks-brain .ks-evidence-headline{margin:0 0 20px;padding:20px 25px;display:flex;align-items:center;gap:23px;flex-wrap:wrap;background:linear-gradient(115deg,#102941,#10192c 78%);border:1px solid rgba(121,235,243,.23);border-radius:12px}
+.ks-brain .ks-evidence-headline>div{display:grid;gap:2px}
+.ks-brain .ks-evidence-headline small{font-size:.72rem;color:#c8d8e6}
+.ks-brain .ks-evidence-headline strong{font-size:clamp(2rem,3vw,3.1rem);color:var(--ks-cyan);line-height:1.15}
+.ks-brain .ks-evidence-headline .ks-change{font-size:2rem;color:#83b7d0}
+.ks-brain .ks-evidence-headline p{margin:0 0 0 auto;max-width:320px;color:#d6e5ef;font-size:.90rem;line-height:1.6}
+/* Kira World: immersive hero and true prototype/concept media. */
+.ks-world .ks-world-hero{padding:61px 0 64px}
+.ks-world .ks-world-hero>.wrap{width:min(1380px,calc(100% - 72px))}
+.ks-world .ks-world-hero .project-lead-grid{grid-template-columns:minmax(0,.91fr) minmax(0,1.09fr);gap:clamp(30px,5vw,90px)}
+.ks-world .ks-world-hero h1{font-size:clamp(2.9rem,4.4vw,4.75rem);line-height:1.08;letter-spacing:-.045em}
+.ks-world .ks-world-hero .lead{font-size:1.08rem;line-height:1.76;color:#d4e0ed}
+.ks-world .ks-world-hero .project-lead-art .media-frame{border:1px solid rgba(121,235,243,.22);background:#0a1728;border-radius:16px;overflow:hidden;box-shadow:0 23px 65px #0006}
+.ks-world .ks-world-hero .project-lead-art .media-frame img{width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain;object-position:center}
+.ks-world .ks-world-hero .project-lead-art figcaption{padding:12px 16px;font-size:.73rem;line-height:1.6;background:#0c1928;color:#b8c7d9}
+.ks-world .ks-triad{display:flex;gap:9px;flex-wrap:wrap;margin:19px 0}
+.ks-world .ks-triad span{border:1px solid rgba(121,235,243,.26);background:rgba(13,41,58,.6);padding:6px 11px;border-radius:40px;color:#c4edf2;font-weight:680;font-size:.75rem}
+.ks-world .ks-world-status .wrap{width:min(1380px,calc(100% - 72px))}
+.ks-world .ks-world-status .three-grid{align-items:stretch;gap:22px}
+.ks-world .ks-world-progress-card{min-width:0;overflow:hidden;background:linear-gradient(150deg,#132539,#0b1422);border:1px solid rgba(121,235,243,.17);border-radius:13px;padding:0 23px 24px}
+.ks-world .ks-world-progress-card .ks-status-photo{position:relative;overflow:hidden;margin:0 -23px 21px;height:205px;background:#0c1926}
+.ks-world .ks-world-progress-card .ks-status-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+.ks-world .ks-world-progress-card:first-child .ks-status-photo img{object-fit:contain;background:#0c1726}
+.ks-world .ks-world-progress-card:last-child .ks-status-photo img{object-fit:contain;background:#132031}
+.ks-world .ks-world-progress-card .ks-status-photo figcaption{position:absolute;bottom:8px;left:10px;z-index:1;background:#07111be0;border:1px solid #78d9ee47;border-radius:4px;padding:4px 8px;font-size:.68rem;color:#c7e9f4}
+.ks-world .ks-world-progress-card h3{font-size:1.34rem;line-height:1.28}
+.ks-world .ks-world-progress-card p{font-size:.89rem;line-height:1.7}
+.ks-world .ks-world-newbrain{background:linear-gradient(155deg,#0a1422,#0b1020 70%)}
+/* Partners: direct invitation, varied illustrative imagery, evidence-friendly cards. */
+.ks-partners .ks-partners-opportunities .wrap,.ks-partners .ks-pilot-section .wrap{width:min(1370px,calc(100% - 72px))}
+.ks-partners .ks-partners-hero .partner-honesty{padding:12px 17px;border-left:3px solid #f5c983;background:#141827;border-radius:4px;color:#f7d49c}
+.ks-partners .ks-research-card{border:1px solid rgba(121,235,243,.18);border-radius:14px;overflow:hidden;background:linear-gradient(155deg,#142539,#0b1525);padding:0 23px 23px;min-width:0;display:flex;flex-direction:column}
+.ks-partners .ks-research-media{margin:0 -23px 20px;position:relative;overflow:hidden;height:210px;background:#0c192a}
+.ks-partners .ks-research-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.ks-partners .ks-research-card:nth-child(2) .ks-research-media img{object-fit:contain;background:#f7f7f7}
+.ks-partners .ks-research-media figcaption{position:absolute;left:10px;bottom:8px;background:#07111df0;border:1px solid rgba(121,235,243,.35);border-radius:4px;padding:5px 9px;font-size:.65rem;color:#d3e2f1}
+.ks-partners .ks-research-card h3{font-size:1.36rem;line-height:1.25}
+.ks-partners .ks-research-card>p{font-size:.9rem;line-height:1.72}
+.ks-partners .ks-research-card .text-link{margin-top:auto;padding-top:12px}
+.ks-partners .ks-method-details{border-top:1px solid rgba(121,235,243,.2);border-bottom:1px solid rgba(121,235,243,.2);margin:14px 0 18px;padding:12px 0;color:#c8d7e5}
+.ks-partners .ks-method-details summary{cursor:pointer;color:var(--ks-cyan);font-size:.83rem;font-weight:750;line-height:1.5}
+.ks-partners .ks-method-details summary:focus-visible{outline:2px solid #f5c983}
+.ks-partners .ks-method-details p{margin:12px 0;font-size:.82rem;line-height:1.68}
+.ks-partners .ks-pilot-visual{display:grid;grid-template-columns:minmax(220px,.43fr) minmax(0,.57fr);gap:28px;align-items:center;background:linear-gradient(130deg,#14263c,#0b1422);border:1px solid var(--ks-edge);border-radius:14px;overflow:hidden;margin:10px 0 28px}
+.ks-partners .ks-pilot-visual img{width:100%;height:265px;object-fit:cover;object-position:50% 42%}
+.ks-partners .ks-pilot-visual>div{padding:27px}
+.ks-partners .ks-pilot-section .three-grid .info-card{background:linear-gradient(160deg,#102338,#0e1522);border:1px solid rgba(121,235,243,.15)}
+/* Cropping repairs: show the FULL Evelyn illustration rather than chopping the head/body. */
+.catalogue #evelyn-hart .projectpicture{position:relative;isolation:isolate;background:#0e1b2d;min-height:330px;overflow:hidden}
+.catalogue #evelyn-hart .projectpicture::before{content:"";position:absolute;inset:-22px;background:url("assets/evelyn-hart-demo-concept-2026-10-19.webp") center / cover no-repeat;filter:blur(24px) brightness(.48);opacity:.68;z-index:0}
+.catalogue #evelyn-hart .projectpicture>a{position:relative;z-index:1}
+.catalogue #evelyn-hart .projectpicture img{width:100%;height:330px;object-fit:contain;object-position:50% 50%;padding:0}
+.catalogue #evelyn-hart .projectpicture .picturetag{z-index:2}
+/* Improve Patient Horizon illustrative crop safety without changing medically documented results. */
+.phs .phs-feature img[src*="patient-horizon-scan-concept"]{object-fit:contain;object-position:center;background:#071626}
+.phs .phs-editorial-figure img[src*="patient-horizon-scan-concept"]{object-fit:contain;object-position:center;height:clamp(300px,29vw,440px);background:#071626}
+.phs .phs-editorial-figure img[src*="patient-horizon-lung-concept"]{object-fit:contain;object-position:center;background:#071626}
+.phs .phs-feature img[src*="patient-horizon-physician-concept"]{object-position:50% 27%}
+.phs .phs-hero-frame img{object-position:50% 44%}
+/* Tablet and mobile: no horizontal overflow, maintain image and text reading order. */
+@media(max-width:1100px){
+  .ks-brain .ks-hero-layout,.ks-partners .ks-hero-layout{grid-template-columns:1fr 1fr;gap:26px}
+  .ks-brain .ks-hero-copy h1,.ks-partners .ks-hero-copy h1{font-size:clamp(2.5rem,4.8vw,4.3rem)}
+  .ks-world .ks-world-hero .project-lead-grid{gap:30px}
+}
+@media(max-width:920px){
+  .ks-brain .ks-hero-layout,.ks-partners .ks-hero-layout,.ks-world .ks-world-hero .project-lead-grid{grid-template-columns:1fr}
+  .ks-brain .ks-showcase-hero,.ks-partners .ks-partners-hero{padding:43px 0 53px}
+  .ks-brain .ks-hero-figure,.ks-partners .ks-hero-figure{width:min(100%,760px)}
+  .ks-partners .ks-hero-figure img{height:390px;object-position:50% 43%}
+  .ks-world .ks-world-hero{padding:40px 0 48px}
+  .ks-world .ks-world-status .three-grid,.ks-partners .ks-partners-opportunities .three-grid{grid-template-columns:1fr 1fr}
+  .ks-brain .ks-evidence-headline p{margin-left:0;max-width:100%}
+}
+@media(max-width:670px){
+  .ks-brain .ks-hero-layout,.ks-partners .ks-hero-layout,.ks-brain .ks-architecture .wrap,.ks-world .ks-world-hero>.wrap,.ks-world .ks-world-status .wrap,.ks-partners .ks-partners-opportunities .wrap,.ks-partners .ks-pilot-section .wrap{width:calc(100% - 32px)}
+  .ks-brain .ks-hero-copy h1,.ks-partners .ks-hero-copy h1{font-size:clamp(2.4rem,10vw,3.65rem)}
+  .ks-brain .ks-factline{gap:8px}.ks-brain .ks-factline>div{min-width:0;flex:1 1 130px;padding:12px}
+  .ks-brain .ks-factline strong{font-size:1.22rem}
+  .ks-brain .ks-architecture-media{display:block;min-height:370px}
+  .ks-brain .ks-architecture-media:before{background:linear-gradient(0deg,#07121df2 0%,#07121d80 55%,#07121d12 100%)}
+  .ks-brain .ks-architecture-media>div{position:absolute;bottom:0;left:0;right:0;padding:24px}
+  .ks-brain .ks-architecture-media strong{font-size:1.6rem}
+  .ks-brain .ks-evidence-headline{gap:10px;padding:16px}.ks-brain .ks-evidence-headline .ks-change{font-size:1.5rem}
+  .ks-world .ks-world-status .three-grid,.ks-partners .ks-partners-opportunities .three-grid{grid-template-columns:1fr}
+  .ks-world .ks-world-progress-card .ks-status-photo{height:240px}
+  .ks-partners .ks-research-media{height:230px}
+  .ks-partners .ks-pilot-visual{grid-template-columns:1fr;gap:0}
+  .ks-partners .ks-pilot-visual img{height:230px}
+  .ks-partners .ks-pilot-visual>div{padding:22px}
+  .ks-partners .ks-hero-figure img{height:330px;object-position:center 40%}
+  .catalogue #evelyn-hart .projectpicture img{height:320px}
+  .phs .phs-editorial-figure img[src*="patient-horizon-scan-concept"]{height:260px}
+}
+@media(prefers-reduced-motion:reduce){.ks-brain *, .ks-world *, .ks-partners *{scroll-behavior:auto}}
