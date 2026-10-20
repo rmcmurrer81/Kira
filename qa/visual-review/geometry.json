@@ -7,47 +7,47 @@
         "x": 0,
         "y": 83,
         "w": 1440,
-        "h": 541
+        "h": 491
       },
       ".xf-hero-copy": {
         "x": 44,
         "y": 83,
         "w": 540,
-        "h": 540
+        "h": 490
       },
       ".xf-hero-visual": {
         "x": 344,
         "y": 83,
         "w": 1082,
-        "h": 540
+        "h": 490
       },
       ".xf-hero-visual>img": {
         "x": 344,
         "y": 83,
         "w": 1082,
-        "h": 540
+        "h": 490
       },
       ".xf-display": {
         "x": 44,
-        "y": 141,
+        "y": 136,
         "w": 540,
         "h": 178
       },
       ".xf-world-panorama": {
         "x": 35,
-        "y": 1241,
+        "y": 1191,
         "w": 1370,
         "h": 230
       },
       ".xf-section": {
         "x": 0,
-        "y": 624,
+        "y": 574,
         "w": 1440,
         "h": 896
       },
       ".xf-card-grid": {
         "x": 35,
-        "y": 826,
+        "y": 776,
         "w": 1370,
         "h": 399
       },
@@ -95,20 +95,20 @@
       },
       ".xf-section": {
         "x": 0,
-        "y": 1301,
+        "y": 658,
         "w": 1440,
-        "h": 769
+        "h": 673
       },
       ".xf-card-grid": {
         "x": 35,
-        "y": 1528,
+        "y": 858,
         "w": 1370,
-        "h": 372
+        "h": 338
       },
       "scrollWidth": 1440,
       "viewportWidth": 1440,
-      "heroImgNaturalWidth": 1000,
-      "heroImgNaturalHeight": 1250
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 690
     },
     "errors": [],
     "screenshot": "qa/visual-review/about-desktop.jpg"
@@ -253,23 +253,23 @@
         "x": 0,
         "y": 74,
         "w": 390,
-        "h": 907
+        "h": 891
       },
       ".xf-hero-copy": {
         "x": 17,
         "y": 74,
         "w": 356,
-        "h": 661
+        "h": 645
       },
       ".xf-hero-visual": {
         "x": 0,
-        "y": 735,
+        "y": 719,
         "w": 390,
         "h": 245
       },
       ".xf-hero-visual>img": {
         "x": 0,
-        "y": 735,
+        "y": 719,
         "w": 390,
         "h": 245
       },
@@ -281,19 +281,19 @@
       },
       ".xf-world-panorama": {
         "x": 16,
-        "y": 2701,
+        "y": 2685,
         "w": 358,
         "h": 230
       },
       ".xf-section": {
         "x": 0,
-        "y": 981,
+        "y": 965,
         "w": 390,
         "h": 1999
       },
       ".xf-card-grid": {
         "x": 16,
-        "y": 1325,
+        "y": 1309,
         "w": 358,
         "h": 1360
       },
@@ -341,20 +341,20 @@
       },
       ".xf-section": {
         "x": 0,
-        "y": 2221,
+        "y": 1043,
         "w": 390,
-        "h": 2035
+        "h": 1778
       },
       ".xf-card-grid": {
         "x": 16,
-        "y": 2503,
+        "y": 1338,
         "w": 358,
-        "h": 1514
+        "h": 1286
       },
       "scrollWidth": 390,
       "viewportWidth": 390,
-      "heroImgNaturalWidth": 1000,
-      "heroImgNaturalHeight": 1250
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 690
     },
     "errors": [],
     "screenshot": "qa/visual-review/about-mobile.jpg"
