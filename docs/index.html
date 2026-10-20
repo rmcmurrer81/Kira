@@ -32,9 +32,9 @@
       <a class="hl-metric" href="newbrain.html#newbrain-verified-2026-10-20"><small>Original12 · 256-update assessment</small><strong>2/12 → 2/12</strong><span>No net learning score improvement</span></a>
       <a class="hl-metric" href="newbrain.html#sampled-gradient-pass-2026-10-19"><small>Sampled numerical derivatives</small><strong>80/80 + 4/4</strong><span>Coordinates and directions passed</span></a>
       <a class="hl-metric" href="newbrain.html#newbrain-verified-2026-10-20"><small>One-step training-update check</small><strong>11,914 / 11,914</strong><span>Expected parameter values matched</span></a>
-      <a class="hl-metric" href="newbrain.html#newbrain-short-teaching-2026-10-20"><small>Separate short teaching pilot</small><strong>2/3 → 3/3</strong><span>Trained answers passed; cold restart pending</span></a>
+      <a class="hl-metric" href="newbrain.html#newbrain-short-teaching-2026-10-20"><small>Separate short teaching pilot</small><strong>2/3 → 3/3</strong><span>3/3 also passed after separate-process restart</span></a>
     </div>
-    <p class="hl-evidence-caveat">These results measure different experiments and must not be combined into one score. A separate five-question trial declined from <strong>2/5 to 0/5</strong> after training and remained 0/5 after reload. The short 3/3 result involved explicitly rehearsed cases, not held-out generalization. Sampled gradients and one-step update accuracy do not independently establish useful new learning.</p>
+    <p class="hl-evidence-caveat">These results measure different experiments and must not be combined into one score. A separate five-question trial declined from <strong>2/5 to 0/5</strong> after training and remained 0/5 after reload. A distinct-process reload preserved all three explicitly rehearsed answers in the short test. A newer, separate longer-answer test remained <strong>2/3 before and after training</strong>: the first answer token improved, but the model stopped before producing required source/version tokens. Neither test establishes held-out generalization. Sampled gradients and one-step update accuracy do not independently establish broad useful learning.</p>
   </div>
 </section>
 
