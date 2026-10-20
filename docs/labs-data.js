@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-10-19",
+  "prepared_on": "2026-10-20",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -22,6 +22,67 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-longer-answer-audit-2026-10-20",
+      "title": "Longer-answer teaching fixes the first token, but complete answer stays 2/3",
+      "project": "NewBrain",
+      "track": "Frozen three-question full-response training, saved review and premature end-marker diagnosis",
+      "date": "2026-10-20",
+      "reviewed_on": "2026-10-20",
+      "status": "development",
+      "date_basis": "Audited saved-result record and NewBrain research report 69 dated October 20, 2026; project-internal evidence review.",
+      "summary": "A separate 64-update longer-answer trial remained 2/3 before and after training. The positive answer changed from b + EOS to cab + EOS, but missed the required source and version tokens. The control stayed 2/3.",
+      "body": "The required full response was cab word one + EOS. NewBrain selected the correct first answer token but then selected the end marker rather than the required source/version sequence. The two explicitly rehearsed missing-information responses remained correct. The teacher-forced positive-example loss declined from 9.692280 to 2.136134, which does not count as complete-answer learning. A scoped separate saved-data audit passed without replaying the model. The planned distinct-process cold check was not authorized after the full-response criterion failed.",
+      "boundary": "This is a separate negative longer-response result, not a regression of the earlier verified 2/3 to 3/3 to 3/3 shorter-answer result. Original12 remains 2/12. The cause of premature termination and any generalization remain unresolved.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "label": "Neural architecture concept",
+        "alt": "Glowing neural network illustration, not an actual model trace",
+        "caption": "Illustrative artwork. The numeric results come from saved experiment and audit records."
+      },
+      "sources": [
+        {
+          "label": "Current public NewBrain status and scope",
+          "url": "newbrain.html#newbrain-longer-answer-2026-10-20"
+        },
+        {
+          "label": "Dated NewBrain repository research record",
+          "url": "https://github.com/rmcmurrer81/newbrain/blob/main/docs/research/2026-10-20-current-status-and-patient-horizon-plan.md"
+        }
+      ],
+      "project_page": "newbrain.html"
+    },
+    {
+      "id": "newbrain-short-answer-cold-restart-2026-10-20",
+      "title": "A narrow three-question taught-answer improvement persists after a fresh restart",
+      "project": "NewBrain",
+      "track": "Short conditional-teaching study with matched no-teach controls and separate saved-output audit",
+      "date": "2026-10-20",
+      "reviewed_on": "2026-10-20",
+      "status": "development",
+      "date_basis": "October 20 NewBrain repository research status and verified distinct-process reload, documented in university research report 68.",
+      "summary": "On three explicitly taught synthetic cases, complete responses scored 2/3 before training, 3/3 after 64 updates and 3/3 after a separate-process restart. The no-training control stayed 2/3.",
+      "body": "The previously missed short synthetic association became correct while both rehearsed missing-information responses remained correct. A separate process reloaded the saved trained state without further updates, loss measurements or state changes and generated the same three complete answers. The project-internal saved-evidence review passed, preserving the state and failed-audit records.",
+      "boundary": "The 3/3 is specific to three rehearsed synthetic cases, not unfamiliar-fact acquisition, broad generalization or improved Original12. The main Original12 result remains 2/12 before and after its last 256-update experiment.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "label": "Synthetic learning research concept",
+        "alt": "Concept art of a luminous neural architecture, not an actual runtime result",
+        "caption": "Illustration of research direction. Verified measurements are described in the source record."
+      },
+      "sources": [
+        {
+          "label": "Verified training-and-restart result",
+          "url": "newbrain.html#newbrain-short-teaching-2026-10-20"
+        },
+        {
+          "label": "Dated NewBrain research status",
+          "url": "https://github.com/rmcmurrer81/newbrain/blob/main/docs/research/2026-10-20-current-status-and-patient-horizon-plan.md"
+        }
+      ],
+      "project_page": "newbrain.html"
+    },
+
     {
       "id": "iris-standalone-site-guide-2026-10-20",
       "title": "Iris becomes a separate public website guide, distinct from Contact",
