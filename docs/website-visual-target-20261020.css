@@ -413,3 +413,22 @@
  .xf-page.xf-brain .xf-hero-brain .xf-hero-visual>img{object-fit:contain!important}
  .xf-page.xf-contact .xf-hero-contact .xf-display em{display:inline!important;margin-left:8px}
 }
+
+/* Browser review #5: remove visible pre-rendered button on neural illustration 
+   and improve skyline-legibility on image-backed heroes. */
+@media(min-width:901px){
+ .xf-page.xf-brain .xf-hero-brain .xf-hero-visual>img{
+    position:absolute!important;left:auto!important;right:0!important;top:0!important;
+    width:72%!important;height:100%!important;
+    object-fit:cover!important;object-position:center center!important;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 35%,#000 100%)!important;
+    mask-image:linear-gradient(90deg,transparent 0%,#000 35%,#000 100%)!important
+ }
+ .xf-page.xf-contact .xf-hero-contact .xf-hero-visual:after,
+ .xf-page.xf-robot .xf-hero-robot .xf-hero-visual:after{
+   content:"";position:absolute;z-index:2;pointer-events:none;inset:0;
+   background:linear-gradient(90deg,#061422ed 0%,#061422c8 22%,#06142275 41%,transparent 63%);
+ }
+ .xf-page.xf-contact .xf-hero-contact .xf-hero-visual figcaption,
+ .xf-page.xf-robot .xf-hero-robot .xf-hero-visual figcaption{z-index:3}
+}
