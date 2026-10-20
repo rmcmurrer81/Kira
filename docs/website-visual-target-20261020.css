@@ -432,3 +432,29 @@
  .xf-page.xf-contact .xf-hero-contact .xf-hero-visual figcaption,
  .xf-page.xf-robot .xf-hero-robot .xf-hero-visual figcaption{z-index:3}
 }
+
+/* Ultra-wide viewport correction, based on public-site Chromium snapshots.
+   Extend edge-to-edge hero media to the actual viewport boundary instead of
+   letting the centered 1480px inner container leave a visible right gutter. */
+@media (min-width:901px){
+  .xf-page.xf-kira .xf-hero-kira .xf-hero-visual{
+     right:calc((min(1480px, 100vw - 88px) - 100vw)/2)!important;
+     width:calc(80% + (100vw - min(1480px, 100vw - 88px))/2)!important;
+  }
+  .xf-page.xf-about .xf-hero-about .xf-hero-visual{
+     right:calc((min(1480px, 100vw - 88px) - 100vw)/2)!important;
+     width:calc(77% + (100vw - min(1480px, 100vw - 88px))/2)!important;
+  }
+  .xf-page.xf-brain .xf-hero-brain .xf-hero-visual{
+     right:calc((min(1480px, 100vw - 88px) - 100vw)/2)!important;
+     width:calc(68% + (100vw - min(1480px, 100vw - 88px))/2)!important;
+  }
+  .xf-page.xf-contact .xf-hero-contact .xf-hero-visual{
+     right:calc((min(1480px, 100vw - 88px) - 100vw)/2)!important;
+     width:calc(85% + (100vw - min(1480px, 100vw - 88px))/2)!important;
+  }
+  .xf-page.xf-robot .xf-hero-robot .xf-hero-visual{
+     right:calc((min(1480px, 100vw - 88px) - 100vw)/2)!important;
+     width:calc(74% + (100vw - min(1480px, 100vw - 88px))/2)!important;
+  }
+}
