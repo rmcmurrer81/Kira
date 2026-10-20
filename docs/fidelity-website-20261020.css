@@ -92,3 +92,53 @@
 @media(max-width:1080px){.xf-page .xf-hero-inner{grid-template-columns:1fr 1fr}.xf-page .xf-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.xf-page .xf-display{font-size:clamp(3.1rem,6.1vw,5rem)}}
 @media(max-width:760px){.xf-page .xf-inner,.xf-page .xf-wide,.xf-page .xf-hero-inner{width:calc(100% - 32px)}.xf-page .xf-hero{display:block;min-height:0;padding:45px 0 0}.xf-page .xf-hero-inner{display:flex;flex-direction:column;gap:0;min-height:0;align-items:stretch}.xf-page .xf-hero-copy{max-width:none;padding:0 0 24px}.xf-page .xf-hero-visual{position:relative;display:block;width:calc(100% + 32px)!important;left:-16px;right:auto;height:330px;top:auto;bottom:auto;margin:0 -0 0;overflow:hidden}.xf-page .xf-hero-visual>img{width:100%;height:100%;object-fit:contain;object-position:center;mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}.xf-page .xf-hero-kira .xf-hero-visual img{object-fit:cover;object-position:center 42%}.xf-page .xf-hero-about .xf-hero-visual>img{object-fit:cover;object-position:55% center;mask-image:linear-gradient(to bottom,#000 83%,transparent)}.xf-page .xf-hero-contact .xf-hero-inner{min-height:0}.xf-page .xf-section-top{grid-template-columns:1fr;gap:10px}.xf-page .xf-card-grid{grid-template-columns:1fr 1fr}.xf-page .xf-architecture-board{grid-template-columns:1fr 1fr}.xf-page .xf-results{grid-template-columns:1fr}.xf-page .xf-hero-brain .xf-hero-visual{height:315px}}
 @media(max-width:460px){.xf-page .xf-display{font-size:clamp(2.55rem,10vw,4rem)}.xf-page .xf-card-grid{grid-template-columns:1fr}.xf-page .xf-architecture-board{grid-template-columns:1fr 1fr;padding:10px;gap:8px}.xf-page .xf-arch-module{padding:12px}.xf-page .xf-arch-module h3{font-size:1rem}.xf-page .xf-arch-module li{font-size:.78rem}.xf-page .xf-hero-actions .button{font-size:.8rem}.xf-page .xf-hero-visual{height:290px}.xf-page .xf-evidence-chips strong{font-size:1.25rem}}
+
+/* Fidelity fixes requested October 20: actual approved Kira card crops and turn of founder video still. */
+.xf-page .xf-hero-kira:before{background:none!important;opacity:0!important}
+.xf-page .xf-hero-kira:after{background:linear-gradient(90deg,#04101cf7 0%,#04101df0 22%,#051424c5 35%,#0615217c 50%,transparent 76%)}
+.xf-page .xf-hero-kira .xf-hero-visual{width:69%;right:0;top:0;bottom:0;overflow:hidden;height:100%}
+.xf-page .xf-hero-kira .xf-hero-visual>img{object-fit:cover;object-position:51% 48%;width:100%;height:100%;mask-image:linear-gradient(to right,transparent 0%,#000 17%,#000 100%);filter:none}
+.xf-page .xf-hero-kira .xf-hero-visual figcaption{bottom:11px;right:12px;max-width:300px;background:#0617239c}
+.xf-page .xf-world-intro .xf-card-grid{gap:14px}
+.xf-page .xf-world-intro .xf-card{border-radius:11px;min-width:0}
+.xf-page .xf-world-intro .xf-card>img{display:block;width:100%;height:clamp(145px,12.6vw,185px);object-fit:cover;object-position:50% 48%;background:#0b192a}
+.xf-page .xf-world-intro .xf-card:last-child>img{object-position:50% 32%}
+.xf-page .xf-world-intro .xf-card-copy{padding:16px 17px 23px}
+.xf-page .xf-world-intro .xf-card-tag{letter-spacing:.09em}
+.xf-page .xf-world-panorama{min-height:240px;background:linear-gradient(to top,#031322e8,#03132222 83%),url('assets/kira-future-city-clean-20261020.webp') center/cover}
+.xf-page .xf-hero-about .xf-hero-visual{width:77%;right:0}
+.xf-page .xf-hero-about .xf-hero-visual>img{object-fit:cover;object-position:53% 47%;filter:none;mask-image:linear-gradient(to right,transparent 0%,#000 23%,#000 100%)}
+.xf-page .xf-hero-about:after{background:linear-gradient(90deg,#05101ef2 0%,#05101ee4 24%,#05101e72 48%,transparent 83%)}
+/* Responsive semantic architecture, replacing cropped baked-in cards and the cartoon robot illustration. */
+.cr-page .cr-graph:has(.cr-architecture-v2), .ks-world .cr-graph:has(.cr-architecture-v2){width:100%;max-width:100%;margin:24px 0;border:1px solid #65e2f550;border-radius:18px;overflow:hidden;background:linear-gradient(133deg,#091b32,#080f21 80%);box-shadow:0 26px 60px #0005}
+.cr-architecture-v2{padding:30px 28px 22px;background:radial-gradient(circle at 45% 0%,#1350743d,transparent 52%),radial-gradient(circle at 89% 100%,#3d2b6b2a,transparent 57%);color:#eaf7ff}
+.cr-architecture-v2 .cr-architecture-top{display:flex;align-items:start;justify-content:space-between;gap:18px;margin-bottom:26px}
+.cr-architecture-v2 .cr-architecture-eyebrow{font:.72rem/1.3 ui-monospace,monospace;font-weight:800;letter-spacing:.15em;color:#7feefa;text-transform:uppercase;margin:0 0 12px}
+.cr-architecture-v2 .cr-architecture-top h3{margin:0 0 10px;font-size:clamp(1.65rem,2.5vw,2.8rem);letter-spacing:-.04em;line-height:1.13}
+.cr-architecture-v2 .cr-architecture-top h3 em{font:italic 400 .84em Georgia,serif;color:#79ecf4;display:block}
+.cr-architecture-v2 .cr-architecture-top p:not(.cr-architecture-eyebrow){font-size:.88rem;color:#b9d1e2;line-height:1.5;margin:0}
+.cr-architecture-v2 .cr-architecture-warning{display:inline-flex;flex:none;align-items:center;gap:8px;border:1px solid #e2ac5460;border-radius:999px;padding:8px 13px;background:#3b2c18a8;color:#ffdb9b;font:.72rem/1.2 ui-monospace,monospace;text-transform:uppercase;font-weight:800;letter-spacing:.04em}
+.cr-architecture-v2 .cr-architecture-warning:before{content:"●";color:#fbc66c}
+.cr-architecture-v2 .cr-architecture-stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.cr-architecture-v2 .cr-architecture-stages article{background:linear-gradient(140deg,#112a41,#10162a 88%);border:1px solid #6bd6e749;border-radius:13px;overflow:hidden;position:relative;display:flex;flex-direction:column;min-width:0}
+.cr-architecture-v2 .cr-architecture-stages article:not(:last-child):after{content:"›";position:absolute;right:-5px;top:23%;font:bold 2.2rem Arial,sans-serif;color:#79ebf3;z-index:1;text-shadow:0 1px 7px #000}
+.cr-architecture-v2 .cr-architecture-stages figure{margin:0;position:relative;height:160px;background:radial-gradient(circle at center,#174562,#071826)}
+.cr-architecture-v2 .cr-architecture-stages figure>img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 38%;border-radius:0}
+.cr-architecture-v2 .cr-architecture-stages article:first-child figure>img{object-fit:contain;object-position:center;background:#091d34}
+.cr-architecture-v2 .cr-architecture-stages article:nth-child(2) figure>img{object-fit:cover;object-position:50% 45%}
+.cr-architecture-v2 .cr-architecture-stages article:last-child figure>img{object-fit:cover;object-position:58% 24%}
+.cr-architecture-v2 .cr-policy-graphic{display:grid;place-items:center}
+.cr-architecture-v2 .cr-policy-graphic svg{width:125px;max-height:122px;filter:drop-shadow(0 0 12px #58e9ee55)}
+.cr-architecture-v2 .cr-architecture-stages article>div{padding:18px 17px 19px;display:flex;flex-direction:column;flex:1;gap:9px}
+.cr-architecture-v2 .cr-architecture-stages article>div>span{font:800 .65rem/1.4 ui-monospace,monospace;letter-spacing:.085em;color:#8ee8f7}
+.cr-architecture-v2 .cr-architecture-stages h4{font-size:clamp(1.13rem,1.4vw,1.45rem);letter-spacing:-.025em;line-height:1.15;margin:0;color:#f4fbff}
+.cr-architecture-v2 .cr-architecture-stages p{font-size:.82rem;line-height:1.55;color:#bbcadb;margin:0 0 8px}
+.cr-architecture-v2 .cr-architecture-stages small{font:.66rem/1.3 ui-monospace,monospace;font-weight:800;letter-spacing:.04em;padding:6px 9px;margin-top:auto;align-self:flex-start;background:#16404c;color:#90f4e8;border-radius:40px}
+.cr-architecture-v2 .cr-architecture-stages article:first-child small,.cr-architecture-v2 .cr-architecture-stages article:last-child small{background:#293044;color:#b9d0db}
+.cr-architecture-v2 .cr-architecture-stages article:nth-child(2) small{background:#30284f;color:#d6c4ff}
+.cr-architecture-v2 .cr-return-status{font-size:.8rem;text-align:center;margin:20px auto 17px;padding:12px 18px;border:1px dashed #7ac5d780;border-radius:22px;color:#c9dce9;max-width:720px;background:#081e32b8}
+.cr-architecture-v2 .cr-architecture-evidence{background:#051627;border:1px solid #71a4c153;border-radius:8px;padding:13px 16px;color:#c7d7e4;font-size:.75rem;line-height:1.5}
+.cr-architecture-v2 .cr-architecture-evidence strong{color:#e5f8ff}
+@media(max-width:950px){.cr-architecture-v2 .cr-architecture-stages{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.xf-page .xf-hero-kira:after{background:linear-gradient(to bottom,#05121e99 0%,transparent 65%)}.xf-page .xf-hero-kira .xf-hero-visual{position:relative;right:unset;width:calc(100% + 32px);height:290px;left:-16px}.xf-page .xf-hero-kira .xf-hero-visual>img{object-fit:cover;object-position:50% 50%;mask-image:none}.xf-page .xf-hero-about .xf-hero-visual{width:calc(100% + 32px);left:-16px}.xf-page .xf-hero-about .xf-hero-visual>img{object-position:62% center;mask-image:linear-gradient(to bottom,black 70%,transparent 100%)}}
+@media(max-width:550px){.xf-page .xf-world-intro .xf-card>img{height:190px}.cr-architecture-v2{padding:17px 14px}.cr-architecture-v2 .cr-architecture-stages{grid-template-columns:1fr}.cr-architecture-v2 .cr-architecture-stages figure{height:210px}.cr-architecture-v2 .cr-architecture-top{flex-direction:column}.cr-architecture-v2 .cr-architecture-warning{align-self:flex-start}}
