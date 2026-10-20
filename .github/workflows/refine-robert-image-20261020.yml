@@ -1,0 +1,46 @@
+name: Finish Robert cinematic portrait
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refine-robert-image-20261020.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  finish-image:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install portrait background removal tools
+        run: |
+          python -m pip install --disable-pip-version-check "rembg[cpu]" pillow numpy opencv-python-headless
+      - name: Make real city background replace the original indoor background
+        run: |
+          python scripts/refine_founder_city_matte_20261020.py
+      - name: Validate cinematic image
+        run: |
+          python - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          p=Path('docs/assets/robert-cinematic-waterfront-20261020.webp')
+          with Image.open(p) as im:
+              assert im.size==(1920,1080),im.size
+              im.verify()
+          assert 'robert-cinematic-waterfront-20261020.webp' in Path('docs/about.html').read_text()
+          print('Portrait validated:',p.stat().st_size,'bytes')
+          PY
+      - name: Deploy corrected actual About page image
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/assets/robert-cinematic-waterfront-20261020.webp
+          if git diff --cached --quiet; then echo 'No portrait changes'; exit 0; fi
+          git commit -m 'Replace indoor background with clean cinematic skyline on About page'
+          git push origin HEAD:main
