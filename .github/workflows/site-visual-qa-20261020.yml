@@ -1,0 +1,40 @@
+name: Kira Labs Visual QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/site-visual-qa-20261020.yml'
+      - 'scripts/snapshot_live_layout_20261020.py'
+      - 'docs/website-visual-target-20261020.css'
+      - 'docs/kira-world.html'
+      - 'docs/about.html'
+      - 'docs/fidelity-website-20261020.css'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Browser setup
+        run: |
+          python -m pip install playwright
+          python -m playwright install chromium --with-deps
+      - name: Render real HTML and CSS, not AI mockups
+        run: |
+          python -m http.server 8765 --directory docs >/tmp/kira-server.log 2>&1 &
+          sleep 3
+          python scripts/snapshot_live_layout_20261020.py
+      - name: Save visual review screenshots outside published site
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add qa/visual-review
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Visual QA: capture current Kira Labs desktop/mobile layouts'
+          git push origin HEAD:main
