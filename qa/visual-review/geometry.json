@@ -1,5 +1,41 @@
 [
   {
+    "page": "index.html",
+    "device": "desktop",
+    "geometry": {
+      ".hl-hero": {
+        "x": 0,
+        "y": 83,
+        "w": 1440,
+        "h": 437
+      },
+      ".hl-hero-photo": {
+        "x": 360,
+        "y": 83,
+        "w": 1080,
+        "h": 436
+      },
+      ".hl-evidence": {
+        "x": 0,
+        "y": 520,
+        "w": 1440,
+        "h": 388
+      },
+      ".hl-programs": {
+        "x": 0,
+        "y": 908,
+        "w": 1440,
+        "h": 496
+      },
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/index-desktop.jpg"
+  },
+  {
     "page": "kira-world.html",
     "device": "desktop",
     "geometry": {
@@ -220,9 +256,9 @@
         "h": 445
       },
       ".xf-hero-visual>img": {
-        "x": 746,
+        "x": 477,
         "y": 83,
-        "w": 694,
+        "w": 963,
         "h": 445
       },
       ".xf-display": {
@@ -239,11 +275,47 @@
       },
       "scrollWidth": 1440,
       "viewportWidth": 1440,
-      "heroImgNaturalWidth": 886,
-      "heroImgNaturalHeight": 804
+      "heroImgNaturalWidth": 1672,
+      "heroImgNaturalHeight": 941
     },
     "errors": [],
     "screenshot": "qa/visual-review/newbrain-desktop.jpg"
+  },
+  {
+    "page": "index.html",
+    "device": "wide",
+    "geometry": {
+      ".hl-hero": {
+        "x": 0,
+        "y": 83,
+        "w": 1980,
+        "h": 575
+      },
+      ".hl-hero-photo": {
+        "x": 530,
+        "y": 83,
+        "w": 1450,
+        "h": 574
+      },
+      ".hl-evidence": {
+        "x": 0,
+        "y": 658,
+        "w": 1980,
+        "h": 397
+      },
+      ".hl-programs": {
+        "x": 0,
+        "y": 1054,
+        "w": 1980,
+        "h": 517
+      },
+      "scrollWidth": 1980,
+      "viewportWidth": 1980,
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/index-wide.jpg"
   },
   {
     "page": "kira-world.html",
@@ -466,9 +538,9 @@
         "h": 445
       },
       ".xf-hero-visual>img": {
-        "x": 1075,
+        "x": 724,
         "y": 83,
-        "w": 905,
+        "w": 1256,
         "h": 445
       },
       ".xf-display": {
@@ -485,11 +557,47 @@
       },
       "scrollWidth": 1980,
       "viewportWidth": 1980,
-      "heroImgNaturalWidth": 886,
-      "heroImgNaturalHeight": 804
+      "heroImgNaturalWidth": 1672,
+      "heroImgNaturalHeight": 941
     },
     "errors": [],
     "screenshot": "qa/visual-review/newbrain-wide.jpg"
+  },
+  {
+    "page": "index.html",
+    "device": "mobile",
+    "geometry": {
+      ".hl-hero": {
+        "x": 0,
+        "y": 74,
+        "w": 390,
+        "h": 737
+      },
+      ".hl-hero-photo": {
+        "x": 0,
+        "y": 525,
+        "w": 390,
+        "h": 285
+      },
+      ".hl-evidence": {
+        "x": 0,
+        "y": 811,
+        "w": 390,
+        "h": 820
+      },
+      ".hl-programs": {
+        "x": 0,
+        "y": 1631,
+        "w": 390,
+        "h": 1219
+      },
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/index-mobile.jpg"
   },
   {
     "page": "kira-world.html",
@@ -731,8 +839,8 @@
       },
       "scrollWidth": 390,
       "viewportWidth": 390,
-      "heroImgNaturalWidth": 886,
-      "heroImgNaturalHeight": 804
+      "heroImgNaturalWidth": 1672,
+      "heroImgNaturalHeight": 941
     },
     "errors": [],
     "screenshot": "qa/visual-review/newbrain-mobile.jpg"
