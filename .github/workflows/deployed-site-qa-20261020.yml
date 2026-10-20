@@ -21,7 +21,7 @@ jobs:
           python -m pip install playwright
           python -m playwright install chromium --with-deps
       - name: Give Pages deployment time to finish
-        run: sleep 55
+        run: sleep 35
       - name: Capture actual selected Kira Labs homepage and project pages at three sizes
         env:
           KIRA_QA_BASE: https://kiralabs.org/
@@ -36,3 +36,4 @@ jobs:
           git commit -m 'Verified live: Kira Labs desktop and mobile page captures'
           git pull --rebase origin main
           git push origin HEAD:main
+# Recheck live video-reference About portrait and the October 20 learning updates.
