@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171323">
+<title>Florence Nightingale — Historical Companion Research Plan | Kira Labs</title>
+<meta name="description" content="How Kira Labs plans to research a free historical Florence Nightingale companion starting on July 31, 1890, with verifiable voice and portrait references, historical knowledge boundaries and independent memories. Not yet a downloadable application.">
+<link rel="canonical" href="https://kiralabs.org/florence-nightingale.html">
+<meta property="og:title" content="Florence Nightingale — A Historical Companion Research Plan">
+<meta property="og:description" content="A July 31, 1890 snapshot. Actual period sources. A future AI reconstruction that may learn about later history through reading, not an available app.">
+<meta property="og:image" content="https://kiralabs.org/assets/florence-nightingale-desktop-icon-20261021.svg">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="labs.css">
+<style>
+*{box-sizing:border-box}
+body.fn-page{background:#0b101b;color:#ecf4f6;font:16px/1.68 system-ui,-apple-system,Segoe UI,sans-serif;margin:0}
+.fn-page .fn-head{background:linear-gradient(110deg,#131626 0%,#25192a 56%,#131522 100%);border-bottom:1px solid #cfa25935;position:relative;overflow:hidden}
+.fn-page .fn-head:after{content:"";position:absolute;pointer-events:none;width:600px;height:600px;background:radial-gradient(circle,#b98d4530,transparent 65%);top:-270px;right:-180px}
+.fn-page .fn-inner{width:min(1100px,calc(100% - 44px));margin:auto}
+.fn-page .fn-hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(220px,.6fr);gap:clamp(24px,6vw,100px);align-items:center;position:relative;padding:65px 0 68px;z-index:1}
+.fn-page .fn-tag{font:750 .74rem/1.4 ui-monospace,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase;color:#e4bc75}
+.fn-page h1{font-size:clamp(2.65rem,5vw,4.7rem);line-height:1.06;letter-spacing:-.055em;color:#fff;margin:18px 0 19px}
+.fn-page h1 em{font:italic 400 .81em/1.14 Georgia,serif;display:block;letter-spacing:-.025em;color:#ebc77f;margin-top:7px}
+.fn-page .fn-lead{font-size:1.13rem;line-height:1.75;color:#dae3eb;max-width:680px}
+.fn-page .fn-icon{margin:0;max-width:295px;justify-self:center;text-align:center}
+.fn-page .fn-icon img{width:100%;height:auto;display:block;filter:drop-shadow(0 28px 36px #0007)}
+.fn-page .fn-icon figcaption{font-size:.82rem;margin-top:13px;color:#c8c0c5}
+.fn-page .fn-labels{display:flex;gap:9px;flex-wrap:wrap;margin:25px 0}
+.fn-page .fn-labels span{font-size:.77rem;letter-spacing:.03em;padding:6px 11px;border:1px solid #cfb77d66;color:#f9dfac;background:#322b306e;border-radius:999px;font-weight:650}
+.fn-page a{color:#a5edec;text-underline-offset:3px}
+.fn-page .fn-button{display:inline-flex;align-items:center;border:1px solid #ba985880;padding:10px 17px;border-radius:5px;text-decoration:none;font-size:.9rem;font-weight:700;color:#f4e8cb;margin:7px 12px 7px 0}
+.fn-page .fn-button:hover{background:#342936}
+.fn-page main{padding-bottom:80px}
+.fn-page section.fn-section{padding:53px 0;border-bottom:1px solid #39505d55}
+.fn-page h2{font-size:clamp(1.8rem,3vw,2.5rem);letter-spacing:-.035em;line-height:1.2;color:#fff;margin:10px 0 21px}
+.fn-page .fn-kicker{font-size:.75rem;color:#e0ba75;font-weight:750;letter-spacing:.13em;text-transform:uppercase}
+.fn-page h3{font-size:1.15rem;color:#f1e3c7;margin:4px 0 9px}
+.fn-page p{margin:12px 0}
+.fn-page .fn-muted{color:#b6c8d0}
+.fn-page .fn-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0}
+.fn-page .fn-card{background:#122434;border:1px solid #3c5b65;border-radius:10px;padding:20px}
+.fn-page .fn-card strong{display:block;color:#e1be7a;font-size:1.14rem}
+.fn-page .fn-card p{color:#cfdee3;font-size:.91rem}
+.fn-page .fn-note{padding:16px 20px;border-left:4px solid #d1a257;background:#252233;color:#dfe2e5;margin:22px 0;border-radius:3px}
+.fn-page table{width:100%;border-collapse:collapse;margin:25px 0;border:1px solid #344f62}
+.fn-page th,.fn-page td{text-align:left;vertical-align:top;border-bottom:1px solid #31445a;padding:14px 15px;font-size:.93rem}
+.fn-page th{background:#1b3042;color:#f0d198}
+.fn-page tbody tr:nth-child(odd){background:#102131}
+.fn-page tbody tr:nth-child(even){background:#0c1b2b}
+.fn-page ol.fn-process{counter-reset:steps;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin:27px 0;padding:0;list-style:none}
+.fn-page ol.fn-process li{padding:18px 19px;background:#13283a;border:1px solid #375567;border-radius:11px;counter-increment:steps}
+.fn-page ol.fn-process li:before{content:counter(steps,decimal-leading-zero);font:700 .85rem ui-monospace,monospace;color:#f1bf68;display:block;margin-bottom:12px}
+.fn-page .fn-source-list{padding-left:20px}
+.fn-page .fn-source-list li{margin:12px 0;color:#cfdbe3}
+.fn-page .fn-footer{padding:30px 0;border-top:1px solid #334859;font-size:.82rem;color:#b0c3cd}
+@media(max-width:760px){.fn-page .fn-hero{grid-template-columns:1fr;padding:34px 0 43px}.fn-page .fn-icon{max-width:190px;margin:0 auto}.fn-page .fn-cards{grid-template-columns:1fr}.fn-page ol.fn-process{grid-template-columns:1fr}.fn-page section.fn-section{padding:36px 0}.fn-page th,.fn-page td{padding:10px 9px;font-size:.84rem}}
+</style>
+</head>
+<body class="fn-page">
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap navrow"><a aria-label="Kira Labs home" class="brand" href="index.html"><span class="brandmark"><img src="assets/kira-world-k-logo-192.png" alt="" width="38" height="38"></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent AI research</small></span></a><button aria-controls="primary-nav" aria-expanded="false" class="menubtn menu-toggle" type="button">Menu</button><nav aria-label="Main navigation" class="nav" id="primary-nav"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="progress.html">Lab timeline</a><a href="evelyn-hart.html">Evelyn Hart</a><a class="contact" href="contact.html">Contact</a></nav></div></header>
+<main id="main">
+<div class="fn-head"><div class="fn-inner fn-hero">
+<div>
+<p class="fn-tag">Historical companion research · Planning snapshot · 21 October 2026</p>
+<h1>Florence Nightingale<em>One day in 1890.<br>A future to discover.</em></h1>
+<p class="fn-lead">Kira Labs is researching a <strong>historically sourced, clearly labeled digital reconstruction</strong> of Florence Nightingale. Her chosen knowledge starting point is <strong>31 July 1890</strong>, one day after her surviving voice recording—long before the modern world she could eventually encounter through reading and conversation.</p>
+<div class="fn-labels"><span>RESEARCH PLAN ONLY</span><span>70 YEARS OLD AT SNAPSHOT</span><span>FREE DEMONSTRATION INTENDED</span></div>
+<p><a class="fn-button" href="#starting-world">Explore her 1890 world →</a><a class="fn-button" href="#sources">Historical sources →</a></p>
+<p class="fn-muted">No Florence voice, interactive character, historical likeness or Windows installer has yet passed deployment tests. Creation work is intended after 29 October 2026. NewBrain research remains the primary Kira Labs track.</p>
+</div>
+<figure class="fn-icon"><img src="assets/florence-nightingale-desktop-icon-20261021.svg" width="256" height="256" alt="Kira Labs Florence Nightingale gold oil-lamp desktop icon, a prepared visual asset rather than an installed program"><figcaption>Actual prepared desktop icon artwork · Not a screenshot of Florence running</figcaption></figure>
+</div></div>
+<div class="fn-inner">
+<section class="fn-section" id="historical-snapshot">
+<p class="fn-kicker">A source-backed starting point</p><h2>What Florence could know on 31 July 1890</h2>
+<div class="fn-cards">
+<article class="fn-card"><strong>30 July 1890</strong><p>A surviving wax-cylinder recording made for veterans of the Charge of the Light Brigade provides direct evidence of her historical English voice. Wellcome has documented two renditions from the same session.</p><a href="https://wellcomecollection.org/works/tp9njewm" target="_blank" rel="noopener noreferrer">Hear the archived recording ↗</a></article>
+<article class="fn-card"><strong>10 South Street, Mayfair</strong><p>Florence's documented London home, near Park Lane. Letters from 1889 confirm the address; her long periods of poor health and home-based work matter to an accurate reconstruction.</p><a href="https://historicengland.org.uk/images-books/photos/job/2K/12945" target="_blank" rel="noopener noreferrer">Historic England address record ↗</a></article>
+<article class="fn-card"><strong>1887 portrait / 1889 photographs</strong><p>A dated painting and later pre-snapshot photographs provide potential face, hair and age references. Source dates and image-reuse rights will be checked before any likeness is used.</p><a href="https://www.npg.org.uk/collections/search/personExtended/mp03298/florence-nightingale?tab=iconography" target="_blank" rel="noopener noreferrer">National Portrait Gallery's dated catalogue ↗</a></article>
+</div>
+<p>Historical reconstruction should use only dated material she could reasonably have encountered by the chosen snapshot. Individual passages need their own creation dates—even when they were reprinted in a later book. An 1891 portrait is not automatically a reference for her appearance on 31 July 1890.</p>
+</section>
+<section class="fn-section" id="starting-world">
+<p class="fn-kicker">Historical context · London, 1890 compared with the 2020s</p><h2>Her familiar world would look very different from ours.</h2>
+<p class="fn-muted">This comparison describes the period, not a proven diary of Florence's personal day. Her home circumstances differed greatly from those of working-class Londoners. Dates distinguish what already existed on 31 July 1890 from technology introduced later that year.</p>
+<table><thead><tr><th scope="col">Topic</th><th scope="col">London as of 31 July 1890</th><th scope="col">Today (2026)</th></tr></thead><tbody>
+<tr><th scope="row">Travel</th><td>Horse-drawn cabs, omnibuses and trams; steam-powered rail and Underground services. The first deep-level electric Underground line opened to passengers only in December 1890, after the chosen snapshot.</td><td>Cars, buses, electrified Underground lines, high-speed trains and commercial flight.</td></tr>
+<tr><th scope="row">Light and power</th><td>Gas streetlamps and candles or gas in many buildings; electric light was available in a few high-profile places, not most homes. Coal was a major source of urban fuel and smoke.</td><td>Widely available electric lighting, electronic appliances, central heating and digital infrastructure.</td></tr>
+<tr><th scope="row">Communication</th><td>Letters, printed newspapers, telegraphs and some telephones, mainly among wealthy households and businesses. The recorded voice was still an unusual medium.</td><td>Smartphones, email, video calls, global digital publications and instant messaging.</td></tr>
+<tr><th scope="row">Medicine</th><td>Sanitation, trained nursing, antiseptic procedures and germ theory were progressing, but antibiotics and X-ray diagnosis had not yet arrived.</td><td>Antibiotics, modern vaccines, imaging such as CT/MRI, advanced surgery and networked clinical records.</td></tr>
+<tr><th scope="row">Public life</th><td>Queen Victoria's reign, strong class divisions and Britain's global empire. Women still lacked a vote in UK parliamentary elections.</td><td>Universal adult parliamentary suffrage, a very different legal/social landscape, and instantaneous global communication.</td></tr>
+</tbody></table>
+<p class="fn-muted">Research references: <a href="https://www.londonmuseum.org.uk/collections/london-stories/when-did-london-get-electricity/" target="_blank" rel="noopener noreferrer">London Museum on electricity and communications</a>; <a href="https://www.londonmuseum.org.uk/collections/london-stories/gas-lamps-illuminated-london/" target="_blank" rel="noopener noreferrer">gas lighting</a>; <a href="https://www.londonmuseum.org.uk/collections/london-stories/london-buses-red-iconic-double-decked/" target="_blank" rel="noopener noreferrer">horse-drawn buses</a>; <a href="https://tfl-newsroom.prgloo.com/news/tfl-press-release-happy-birthday-london-underground-the-worlds-first-underground-railway-the-tube-celebrates-160-years-of-serving-the-capital" target="_blank" rel="noopener noreferrer">Transport for London chronology</a>; <a href="https://www.parliament.uk/about/living-heritage/transformingsociety/electionsvoting/womenvote/keydates/" target="_blank" rel="noopener noreferrer">UK Parliament on women's voting rights</a>.</p>
+</section>
+<section class="fn-section" id="memory-plan">
+<p class="fn-kicker">Planned character and learning architecture</p><h2>Historical knowledge, followed by new experiences</h2>
+<ol class="fn-process">
+<li><h3>Begin at a dated historical boundary</h3><p>Florence starts with a source-grounded account of what she could have known by 31 July 1890. Uncertain details stay explicitly marked as reconstruction. She does not start with knowledge of her later death or twenty-first-century inventions.</p></li>
+<li><h3>Discover a shared library without reading everything</h3><p>New books can appear in the planned <code>Documents\Kira Labs\Library</code> location. Discovery reveals a title and catalog details only; unread passages should not appear in her knowledge. Her own reading pace and pauses determine what she encounters.</p></li>
+<li><h3>Form new memories and changing opinions</h3><p>New information enters her individual dated reading notes and conversations when she actually encounters it. Learning how she died, for example, would be stored as something read from a later biography—not as a remembered experience of dying.</p></li>
+<li><h3>Adapt expression gradually, without losing provenance</h3><p>Modern speech habits and vocabulary could gradually influence her conversational style through repeated interaction. The historical voice reference, reconstructed delivery, source-grounded knowledge and newly formed memories must remain separate and testable.</p></li>
+</ol>
+<div class="fn-note"><strong>Independence matters:</strong> Evelyn Hart and Florence Nightingale are intended as separate applications, shortcuts, voices, personal histories and memory stores. They may share a book catalog, but neither may automatically inherit the other's reading, private experiences or conclusions. Their interaction, installer and reading gates are not yet proven working.</div>
+</section>
+<section class="fn-section" id="avatar-plan">
+<p class="fn-kicker">Avatar Builder · Proposed experiment</p><h2>Can a dated portrait guide a recognizable 3D head?</h2>
+<p>Florence provides a useful future controlled Avatar Builder experiment. Build a head and hairstyle from properly dated visual references, keep unknown angles and materials identified as reconstruction, compare rendered front/three-quarter/side views against the references, and then test eyelid and mouth animation as separate acceptance checks.</p>
+<p><strong>Not yet validated:</strong> portrait-based likeness, Florence's original or synthesized speaking voice, unscripted conversations, her historical knowledge boundary, shared-library discovery, gradual language adaptation and installed Windows shortcuts. A concept, a source collection or a designed desktop icon is not a completed model or an operating program.</p>
+<p><a class="fn-button" href="evelyn-hart.html#companion-desktop-shortcuts-2026-10-21">See the companion desktop-icon design →</a><a class="fn-button" href="progress.html">Dated lab milestones →</a></p>
+</section>
+<section class="fn-section" id="sources">
+<p class="fn-kicker">Archival references · Verify each source and reuse right</p><h2>Research trail</h2>
+<ul class="fn-source-list">
+<li><a href="https://wellcomecollection.org/works/tp9njewm" target="_blank" rel="noopener noreferrer">Wellcome Collection, voice recording first rendition, 30 July 1890</a> — a historical source, not yet a validated synthetic voice.</li>
+<li><a href="https://wellcomecollection.org/works/vyy64xdc" target="_blank" rel="noopener noreferrer">Wellcome Collection, second rendition from the same recording session</a> — not an independent lifelong voice sample.</li>
+<li><a href="https://www.uab.edu/nursing/home/nightingale-initiative/new-nightingale-letters" target="_blank" rel="noopener noreferrer">University of Alabama at Birmingham, Florence Nightingale letter of 29 June 1889</a> — confirms the South Street address and gives firsthand writing style.</li>
+<li><a href="https://historicengland.org.uk/images-books/photos/job/2K/12945" target="_blank" rel="noopener noreferrer">Historic England, 10 South Street property history</a> — confirms her London residence.</li>
+<li><a href="https://www.npg.org.uk/collections/search/personExtended/mp03298/florence-nightingale?tab=iconography" target="_blank" rel="noopener noreferrer">National Portrait Gallery, Florence Nightingale iconography</a> — identifies an 1887 painted portrait and 1889 photographs, with artwork rights to confirm.</li>
+<li><a href="https://www.gutenberg.org/ebooks/17366" target="_blank" rel="noopener noreferrer">Project Gutenberg, Notes on Nursing</a> — useful historical writings, with edition and text-date verification before inclusion.</li>
+</ul>
+<p class="fn-muted">Later compilations, later portraits and modern biographies can be research tools for the developers, but should not silently become facts known to the 1890 character. Book redistribution and voice/image rights are assessed separately from whether an archival page can be viewed online.</p>
+</section>
+</div>
+</main>
+<footer class="fn-footer"><div class="fn-inner">Kira Labs · Independent historical companion research · <a href="evelyn-hart.html">Evelyn Hart</a> · <a href="knowledge.html">Source and evidence boundaries</a> · <a href="contact.html">Contact</a></div></footer>
+<script src="labs.js"></script>
+</body></html>
