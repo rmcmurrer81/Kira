@@ -24,6 +24,39 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "evelyn-recorded-blink-and-reopening-verified-2026-10-20",
+      "title": "Evelyn's eyes visibly close and reopen, passing the fixed motion test",
+      "project": "Evelyn Hart",
+      "track": "Actual open/blink/reopened frames, controlled eyelid and jaw movement, independent saved-evidence review",
+      "date": "2026-10-20",
+      "reviewed_on": "2026-10-20",
+      "status": "development",
+      "date_basis": "Fresh owned test 1047 and separate accepted saved-evidence audit 1048, documented October 20, 2026 in current NewBrain/KiraWorld repository research status and user-supplied image/report captures.",
+      "summary": "The corrected eyelid-motion test passed: closure of 69.8719% left and 72.4625% right exceeded the fixed 65% requirement. Recorded before/blink-peak/reopened images were directly inspected; reopening error was zero and the sampled pose returned exactly to rest. The prior 1.7% blink failure remains preserved.",
+      "body": "The first accepted shared eyelid setting was 20 degrees; smaller tested settings failed. An independent saved-evidence reviewer recomputed the outcome and checked all 15 original PNG captures and complete browser records, as well as recorded cleanup, ownership, empty process groups and closed resource evidence. There were 1,492 changed blink pixels and 1,024 mouth-control pixels. These are controlled graphic motions, not generated spoken conversation, phoneme matching, long-term visitor memory, human physiology, NewBrain embodiment or release readiness. The loud audible signal was an engineering tone, not Evelyn's generated voice. Future calibration must be silent and creator-led private installation/conversation checks come before any public release.",
+      "image": {
+        "path": "assets/evelyn-blink-frames-research-20261020.svg",
+        "label": "Three actual recorded head frames: open, closed, reopened",
+        "alt": "Three real Evelyn compatibility head captures, showing the eyes open, closed at peak blink, and reopened",
+        "caption": "Actual test 1047 frames, cropped and downsampled for website display. Independent review 1048 accepted closure and restoration checks. No generated speech demonstrated."
+      },
+      "sources": [
+        {
+          "label": "Open the new verified blink report and contact sheet",
+          "url": "reports/71-evelyn-verified-blink-reopening.html"
+        },
+        {
+          "label": "Evelyn project: actual recorded frames and pending voice",
+          "url": "evelyn-hart.html#evelyn-blink-verified-2026-10-20"
+        },
+        {
+          "label": "Earlier independently preserved failed blink study 1042",
+          "url": "reports/evelyn-motion-calibration-2026-10-20.html"
+        }
+      ],
+      "project_page": "evelyn-hart.html#evelyn-blink-verified-2026-10-20"
+    },
+    {
       "id": "evelyn-eyelid-correction-reviewed-test-pending-2026-10-20",
       "title": "Evelyn eyelid movement correction passes source review; fresh motion test remains unrun",
       "project": "Evelyn Hart",
@@ -33,7 +66,7 @@ window.KIRA_LABS_TIMELINE = {
       "status": "development",
       "date_basis": "October 20 development-task screenshots supplied after a previously verified failed blink-motion test; this is a task-log source-review status, not the result of a completed new runtime trial.",
       "summary": "After a blink result of about 1.7% closure on each eye against a 65% requirement, code review identified an insufficient 0.5-degree scouting movement. A bounded correction to search for enough eyelid travel passed source review. The next fresh test did not start in the reported snapshots because available RAM stayed below 8 GiB.",
-      "body": "The new procedure retains eyelid stability and return-to-rest checks. The initial jaw calibration was accepted but the eyelid acceptance test failed, so the integrated six-capture sequence and video were not produced. The later attempted retest was blocked at an unchanged 8 GiB startup gate; a bounded working-set correction and lighter coordination process were being prepared. Generated voice, lip synchronization, actual completed blinking and memory after restart are not verified.",
+      "body": "The new procedure retains eyelid stability and return-to-rest checks. The initial jaw calibration was accepted but the eyelid acceptance test failed, so the integrated six-capture sequence and video were not produced. The later attempted retest was blocked at an unchanged 8 GiB startup gate; a bounded working-set correction and lighter coordination process were being prepared. Generated voice, lip synchronization, actual completed blinking and memory after restart are not verified. Subsequent status: a new run 1047 and independent audit 1048 passed the eyelid-closure and restoration gate. This original source-review entry records preparation, not that later test's scope.",
       "image": {
         "path": "assets/evelyn-head-three-quarter-capture-20261020.webp",
         "label": "Actual three-quarter head screenshot, not animated motion",
@@ -41,6 +74,10 @@ window.KIRA_LABS_TIMELINE = {
         "caption": "Static head captured successfully in an earlier test. This is not a motion-test frame or proof of blinking."
       },
       "sources": [
+        {
+          "label": "Subsequent accepted blink result after source review",
+          "url": "reports/71-evelyn-verified-blink-reopening.html"
+        },
         {
           "label": "Follow-up development task-log and RAM-gate details",
           "url": "reports/2026-10-20-evelyn-newbrain-prepared-tests.html"
@@ -128,7 +165,7 @@ window.KIRA_LABS_TIMELINE = {
       "status": "development",
       "date_basis": "October 20, 2026, latest verified local motion-trial reading guide supplied by the project. Static rendering is separately documented by Report 70.",
       "summary": "The separate motion trial failed its predeclared complete-blink gate. Both eyelid apertures reduced by about 1.7%, below the 65% acceptance requirement. Jaw calibration passed, but the six integrated motion captures and video were not produced.",
-      "body": "This is a documented negative outcome, not a completed animated head. A separate successful three-camera compatibility render establishes static visibility from front, three-quarter and side views. It does not demonstrate blinking, lip synchronization, voice, visitor-memory persistence, conversation or a public installer. Audio-clock/neutral software controls do not verify actual generated speech or sound.",
+      "body": "This is a documented negative outcome, not a completed animated head. A separate successful three-camera compatibility render establishes static visibility from front, three-quarter and side views. It does not demonstrate blinking, lip synchronization, voice, visitor-memory persistence, conversation or a public installer. Audio-clock/neutral software controls do not verify actual generated speech or sound. Historical event: a separate later test 1047 passed the original threshold. The earlier failed 1042 result remains preserved for traceability.",
       "image": {
         "path": "assets/evelyn-head-front-capture-20261020.webp",
         "label": "Static Evelyn compatibility head screenshot",
@@ -136,6 +173,10 @@ window.KIRA_LABS_TIMELINE = {
         "caption": "Static compatibility rendering succeeded. A different animated-blink calibration trial failed the 65% aperture-reduction requirement."
       },
       "sources": [
+        {
+          "label": "Subsequent passing controlled blink test (separate run 1047)",
+          "url": "reports/71-evelyn-verified-blink-reopening.html"
+        },
         {
           "label": "Full motion calibration note (failed acceptance test)",
           "url": "reports/evelyn-motion-calibration-2026-10-20.html"
