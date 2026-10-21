@@ -86,6 +86,39 @@ window.KIRA_LABS_TIMELINE = {
       "project_page": "newbrain.html#newbrain-october-21-full-response"
     },
     {
+      "id": "evelyn-florence-desktop-shortcut-artwork-2026-10-21",
+      "title": "Original Evelyn and Florence desktop icon artwork is prepared for separate future installers",
+      "project": "Evelyn Hart",
+      "track": "Companion desktop identities, Windows icon assets, planned shared library and separate memory",
+      "date": "2026-10-21",
+      "reviewed_on": "2026-10-21",
+      "status": "development",
+      "date_basis": "Original submitted Evelyn-Hart.svg, Florence-Nightingale.svg, PNG previews, seven-frame ICO assets, README and desktop-shortcuts.json reviewed on October 21, 2026. Installer build and runtime launch checks are explicitly pending.",
+      "summary": "Two distinct original 256px vector desktop designs are prepared: a teal book/circuit for Evelyn and a gold lamp for Florence. Windows ICO assets have frames at 16–256px. This establishes graphic asset preparation only, not installed launch shortcuts.",
+      "body": "Each companion is intended to have her own Windows desktop shortcut and program state, local voice, memories, and continuing conversations. Both are intended to use a shared library under the Windows user's actual Documents KnownFolder, at Kira Labs/Library, with independent personal reading records. Uninstall should preserve shared books by default and remove only the appropriate companion's owned files. Florence's separate character work is planned to begin after October 29; no installed character or completed installer/launcher/discovery tests are evidenced by these art assets. Automatic book discovery and private installation remain planned, not verified. See the Evelyn project page for both actual icons.",
+      "image": {
+        "path": "assets/evelyn-hart-desktop-icon-20261021.svg",
+        "label": "Actual original teal Evelyn desktop icon",
+        "alt": "Original Evelyn Hart desktop icon, an open teal book with branching electronic circuits; companion install not yet tested",
+        "caption": "Original prepared icon asset, not a running desktop shortcut. Florence's separate gold lamp icon is shown on the Evelyn project page."
+      },
+      "sources": [
+        {
+          "label": "View both original desktop icon previews and installation boundaries",
+          "url": "evelyn-hart.html#companion-desktop-shortcuts-2026-10-21"
+        },
+        {
+          "label": "Evelyn icon SVG master",
+          "url": "assets/evelyn-hart-desktop-icon-20261021.svg"
+        },
+        {
+          "label": "Florence icon SVG master",
+          "url": "assets/florence-nightingale-desktop-icon-20261021.svg"
+        }
+      ],
+      "project_page": "evelyn-hart.html#companion-desktop-shortcuts-2026-10-21"
+    },
+    {
       "id": "newbrain-token-sequence-audit-2026-10-20",
       "title": "NewBrain read-only check identifies two weak sequence decisions",
       "project": "NewBrain",
