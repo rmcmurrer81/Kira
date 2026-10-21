@@ -36,15 +36,15 @@ window.KIRA_LABS_TIMELINE = {
       "body": "Earlier Evelyn preview runs were blank or failed with shader and graphics-context errors. In a subsequent separately recorded compatibility render, a licensed Base Female Character candidate (BlackProject, CC BY 4.0) was displayed using modified materials and reduced textures. The saved front, three-quarter and side screenshots visibly show a face and eyes, with different camera angles. The contemporaneous local development review reported that all three saved views passed the blank-screen checks and matched direct canvas captures. The completed run and its cleanup were recorded, with the earlier failed outputs preserved. A separate post-render audit was described as accepting the scoped head-render evidence and closing that test. This is a head-preview milestone, not a speaking or interactive Evelyn demonstration.",
       "boundary": "This success is grounded in user-supplied screenshots of the local test, not yet a new public GitHub research commit or an external replication. Original PBR materials remain unqualified. Blinking, generated voice, lip synchronization, conversational memory, and a public installer have not been verified. Next tests should measure blinking, generated speech with mouth movement, a short introduction, and visitor recall after restart. The previous failed graphics experiments remain preserved as a separate historical milestone.",
       "image": {
-        "path": "assets/evelyn-hart-demo-concept-2026-10-19.webp",
-        "label": "Evelyn concept artwork (not the captured head)",
-        "alt": "Previously published illustrative Evelyn historian design, not one of the three successful 3D head captures",
-        "caption": "Existing concept image only; the three-view result is reported from locally reviewed screenshots, not shown here as a runtime capture."
+        "path": "assets/evelyn-head-front-capture-20261020.webp",
+        "label": "Actual front-view captured 3D head",
+        "alt": "Actual cropped compatibility-render screenshot showing Evelyn licensed 3D head from the front",
+        "caption": "Actual captured renderer screenshot, not concept art. Base Female Character by BlackProject, CC BY 4.0; modified materials and textures. Voice and blinking remain untested."
       },
       "sources": [
         {
-          "label": "Evelyn development status and planned next tests",
-          "url": "evelyn-hart.html#status"
+          "label": "Actual front, three-quarter and side screenshots plus downloadable evidence reports",
+          "url": "evidence.html#evelyn-captures"
         },
         {
           "label": "Previously documented head-render failure (historical)",
