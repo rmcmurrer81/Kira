@@ -1,0 +1,51 @@
+name: Publish Kira Labs current research briefing PDF
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-kira-research-brief-20261020.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install report production libraries
+        run: python -m pip install reportlab pillow pypdf
+      - name: Produce public briefing with evidence and actual head images
+        run: python scripts/build_oct20_public_research_brief.py
+      - name: Verify PDF text, page count and evidence names
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from pypdf import PdfReader
+          p=Path('docs/reports/kira-labs-research-evidence-2026-10-20.pdf')
+          r=PdfReader(str(p))
+          txt=' '.join(page.extract_text() or '' for page in r.pages)
+          assert 3 <= len(r.pages) <= 5,len(r.pages)
+          for piece in ['11,914','2/12','2/5','Three visible head views','BlackProject','512 weighted skin']:
+              assert piece in txt,piece
+          print('Public PDF verified',len(r.pages),'pages',p.stat().st_size,'bytes')
+          PY
+      - name: Render PDF for genuine visual inspection
+        run: |
+          mkdir -p qa/reports
+          pdftoppm -f 1 -l 3 -scale-to 1100 -jpeg -jpegopt quality=86 docs/reports/kira-labs-research-evidence-2026-10-20.pdf qa/reports/kira-labs-evidence-2026-10-20 >/dev/null
+          test -s qa/reports/kira-labs-evidence-2026-10-20-1.jpg
+          test -s qa/reports/kira-labs-evidence-2026-10-20-2.jpg
+          test -s qa/reports/kira-labs-evidence-2026-10-20-3.jpg
+      - name: Save public report and review captures
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/reports/kira-labs-research-evidence-2026-10-20.pdf qa/reports/kira-labs-evidence-2026-10-20-*.jpg
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish October 20 evidence PDF with real Evelyn head view screenshots'
+          git pull --rebase origin main
+          git push origin HEAD:main
