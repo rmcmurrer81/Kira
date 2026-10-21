@@ -25,6 +25,39 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-windows-memory-limit-readback-2026-10-21",
+      "title": "NewBrain isolates an exact 819-byte Windows memory-limit readback mismatch",
+      "project": "NewBrain",
+      "track": "Windows owned-process safeguard diagnostic · measured infrastructure result",
+      "date": "2026-10-21",
+      "reviewed_on": "2026-10-21",
+      "status": "development",
+      "date_basis": "October 21, 2026 Kira Labs independently reviewed Windows memory-limit diagnostic (user-supplied measured report) and October 21 NewBrain primary repository research status; no qualified corrected-runtime result.",
+      "summary": "A Windows process-owner diagnostic requested 858,993,459 bytes but read back 858,992,640 for each process and owned-job memory limit—819 bytes lower. Four other policy readbacks matched. A page-aligned source correction passed review but has not passed runtime verification.",
+      "body": "The consumed controlled test found requested process and owned-job limits of 858,993,459 bytes and returned values of 858,992,640 bytes for each. Structure size (144), flags (10008), active-process limit (8) and CPU-affinity mask (3) matched. Strict equality rejected the memory values before child creation or resume, so none of 26 compatibility checks ran, and no learning score was computed. The observed 819-byte difference is consistent with whole-page normalization, not proof of it: the host page size wasn't measured in this run. An independently source-reviewed correction queries page size, derives a whole-page cap at or below the original policy ceiling and retains exact readback equality, I/O ownership and resource limits. Its corrected runtime and full process-family cleanup remain unqualified. Original12 stays independently accepted at 2/12, a separate failed trained 0/12 state remains preserved, the distinct deliberately rehearsed three-example study remains 3/3 after restart, and Qwen comparison is untested. This is a bounded operating-system infrastructure diagnostic, not learning improvement or proof of generalization.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "label": "NewBrain conceptual visual · Windows diagnostic reported in text",
+        "alt": "Conceptual glowing neural structure; this is not a screenshot of the Windows memory-limit diagnostic",
+        "caption": "Research concept art only. Read the linked dated diagnostic for exact measured values and limitations."
+      },
+      "sources": [
+        {
+          "label": "NewBrain: October 21 Windows memory-limit diagnostic and pending correction",
+          "url": "newbrain.html#newbrain-memory-readback-2026-10-21"
+        },
+        {
+          "label": "NewBrain primary GitHub research status (reviewed evidence and unrun correction)",
+          "url": "https://github.com/rmcmurrer81/newbrain/blob/main/docs/research/2026-10-20-current-status-and-patient-horizon-plan.md"
+        },
+        {
+          "label": "Full-response learning/restart result from separate study",
+          "url": "reports/74-newbrain-full-response-restart-read.html"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-memory-readback-2026-10-21"
+    },
+    {
       "id": "newbrain-full-response-learning-restart-2026-10-21",
       "title": "NewBrain learns a complete synthetic response and retains it after restart",
       "project": "NewBrain",
