@@ -24,6 +24,64 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "patient-horizon-lung-demo-plan-2026-10-20",
+      "title": "Patient Horizon defines a testable synthetic-patient lung demonstration",
+      "project": "Patient Horizon",
+      "track": "Versioned synthetic records, transparent anatomical display, bedside-stream replay and physiology-validation plan",
+      "date": "2026-10-20",
+      "reviewed_on": "2026-10-20",
+      "status": "development",
+      "date_basis": "Patient Horizon research plan, Report 62, reviewed October 20, 2026. Planned acceptance tests expressly remain unrun.",
+      "summary": "A four-page university research brief defines a first bounded demonstration: one synthetic patient, a versioned record, source-linked lab and scan findings, timestamped vital-sign replay, transparent anatomical display and separately validated breathing-model outputs.",
+      "body": "Recorded evidence so far consists of four synthetic request-planner checks and a separate 512 weighted-vertex movement/restoration check through five poses. Those engineering results do not establish a working human lung, anatomical tissue validation, live medical connection or treatment prediction. The planned checks cover version integrity, negative controls, data quality and measured motion/physiology reference comparisons.",
+      "image": {
+        "path": "assets/patient-horizon-lung-concept-2026-10.webp",
+        "label": "Illustrative lung demonstration concept",
+        "alt": "Conceptual digital anatomical lungs illustration, not a completed working physiology simulator",
+        "caption": "Concept artwork. Report 62 describes proposed synthetic demonstrations, not clinically validated lung mechanics."
+      },
+      "sources": [
+        {
+          "label": "Read the complete Patient Horizon research plan (Report 62)",
+          "url": "reports/62-patient-horizon-lung-plan-read.html"
+        },
+        {
+          "label": "Measured skin evidence (PDF)",
+          "url": "reports/2026-10-measured-skin-movement-and-restoration.pdf"
+        }
+      ],
+      "project_page": "patient-horizon.html#patient-horizon-lung-source-report-2026-10-20"
+    },
+    {
+      "id": "evelyn-blink-calibration-fails-2026-10-20",
+      "title": "Evelyn's static head is visible, but separate blink calibration fails",
+      "project": "Evelyn Hart",
+      "track": "Independent animation-acceptance trial and preserved negative evidence",
+      "date": "2026-10-20",
+      "reviewed_on": "2026-10-20",
+      "status": "development",
+      "date_basis": "October 20, 2026, latest verified local motion-trial reading guide supplied by the project. Static rendering is separately documented by Report 70.",
+      "summary": "The separate motion trial failed its predeclared complete-blink gate. Both eyelid apertures reduced by about 1.7%, below the 65% acceptance requirement. Jaw calibration passed, but the six integrated motion captures and video were not produced.",
+      "body": "This is a documented negative outcome, not a completed animated head. A separate successful three-camera compatibility render establishes static visibility from front, three-quarter and side views. It does not demonstrate blinking, lip synchronization, voice, visitor-memory persistence, conversation or a public installer. Audio-clock/neutral software controls do not verify actual generated speech or sound.",
+      "image": {
+        "path": "assets/evelyn-head-front-capture-20261020.webp",
+        "label": "Static Evelyn compatibility head screenshot",
+        "alt": "Actual still capture of Evelyn's head; not a successful blink-motion frame",
+        "caption": "Static compatibility rendering succeeded. A different animated-blink calibration trial failed the 65% aperture-reduction requirement."
+      },
+      "sources": [
+        {
+          "label": "Full motion calibration note (failed acceptance test)",
+          "url": "reports/evelyn-motion-calibration-2026-10-20.html"
+        },
+        {
+          "label": "Three-angle verified static head rendering, Report 70",
+          "url": "reports/70-evelyn-head-render-read.html"
+        }
+      ],
+      "project_page": "evelyn-hart.html#evelyn-verified-reports-2026-10-20"
+    },
+    {
       "id": "evelyn-visible-three-angle-compatibility-preview-2026-10-20",
       "title": "Evelyn's 3D head becomes visible in three distinct camera views",
       "project": "Evelyn Hart",
@@ -43,16 +101,16 @@ window.KIRA_LABS_TIMELINE = {
       },
       "sources": [
         {
+          "label": "Report 70: successful static head rendering and acceptance checks",
+          "url": "reports/70-evelyn-head-render-read.html"
+        },
+        {
           "label": "Actual front, three-quarter and side screenshots plus downloadable evidence reports",
           "url": "evidence.html#evelyn-captures"
         },
         {
           "label": "Previously documented head-render failure (historical)",
           "url": "progress.html#evelyn-head-render-graphics-and-evidence-2026-10-20"
-        },
-        {
-          "label": "NewBrain research record pending addition of this latest successful preview",
-          "url": "https://github.com/rmcmurrer81/newbrain/blob/main/docs/research/2026-10-20-current-status-and-patient-horizon-plan.md"
         }
       ],
       "project_page": "evelyn-hart.html#status"
@@ -107,6 +165,10 @@ window.KIRA_LABS_TIMELINE = {
       },
       "sources": [
         {
+          "label": "Report 69: complete source text of longer-answer test",
+          "url": "reports/69-full-response-diagnostic-read.html"
+        },
+        {
           "label": "Current public NewBrain status and scope",
           "url": "newbrain.html#newbrain-longer-answer-2026-10-20"
         },
@@ -137,6 +199,10 @@ window.KIRA_LABS_TIMELINE = {
       },
       "sources": [
         {
+          "label": "Report 68: controlled training and fresh-process restart evidence",
+          "url": "reports/68-verified-learning-restart-read.html"
+        },
+        {
           "label": "Verified training-and-restart result",
           "url": "newbrain.html#newbrain-short-teaching-2026-10-20"
         },
@@ -147,7 +213,6 @@ window.KIRA_LABS_TIMELINE = {
       ],
       "project_page": "newbrain.html"
     },
-
     {
       "id": "iris-standalone-site-guide-2026-10-20",
       "title": "Iris becomes a separate public website guide, distinct from Contact",
@@ -295,6 +360,10 @@ window.KIRA_LABS_TIMELINE = {
         "alt": "NewBrain neural architecture illustration for the October 19 experimental training report"
       },
       "sources": [
+        {
+          "label": "Latest public evidence and full report index",
+          "url": "evidence.html#october-20-source-readings"
+        },
         {
           "label": "October 19 evidence summary",
           "url": "research-status-2026-10-19.html"
