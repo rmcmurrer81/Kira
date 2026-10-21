@@ -397,10 +397,10 @@ window.KIRA_LABS_TIMELINE = {
       "body": "An earlier render-only run exited and cleaned up, but its front, three-quarter and side captures showed no head and were byte-identical despite camera changes, so visual acceptance failed. A distinct later capture then logged shader-validation errors for the eye-moisture and eyebrow materials and lost the WebGL context at the first front-view capture. Separately, an owned Chrome-profile temporary file disappeared between enumeration and inspection, stopping its file-accounting supervisor. The only saved follow-up images are blank baseline page/canvas captures. A saved-only review accepted the available evidence and closure records; all chosen run and review allowances closed, with some child I/O counters unknown.",
       "boundary": "These are verified observations and diagnostic evidence, not a working avatar, a confirmed root cause of WebGL context loss, successful head screenshots, tested speech or lip motion, or a released Evelyn installer. The next work is a graphics-material compatibility correction and a safer transient-file accounting path, followed by a fresh separately recorded render test with visible front, three-quarter and side views. No successful new test is claimed.",
       "image": {
-        "path": "assets/evelyn-hart-demo-concept-2026-10-19.webp",
-        "label": "Evelyn illustrative concept",
-        "alt": "Concept portrait of the planned Evelyn Hart historian character; not a screenshot of a rendered or functioning avatar",
-        "caption": "Existing concept artwork only. The tested head renders were blank or failed, so no successful render image is shown."
+        "path": "assets/evelyn-earlier-render-failure-placeholder-20261020.svg",
+        "label": "Historical failed head-render test — no accepted image",
+        "alt": "Archive graphic indicating an older Evelyn render test did not produce a valid head image",
+        "caption": "Historical unsuccessful graphics test, kept as evidence. This is a diagnostic placeholder, not Evelyn's appearance. Later tests produced a head and verified eyelid movement."
       },
       "sources": [
         {
