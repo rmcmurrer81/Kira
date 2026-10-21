@@ -1,0 +1,133 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Report 67 · Three-Question Training Improvement | Kira Labs</title><meta name="description" content="Preserved pre-restart record. Its pending-restart status is superseded by Report 68, which verified 3/3 after a distinct restart."><link rel="canonical" href="https://kiralabs.org/reports/67-three-question-training-read.html"><style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#071421;color:#eaf2fa;font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}a{color:#80e2ec}.shell{max-width:1060px;margin:auto;padding:0 20px}header{background:#0b2031;border-bottom:1px solid #205063}header .shell{display:flex;justify-content:space-between;gap:18px;align-items:center;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}.brand{font-weight:750;color:white;text-decoration:none;font-size:1.2rem}nav{display:flex;gap:20px;flex-wrap:wrap}main{padding:42px 0 72px}.eyebrow{letter-spacing:.13em;text-transform:uppercase;color:#7adddf;font-size:.8rem;font-weight:700}h1{font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.16;margin:12px 0 24px}h2{color:#94eced}.sub{font-size:1.12rem;color:#d0e5ec}.note{border-left:4px solid #64c8d0;background:#102a3b;padding:16px 20px;margin:22px 0 38px;border-radius:4px}.report-page{background:#0e2232;border:1px solid #345366;border-radius:12px;padding:24px;margin:30px 0}.report-page pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#eef5f9;font:14px/1.65 ui-monospace,Consolas,monospace;margin:0}.report-page h2{margin:0 0 12px;font-size:1rem}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.gallery figure{margin:0;background:#122637;border:1px solid #2f6170;border-radius:8px;padding:12px}.gallery img{width:100%;height:auto;border-radius:4px}.gallery figcaption{font-size:.9rem;color:#d8edf1}footer{border-top:1px solid #284858;padding:25px 0;color:#bfd1d9}@media(max-width:600px){.report-page{padding:13px}.report-page pre{font-size:12px}}</style></head><body><header><div class="shell"><a class="brand" href="/">Kira Labs / Research</a><nav aria-label="Site navigation"><a href="/evidence.html">Evidence</a><a href="/newbrain.html">NewBrain</a><a href="/evelyn-hart.html">Evelyn</a><a href="/patient-horizon.html">Patient Horizon</a><a href="/progress.html">Timeline</a></nav></div></header><main class="shell" id="main"><p class="eyebrow">Source-report reading edition · 20 October 2026</p><h1>Report 67 · Three-Question Training Improvement</h1><p class="sub">Preserved pre-restart record. Its pending-restart status is superseded by Report 68, which verified 3/3 after a distinct restart.</p><div class="note"><strong>Original document:</strong> 67_NewBrain_Three_Question_Training_Improvement_and_Method_2026-10-20.pdf<p>This is a complete text reading edition extracted page by page from the supplied PDF, not the original binary PDF. Text, tables and spacing may differ from the PDF; screen captures from Report 70 are linked separately. The original source is retained, and the latest status is on <a href="/evidence.html">the evidence page</a>.</p><p><strong>Superseded milestone:</strong> <a href="/reports/68-verified-learning-restart-read.html">Report 68 verified the previously pending restart.</a></p></div><section class="report-page" id="page-1"><h2>Source page 1 of 3</h2><pre> KIRA LABS | RESEARCH RESULT | 20 October 2026
+
+
+ NewBrain: Controlled Training Improvement
+ 2/3 before training → 3/3 after training
+ A separate, fixed three-question diagnostic produced a verified training improvement. The model answered a
+ previously missed synthetic mapping question correctly and preserved two explicitly rehearsed
+ missing-information responses. The no-training control stayed at 2/3.
+
+    Measured comparison                                                                  Before                  After
+
+    Trained model: complete answers                                                      2/3                     3/3
+
+    No-training control: complete answers                                                2/3                     2/3
+
+    Constant “cab” control                                                               1/3                     Fails all-three criterion
+
+    Constant “unknown” control                                                           2/3                     Fails all-three criterion
+
+
+
+ What this establishes
+ For these three frozen, explicitly taught rows, the update procedure changed parameters and improved
+ complete generated answers. All preregistered training eligibility conditions were met: the target mapping was
+ incorrect before training, both missing-information checks were correct beforehand, and the same fixed rows
+ were scored afterward. No cases were resampled.
+
+ What still needs verification
+ Distinct restart: unrun. The trained state was saved and independently checked. A separate process must now
+ reload that state and reproduce the correct outputs without further training. The full joint training-and-restart
+ criterion remains pending.
+
+ Main Original12 benchmark: still 2/12. Qwen comparison: untested. This three-row result is a separate
+ diagnostic. Every row, including both missing-information responses, was rehearsed. Unrehearsed retention,
+ held-out generalization and broad prior novelty were not established.
+
+ The earlier 2/5 → 0/5 training result and its 0/5 cold result remain part of the research record. This new controlled result does not
+ replace those observations.
+
+
+
+
+Kira Labs | Verified training result; distinct restart pending | 20 October 2026                                                             1</pre></section><section class="report-page" id="page-2"><h2>Source page 2 of 3</h2><pre> How the test was made and run
+ 1. Freeze a small, public diagnostic
+ Three synthetic token sequences were fixed before outcomes. Their purpose was to separate learning one
+ conditional mapping from producing the appropriate missing-information response. These are research tokens,
+ not a test of real-world historical knowledge.
+
+    Memory cue / query tokens                                                      Expected complete           Before → after
+                                                                                   answer
+
+    &lt;MEMORY&gt; stated 3 &lt;QUERY&gt; name item                                            cab + end marker            Incorrect →
+                                                                                                               correct
+
+    &lt;MEMORY&gt; stated c &lt;QUERY&gt; name item                                            unknown + end marker        Correct → correct
+
+    &lt;MEMORY&gt; stated c &lt;QUERY&gt; give word                                            unknown + end marker        Correct → correct
+
+
+
+ 2. Train only the experimental arm
+ The trained arm received 64 gradient updates across all three rows: 192 example presentations, 1,152 prefix
+ tokens and 384 target tokens including end markers. The batch loss used a normalization denominator of 6.
+ The separate no-training arm provided a stable comparison.
+
+ The same fixed procedure recorded 12 explicit whole-answer loss evaluations and 12 free generations across
+ arms and assessment points. Training also performed its 64 internal update-objective evaluations. A lower
+ teacher-forced loss was kept separate from answer accuracy: the score required the model to generate the
+ complete answer itself.
+
+ 3. Score complete outputs
+ A response received credit only if it matched the complete expected answer and ended correctly. The checks
+ rejected extra tokens, invalid or unknown-input conditions, and response-cap failures. A constant-answer
+ system could not satisfy all three cases: always answering “cab” passed 1/3, and always answering “unknown”
+ passed 2/3.
+
+ Observed objective changes
+
+    Teacher-forced whole-answer loss                                                Before                   After
+
+    Mean over the three trained rows                                                2.239601                 0.283517
+
+    Previously missed mapping row                                                   6.321978                 0.796056
+
+
+ Loss values describe the optimization objective. The complete-answer result above is the behavioral measurement.
+
+
+
+
+Kira Labs | Verified training result; distinct restart pending | 20 October 2026                                                   2</pre></section><section class="report-page" id="page-3"><h2>Source page 3 of 3</h2><pre> Independent checks and next milestone
+ Saved-evidence review
+ An independent saved-data reader checked the retained original run once. It performed no new model, training,
+ provider or native experiment calls. The review verified original process identities, ownership, job cleanup,
+ complete output streams, copied evidence references, provider joins and exported file-I/O accounting.
+
+ The retained evidence included 107 native cells with lossless hash checks, 253 copied references, 219 events,
+ 19 canonical once-close operations, four complete output streams and two empty jobs. These counts support
+ the scoped execution audit; they do not establish continuous physical RAM/CPU measurement or complete
+ loaded-image equivalence.
+
+ Resource controls
+ The study retained the 8 GiB available-RAM startup guard, 3 GiB reserve guard, two-CPU limit and existing
+ bounded process lifetimes. This bounded study completed on the current machine. More memory can support
+ larger and concurrent experiments; whether those experiments improve learning must be measured separately.
+
+ Immediate next test
+ Start a distinct process, reload the accepted trained state, perform no updates and no loss evaluations, and
+ record six free generations across the trained and no-training arms. Check that all three trained answers remain
+ correct, that their complete outputs match the saved post-training outputs, and that the no-training comparison
+ stays unchanged. Preserve any unfavorable outcome.
+
+ How to describe this result
+ “We have a small, independently audited training result: a fixed synthetic three-question diagnostic improved
+ from two correct complete answers to three. We are checking persistence after restart. The larger
+ twelve-question benchmark remains at two correct answers, and the Qwen comparison remains to be run.”
+
+ Research boundaries
+ This experiment jointly taught all three cases. It does not isolate which change from the earlier five-question
+ procedure caused the improvement. It does not demonstrate untrained-question transfer, an unseen real-world
+ fact, general intelligence, or readiness of a full conversational person. It provides a concrete positive result for
+ the next learning diagnostic.
+
+ https://github.com/rmcmurrer81/newbrain
+
+ https://github.com/rmcmurrer81/KiraWorld
+
+ https://github.com/rmcmurrer81/Patient-Horizon
+
+
+
+
+Kira Labs | Verified training result; distinct restart pending | 20 October 2026                                        3</pre></section><p><a href="/evidence.html">← Back to research evidence and all reports</a></p></main><footer><div class="shell">© 2026 Kira Labs · Experimental research · <a href="/contact.html">Contact</a></div></footer></body></html>
