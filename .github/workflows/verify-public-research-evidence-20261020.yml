@@ -45,7 +45,8 @@ jobs:
                   assert imgs.count()==3
                   for img in imgs.all():
                       img.scroll_into_view_if_needed()
-                      assert img.evaluate("(e)=>e.complete && e.naturalWidth>=800 && e.naturalHeight>=800"),img.get_attribute("src")
+                      img.evaluate("(e)=>{e.loading='eager';}")
+                      page.wait_for_function("(src)=>{const e=[...document.querySelectorAll('.ev-render img')].find(x=>x.getAttribute('src')===src);return e && e.complete && e.naturalWidth>=800 && e.naturalHeight>=800}",img.get_attribute("src"),timeout=25000)
                   page.locator("#evelyn-captures").scroll_into_view_if_needed()
                   page.screenshot(path=f"qa/evidence/evelyn-real-head-gallery-{device}.jpg",type="jpeg",quality=85)
                   page.locator("#reports").scroll_into_view_if_needed()
