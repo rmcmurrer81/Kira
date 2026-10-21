@@ -24,6 +24,72 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "evelyn-eyelid-correction-reviewed-test-pending-2026-10-20",
+      "title": "Evelyn eyelid movement correction passes source review; fresh motion test remains unrun",
+      "project": "Evelyn Hart",
+      "track": "Post-failure source correction for complete blink, eye stability and neutral restoration",
+      "date": "2026-10-20",
+      "reviewed_on": "2026-10-20",
+      "status": "development",
+      "date_basis": "October 20 development-task screenshots supplied after a previously verified failed blink-motion test; this is a task-log source-review status, not the result of a completed new runtime trial.",
+      "summary": "After a blink result of about 1.7% closure on each eye against a 65% requirement, code review identified an insufficient 0.5-degree scouting movement. A bounded correction to search for enough eyelid travel passed source review. The next fresh test did not start in the reported snapshots because available RAM stayed below 8 GiB.",
+      "body": "The new procedure retains eyelid stability and return-to-rest checks. The initial jaw calibration was accepted but the eyelid acceptance test failed, so the integrated six-capture sequence and video were not produced. The later attempted retest was blocked at an unchanged 8 GiB startup gate; a bounded working-set correction and lighter coordination process were being prepared. Generated voice, lip synchronization, actual completed blinking and memory after restart are not verified.",
+      "image": {
+        "path": "assets/evelyn-head-three-quarter-capture-20261020.webp",
+        "label": "Actual three-quarter head screenshot, not animated motion",
+        "alt": "Static three-quarter image of Evelyn's verified compatibility-rendered head",
+        "caption": "Static head captured successfully in an earlier test. This is not a motion-test frame or proof of blinking."
+      },
+      "sources": [
+        {
+          "label": "Follow-up development task-log and RAM-gate details",
+          "url": "reports/2026-10-20-evelyn-newbrain-prepared-tests.html"
+        },
+        {
+          "label": "Preserved failed first blink calibration",
+          "url": "reports/evelyn-motion-calibration-2026-10-20.html"
+        },
+        {
+          "label": "Actual accepted head capture and scope",
+          "url": "reports/70-evelyn-head-render-read.html"
+        }
+      ],
+      "project_page": "evelyn-hart.html#evelyn-verified-reports-2026-10-20"
+    },
+    {
+      "id": "newbrain-diagnostic-preflight-memory-and-field-2026-10-20",
+      "title": "NewBrain diagnostic preparation hits RAM and metadata gates; no new model result",
+      "project": "NewBrain",
+      "track": "Pre-model startup guard, source-closure record correction and independent review",
+      "date": "2026-10-20",
+      "reviewed_on": "2026-10-20",
+      "status": "development",
+      "date_basis": "User-supplied October 20 Codex task-log screenshots; no new scored model execution is established by these snapshots.",
+      "summary": "A planned fresh NewBrain diagnostic stopped before the model ran: one preparation failed the 8 GiB available-memory startup gate, and another encountered a wrong source-closure field in its prepared record. The failed originals were preserved; a corrected setup passed source review but produced no new learning measurement.",
+      "body": "The unchanged startup admission guard requires 8 GiB available RAM, with a separate 3 GiB reserve. Bounded memory corrections were reported, not extra hardware. A source-closure metadata field-name mismatch caused a constructor stop before model/Native execution and was corrected in reviewed preparation. These events are not a new learning failure or gain. Original12 remains 2/12 before and after its latest completed main 256-update result, while the narrow taught three-row test remains 2/3 to 3/3 to 3/3 after restart. Qwen comparison remains untested.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "label": "Conceptual neural-system illustration",
+        "alt": "Illustrative neural image, not screenshot of NewBrain execution",
+        "caption": "Illustration only. Technical observations are in the linked task-log and preserved experiment reports."
+      },
+      "sources": [
+        {
+          "label": "Read diagnostic preflight and record correction note",
+          "url": "reports/2026-10-20-evelyn-newbrain-prepared-tests.html"
+        },
+        {
+          "label": "Current verified Original12 and short result comparison",
+          "url": "newbrain.html#newbrain-source-reports-2026-10-20"
+        },
+        {
+          "label": "Report 68 positive short three-row restart",
+          "url": "reports/68-verified-learning-restart-read.html"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-diagnostic-gate-2026-10-20"
+    },
+    {
       "id": "patient-horizon-lung-demo-plan-2026-10-20",
       "title": "Patient Horizon defines a testable synthetic-patient lung demonstration",
       "project": "Patient Horizon",
