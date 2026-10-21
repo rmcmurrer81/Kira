@@ -25,6 +25,39 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-windows-26-compatibility-passed-2026-10-21",
+      "title": "NewBrain's corrected Windows launch passes all 26 compatibility checks",
+      "project": "NewBrain",
+      "track": "Verified narrow Windows launch, metadata compatibility and owned-process cleanup",
+      "date": "2026-10-21",
+      "reviewed_on": "2026-10-21",
+      "status": "development",
+      "date_basis": "Independently reviewed corrected Windows launch and synthetic 26-case compatibility result reported October 21, 2026 in the primary NewBrain research status; report provided by user. This is a narrowly scoped process-control engineering result, not a learner/scorer benchmark.",
+      "summary": "The corrected Windows process owner queried 4,096-byte memory pages, enforced the 858,992,640-byte process and owned-job limits below the original 858,993,459-byte ceiling, launched and supervised the child, and passed all 26 predefined synthetic metadata compatibility cases.",
+      "body": "A previous strict Windows readback had stopped at an 819-byte mismatch before child launch. The corrected process owner measured system page size as 4,096 bytes and selected a whole-page cap of 858,992,640 bytes for both process and owned-job limits, below the original requested upper ceiling of 858,993,459. All six Windows limit fields matched both initially and before child resume; owned Job membership and a two-CPU affinity mask were verified. The child executed four exact reviewed pure code spans and passed all 26 synthetic metadata compatibility fixtures: three valid metadata outcomes and 23 expected ValueError rejections. The child exited successfully, both stdout/stderr streams reached EOF, owned active-process count reached zero, verified narrow cleanup completed and handles were closed. Independent internal saved-evidence review confirmed the result. This does not qualify every abnormal failure-control scenario, replay training, run the saved learner/scorer, or demonstrate increased accuracy or generalization. Latest independently accepted Original12 is 2/12, separate old trained failure state is 0/12, separate rehearsed three-example restart is 3/3, saved newer learning result remains unscored and Qwen comparison remains untested. Next: a separately reviewed minimal compatible caller to independently score the saved learning experiment without new training.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "label": "Conceptual NewBrain research illustration — compatibility result in source",
+        "alt": "Illustrative glowing neural motif; the 26/26 result describes process compatibility, not a rendered model",
+        "caption": "Concept artwork only. See the linked primary report for the 26 measured compatibility outcomes, resource limits, and result boundaries."
+      },
+      "sources": [
+        {
+          "label": "NewBrain: verified 26/26 Windows compatibility pass and restrictions",
+          "url": "newbrain.html#newbrain-windows-compatibility-pass-2026-10-21"
+        },
+        {
+          "label": "Primary dated NewBrain result and evidence identifiers",
+          "url": "https://github.com/rmcmurrer81/newbrain/blob/main/docs/research/2026-10-20-current-status-and-patient-horizon-plan.md"
+        },
+        {
+          "label": "Earlier 819-byte diagnostic, kept for reproducibility",
+          "url": "newbrain.html#newbrain-memory-readback-2026-10-21"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-windows-compatibility-pass-2026-10-21"
+    },
+    {
       "id": "newbrain-windows-memory-limit-readback-2026-10-21",
       "title": "NewBrain isolates an exact 819-byte Windows memory-limit readback mismatch",
       "project": "NewBrain",
@@ -33,8 +66,8 @@ window.KIRA_LABS_TIMELINE = {
       "reviewed_on": "2026-10-21",
       "status": "development",
       "date_basis": "October 21, 2026 Kira Labs independently reviewed Windows memory-limit diagnostic (user-supplied measured report) and October 21 NewBrain primary repository research status; no qualified corrected-runtime result.",
-      "summary": "A Windows process-owner diagnostic requested 858,993,459 bytes but read back 858,992,640 for each process and owned-job memory limit—819 bytes lower. Four other policy readbacks matched. A page-aligned source correction passed review but has not passed runtime verification.",
-      "body": "The consumed controlled test found requested process and owned-job limits of 858,993,459 bytes and returned values of 858,992,640 bytes for each. Structure size (144), flags (10008), active-process limit (8) and CPU-affinity mask (3) matched. Strict equality rejected the memory values before child creation or resume, so none of 26 compatibility checks ran, and no learning score was computed. The observed 819-byte difference is consistent with whole-page normalization, not proof of it: the host page size wasn't measured in this run. An independently source-reviewed correction queries page size, derives a whole-page cap at or below the original policy ceiling and retains exact readback equality, I/O ownership and resource limits. Its corrected runtime and full process-family cleanup remain unqualified. Original12 stays independently accepted at 2/12, a separate failed trained 0/12 state remains preserved, the distinct deliberately rehearsed three-example study remains 3/3 after restart, and Qwen comparison is untested. This is a bounded operating-system infrastructure diagnostic, not learning improvement or proof of generalization.",
+      "summary": "A Windows process-owner diagnostic requested 858,993,459 bytes but read back 858,992,640 for each process and owned-job memory limit—819 bytes lower. Four other policy readbacks matched. A page-aligned source correction passed review but has not passed runtime verification. This original failed attempt has been superseded by a distinct subsequent controlled launch that passed 26/26 compatibility cases.",
+      "body": "The consumed controlled test found requested process and owned-job limits of 858,993,459 bytes and returned values of 858,992,640 bytes for each. Structure size (144), flags (10008), active-process limit (8) and CPU-affinity mask (3) matched. Strict equality rejected the memory values before child creation or resume, so none of 26 compatibility checks ran, and no learning score was computed. The observed 819-byte difference is consistent with whole-page normalization, not proof of it: the host page size wasn't measured in this run. An independently source-reviewed correction queries page size, derives a whole-page cap at or below the original policy ceiling and retains exact readback equality, I/O ownership and resource limits. Its corrected runtime and full process-family cleanup remain unqualified. Original12 stays independently accepted at 2/12, a separate failed trained 0/12 state remains preserved, the distinct deliberately rehearsed three-example study remains 3/3 after restart, and Qwen comparison is untested. This is a bounded operating-system infrastructure diagnostic, not learning improvement or proof of generalization. Historical status: a separately admitted later run using the corrected limit alignment passed the narrow 26/26 compatibility path. This original failure remains preserved. See the newest October 21 milestone.",
       "image": {
         "path": "assets/home-neural-highres-20261020.webp",
         "label": "NewBrain conceptual visual · Windows diagnostic reported in text",
