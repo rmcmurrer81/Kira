@@ -1,0 +1,132 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Report 63 · Isolated Learning Result | Kira Labs</title><meta name="description" content="An isolated three-question study remained at 2/3 after 64 updates. The new association was still incorrect; the separate restart stage was unrun."><link rel="canonical" href="https://kiralabs.org/reports/63-isolated-learning-read.html"><style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#071421;color:#eaf2fa;font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}a{color:#80e2ec}.shell{max-width:1060px;margin:auto;padding:0 20px}header{background:#0b2031;border-bottom:1px solid #205063}header .shell{display:flex;justify-content:space-between;gap:18px;align-items:center;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}.brand{font-weight:750;color:white;text-decoration:none;font-size:1.2rem}nav{display:flex;gap:20px;flex-wrap:wrap}main{padding:42px 0 72px}.eyebrow{letter-spacing:.13em;text-transform:uppercase;color:#7adddf;font-size:.8rem;font-weight:700}h1{font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.16;margin:12px 0 24px}h2{color:#94eced}.sub{font-size:1.12rem;color:#d0e5ec}.note{border-left:4px solid #64c8d0;background:#102a3b;padding:16px 20px;margin:22px 0 38px;border-radius:4px}.report-page{background:#0e2232;border:1px solid #345366;border-radius:12px;padding:24px;margin:30px 0}.report-page pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#eef5f9;font:14px/1.65 ui-monospace,Consolas,monospace;margin:0}.report-page h2{margin:0 0 12px;font-size:1rem}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.gallery figure{margin:0;background:#122637;border:1px solid #2f6170;border-radius:8px;padding:12px}.gallery img{width:100%;height:auto;border-radius:4px}.gallery figcaption{font-size:.9rem;color:#d8edf1}footer{border-top:1px solid #284858;padding:25px 0;color:#bfd1d9}@media(max-width:600px){.report-page{padding:13px}.report-page pre{font-size:12px}}</style></head><body><header><div class="shell"><a class="brand" href="/">Kira Labs / Research</a><nav aria-label="Site navigation"><a href="/evidence.html">Evidence</a><a href="/newbrain.html">NewBrain</a><a href="/evelyn-hart.html">Evelyn</a><a href="/patient-horizon.html">Patient Horizon</a><a href="/progress.html">Timeline</a></nav></div></header><main class="shell" id="main"><p class="eyebrow">Source-report reading edition · 20 October 2026</p><h1>Report 63 · Isolated Learning Result</h1><p class="sub">An isolated three-question study remained at 2/3 after 64 updates. The new association was still incorrect; the separate restart stage was unrun.</p><div class="note"><strong>Original document:</strong> 63_NewBrain_Isolated_Learning_Result_and_Verification_Method_2026-10-20.pdf<p>This is a complete text reading edition extracted page by page from the supplied PDF, not the original binary PDF. Text, tables and spacing may differ from the PDF; screen captures from Report 70 are linked separately. The original source is retained, and the latest status is on <a href="/evidence.html">the evidence page</a>.</p></div><section class="report-page" id="page-1"><h2>Source page 1 of 3</h2><pre> NEWBRAIN | RESEARCH ADDENDUM
+
+
+ Isolated learning study:
+ result and verification method
+ Kira Labs | 20 October 2026
+
+ The latest small training study did not produce a newly correct answer. Its saved execution evidence
+ has now passed the scoped internal audit. The separate process-restart stage remains unrun.
+
+    Fixed public test                                            Before 64 updates                  After 64 updates
+
+
+    One new association                                          Incorrect                          Incorrect
+
+
+    Missing-information question 1                               Correct                            Correct
+
+
+    Missing-information question 2                               Correct                            Correct
+
+
+    Strict complete-response total                               2/3                                2/3
+
+
+ The two correct responses were missing-information controls. They were not two newly learned facts. The
+ no-teaching control stayed unchanged. All 64 update records showed a changed parameter hash; changed
+ weights alone do not establish useful learning.
+
+ How this relates to the main result
+ Original12 remains 2/12 before and 2/12 after the latest 256-update main study and a fresh-process
+ reload: two newly correct complete responses and two lost missing-information passes. The original baseline
+ and the earlier separate 64-update state that scored 0/12 remain preserved.
+
+ A different, earlier Public2 teaching experiment improved from 1/2 to 2/2 and retained that result after reload.
+ This narrow success does not establish improvement on Original12 or on the new three-row study. The Qwen
+ comparison remains untested.
+
+ Current conclusion: no net improvement on the main assessment, and no new correct association response in this isolated training
+ observation. No generalization or acquisition-and-retention success is claimed.
+
+
+
+
+Kira Labs | NewBrain | Verified status: 20 October 2026                                                                       1/3</pre></section><section class="report-page" id="page-2"><h2>Source page 2 of 3</h2><pre> How the automated test was made and run
+ 1. Freeze the question, controls and scoring
+ The study used one fixed public synthetic association and two questions requiring an answer that information
+ was unavailable. Before training, the association had to be incorrect and both controls correct. Those
+ eligibility checks passed. The expected responses and evaluation rules were fixed before the run.
+
+ Generation was scored as a complete response, including its required answer, source/version fields and
+ ending. The evaluator did not repair answers, choose a more favorable checkpoint or replace failed cases.
+ This was a test of taught examples, not a held-out generalization benchmark.
+
+ 2. Run one declared training schedule
+ One training process used the native all-parameter update path for 64 updates. The record contains 12
+ explicit objective evaluations, 64 objective evaluations inside the update routine and 12 generated responses
+ across the training and zero-update control measurements. The zero-update control did not receive equal
+ training compute.
+
+ All parallel development paused for the test, cleanup and evidence closure. The 8 GiB available-memory
+ startup guard and 3 GiB reserve remained unchanged. The original checkpoint and failed originals were
+ preserved; this new state was not adopted as the default model.
+
+ 3. Verify saved originals without retraining
+ The first saved-evidence audit stopped before scoring because matching large integer file-identity values
+ appeared as integers in one receipt and decimal strings in another. That failed attempt remains consumed
+ and preserved.
+
+ A narrow checker correction received separate source review. Thirty-five pure metadata controls then
+ passed, including exact values above the usual floating-point integer boundary, malformed-value rejection
+ and rejection of genuinely changed identities. These controls validate metadata handling, not learning.
+
+ A fresh saved-only audit read the existing run's originals and accepted its scoped process, file, counter and
+ response evidence. It did not repeat training. The audit checked complete byte lengths and hashes, original
+ reference joins, stream completion, closures and the declared state counters.
+
+ Verification limits: internal role separation is not external peer review. The audit did not independently reconstruct the model, prove
+ the complete optimizer correct, establish continuous RAM/CPU behavior or qualify every opaque API-argument ownership detail.
+
+
+
+
+Kira Labs | NewBrain | Verified status: 20 October 2026                                                                                2/3</pre></section><section class="report-page" id="page-3"><h2>Source page 3 of 3</h2><pre> What is established, and what comes next
+ Verified progress
+ The sampled numerical-gradient study passed 80 coordinate and four directional comparisons across ten
+ parameter groups, while rejecting two deliberately wrong-gradient controls. The latest evidence-checker
+ controls passed 35 comparisons. The native training run and its saved evidence can now be examined as a
+ documented negative learning observation.
+
+ These are useful engineering and diagnostic results. They do not substitute for a newly correct answer, a
+ higher Original12 score or a functioning clinical simulation.
+
+ What the result does not explain yet
+ The new association remained incorrect after teaching, even though the recorded parameter hashes
+ changed. The present result does not establish whether the limiting factor is the actual update
+ implementation, the distribution of training objectives, representation or selection of the answer, or response
+ generation.
+
+ A gradient check concerns a sampled derivative of a specified loss. It does not by itself establish that the live
+ optimizer applies the intended update to every array, or that reducing that loss improves a strict
+ complete-answer score. More RAM or a larger GPU would support experiments but would not guarantee a
+ learning fix.
+
+ Next bounded measurements
+ The primary next diagnostic is being prepared to compare one actual optimizer step with independently
+ calculated expected parameter changes and counter changes, including deliberately incorrect controls.
+ Objective weighting and first-token versus later-token errors also require separate examination. These
+ follow-ups are prepared work, not completed tests.
+
+ A distinct-process cold restore of the accepted experimental state remains pending. It must use a fresh test
+ admission and preserve the negative training observation. The main Original12 assessment and the Qwen
+ comparison also require separately defined, verified runs.
+
+ How a university could help
+ The most useful immediate support is machine-learning expertise in optimization, sequence objectives and
+ experimental design; independent replication; research assistants to run fixed tests; and stable laboratory
+ computing access. Additional memory, GPU capacity and remote server access would improve access to
+ reproducible comparisons and larger experiments.
+
+ Related material: PDF61 documents the sampled gradient result and method. PDF58 records the current main learning result.
+ PDF59 covers the earlier four-response pilot. PDF62 describes the proposed Patient Horizon lung demonstration. The verified avatar
+ result remains movement and restoration of 512 sampled weighted skin vertices; realistic organs and biological nerve-to-brain
+ function remain unvalidated.
+
+ This addendum is reusable across research meetings. It separates measured results, unresolved questions and future work. No new
+ public-release readiness claim is made for Evelyn's installer, voice or animated head.
+
+
+
+
+Kira Labs | NewBrain | Verified status: 20 October 2026                                                                         3/3</pre></section><p><a href="/evidence.html">← Back to research evidence and all reports</a></p></main><footer><div class="shell">© 2026 Kira Labs · Experimental research · <a href="/contact.html">Contact</a></div></footer></body></html>
