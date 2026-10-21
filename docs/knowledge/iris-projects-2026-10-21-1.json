@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "content_version": "2026-10-21.1",
+  "reviewed_on": "2026-10-21",
+  "review_basis": "Dated October 21 research reports 72–74; latest NewBrain, KiraWorld and Patient Horizon research-status repository records; October 20 Evelyn original graphical-head and blink reports; scoped IdeaForge project-ID and Aster retention experiment source reviews. Descriptions distinguish verified bounded tests, failed tests and unrun plans. Only public summaries are provided.",
+  "projects": [
+    {
+      "id": "newbrain",
+      "title": "NewBrain",
+      "aliases": [
+        "NewBrain",
+        "new brain"
+      ],
+      "source": "newbrain.html#newbrain-october-21-full-response",
+      "overview": "NewBrain is Kira Labs' original experimental trainable model architecture for future separate synthetic identities. It studies learning, answer selection, memory and persistence. It is not yet a general conversational brain or a replacement for a pretrained language model.",
+      "status": "As of October 21, 2026: a fresh, separate fixed three-question synthetic experiment learned one complete response after 256 balanced updates and retained all three correct answers following a distinct process restart: 2/3 -> 3/3 -> 3/3, with a no-training control at 2/3 throughout. All three questions were explicitly rehearsed. A separate 64-update curriculum failed 2/3 -> 0/3 (control 2/3). The main twelve-question Original12 benchmark is still 2/12, unchanged in its previous complete 256-update assessment. Qwen comparison has not been performed. A planned transfer using authorized teaching material is preparation only; no new main benchmark score exists.",
+      "how": "A preserved baseline is cloned; fixed synthetic teaching cases, update dose and complete-response scoring are set before training. The learner uses its own sampled weights and saves trained states. Separate workers reload the saved state for no-update persistence checks. Independent saved-evidence scoring evaluates entire generated responses, including end markers. Experiments are small, scoped demonstrations rather than open-ended language or live Kira World execution.",
+      "technical": "In the passing October 21 experiment, each of the three synthetic examples appeared in every one of 256 gradient updates (learning rate 0.01, clipping at 5): 768 example presentations, 4,608 prefix tokens and 2,048 target tokens including ending symbols. Accuracy at updates 0/64/128/192/256 was 2/3, 2/3, 2/3, 3/3 and 3/3. The distinct reload made zero updates and six generations across trained and untreated arms; saved parameters, output bias, state identity, counters and answers matched. The separate negative curriculum rehearsed two guards for 32 updates, then the longer answer for 32, scoring 2/3 -> 0/3. Read-only diagnostic 1050 found a first suffix next-word probability 4.38% versus end marker 4.77%, and a separate wrong next word later. Each inference is limited to its stated test.",
+      "evidence": "Report 74 records 2/3 before, 3/3 after 256 balanced updates, and 3/3 after fresh-process reload (training 1073/audit 1074; reload 1075/audit 1076), while the control remained 2/3. New complete synthetic answer: 'cab word one', ending normally, with two rehearsed 'unknown' answers retained. Negative Report 73 (experiment 1063, review 1064): 2/3 -> 0/3, with guards lost and no cold confirmation authorized. Read-only Report 72 (1050/1051) located two incomplete sequence choices without training. These are distinct internally audited investigations, not external university replication. Main Original12 remains 2/12, Qwen comparison untested.",
+      "privacy": "NewBrain is local/private research rather than a visitor service. Iris receives only reviewed public summaries and cannot open private curricula, raw questions, model weights, identities, histories, media, local runtime state or unpublished experiment records. The Kira Labs website does not send Iris questions into NewBrain.",
+      "limits": "The 3/3 case is deliberately small and all examples were taught. Its toy answer/source/version labels are not real references. It does not establish held-out generalization, retention of unrehearsed real facts, robust conversation, integration with Evelyn, a biological nervous system or readiness to replace Qwen. Original12 remains 2/12 and the 64-update curriculum regression remains a separate negative result. Completion of source and process audits is not continuous resource measurement or independent institutional replication.",
+      "cost": "No public NewBrain product or price exists. Research budgets propose shared lab/compute, student help and optional higher-memory GPU resources; hardware is not a substitute for model diagnostics. All figures are planning estimates, not measured minimum requirements."
+    },
+    {
+      "id": "ideaforge",
+      "title": "IdeaForge",
+      "aliases": [
+        "IdeaForge",
+        "idea forge"
+      ],
+      "source": "knowledge.html#ideaforge",
+      "overview": "IdeaForge is a local-first invention research and project-planning workspace. It turns an idea into goals, subsystems, research questions, reference choices and staged prototype plans while distinguishing available technology, experimental work and fictional or undemonstrated goals.",
+      "status": "October 21 review: IdeaForge retains its local-first engineering project, equipment, optional voice and prototype-planning components. A new exact project-folder identity fix has passed 14 isolated CPU and injected UI/source checks, including duplicate names, strict numeric IDs, concurrent folder reservations, selection and refresh. These checks do not qualify full native-GUI or model behavior.",
+      "how": "Start with an idea and define its goals, known engineering facts and unknowns. Organize subsystems, compare research and reference images, and build a staged prototype plan. The research queue and recurring watch operate while the app is open. The automatic geometry path currently makes parametric enclosures only when required dimensions are supplied; other shapes need custom CAD. An optional PyBullet runner takes an existing URDF, rather than automatically validating an entire invention.",
+      "technical": "The documented setup is Windows with Python 3.11 or newer, a prepared Python environment and local Ollama with qwen3.5:9b for chat. qwen3-vl:8b is optional for image analysis. OpenSCAD can export enclosure STL when separately installed; PyBullet is a separate optional tool. Voice needs an explicitly built .NET/System.Speech helper, an installed English recognizer, a suitable Windows voice and a working microphone. The newer project indexing path atomically reserves independent numeric folders and prevents unknown eight-digit IDs from falling back to fuzzy display-name lookup. It can leave an incomplete folder if a later multi-file write fails; full transactions and hostile filesystem races are not solved.",
+      "evidence": "A scoped review tested actual copied project/index/main UI code with 14 fresh synthetic checks covering numeric IDs, duplicate display names, six concurrent creators, collisions, traversal-like titles treated only as labels, and exact UI path selection. This supports stable project identity in those fixtures, not fully integrated app reliability, crash recovery, native Tk behavior, speech recognition, actual Qwen answers or fabrication safety. Earlier tests and adverse records remain.",
+      "privacy": "Project files, equipment records and history are stored locally, and the default model endpoint is local. Research is online: outgoing searches can include the project name, subsystem questions and saved engineering facts. IdeaForge should not be described as fully offline or as guaranteeing that invention details never leave the computer. Voice records no raw microphone audio, but recognized questions enter ordinary chat/project records. Iris cannot access those records.",
+      "limits": "Automatic CAD is limited to the documented parametric enclosure path with known dimensions. Other geometry remains custom CAD or TBD. OpenSCAD output, a mesh check or an optional existing-URDF simulation does not certify an invention’s safety, manufacturability or real-world function. Speculative goals and unsupported technology must stay labeled.",
+      "cost": "These notes establish no public IdeaForge price, packaged installer or reuse-license grant. Its documented local models and optional CAD/simulation tools require their own setup and computing resources. Iris itself has no AI-service subscription or per-question model charge."
+    },
+    {
+      "id": "humanoid-researcher",
+      "title": "Humanoid Researcher",
+      "aliases": [
+        "Humanoid Researcher",
+        "humanoidresearcher",
+        "humanoid research"
+      ],
+      "source": "knowledge.html#humanoid-researcher",
+      "overview": "Humanoid Researcher is a local-first research library and candidate-design workspace for humanoid robotics and body subsystems. It organizes source material and proposed designs while keeping verified facts, candidates and unresolved details separate.",
+      "status": "As of October 17, 2026, Humanoid Researcher collects source-attributed research by body subsystem, supports local chat and opt-in Windows voice, and prepares candidate parts and equipment notes. Main-branch updates through October 2 do not establish a complete, validated robot.",
+      "how": "Collect and categorize research, retain source metadata, and compare possible body subsystems against recorded requirements and equipment. Candidate tools can propose revisions, BOM and fastener schedules, assembly documentation, supplier searches and diagrammatic blueprint sheets. Keep VERIFIED, CANDIDATE and TBD distinct. Supplier links and lower prices do not prove compatibility or authorize substitution.",
+      "technical": "The app is Windows-oriented Python 3.11 or newer. Chat defaults to local Ollama qwen3.5:9b; screenshot interpretation needs optional qwen3-vl:8b. Collection uses online sources. A daily Windows scan is separately opt-in. Optional Windows voice starts off and requires the speech helper, installed recognizer and voice, plus a microphone. Embodiment modes are planning architectures, not deployed hardware.",
+      "evidence": "Implementation and stated boundaries were reviewed October 3, 2026; this is not a fresh end-to-end run or robotics certification. Compatibility scoring is a heuristic over recorded interfaces and ratings. It does not establish mechanical, electrical or thermal safety. Blueprint views remain diagrammatic placeholders unless verified geometry exists. CAD-derived views, physics/electrical/thermal validation and a fabrication-ready release gate remain roadmap work.",
+      "privacy": "Research, media, library and equipment records remain local in the documented setup and are not website content. Source collection and supplier searches use online services. Paper and image reuse still depends on original rights. The daily scan is opt-in and voice is initially off. Iris sees only this public summary and cannot retrieve local equipment records or private project memories.",
+      "limits": "This is a research and candidate-design tool, not an autonomous safe robot builder. Heuristic compatibility scores, conceptual BOMs and diagrammatic blueprints are not engineering certification or fabrication-ready geometry. No demonstrated mind uploading, consciousness transfer, deployed robot or active qualified NewBrain integration is claimed.",
+      "cost": "No public Humanoid Researcher price, packaged consumer release or reuse-license grant is established by these notes. Local models, speech components and engineering tools need separate setup. Iris’s free browser-only answers do not certify or fund hardware construction."
+    },
+    {
+      "id": "world",
+      "title": "Kira World",
+      "aliases": [
+        "Kira World",
+        "KiraWorld",
+        "kira worlds",
+        "world builder",
+        "world shell",
+        "residents",
+        "synthetic people",
+        "Lisa",
+        "unnamed friend",
+        "Kira and Friend",
+        "Friend prototype"
+      ],
+      "source": "research-status-2026-10-18.html#people",
+      "overview": "Kira World explores separate synthetic identities, bounded text/voice conversation, reviewed memory, digital places, temporary expert/character creation and future avatar embodiment. The Temporary AI Creator has draft profiles and source/review workflows; complete adaptive tutoring and NewBrain-driven bodies remain research goals.",
+      "status": "October 21 public-status review: Kira World retains bounded conversation and identity profiles, saved 512 weighted-vertex movement/restoration through five poses, a separate synthetic skin-event component, and prospective avatar/VR links. The October 21 NewBrain three-question teaching-and-restart result is a separate model experiment and is not evidence of a connected NewBrain-controlled avatar, natural speech or autonomous shared daily life. Private persona, voice and reading records are not public demonstrations.",
+      "how": "A profile defines a synthetic person's role, identity boundary, source plans and memory permissions. Temporary candidates can have separate human-like interests and reviewed project work; some available launcher paths support bounded Qwen-based chat, but no end-to-end adaptive tutor is qualified. The long-term Home World and Notebook Worlds connect distinct people and places with preserved continuity.",
+      "technical": "KiraWorld includes a bounded chat route, candidate creation JSON, workbench and review controls, Avatar Builder planning/geometry and a separately tested ROS 2 intention-bridge foundation. A named candidate profile does not prove an active skilled expert. The early Synthetic Robert route is independent of NewBrain's experimental learning model.",
+      "evidence": "The public body evidence is five-pose movement and exact restoration of 512 sampled weighted vertices, plus separately recorded synthetic event-routing checks; these are not skin sensation or physiology. Kira World and NewBrain may share a research direction without a verified coupled runtime. Historical character/draft candidate records are not independently validated open-ended expert conversations. Personal voice and reading histories are private and not available to Iris.",
+      "privacy": "Personal identities, source-attributed memories, avatar appearances and candidate workspaces require distinct permissions. Private conversations and owner voice reference files are not available to Iris or through this website.",
+      "limits": "The separate body results do not prove realistic tissue, touch-to-learner nerves or physiological organs. The Temporary AI Creator has no validated stress detection, school lesson-resumption outcome, historically authoritative persona or NewBrain-powered everyday conversation. No currently deployed social robot or clinical system.",
+      "cost": "Kira World is still experimental, not a priced consumer product. A university research budget may include shared compute, mentoring, student researchers, VR equipment and later assets, but hardware specifications remain planning targets."
+    },
+    {
+      "id": "bluebook",
+      "title": "BlueBook",
+      "aliases": [
+        "BlueBook",
+        "blue book",
+        "bluebook research"
+      ],
+      "source": "knowledge.html#bluebook",
+      "overview": "BlueBook is a local-first workspace for investigating UAP and anomalous-phenomena records while preserving attribution and uncertainty. It organizes cases, sources and reported descriptions without treating an unresolved report as proof of an extraordinary explanation.",
+      "status": "BlueBook 0.2 retains sourced UAP cases, 2D maps and 3D globe, program records, attributed entity descriptions, AI reconstruction prompts, provisional discovery and opt-in Windows speech. Its latest source changes were October 2; no extraordinary claims are verified.",
+      "how": "Read attributed case records, inspect source material and reported descriptions, and compare related cases. Competing-hypothesis templates list assumptions, missing evidence and falsifiable checks. They assign no probability or winner and cannot promote a hypothesis into a finding. Automatic discovery periodically checks configured feeds and archive pages while the app runs; discovered records remain provisional until reviewed.",
+      "technical": "BlueBook uses Python 3.11 or newer and a local server. Local Ollama qwen3.5:9b is optional because deterministic routing remains available. Reconstruction prompts work without an image backend; rendering requires a separately configured local AUTOMATIC1111-compatible API. Hands-free uses the server computer’s microphone and installed Windows speech components, starts off, stops when the page is hidden/closed, and allows only one app or tab to use the shared speech engine.",
+      "evidence": "Implementation and boundaries were reviewed October 3, 2026, not freshly validated end to end. A government document establishes that a record exists, not that every interpretation is true. Witness and news claims remain attributed; unresolved does not mean extraterrestrial, and descriptor similarity does not prove identity. AI reconstructions are visualizations based on reported descriptions, not photographs or evidence. Hypotheses have no assigned probability or winner.",
+      "privacy": "User media and generated images stay in local folders in the documented setup. Online archive/news requests, external map tiles and CDN scripts mean the application is not fully offline. Optional hands-free requires same-computer local access and permission to use that computer’s microphone. Iris cannot read BlueBook’s local case notes, media or chat history.",
+      "limits": "BlueBook does not prove extraterrestrial life or turn a reported entity into a verified identity. AI reconstructions are not evidence. The record library is incomplete, and full timeline or relationship-graph UI remains architectural planning rather than shipped tabs. Missing evidence, competing explanations and source reliability must remain visible.",
+      "cost": "No public BlueBook price, packaged release or reuse-license grant is verified in these notes. Optional local models and image generation need separately configured tools and computing resources. Iris itself uses no paid AI service or model subscription."
+    },
+    {
+      "id": "avatar-body",
+      "title": "Avatar Builder and Maya",
+      "aliases": [
+        "Avatar Builder",
+        "Avatar Body",
+        "Maya",
+        "skin deformation",
+        "full anatomy",
+        "virtual human body"
+      ],
+      "source": "research-status-2026-10-18.html#body",
+      "overview": "Avatar Builder develops reusable virtual-body components and measured geometry controls for distinct artificial identities. Skin simulation, anatomy, clothing, motion, senses and physiology are separate research streams, not a completed realistic human body.",
+      "status": "October 18, 2026: one saved geometric forearm test moved all 512 sampled weighted vertices across five commanded poses and restored exact saved positions. A separate invented-voltage synthetic event component qualified 8/8 internal engineering checks. The proposed body event bridge, actual sensory nerve signaling and physiological lungs remain unvalidated.",
+      "evidence": "Geometric 512-vertex five-pose exact restoration, separate 8/8 internally audited synthetic event criteria. No realistic passive tissue result, pressure calibration, NewBrain ingestion, nerve pathway, complete anatomical function, Pulse respiratory coupling or robot action.",
+      "limits": "A plausible 3D drawing, bones/weights or synthetic voltage is not anatomical physiology. Mechanical skin, actual nerves, autonomous movement, integrated learning and lung/body digital-twin operation remain untested.",
+      "how": "Build a named virtual body with versioned components and avatar-specific state. Check asset rigging, measured pose changes, restoration and explicit event contracts separately before attempting a feedback loop. A future sensory recipient and motor response must be tested independently.",
+      "technical": "The 512-vertex sampled control tests deterministic commanded geometric movement. The separate synthetic event component tested 0 V versus 0.00025 V with invented inputs, duplicate handling, isolation of two avatar instances, session/epoch validation, closure and reset. These cannot be translated into biological touch response.",
+      "privacy": "Iris reports reviewed public summaries only. She cannot access private accounts, local project data or confidential research communications.",
+      "cost": "Research capacity may need qualified body assets, supported Blender/Three.js environments, optional VR, compute and sensor calibration. No verified minimum memory or GPU need for a complete biological body is established."
+    },
+    {
+      "id": "aster",
+      "title": "Aster Workstation",
+      "aliases": [
+        "Aster",
+        "Aster Workstation",
+        "workstation companion",
+        "desktop AI assistant"
+      ],
+      "source": "projects.html",
+      "overview": "Aster is a local-first personal workstation companion with her own identity, explicit memories and an intended future NewBrain reasoning core, designed to support research and practical computer tasks.",
+      "status": "Current October 21 snapshot: Aster remains a research-stage local workstation companion with bounded modules. A separate opt-in five-initialization retention experiment tested a fixed empirical-gradient weight-protection penalty against matched replay. The fixed experiment found no incremental penalty benefit. It does not enable a production brain, live NewBrain replacement or verified autonomous desktop work.",
+      "evidence": "In the frozen tiny synthetic retention experiment, every tested arm finished old-task 6/6, new-task 6/6 and eight wording checks 8/8 for each of five repeated initializations. Even new-only training retained old cases, so the task did not expose forgetting; it cannot establish that replay or the extra penalty prevents forgetting. The additional penalty failed its prespecified benefit gate and was not adopted. Paired checks, saved-state restoration and cross-environment tests were scoped engineering evidence, not novel real-world language evaluation.",
+      "limits": "No penalty benefit was established: the toy task had perfect endpoints even without replay and exposed no forgetting. The test does not demonstrate continual-learning transfer, general language competence, a working NewBrain backend, unrestricted desktop action, live webcam understanding or generated persona conversation.",
+      "how": "This research progresses through documented, limited software and engineering tasks. Proposed goals must be tested separately before they are described as working capabilities.",
+      "technical": "Aster's opt-in test used a byte-pinned small token model, five fixed initializations, matched replay/penalty arms, 384 old warmup and 192 subsequent updates per arm. The parameter-protection term uses a diagonal squared-gradient importance proxy, not verified biological synapses or exact Fisher geometry. It incurred two additional parameter-sized arrays and descriptive overhead. The study does not modify the main NewBrain repository or Aster production behavior.",
+      "privacy": "Iris reports reviewed public summaries only. She cannot access private accounts, local project data or confidential research communications.",
+      "cost": "This research is not a public paid service. Any future deployment and equipment requirements are not yet established."
+    },
+    {
+      "id": "patient-horizon",
+      "title": "Patient Horizon",
+      "aliases": [
+        "Patient Horizon",
+        "patient digital twin",
+        "virtual patient research",
+        "medical research planner"
+      ],
+      "source": "patient-horizon.html",
+      "overview": "Patient Horizon is clinician-oriented early research for authorized evolving lab/scan evidence, versioned patient records and future doctor-reviewed virtual-patient studies.",
+      "status": "October 21 review: Patient Horizon remains a synthetic-only patient research starter with a request validator/planner, versioned evidence concepts and a proposed transparent lung/bedside data demonstration. Four historical synthetic planner checks are recorded. The newer NewBrain synthetic learning study is separate and does not establish functioning physiological lungs, clinical integration, patient-specific prediction or medical validation.",
+      "evidence": "Four historical starter checks are reported for the synthetic planner. The 512-vertex Avatar Builder geometry test and 8/8 synthetic event controls belong to other engineering components, not a clinically validated patient model.",
+      "limits": "No working real-patient medical database, autonomous diagnostic service, simulated lung physiology, safe dosage recommendation, treatment ranking or clinical outcome validation exists.",
+      "how": "This research progresses through documented, limited software and engineering tasks. Proposed goals must be tested separately before they are described as working capabilities.",
+      "technical": "The design uses versioned components, constrained experiments and clear interfaces. A proposed connection between systems is not evidence of an implemented integration.",
+      "privacy": "Iris reports reviewed public summaries only. She cannot access private accounts, local project data or confidential research communications.",
+      "cost": "This research is not a public paid service. Any future deployment and equipment requirements are not yet established."
+    },
+    {
+      "id": "physiology-bridge",
+      "title": "Pulse, Three.js and NewBrain Bridge",
+      "aliases": [
+        "Pulse Physiology Engine",
+        "Pulse physiology",
+        "Three.js bridge",
+        "lung brain bridge",
+        "virtual lung"
+      ],
+      "source": "patient-horizon.html#physiology-bridge",
+      "overview": "The approved research direction proposes a local bridge between Pulse-style physiological calculations, a Three.js virtual anatomy viewer, Blender rigging and NewBrain.",
+      "status": "The October 16 plan describes reusable lung-component interfaces and measured feedback. No integrated or calibrated Pulse–Three.js–NewBrain circuit, gas exchange, circulation or two-way lung-brain response is implemented or tested.",
+      "evidence": "The separately demonstrated 512-vertex forearm geometry control is not evidence of breathing, actual lung mechanics or neurophysiology.",
+      "limits": "No working physiological lung, gas exchange solver, medical simulation or live NewBrain-linked breathing control is established.",
+      "how": "This research progresses through documented, limited software and engineering tasks. Proposed goals must be tested separately before they are described as working capabilities.",
+      "technical": "The design uses versioned components, constrained experiments and clear interfaces. A proposed connection between systems is not evidence of an implemented integration.",
+      "privacy": "Iris reports reviewed public summaries only. She cannot access private accounts, local project data or confidential research communications.",
+      "cost": "This research is not a public paid service. Any future deployment and equipment requirements are not yet established."
+    },
+    {
+      "id": "healthspan",
+      "title": "Healthspan Lab",
+      "aliases": [
+        "Healthspan Lab",
+        "longevity research",
+        "geroscience workspace",
+        "healthspan research"
+      ],
+      "source": "research.html#healthspan-lab",
+      "overview": "Healthspan Lab is a separate longevity and geroscience evidence-review workspace, not the Patient Horizon virtual-patient project.",
+      "status": "Version 2 includes a conversational research foundation, PubMed/NCBI and ClinicalTrials.gov queries, research/evidence categories, optional local profiles and reviewed document-intake steps.",
+      "evidence": "The prototype organizes published sources; this does not validate patient-specific treatment, clinical effectiveness or life extension.",
+      "limits": "Healthspan Lab is not an approved clinical platform, working disease model or substitute for medical advice.",
+      "how": "This research progresses through documented, limited software and engineering tasks. Proposed goals must be tested separately before they are described as working capabilities.",
+      "technical": "The design uses versioned components, constrained experiments and clear interfaces. A proposed connection between systems is not evidence of an implemented integration.",
+      "privacy": "Iris reports reviewed public summaries only. She cannot access private accounts, local project data or confidential research communications.",
+      "cost": "This research is not a public paid service. Any future deployment and equipment requirements are not yet established."
+    },
+    {
+      "id": "temporary-creator",
+      "title": "Temporary AI Creator",
+      "aliases": [
+        "Temporary AI Creator",
+        "Temporary Creator",
+        "temporary expert",
+        "expert creator",
+        "AI expert creator",
+        "Civil War tutor",
+        "Civil War guide",
+        "history companion",
+        "Emily Carter",
+        "Jessica Hale",
+        "Ryan Hale",
+        "Laura Mitchell",
+        "Sarah Bennett",
+        "H H Holmes",
+        "H H Holmes AI",
+        "historical persona"
+      ],
+      "source": "research-status-2026-10-18.html#people",
+      "overview": "Kira World includes an experimental Temporary AI Creator that drafts artificial expert and historical-character profiles with original identities, background texture, subject/source plans, review requirements and separate permitted memory. It is not a factory of independently qualified professional experts.",
+      "status": "As of October 18, reviewed repository source includes draft candidate requests, identity profiles, source packs/queues, per-role workbench plans and provisional chat/project continuity. Named examples include Emily Carter (programming), Jessica Hale (robotics), Ryan Hale (quantum mechanics), Laura Mitchell (legal-review research), Sarah Bennett (public relations) and a historical H. H. Holmes interpretation. Most are still draft/pending probe, not validated autonomous specialists.",
+      "how": "A user specifies a desired role, topic or historical point in time. The pipeline prepares a name, bounded personality/background, candidate sources, capabilities and review state. After explicit review and sufficient evidence, future stages could assign a voice and avatar, hold conversations, preserve limited lesson/project continuity and archive or re-open the candidate. Its workflow already includes source and saved-artifact checking; broader delivery is unproven.",
+      "technical": "Source records include versioned creation requests, candidate JSON profiles, source-pack plans, privacy and lifecycle policies and a supervised project-work loop. The current conversation-route planning uses local Qwen components, not qualified NewBrain-driven agents. Proposed Civil War tutors would use teacher-reviewed primary/secondary sources, clearly separate fictional biography from facts and resume only a verified learner-selected lesson step.",
+      "evidence": "Five named expert profiles and the H. H. Holmes historical candidate were inspected as repository records. One archived Holmes deterministic validation contains 12 scenario records with a late-1893 knowledge boundary and rejected inaccurate intermediate answers, but the accepted reply is essentially identical across all 12 cases. These are guard/fixture records, not a varied unscripted conversation or proof of historical accuracy. No verified educational learning outcome or stress detection is established.",
+      "privacy": "Each candidate must remain separate from Kira/Lisa private memories and from any person's private records. A possible Digital Robert extension would require owner authorization, provenance, consent, memory correction/deletion and different treatment of human memories versus the synthetic twin's later experiences.",
+      "limits": "Profiles are research candidates, not licensed professional advisers or real historical people. The system has not validated adaptive teaching, reliable independent subject research, stress inference, long-term lesson resumption, historical first-person truth or a fully functioning body. The H. H. Holmes reconstruction cannot know events after its specified viewpoint.",
+      "cost": "No published sale price or live Temporary AI Creator service is available. Longer-term research could require reviewed sources, speech/body tools, educator and HCI input, and bounded compute; actual cost and learning outcomes require tests."
+    },
+    {
+      "id": "evelyn",
+      "title": "Evelyn Hart",
+      "aliases": [
+        "Evelyn Hart",
+        "Evelyn",
+        "AI historian",
+        "technology historian",
+        "historian demonstration"
+      ],
+      "source": "evelyn-hart.html#evelyn-blink-verified-2026-10-20",
+      "overview": "Evelyn Hart is a planned free local Windows demonstration of a continuing AI-and-technology historian with her own identity and curated history references. She uses a separate planned Qwen conversational backend; she does not yet run on NewBrain.",
+      "status": "As of October 21, Evelyn's simplified licensed 3D head passed three distinct static camera-view checks, and a later controlled blink/reopening experiment independently verified 69.8719% left and 72.4625% right eyelid closure against a fixed 65% requirement, with zero reopening error. Her original adult female generated voice, Chatterbox binding, synchronized talking face, persistent visitor-memory restart, generated conversation and Windows installer have not passed release testing. A small GPU environment check is being prepared, not an accepted voice result. No public download is available; private creator testing is required first.",
+      "how": "The demonstration is intended to combine a local language model, a source-reviewed history library, versioned application memory and a rendered character. Distinct engineering stages inspect head visibility, eye and mouth geometry, audio and later conversation or installation. The historical research reference contains 52 curated cards and 51 linked source entries, not proven generated-answer correctness.",
+      "technical": "The accepted head uses a simplified compatibility render, not photorealistic original materials. Motion run 1047 and audit 1048 measured 69.8719% left/72.4625% right closure, zero reopening error and exact sampled neutral restoration. The test changed 1,492 eyelid pixels and 1,024 mouth-control pixels; a controlled engineering tone was used rather than generated persona speech. The original custom female voice is still being prepared for Chatterbox; no released installer or validated phoneme synchronization is established.",
+      "evidence": "The earlier failed eyelid trial measured about 1.7% closure against a 65% criterion and remains preserved. A separate accepted run 1047, audit 1048, documented original open/blink/reopened captures, full graphical closure and sampled pose recovery. Three static head-render angles also passed their scoped checks. No verified natural generated voice, visitor-name recall across restart, library-based independent learning, complete conversation or public Windows installer is shown.",
+      "limits": "Evelyn's graphical head and eyelid-control evidence is not a proof of lifelike conversation, speech, emotion, NewBrain integration, real human physiology, a deployable clinical system, or download readiness. The history cards are curated references, not a guaranteed full answer bank. The release will require private installation and repeated owner-led conversations first.",
+      "privacy": "Iris cannot retrieve Evelyn's private voice references, visitor memories, local books, identities, personal histories or experimental model state. A public status page shows only selected images and bounded evidence. Local persona data will require independent permissions and privacy review before release.",
+      "cost": "The intended Windows demonstration is planned to be free, but no installer has been released and no validated minimum hardware specifications or future pricing are established."
+    }
+  ]
+}
