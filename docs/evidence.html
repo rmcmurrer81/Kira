@@ -23,8 +23,20 @@
 <div class="ev-actions"><a class="button primary" href="#evelyn-captures">View actual 3D head captures →</a><a class="button" href="#reports">Read the reports →</a><a class="button" href="#newbrain-results">See learning results →</a></div>
 </div></section>
 
+<section class="ev-section" id="newbrain-windows-compatibility-pass-2026-10-21" aria-labelledby="ev-nb-compatible-title"><div class="ev-wrap">
+<p class="ev-kicker">NewBrain · October 21, 2026 · Independently reviewed Windows launch result</p>
+<h2 id="ev-nb-compatible-title">All 26 software compatibility cases passed.<br/><em>Model accuracy was not retested.</em></h2>
+<p class="ev-sublead">The corrected Windows process guard queried an actual <strong>4,096-byte page size</strong> and set process and owned-job memory limits to <strong>858,992,640 bytes</strong>—within the prior 858,993,459-byte policy ceiling. All six Windows limit fields matched at initial setup and before resuming the child, which was verified inside its owned Job with a two-CPU affinity limit.</p>
+<div class="ev-grid">
+<article class="ev-report"><div class="ev-meta">Passed · Measured compatibility outcome</div><h3>26/26 expected cases</h3><p>Three valid synthetic metadata cases returned as required; 23 invalid cases produced the expected <code>ValueError</code>. Four frozen, reviewed pure code spans were exercised.</p></article>
+<article class="ev-report"><div class="ev-meta">Passed · Narrow process cleanup</div><h3>Child exited; owned job empty</h3><p>Both output streams reached EOF, the active-process count reached zero, and all owned handles closed. This qualifies the recorded narrow result, not every abnormal failure scenario.</p></article>
+<article class="ev-report"><div class="ev-meta">Unchanged scientific limits</div><h3>Original12: 2/12</h3><p>The saved later learning experiment remains unscored, the separate earlier 0/12 state is preserved, the three-example rehearsal remains 3/3 after restart, and Qwen comparison is untested.</p></article>
+</div>
+<p class="ev-sublead"><strong>Next step:</strong> independent source review of a minimal compatible caller for the saved learning experiment, without replaying training or tuning against the protected answers. The previous 819-byte memory readback mismatch is preserved in the <a href="#newbrain-windows-memory-diagnostic-2026-10-21">earlier failed diagnostic</a>; the corrected narrow launch now passed.</p>
+<div class="ev-actions"><a class="button primary" href="newbrain.html#newbrain-windows-compatibility-pass-2026-10-21">Read the verified launch milestone →</a><a class="button" href="https://github.com/rmcmurrer81/newbrain/blob/main/docs/research/2026-10-20-current-status-and-patient-horizon-plan.md" target="_blank" rel="noopener noreferrer">Primary research record ↗</a></div>
+</div></section>
 <section class="ev-section" id="newbrain-windows-memory-diagnostic-2026-10-21" aria-labelledby="nb-win-memory-title"><div class="ev-wrap">
-<p class="ev-kicker">NewBrain · Independently reviewed operating-system diagnostic · October 21, 2026</p>
+<p class="ev-kicker">NewBrain · Independently reviewed operating-system diagnostic · October 21, 2026</p><p class="ev-sublead"><strong>Historical failure, now superseded:</strong> the <a href="#newbrain-windows-compatibility-pass-2026-10-21">corrected launch subsequently passed the fixed 26 compatibility checks</a>. The measurements below describe the earlier failed test only.</p>
 <h2 id="nb-win-memory-title">A precise limit mismatch.<br/><em>No new learning score.</em></h2>
 <p class="ev-sublead">A controlled Windows process-owner check requested <strong>858,993,459 bytes</strong> for both process and job memory, but reported <strong>858,992,640 bytes</strong> for each: exactly <strong>819 bytes below the request</strong>. Returned structure size, flags, process-limit and CPU-affinity values matched. The strict validator rejected the difference <strong>before any child process was created</strong>; none of 26 compatibility cases ran.</p>
 <div class="ev-grid">
