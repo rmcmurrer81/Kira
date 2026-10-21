@@ -110,3 +110,24 @@ body.home.hl-home{background:#06111f;color:#f4faff}
   .hl-home .hl-hero .hl-actions{margin-top:18px}
   .hl-home .hl-hero .hl-actions .button{width:auto;max-width:100%}
 }
+
+/* Desktop homepage brain hero: fade the image's own left edge so no straight vertical seam remains. */
+@media (min-width:761px){
+  .hl-home .hl-hero-photo img{
+    /* Preserve the brain/face on the right; gradually reveal the left portion. */
+    -webkit-mask-image:linear-gradient(to right,
+      transparent 0%,
+      rgba(0,0,0,.10) 12%,
+      rgba(0,0,0,.37) 28%,
+      rgba(0,0,0,.76) 44%,
+      #000 60%,
+      #000 100%);
+    mask-image:linear-gradient(to right,
+      transparent 0%,
+      rgba(0,0,0,.10) 12%,
+      rgba(0,0,0,.37) 28%,
+      rgba(0,0,0,.76) 44%,
+      #000 60%,
+      #000 100%);
+  }
+}
