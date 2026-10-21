@@ -1,0 +1,86 @@
+name: Verify public reports and Evelyn actual images
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-public-research-evidence-20261020.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install real browser
+        run: |
+          python -m pip install playwright pypdf
+          python -m playwright install chromium --with-deps
+      - name: Give GitHub Pages time to deploy
+        run: sleep 25
+      - name: Check public live site, PDF links, original capture images, navigation and phones
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          import json
+          url="https://kiralabs.org"
+          checks=[]
+          Path("qa/evidence").mkdir(parents=True,exist_ok=True)
+          with sync_playwright() as p:
+              browser=p.chromium.launch(headless=True,args=["--no-sandbox"])
+              for device,w,h in [("desktop",1440,900),("wide",1980,900),("mobile",390,844)]:
+                  context=browser.new_context(viewport={"width":w,"height":h},device_scale_factor=1)
+                  page=context.new_page()
+                  errors=[]
+                  page.on("pageerror",lambda e:errors.append(str(e)))
+                  response=page.goto(url+"/evidence.html?qa=20261020-final",wait_until="domcontentloaded",timeout=50000)
+                  assert response.status==200,response.status
+                  page.locator("#evidence-title").wait_for()
+                  imgs=page.locator(".ev-render img")
+                  assert imgs.count()==3
+                  for img in imgs.all():
+                      img.scroll_into_view_if_needed()
+                      assert img.evaluate("(e)=>e.complete && e.naturalWidth>=800 && e.naturalHeight>=800"),img.get_attribute("src")
+                  page.locator("#evelyn-captures").scroll_into_view_if_needed()
+                  page.screenshot(path=f"qa/evidence/evelyn-real-head-gallery-{device}.jpg",type="jpeg",quality=85)
+                  page.locator("#reports").scroll_into_view_if_needed()
+                  page.screenshot(path=f"qa/evidence/public-report-links-{device}.jpg",type="jpeg",quality=85)
+                  for path in ["reports/kira-labs-research-evidence-2026-10-20.pdf","reports/2026-10-measured-skin-movement-and-restoration.pdf","reports/2026-10-test-methods-and-results-explained.pdf"]:
+                      resp=page.request.get(url+"/"+path,timeout=45000)
+                      assert resp.status==200, (path,resp.status)
+                      assert resp.body()[:4]==b"%PDF",path
+                  tab=page.goto(url+"/progress.html?project=Evelyn%20Hart#evelyn-visible-three-angle-compatibility-preview-2026-10-20",wait_until="domcontentloaded",timeout=50000)
+                  assert tab.status==200
+                  page.wait_for_function("document.querySelector('#detail-image')?.naturalWidth >= 800",timeout=25000)
+                  assert "evelyn-head-front-capture-20261020.webp" in page.locator("#detail-image").get_attribute("src")
+                  page.goto(url+"/evelyn-hart.html",wait_until="domcontentloaded",timeout=50000)
+                  assert page.locator("#evelyn-render-captures img").count()==3
+                  page.goto(url+"/index.html",wait_until="domcontentloaded",timeout=50000)
+                  assert page.locator('a[href="evidence.html"]').count()>0
+                  page.goto(url+"/newbrain.html",wait_until="domcontentloaded",timeout=50000)
+                  assert page.locator('a[href="evidence.html#newbrain-results"]').count()>0
+                  page.goto(url+"/patient-horizon.html",wait_until="domcontentloaded",timeout=50000)
+                  assert page.locator('a[href="reports/2026-10-measured-skin-movement-and-restoration.pdf"]').count()>0
+                  assert not errors,errors
+                  overflow=page.evaluate("document.documentElement.scrollWidth-innerWidth")
+                  assert overflow<=2,(device,overflow)
+                  checks.append({"device":device,"three_captures_visible":True,"all_three_pdfs_open":True,"timeline_uses_actual_head":True,"all_project_links_present":True,"js_errors":errors,"horizontal_overflow":overflow})
+                  print("VERIFIED",device,checks[-1])
+                  context.close()
+              browser.close()
+          Path("qa/evidence/check-result.json").write_text(json.dumps(checks,indent=2))
+          PY
+      - name: Preserve visual checks and test receipts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add qa/evidence
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'QA: verify public reports and authentic Evelyn test captures'
+          git pull --rebase origin main
+          git push origin HEAD:main
