@@ -52,3 +52,25 @@
 .ev-page :is(a,button):focus-visible{outline:3px solid #75e9f4;outline-offset:3px}
 @media(max-width:1020px){.ev-page .ev-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.ev-page .ev-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:690px){.ev-page .ev-wrap{width:calc(100% - 30px)}.ev-page .ev-hero{padding:40px 0 42px}.ev-page .ev-section{padding:37px 0}.ev-page .ev-grid{grid-template-columns:1fr}.ev-page .ev-split{grid-template-columns:1fr}.ev-page .ev-render img{height:325px;object-fit:cover}.ev-page .ev-metric{padding:14px}.ev-page .ev-metric strong{font-size:1.35rem}.ev-page .ev-report{padding:16px}.ev-page .ev-hero h1{font-size:clamp(2.7rem,9vw,4rem)}}
+
+/* Evidence archive extensions: preserve full measured graph instead of cropping it. */
+.ev-page #measured-body-gallery .ev-render img{
+ width:100%;
+ height:auto;
+ max-height:325px;
+ object-fit:contain;
+ object-position:center;
+ background:#fff;
+}
+.ev-page #earlier-retention-graphic .ev-render img{
+ width:100%;
+ height:auto;
+ max-height:none;
+ object-fit:contain;
+ background:#fff;
+}
+.ev-page .ev-grid .ev-report a:focus-visible,
+.ev-page .ev-render a:focus-visible{outline:3px solid #72eafa;outline-offset:2px}
+@media(max-width:690px){
+ .ev-page #measured-body-gallery .ev-render img{height:auto;max-height:none}
+}
