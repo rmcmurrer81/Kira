@@ -68,3 +68,9 @@
 @media(max-width:1020px){.eh-shortcut-card{grid-template-columns:110px minmax(0,1fr);gap:15px;padding:17px}.eh-shortcut-card img{width:110px}}
 @media(max-width:790px){.eh-shortcut-grid{grid-template-columns:1fr}.eh-shortcut-card{grid-template-columns:124px minmax(0,1fr)}.eh-shortcut-card img{width:124px}}
 @media(max-width:480px){.eh-shortcut-card{grid-template-columns:88px minmax(0,1fr);gap:12px;padding:13px}.eh-shortcut-card img{width:88px}.eh-shortcut-card h3{font-size:1.1rem}.eh-shortcut-phase{font-size:.6rem}.eh-shortcut-card p{font-size:.82rem}.eh-shortcut-card .eh-shortcut-foot{font-size:.69rem}.eh-shortcut-note{padding:8px 14px}.eh-shortcut-grid{gap:12px}}
+
+/* Verified Evelyn real head instead of older unrelated illustration (Oct 21) */
+.eh-portrait{max-width:460px;justify-self:center;width:100%;}
+.eh-actual-head-link{display:block;border-radius:14px;overflow:hidden;background:#182235;box-shadow:0 25px 80px rgba(0,0,0,.5);}
+.eh-portrait .eh-actual-head-link img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;background:#182235;box-shadow:none;border-radius:0;}
+.eh-portrait figcaption a{color:#84e6e9;}
