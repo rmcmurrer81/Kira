@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-10-20",
+  "prepared_on": "2026-10-21",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -23,6 +23,97 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-full-response-learning-restart-2026-10-21",
+      "title": "NewBrain learns a complete synthetic response and retains it after restart",
+      "project": "NewBrain",
+      "track": "Fixed 256-update balanced teaching and independent training/restart evidence",
+      "date": "2026-10-21",
+      "reviewed_on": "2026-10-21",
+      "status": "development",
+      "date_basis": "Full accepted experiment Report 74 (October 21, 2026), plus aligned latest NewBrain, KiraWorld and Patient Horizon source-repository research status.",
+      "summary": "A separately frozen three-case test improved 2/3 before training to 3/3 afterward and 3/3 after a distinct fresh-process reload. The no-training arm stayed 2/3 throughout; all three synthetic examples were explicitly taught.",
+      "body": "The previously wrong synthetic response became exactly 'cab word one' with a normal ending; two previously correct missing-information answers remained 'unknown'. A preserved baseline was cloned for one balanced 256-update regimen. Checkpoints at updates 0, 64, 128, 192 and 256 scored 2/3, 2/3, 2/3, 3/3 and 3/3. A separate worker loaded the saved checkpoint and reproduced the complete answers with zero updates. Audits 1074 and 1076 reviewed original training 1073 and reload 1075 output, state, cleanup, and bounded I/O. This is one taught synthetic acquisition-and-persistence result. It does not establish held-out generalization, natural conversation, real source citations or readiness to replace Qwen. Main Original12 remains 2/12, Qwen comparison untested.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "label": "Illustrative neural research architecture",
+        "alt": "Concept image of a glowing neural structure, not a NewBrain model execution screenshot",
+        "caption": "Concept art. Read the dated PDF-derived source report for numerical findings and method."
+      },
+      "sources": [
+        {
+          "label": "Report 74: complete response and fresh-process restart",
+          "url": "reports/74-newbrain-full-response-restart-read.html"
+        },
+        {
+          "label": "Current NewBrain evidence summary",
+          "url": "newbrain.html#newbrain-october-21-full-response"
+        },
+        {
+          "label": "Separate failed 64-update curriculum",
+          "url": "reports/73-newbrain-curriculum-negative-read.html"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-october-21-full-response"
+    },
+    {
+      "id": "newbrain-curriculum-regression-2026-10-21",
+      "title": "Separate NewBrain curriculum loses two missing-information answers",
+      "project": "NewBrain",
+      "track": "Negative 64-update three-row training experiment with independently audited saved outcomes",
+      "date": "2026-10-21",
+      "reviewed_on": "2026-10-21",
+      "status": "development",
+      "date_basis": "Original report 73 and NewBrain research-status entry for completed experiment 1063 and audit 1064; evaluated independently of report 74.",
+      "summary": "A 64-update curriculum with two missing-information guards followed by the positive longer-answer example regressed 2/3 → 0/3; the untreated control remained 2/3.",
+      "body": "The multi-token example remained wrong while both formerly correct 'unknown' guard responses became wrong, despite decreasing teacher-forced positive loss. The 64 updates consisted of 32 guard updates followed by 32 positive-answer updates; teaching dose and batch composition differ from the balanced 256-update positive study. The predefined all-three criterion failed. Independent saved audit passed its execution scope, but no fresh-process learning confirmation was authorized for this failed state. This remains a separate negative study, not 0/12 Original12.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "label": "Illustrative neural research architecture",
+        "alt": "Concept image of a glowing neural structure, not a NewBrain model execution screenshot",
+        "caption": "Concept art. Read the dated PDF-derived source report for numerical findings and method."
+      },
+      "sources": [
+        {
+          "label": "Report 73: failed curriculum, controls and method",
+          "url": "reports/73-newbrain-curriculum-negative-read.html"
+        },
+        {
+          "label": "Report 74: separate later positive balanced test",
+          "url": "reports/74-newbrain-full-response-restart-read.html"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-october-21-full-response"
+    },
+    {
+      "id": "newbrain-token-sequence-audit-2026-10-20",
+      "title": "NewBrain read-only check identifies two weak sequence decisions",
+      "project": "NewBrain",
+      "track": "No-update saved-state token-choice and output-bias diagnostic",
+      "date": "2026-10-20",
+      "reviewed_on": "2026-10-21",
+      "status": "development",
+      "date_basis": "Report 72 for saved diagnostic 1050 and independent original-data audit 1051 dated October 20; reviewed October 21.",
+      "summary": "After one correct initial answer word, the end marker was marginally favored over the required second word, and another next-word decision was also wrong even with its correct prefix supplied. This was diagnosis, not training.",
+      "body": "With a correct first answer word, the required next word had 4.3832% versus 4.7741% for EOS; at a later position with the correct preceding word provided, the required word had 3.6199% versus 16.9718% for the selected alternative. This teacher-forced inspection used one native objective batch, no learning updates, no free generation and no new model state. Independent saved-data audit covered reconstructed loss, all 42 output-bias gradient coordinates and process records; no causal defect or generalization gain was demonstrated. The inspection was separate from Original12 and does not establish why every benchmark item fails.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "label": "Illustrative neural research architecture",
+        "alt": "Concept image of a glowing neural structure, not a NewBrain model execution screenshot",
+        "caption": "Concept art. Read the dated PDF-derived source report for numerical findings and method."
+      },
+      "sources": [
+        {
+          "label": "Report 72: read-only diagnostic and methods",
+          "url": "reports/72-newbrain-sequence-diagnostic-read.html"
+        },
+        {
+          "label": "Report 74: subsequent positive controlled teaching",
+          "url": "reports/74-newbrain-full-response-restart-read.html"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-october-21-full-response"
+    },
     {
       "id": "evelyn-recorded-blink-and-reopening-verified-2026-10-20",
       "title": "Evelyn's eyes visibly close and reopen, passing the fixed motion test",
