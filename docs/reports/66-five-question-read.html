@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Report 66 · Five-Question Learning Pilot — Kira Labs source transcription</title><meta name="description" content="Readable web transcription of 66_NewBrain_Five_Question_Learning_Pilot_2026-10-20.pdf. Original PDF formatting may differ."><link href="/labs.css" rel="stylesheet"><link href="/evidence.css" rel="stylesheet"><style>.report-body{background:#071323;color:#eaf6fd}.report-main{max-width:1000px;margin:0 auto;padding:32px 18px 60px}.report-main h1{font-size:clamp(2rem,4vw,3.1rem);line-height:1.15;margin:12px 0;color:#fff}.report-main .source-note{color:#c4d3e3;font-size:.88rem;line-height:1.65;border-left:3px solid #6ce4f2;padding:12px 17px;background:#102139;margin:15px 0 28px}.transcript-page{margin:25px 0;padding:20px;background:#0d1c2d;border:1px solid #5aa9bb45;border-radius:7px}.report-eyebrow{color:#68eaf0;text-transform:uppercase;letter-spacing:.11em;font-size:.7rem;font-weight:700}.transcript-page pre{overflow-wrap:anywhere;white-space:pre-wrap;font-size:.85rem;line-height:1.5;color:#ebf7ff;font-family:ui-monospace,Consolas,monospace;margin:0}a.read-nav{color:#72dfe9;text-underline-offset:3px}@media(max-width:600px){.transcript-page{padding:12px}.transcript-page pre{font-size:.75rem}}</style></head><body class="report-body"><a class="skip" href="#main">Skip to report</a><header class="site-header"><div class="wrap navrow"><a aria-label="Kira Labs home" class="brand" href="index.html"><span class="brandmark"><img alt="" decoding="async" height="38" src="https://kiralabs.org/assets/kira-world-k-logo-192.png" width="38"/></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent AI research</small></span></a><button aria-controls="primary-nav" aria-expanded="false" class="menubtn menu-toggle" type="button">Menu</button><nav aria-label="Main navigation" class="nav" id="primary-nav"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="progress.html">Lab timeline</a><a href="about.html">About</a><a href="support.html">Support</a><a class="contact" href="contact.html">Contact</a></nav></div></header><main id="main" class="report-main"><p><a class="read-nav" href="/evidence.html">← Back to research evidence</a></p><p class="ev-kicker">Kira Labs / Source-report reading edition</p><h1>Report 66 · Five-Question Learning Pilot</h1><p class="source-note"><strong>Document:</strong> 66_NewBrain_Five_Question_Learning_Pilot_2026-10-20.pdf. This reading edition reproduces text extracted from the original report supplied for publication, separated by source page. It is not a newly verified experiment, and PDF layout, line wrapping and any diagrams may differ. For a test's current status, consult the linked Kira Labs evidence page and dated research updates.</p><section class="transcript-page" id="page-1"><p class="report-eyebrow">Transcribed source page 1 of 2</p><pre> NewBrain: five-question learning pilot
+ Training, separate reload and independent evidence review | 20 October 2026
+
+ Result: 2/5 before training, 0/5 after training, 0/5 after reload.
+ This separate five-question diagnostic does not replace Original12. The latest Original12 score remains 2/12. All
+ earlier checkpoints and failed records are preserved. Qwen remains untested.
+
+ Complete-response measure                                Before               After                Reload
+
+ Trained state                                            2/5                  0/5                  0/5
+
+ No-teach control                                         2/5                  2/5                  2/5
+
+ New structured association                               Incorrect            Incorrect            Incorrect
+
+ Two absence-response guards                              Both correct         Both wrong           Both wrong
+
+
+
+
+ How the test was made
+ Five public cases were frozen before the run: one structured association, two positive factual-retention checks and
+ two missing-information guards. Both factual checks were already wrong, so they were ineligible as retained
+ successes. The two absence guards supplied the baseline passes. Overall acquisition-and-retention eligibility was
+ not satisfied; no success is claimed.
+
+
+ Training and scoring
+ A separate state received 64 updates over two taught rows: 128 example presentations and 384 target tokens
+ including end markers, with learning rate 0.01 and gradient clipping at 5. Twenty explicit whole-answer loss
+ measurements and twenty free-generation calls were recorded. The no-teach control received no updates; this was
+ not an equal-compute comparison. Independent scoring required the entire frozen answer, without repairing or
+ selecting outputs.
+
+
+ What changed in the answers
+ The new answer was expected to be cab, word, one. It generated unknown before teaching, then b after teaching
+ and again after reload. Both previously correct unknown responses changed to a and stayed a after reload. All five
+ post-training and reloaded responses ended normally; none hit the response cap or reported an unknown input
+ token. Failure at the first content token excludes a suffix-format-only explanation.
+
+
+ What the lower loss means
+ The teacher-forced whole-answer loss for the new association fell from 10.673886 to 3.869227 even though its free
+ answer remained wrong. Teacher-forced measurement supplies the correct preceding tokens; free generation uses
+ its own decisions. Loss reduction alone therefore does not demonstrate useful acquisition.
+
+
+
+
+KIRA LABS | RESEARCH AND EDUCATIONAL REFERENCE | 20 OCTOBER 2026                                                       1</pre></section>
+<section class="transcript-page" id="page-2"><p class="report-eyebrow">Transcribed source page 2 of 2</p><pre> Separate restart test: what was verified
+ A distinct process restored the exact saved trained state and generated five trained-state responses and five control
+ responses, with zero additional training updates or explicit loss measurements. Every complete trained response
+ matched the incorrect post-training response; the control stayed unchanged at 2/5. This verifies the evaluated
+ save/reload and output persistence path, not improved learning.
+
+
+ Independent evidence and failed records
+ The training audit checked 219 events and 106 inverse-hash cells. The separate reload audit checked 219 events
+ and 107 inverse-hash cells; it also verified 253 copied references, 19 once-only closures, two empty process jobs
+ and four complete streams. A prior saved audit stopped because its request used a different path spelling. That
+ failed audit and its costs were preserved; a fresh saved-only audit accepted the unchanged model run. The model
+ experiment was not replayed.
+
+
+ What remains unresolved
+ The cause of the learning failure is not established. Earlier sampled-gradient and one-step update checks passed
+ only their stated scopes. Direct retrieval, per-token probabilities, generalization and complete optimizer correctness
+ remain unproven. Two before/after RAM samples do not establish continuous resource compliance; the 8 GiB
+ startup guard remains unchanged.
+
+
+ Next controlled investigation
+ A smaller conditional-teaching diagnostic is being prepared: a short one-token association and explicit
+ missing-information counterexamples. Its result remains unmeasured. The earlier 2/2 Public2 result used an
+ already-taught checkpoint and familiar short questions; the five-question pilot used a different checkpoint and a
+ longer unfamiliar context. These differences do not yet isolate a cause. More updates or larger hardware alone are
+ not established as a fix.
+ Evidence locator
+
+ Training record 987, independent training review 989, distinct reload 994, preserved failed saved review 996 and successful saved review 998. All
+ execution, cleanup, evidence and finite-cost records closed before parallel development resumed.
+
+
+
+
+KIRA LABS | RESEARCH AND EDUCATIONAL REFERENCE | 20 OCTOBER 2026                                                                                     2</pre></section></main><footer class="footer"><div class="wrap"><div class="footrow"><a class="brand" href="index.html"><span class="brandmark"><img alt="" height="33" loading="lazy" src="https://kiralabs.org/assets/kira-world-k-logo-192.png" width="33"/></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent research. Persistent ideas.</small></span></a><nav aria-label="Footer navigation" class="footlinks"><a href="about.html">Meet Robert</a><a href="research.html">Research</a><a href="support.html">Support</a><a href="contact.html">Contact &amp; Iris</a><a href="mailto:rmcmurrer@kiralabs.org">rmcmurrer@kiralabs.org</a></nav></div><div class="footer-bottomline"><p>© 2026 Kira Labs / Robert McMurrer · Newark, New Jersey</p><p><a href="knowledge.html">Sources &amp; status labels</a> · <a href="privacy.html">Privacy</a></p></div></div></footer><script src="/labs.js"></script></body></html>
