@@ -1,0 +1,110 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#061421"><title>Report 73 · Controlled curriculum: negative acquisition result — Kira Labs</title><meta name="description" content="A separate 64-update three-case experiment fell from 2/3 to 0/3 complete responses. The no-training control remained 2/3, and no fresh restart was authorized."><link rel="canonical" href="https://kiralabs.org/reports/73-newbrain-curriculum-negative-read.html"><style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#061421;color:#eaf7fb;font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}a{color:#8ae7ed;text-underline-offset:3px}.wrap{max-width:990px;margin:0 auto;padding:0 21px}header{background:#092334;border-bottom:1px solid #255267}header .wrap{display:flex;gap:24px;justify-content:space-between;align-items:center;padding-top:17px;padding-bottom:17px;flex-wrap:wrap}header nav{display:flex;gap:18px;flex-wrap:wrap}.brand{font-weight:800;text-decoration:none;color:white;font-size:1.15rem}main{padding-top:38px;padding-bottom:65px}.eyebrow{font-size:.78rem;text-transform:uppercase;color:#6fe8e8;letter-spacing:.12em;font-weight:700}h1{font-size:clamp(2.05rem,5vw,3.2rem);line-height:1.17;margin:10px 0 19px}h2{font-size:1.35rem;color:#9aedf1}.lede{font-size:1.12rem;color:#d0e4ee}.notice{padding:16px 19px;border-left:4px solid #76d4de;background:#112a3b;margin:24px 0 30px}.page{background:#0f2638;border:1px solid #315364;border-radius:11px;padding:22px;margin:27px 0}.page pre{white-space:pre-wrap;overflow-wrap:anywhere;tab-size:4;font:14px/1.6 ui-monospace,Consolas,monospace;color:#edf7fb;margin:10px 0 0}.page h2{font-size:.92rem;text-transform:uppercase;letter-spacing:.07em;margin:0}footer{padding:24px 0;border-top:1px solid #2b5365;color:#b3cbd6}@media(max-width:550px){.page{padding:13px}.page pre{font-size:12px}}</style></head><body><header><div class="wrap"><a href="/" class="brand">Kira Labs / Research Evidence</a><nav aria-label="Related pages"><a href="/newbrain.html">NewBrain</a><a href="/evidence.html">Evidence</a><a href="/progress.html">Timeline</a><a href="/updates.html">Updates</a></nav></div></header><main class="wrap"><p class="eyebrow">October 21, 2026 · Source research report 73</p><h1>Controlled curriculum: negative acquisition result</h1><p class="lede">A separate 64-update three-case experiment fell from 2/3 to 0/3 complete responses. The no-training control remained 2/3, and no fresh restart was authorized.</p><div class="notice">These are the full text pages extracted from <strong>73_NewBrain_Controlled_Curriculum_Result_and_Method_2026-10-21.pdf</strong>, supplied to Kira Labs on October 21. This is a readable web edition, not the original downloadable PDF. Line breaks, tables and graphics may differ from the PDF; numeric claims and experiment boundaries are preserved. The private underlying training artifacts are not published. <strong>Original12 remains 2/12; Qwen is untested.</strong></div><section class="page" id="page-1"><h2>Source page 1 of 2</h2><pre>NewBrain: controlled curriculum result
+ Verified research update | 21 October 2026
+
+ Result: the revised teaching schedule failed on a separate three-case exercise. Complete-answer
+ accuracy changed from 2/3 before training to 0/3 afterward. The no-training control remained 2/3. The
+ preserved Original12 baseline remains 2/12.
+
+    Assessment                                                            Before                    After
+
+
+    Separate three-case trained arm                                       2/3                       0/3
+
+
+    Matched no-training control                                           2/3                       2/3
+
+
+    Original12 baseline                                                   2/12                      Unchanged; not retested here
+
+
+    Qwen comparison                                                       Untested                  Untested
+
+
+
+
+ What was tested
+ The fixed exercise contained one multiword answer and two questions requiring a missing-information
+ response. All three rows were rehearsed during training. Passing required all three complete responses,
+ including their required ending. This was a training-and-retention diagnostic, not a held-out generalization test.
+
+ The first 32 updates rehearsed the two missing-information rows. The final 32 rehearsed the positive answer.
+ Each row appeared 64 times: 64 updates, 192 example presentations, 1,152 prefix tokens and 512 target
+ tokens including end markers.
+
+ The overall dose matched the earlier mixed-batch reference, while both teaching timing and batch composition changed. The result
+ therefore does not isolate a pure order-only effect.
+
+
+ What the measurements show
+ The positive answer remained incorrect, and both previously correct missing-information responses became
+ incorrect. All generated responses reached normal end markers. The recorded failures were not
+ response-length-cap stops or unknown-prefix-token errors.
+
+    Teacher-forced whole-answer loss                                      Before                    After
+
+
+    Positive answer                                                       9.6923                    2.7964
+
+
+    Missing-information row 1                                             0.2694                    1.8511
+
+
+    Missing-information row 2                                             0.1274                    1.1721
+
+
+ Lower positive-answer training loss did not produce a correct generated answer. The result supports further investigation of
+ sequence fitting and interference; it does not identify a definite implementation defect.
+
+
+
+
+Kira Labs | Research update | 21 October 2026                                                                                       1</pre></section><section class="page" id="page-2"><h2>Source page 2 of 2</h2><pre>How the test was run and checked
+ 1. Preserve the starting point
+ A fresh clone of the fixed baseline checkpoint was used. Earlier failed trained states and the original baseline
+ were preserved. The separate no-training arm provided a comparison for changes caused by the updates.
+
+ 2. Freeze the protocol before execution
+ The training schedule, cases, scoring, update count and success criterion were fixed before the run. All
+ development tracks were paused with fresh receipts. The startup requirement of at least 8 GiB available RAM
+ and the 3 GiB reserve requirement were retained.
+
+ 3. Run once and retain the originals
+ The launch-reference correction allowed this fresh run to reach the learner. Metadata preparation, the actual
+ execution and the final memory/stop observation all returned successfully. The run made 64 training updates,
+ 12 objective calls and 12 generation calls, plus the 64 objective evaluations internal to the updates.
+
+ This run completed; it was not stopped by the startup RAM guard. The result does not demonstrate that adding RAM would correct
+ this learning failure.
+
+
+ 4. Independently audit the complete evidence
+ A separate audit process checked the saved original records and recomputed the scientific result. It verified 218
+ recorded Native events, 103 raw argument cells, 252 copied references, 19 canonical once-only handle
+ closures, two empty process jobs and four complete owner streams with end-of-file evidence.
+
+ These are scoped execution checks. Continuous resource coverage, active numerical-thread count and final
+ operating-system-wide I/O remain unqualified or unknown. The audit did not perform new training or new model calls.
+
+
+ 5. Apply the stopping rule
+ The required 3/3 training criterion was false. The conditional fresh-process follow-up was therefore blocked
+ and remains unrun. The failed state and every original result were retained. A misleading raw status label
+ referring to a pending cold audit was preserved, but it was not used to authorize another run.
+
+ Next research and collaboration
+ The immediate work is to examine matching training and generation paths, determine why the rehearsed
+ sequence is not yet fitted, and define a small controlled fitting-and-retention experiment. A new result must pass
+ full-answer scoring and, when eligible, a separately admitted restart test before any claim of persistent
+ improvement.
+
+ Research assistance in optimization, sequence modeling and experimental design would directly support this
+ work. Additional computing resources can expand reproducible experiments; improved learning still requires
+ measurement.
+
+ Evidence identifiers: experiment 1063; independent audit 1064. Public status: NewBrain research status and method notes.
+ Earlier dated reports remain historical records.
+
+
+
+
+Kira Labs | Research update | 21 October 2026                                                                                     2</pre></section><p><a href="/evidence.html#october-21-newbrain-results">← Back to October 21 research results</a></p></main><footer><div class="wrap">Kira Labs · Research and educational reference · Reports are internal experiments, not peer-reviewed university replication</div></footer></body></html>
