@@ -1,0 +1,141 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Report 68 · Learning Retained After Restart | Kira Labs</title><meta name="description" content="A fixed, explicitly rehearsed three-question diagnostic improved 2/3 to 3/3 and retained 3/3 after a distinct restart; Original12 remains 2/12."><link rel="canonical" href="https://kiralabs.org/reports/68-verified-learning-restart-read.html"><style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#071421;color:#eaf2fa;font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}a{color:#80e2ec}.shell{max-width:1060px;margin:auto;padding:0 20px}header{background:#0b2031;border-bottom:1px solid #205063}header .shell{display:flex;justify-content:space-between;gap:18px;align-items:center;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}.brand{font-weight:750;color:white;text-decoration:none;font-size:1.2rem}nav{display:flex;gap:20px;flex-wrap:wrap}main{padding:42px 0 72px}.eyebrow{letter-spacing:.13em;text-transform:uppercase;color:#7adddf;font-size:.8rem;font-weight:700}h1{font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.16;margin:12px 0 24px}h2{color:#94eced}.sub{font-size:1.12rem;color:#d0e5ec}.note{border-left:4px solid #64c8d0;background:#102a3b;padding:16px 20px;margin:22px 0 38px;border-radius:4px}.report-page{background:#0e2232;border:1px solid #345366;border-radius:12px;padding:24px;margin:30px 0}.report-page pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#eef5f9;font:14px/1.65 ui-monospace,Consolas,monospace;margin:0}.report-page h2{margin:0 0 12px;font-size:1rem}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.gallery figure{margin:0;background:#122637;border:1px solid #2f6170;border-radius:8px;padding:12px}.gallery img{width:100%;height:auto;border-radius:4px}.gallery figcaption{font-size:.9rem;color:#d8edf1}footer{border-top:1px solid #284858;padding:25px 0;color:#bfd1d9}@media(max-width:600px){.report-page{padding:13px}.report-page pre{font-size:12px}}</style></head><body><header><div class="shell"><a class="brand" href="/">Kira Labs / Research</a><nav aria-label="Site navigation"><a href="/evidence.html">Evidence</a><a href="/newbrain.html">NewBrain</a><a href="/evelyn-hart.html">Evelyn</a><a href="/patient-horizon.html">Patient Horizon</a><a href="/progress.html">Timeline</a></nav></div></header><main class="shell" id="main"><p class="eyebrow">Source-report reading edition · 20 October 2026</p><h1>Report 68 · Learning Retained After Restart</h1><p class="sub">A fixed, explicitly rehearsed three-question diagnostic improved 2/3 to 3/3 and retained 3/3 after a distinct restart; Original12 remains 2/12.</p><div class="note"><strong>Original document:</strong> 68_NewBrain_Verified_Learning_and_Restart_2026-10-20.pdf<p>This is a complete text reading edition extracted page by page from the supplied PDF, not the original binary PDF. Text, tables and spacing may differ from the PDF; screen captures from Report 70 are linked separately. The original source is retained, and the latest status is on <a href="/evidence.html">the evidence page</a>.</p></div><section class="report-page" id="page-1"><h2>Source page 1 of 3</h2><pre> KIRA LABS | RESEARCH RESULT | 20 October 2026
+
+
+ NewBrain: Learning Retained After Restart
+ 2/3 → 3/3 → 3/3
+ Before training · After training · After a fresh-process restart
+
+ A separate, fixed three-question diagnostic produced a verified learning-and-persistence result. A previously
+ missed synthetic mapping became correct; two explicitly rehearsed missing-information responses stayed
+ correct. A distinct process reloaded the saved state and reproduced all three complete correct answers. The
+ no-training control stayed at 2/3 throughout.
+
+    Measured comparison                                                     Before               Trained                Restart
+
+    Trained model: complete answers                                         2/3                  3/3                    3/3
+
+    No-training control: complete answers                                   2/3                  2/3                    2/3
+
+    Constant “cab” control                                                  1/3                  1/3                    1/3
+
+    Constant “unknown” control                                              2/3                  2/3                    2/3
+
+
+
+ What this establishes
+ For these three frozen, explicitly taught rows, the update procedure changed parameters and improved
+ complete generated answers. All preregistered training eligibility conditions were met: the target mapping was
+ incorrect before training, both missing-information checks were correct beforehand, and the same fixed rows
+ were scored afterward. No cases were resampled.
+
+ Restart persistence: verified
+ Distinct restart: 3/3. The separate reload run made zero updates, zero loss evaluations and six free generations
+ across the trained and no-training arms. The complete outputs matched their post-training counterparts. State,
+ parameter and output-bias hashes and training counters were preserved. The preregistered joint
+ training-and-restart criterion passed.
+
+ Main Original12 benchmark: still 2/12. Qwen comparison: untested. This three-row result is a separate
+ diagnostic. Every row, including both missing-information responses, was rehearsed. Unrehearsed retention,
+ held-out generalization and broad prior novelty were not established.
+
+ The earlier 2/5 → 0/5 training result and its 0/5 cold result remain part of the research record. This new controlled result does not
+ replace those observations.
+
+
+
+
+Kira Labs | Verified learning and fresh-process restart | 20 October 2026                                                                1</pre></section><section class="report-page" id="page-2"><h2>Source page 2 of 3</h2><pre> How the test was made and run
+ 1. Freeze a small, public diagnostic
+ Three synthetic token sequences were fixed before outcomes. Their purpose was to separate learning one
+ conditional mapping from producing the appropriate missing-information response. These are research tokens,
+ not a test of real-world historical knowledge.
+
+    Memory cue / query tokens                                                     Expected complete            Before → trained
+                                                                                  answer                       → restart
+
+    &lt;MEMORY&gt; stated 3 &lt;QUERY&gt; name item                                           cab + end marker             Incorrect →
+                                                                                                               correct → correct
+
+    &lt;MEMORY&gt; stated c &lt;QUERY&gt; name item                                           unknown + end marker         Correct → correct
+                                                                                                               → correct
+
+    &lt;MEMORY&gt; stated c &lt;QUERY&gt; give word                                           unknown + end marker         Correct → correct
+                                                                                                               → correct
+
+
+
+ 2. Train only the experimental arm
+ The trained arm received 64 gradient updates across all three rows: 192 example presentations, 1,152 prefix
+ tokens and 384 target tokens including end markers. The batch loss used a normalization denominator of 6.
+ The separate no-training arm provided a stable comparison.
+
+ The same fixed procedure recorded 12 explicit whole-answer loss evaluations and 12 free generations across
+ arms and assessment points. Training also performed its 64 internal update-objective evaluations. A lower
+ teacher-forced loss was kept separate from answer accuracy: the score required the model to generate the
+ complete answer itself.
+
+ 3. Score complete outputs
+ A response received credit only if it matched the complete expected answer and ended correctly. The checks
+ rejected extra tokens, invalid or unknown-input conditions, and response-cap failures. A constant-answer
+ system could not satisfy all three cases: always answering “cab” passed 1/3, and always answering “unknown”
+ passed 2/3.
+
+ Observed objective changes
+
+    Teacher-forced whole-answer loss                                                Before                   After
+
+    Mean over the three trained rows                                                2.239601                 0.283517
+
+    Previously missed mapping row                                                   6.321978                 0.796056
+
+
+ Loss values describe the optimization objective. The complete-answer result above is the behavioral measurement.
+
+
+
+
+Kira Labs | Verified learning and fresh-process restart | 20 October 2026                                                          2</pre></section><section class="report-page" id="page-3"><h2>Source page 3 of 3</h2><pre> Restart verification and next milestone
+ Saved-evidence review
+ Independent saved-data reviews checked the retained original training and distinct reload runs. The reviews
+ made no new model, training, provider or native experiment calls. They verified the recorded process identities,
+ ownership, job cleanup, complete output streams, evidence references, provider joins and available exported
+ file-I/O accounting.
+
+ The training audit covered 107 native cells, 253 copied references and 219 events; the reload audit covered
+ 106 cells, 252 references and 218 events. Each verified 19 canonical once-close operations, four complete
+ output streams and two empty jobs. These are scoped execution checks, not continuous physical RAM/CPU
+ measurement or complete loaded-image equivalence.
+
+ Resource controls
+ The study retained the 8 GiB available-RAM startup guard, 3 GiB reserve guard, two-CPU limit and existing
+ bounded process lifetimes. This bounded study completed on the current machine. More memory can support
+ larger and concurrent experiments; whether those experiments improve learning must be measured separately.
+
+ Next learning milestone
+ Test whether the same controlled teaching approach can produce a longer answer with its required source and
+ version tokens and a correct ending. Preserve the missing-information controls, fixed scoring and
+ distinct-process verification. This is preparation for the unchanged twelve-question evaluation; it is not a new
+ measured result.
+
+ How to describe this result
+ “A fixed, synthetic three-question diagnostic improved from two correct complete answers to three and retained
+ all three after a fresh-process restart. Its untrained control stayed at two. All three examples were taught. The
+ larger twelve-question benchmark remains at two correct answers, and the Qwen comparison remains
+ untested.”
+
+ Research boundaries
+ This experiment jointly taught all three cases. It does not isolate which change from the earlier five-question
+ procedure caused the improvement. It does not demonstrate untrained-question transfer, an unseen real-world
+ fact, general intelligence, or readiness of a full conversational person. It provides a small positive
+ learning-and-restart result to build on.
+
+ https://github.com/rmcmurrer81/newbrain
+
+ https://github.com/rmcmurrer81/KiraWorld
+
+ https://github.com/rmcmurrer81/Patient-Horizon
+
+
+
+
+Kira Labs | Verified learning and fresh-process restart | 20 October 2026                                            3</pre></section><p><a href="/evidence.html">← Back to research evidence and all reports</a></p></main><footer><div class="shell">© 2026 Kira Labs · Experimental research · <a href="/contact.html">Contact</a></div></footer></body></html>
