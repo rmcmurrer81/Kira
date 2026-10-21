@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Report 69 · Longer-Answer Diagnostic | Kira Labs</title><meta name="description" content="A separate longer-answer test stayed 2/3 before and after training: the first content token improved, but the required source and version tokens were omitted."><link rel="canonical" href="https://kiralabs.org/reports/69-full-response-diagnostic-read.html"><style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#071421;color:#eaf2fa;font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}a{color:#80e2ec}.shell{max-width:1060px;margin:auto;padding:0 20px}header{background:#0b2031;border-bottom:1px solid #205063}header .shell{display:flex;justify-content:space-between;gap:18px;align-items:center;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}.brand{font-weight:750;color:white;text-decoration:none;font-size:1.2rem}nav{display:flex;gap:20px;flex-wrap:wrap}main{padding:42px 0 72px}.eyebrow{letter-spacing:.13em;text-transform:uppercase;color:#7adddf;font-size:.8rem;font-weight:700}h1{font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.16;margin:12px 0 24px}h2{color:#94eced}.sub{font-size:1.12rem;color:#d0e5ec}.note{border-left:4px solid #64c8d0;background:#102a3b;padding:16px 20px;margin:22px 0 38px;border-radius:4px}.report-page{background:#0e2232;border:1px solid #345366;border-radius:12px;padding:24px;margin:30px 0}.report-page pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#eef5f9;font:14px/1.65 ui-monospace,Consolas,monospace;margin:0}.report-page h2{margin:0 0 12px;font-size:1rem}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.gallery figure{margin:0;background:#122637;border:1px solid #2f6170;border-radius:8px;padding:12px}.gallery img{width:100%;height:auto;border-radius:4px}.gallery figcaption{font-size:.9rem;color:#d8edf1}footer{border-top:1px solid #284858;padding:25px 0;color:#bfd1d9}@media(max-width:600px){.report-page{padding:13px}.report-page pre{font-size:12px}}</style></head><body><header><div class="shell"><a class="brand" href="/">Kira Labs / Research</a><nav aria-label="Site navigation"><a href="/evidence.html">Evidence</a><a href="/newbrain.html">NewBrain</a><a href="/evelyn-hart.html">Evelyn</a><a href="/patient-horizon.html">Patient Horizon</a><a href="/progress.html">Timeline</a></nav></div></header><main class="shell" id="main"><p class="eyebrow">Source-report reading edition · 20 October 2026</p><h1>Report 69 · Longer-Answer Diagnostic</h1><p class="sub">A separate longer-answer test stayed 2/3 before and after training: the first content token improved, but the required source and version tokens were omitted.</p><div class="note"><strong>Original document:</strong> 69_NewBrain_Full_Response_Diagnostic_2026-10-20.pdf<p>This is a complete text reading edition extracted page by page from the supplied PDF, not the original binary PDF. Text, tables and spacing may differ from the PDF; screen captures from Report 70 are linked separately. The original source is retained, and the latest status is on <a href="/evidence.html">the evidence page</a>.</p></div><section class="report-page" id="page-1"><h2>Source page 1 of 2</h2><pre> KIRA LABS | VERIFIED RESEARCH UPDATE | 20 October 2026
+
+
+ Longer-answer learning diagnostic
+ 2/3 → 2/3
+ Complete answers before and after training · Separate three-question test
+
+ The latest controlled experiment improved the first answer token on one synthetic example, but did not produce
+ the complete required answer. The two explicitly rehearsed missing-information responses stayed correct. The
+ no-training control stayed at 2/3. The predefined full-response success criterion failed.
+
+   Positive example                                       Generated answer
+
+   Before training                                        b + end marker
+
+   After training                                         cab + end marker
+
+   Required complete response                             cab word one + end marker
+
+
+
+ In this diagnostic, “cab” is the answer token, “word” represents its source and “one” its version. These are
+ synthetic research labels. Generating only “cab” earns no complete-answer credit.
+
+ What improved, and what remains unresolved
+ The model changed the wrong first token to the correct one. Its teacher-forced whole-answer loss on that
+ example fell from 9.692280 to 2.136134. However, it generated an end marker before the source and version.
+ Lower training loss and a correct first token are useful observations, but neither establishes a complete learned
+ response.
+
+ How this relates to the positive restart result
+ The earlier, shorter-answer diagnostic remains a verified positive result: 2/3 before training, 3/3 afterward and
+ 3/3 after a distinct fresh-process restart. Its no-training control stayed at 2/3. All three rows were explicitly
+ rehearsed. Report 68 explains that study. The longer-response experiment here is separate and does not
+ replace its result.
+
+ Main Original12 benchmark: still 2/12. Qwen comparison: untested. The latest experiment did not rerun the
+ main benchmark, establish generalization, or demonstrate an unseen real-world fact.
+
+
+
+
+Kira Labs | Full-response learning diagnostic | 20 October 2026                                                      1</pre></section><section class="report-page" id="page-2"><h2>Source page 2 of 2</h2><pre> Method, evidence and next work
+ How this test was built and performed
+ Three public synthetic queries and their complete answer sequences were fixed before the outcomes. Eligibility
+ required the positive example to be incorrect initially and both missing-information checks to be correct. All
+ eligibility checks passed, and no examples were resampled.
+
+ The trained arm received 64 gradient updates, 192 example presentations, 1,152 prefix tokens and 512 target
+ tokens including end markers. The batch normalization denominator was 8. Both missing-information examples
+ were explicitly taught. The separate no-training arm received no updates.
+
+ The procedure recorded 12 explicit whole-answer loss evaluations and 12 free generations across arms and
+ assessment points. Training also made 64 internal update-objective evaluations. Complete-answer scoring
+ required all expected tokens and the correct ending; a constant answer could not satisfy the joint criterion.
+
+ Independent verification
+ A separate saved-data audit checked the retained training outputs without making a new model or training call.
+ It verified the original evidence references, exported file-I/O accounting, complete output streams, recorded
+ ownership and cleanup. The experiment and all selected resource allowances were closed, preserving used
+ and unused costs and all failed originals.
+
+ The audit verified 107 native evidence cells, 253 copied references, 219 events, 19 canonical once-close operations, four complete
+ output streams and two empty jobs. These checks establish scoped execution evidence; they do not establish continuous RAM/CPU
+ measurement, complete optimizer correctness or a diagnosis of the learning failure.
+
+ Decision and next investigation
+ The full-response criterion failed, so the proposed cold confirmation remains unrun and unfunded. The failed
+ bridge does not authorize another exploratory bridge or automatic progression to the twelve-question
+ experiment.
+
+ The next work is analysis of the existing answer, source, version and ending evidence, together with static
+ review of target construction and decoding. Early stopping is the observed failure. A specific implementation
+ defect, memory-readout problem or forgetting mechanism has not been established.
+
+ Computing resources
+ The run completed on the current machine with the existing 8 GiB available-RAM startup guard, 3 GiB reserve
+ guard and two-CPU limit. More RAM, GPU capacity and laboratory support can enable larger reproducible
+ studies and concurrent work; they do not guarantee a learning improvement.
+
+ https://github.com/rmcmurrer81/newbrain/blob/main/docs/research/2026-10-20-current-status-and-patient-horizon-plan.md
+
+ https://github.com/rmcmurrer81/KiraWorld/blob/main/docs/research/2026-10-20-current-status-and-patient-horizon-plan.md
+
+
+
+
+Kira Labs | Full-response learning diagnostic | 20 October 2026                                                                       2</pre></section><p><a href="/evidence.html">← Back to research evidence and all reports</a></p></main><footer><div class="shell">© 2026 Kira Labs · Experimental research · <a href="/contact.html">Contact</a></div></footer></body></html>
