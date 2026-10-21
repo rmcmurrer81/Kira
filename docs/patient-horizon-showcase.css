@@ -108,3 +108,14 @@
  .phs .phs-hero-copy>.phs-actions{order:7;margin-top:6px}
  .phs .phs-hero-copy>.phs-anchor-nav{order:8;margin-top:8px}
 }
+
+/* Visual body/lung comparison with clearly labeled measured control (Oct 21 2026) */
+.phs .phs-visual-heading{max-width:950px;margin-bottom:23px}.phs .phs-visual-heading p:not(.eyebrow){color:#c6d4df;font-size:1rem;line-height:1.73;max-width:960px}
+.phs .phs-visual-heading h2 em{color:#70e6ec;font:italic 400 .8em/1.14 Georgia,serif}
+.phs .phs-visual-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:26px 0 34px}
+.phs .phs-visual-card{background:linear-gradient(145deg,#102536,#101722);border:1px solid rgba(121,235,243,.24);border-radius:14px;overflow:hidden;margin:0;min-width:0}
+.phs .phs-visual-card img{display:block;width:100%;height:clamp(260px,32vw,400px);object-fit:contain;background:#091828}
+.phs .phs-visual-card figcaption{padding:18px 21px 22px;display:grid;gap:8px}.phs .phs-visual-card figcaption strong{color:#e1f6f9;font-size:1.03rem}.phs .phs-visual-card figcaption span{color:#b9ced9;font-size:.87rem;line-height:1.62}
+.phs .phs-measured-contrast{display:grid;grid-template-columns:minmax(220px,.42fr) minmax(0,.58fr);gap:20px;align-items:center;border:1px solid rgba(121,235,243,.20);border-radius:12px;padding:18px;background:#0c2531}.phs .phs-measured-contrast img{display:block;width:100%;height:auto;border-radius:8px;background:#f3f8fc}
+.phs .phs-measured-contrast h3{font-size:1.2rem;margin:8px 0}.phs .phs-measured-contrast p:not(.eyebrow){color:#c6d5df;line-height:1.65}.phs .phs-measured-contrast a{color:#77ecf2}
+@media(max-width:740px){.phs .phs-visual-gallery{grid-template-columns:1fr}.phs .phs-measured-contrast{grid-template-columns:1fr}.phs .phs-visual-card img{height:270px}}
