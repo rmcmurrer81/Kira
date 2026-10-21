@@ -1,0 +1,96 @@
+name: Verify real research reports and screenshot gallery
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/check-research-evidence-20261021.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  public-report-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install a real Chromium browser and HTML parser
+        run: |
+          python -m pip install playwright beautifulsoup4
+          python -m playwright install chromium --with-deps
+      - name: Allow latest public-site deployment
+        run: sleep 35
+      - name: Inspect published actual captures and original source documents
+        run: |
+          python - <<'PY'
+          from playwright.sync_api import sync_playwright
+          from pathlib import Path
+          import re
+          base='https://kiralabs.org/'
+          pdfs=[
+              'reports/kira-labs-research-evidence-2026-10-20.pdf',
+              'reports/17_Verified_Research_Progress_and_ROS2_Bridge.pdf',
+              'reports/18_NewBrain_Training_Evidence_and_University_Priorities.pdf',
+              'reports/19_Measured_Skin_Movement_and_Restoration.pdf',
+              'reports/20_How_Our_Tests_Work_and_What_the_Results_Mean.pdf',
+              'reports/21_Test_Methods_Results_and_Meeting_Answers.pdf',
+          ]
+          readings={
+              'reports/61-sampled-gradient-read.html':4,
+              'reports/62-patient-horizon-lung-plan-read.html':4,
+              'reports/64-training-update-read.html':2,
+              'reports/65-evelyn-history-read.html':14,
+              'reports/66-five-question-read.html':2,
+          }
+          with sync_playwright() as p:
+              browser=p.chromium.launch(headless=True,args=['--no-sandbox'])
+              screenshots=Path('qa/visual-review'); screenshots.mkdir(parents=True,exist_ok=True)
+              for name,width,height in [('desktop',1440,900),('mobile',390,844)]:
+                  context=browser.new_context(viewport={'width':width,'height':height},device_scale_factor=1)
+                  page=context.new_page(); errors=[]
+                  page.on('pageerror',lambda exc:errors.append(str(exc)))
+                  page.goto(base+'evidence.html?verify=20261021',wait_until='domcontentloaded',timeout=60000)
+                  page.locator('#evelyn-captures .ev-render img').first.wait_for(timeout=25000)
+                  assert page.locator('#evelyn-captures .ev-render img').count()==3
+                  assert page.locator('#measured-body-gallery .ev-render img').count()==3
+                  for selector in ['#evelyn-captures .ev-render img','#measured-body-gallery .ev-render img','#earlier-retention-graphic img']:
+                      page.locator(selector).first.scroll_into_view_if_needed()
+                      page.wait_for_timeout(750)
+                      sizes=page.locator(selector).evaluate_all('(els)=>els.map(e=>[e.naturalWidth,e.naturalHeight,e.complete])')
+                      assert all(w>0 and h>0 and complete for w,h,complete in sizes),(selector,sizes)
+                  overflow=page.evaluate('document.documentElement.scrollWidth-innerWidth')
+                  assert overflow<=2,(name,overflow)
+                  assert not errors,errors
+                  page.evaluate('window.scrollTo(0,0)')
+                  page.wait_for_timeout(120)
+                  dest=screenshots/f'evidence-{name}-live.jpg'
+                  page.screenshot(path=str(dest),full_page=False,quality=86,type='jpeg')
+                  print('EVIDENCE PAGE',name,'three real Evelyn views; three body graphs; no script error or overflow')
+                  if name=='desktop':
+                      for path in pdfs:
+                          res=context.request.get(base+path,timeout=60000)
+                          assert res.ok,(path,res.status)
+                          buf=res.body()
+                          assert buf[:4]==b'%PDF',(path,buf[:40])
+                          print('PDF VERIFIED',path,len(buf))
+                      for path,n in readings.items():
+                          response=context.request.get(base+path,timeout=60000)
+                          assert response.ok,(path,response.status)
+                          text=response.text()
+                          count=text.count('class="transcript-page"')
+                          assert count==n,(path,n,count)
+                          print('READING REPORT',path,n)
+                  context.close()
+              browser.close()
+          PY
+      - name: Save public-site QA screenshots
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add qa/visual-review/evidence-desktop-live.jpg qa/visual-review/evidence-mobile-live.jpg
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Visual QA: verified research reports and head captures in public browser'
+          git pull --rebase origin main
+          git push origin HEAD:main
