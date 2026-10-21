@@ -1,0 +1,197 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Report 61 · Sampled Gradient Test — Kira Labs source transcription</title><meta name="description" content="Readable web transcription of 61_NewBrain_Sampled_Gradient_Pass_and_Test_Method_2026-10-19.pdf. Original PDF formatting may differ."><link href="/labs.css" rel="stylesheet"><link href="/evidence.css" rel="stylesheet"><style>.report-body{background:#071323;color:#eaf6fd}.report-main{max-width:1000px;margin:0 auto;padding:32px 18px 60px}.report-main h1{font-size:clamp(2rem,4vw,3.1rem);line-height:1.15;margin:12px 0;color:#fff}.report-main .source-note{color:#c4d3e3;font-size:.88rem;line-height:1.65;border-left:3px solid #6ce4f2;padding:12px 17px;background:#102139;margin:15px 0 28px}.transcript-page{margin:25px 0;padding:20px;background:#0d1c2d;border:1px solid #5aa9bb45;border-radius:7px}.report-eyebrow{color:#68eaf0;text-transform:uppercase;letter-spacing:.11em;font-size:.7rem;font-weight:700}.transcript-page pre{overflow-wrap:anywhere;white-space:pre-wrap;font-size:.85rem;line-height:1.5;color:#ebf7ff;font-family:ui-monospace,Consolas,monospace;margin:0}a.read-nav{color:#72dfe9;text-underline-offset:3px}@media(max-width:600px){.transcript-page{padding:12px}.transcript-page pre{font-size:.75rem}}</style></head><body class="report-body"><a class="skip" href="#main">Skip to report</a><header class="site-header"><div class="wrap navrow"><a aria-label="Kira Labs home" class="brand" href="index.html"><span class="brandmark"><img alt="" decoding="async" height="38" src="https://kiralabs.org/assets/kira-world-k-logo-192.png" width="38"/></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent AI research</small></span></a><button aria-controls="primary-nav" aria-expanded="false" class="menubtn menu-toggle" type="button">Menu</button><nav aria-label="Main navigation" class="nav" id="primary-nav"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="progress.html">Lab timeline</a><a href="about.html">About</a><a href="support.html">Support</a><a class="contact" href="contact.html">Contact</a></nav></div></header><main id="main" class="report-main"><p><a class="read-nav" href="/evidence.html">← Back to research evidence</a></p><p class="ev-kicker">Kira Labs / Source-report reading edition</p><h1>Report 61 · Sampled Gradient Test</h1><p class="source-note"><strong>Document:</strong> 61_NewBrain_Sampled_Gradient_Pass_and_Test_Method_2026-10-19.pdf. This reading edition reproduces text extracted from the original report supplied for publication, separated by source page. It is not a newly verified experiment, and PDF layout, line wrapping and any diagrams may differ. For a test's current status, consult the linked Kira Labs evidence page and dated research updates.</p><section class="transcript-page" id="page-1"><p class="report-eyebrow">Transcribed source page 1 of 4</p><pre> KIRA LABS / RESEARCH EVIDENCE UPDATE
+
+
+
+
+ A verified pass for
+ sampled learning gradients
+ A new diagnostic milestone, with the learning score kept separate.
+
+
+
+
+   80                                            4                                          2
+   Coordinate comparisons                        Directional comparisons                    Deliberately wrong-gradient
+   passed                                        passed                                     comparisons rejected
+
+
+
+
+ What was measured
+ The fixed numerical check passed across two declared probe states. No sampled derivative mismatch or
+ instability between the two perturbation sizes was found. All ten parameter groups met the unchanged
+ minimum-signal requirement. The largest absolute comparison error was 2.08e-9.
+
+ A separate checking role recomputed the comparisons from the complete saved objective measurements. The
+ saved execution and file-evidence audit also passed. The original checkpoint parameters and all four recorded
+ training counters were preserved.
+
+
+ Current learning results
+
+    Separate experiment                          Before       After        Interpretation
+
+
+    Earlier 64-update study                      2/12         0/12         Negative trained checkpoint preserved.
+
+
+    Latest 256-update study                      2/12         2/12         Two new passes and two lost missing-information
+                                                                           passes; no net gain.
+
+
+ The numerical check performed no training updates, generation or scoring. It does not raise the 12-case
+ learning score. Qwen has not yet been tested on the comparison. The original baseline remains preserved.
+
+ Earlier dated papers remain research snapshots. Read this note with the current learning report (PDF58) and the separate
+ four-response retention pilot (PDF59).
+
+
+
+
+Kira Labs | NewBrain research evidence | 19 October 2026                                                                     1</pre></section>
+<section class="transcript-page" id="page-2"><p class="report-eyebrow">Transcribed source page 2 of 4</p><pre> HOW THE AUTOMATED TEST WORKS
+
+
+
+
+ From a frozen plan
+ to independently checked numbers
+ 1. Freeze the inputs and acceptance rules
+ Before execution, the plan fixed three public synthetic examples, two probe states, twenty coordinates across
+ ten parameter groups, two perturbation sizes, one deterministic direction and the rejection control. One probe
+ used the inherited checkpoint; the other used an explicitly declared synthetic parameter recipe. These are
+ diagnostic probes, not a new generalization benchmark.
+
+
+ 2. Check resources and run under controlled ownership
+ Parallel work and the reminder were paused. Fresh launch checks used the existing 8 GiB available-memory
+ startup guard and 3 GiB reserve. The startup sample showed about 13.4 GiB available. Controlled processes
+ recorded their results, bounded outputs and cleanup evidence. The guard values were not lowered.
+
+
+ 3. Compare analytical and numerical derivatives
+ For a parameter coordinate, the numerical estimate is:
+
+
+   (loss(theta + h) - loss(theta - h)) / (2 x h)
+
+
+ The two fixed h values were 1e-4 and 1e-5. The acceptance bound was absolute error &lt;= max(1e-8, 0.001 x the
+ larger derivative magnitude). Each coordinate was also checked for agreement across the two h values. A
+ deterministic direction tested a combined change across the parameter vector.
+
+
+ 4. Require signal and deliberately test rejection
+ Every parameter group had to meet the predeclared 1e-6 minimum signal. The tested Q, K and V maxima
+ were about 5.04e-6, 9.68e-6 and 5.15e-6. An intentionally incorrect analytical gradient was then checked against
+ both fixed perturbation sizes; both comparisons were rejected. This control reused saved measurements and
+ added no model calls.
+
+
+ 5. Preserve originals and check the evidence separately
+ The run recorded 170 objective evaluations. The independent saved-data audit checked 219 execution events,
+ 106 full raw data cells, 253 copied references, 19 one-time resource closes, two empty jobs and four complete
+ output streams. The checking stage made no new model or execution-interface calls.
+
+
+
+
+Kira Labs | NewBrain research evidence | 19 October 2026                                                            2</pre></section>
+<section class="transcript-page" id="page-3"><p class="report-eyebrow">Transcribed source page 3 of 4</p><pre> INTERPRETATION / NEXT EXPERIMENT
+
+
+
+
+ What this helps us
+ investigate next
+ The supported conclusion
+ The sampled raw derivatives of the specified loss are numerically consistent under this fixed test. This
+ makes an error in those sampled derivative calculations less likely as the explanation for the learning failures. It
+ does not establish complete gradient coverage, optimizer correctness, independent reconstruction of the model
+ state, useful new learning or unfamiliar-example generalization.
+
+
+ Why the earlier record remains important
+ The earlier numerical study remains inconclusive: its Q/K/V samples did not meet the fixed signal floor, and
+ final evidence publication failed. The completed follow-up used a stronger, predeclared synthetic route gain to
+ make the check informative. A separate launch attempt stopped on a metadata schema mismatch before model
+ execution; that mismatch was corrected. The failed originals and their costs remain recorded.
+
+
+ The next learning experiment
+    Question                                       Planned controlled check
+
+
+    Can it acquire a new association?              Compare a taught learner with a separate zero-update, no-teach control from
+                                                   the same preserved starting state.
+
+
+    Can it retain earlier behavior?                Check the new association alongside two missing-information responses,
+                                                   using fixed questions and complete output sequences.
+
+
+    Does it survive restart?                       Save the resulting state, start a separate process, and assess the same fixed
+                                                   outputs again.
+
+
+    Can a larger claim be made?                    Treat this small test as a mechanism diagnostic. Reassess the larger
+                                                   benchmark only through a separately defined, preserved experiment.
+
+
+ This acquisition-and-retention integration is in development and remains unrun. Evelyn's separate three-visitor memory test also
+ remains unrun; saved conversation memory is distinct from changes to neural weights.
+
+
+
+
+Kira Labs | NewBrain research evidence | 19 October 2026                                                                            3</pre></section>
+<section class="transcript-page" id="page-4"><p class="report-eyebrow">Transcribed source page 4 of 4</p><pre> COLLABORATION / NEXT RESEARCH
+
+
+
+
+ Where a university can make a
+ difference
+ A concrete university collaboration
+ The next useful partnership combines expertise in optimization, sequence generation, memory interference and
+ experimental design. Lab computing and research assistants would support controlled repetitions, independent
+ replication and careful analysis. More memory or a larger GPU would expand the experiments that can be
+ attempted; equipment alone does not guarantee better learning.
+
+    Research area                                  Useful contribution
+
+
+    Learning and optimization                      Help design acquisition, retention, sequence-generation and forgetting
+                                                   experiments with independent evaluation.
+
+
+    Systems and computing                          Run controlled repetitions on university hardware, review resource use and
+                                                   support reproducible research workflows.
+
+
+    Human-computer interaction                     Evaluate Evelyn's conversation continuity, names/details across restarts,
+                                                   visitor separation, voice and usability.
+
+
+    Avatar and biomedical research                 Study measured deformation and anatomy. Validated organ physiology and
+                                                   biological nerve-to-brain behavior remain future work.
+
+
+
+
+ Evelyn and the avatar remain separate evidence tracks
+ Evelyn's frozen 14-turn test involves three synthetic visitors, delayed recall, application restart, separation of
+ visitor details and a corrected preference. It is unrun. Her head, voice and installer still require runtime testing
+ and private user installation before public release. The existing body result is limited to 512 weighted skin
+ vertices moving through five commanded poses and returning to their starting positions.
+
+
+ Evidence and review scope
+ The result was checked by separate internal roles and automated audits. External peer review and independent university
+ replication remain pending. Current public status: NewBrain research record and KiraWorld research record. Detailed restricted
+ evidence is retained locally for authorized technical review.
+
+
+
+
+Kira Labs | NewBrain research evidence | 19 October 2026                                                                          4</pre></section></main><footer class="footer"><div class="wrap"><div class="footrow"><a class="brand" href="index.html"><span class="brandmark"><img alt="" height="33" loading="lazy" src="https://kiralabs.org/assets/kira-world-k-logo-192.png" width="33"/></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent research. Persistent ideas.</small></span></a><nav aria-label="Footer navigation" class="footlinks"><a href="about.html">Meet Robert</a><a href="research.html">Research</a><a href="support.html">Support</a><a href="contact.html">Contact &amp; Iris</a><a href="mailto:rmcmurrer@kiralabs.org">rmcmurrer@kiralabs.org</a></nav></div><div class="footer-bottomline"><p>© 2026 Kira Labs / Robert McMurrer · Newark, New Jersey</p><p><a href="knowledge.html">Sources &amp; status labels</a> · <a href="privacy.html">Privacy</a></p></div></div></footer><script src="/labs.js"></script></body></html>
