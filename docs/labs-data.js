@@ -10,6 +10,7 @@ window.KIRA_LABS_TIMELINE = {
     "NewBrain",
     "Patient Horizon",
     "Evelyn Hart",
+    "Florence Nightingale",
     "ShiftBrief",
     "Video Studio",
     "Sarah Travel",
@@ -84,6 +85,43 @@ window.KIRA_LABS_TIMELINE = {
         }
       ],
       "project_page": "newbrain.html#newbrain-october-21-full-response"
+    },
+    {
+      "id": "florence-night-1890-historical-reconstruction-plan-2026-10-21",
+      "title": "Florence Nightingale's proposed historical starting point is set to July 31, 1890",
+      "project": "Florence Nightingale",
+      "track": "Historically sourced identity and memory plan; not yet an implemented companion",
+      "date": "2026-10-21",
+      "reviewed_on": "2026-10-21",
+      "status": "future",
+      "date_basis": "Dated October 21, 2026 project decision and archival cross-check: Wellcome wax-cylinder recording July 30, 1890; 1889 London South Street letter; Historic England 1865–1910 residence record; 1887 portrait and 1889 photographs catalogued by National Portrait Gallery. This is a planned cutoff, not a runtime test.",
+      "summary": "Florence's proposed initial knowledge date is July 31, 1890, age 70, after the surviving July 30 wax-cylinder recording. Public planning now documents her London home, historical technologies, dated voice/portrait/writing sources, and rules for learning later material through personally paced reading and separate memories.",
+      "body": "Florence's working starting home is 10 South Street, Mayfair; her source-led likeness and speaking-style references include the 1887 Blake Richmond portrait and dated 1889 photographs catalogued by the National Portrait Gallery, original 1890 wax-cylinder renditions held by Wellcome, and letters predating the July 31 snapshot. She should start without knowledge of her death, subsequent inventions or historical events. Future biographies and books reveal their contents only if she actually reads the relevant passage; metadata discovery does not grant knowledge. A modern post-snapshot fact becomes a dated book/conversation-derived memory, not a fabricated historical recollection. Language habits may gradually adapt through experience without erasing a documented starting style. Evelyn and Florence would have separate voices, app launches, private memories and life loops while sharing a legal, non-destructive library. The gold lamp desktop artwork exists; the Florence 3D likeness, generated voice, reading gate, installer and runtime conversation do not. This planning work is scheduled for after October 29. The separate NewBrain Original12 main score remains 2/12 pending independent new-score evidence.",
+      "image": {
+        "path": "assets/florence-nightingale-desktop-icon-20261021.svg",
+        "label": "Original gold-lamp icon for planned Florence companion",
+        "alt": "Gold-lamp desktop icon prepared for Florence Nightingale, not a screenshot of a functioning application",
+        "caption": "Actual prepared desktop icon artwork. Historical character and private install still unrun."
+      },
+      "sources": [
+        {
+          "label": "Florence: July 1890 historical reconstruction plan and London comparison",
+          "url": "florence-nightingale.html"
+        },
+        {
+          "label": "Wellcome first wax-cylinder recording from July 30, 1890",
+          "url": "https://wellcomecollection.org/works/tp9njewm"
+        },
+        {
+          "label": "Historic England: 10 South Street residence",
+          "url": "https://historicengland.org.uk/images-books/photos/job/2K/12945"
+        },
+        {
+          "label": "National Portrait Gallery historical likeness catalogue",
+          "url": "https://www.npg.org.uk/collections/search/personExtended/mp03298/florence-nightingale?tab=iconography"
+        }
+      ],
+      "project_page": "florence-nightingale.html"
     },
     {
       "id": "evelyn-florence-desktop-shortcut-artwork-2026-10-21",
