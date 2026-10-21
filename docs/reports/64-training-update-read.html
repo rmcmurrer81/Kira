@@ -1,0 +1,101 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Report 64 · One-Step Training Update — Kira Labs source transcription</title><meta name="description" content="Readable web transcription of 64_NewBrain_One_Step_Training_Update_Verification_2026-10-20.pdf. Original PDF formatting may differ."><link href="/labs.css" rel="stylesheet"><link href="/evidence.css" rel="stylesheet"><style>.report-body{background:#071323;color:#eaf6fd}.report-main{max-width:1000px;margin:0 auto;padding:32px 18px 60px}.report-main h1{font-size:clamp(2rem,4vw,3.1rem);line-height:1.15;margin:12px 0;color:#fff}.report-main .source-note{color:#c4d3e3;font-size:.88rem;line-height:1.65;border-left:3px solid #6ce4f2;padding:12px 17px;background:#102139;margin:15px 0 28px}.transcript-page{margin:25px 0;padding:20px;background:#0d1c2d;border:1px solid #5aa9bb45;border-radius:7px}.report-eyebrow{color:#68eaf0;text-transform:uppercase;letter-spacing:.11em;font-size:.7rem;font-weight:700}.transcript-page pre{overflow-wrap:anywhere;white-space:pre-wrap;font-size:.85rem;line-height:1.5;color:#ebf7ff;font-family:ui-monospace,Consolas,monospace;margin:0}a.read-nav{color:#72dfe9;text-underline-offset:3px}@media(max-width:600px){.transcript-page{padding:12px}.transcript-page pre{font-size:.75rem}}</style></head><body class="report-body"><a class="skip" href="#main">Skip to report</a><header class="site-header"><div class="wrap navrow"><a aria-label="Kira Labs home" class="brand" href="index.html"><span class="brandmark"><img alt="" decoding="async" height="38" src="https://kiralabs.org/assets/kira-world-k-logo-192.png" width="38"/></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent AI research</small></span></a><button aria-controls="primary-nav" aria-expanded="false" class="menubtn menu-toggle" type="button">Menu</button><nav aria-label="Main navigation" class="nav" id="primary-nav"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="progress.html">Lab timeline</a><a href="about.html">About</a><a href="support.html">Support</a><a class="contact" href="contact.html">Contact</a></nav></div></header><main id="main" class="report-main"><p><a class="read-nav" href="/evidence.html">← Back to research evidence</a></p><p class="ev-kicker">Kira Labs / Source-report reading edition</p><h1>Report 64 · One-Step Training Update</h1><p class="source-note"><strong>Document:</strong> 64_NewBrain_One_Step_Training_Update_Verification_2026-10-20.pdf. This reading edition reproduces text extracted from the original report supplied for publication, separated by source page. It is not a newly verified experiment, and PDF layout, line wrapping and any diagrams may differ. For a test's current status, consult the linked Kira Labs evidence page and dated research updates.</p><section class="transcript-page" id="page-1"><p class="report-eyebrow">Transcribed source page 1 of 2</p><pre> NewBrain: verified training-update mechanics
+ Kira Labs | 20 October 2026
+ A controlled one-update engineering diagnostic, independently checked from saved evidence.
+
+
+
+                 11,914                                                  0                                      3 of 3
+          parameter values checked                                 bit mismatches                    wrong arithmetic controls rejected
+
+
+
+ What passed
+ A single native training update was applied to a disposable clone of a preserved checkpoint. A separate process recomputed
+ the expected clipped update from the saved before-state and gradient, then compared every saved parameter value. 8,917
+ values changed; all 11,914 matched the expected result exactly. The maximum absolute parameter error was zero. All
+ four exposure counters matched their expected increments.
+
+ The reported gradient norm was 10.80523171276576; the independent calculation differed by approximately 1.78 x 10^-15.
+ The clip multiplier, 0.4627388040270147, matched exactly. Teacher-forced loss decreased from 2.355075 to 2.327038.
+ This is an optimization measurement, not a correct-answer learning result.
+
+ How the independent check worked
+ The checker read the immutable saved evidence from the one completed execution. It did not rerun the model, train another
+ checkpoint, or generate answers. It reconstructed the expected arithmetic and checked before/after values, counters, file
+ identities, complete streams and scoped cleanup records.
+
+    Deliberately wrong saved-data calculation                                              Detected mismatches         Outcome
+
+    Reverse the update sign                                                                8,917                       Rejected
+
+    Double the update scale                                                                8,917                       Rejected
+
+    Shift parameter indices                                                                9,058                       Rejected
+
+ These three controls demonstrate that the checker detects these particular arithmetic errors. They were not additional training runs and do
+ not prove it detects every possible defect.
+
+ What this result does not establish
+ This verifies one-step update mechanics for one frozen state. It does not establish complete gradient or optimizer
+ correctness, successful acquisition of an unfamiliar fact, generalization, a higher Original12 score, or equivalence of every
+ loaded binary. The diagnostic used one training update, zero generated answers and no reusable checkpoint product.
+ Numeric before-state, gradient and after-state observations were saved for arithmetic checking.
+
+
+
+
+Kira Labs | Verified engineering evidence and explicit research limits                                                                         1</pre></section>
+<section class="transcript-page" id="page-2"><p class="report-eyebrow">Transcribed source page 2 of 2</p><pre> Methods, limits and next evidence
+ A reusable technical explanation for university and research discussions.
+
+ Execution and evidence boundaries
+ The run retained the 8 GiB startup guard, 3 GiB available-memory reserve, two-CPU affinity and approximately 0.8 GiB
+ NewBrain family limit. Startup and post-run available-memory samples exceeded the startup guard. Two samples do not
+ demonstrate continuous memory compliance or measured CPU attribution. Stop checks and finite deadlines remained
+ part of the execution controls.
+
+ The scoped saved-evidence review covered 218 events, 108 raw cells, 252 copied references, 19 once-close records, two
+ empty job records and four EOF-terminated streams. File lengths, hashes, original execution returns and counters were
+ joined before acceptance. Evidence and resource records were closed before parallel work resumed.
+
+ An earlier audit stopped because its manifest omitted two required original records. That failed audit and its costs were
+ preserved. A distinct corrected audit checked the same unchanged training execution successfully. The training update was
+ not replayed. An earlier metadata-only startup failure is also preserved separately.
+
+ Standing learning results remain separate
+
+    Assessment                                Accepted result and limit
+
+    Original12 main assessment                2/12 before and 2/12 after 256 updates and fresh-process reload. Two new correct responses and
+                                              two lost baseline missing-information passes; no net gain. The older 64-update 0/12 state remains
+                                              preserved.
+
+    Public2 taught-answer diagnostic          1/2 to 2/2 after a separate reload. Narrow taught-answer persistence result; not Original12
+                                              improvement or proof of unfamiliar-fact acquisition.
+
+    Separate isolated three-row study         2/3 before and 2/3 after 64 updates. The new association remained incorrect; two absence
+                                              responses remained correct. Cold reload is unrun.
+
+    Numerical derivative sample               80 coordinates and four directions across ten parameter groups passed; two wrong-gradient
+                                              controls were rejected. This is a separate sampled check, not complete gradient correctness.
+
+    Qwen comparison                           Untested. No comparison result is claimed.
+
+
+ Next learning milestone
+ Teach a fixed unfamiliar association, test a complete freely generated answer and its ending, retain fixed earlier and
+ missing-information responses, and repeat recall after a fresh-process restart. Use matched no-teaching and deliberately
+ incorrect-label controls. Freeze the cases and criteria before execution; never substitute easier cases after seeing results.
+
+ Evelyn and Patient Horizon
+ Evelyn's reviewed private package is prepared, but installation, provider startup, generated conversation, voice,
+ visitor-memory persistence and the animated head still need runtime evidence. Private user installation and testing precede
+ public release. Physiological lung function and lung-brain coupling remain research objectives, not demonstrated clinical
+ capabilities.
+ Equipment and university expertise would support reproducible diagnosis, acquisition-and-retention experiments, anatomy and simulation
+ validation. More RAM or a larger GPU alone does not guarantee successful learning.
+
+
+
+
+Kira Labs | Verified engineering evidence and explicit research limits                                                                        2</pre></section></main><footer class="footer"><div class="wrap"><div class="footrow"><a class="brand" href="index.html"><span class="brandmark"><img alt="" height="33" loading="lazy" src="https://kiralabs.org/assets/kira-world-k-logo-192.png" width="33"/></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent research. Persistent ideas.</small></span></a><nav aria-label="Footer navigation" class="footlinks"><a href="about.html">Meet Robert</a><a href="research.html">Research</a><a href="support.html">Support</a><a href="contact.html">Contact &amp; Iris</a><a href="mailto:rmcmurrer@kiralabs.org">rmcmurrer@kiralabs.org</a></nav></div><div class="footer-bottomline"><p>© 2026 Kira Labs / Robert McMurrer · Newark, New Jersey</p><p><a href="knowledge.html">Sources &amp; status labels</a> · <a href="privacy.html">Privacy</a></p></div></div></footer><script src="/labs.js"></script></body></html>
