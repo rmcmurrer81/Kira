@@ -1,0 +1,29 @@
+[
+  {
+    "device": "desktop",
+    "three_captures_visible": true,
+    "all_three_pdfs_open": true,
+    "timeline_uses_actual_head": true,
+    "all_project_links_present": true,
+    "js_errors": [],
+    "horizontal_overflow": 0
+  },
+  {
+    "device": "wide",
+    "three_captures_visible": true,
+    "all_three_pdfs_open": true,
+    "timeline_uses_actual_head": true,
+    "all_project_links_present": true,
+    "js_errors": [],
+    "horizontal_overflow": 0
+  },
+  {
+    "device": "mobile",
+    "three_captures_visible": true,
+    "all_three_pdfs_open": true,
+    "timeline_uses_actual_head": true,
+    "all_project_links_present": true,
+    "js_errors": [],
+    "horizontal_overflow": 0
+  }
+]
