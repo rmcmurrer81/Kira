@@ -4,8 +4,8 @@
  */
 (function(root){
   'use strict';
-  const IDS=["newbrain","ideaforge","humanoid-researcher","world","bluebook","avatar-body","aster","patient-horizon","physiology-bridge","healthspan","temporary-creator"];
-  const SOURCE={"newbrain":"research-status-2026-10-19.html#status","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"research-status-2026-10-18.html#people","bluebook":"knowledge.html#bluebook","avatar-body":"research-status-2026-10-18.html#body","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"research-status-2026-10-18.html#people"};
+  const IDS=["newbrain","ideaforge","humanoid-researcher","world","bluebook","avatar-body","aster","patient-horizon","physiology-bridge","healthspan","temporary-creator","evelyn"];
+  const SOURCE={"newbrain":"newbrain.html#newbrain-october-21-full-response","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"research-status-2026-10-18.html#people","bluebook":"knowledge.html#bluebook","avatar-body":"research-status-2026-10-18.html#body","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"research-status-2026-10-18.html#people","evelyn":"evelyn-hart.html#evelyn-blink-verified-2026-10-20"};
   const FACETS=['overview','status','how','technical','evidence','privacy','limits','cost'];
   const normalize=s=>String(s||'').toLowerCase().normalize('NFKC').replace(/[’']/g,'').replace(/[_-]/g,' ').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
   // Remove only conversational framing, never a factual clause or instruction.
@@ -177,6 +177,8 @@
       selected=['how','status','evidence','technical','limits','privacy','cost'].find(f=>!used.has(f));
       if(!selected)return {...reply(p,'overview',data),title:p.title+' · available detail',facet:'exhausted',answer:'We have covered the reviewed project notes for '+p.title+'. I do not have another verified layer to add. Choose a specific question or read the dated source notes.',label:'LIMIT OF THE REVIEWED NOTES'};
     }
+    // Plain yes/no capability questions about a known project are status questions.
+    if(selected==='overview'&&/^(?:can|could|does|do|did|has|have|is|are|will)\b/.test(q))selected='status';
     if(selected==='overview'){
       let rest=q;for(const a of [...p.aliases].sort((a,b)=>b.length-a.length))rest=rest.replace(normalize(a),'');
       // These anchored presentation modifiers add no factual premise. Do not
