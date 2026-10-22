@@ -74,3 +74,25 @@
 .eh-actual-head-link{display:block;border-radius:14px;overflow:hidden;background:#182235;box-shadow:0 25px 80px rgba(0,0,0,.5);}
 .eh-portrait .eh-actual-head-link img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;background:#182235;box-shadow:none;border-radius:0;}
 .eh-portrait figcaption a{color:#84e6e9;}
+
+/* Evelyn full-body opening and camera-to-face planned sequence (Oct 21) */
+.eh-camera-plan{background:linear-gradient(162deg,#091928 0%,#101525 100%);border-block:1px solid rgba(121,235,243,.18)}
+.eh-camera-plan h2{max-width:940px;margin:15px 0 20px}
+.eh-camera-plan h2 em{font:italic 400 .83em/1.1 Georgia,serif;color:#88e8e7}
+.eh-camera-plan .eh-intro{max-width:1050px}
+.eh-camera-steps{display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr);gap:17px;align-items:stretch;margin:33px 0 21px}
+.eh-camera-card{min-width:0;overflow:hidden;background:linear-gradient(145deg,#122a3d 0%,#111927 100%);border:1px solid rgba(129,230,235,.25);border-radius:15px}
+.eh-camera-visual{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:295px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 30%,#1b3f51,#0d1725 75%)}
+.eh-camera-visual svg{width:min(96%,300px);height:260px}
+.eh-camera-visual img{display:block;height:260px;width:100%;object-fit:contain;object-position:center;background:#182335}
+.eh-camera-visual span{width:100%;padding:7px 12px 11px;text-align:center;font-size:.7rem;line-height:1.4;letter-spacing:.02em;color:#c8dce4;background:#0a1b2c}
+.eh-camera-text{padding:23px 22px 27px}
+.eh-camera-text h3{font-size:1.4rem;margin:5px 0 12px;color:#f4f9f9}
+.eh-camera-text p:not(.eh-camera-number){font-size:.95rem;line-height:1.69;color:#becdd8;margin:0}
+.eh-camera-number{color:#83eced;font:700 .7rem/1.6 ui-monospace,Consolas,monospace;letter-spacing:.11em;margin:0}
+.eh-camera-arrow{font-size:2.2rem;font-weight:300;color:#8ce1e8;align-self:center;text-align:center}
+.eh-camera-status{padding:18px 23px;background:#102b38a8;border:1px solid #73cdda61;border-radius:9px;color:#c4d7e1;line-height:1.71;font-size:.94rem}
+.eh-camera-status strong{color:#e9f8fa}
+.eh-camera-status a,.eh-camera-plan a{color:#91e9eb}
+@media(max-width:840px){.eh-camera-steps{grid-template-columns:minmax(0,1fr)}.eh-camera-arrow{transform:rotate(90deg);font-size:2rem;margin:-12px auto}.eh-camera-visual{min-height:260px}.eh-camera-text{padding:17px 18px 20px}}
+@media(max-width:480px){.eh-camera-plan{padding:45px 0}.eh-camera-visual{min-height:235px}.eh-camera-visual img{height:218px}.eh-camera-visual svg{height:218px}.eh-camera-status{padding:14px 16px;font-size:.86rem}}
