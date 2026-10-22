@@ -21,3 +21,38 @@
 .creator-flow-links{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0 36px}
 .creator-example-head{margin-top:35px;padding-top:22px;border-top:1px solid rgba(133,204,218,.2)}
 @media(max-width:820px){.creator-flow-tracks{grid-template-columns:1fr}.creator-flow-figure{border-radius:14px}.creator-flow-figure figcaption{padding:15px 16px}.creator-flow-track{padding:18px}.creator-flow-links .button{width:100%;text-align:center}}
+
+/* October 22, 2026 — creator examples and prospective consent-based digital-twin adaptation. */
+.creator-feature{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(250px,.8fr);gap:0;margin:23px 0 30px;border:1px solid rgba(119,218,239,.34);border-radius:20px;overflow:hidden;background:linear-gradient(125deg,#0e2940,#11182d 70%,#211e3c);box-shadow:0 18px 50px rgba(1,5,19,.22)}
+.creator-feature-copy{min-width:0;padding:clamp(23px,3vw,38px)}
+.creator-case-label{margin:0 0 12px;font-size:.77rem;letter-spacing:.085em;text-transform:uppercase;font-weight:700;color:#93e7ee}
+.creator-feature h3{font-size:clamp(1.7rem,2.8vw,2.45rem);line-height:1.15;color:#f6fbff;margin:5px 0 17px}
+.creator-feature h3 span{display:block;margin-top:7px;font-size:clamp(.93rem,1.35vw,1.12rem);font-weight:500;color:#a7d9e7}
+.creator-feature-copy > p:not(.creator-case-label){color:#d5e5ee;line-height:1.7;margin:0 0 14px}
+.creator-feature-copy strong{color:#f2fbff}
+.creator-feature .creator-feature-limit{padding:14px 16px;background:rgba(4,12,27,.45);border-left:3px solid #7ccee7;border-radius:6px;font-size:.93rem}
+.creator-feature-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:20px}
+.creator-feature-actions .button{font-size:.92rem}
+.creator-feature-media{min-width:0;margin:0;position:relative;background:#092138;display:flex;flex-direction:column}
+.creator-feature-media img{display:block;width:100%;flex:1;min-height:350px;max-height:540px;object-fit:cover;object-position:50% 25%}
+.creator-feature-media figcaption{padding:13px 17px;font-size:.8rem;line-height:1.5;color:#bfd6e5;border-top:1px solid rgba(129,206,225,.25)}
+.creator-example-secondary{margin-top:24px}
+.creator-people-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:20px 0 32px}
+.creator-person-card{min-width:0;border:1px solid rgba(136,208,228,.24);border-radius:14px;padding:22px;background:linear-gradient(145deg,rgba(14,39,65,.85),rgba(10,20,41,.9))}
+.creator-person-card:nth-child(2){border-color:rgba(220,176,115,.32)}
+.creator-person-card:nth-child(4){border-color:rgba(158,215,182,.31)}
+.creator-person-kicker{font-size:.76rem;letter-spacing:.085em;text-transform:uppercase;color:#9cdbed;font-weight:700;margin:0 0 9px}
+.creator-person-card h3{font-size:clamp(1.24rem,1.65vw,1.53rem);color:#fff;margin:0 0 11px}
+.creator-person-card p:last-child{color:#cbdce7;line-height:1.65;margin:0}
+.creator-twin{border:1px solid rgba(166,142,244,.45);border-radius:20px;background:linear-gradient(155deg,#1d1a3a 0%,#111c35 54%,#0c2833 100%);padding:clamp(22px,3vw,35px);margin:30px 0 23px}
+.creator-twin-intro{max-width:940px}
+.creator-twin h3{font-size:clamp(1.5rem,2.5vw,2.2rem);line-height:1.22;color:#f2f5ff;margin:6px 0 12px}
+.creator-twin-intro>p:not(.creator-case-label){color:#d7dff0;line-height:1.7}
+.creator-twin-steps{list-style:none;padding:0;margin:24px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.creator-twin-steps li{padding:18px 16px;border:1px solid rgba(183,184,237,.26);border-radius:12px;background:rgba(7,14,31,.46);line-height:1.57}
+.creator-twin-steps li strong{display:block;color:#effbff;margin-bottom:8px}
+.creator-twin-steps li span{display:block;color:#c7d5e6;font-size:.91rem}
+.creator-twin .creator-twin-boundary{margin:17px 0 0;padding-top:18px;border-top:1px solid rgba(176,194,238,.24);font-size:.9rem;color:#c5d6e8;line-height:1.65}
+.creator-twin a{color:#99e5f0}
+@media(max-width:850px){.creator-feature{grid-template-columns:1fr}.creator-feature-media{max-height:360px}.creator-feature-media img{min-height:0;max-height:300px;object-position:center 28%}.creator-twin-steps{grid-template-columns:1fr}}
+@media(max-width:600px){.creator-people-grid{grid-template-columns:1fr}.creator-feature-actions .button{width:100%;text-align:center}.creator-feature-copy{padding:20px}.creator-person-card{padding:18px}.creator-twin{padding:20px}}
