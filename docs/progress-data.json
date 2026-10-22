@@ -4,6 +4,41 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "avatar-builder-female-first-2026-10-22",
+      "title": "Avatar Builder: female-first body personalization plan",
+      "date": "2026-10-22",
+      "date_basis": "October 22 owner-requested development sequence and independently reviewed KiraWorld requirement document; plan, not a generated result",
+      "status": "working",
+      "track": "Body & world interaction",
+      "summary": "Evelyn's female reference is the first planned full-body authoring target. Photo/video-guided variants, natural movement and clothing tests remain to be built and verified.",
+      "body": [
+        "The fixed female reference remains the starting source. First validate a full anatomically complete female body authoring pipeline, then try a few existing female-character variants; male anatomy and Robert's variant are deferred.",
+        "Photos would guide appearance and visible proportions; videos could inform posture and movement. Inferred features must remain editable and private material must not be made public.",
+        "Record movement before clothing, then repeat with realistic fitted clothing to inspect collisions, folds and drape. Evelyn's standalone private installer is first, with separate versions for other synthetic people and Patient Horizon only after qualification."
+      ],
+      "boundary": "This milestone records a design/review decision, not newly generated personalized anatomy, humanlike full-body animation, fabric physics, a working installer or a medical body simulation.",
+      "image": {
+        "path": "assets/evelyn-body-three-views-censored-20261021.webp",
+        "caption": "Previously saved censored reference captures, not newly authored photo/video variants. Side framing was not accepted.",
+        "alt": "Existing full-body reference from three angles with black privacy bars; concept-plan illustration only"
+      },
+      "sources": [
+        {
+          "label": "Female-first authoring source record",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/commit/dd09a920ffa1d1556c87638ade546193e63dd752"
+        },
+        {
+          "label": "Avatar Builder roadmap",
+          "url": "kira-world.html#avatar-builder-female-first-2026-10-22"
+        },
+        {
+          "label": "Evelyn movement plan",
+          "url": "evelyn-hart.html#evelyn-natural-body-plan-2026-10-22"
+        }
+      ],
+      "evidence_kind": "female-first-body-plan-unverified-runtime"
+    },
+    {
       "id": "newbrain-guarded-setup-2026-10-22",
       "title": "NewBrain comparison: setup stopped before training",
       "date": "2026-10-22",
@@ -14,7 +49,8 @@
       "body": [
         "A stale run-directory reference, a descriptor-alias mismatch and later missing command quotes blocked successive setup attempts. The final attempt had passed memory admission and built inputs but had not dispatched training.",
         "Accepted Original12 stays 2/12. The separately rehearsed three-example restart result stays 3/3, without transfer to unfamiliar questions. Qwen remains untested.",
-        "Next: a fresh verified setup, independently measured learning improvement, restart retention and unfamiliar-question checks. December 25 is a research target, not a promised delivery date."
+        "Next: a fresh verified setup, independently measured learning improvement, restart retention and unfamiliar-question checks. December 25 is a research target, not a promised delivery date.",
+        "Later on October 22 an independent prelaunch audit identified a blocking mismatch: older worker names in the public execution gate disagree with current execution owners. A scoped source repair is under review; the actual first exception and a passing dynamic Native test are not yet established."
       ],
       "boundary": "Preserved guarded setup findings, not a new trained 0/12 or 3/12 result. No model-training run or Qwen comparison completed.",
       "image": {
@@ -34,6 +70,14 @@
         {
           "label": "Development targets",
           "url": "newbrain.html#newbrain-december-learning-targets-2026"
+        },
+        {
+          "label": "Later independently reviewed NewBrain source report",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/c6f447583c18ad890603f645d5bf240f334a8273"
+        },
+        {
+          "label": "Follow-up owner-gate status",
+          "url": "newbrain.html#newbrain-owner-gate-audit-2026-10-22"
         }
       ],
       "evidence_kind": "guarded-setup-no-new-learning-score"
