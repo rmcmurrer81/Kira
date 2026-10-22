@@ -1,8 +1,43 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-06",
+  "reviewed_on": "2026-10-22",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-guarded-setup-2026-10-22",
+      "title": "NewBrain comparison: setup stopped before training",
+      "date": "2026-10-22",
+      "date_basis": "October 22 guarded setup and static-review records; no new model run",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Three guarded setup identities stopped because of metadata or command-format mismatches before model training; the planned A/B comparison remains unscored.",
+      "body": [
+        "A stale run-directory reference, a descriptor-alias mismatch and later missing command quotes blocked successive setup attempts. The final attempt had passed memory admission and built inputs but had not dispatched training.",
+        "Accepted Original12 stays 2/12. The separately rehearsed three-example restart result stays 3/3, without transfer to unfamiliar questions. Qwen remains untested.",
+        "Next: a fresh verified setup, independently measured learning improvement, restart retention and unfamiliar-question checks. December 25 is a research target, not a promised delivery date."
+      ],
+      "boundary": "Preserved guarded setup findings, not a new trained 0/12 or 3/12 result. No model-training run or Qwen comparison completed.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "caption": "Concept illustration; not an actual learning or setup-test screenshot.",
+        "alt": "Illustrative neural research network, representing NewBrain architecture"
+      },
+      "sources": [
+        {
+          "label": "October 22 guarded setup status",
+          "url": "newbrain.html#newbrain-guarded-setup-2026-10-22"
+        },
+        {
+          "label": "Research evidence",
+          "url": "evidence.html#newbrain-guarded-setup-2026-10-22"
+        },
+        {
+          "label": "Development targets",
+          "url": "newbrain.html#newbrain-december-learning-targets-2026"
+        }
+      ],
+      "evidence_kind": "guarded-setup-no-new-learning-score"
+    },
     {
       "id": "evelyn-body-reference-2026-10-21",
       "title": "Evelyn's full-body reference renders",
