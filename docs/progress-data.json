@@ -4,6 +4,41 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "evelyn-body-reference-2026-10-21",
+      "title": "Evelyn's full-body reference renders",
+      "date": "2026-10-21",
+      "date_basis": "Saved October 21 KiraWorld development record and independently reviewed diagnostic renders",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "Front, side and rear 3D body reference views were saved. Front and rear checks passed, but the strict side-camera framing check failed.",
+      "body": [
+        "All 28 meshes appeared in the three distinct retained captures; direct-canvas and compositor outputs matched. Black privacy bars are permanently applied to the public copies of the screenshots.",
+        "Front and back passed their camera framing tests. The side render saved, but four conservative bounding-box corners exceeded the camera frame at projected normalized vertical 1.116433. The overall three-view test did not pass.",
+        "Next is a corrected side camera and fresh acceptance run. This reference render does not yet prove a finished Evelyn model, animation, clothing, integration with NewBrain or working anatomy in Patient Horizon."
+      ],
+      "boundary": "In-development reference asset, not an accepted unique animated Evelyn body. Published imagery is censored at the pixel level. No full capture pass, clothing, natural movement, organ behavior or life-loop transition is established.",
+      "image": {
+        "path": "assets/evelyn-body-three-views-censored-20261021.webp",
+        "caption": "Censored front/side/back diagnostic reference captures. The overall capture test failed at side-frame containment.",
+        "alt": "Three vertically stacked full-body 3D reference renders of Evelyn with black privacy bars over sensitive regions"
+      },
+      "sources": [
+        {
+          "label": "October 21 reviewed KiraWorld engineering record",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/commit/3c8e7b9c9e11df7bfda92811b96bcf67410c64c9"
+        },
+        {
+          "label": "Censored rendered evidence",
+          "url": "evidence.html#evelyn-body-evidence-2026-10-21"
+        },
+        {
+          "label": "Evelyn project status",
+          "url": "evelyn-hart.html#evelyn-body-reference-2026-10-21"
+        }
+      ],
+      "evidence_kind": "diagnostic-render-partial-check-failure"
+    },
+    {
       "id": "kira-friend-dual-chat-2025-08",
       "title": "Kira meets an unnamed Friend",
       "date": "2025-08-05",

@@ -1,0 +1,16 @@
+/* October 21, 2026: public-only diagnostic images. Privacy bars are baked into the WebP raster. */
+.evelyn-body-public{background:linear-gradient(145deg,#0a1c2d,#101826);border-top:1px solid rgba(126,229,231,.23);border-bottom:1px solid rgba(126,229,231,.16);padding-block:46px}
+.evelyn-body-public h2{font-size:clamp(1.6rem,3vw,2.5rem);margin:8px 0 14px}
+.evelyn-body-public p{max-width:960px;line-height:1.72;color:#c9dbe4}
+.evelyn-body-public .evelyn-body-kicker{font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:#87d8e1}
+.evelyn-body-public .evelyn-body-foot{font-size:.88rem;color:#b9cfda}
+.evelyn-body-public a{color:#95e5eb}
+.evelyn-body-views{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px auto}
+.evelyn-body-panel{margin:0;min-width:0;border:1px solid rgba(121,218,231,.32);border-radius:13px;overflow:hidden;background:#131e2d}
+.evelyn-body-view-frame{display:block;width:100%;aspect-ratio:384 / 289;background-color:#162132;background-image:url("assets/evelyn-body-three-views-censored-20261021.webp");background-repeat:no-repeat;background-size:100% 300%}
+.evelyn-body-view-frame.front{background-position:center top}
+.evelyn-body-view-frame.side{background-position:center center}
+.evelyn-body-view-frame.back{background-position:center bottom}
+.evelyn-body-panel figcaption{display:flex;flex-direction:column;gap:5px;padding:14px 15px 18px;color:#c4d8e2;font-size:.82rem;line-height:1.5}
+.evelyn-body-panel figcaption strong{font-size:1rem;color:#f0f6f8}
+@media(max-width:760px){.evelyn-body-views{grid-template-columns:1fr;max-width:470px}.evelyn-body-public{padding-block:30px}}
