@@ -4,6 +4,41 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-public-b-training-verified-2026-10-22",
+      "title": "NewBrain B diagnostic gains one complete answer",
+      "date": "2026-10-22",
+      "date_basis": "NewBrain's October 22 independently reviewed internal saved-run result; new score applies only to the scoped B experiment",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Public B trained diagnostic rose from 2/3 to 3/3 after 256 updates; unchanged control stayed 2/3. Original12 remains 2/12.",
+      "body": [
+        "Internal independent review checked the saved answers and controls from the completed public B diagnostic without repeating training. At 0, 64, 128, 192 and 256 updates, the trained correct counts were 2, 2, 2, 3 and 3.",
+        "Three item exposures were 256, 512 and 0. The result is one limited experimental arm; a matching coverage arm was not accepted, so the intended A/B comparison is incomplete.",
+        "No fresh-process retention or unseen-question transfer was tested for this B run. No final learner state was promoted. The separate earlier 3/3 rehearsed restart result must not be conflated with the new gain; Qwen remains untested and Original12 stays 2/12."
+      ],
+      "boundary": "Narrow positive complete-answer training result from internal saved-evidence review, not a main-suite gain, generalized model, finished A/B comparison or independently reproduced external study.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "caption": "Conceptual visualization of neural research, not a screenshot of the scored B diagnostic.",
+        "alt": "Illustrated neural network research concept"
+      },
+      "sources": [
+        {
+          "label": "NewBrain latest research status",
+          "url": "https://github.com/rmcmurrer81/newbrain/blob/main/docs/research/2026-10-22-verified-progress-and-personalized-body-plan.md"
+        },
+        {
+          "label": "Kira Labs test details",
+          "url": "newbrain.html#newbrain-public-b-training-verified-2026-10-22"
+        },
+        {
+          "label": "Research evidence and limits",
+          "url": "evidence.html#newbrain-public-b-training-verified-2026-10-22"
+        }
+      ],
+      "evidence_kind": "scoped-public-b-training-gain-internal-independent-audit"
+    },
+    {
       "id": "newbrain-diagnostic-executed-audit-pending-2026-10-22",
       "title": "NewBrain diagnostic executed; independent audit pending",
       "date": "2026-10-22",
