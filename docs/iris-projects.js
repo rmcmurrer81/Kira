@@ -5,7 +5,7 @@
 (function(root){
   'use strict';
   const IDS=["newbrain","ideaforge","humanoid-researcher","world","bluebook","avatar-body","aster","patient-horizon","physiology-bridge","healthspan","temporary-creator","evelyn"];
-  const SOURCE={"newbrain":"newbrain.html#newbrain-windows-compatibility-pass-2026-10-21","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"research-status-2026-10-18.html#people","bluebook":"knowledge.html#bluebook","avatar-body":"research-status-2026-10-18.html#body","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"research-status-2026-10-18.html#people","evelyn":"evelyn-hart.html#evelyn-blink-verified-2026-10-20"};
+  const SOURCE={"newbrain":"newbrain.html#newbrain-original12-negative-transfer-2026-10-21","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"research-status-2026-10-18.html#people","bluebook":"knowledge.html#bluebook","avatar-body":"research-status-2026-10-18.html#body","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"research-status-2026-10-18.html#people","evelyn":"evelyn-hart.html#evelyn-full-body-life-loop-camera-2026-10-21"};
   const FACETS=['overview','status','how','technical','evidence','privacy','limits','cost'];
   const normalize=s=>String(s||'').toLowerCase().normalize('NFKC').replace(/[’']/g,'').replace(/[_-]/g,' ').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
   // Remove only conversational framing, never a factual clause or instruction.
@@ -81,6 +81,8 @@
     if(/\b(conscious|consciousness|sentient|sentience|human brain|certified|certification|proven|guarantee|guaranteed|safe(?:ty)?|risks?|manufactur\w*|alien proof|extraterrestrial proof|replace qwen|replaces qwen|real brain)\b/.test(q)||/\b(?:turn|make|build)\b.*\bworking (?:robot|invention)\b/.test(q))return 'limits';
     if(/(?:how (?:do|can|should)|can|could) i (?:run|start|install|set up)|(?:setup|installation) requirements|\b(?:mac|macos|linux|windows)\b/.test(q))return 'technical';
     if(/\b(?:what|which) (?:local )?models?\b|\bmodels?\b.*\b(?:use|uses|powers|powering)\b/.test(q))return 'technical';
+    if(/\b(?:latest|newest)\b/.test(q))return 'status';
+    if(/\b(?:full.body|whole body|body plan|camera|zoom|framing|life loop)\b/.test(q))return 'status';
     if(/\b(tests?|tested|testing|fixtures?|benchmark|benchmarks|measured|evidence|validation|validated|results?|reproducible|ran|unrun)\b/.test(q))return 'evidence';
     if(/\b(privacy|private|security|permissions?|data handling|offline|local|cloud|internet|online|storage|stored|saved data|chat history)\b|\b(?:send|save|store|share|record|transmit|collect|keep)\b.*\b(?:my|your|our|questions|data|chat|details|history)\b/.test(q))return 'privacy';
     if(/\b(limits?|limitations?|boundaries|boundary|cannot|cant|unsupported|not do|not yet)\b/.test(q))return 'limits';
