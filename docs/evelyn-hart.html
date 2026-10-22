@@ -93,8 +93,25 @@
 <p><strong>Memory continuity:</strong> Evelyn's permitted memories of her conversations and experiences with Tom, Cindy and other people should remain available under their respective profiles after switching conversations and after restarting the application. One visitor's personal history must not be disclosed to another visitor without authorization.</p>
 <p><strong>Design, not a tested feature:</strong> the selector, automatic introduction handling, authenticated profile access, cross-visitor isolation and post-restart recall still require implementation and controlled verification. A person choosing a name from the menu—or saying that name aloud—is not proof of identity.</p>
 </div>
+<p class="eh-limits"><strong>Additional acceptance check · visitor changes while a reply is pending:</strong> A development screenshot reports that source review identified a possible stale-reply problem: an answer started for John could arrive after Cindy is selected. The planned correction must check the active authorized profile and conversation generation before <strong>displaying or saving</strong> every reply, rejecting or discarding results from the previous visitor. Test John → short pause → Cindy → John with deliberately delayed replies, verify the visible header, inspect saved memories, and repeat after restart. This is a <strong>reported review finding and proposed fix—not a passed runtime test</strong>.</p>
 <p class="eh-limits"><strong>Privacy requirement:</strong> Someone saying a name—or sounding like a known speaker—is not secure proof of identity. Private stored information should require permission and an appropriate authenticated profile; otherwise the interaction should be treated as new or anonymous. No automatic voice or face identification is claimed here.</p>
 <p class="eh-limits"><strong>Required future verification:</strong> test John → Cindy → John while Evelyn remains active, then repeat after a complete application restart. Check that remembered details stay with the correct profile and no private details leak across visitors. <strong>This end-to-end test has not passed yet.</strong> <a href="updates.html#evelyn-visitor-continuity-design-2026-10-21">Read the design update →</a></p>
+</div>
+</section>
+<section class="eh-section section rule" id="evelyn-shared-memories-and-bereavement-2026-10-21" aria-labelledby="evelyn-shared-memories-title">
+<div class="wrap">
+<div class="eh-sectionhead">
+<p class="eyebrow">Relationship continuity · Proposed memory-sharing scenario · October 21, 2026</p>
+<h2 id="evelyn-shared-memories-title">Remembering someone together—without inventing their story.</h2>
+<p class="eh-intro">Imagine Evelyn previously spoke with Adam, who later dies. Adam's son Max returns and asks Evelyn about her experiences talking with his father. The intended design would let Evelyn describe <strong>real, previously recorded, shareable conversations she personally had with Adam</strong>, while keeping the people and sources of memories correctly distinguished.</p>
+</div>
+<div class="eh-columns">
+<article class="eh-column"><span class="eh-number">01 / WHAT EVELYN REMEMBERS</span><h3>Her encounters with Adam</h3><p>If she has a reliable saved record, Evelyn may recall what she discussed with Adam and when, subject to any consent or sharing limits. She should clearly distinguish recorded dialogue, summaries, and uncertainty rather than act as though she remembers an event that was never saved.</p></article>
+<article class="eh-column"><span class="eh-number">02 / WHAT MAX SHARES</span><h3>Max's memories of his father</h3><p>Max can offer his own recollections. Evelyn should attribute them to Max, not silently rewrite her history of Adam. Their discussion could form a new memory of the conversation with Max, linked to Adam only where appropriate and authorized.</p></article>
+<article class="eh-column"><span class="eh-number">03 / PERMISSIONS AND TRUTH</span><h3>Respect privacy after loss</h3><p>Family relationship or death alone is not permission to reveal confidential remarks. Evelyn should follow Adam's recorded preferences, respect private information about others, decline restricted details and never fabricate words, advice or approval on his behalf.</p></article>
+</div>
+<p class="eh-limits"><strong>Future verification:</strong> create a controlled synthetic Adam-and-Max dataset with both shareable and restricted memories. Check correct source attribution, permission filtering, uncertainties, cross-profile separation and recall after restart. This is <strong>a proposed feature and test plan only</strong>; no passing implementation, bereavement-specific conversation or sharing-permission system has been demonstrated.</p>
+<p class="eh-limits"><a href="updates.html#evelyn-shared-memories-and-bereavement-2026-10-21">Read the complete development note →</a></p>
 </div>
 </section>
 <section class="eh-section section rule" aria-labelledby="evelyn-library">
