@@ -4,6 +4,68 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "evelyn-seven-conversation-checks-2026-10-22",
+      "title": "Seven new Evelyn conversation checks",
+      "date": "2026-10-22",
+      "date_basis": "October 22 synchronized internal software-development record, reporting synthetic test results and unresolved review findings",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "Seven additional simulated conversation software checks passed beyond eight earlier app/library checks; two source issues remain.",
+      "body": [
+        "Typed software lanes now distinguish spoken dialogue, private character thoughts and source-backed factual claims. Tests include visitor isolation and spoken-only display.",
+        "Simulated response queue/correction/yield/cancel behavior, bounded context, source parsing and recording failure preservation were also checked.",
+        "Independent review identified two issues requiring accepted fixes. No real voice, conversation, body motion, visitor memory or public release has been demonstrated."
+      ],
+      "boundary": "Reported isolated software checks with synthetic inputs and fake providers, not end-to-end demonstrated conversation, privacy, humanlike expression or movement.",
+      "image": {
+        "path": "assets/evelyn-head-front-capture-20261020.webp",
+        "caption": "Earlier captured head render, not a new conversation screenshot.",
+        "alt": "Earlier engineering render of the Evelyn head"
+      },
+      "sources": [
+        {
+          "label": "October 22 KiraWorld update",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/commit/f247d7a9f437a8eaf1635d967f7617b84b2a4d0b"
+        },
+        {
+          "label": "Public status page",
+          "url": "evelyn-hart.html#evelyn-seven-conversation-checks-2026-10-22"
+        }
+      ],
+      "evidence_kind": "isolated-software-tests-not-runtime"
+    },
+    {
+      "id": "newbrain-matched-replay-source-2026-10-22",
+      "title": "NewBrain replay comparison source prepared",
+      "date": "2026-10-22",
+      "date_basis": "October 22 NewBrain internal development-status note; review defects block qualified run",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "A replay/no-replay training comparison with unfamiliar-question and restart tests has been implemented in local source; four integration/scoring defects still require repair.",
+      "body": [
+        "The next experiment is planned around a frozen lesson/evaluation split and matched training budgets with and without replay.",
+        "Independent source review found four integration/scoring defects before an admitted execution. No new learner score is available.",
+        "The earlier limited B 2/3 → 3/3 result remains separate; Original12 remains 2/12."
+      ],
+      "boundary": "Source-preparation report only. No qualified training run, improved Original12 accuracy, held-out transfer, or new restart result has been demonstrated.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "caption": "Concept illustration; not a screenshot of a replay comparison.",
+        "alt": "Neural research concept illustration"
+      },
+      "sources": [
+        {
+          "label": "NewBrain October 22 update",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/2a27e572dc7d5c8b956fde5ff3c73badf67cdfd6"
+        },
+        {
+          "label": "Preparation detail",
+          "url": "newbrain.html#newbrain-matched-replay-source-2026-10-22"
+        }
+      ],
+      "evidence_kind": "planned-matched-training-unexecuted-four-defects"
+    },
+    {
       "id": "newbrain-public-b-training-verified-2026-10-22",
       "title": "NewBrain B diagnostic gains one complete answer",
       "date": "2026-10-22",
