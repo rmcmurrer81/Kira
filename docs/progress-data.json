@@ -4,6 +4,76 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-diagnostic-executed-audit-pending-2026-10-22",
+      "title": "NewBrain diagnostic executed; independent audit pending",
+      "date": "2026-10-22",
+      "date_basis": "October 22 status documents one completed guarded diagnostic run and cleanup, with output/control verification pending",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Coverage-versus-repetition diagnostic ran once. Saved answers and controls await independent verification; accepted Original12 stays 2/12.",
+      "body": [
+        "Earlier setup failures were preserved. The fresh guarded coverage-versus-repetition diagnostic completed execution and cleanup.",
+        "Independent evaluation of saved responses, controls and model state is pending. Neither a learning gain nor held-out transfer has been accepted.",
+        "Original12 remains 2/12; the separate rehearsed result remains 3/3 after restart. Qwen comparison remains untested."
+      ],
+      "boundary": "Executed-diagnostic status only, not a new correct-answer result, verified transfer or Qwen comparison.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "caption": "Concept illustration, not an actual diagnostic video or scored result.",
+        "alt": "Stylized cognitive research network concept illustration"
+      },
+      "sources": [
+        {
+          "label": "October 22 repository report",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/ec60ccd82eb1e939fdcbe91c8b070dfbc08dc191"
+        },
+        {
+          "label": "NewBrain execution and scoring boundaries",
+          "url": "newbrain.html#newbrain-diagnostic-executed-audit-pending-2026-10-22"
+        },
+        {
+          "label": "Evidence page",
+          "url": "evidence.html#newbrain-diagnostic-executed-audit-pending-2026-10-22"
+        }
+      ],
+      "evidence_kind": "completed-execution-pending-independent-result"
+    },
+    {
+      "id": "evelyn-app-library-checks-2026-10-22",
+      "title": "Evelyn: eight software checks and 19 verified file moves",
+      "date": "2026-10-22",
+      "date_basis": "KiraWorld dated source describing scoped app tests, local assembly and SHA-256 validated library organization",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "Eight isolated app/library software checks passed; 19 previously unsorted PDFs were checked and organized; private app assembled from 21 staged files.",
+      "body": [
+        "Private application source assembled from 21 staged files. Local checks covered syntax, recording file, offline provider, reading and safe installation/removal mechanisms.",
+        "Nineteen unsorted PDF documents were organized without overwrites and verified using full destination SHA-256 checks. Originals and reversible journal were kept.",
+        "Actual generated dialogue, Evelyn's voice, natural movement, independent installer operation and learning from books remain unverified."
+      ],
+      "boundary": "Software and local file-integrity evidence only; not demonstrated voice, conversation, humanlike movement, reading acquisition, or release readiness.",
+      "image": {
+        "path": "assets/evelyn-head-front-capture-20261020.webp",
+        "caption": "Earlier engineering head-render evidence, not a screenshot of the new software checks.",
+        "alt": "Earlier 3D engineering view of Evelyn's head"
+      },
+      "sources": [
+        {
+          "label": "KiraWorld dated report",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/commit/adb7d7416f0f020fd7ec8292c8fa4c6274cf7fe0"
+        },
+        {
+          "label": "Evelyn's latest public status",
+          "url": "evelyn-hart.html#evelyn-app-library-checks-2026-10-22"
+        },
+        {
+          "label": "Journal update",
+          "url": "updates.html#evelyn-app-library-checks-2026-10-22"
+        }
+      ],
+      "evidence_kind": "isolated-app-tests-and-pdf-hash-verification"
+    },
+    {
       "id": "avatar-builder-female-first-2026-10-22",
       "title": "Avatar Builder: female-first body personalization plan",
       "date": "2026-10-22",
