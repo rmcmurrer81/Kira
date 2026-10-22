@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-10-21",
+  "prepared_on": "2026-10-22",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,168 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "evelyn-body-reference-2026-10-21",
+      "title": "Evelyn's full-body reference renders",
+      "project": "Evelyn Hart",
+      "track": "Evelyn's full-body reference renders",
+      "date": "2026-10-21",
+      "reviewed_on": "2026-10-22",
+      "status": "development",
+      "date_basis": "Saved October 21 KiraWorld development record and independently reviewed diagnostic renders",
+      "summary": "Front, side and rear 3D body reference views were saved. Front and rear checks passed, but the strict side-camera framing check failed.",
+      "body": "All 28 meshes appeared in the three distinct retained captures; direct-canvas and compositor outputs matched. Black privacy bars are permanently applied to the public copies of the screenshots.\n\nFront and back passed their camera framing tests. The side render saved, but four conservative bounding-box corners exceeded the camera frame at projected normalized vertical 1.116433. The overall three-view test did not pass.\n\nNext is a corrected side camera and fresh acceptance run. This reference render does not yet prove a finished Evelyn model, animation, clothing, integration with NewBrain or working anatomy in Patient Horizon.",
+      "boundary": "In-development reference asset, not an accepted unique animated Evelyn body. Published imagery is censored at the pixel level. No full capture pass, clothing, natural movement, organ behavior or life-loop transition is established.",
+      "image": {
+        "path": "assets/evelyn-body-three-views-censored-20261021.webp",
+        "label": "Actual censored front, side, back 3D reference images",
+        "alt": "Three vertically stacked full-body 3D reference renders of Evelyn with black privacy bars over sensitive regions",
+        "caption": "Censored front/side/back diagnostic reference captures. The overall capture test failed at side-frame containment. This image is not proof of a newly running character."
+      },
+      "sources": [
+        {
+          "label": "October 21 reviewed KiraWorld engineering record",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/commit/3c8e7b9c9e11df7bfda92811b96bcf67410c64c9"
+        },
+        {
+          "label": "Censored rendered evidence",
+          "url": "evidence.html#evelyn-body-evidence-2026-10-21"
+        },
+        {
+          "label": "Evelyn project status",
+          "url": "evelyn-hart.html#evelyn-body-reference-2026-10-21"
+        }
+      ],
+      "project_page": "evelyn-hart.html#evelyn-body-reference-2026-10-21"
+    },
+    {
+      "id": "evelyn-app-library-checks-2026-10-22",
+      "title": "Evelyn: eight software checks and 19 verified file moves",
+      "project": "Evelyn Hart",
+      "track": "Evelyn: eight software checks and 19 verified file moves",
+      "date": "2026-10-22",
+      "reviewed_on": "2026-10-22",
+      "status": "development",
+      "date_basis": "KiraWorld dated source describing scoped app tests, local assembly and SHA-256 validated library organization",
+      "summary": "Eight isolated app/library software checks passed; 19 previously unsorted PDFs were checked and organized; private app assembled from 21 staged files.",
+      "body": "Private application source assembled from 21 staged files. Local checks covered syntax, recording file, offline provider, reading and safe installation/removal mechanisms.\n\nNineteen unsorted PDF documents were organized without overwrites and verified using full destination SHA-256 checks. Originals and reversible journal were kept.\n\nActual generated dialogue, Evelyn's voice, natural movement, independent installer operation and learning from books remain unverified.",
+      "boundary": "Software and local file-integrity evidence only; not demonstrated voice, conversation, humanlike movement, reading acquisition, or release readiness.",
+      "image": {
+        "path": "assets/evelyn-head-front-capture-20261020.webp",
+        "label": "Prior original head render; new software tests not filmed",
+        "alt": "Earlier 3D engineering view of Evelyn's head",
+        "caption": "Earlier engineering head-render evidence, not a screenshot of the new software checks. This image is not proof of a newly running character."
+      },
+      "sources": [
+        {
+          "label": "KiraWorld dated report",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/commit/adb7d7416f0f020fd7ec8292c8fa4c6274cf7fe0"
+        },
+        {
+          "label": "Evelyn's latest public status",
+          "url": "evelyn-hart.html#evelyn-app-library-checks-2026-10-22"
+        },
+        {
+          "label": "Journal update",
+          "url": "updates.html#evelyn-app-library-checks-2026-10-22"
+        }
+      ],
+      "project_page": "evelyn-hart.html#evelyn-app-library-checks-2026-10-22"
+    },
+    {
+      "id": "evelyn-seven-conversation-checks-2026-10-22",
+      "title": "Seven new Evelyn conversation checks",
+      "project": "Evelyn Hart",
+      "track": "Seven new Evelyn conversation checks",
+      "date": "2026-10-22",
+      "reviewed_on": "2026-10-22",
+      "status": "development",
+      "date_basis": "October 22 synchronized internal software-development record, reporting synthetic test results and unresolved review findings",
+      "summary": "Seven additional simulated conversation software checks passed beyond eight earlier app/library checks; two source issues remain.",
+      "body": "Typed software lanes now distinguish spoken dialogue, private character thoughts and source-backed factual claims. Tests include visitor isolation and spoken-only display.\n\nSimulated response queue/correction/yield/cancel behavior, bounded context, source parsing and recording failure preservation were also checked.\n\nIndependent review identified two issues requiring accepted fixes. No real voice, conversation, body motion, visitor memory or public release has been demonstrated.",
+      "boundary": "Reported isolated software checks with synthetic inputs and fake providers, not end-to-end demonstrated conversation, privacy, humanlike expression or movement.",
+      "image": {
+        "path": "assets/evelyn-head-front-capture-20261020.webp",
+        "label": "Earlier original head render; new simulated conversation tests",
+        "alt": "Earlier engineering render of the Evelyn head",
+        "caption": "Earlier captured head render, not a new conversation screenshot. This image is not proof of a newly running character."
+      },
+      "sources": [
+        {
+          "label": "October 22 KiraWorld update",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/commit/f247d7a9f437a8eaf1635d967f7617b84b2a4d0b"
+        },
+        {
+          "label": "Public status page",
+          "url": "evelyn-hart.html#evelyn-seven-conversation-checks-2026-10-22"
+        }
+      ],
+      "project_page": "evelyn-hart.html#evelyn-seven-conversation-checks-2026-10-22"
+    },
+    {
+      "id": "newbrain-public-b-training-verified-2026-10-22",
+      "title": "NewBrain B diagnostic gains one complete answer",
+      "project": "NewBrain",
+      "track": "NewBrain B diagnostic gains one complete answer",
+      "date": "2026-10-22",
+      "reviewed_on": "2026-10-22",
+      "status": "development",
+      "date_basis": "NewBrain's October 22 independently reviewed internal saved-run result; new score applies only to the scoped B experiment",
+      "summary": "Public B trained diagnostic rose from 2/3 to 3/3 after 256 updates; unchanged control stayed 2/3. Original12 remains 2/12.",
+      "body": "Internal independent review checked the saved answers and controls from the completed public B diagnostic without repeating training. At 0, 64, 128, 192 and 256 updates, the trained correct counts were 2, 2, 2, 3 and 3.\n\nThree item exposures were 256, 512 and 0. The result is one limited experimental arm; a matching coverage arm was not accepted, so the intended A/B comparison is incomplete.\n\nNo fresh-process retention or unseen-question transfer was tested for this B run. No final learner state was promoted. The separate earlier 3/3 rehearsed restart result must not be conflated with the new gain; Qwen remains untested and Original12 stays 2/12.",
+      "boundary": "Narrow positive complete-answer training result from internal saved-evidence review, not a main-suite gain, generalized model, finished A/B comparison or independently reproduced external study.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "label": "Concept art, not actual learning assessment output",
+        "alt": "Illustrated neural network research concept",
+        "caption": "Conceptual visualization of neural research, not a screenshot of the scored B diagnostic. These are not actual test screenshots."
+      },
+      "sources": [
+        {
+          "label": "NewBrain latest research status",
+          "url": "https://github.com/rmcmurrer81/newbrain/blob/main/docs/research/2026-10-22-verified-progress-and-personalized-body-plan.md"
+        },
+        {
+          "label": "Kira Labs test details",
+          "url": "newbrain.html#newbrain-public-b-training-verified-2026-10-22"
+        },
+        {
+          "label": "Research evidence and limits",
+          "url": "evidence.html#newbrain-public-b-training-verified-2026-10-22"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-public-b-training-verified-2026-10-22"
+    },
+    {
+      "id": "newbrain-matched-replay-source-2026-10-22",
+      "title": "NewBrain replay comparison source prepared",
+      "project": "NewBrain",
+      "track": "NewBrain replay comparison source prepared",
+      "date": "2026-10-22",
+      "reviewed_on": "2026-10-22",
+      "status": "development",
+      "date_basis": "October 22 NewBrain internal development-status note; review defects block qualified run",
+      "summary": "A replay/no-replay training comparison with unfamiliar-question and restart tests has been implemented in local source; four integration/scoring defects still require repair.",
+      "body": "The next experiment is planned around a frozen lesson/evaluation split and matched training budgets with and without replay.\n\nIndependent source review found four integration/scoring defects before an admitted execution. No new learner score is available.\n\nThe earlier limited B 2/3 → 3/3 result remains separate; Original12 remains 2/12.",
+      "boundary": "Source-preparation report only. No qualified training run, improved Original12 accuracy, held-out transfer, or new restart result has been demonstrated.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "label": "Concept art; proposed experiment not yet executed",
+        "alt": "Neural research concept illustration",
+        "caption": "Concept illustration; not a screenshot of a replay comparison. These are not actual test screenshots."
+      },
+      "sources": [
+        {
+          "label": "NewBrain October 22 update",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/2a27e572dc7d5c8b956fde5ff3c73badf67cdfd6"
+        },
+        {
+          "label": "Preparation detail",
+          "url": "newbrain.html#newbrain-matched-replay-source-2026-10-22"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-matched-replay-source-2026-10-22"
+    },
     {
       "id": "newbrain-original12-saved-negative-transfer-2026-10-21",
       "title": "Independent Original12 audit finds failed transfer in saved trained candidate",
@@ -66,13 +228,13 @@ window.KIRA_LABS_TIMELINE = {
       "reviewed_on": "2026-10-21",
       "status": "future",
       "date_basis": "October 21 user-approved design direction; earlier saved front/side/back full-body viewer source review and existing KiraWorld R6 rig/skin engineering evidence. No live full-body render or camera-zoom test accepted.",
-      "summary": "The planned Evelyn experience opens with a complete rigged full-body character and smoothly moves the camera to her head when the life loop starts, without replacing her with a disconnected head object. Full-body rendering and camera movement have not yet been tested.",
-      "body": "Evelyn's intended experience is one continuous 3D individual: a complete visible body first, then a smooth camera move into facial framing at the start of her continuing life loop. The full body remains in the same scene. Earlier verified work includes a separate three-view 3D head-render capture and controlled eyelid movement; separate KiraWorld body research moved 512 sampled weighted skin vertices through five commanded poses with exact return. These components do not establish a completed Evelyn body. A staged body asset and rig and source-reviewed full-body front/side/back capture code are being prepared for later measured renders; those new captures have not run. Matching geometry, rig and head, clothing layers, fabric motion, book pickup, full-body proportions, zoom camera integration, custom voice and continued conversation remain unimplemented or unverified. Body/rigging assets may be reusable for Patient Horizon with independent medical limitations.",
+      "summary": "The planned Evelyn experience opens with a complete rigged full-body character and smoothly moves the camera to her head when the life loop starts, without replacing her with a disconnected head object. The full-body life-loop camera movement remains untested; later separate three-view body reference renders were saved, but the side-framing check failed.",
+      "body": "Evelyn's intended experience is one continuous 3D individual: a complete visible body first, then a smooth camera move into facial framing at the start of her continuing life loop. The full body remains in the same scene. Earlier verified work includes a separate three-view 3D head-render capture and controlled eyelid movement; separate KiraWorld body research moved 512 sampled weighted skin vertices through five commanded poses with exact return. These components do not establish a completed Evelyn body. A staged body asset and rig and source-reviewed full-body front/side/back capture code are being prepared for later measured renders; the later front, side and rear body reference captures were saved on October 21, but the side framing test failed; these do not establish an integrated animated character or camera transition. Matching geometry, rig and head, clothing layers, fabric motion, book pickup, full-body proportions, zoom camera integration, custom voice and continued conversation remain unimplemented or unverified. Body/rigging assets may be reusable for Patient Horizon with independent medical limitations.",
       "image": {
         "path": "assets/evelyn-head-front-capture-20261020.webp",
         "label": "Actual captured Evelyn head, not her planned full-body opening",
         "alt": "Actual earlier captured 3D Evelyn head with pastel cyan-lavender curled hair, not a full-body render",
-        "caption": "Verified head view only. A full-body scene and its life-loop zoom are planned; no actual full-body capture is claimed."
+        "caption": "Earlier real head capture. Separate full-body reference images were saved later, while the life-loop camera transition remains untested."
       },
       "sources": [
         {
@@ -86,6 +248,10 @@ window.KIRA_LABS_TIMELINE = {
         {
           "label": "Patient Horizon shared body/rigging foundation",
           "url": "patient-horizon.html#avatar-and-lungs-visual-gallery"
+        },
+        {
+          "label": "Later censored full-body reference and limits",
+          "url": "evelyn-hart.html#evelyn-body-reference-2026-10-21"
         }
       ],
       "project_page": "evelyn-hart.html#evelyn-full-body-life-loop-camera-2026-10-21"
@@ -518,21 +684,21 @@ window.KIRA_LABS_TIMELINE = {
     },
     {
       "id": "evelyn-head-render-graphics-and-evidence-2026-10-20",
-      "title": "Evelyn head rendering: graphics and file-accounting failures identified",
+      "title": "Historical failed head render — later head and blink tests passed",
       "project": "Evelyn Hart",
       "track": "Avatar renderer visual acceptance and saved-evidence review",
       "date": "2026-10-20",
       "reviewed_on": "2026-10-20",
       "status": "development",
       "date_basis": "October 20, 2026 NewBrain/KiraWorld/Patient-Horizon synchronized research-status documentation and saved browser evidence; one development track, not three independent successful experiments.",
-      "summary": "Evelyn's head preview is not yet visible. A corrected capture encountered shader errors for eye-moisture and eyebrow materials and then WebGL context loss; an independent Chrome-profile file-accounting race also stopped a supervisor.",
+      "summary": "This older October 20 render attempt did not produce a valid head; later separate tests captured her head and passed controlled blinking. A corrected capture encountered shader errors for eye-moisture and eyebrow materials and then WebGL context loss; an independent Chrome-profile file-accounting race also stopped a supervisor.",
       "body": "An earlier render-only run exited and cleaned up, but its front, three-quarter and side captures showed no head and were byte-identical despite camera changes, so visual acceptance failed. A distinct later capture then logged shader-validation errors for the eye-moisture and eyebrow materials and lost the WebGL context at the first front-view capture. Separately, an owned Chrome-profile temporary file disappeared between enumeration and inspection, stopping its file-accounting supervisor. The only saved follow-up images are blank baseline page/canvas captures. A saved-only review accepted the available evidence and closure records; all chosen run and review allowances closed, with some child I/O counters unknown.",
-      "boundary": "These are verified observations and diagnostic evidence, not a working avatar, a confirmed root cause of WebGL context loss, successful head screenshots, tested speech or lip motion, or a released Evelyn installer. The next work is a graphics-material compatibility correction and a safer transient-file accounting path, followed by a fresh separately recorded render test with visible front, three-quarter and side views. No successful new test is claimed.",
+      "boundary": "These are verified observations and diagnostic evidence, not a working avatar, a confirmed root cause of WebGL context loss, successful head screenshots, tested speech or lip motion, or a released Evelyn installer. The next work is a graphics-material compatibility correction and a safer transient-file accounting path, followed by a fresh separately recorded render test with visible front, three-quarter and side views. This archived run failed, but later tests produced visible head images and a passed blink study. Still later, separate full-body reference renders were saved with a failed side-framing check.",
       "image": {
         "path": "assets/evelyn-earlier-render-failure-placeholder-20261020.svg",
         "label": "Historical failed head-render test — no accepted image",
         "alt": "Archive graphic indicating an older Evelyn render test did not produce a valid head image",
-        "caption": "Historical unsuccessful graphics test, kept as evidence. This is a diagnostic placeholder, not Evelyn's appearance. Later tests produced a head and verified eyelid movement."
+        "caption": "Historical unsuccessful October 20 graphics test, not Evelyn's appearance. Later tests successfully captured her head and measured blinking; the actual body reference followed."
       },
       "sources": [
         {
@@ -542,6 +708,18 @@ window.KIRA_LABS_TIMELINE = {
         {
           "label": "Dated NewBrain audit and observed failures",
           "url": "https://github.com/rmcmurrer81/newbrain/commit/417aba66018214bc35c8205efecc62d1d41b0f89"
+        },
+        {
+          "label": "Later successful head captures",
+          "url": "evidence.html#evelyn-captures"
+        },
+        {
+          "label": "Later verified blink",
+          "url": "reports/71-evelyn-verified-blink-reopening.html"
+        },
+        {
+          "label": "Subsequent body reference",
+          "url": "evelyn-hart.html#evelyn-body-reference-2026-10-21"
         }
       ],
       "project_page": "evelyn-hart.html"

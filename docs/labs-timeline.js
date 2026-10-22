@@ -108,7 +108,7 @@
     root.querySelectorAll('[data-count]').forEach(n=>n.textContent=String(candidates.filter(m=>n.dataset.count==='all'||groups[m.status]===n.dataset.count).length));
     visible=candidates.filter(m=>filter==='all'||groups[m.status]===filter);
     visible.sort((a,b)=>{if(Boolean(a.date)!==Boolean(b.date))return a.date?-1:1;if(a.date&&b.date)return $('timeline-sort').value==='newest'?b.date.localeCompare(a.date):a.date.localeCompare(b.date);return (a.status==='future'?1:0)-(b.status==='future'?1:0);});
-    if(!visible.some(m=>m.id===selected))selected=visible[0]?.id||'';
+    if(!visible.some(m=>m.id===selected)){const actual=visible.filter(m=>m.date&&m.status!=='future');selected=(actual.length?($('timeline-sort').value==='newest'?actual[0]:actual[actual.length-1]):visible[0])?.id||'';}
     root.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===filter)));
     root.querySelectorAll('[data-project]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.project===project)));
     draw();if(selected)select(selected,announce);else if(announce)writeURL();
