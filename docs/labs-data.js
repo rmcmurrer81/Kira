@@ -25,6 +25,72 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-original12-saved-negative-transfer-2026-10-21",
+      "title": "Independent Original12 audit finds failed transfer in saved trained candidate",
+      "project": "NewBrain",
+      "track": "Accepted negative scientific result · experiment 1078 and read-only audit 1109",
+      "date": "2026-10-21",
+      "reviewed_on": "2026-10-21",
+      "status": "development",
+      "date_basis": "October 21 independently accepted saved experiment 1078 read-only audit 1109; primary NewBrain project research status and preserved result report. The 2/12 reference benchmark and 3/3 rehearsed study are separate experiments.",
+      "summary": "A preserved 256-update trained candidate lost both initially correct Original12 answers and finished 0/12, while the untreated control stayed 2/12. Teacher-forced objective fell sharply, but the results did not transfer to different assessment prompts.",
+      "body": "Experiment 1078 used 256 updates and 768 example presentations. Strict complete-response assessment went 2/12 before training to 0/12 after training; two initially correct outputs were lost and no new correct assessment answers appeared. A no-training control held 2/12 with identical full outputs. Teacher-objective loss fell from 4.068566 to 0.055734 but cannot receive accuracy credit. Independent read-only audit 1109 checked saved evidence without model/training/inference or provider calls, and preserved no-reload/no-promotion status. Exact source bytes for one historical reminder-configuration file are unavailable, so this is a scoped accepted scientific audit, not complete original-byte provenance. The distinct success at 3/3 after fresh-process restart used the same explicitly rehearsed training questions and is not an Original12 gain or held-out transfer. The accepted main Original12 reference remains 2/12 and Qwen comparison is untested. Next question: train on public synthetic material, then test new question wording under frozen controls without tuning on protected assessment items.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "label": "Illustrative neural research background — negative audit in text",
+        "alt": "Glowing fictional neural brain visualization; this is not a screenshot of the Original12 trained candidate",
+        "caption": "Visual concept only. Audited measurements and limits appear in the linked research record."
+      },
+      "sources": [
+        {
+          "label": "NewBrain research page: saved negative Original12 transfer audit",
+          "url": "newbrain.html#newbrain-original12-negative-transfer-2026-10-21"
+        },
+        {
+          "label": "Research evidence: controlled loss, accuracy and provenance",
+          "url": "evidence.html#newbrain-negative-transfer-audit-2026-10-21"
+        },
+        {
+          "label": "Primary date-stamped GitHub audit summary",
+          "url": "https://github.com/rmcmurrer81/newbrain/blob/main/docs/research/2026-10-20-current-status-and-patient-horizon-plan.md"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-original12-negative-transfer-2026-10-21"
+    },
+    {
+      "id": "evelyn-full-body-life-loop-camera-plan-2026-10-21",
+      "title": "Evelyn's future viewer will open on her full body, then zoom to her face as her life loop begins",
+      "project": "Evelyn Hart",
+      "track": "New full-body avatar and life-loop camera design · preparation, not runtime pass",
+      "date": "2026-10-21",
+      "reviewed_on": "2026-10-21",
+      "status": "future",
+      "date_basis": "October 21 user-approved design direction; earlier saved front/side/back full-body viewer source review and existing KiraWorld R6 rig/skin engineering evidence. No live full-body render or camera-zoom test accepted.",
+      "summary": "The planned Evelyn experience opens with a complete rigged full-body character and smoothly moves the camera to her head when the life loop starts, without replacing her with a disconnected head object. Full-body rendering and camera movement have not yet been tested.",
+      "body": "Evelyn's intended experience is one continuous 3D individual: a complete visible body first, then a smooth camera move into facial framing at the start of her continuing life loop. The full body remains in the same scene. Earlier verified work includes a separate three-view 3D head-render capture and controlled eyelid movement; separate KiraWorld body research moved 512 sampled weighted skin vertices through five commanded poses with exact return. These components do not establish a completed Evelyn body. A staged body asset and rig and source-reviewed full-body front/side/back capture code are being prepared for later measured renders; those new captures have not run. Matching geometry, rig and head, clothing layers, fabric motion, book pickup, full-body proportions, zoom camera integration, custom voice and continued conversation remain unimplemented or unverified. Body/rigging assets may be reusable for Patient Horizon with independent medical limitations.",
+      "image": {
+        "path": "assets/evelyn-head-front-capture-20261020.webp",
+        "label": "Actual captured Evelyn head, not her planned full-body opening",
+        "alt": "Actual earlier captured 3D Evelyn head with pastel cyan-lavender curled hair, not a full-body render",
+        "caption": "Verified head view only. A full-body scene and its life-loop zoom are planned; no actual full-body capture is claimed."
+      },
+      "sources": [
+        {
+          "label": "Evelyn: full-body opening and life-loop camera design",
+          "url": "evelyn-hart.html#evelyn-full-body-life-loop-camera-2026-10-21"
+        },
+        {
+          "label": "Actual controlled blink report and limits",
+          "url": "reports/71-evelyn-verified-blink-reopening.html"
+        },
+        {
+          "label": "Patient Horizon shared body/rigging foundation",
+          "url": "patient-horizon.html#avatar-and-lungs-visual-gallery"
+        }
+      ],
+      "project_page": "evelyn-hart.html#evelyn-full-body-life-loop-camera-2026-10-21"
+    },
+    {
       "id": "newbrain-windows-26-compatibility-passed-2026-10-21",
       "title": "NewBrain's corrected Windows launch passes all 26 compatibility checks",
       "project": "NewBrain",
