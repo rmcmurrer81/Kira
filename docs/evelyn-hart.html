@@ -74,6 +74,23 @@
 </div>
 </div>
 </section>
+
+<section class="eh-section section rule" id="evelyn-visitor-continuity-design-2026-10-21" aria-labelledby="evelyn-visitor-memory-title">
+<div class="wrap">
+<div class="eh-sectionhead">
+<p class="eyebrow">Visitor memory and privacy · Planned behavior · October 21, 2026 · Not yet tested</p>
+<h2 id="evelyn-visitor-memory-title">One Evelyn. Different visitors. Separate memories.</h2>
+<p class="eh-intro">Evelyn is designed to remain active between conversations without assuming the next person who speaks is the previous visitor. This <strong>John → Cindy → John</strong> example illustrates the desired experience; it is a <strong>future test scenario, not a working demonstration</strong>.</p>
+</div>
+<div class="eh-columns">
+<article class="eh-column"><span class="eh-number">01 / JOHN</span><h3>John talks, then leaves</h3><p>John has a conversation with Evelyn and leaves her life loop running. If he consents to saved memory, his conversation history should be associated with his own profile rather than a global visitor identity.</p></article>
+<article class="eh-column"><span class="eh-number">02 / CINDY</span><h3>Cindy says hello later</h3><p>Hours later, Cindy arrives. Evelyn should not assume John is still speaking. She should ask who has joined, offer Cindy a new or appropriately verified profile, and avoid sharing John's private conversation history.</p></article>
+<article class="eh-column"><span class="eh-number">03 / JOHN RETURNS</span><h3>John returns another time</h3><p>After John has safely confirmed access to his profile, Evelyn should be able to continue their earlier conversation. If she cannot establish which visitor said something, she should ask rather than attribute the memory to the wrong person.</p></article>
+</div>
+<p class="eh-limits"><strong>Privacy requirement:</strong> Someone saying a name—or sounding like a known speaker—is not secure proof of identity. Private stored information should require permission and an appropriate authenticated profile; otherwise the interaction should be treated as new or anonymous. No automatic voice or face identification is claimed here.</p>
+<p class="eh-limits"><strong>Required future verification:</strong> test John → Cindy → John while Evelyn remains active, then repeat after a complete application restart. Check that remembered details stay with the correct profile and no private details leak across visitors. <strong>This end-to-end test has not passed yet.</strong> <a href="updates.html#evelyn-visitor-continuity-design-2026-10-21">Read the design update →</a></p>
+</div>
+</section>
 <section class="eh-section section rule" aria-labelledby="evelyn-library">
 <div class="wrap eh-two">
 <div>
