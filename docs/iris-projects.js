@@ -5,7 +5,7 @@
 (function(root){
   'use strict';
   const IDS=["newbrain","ideaforge","humanoid-researcher","world","bluebook","avatar-body","aster","patient-horizon","physiology-bridge","healthspan","temporary-creator","evelyn"];
-  const SOURCE={"newbrain":"newbrain.html#newbrain-public-b-training-verified-2026-10-22","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"kira-world.html#temporary-ai-creator","bluebook":"knowledge.html#bluebook","avatar-body":"kira-world.html#avatar-builder-first-body-reference-2026-10-21","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"kira-world.html#temporary-ai-creator","evelyn":"evelyn-hart.html#evelyn-library30-assembled-2026-10-22"};
+  const SOURCE={"newbrain":"newbrain.html#newbrain-control-2026-10-23","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"kira-world.html#temporary-ai-creator","bluebook":"knowledge.html#bluebook","avatar-body":"kira-world.html#avatar-builder-first-body-reference-2026-10-21","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"kira-world.html#temporary-ai-creator","evelyn":"evelyn-hart.html#evelyn-source-review-2026-10-23"};
   // Older, explicitly dated notes are retained for regression and archive checks.
   const LEGACY_SOURCE={"newbrain":"newbrain.html#newbrain-original12-negative-transfer-2026-10-21","world":"research-status-2026-10-18.html#people","avatar-body":"research-status-2026-10-18.html#body","temporary-creator":"research-status-2026-10-18.html#people","evelyn":"evelyn-hart.html#evelyn-full-body-life-loop-camera-2026-10-21"};
   const FACETS=['overview','status','how','technical','evidence','privacy','limits','cost'];
@@ -26,7 +26,7 @@
       assert(IDS.includes(p.id)&&!seen.has(p.id),'invalid project');seen.add(p.id);
       assert(typeof p.title==='string'&&p.title.length<100,'invalid title');
       assert(Array.isArray(p.aliases)&&p.aliases.length&&p.aliases.every(a=>typeof a==='string'&&(a.length>=5||['Lisa','Maya'].includes(a))&&a.length<80),'invalid aliases');
-      assert(p.source===SOURCE[p.id]||(data.reviewed_on<'2026-10-22'&&p.source===LEGACY_SOURCE[p.id])||(p.id==='evelyn'&&data.content_version==='2026-10-22.1'&&p.source==='evelyn-hart.html#evelyn-library22-assembled-2026-10-22'),'invalid visitor source');
+      assert(p.source===SOURCE[p.id]||(data.reviewed_on<'2026-10-22'&&p.source===LEGACY_SOURCE[p.id])||(p.id==='evelyn'&&data.content_version==='2026-10-22.1'&&p.source==='evelyn-hart.html#evelyn-library22-assembled-2026-10-22')||(data.content_version.startsWith('2026-10-22.')&&((p.id==='newbrain'&&p.source==='newbrain.html#newbrain-public-b-training-verified-2026-10-22')||(p.id==='evelyn'&&p.source==='evelyn-hart.html#evelyn-library30-assembled-2026-10-22'))),'invalid visitor source');
       for(const key of FACETS)assert(typeof p[key]==='string'&&p[key].trim()&&p[key].length<3000,'missing '+key);
     }
     return data;
