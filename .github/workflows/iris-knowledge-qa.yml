@@ -1,0 +1,27 @@
+name: Iris public knowledge QA
+on:
+  push:
+    paths:
+      - "docs/iris.html"
+      - "docs/iris.js"
+      - "docs/iris-projects.js"
+      - "docs/knowledge/iris-projects-*.json"
+      - "docs/evelyn-hart.html"
+      - "tests/test-iris-oct22-knowledge.cjs"
+      - ".github/workflows/iris-knowledge-qa.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout site
+        uses: actions/checkout@v4
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify October 22 Iris notes and routes
+        run: node tests/test-iris-oct22-knowledge.cjs
