@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "evelyn-release-documents-2026-10-23",
+      "title": "Evelyn release requirements and troubleshooting drafts prepared",
+      "date": "2026-10-23",
+      "date_basis": "Dated KiraWorld independent and primary source/engineering review describing six visually checked PDF pages and matching university-folder deliverables",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "Two-page release requirements plus four-page installation and troubleshooting guide verified as preparation; installer and public support package untested.",
+      "body": [
+        "A two-page release-requirements sheet and four-page installation/troubleshooting guide were prepared. Their six PDF pages were visually inspected and the matching prepared TXT, PDF and HTML deliverables were checked in the university folder.",
+        "Instructions cover authentic official downloads, tested Windows requirements, the local Documents/Kira Labs/Library collection, document imports, voice/sound, body movement, protecting personal data, backup/uninstall and reaching official support. The guide must still be matched to a tested release and included offline when Evelyn becomes downloadable.",
+        "Independent static review also passed new rest-relative blended-pose and breathing-timing movement source, plus process-handle retention in the voice execution bridge. Neither establishes recorded motion, an approved original voice, clean installation, or a verified Patient Horizon copy."
+      ],
+      "boundary": "Verified documentation and code/source review only; not a public troubleshooting download, security protection already implemented, executable installer, actual speech, natural movement, clinical validation or user-tested app.",
+      "image": {
+        "path": "assets/evelyn-hart-desktop-icon-20261021.svg",
+        "alt": "Concept Evelyn desktop icon; no installer or guide screenshot is implied",
+        "caption": "Visual identity graphic accompanies completed pre-release documentation preparation, not a working installer."
+      },
+      "sources": [
+        {
+          "label": "October 23 Evelyn release-document review",
+          "url": "evelyn-hart.html#evelyn-release-documents-2026-10-23"
+        },
+        {
+          "label": "Development journal and limitations",
+          "url": "updates.html#evelyn-release-documents-2026-10-23"
+        }
+      ],
+      "evidence_kind": "independent-document-review-six-pages-and-static-source-only"
+    },
+    {
       "id": "evelyn-public-release-safeguards-2026-10-23",
       "title": "Evelyn public release: individuality and data-protection design",
       "date": "2026-10-23",
@@ -14,7 +45,7 @@
       "body": [
         "The release design separates a verifiable initial software/identity configuration from a companion's growing memories, interests and revisable beliefs. Signed packages and integrity checks are goals, not currently validated safeguards.",
         "Memory provenance should retain sources, dates and correction history with local backups. Books should not override system instructions or silently convert fictional stories into facts. Downloaded companions should not inherit the developer's private memories and conversations.",
-        "Companions are intended to be able to decline or end an interaction without covert monitoring. Owners control export, deletion, backups and uninstall. A readable troubleshooting guide is planned alongside the eventual installer; no installer or guide is yet released."
+        "Companions are intended to be able to decline or end an interaction without covert monitoring. Owners control export, deletion, backups and uninstall. A four-page draft troubleshooting guide and a separate two-page release-requirements sheet have now been prepared; public support publication and the installer remain pending testing."
       ],
       "boundary": "Design requirements only. No approved signed package, implemented core tamper-proofing, independent-companion release, original voice, verified memory/autonomy tests, or public download; local computer owners can still modify offline programs.",
       "image": {
@@ -74,9 +105,9 @@
       "track": "Evelyn Hart",
       "summary": "Reviewed rig-parity, library-import and unique voice test-admission source; no new rendered body, sound, conversation or public installer.",
       "body": [
-        "Avatar Builder source now maps 25 checked joint chains across 163 rig bones and 139 skin-weight groups. A six-input export parity checker was reviewed; body execution gates remain off.",
+        "Avatar Builder source now maps 25 checked joint chains across 163 rig bones and 139 skin-weight groups. A six-input export parity checker was reviewed; body execution gates remain off. A later static review added rest-relative offsets to blended movement routes and preserved breathing timing. No new movement recording was obtained.",
         "The staged app has reviewed Add Document fixes for selected library destinations and delayed titles/dates. Its 30 publications and two original primers remain unread by Evelyn and unqualified for public redistribution.",
-        "A reviewed original-voice adapter maintains Evelyn's distinct adult female design, 55-word sample and speaker-playback recording requirements. No generated audio, approved voice, natural movement or live conversation was recorded."
+        "A reviewed original-voice adapter maintains Evelyn's distinct adult female design, 55-word sample and speaker-playback recording requirements. No generated audio, approved voice, natural movement or live conversation was recorded. A separate reviewed correction retains the original process handles during potentially failing voice setup; actual voice generation, speaker audibility and cleanup remain unqualified."
       ],
       "boundary": "Source review only. No natural rig motion, anatomical organ model, cloth realism, verified Patient Horizon copy, in-app reading, third-party clean install or recorded voice.",
       "image": {
