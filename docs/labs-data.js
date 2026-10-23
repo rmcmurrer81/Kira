@@ -25,6 +25,40 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "evelyn-library22-assembled-2026-10-22",
+      "title": "Evelyn library: 22 complete publications staged",
+      "project": "Evelyn Hart",
+      "track": "Library assembly and document verification",
+      "date": "2026-10-22",
+      "reviewed_on": "2026-10-22",
+      "status": "development",
+      "date_basis": "Owner-provided October 22 ordinary-file library assembly review; verified local checks, not completed release",
+      "summary": "11 technical PDFs and 11 varied texts assembled as ordinary files, all with full destination hash checks; no actual Evelyn reading or installation.",
+      "body": "The local review describes 22 complete publications with 88,949,725 original bytes. All destinations passed SHA-256 readback. Licenses, catalog and provenance are retained in ordinary files.\n\nThe added technical books have noncommercial restrictions, while Gutenberg texts retain U.S. rights and trademark/license conditions. The 41 private technical items and popular AI film/TV topics are not part of this set.\n\nEvery catalog entry is NOT_READ_BY_EVELYN. The complete installer, page extraction, voice/conversation and actual reading remain unverified.",
+      "boundary": "Verified local file assembly, not proof of rights-cleared public distribution, clean installation, authentic book reading, voice, neural learning or a completed public-release app.",
+      "image": {
+        "path": "assets/evelyn-hart-desktop-icon-20261021.svg",
+        "alt": "Evelyn Hart prepared book-and-circuit desktop icon, not a photograph of her actually reading",
+        "caption": "Earlier original icon for Evelyn. The package was checked as files; no reading or installation footage is claimed.",
+        "label": "Evelyn identity illustration, not evidence of reading"
+      },
+      "sources": [
+        {
+          "label": "Complete staged library titles and limits",
+          "url": "evelyn-hart.html#evelyn-library22-assembled-2026-10-22"
+        },
+        {
+          "label": "Dated engineering update",
+          "url": "updates.html#evelyn-library22-assembled-2026-10-22"
+        },
+        {
+          "label": "Separate proposed film and television knowledge",
+          "url": "evelyn-hart.html#evelyn-ai-film-television-research-2026-10-22"
+        }
+      ],
+      "project_page": "evelyn-hart.html#evelyn-library22-assembled-2026-10-22"
+    },
+    {
       "id": "evelyn-body-reference-2026-10-21",
       "title": "Evelyn's full-body reference renders",
       "project": "Evelyn Hart",
@@ -101,8 +135,8 @@ window.KIRA_LABS_TIMELINE = {
       "reviewed_on": "2026-10-22",
       "status": "development",
       "date_basis": "October 22 synchronized internal software-development record, reporting synthetic test results and unresolved review findings",
-      "summary": "Seven additional simulated conversation software checks passed beyond eight earlier app/library checks; two source issues remain.",
-      "body": "Typed software lanes now distinguish spoken dialogue, private character thoughts and source-backed factual claims. Tests include visitor isolation and spoken-only display.\n\nSimulated response queue/correction/yield/cancel behavior, bounded context, source parsing and recording failure preservation were also checked.\n\nIndependent review identified two issues requiring accepted fixes. No real voice, conversation, body motion, visitor memory or public release has been demonstrated.",
+      "summary": "Seven synthetic conversation checks passed; two source corrections subsequently passed static review, but no live voice test.",
+      "body": "Typed software lanes now distinguish spoken dialogue, private character thoughts and source-backed factual claims. Tests include visitor isolation and spoken-only display.\n\nSimulated response queue/correction/yield/cancel behavior, bounded context, source parsing and recording failure preservation were also checked.\n\nIndependent review identified two issues requiring accepted fixes. No real voice, conversation, body motion, visitor memory or public release has been demonstrated.\n\nLater October 22: the two source fixes passed static review without a real speaker or model test.",
       "boundary": "Reported isolated software checks with synthetic inputs and fake providers, not end-to-end demonstrated conversation, privacy, humanlike expression or movement.",
       "image": {
         "path": "assets/evelyn-head-front-capture-20261020.webp",
@@ -165,8 +199,8 @@ window.KIRA_LABS_TIMELINE = {
       "reviewed_on": "2026-10-22",
       "status": "development",
       "date_basis": "October 22 NewBrain internal development-status note; review defects block qualified run",
-      "summary": "A replay/no-replay training comparison with unfamiliar-question and restart tests has been implemented in local source; four integration/scoring defects still require repair.",
-      "body": "The next experiment is planned around a frozen lesson/evaluation split and matched training budgets with and without replay.\n\nIndependent source review found four integration/scoring defects before an admitted execution. No new learner score is available.\n\nThe earlier limited B 2/3 → 3/3 result remains separate; Original12 remains 2/12.",
+      "summary": "NewBrain replay experiment source fixes cleared independent review; first unchanged-control run remains pending.",
+      "body": "The next experiment is planned around a frozen lesson/evaluation split and matched training budgets with and without replay.\n\nIndependent source review found four integration/scoring defects before an admitted execution. No new learner score is available.\n\nThe earlier limited B 2/3 → 3/3 result remains separate; Original12 remains 2/12.\n\nLater source review cleared all four integration/scoring corrections and a final caller/evidence-file fix. No run yet.",
       "boundary": "Source-preparation report only. No qualified training run, improved Original12 accuracy, held-out transfer, or new restart result has been demonstrated.",
       "image": {
         "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",

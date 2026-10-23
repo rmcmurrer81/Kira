@@ -4,17 +4,53 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "evelyn-library22-assembled-2026-10-22",
+      "title": "Evelyn library: 22 complete publications staged",
+      "date": "2026-10-22",
+      "date_basis": "Owner-provided October 22 ordinary-file library assembly review; verified local checks, not completed release",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "11 technical PDFs and 11 varied texts assembled as ordinary files, all with full destination hash checks; no actual Evelyn reading or installation.",
+      "body": [
+        "The local review describes 22 complete publications with 88,949,725 original bytes. All destinations passed SHA-256 readback. Licenses, catalog and provenance are retained in ordinary files.",
+        "The added technical books have noncommercial restrictions, while Gutenberg texts retain U.S. rights and trademark/license conditions. The 41 private technical items and popular AI film/TV topics are not part of this set.",
+        "Every catalog entry is NOT_READ_BY_EVELYN. The complete installer, page extraction, voice/conversation and actual reading remain unverified."
+      ],
+      "boundary": "Verified local file assembly, not proof of rights-cleared public distribution, clean installation, authentic book reading, voice, neural learning or a completed public-release app.",
+      "image": {
+        "path": "assets/evelyn-hart-desktop-icon-20261021.svg",
+        "alt": "Evelyn Hart prepared book-and-circuit desktop icon, not a photograph of her actually reading",
+        "caption": "Earlier original icon for Evelyn. The package was checked as files; no reading or installation footage is claimed."
+      },
+      "sources": [
+        {
+          "label": "Complete staged library titles and limits",
+          "url": "evelyn-hart.html#evelyn-library22-assembled-2026-10-22"
+        },
+        {
+          "label": "Dated engineering update",
+          "url": "updates.html#evelyn-library22-assembled-2026-10-22"
+        },
+        {
+          "label": "Separate proposed film and television knowledge",
+          "url": "evelyn-hart.html#evelyn-ai-film-television-research-2026-10-22"
+        }
+      ],
+      "evidence_kind": "local-library-file-assembly-unread-uninstalled"
+    },
+    {
       "id": "evelyn-seven-conversation-checks-2026-10-22",
       "title": "Seven new Evelyn conversation checks",
       "date": "2026-10-22",
       "date_basis": "October 22 synchronized internal software-development record, reporting synthetic test results and unresolved review findings",
       "status": "working",
       "track": "Evelyn Hart",
-      "summary": "Seven additional simulated conversation software checks passed beyond eight earlier app/library checks; two source issues remain.",
+      "summary": "Seven synthetic conversation tests passed; later source corrections passed review, while real voice and conversation remain untested.",
       "body": [
         "Typed software lanes now distinguish spoken dialogue, private character thoughts and source-backed factual claims. Tests include visitor isolation and spoken-only display.",
         "Simulated response queue/correction/yield/cancel behavior, bounded context, source parsing and recording failure preservation were also checked.",
-        "Independent review identified two issues requiring accepted fixes. No real voice, conversation, body motion, visitor memory or public release has been demonstrated."
+        "Independent review identified two issues requiring accepted fixes. No real voice, conversation, body motion, visitor memory or public release has been demonstrated.",
+        "Follow-up October 22: the two source corrections passed static review. No generated speech or actual app test passed."
       ],
       "boundary": "Reported isolated software checks with synthetic inputs and fake providers, not end-to-end demonstrated conversation, privacy, humanlike expression or movement.",
       "image": {
@@ -41,11 +77,12 @@
       "date_basis": "October 22 NewBrain internal development-status note; review defects block qualified run",
       "status": "working",
       "track": "Minds and learning",
-      "summary": "A replay/no-replay training comparison with unfamiliar-question and restart tests has been implemented in local source; four integration/scoring defects still require repair.",
+      "summary": "The replay comparison remains unrun; the four source corrections and final caller fix passed independent static review.",
       "body": [
         "The next experiment is planned around a frozen lesson/evaluation split and matched training budgets with and without replay.",
         "Independent source review found four integration/scoring defects before an admitted execution. No new learner score is available.",
-        "The earlier limited B 2/3 → 3/3 result remains separate; Original12 remains 2/12."
+        "The earlier limited B 2/3 → 3/3 result remains separate; Original12 remains 2/12.",
+        "Follow-up October 22: the corrections passed independent static review. The unchanged no-teaching control was funded but had not run."
       ],
       "boundary": "Source-preparation report only. No qualified training run, improved Original12 accuracy, held-out transfer, or new restart result has been demonstrated.",
       "image": {
