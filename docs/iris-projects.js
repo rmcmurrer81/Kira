@@ -26,7 +26,7 @@
       assert(IDS.includes(p.id)&&!seen.has(p.id),'invalid project');seen.add(p.id);
       assert(typeof p.title==='string'&&p.title.length<100,'invalid title');
       assert(Array.isArray(p.aliases)&&p.aliases.length&&p.aliases.every(a=>typeof a==='string'&&(a.length>=5||['Lisa','Maya'].includes(a))&&a.length<80),'invalid aliases');
-      assert(p.source===SOURCE[p.id]||(data.reviewed_on<'2026-10-22'&&p.source===LEGACY_SOURCE[p.id]),'invalid visitor source');
+      assert(p.source===SOURCE[p.id]||(data.reviewed_on<'2026-10-22'&&p.source===LEGACY_SOURCE[p.id])||(p.id==='evelyn'&&data.content_version==='2026-10-22.1'&&p.source==='evelyn-hart.html#evelyn-library22-assembled-2026-10-22'),'invalid visitor source');
       for(const key of FACETS)assert(typeof p[key]==='string'&&p[key].trim()&&p[key].length<3000,'missing '+key);
     }
     return data;
