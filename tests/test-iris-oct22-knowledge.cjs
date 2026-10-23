@@ -29,7 +29,7 @@ assert.ok(books.answer.includes('not read or released'));
 const nb=ask('What are the latest NewBrain test results?');
 assert.equal(nb.id,'newbrain');assert.ok(nb.answer.includes('2/12'));assert.ok(nb.answer.includes('2/3'));assert.ok(nb.answer.includes('3/3'));assert.ok(nb.answer.includes('NOT run'));
 const creators=ask('How does the Temporary AI Creator work?');
-assert.equal(creators.id,'temporary-creator');assert.match(creators.answer,/Avatar Builder/);assert.match(creators.answer,/voice generator/);
+assert.equal(creators.id,'temporary-creator');assert.match(creators.answer,/Avatar Builder/);assert.match(creators.answer,/current generator/);
 const movies=ask('What movies and TV shows might Evelyn Hart discuss?');
 assert.equal(movies.id,'evelyn');assert.equal(movies.facet,'how');assert.match(movies.answer,/Star Trek/);assert.match(movies.answer,/not yet assembled/);
 const body=ask('What is the latest Avatar Builder status?');assert.equal(body.id,'avatar-body');assert.match(body.answer,/side framing test failed/);
