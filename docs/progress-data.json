@@ -4,6 +4,99 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-synthetic-control-2026-10-23",
+      "title": "NewBrain's isolated normal control passes independent review",
+      "date": "2026-10-23",
+      "date_basis": "October 23 independently and primarily reviewed public zero-model normal synthetic execution; Kira Labs source record 13eb4e7",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Single normal synthetic execution passed with exact 84,826-byte output and reviewed cleanup; not a new model-learning result.",
+      "body": [
+        "A bounded ordinary invocation exited zero and saved 60,000 ASCII characters plus 4,096 Greek-letter/emoji pairs in an 84,826-byte result. Independent and primary reviews authenticated 371 Native events, 183 byte cells, and 21 closed handle generations.",
+        "The success is limited to the normal synthetic execution and its observed cleanup. Other fault cases, physical OS I/O, the full outer orchestration, numerical runtime and private scoring remain unqualified.",
+        "Main Original12 still 2/12. Earlier failed trained 0/12 and the separately completed unscored 20-response control are preserved. Next tests must be new and separately approved."
+      ],
+      "boundary": "Verified normal synthetic harness execution only; not model learning, new answer accuracy, general reliability, voice, body motion or a fair model comparison.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "alt": "Conceptual neural illustration, not a screenshot of actual control execution",
+        "caption": "Concept art; this milestone is authenticated output and process-evidence review."
+      },
+      "sources": [
+        {
+          "label": "Details and scientific limits",
+          "url": "newbrain.html#newbrain-synthetic-control-2026-10-23"
+        },
+        {
+          "label": "Dated evidence journal",
+          "url": "updates.html#newbrain-synthetic-control-2026-10-23"
+        }
+      ],
+      "evidence_kind": "scoped-normal-synthetic-control-independent-review"
+    },
+    {
+      "id": "newbrain-numerical-diagnostic-2026-10-23",
+      "title": "NewBrain numerical learning-signal diagnostic prepared",
+      "date": "2026-10-23",
+      "date_basis": "October 23 frozen public numerical diagnostic and independent static source audits; arXiv technical methods reviewed separately",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "105 public numerical cases and nine invalid-input probes prepared to test floating-point gradients; the diagnostic is unrun.",
+      "body": [
+        "Source-reviewed diagnostic compares ordinary binary64 with high-precision Decimal references under confidence differences 0, 10, 20, 40 and 80, masking and shifted output/logit cases. The independent report auditor also passed source review.",
+        "The proposed tests are not evidence that NewBrain has numerical gradient collapse. No new model run, improved complete answers, or changed frozen scientific learner is claimed.",
+        "Six new primary papers were reviewed for future numerical training, simple retrieval baselines, continual writes, long-term skills, episodic memory and vision grounding. Their external results have not been replicated for NewBrain."
+      ],
+      "boundary": "Source-only preparation. No completed numerical measurement, diagnosed bug, learning improvement, or fair reference-model comparison.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "alt": "Concept art for NewBrain numerical research, not a numerical test image",
+        "caption": "Research is preregistered; no new diagnostic results are claimed."
+      },
+      "sources": [
+        {
+          "label": "Numerical test plan and six primary research papers",
+          "url": "research.html#newbrain-numerical-and-memory-research-2026-10-23"
+        },
+        {
+          "label": "Dated research journal",
+          "url": "updates.html#newbrain-numerical-diagnostic-2026-10-23"
+        }
+      ],
+      "evidence_kind": "preregistered-static-numerical-diagnostic-unrun"
+    },
+    {
+      "id": "evelyn-capture-and-voice-review-2026-10-23",
+      "title": "Evelyn's recording and original-voice source reaches review",
+      "date": "2026-10-23",
+      "date_basis": "October 23 independent and primary source reviews of recording, evidence-path agreement and voice lifecycle",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "Before-action capture and original-voice startup source reviewed; evidence path mismatch blocks execution, so no new video or audio.",
+      "body": [
+        "Source review checked recording before viewer movement, retention of failed and partial media, stream callbacks and an acknowledged original recording chunk. A silent status-window AVI is distinct from the requested full body-canvas recording.",
+        "The body executor returns absolute receipt paths while the accounting adapter requires relative paths. The mismatch was found before execution and prevents qualification of this integration version.",
+        "Original-voice app and observer bootstrap code received narrow favorable reviews, but the long-lived owner, runtime resources, actual audio generation, playback and capture have not passed. No new body/motion/cloth recording or Patient Horizon copy was produced."
+      ],
+      "boundary": "No real video, new images, approved original speech, completed body export/parity or independent body/voice runtime qualification. Static source checks must not be reported as a working character.",
+      "image": {
+        "path": "assets/evelyn-head-front-capture-20261020.webp",
+        "alt": "Earlier Evelyn head capture, not an October 23 body or voice demonstration",
+        "caption": "Existing head image only; the new capture system has not recorded motion."
+      },
+      "sources": [
+        {
+          "label": "Evelyn recording and voice development review",
+          "url": "evelyn-hart.html#evelyn-capture-and-voice-review-2026-10-23"
+        },
+        {
+          "label": "Dated engineering journal",
+          "url": "updates.html#evelyn-capture-and-voice-review-2026-10-23"
+        }
+      ],
+      "evidence_kind": "independent-source-review-capture-blocked"
+    },
+    {
       "id": "evelyn-release-documents-2026-10-23",
       "title": "Evelyn release requirements and troubleshooting drafts prepared",
       "date": "2026-10-23",
