@@ -169,3 +169,72 @@
 #technologies .purpose-grid .tech-card.rit .tech-art .node.n1 {top:9%;right:24%}
 #technologies .purpose-grid .tech-card.rit .tech-art .node.n2 {left:11%;top:76%}
 #technologies .purpose-grid .tech-card.rit .tech-art .node.n3 {right:12%;bottom:10%}
+
+
+/* 2026-10-23 — Mobile technology-card layout correction.
+   Give ROSA, HCI, DI and RIT equal-height cards; keep long Explore labels
+   and arrows INSIDE their pill borders without losing any words. */
+@media (max-width: 940px) {
+  #technologies .purpose-grid {
+    grid-auto-rows: 1fr;
+    align-items: stretch;
+  }
+  #technologies .purpose-grid .tech-card {
+    box-sizing: border-box;
+    height: auto;
+    min-height: 236px;
+    align-self: stretch;
+  }
+  #technologies .purpose-grid .tech-copy {
+    min-width: 0;
+    flex: 1 1 0%;
+  }
+  #technologies .purpose-grid .tech-card .view-button,
+  #technologies .purpose-grid .tech-card.di .view-button {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    line-height: 1.25;
+    gap: 9px;
+  }
+  #technologies .purpose-grid .tech-card .view-button span {
+    flex: 0 0 auto;
+  }
+}
+@media (max-width: 580px) {
+  #technologies .purpose-grid .tech-card {
+    min-height: 274px;
+    padding: 20px 17px;
+    gap: 10px;
+  }
+  #technologies .purpose-grid .tech-art {
+    width: 26%;
+    min-width: 78px;
+  }
+  #technologies .purpose-grid .tech-card .view-button,
+  #technologies .purpose-grid .tech-card.di .view-button {
+    width: 100%;
+    min-height: 44px;
+    padding: 9px 12px;
+    font-size: clamp(12px,3vw,14px);
+    border-width: 1.5px;
+  }
+}
+@media (max-width: 400px) {
+  #technologies .purpose-grid .tech-card {
+    padding: 20px 14px;
+    gap: 8px;
+  }
+  #technologies .purpose-grid .tech-art {
+    min-width: 72px;
+  }
+  #technologies .purpose-grid .tech-card .view-button,
+  #technologies .purpose-grid .tech-card.di .view-button {
+    font-size: 12px;
+    padding: 9px 10px;
+  }
+}
