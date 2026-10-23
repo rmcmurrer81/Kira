@@ -4,6 +4,68 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-numerical-run-2026-10-23",
+      "title": "NewBrain isolated numerical diagnostic executed; arithmetic still under review",
+      "date": "2026-10-23",
+      "date_basis": "October 23 retained 312,524-byte report, review of process/custody/cleanup, separate arithmetic verifier pending",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "105 public synthetic numerical cases plus nine invalid checks ran once; normal process/custody reviewed, independent arithmetic verification pending.",
+      "body": [
+        "The one-shot numerical experiment saved a complete 312,524-byte original report and ended with code zero. Its producer reported 105 synthetic cases and nine invalid-input checks without model generations, parameter updates or protected benchmark questions.",
+        "Independent and primary review accepted normal process identity, original return preservation and cleanup. The separately owned arithmetic verifier has not run; the outer CPU-affinity installation/readback record remains an evidence gap. Physical OS IO is unknown.",
+        "Original12 remains 2/12 and the prior trained 0/12 failure is preserved. No validated gradient defect, general numerical correctness, new learning, new voice or movement evidence follows from this control."
+      ],
+      "boundary": "Execution/custody verification is not independently audited arithmetic correctness, model training, improved complete-answer accuracy or a fair Qwen comparison.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "alt": "Research illustration rather than a screenshot of the numerical control",
+        "caption": "The numerical diagnostic produced retained data, not an improved learning score."
+      },
+      "sources": [
+        {
+          "label": "NewBrain numerical execution, verification still pending",
+          "url": "newbrain.html#newbrain-numerical-diagnostic-run-2026-10-23"
+        },
+        {
+          "label": "Dated report and limits",
+          "url": "updates.html#newbrain-numerical-run-2026-10-23"
+        }
+      ],
+      "evidence_kind": "isolated-synthetic-execution-independent-process-review-arithmetic-pending"
+    },
+    {
+      "id": "evelyn-selective-censorship-source-2026-10-23",
+      "title": "Evelyn selective privacy-cover source advanced",
+      "date": "2026-10-23",
+      "date_basis": "October 23 reviewed body/camera-following censorship source and metadata/stream-finalization correction status",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "Prepared moving-body selective covers and separate private/public media candidates; no completed privacy-reviewed body recording.",
+      "body": [
+        "Source work uses the rendered body and camera to place opaque coverage over selected regions, rather than hiding the entire frame. Private originals remain distinct from public censored picture/video/thumbnail review candidates.",
+        "Two picture-metadata integration defects have source corrections. A further private stream-finalization defect has an immutable correction still under exact review; preserving the private original remains mandatory if a public derivative fails.",
+        "No new independently accepted anatomy, natural movement, full-frame redaction video, approved audio or Patient Horizon body transfer was produced. All-frame privacy coverage and encoded-frame custody remain tests to run."
+      ],
+      "boundary": "Source-only preparation and open cleanup defects. No private uncensored material is uploaded, and no real anatomy/body performance is established by a black-bar coverage algorithm.",
+      "image": {
+        "path": "assets/evelyn-head-front-capture-20261020.webp",
+        "alt": "Existing earlier Evelyn head image, not an October 23 body censoring demonstration",
+        "caption": "The earlier head image remains distinct from planned protected adult-body media."
+      },
+      "sources": [
+        {
+          "label": "Evelyn private/public media and body capture updates",
+          "url": "evelyn-hart.html#evelyn-selective-censorship-source-2026-10-23"
+        },
+        {
+          "label": "October 23 source review",
+          "url": "updates.html#evelyn-selective-redaction-review-2026-10-23"
+        }
+      ],
+      "evidence_kind": "source-reviewed-moving-redaction-unverified-private-stream-cleanup"
+    },
+    {
       "id": "newbrain-synthetic-control-2026-10-23",
       "title": "NewBrain's isolated normal control passes independent review",
       "date": "2026-10-23",
@@ -41,13 +103,13 @@
       "date_basis": "October 23 frozen public numerical diagnostic and independent static source audits; arXiv technical methods reviewed separately",
       "status": "working",
       "track": "Minds and learning",
-      "summary": "105 public numerical cases and nine invalid-input probes prepared to test floating-point gradients; the diagnostic is unrun.",
+      "summary": "105 public numerical cases and nine invalid-input probes were prepared, then executed later the same day; arithmetic report verification remains pending.",
       "body": [
         "Source-reviewed diagnostic compares ordinary binary64 with high-precision Decimal references under confidence differences 0, 10, 20, 40 and 80, masking and shifted output/logit cases. The independent report auditor also passed source review.",
-        "The proposed tests are not evidence that NewBrain has numerical gradient collapse. No new model run, improved complete answers, or changed frozen scientific learner is claimed.",
+        "The initial source review did not establish numerical gradient collapse. A separate one-shot execution later completed without training or scoring the frozen learner; independent arithmetic verification is still required before any numerical claim.",
         "Six new primary papers were reviewed for future numerical training, simple retrieval baselines, continual writes, long-term skills, episodic memory and vision grounding. Their external results have not been replicated for NewBrain."
       ],
-      "boundary": "Source-only preparation. No completed numerical measurement, diagnosed bug, learning improvement, or fair reference-model comparison.",
+      "boundary": "Earlier source-only preparation stage; a subsequent one-shot execution is recorded separately. No independently verified arithmetic finding, diagnosed gradient fault, learning improvement or fair model comparison.",
       "image": {
         "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
         "alt": "Concept art for NewBrain numerical research, not a numerical test image",
@@ -63,7 +125,7 @@
           "url": "updates.html#newbrain-numerical-diagnostic-2026-10-23"
         }
       ],
-      "evidence_kind": "preregistered-static-numerical-diagnostic-unrun"
+      "evidence_kind": "preregistered-static-numerical-diagnostic-later-executed"
     },
     {
       "id": "evelyn-capture-and-voice-review-2026-10-23",
