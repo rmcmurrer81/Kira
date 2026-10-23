@@ -1,0 +1,103 @@
+/* Iris chat-bubble enhancement. Keeps core question answering and source integrity intact. */
+.kb-iris-page .iris-chat-transcript{
+  background:radial-gradient(circle at 85% 5%,rgba(29,93,144,.23),transparent 49%),#091321;
+  border:1px solid rgba(131,199,231,.24);border-radius:22px;min-height:330px;
+  height:clamp(370px,50vw,600px);overflow-y:auto;overscroll-behavior:contain;
+  scrollbar-color:#456783 #0b1a2a;scrollbar-width:thin;margin:18px 0 14px;
+  padding:23px 19px;scroll-behavior:smooth;
+}
+.kb-iris-page .iris-chat-transcript[hidden]{display:none!important}
+.kb-iris-page .iris-chat-messages{display:flex;flex-direction:column;gap:18px;min-height:100%;justify-content:flex-start}
+.kb-iris-page .iris-chat-row{display:flex;align-items:flex-end;gap:9px;max-width:100%;min-width:0}
+.kb-iris-page .iris-chat-row.from-visitor{justify-content:flex-end}
+.kb-iris-page .iris-chat-avatar{
+  display:grid;place-items:center;flex:none;width:33px;height:33px;border-radius:50%;
+  background:linear-gradient(135deg,#11425d,#172841);border:1px solid #72e4f270;color:#a3f7ff;
+  font:italic 22px Georgia,serif;box-shadow:0 3px 12px #0004;
+}
+.kb-iris-page .iris-chat-bubble{
+  position:relative;max-width:min(84%,590px);min-width:0;overflow-wrap:anywhere;
+  padding:12px 15px 13px;background:#25364c;color:#f0f6ff;
+  border:1px solid #758eae43;border-radius:19px 19px 19px 5px;
+  box-shadow:0 5px 18px #0002;font-size:14px;line-height:1.57;
+}
+.kb-iris-page .iris-chat-bubble p{margin:5px 0 0;white-space:pre-wrap;color:inherit;line-height:1.58;font-size:inherit}
+.kb-iris-page .iris-chat-row.from-visitor .iris-chat-bubble{
+  color:#fff;background:linear-gradient(145deg,#1689ef,#126cc7);border-color:#53b3ff8c;
+  border-radius:19px 19px 5px 19px;max-width:min(82%,570px);
+}
+.kb-iris-page .iris-chat-bubble::after{
+  content:'';position:absolute;bottom:-1px;left:-5px;width:11px;height:12px;
+  background:#25364c;clip-path:polygon(100% 0,100% 100%,0 100%);
+}
+.kb-iris-page .from-visitor .iris-chat-bubble::after{
+  left:auto;right:-5px;background:#126cc7;transform:scaleX(-1);
+}
+.kb-iris-page .iris-chat-sender{display:block;font-size:10px;font-weight:750;letter-spacing:.055em;color:#b6dff3;text-transform:uppercase}
+.kb-iris-page .from-visitor .iris-chat-sender{color:#dcefff}
+.kb-iris-page .iris-chat-answer-title{display:block;color:#fff;font-size:14px;line-height:1.3;margin:7px 0 5px}
+.kb-iris-page .iris-chat-bubble-sources{
+  display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:12px;
+  padding-top:10px;border-top:1px solid #ffffff25;font-size:11px;
+}
+.kb-iris-page .iris-chat-bubble-sources>span{font-weight:700;color:#b6dff3;margin-right:3px}
+.kb-iris-page .iris-chat-bubble-sources a{
+  color:#c7f8ff;border:1px solid #a1d9ec52;border-radius:999px;
+  padding:4px 9px;text-decoration:none;line-height:1.4;
+}
+.kb-iris-page .iris-chat-bubble-sources a:hover{background:#a1d9ec22;border-color:#a1d9ec}
+.kb-iris-page .iris-chat-enhanced #asked-question,
+.kb-iris-page .iris-chat-enhanced .sarah-answer,
+.kb-iris-page .iris-chat-enhanced .answer-pager,
+.kb-iris-page .iris-chat-enhanced #answer-sources{display:none!important}
+.kb-iris-page .iris-chat-enhanced .guide-head{display:flex;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid #ffffff24}
+.kb-iris-page .iris-chat-enhanced .iris-mark{border-radius:50%;width:51px;height:51px;display:grid;place-items:center}
+.kb-iris-page .iris-chat-enhanced .guide-head h2{font-size:23px;margin:0}
+.kb-iris-page .iris-chat-enhanced .guide-actions{display:flex;gap:8px;flex-wrap:wrap}
+.kb-iris-page .iris-chat-enhanced .guide-actions button{border-radius:999px}
+.kb-iris-page .iris-chat-enhanced .guide-shortcuts{
+  display:flex;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;gap:8px;
+  padding:4px 0 10px;scrollbar-width:thin;scrollbar-color:#466482 transparent;
+}
+.kb-iris-page .iris-chat-enhanced .guide-shortcuts button{
+  white-space:nowrap;flex-shrink:0;border-radius:999px;border:1px solid #7eddea4d;
+  background:#1c3445;color:#d9f7ff;padding:8px 13px;
+}
+.kb-iris-page .iris-chat-enhanced .guide-shortcuts button:hover{background:#26536c}
+.kb-iris-page .iris-chat-enhanced #sarah-form{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:10px;row-gap:8px;
+  align-items:end;margin-top:0;padding:10px;background:#101e30;
+  border:1px solid #6a9bb04d;border-radius:20px;
+}
+.kb-iris-page .iris-chat-enhanced #sarah-form label{
+  grid-column:1/-1;margin-left:8px;font-size:11px;color:#bfd5e5;font-weight:650;
+}
+.kb-iris-page .iris-chat-enhanced #sarah-form textarea{
+  grid-column:1;min-width:0;width:100%;resize:vertical;min-height:46px;max-height:180px;
+  border-radius:14px;background:#091625;border:1px solid #7795ae5d;
+  padding:12px 14px;color:#fff;font:inherit;font-size:14px;line-height:1.55;
+}
+.kb-iris-page .iris-chat-enhanced #sarah-form textarea::placeholder{color:#a8c2d3}
+.kb-iris-page .iris-chat-enhanced #sarah-form button{
+  grid-column:2;min-height:47px;align-self:end;white-space:nowrap;padding:10px 17px;
+  border-radius:14px;background:#1d91e8;color:#fff;border:1px solid #55bfff;
+  font-weight:700;font-size:13px;
+}
+.kb-iris-page .iris-chat-enhanced #sarah-form button:hover:not(:disabled){background:#2aa5fc}
+.kb-iris-page .iris-chat-enhanced #sarah-form button:disabled{opacity:.58;cursor:not-allowed}
+.kb-iris-page .iris-chat-enhanced #sarah-form :focus-visible,
+.kb-iris-page .iris-chat-enhanced .guide-shortcuts button:focus-visible,
+.kb-iris-page .iris-chat-bubble-sources a:focus-visible{outline:3px solid #91efff;outline-offset:2px}
+.kb-iris-page .iris-chat-enhanced .suggestions button{border-radius:999px}
+.kb-iris-page .iris-chat-enhanced .guide-meta{margin-top:12px}
+@media(max-width:620px){
+  .kb-iris-page .iris-chat-transcript{height:440px;min-height:310px;border-radius:18px;padding:17px 12px}
+  .kb-iris-page .iris-chat-bubble{max-width:90%;font-size:13px;padding:11px 13px}
+  .kb-iris-page .iris-chat-row.from-visitor .iris-chat-bubble{max-width:89%}
+  .kb-iris-page .iris-chat-avatar{width:28px;height:28px;font-size:19px}
+  .kb-iris-page .iris-chat-enhanced .guide-head{flex-wrap:wrap}
+  .kb-iris-page .iris-chat-enhanced .guide-actions{margin-left:auto}
+  .kb-iris-page .iris-chat-enhanced #sarah-form{padding:8px;gap:7px}
+  .kb-iris-page .iris-chat-enhanced #sarah-form button{padding:10px 12px;font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.kb-iris-page .iris-chat-transcript{scroll-behavior:auto}}
