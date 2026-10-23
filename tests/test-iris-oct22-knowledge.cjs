@@ -25,7 +25,7 @@ const ask=(q)=>{const response=iris.answer(knowledge,q,'',[],null);assert.ok(res
 const books=ask("What books are in Evelyn Hart's starter library?");
 assert.equal(books.id,'evelyn');assert.equal(books.facet,'evidence');
 for(const title of ['Dive into Deep Learning','Think Python','Think Bayes','The Time Machine','Frankenstein','Etiquette'])assert.ok(books.answer.includes(title),title+' missing');
-assert.ok(books.answer.includes('NOT_READ_BY_EVELYN'));
+assert.ok(books.answer.includes('not read or released'));
 const nb=ask('What are the latest NewBrain test results?');
 assert.equal(nb.id,'newbrain');assert.ok(nb.answer.includes('2/12'));assert.ok(nb.answer.includes('2/3'));assert.ok(nb.answer.includes('3/3'));assert.ok(nb.answer.includes('NOT run'));
 const creators=ask('How does the Temporary AI Creator work?');
