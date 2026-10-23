@@ -5,7 +5,9 @@
 (function(root){
   'use strict';
   const IDS=["newbrain","ideaforge","humanoid-researcher","world","bluebook","avatar-body","aster","patient-horizon","physiology-bridge","healthspan","temporary-creator","evelyn"];
-  const SOURCE={"newbrain":"newbrain.html#newbrain-original12-negative-transfer-2026-10-21","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"research-status-2026-10-18.html#people","bluebook":"knowledge.html#bluebook","avatar-body":"research-status-2026-10-18.html#body","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"research-status-2026-10-18.html#people","evelyn":"evelyn-hart.html#evelyn-full-body-life-loop-camera-2026-10-21"};
+  const SOURCE={"newbrain":"newbrain.html#newbrain-public-b-training-verified-2026-10-22","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"kira-world.html#temporary-ai-creator","bluebook":"knowledge.html#bluebook","avatar-body":"kira-world.html#avatar-builder-first-body-reference-2026-10-21","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"kira-world.html#temporary-ai-creator","evelyn":"evelyn-hart.html#evelyn-library22-assembled-2026-10-22"};
+  // Older, explicitly dated notes are retained for regression and archive checks.
+  const LEGACY_SOURCE={"newbrain":"newbrain.html#newbrain-original12-negative-transfer-2026-10-21","world":"research-status-2026-10-18.html#people","avatar-body":"research-status-2026-10-18.html#body","temporary-creator":"research-status-2026-10-18.html#people","evelyn":"evelyn-hart.html#evelyn-full-body-life-loop-camera-2026-10-21"};
   const FACETS=['overview','status','how','technical','evidence','privacy','limits','cost'];
   const normalize=s=>String(s||'').toLowerCase().normalize('NFKC').replace(/[’']/g,'').replace(/[_-]/g,' ').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
   // Remove only conversational framing, never a factual clause or instruction.
@@ -24,7 +26,7 @@
       assert(IDS.includes(p.id)&&!seen.has(p.id),'invalid project');seen.add(p.id);
       assert(typeof p.title==='string'&&p.title.length<100,'invalid title');
       assert(Array.isArray(p.aliases)&&p.aliases.length&&p.aliases.every(a=>typeof a==='string'&&(a.length>=5||['Lisa','Maya'].includes(a))&&a.length<80),'invalid aliases');
-      assert(p.source===SOURCE[p.id],'invalid visitor source');
+      assert(p.source===SOURCE[p.id]||(data.reviewed_on<'2026-10-22'&&p.source===LEGACY_SOURCE[p.id]),'invalid visitor source');
       for(const key of FACETS)assert(typeof p[key]==='string'&&p[key].trim()&&p[key].length<3000,'missing '+key);
     }
     return data;
@@ -155,6 +157,10 @@
     // Answer concrete questions from the appropriate reviewed evidence facet,
     // rather than rejecting a well-defined subject because of conversational wording.
     if(p.id==='newbrain'&&/\b(?:gradient|gradients|checker|arithmetic|30 30|numerical audit)\b/.test(q))selected='technical';
+    // The library and film/TV questions refer to curated Evelyn project notes,
+    // not Robert's book catalogue or the unrelated entertainment-credit topics.
+    if(p.id==='evelyn'&&/\b(?:books?|catalogue?|library|titles|reading list)\b/.test(q)&&/\b(?:what|which|list|show|starter|included|titles|catalog|catalogue)\b/.test(q)&&!/\b(?:cost|price|pricing|rights|license|licence|privacy)\b/.test(q))selected='evidence';
+    if(p.id==='evelyn'&&/\b(?:films?|movies?|television|tv|star trek|blade runner|terminator|fiction)\b/.test(q)&&/\b(?:what|which|list|show|watch|discuss|know|learn|reference|interests)\b/.test(q))selected='how';
     if(p.id==='temporary-creator'&&/\b(?:holmes|historical transcript)\b/.test(q)&&/\b(?:say|said|speak|spoke|talk|talked|conversation|interview|test|tested)\b/.test(q))selected='evidence';
     // Historical Kira/Lisa lineage is reviewed Kira World context. The early
     // unnamed Friend was a rule-driven dual-chat prototype, not modern Lisa.
