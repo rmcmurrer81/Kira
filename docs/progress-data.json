@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "evelyn-public-release-safeguards-2026-10-23",
+      "title": "Evelyn public release: individuality and data-protection design",
+      "date": "2026-10-23",
+      "date_basis": "User-provided October 23 release-requirement discussion; planned design, not verified security or application behavior",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "Proposed authenticated installer and updates, developing beliefs with traceable memories, independent personal histories and owner-controlled data.",
+      "body": [
+        "The release design separates a verifiable initial software/identity configuration from a companion's growing memories, interests and revisable beliefs. Signed packages and integrity checks are goals, not currently validated safeguards.",
+        "Memory provenance should retain sources, dates and correction history with local backups. Books should not override system instructions or silently convert fictional stories into facts. Downloaded companions should not inherit the developer's private memories and conversations.",
+        "Companions are intended to be able to decline or end an interaction without covert monitoring. Owners control export, deletion, backups and uninstall. A readable troubleshooting guide is planned alongside the eventual installer; no installer or guide is yet released."
+      ],
+      "boundary": "Design requirements only. No approved signed package, implemented core tamper-proofing, independent-companion release, original voice, verified memory/autonomy tests, or public download; local computer owners can still modify offline programs.",
+      "image": {
+        "path": "assets/evelyn-hart-desktop-icon-20261021.svg",
+        "alt": "Evelyn Hart concept icon, not evidence of release security",
+        "caption": "The icon is existing branding; protection and autonomy are future acceptance targets."
+      },
+      "sources": [
+        {
+          "label": "Release requirements and limitations",
+          "url": "evelyn-hart.html#evelyn-public-release-safeguards-2026-10-23"
+        },
+        {
+          "label": "Dated design and support journal",
+          "url": "updates.html#evelyn-release-principles-2026-10-23"
+        }
+      ],
+      "evidence_kind": "release-plan-not-implemented"
+    },
+    {
       "id": "newbrain-control-2026-10-23",
       "title": "NewBrain no-teach control: 20 saved responses",
       "date": "2026-10-23",
