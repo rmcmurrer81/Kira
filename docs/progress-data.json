@@ -1,8 +1,101 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-22",
+  "reviewed_on": "2026-10-23",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-control-2026-10-23",
+      "title": "NewBrain no-teach control: 20 saved responses",
+      "date": "2026-10-23",
+      "date_basis": "October 23 owner-provided night control review, independent saved-report verification and dated repository readback",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "20 generations, zero training and zero scoring calls were verified as retained control execution; target-answer scoring remains unrun.",
+      "body": [
+        "A repaired Windows handoff allowed a fresh no-teaching control to complete 10 generations before and 10 after, with zero model training updates. Saved worker/cleanup evidence and the full report were independently reviewed.",
+        "This control is not a new learner or benchmark gain. Original12 stays 2/12, a failed trained 0/12 remains archived, and the separate three-item training success remains a different experiment.",
+        "A new process-owner and experiment-runner implementation passed source review, not a live resource qualification. Score the original retained control only through fresh approved proof/readers, then separately test paired learning, held-out transfer, restart and retention."
+      ],
+      "boundary": "Completed, retained no-teach execution only. Unscored accuracy, no new model-learning claim or matched Qwen comparison. The consumed control must not be repeated; OS-level IO/CPU and one transport-accounting allowance remain unqualified.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "alt": "Conceptual neural-cognition artwork, not a live NewBrain control screenshot",
+        "caption": "The observed result is saved execution evidence, not this concept image."
+      },
+      "sources": [
+        {
+          "label": "October 23 NewBrain control status",
+          "url": "newbrain.html#newbrain-control-2026-10-23"
+        },
+        {
+          "label": "Dated development journal",
+          "url": "updates.html#newbrain-control-2026-10-23"
+        }
+      ],
+      "evidence_kind": "independently-reviewed-no-teach-control-execution-unscored"
+    },
+    {
+      "id": "evelyn-source-review-2026-10-23",
+      "title": "Evelyn: body and own-voice source checks reviewed",
+      "date": "2026-10-23",
+      "date_basis": "October 23 reviewed engineering source progress; selected 28-file app mapping, six-input export parity and additive library fixes",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "Reviewed rig-parity, library-import and unique voice test-admission source; no new rendered body, sound, conversation or public installer.",
+      "body": [
+        "Avatar Builder source now maps 25 checked joint chains across 163 rig bones and 139 skin-weight groups. A six-input export parity checker was reviewed; body execution gates remain off.",
+        "The staged app has reviewed Add Document fixes for selected library destinations and delayed titles/dates. Its 30 publications and two original primers remain unread by Evelyn and unqualified for public redistribution.",
+        "A reviewed original-voice adapter maintains Evelyn's distinct adult female design, 55-word sample and speaker-playback recording requirements. No generated audio, approved voice, natural movement or live conversation was recorded."
+      ],
+      "boundary": "Source review only. No natural rig motion, anatomical organ model, cloth realism, verified Patient Horizon copy, in-app reading, third-party clean install or recorded voice.",
+      "image": {
+        "path": "assets/evelyn-head-front-capture-20261020.webp",
+        "alt": "Earlier visible Evelyn head test, not an October 23 original-voice or full-body result",
+        "caption": "Existing head evidence from an earlier test; no new Oct 23 body or voice footage."
+      },
+      "sources": [
+        {
+          "label": "Evelyn Oct 23 source milestones and limits",
+          "url": "evelyn-hart.html#evelyn-source-review-2026-10-23"
+        },
+        {
+          "label": "October 23 development journal",
+          "url": "updates.html#evelyn-source-review-2026-10-23"
+        }
+      ],
+      "evidence_kind": "reviewed-source-body-import-voice-runtime-pending"
+    },
+    {
+      "id": "evelyn-library30-assembled-2026-10-22",
+      "title": "Evelyn's library expands to 30 assembled publications",
+      "date": "2026-10-22",
+      "date_basis": "Later October 22 locally verified 30-publication assembly, updating the preserved earlier 22-book stage",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "Thirteen technical/computing history and 17 varied publications staged and hash-checked, with two separate primers; no reading or installer test.",
+      "body": [
+        "The ordinary-file reading selection grew from 22 to 30 works: 11 PDFs, 19 TXT files, 94,137,315 publication bytes, and a separate set of two original technology/fiction reference primers.",
+        "Titles, manifests and permission constraints are preserved. The newer source-stage reports 66 ordinary files including publication, catalog and reference records; no files are claimed as read by Evelyn.",
+        "This is a library packaging and review milestone, not proof of natural language reading, personal experience, learning, or public redistribution rights. The earlier 22-publication milestone remains visible."
+      ],
+      "boundary": "Staged collection only. Runtime installation, actual reading, license/redistribution clearance and personal knowledge acquisition not established.",
+      "image": {
+        "path": "assets/evelyn-hart-desktop-icon-20261021.svg",
+        "alt": "Existing Evelyn desktop icon, not proof she has read 30 books",
+        "caption": "Concept identity artwork; local files were assembled, not read by Evelyn."
+      },
+      "sources": [
+        {
+          "label": "Evelyn 30-publication archive",
+          "url": "evelyn-hart.html#evelyn-library30-assembled-2026-10-22"
+        },
+        {
+          "label": "October 23 follow-up and app source status",
+          "url": "evelyn-hart.html#evelyn-source-review-2026-10-23"
+        }
+      ],
+      "evidence_kind": "bounded-verified-library30-assembly-not-read"
+    },
     {
       "id": "evelyn-library22-assembled-2026-10-22",
       "title": "Evelyn library: 22 complete publications staged",
