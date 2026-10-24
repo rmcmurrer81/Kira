@@ -162,6 +162,16 @@
     if(p.id==='evelyn'&&/\b(?:books?|catalogue?|library|titles|reading list)\b/.test(q)&&/\b(?:what|which|list|show|starter|included|titles|catalog|catalogue)\b/.test(q)&&!/\b(?:cost|price|pricing|rights|license|licence|privacy)\b/.test(q))selected='evidence';
     if(p.id==='evelyn'&&/\b(?:films?|movies?|television|tv|star trek|blade runner|terminator|fiction)\b/.test(q)&&/\b(?:what|which|list|show|watch|discuss|know|learn|reference|interests)\b/.test(q))selected='how';
     if(p.id==='temporary-creator'&&/\b(?:holmes|historical transcript)\b/.test(q)&&/\b(?:say|said|speak|spoke|talk|talked|conversation|interview|test|tested)\b/.test(q))selected='evidence';
+    // Person Creator name-decision questions are explicitly supported by the
+    // dated public notes, even if phrased as "why was it renamed?" rather than
+    // a simple introductory question. Keep unrelated factual questions gated.
+    if(p.id==='temporary-creator'&&/\b(?:renam\w*|name change|former(?:ly)?|previous(?:ly)?|old name|why.*named)\b/.test(q)
+      &&/\b(?:person creator|temporary creator|temporary ai creator)\b/.test(q)){
+      const named=reply(p,'overview',data);
+      named.title='Person Creator · October 24 name decision';
+      named.retrieval.intent='naming';
+      return named;
+    }
     // Historical Kira/Lisa lineage is reviewed Kira World context. The early
     // unnamed Friend was a rule-driven dual-chat prototype, not modern Lisa.
     if(p.id==='world'&&/\b(?:lisa|unnamed friend|kira and friend|friend prototype)\b/.test(q)&&/\b(?:who|what|where|origin|history|come from|came from|before|started|begin|began|prototype|tell me about)\b/.test(q)){
