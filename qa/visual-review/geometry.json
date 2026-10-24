@@ -62,7 +62,9 @@
         }
       ],
       "heroImgNaturalWidth": null,
-      "heroImgNaturalHeight": null
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/index-desktop.jpg"
@@ -105,10 +107,85 @@
       "viewportWidth": 1440,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
-      "heroImgNaturalHeight": 796
+      "heroImgNaturalHeight": 796,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/kira-world-desktop.jpg"
+  },
+  {
+    "page": "kira-world-avatar-builder.html",
+    "device": "desktop",
+    "geometry": {
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": {
+        "naturalWidth": 1152,
+        "naturalHeight": 1536,
+        "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "fit": "contain",
+        "position": "50% 50%"
+      },
+      "kiraPortraitRoutes": []
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-avatar-builder-desktop.jpg"
+  },
+  {
+    "page": "kira-world-home.html",
+    "device": "desktop",
+    "geometry": {
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": {
+        "naturalWidth": 980,
+        "naturalHeight": 392,
+        "src": "assets/kira-card-home-apartments.webp",
+        "fit": "contain",
+        "position": "50% 50%"
+      },
+      "kiraPortraitRoutes": [
+        {
+          "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+          "fit": "contain"
+        }
+      ]
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-home-desktop.jpg"
+  },
+  {
+    "page": "kira-world-notebook.html",
+    "device": "desktop",
+    "geometry": {
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": {
+        "naturalWidth": 1920,
+        "naturalHeight": 796,
+        "src": "assets/kira-hero-landscape.webp",
+        "fit": "cover",
+        "position": "82% 50%"
+      },
+      "kiraPortraitRoutes": [
+        {
+          "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+          "fit": "contain"
+        }
+      ]
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-notebook-desktop.jpg"
   },
   {
     "page": "about.html",
@@ -160,7 +237,9 @@
       "viewportWidth": 1440,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
-      "heroImgNaturalHeight": 760
+      "heroImgNaturalHeight": 760,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/about-desktop.jpg"
@@ -203,7 +282,9 @@
       "viewportWidth": 1440,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 2172,
-      "heroImgNaturalHeight": 724
+      "heroImgNaturalHeight": 724,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/contact-desktop.jpg"
@@ -246,7 +327,9 @@
       "viewportWidth": 1440,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941
+      "heroImgNaturalHeight": 941,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/companion-robotics-desktop.jpg"
@@ -295,7 +378,9 @@
       "viewportWidth": 1440,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941
+      "heroImgNaturalHeight": 941,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/newbrain-desktop.jpg"
@@ -308,7 +393,9 @@
       "viewportWidth": 1440,
       "researchPillCircles": [],
       "heroImgNaturalWidth": null,
-      "heroImgNaturalHeight": null
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/evelyn-release-desktop.jpg"
@@ -321,7 +408,9 @@
       "viewportWidth": 1440,
       "researchPillCircles": [],
       "heroImgNaturalWidth": null,
-      "heroImgNaturalHeight": null
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/evelyn-help-preview-desktop.jpg"
@@ -389,7 +478,9 @@
         }
       ],
       "heroImgNaturalWidth": null,
-      "heroImgNaturalHeight": null
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/index-wide.jpg"
@@ -432,10 +523,85 @@
       "viewportWidth": 1980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
-      "heroImgNaturalHeight": 796
+      "heroImgNaturalHeight": 796,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/kira-world-wide.jpg"
+  },
+  {
+    "page": "kira-world-avatar-builder.html",
+    "device": "wide",
+    "geometry": {
+      "scrollWidth": 1980,
+      "viewportWidth": 1980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": {
+        "naturalWidth": 1152,
+        "naturalHeight": 1536,
+        "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "fit": "contain",
+        "position": "50% 50%"
+      },
+      "kiraPortraitRoutes": []
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-avatar-builder-wide.jpg"
+  },
+  {
+    "page": "kira-world-home.html",
+    "device": "wide",
+    "geometry": {
+      "scrollWidth": 1980,
+      "viewportWidth": 1980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": {
+        "naturalWidth": 980,
+        "naturalHeight": 392,
+        "src": "assets/kira-card-home-apartments.webp",
+        "fit": "contain",
+        "position": "50% 50%"
+      },
+      "kiraPortraitRoutes": [
+        {
+          "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+          "fit": "contain"
+        }
+      ]
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-home-wide.jpg"
+  },
+  {
+    "page": "kira-world-notebook.html",
+    "device": "wide",
+    "geometry": {
+      "scrollWidth": 1980,
+      "viewportWidth": 1980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": {
+        "naturalWidth": 1920,
+        "naturalHeight": 796,
+        "src": "assets/kira-hero-landscape.webp",
+        "fit": "cover",
+        "position": "82% 50%"
+      },
+      "kiraPortraitRoutes": [
+        {
+          "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+          "fit": "contain"
+        }
+      ]
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-notebook-wide.jpg"
   },
   {
     "page": "about.html",
@@ -487,7 +653,9 @@
       "viewportWidth": 1980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
-      "heroImgNaturalHeight": 760
+      "heroImgNaturalHeight": 760,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/about-wide.jpg"
@@ -530,7 +698,9 @@
       "viewportWidth": 1980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 2172,
-      "heroImgNaturalHeight": 724
+      "heroImgNaturalHeight": 724,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/contact-wide.jpg"
@@ -573,7 +743,9 @@
       "viewportWidth": 1980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941
+      "heroImgNaturalHeight": 941,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/companion-robotics-wide.jpg"
@@ -622,7 +794,9 @@
       "viewportWidth": 1980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941
+      "heroImgNaturalHeight": 941,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/newbrain-wide.jpg"
@@ -635,7 +809,9 @@
       "viewportWidth": 1980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": null,
-      "heroImgNaturalHeight": null
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/evelyn-release-wide.jpg"
@@ -648,7 +824,9 @@
       "viewportWidth": 1980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": null,
-      "heroImgNaturalHeight": null
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/evelyn-help-preview-wide.jpg"
@@ -716,7 +894,9 @@
         }
       ],
       "heroImgNaturalWidth": null,
-      "heroImgNaturalHeight": null
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/index-tablet.jpg"
@@ -759,10 +939,85 @@
       "viewportWidth": 980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
-      "heroImgNaturalHeight": 796
+      "heroImgNaturalHeight": 796,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/kira-world-tablet.jpg"
+  },
+  {
+    "page": "kira-world-avatar-builder.html",
+    "device": "tablet",
+    "geometry": {
+      "scrollWidth": 980,
+      "viewportWidth": 980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": {
+        "naturalWidth": 1152,
+        "naturalHeight": 1536,
+        "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "fit": "contain",
+        "position": "50% 50%"
+      },
+      "kiraPortraitRoutes": []
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-avatar-builder-tablet.jpg"
+  },
+  {
+    "page": "kira-world-home.html",
+    "device": "tablet",
+    "geometry": {
+      "scrollWidth": 980,
+      "viewportWidth": 980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": {
+        "naturalWidth": 980,
+        "naturalHeight": 392,
+        "src": "assets/kira-card-home-apartments.webp",
+        "fit": "contain",
+        "position": "50% 50%"
+      },
+      "kiraPortraitRoutes": [
+        {
+          "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+          "fit": "contain"
+        }
+      ]
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-home-tablet.jpg"
+  },
+  {
+    "page": "kira-world-notebook.html",
+    "device": "tablet",
+    "geometry": {
+      "scrollWidth": 980,
+      "viewportWidth": 980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": {
+        "naturalWidth": 1920,
+        "naturalHeight": 796,
+        "src": "assets/kira-hero-landscape.webp",
+        "fit": "cover",
+        "position": "82% 50%"
+      },
+      "kiraPortraitRoutes": [
+        {
+          "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+          "fit": "contain"
+        }
+      ]
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-notebook-tablet.jpg"
   },
   {
     "page": "about.html",
@@ -814,7 +1069,9 @@
       "viewportWidth": 980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
-      "heroImgNaturalHeight": 760
+      "heroImgNaturalHeight": 760,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/about-tablet.jpg"
@@ -857,7 +1114,9 @@
       "viewportWidth": 980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 2172,
-      "heroImgNaturalHeight": 724
+      "heroImgNaturalHeight": 724,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/contact-tablet.jpg"
@@ -900,7 +1159,9 @@
       "viewportWidth": 980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941
+      "heroImgNaturalHeight": 941,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/companion-robotics-tablet.jpg"
@@ -949,7 +1210,9 @@
       "viewportWidth": 980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941
+      "heroImgNaturalHeight": 941,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/newbrain-tablet.jpg"
@@ -962,7 +1225,9 @@
       "viewportWidth": 980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": null,
-      "heroImgNaturalHeight": null
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/evelyn-release-tablet.jpg"
@@ -975,7 +1240,9 @@
       "viewportWidth": 980,
       "researchPillCircles": [],
       "heroImgNaturalWidth": null,
-      "heroImgNaturalHeight": null
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/evelyn-help-preview-tablet.jpg"
@@ -1043,7 +1310,9 @@
         }
       ],
       "heroImgNaturalWidth": null,
-      "heroImgNaturalHeight": null
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/index-mobile.jpg"
@@ -1086,10 +1355,85 @@
       "viewportWidth": 390,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
-      "heroImgNaturalHeight": 796
+      "heroImgNaturalHeight": 796,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/kira-world-mobile.jpg"
+  },
+  {
+    "page": "kira-world-avatar-builder.html",
+    "device": "mobile",
+    "geometry": {
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": {
+        "naturalWidth": 1152,
+        "naturalHeight": 1536,
+        "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "fit": "contain",
+        "position": "50% 50%"
+      },
+      "kiraPortraitRoutes": []
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-avatar-builder-mobile.jpg"
+  },
+  {
+    "page": "kira-world-home.html",
+    "device": "mobile",
+    "geometry": {
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": {
+        "naturalWidth": 980,
+        "naturalHeight": 392,
+        "src": "assets/kira-card-home-apartments.webp",
+        "fit": "contain",
+        "position": "50% 50%"
+      },
+      "kiraPortraitRoutes": [
+        {
+          "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+          "fit": "contain"
+        }
+      ]
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-home-mobile.jpg"
+  },
+  {
+    "page": "kira-world-notebook.html",
+    "device": "mobile",
+    "geometry": {
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": {
+        "naturalWidth": 1920,
+        "naturalHeight": 796,
+        "src": "assets/kira-hero-landscape.webp",
+        "fit": "cover",
+        "position": "78% 50%"
+      },
+      "kiraPortraitRoutes": [
+        {
+          "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+          "fit": "contain"
+        }
+      ]
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-notebook-mobile.jpg"
   },
   {
     "page": "about.html",
@@ -1141,7 +1485,9 @@
       "viewportWidth": 390,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
-      "heroImgNaturalHeight": 760
+      "heroImgNaturalHeight": 760,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/about-mobile.jpg"
@@ -1184,7 +1530,9 @@
       "viewportWidth": 390,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 2172,
-      "heroImgNaturalHeight": 724
+      "heroImgNaturalHeight": 724,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/contact-mobile.jpg"
@@ -1227,7 +1575,9 @@
       "viewportWidth": 390,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941
+      "heroImgNaturalHeight": 941,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/companion-robotics-mobile.jpg"
@@ -1276,7 +1626,9 @@
       "viewportWidth": 390,
       "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941
+      "heroImgNaturalHeight": 941,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/newbrain-mobile.jpg"
@@ -1289,7 +1641,9 @@
       "viewportWidth": 390,
       "researchPillCircles": [],
       "heroImgNaturalWidth": null,
-      "heroImgNaturalHeight": null
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/evelyn-release-mobile.jpg"
@@ -1302,7 +1656,9 @@
       "viewportWidth": 390,
       "researchPillCircles": [],
       "heroImgNaturalWidth": null,
-      "heroImgNaturalHeight": null
+      "heroImgNaturalHeight": null,
+      "kiraTopicHero": null,
+      "kiraPortraitRoutes": []
     },
     "errors": [],
     "screenshot": "qa/visual-review/evelyn-help-preview-mobile.jpg"
