@@ -8,7 +8,7 @@ from playwright.sync_api import sync_playwright
 
 out=Path("qa/visual-review")
 out.mkdir(exist_ok=True,parents=True)
-pages=["index.html","kira-world.html","about.html","contact.html","companion-robotics.html","newbrain.html","evelyn-release.html","evelyn-help-preview.html"]
+pages=["index.html","kira-world.html","kira-world-avatar-builder.html","kira-world-home.html","kira-world-notebook.html","about.html","contact.html","companion-robotics.html","newbrain.html","evelyn-release.html","evelyn-help-preview.html"]
 report=[]
 with sync_playwright() as p:
     browser=p.chromium.launch(headless=True,args=["--no-sandbox"])
@@ -30,6 +30,9 @@ with sync_playwright() as p:
               result.researchPillCircles=[...document.querySelectorAll('.hl-research-ribbon .hl-pillar-mark')].map(el=>{const b=el.getBoundingClientRect();return {x:Math.round(b.x*10)/10, y:Math.round(b.y*10)/10, w:Math.round(b.width*10)/10, h:Math.round(b.height*10)/10};});
               result.heroImgNaturalWidth=document.querySelector('.xf-hero-visual img')?.naturalWidth;
               result.heroImgNaturalHeight=document.querySelector('.xf-hero-visual img')?.naturalHeight;
+              const heroImg=document.querySelector('.kw-detail .kw-hero-art img');
+              result.kiraTopicHero=heroImg ? {naturalWidth:heroImg.naturalWidth,naturalHeight:heroImg.naturalHeight,src:heroImg.getAttribute('src'),fit:getComputedStyle(heroImg).objectFit,position:getComputedStyle(heroImg).objectPosition} : null;
+              result.kiraPortraitRoutes=[...document.querySelectorAll('.kw-detail .kw-route img[src*="evelyn-hart-holographic"]')].map(img=>({src:img.getAttribute('src'),fit:getComputedStyle(img).objectFit}));
               return result;
             }""")
             report.append({"page":name,"device":device,"geometry":geometry,"errors":errors,"screenshot":str(path)})
@@ -43,6 +46,18 @@ with sync_playwright() as p:
                             raise RuntimeError(f"Research circle alignment drift at {device}: {a+1} vs {b+1}: {circles}")
                 if geometry["scrollWidth"]>geometry["viewportWidth"]+1:
                     raise RuntimeError(f"Unexpected horizontal overflow on {device}: {geometry}")
+            if name in ("kira-world-avatar-builder.html","kira-world-home.html","kira-world-notebook.html"):
+                art=geometry.get("kiraTopicHero")
+                if not art or not art["naturalWidth"]:
+                    raise RuntimeError(f"{name} {device}: topic hero asset did not load: {art}")
+                if name=="kira-world-notebook.html" and art["naturalWidth"]<1600:
+                    raise RuntimeError(f"Notebook art too low resolution for desktop: {art}")
+                if name=="kira-world-avatar-builder.html" and art["fit"]!="contain":
+                    raise RuntimeError(f"Avatar hero framing could crop head: {art}")
+                if any(item["fit"]!="contain" for item in geometry["kiraPortraitRoutes"]):
+                    raise RuntimeError(f"Related Avatar Builder route crops portrait: {geometry['kiraPortraitRoutes']}")
+                if geometry["scrollWidth"]>geometry["viewportWidth"]+1:
+                    raise RuntimeError(f"{name} {device}: horizontal overflow {geometry}")
             print(f"{name} {device}: {path}, hero {geometry.get('.xf-hero')}, media {geometry.get('.xf-hero-visual')}, overflow={geometry['scrollWidth']-geometry['viewportWidth']}")
             if name in ("index.html","kira-world.html","about.html"):
                 page.evaluate("window.scrollTo(0, Math.min(520, document.body.scrollHeight - innerHeight))")
