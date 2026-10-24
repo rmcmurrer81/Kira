@@ -52,6 +52,8 @@ with sync_playwright() as p:
                     raise RuntimeError(f"{name} {device}: topic hero asset did not load: {art}")
                 if name=="kira-world-notebook.html" and art["naturalWidth"]<1600:
                     raise RuntimeError(f"Notebook art too low resolution for desktop: {art}")
+                if name=="kira-world-notebook.html" and art["fit"]!="contain":
+                    raise RuntimeError(f"Notebook full scene crops a person's face: {art}")
                 if name=="kira-world-avatar-builder.html" and art["fit"]!="contain":
                     raise RuntimeError(f"Avatar hero framing could crop head: {art}")
                 if any(item["fit"]!="contain" for item in geometry["kiraPortraitRoutes"]):
