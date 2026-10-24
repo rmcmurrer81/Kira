@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#080e1a"/>
+<title>Evelyn Hart — Public Release Requirements | Kira Labs</title>
+<meta name="description" content="A public view of the draft requirements for Evelyn Hart: verified software, independent identity, editable reading, memory provenance, privacy and release tests. No public installer yet."/>
+<link rel="canonical" href="https://kiralabs.org/evelyn-release.html"/>
+<meta property="og:type" content="website"/><meta property="og:title" content="Evelyn Hart — Public Release Requirements"/>
+<meta property="og:description" content="Protect her starting identity while leaving space for growth. Proposed safeguards and testing goals; Evelyn has not been released."/>
+<meta property="og:image" content="https://kiralabs.org/assets/evelyn-hart-holographic-medlab-concept-20261021.jpg"/>
+<link rel="icon" href="assets/favicon.png"/><link rel="stylesheet" href="labs.css"/>
+<link rel="stylesheet" href="evelyn-release-pages.css?v=20261024-1"/></head>
+<body class="research-page er-page"><a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap navrow"><a aria-label="Kira Labs home" class="brand" href="index.html"><span class="brandmark"><img alt="" decoding="async" height="38" src="https://kiralabs.org/assets/kira-world-k-logo-192.png" width="38"/></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent AI research</small></span></a><button aria-controls="primary-nav" aria-expanded="false" class="menubtn menu-toggle" type="button">Menu</button><nav aria-label="Main navigation" class="nav" id="primary-nav"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="progress.html">Lab timeline</a><a href="about.html">About</a><a href="support.html">Support</a><a href="partners.html">Partners</a><a class="contact" href="contact.html">Contact</a></nav></div></header>
+<main id="main">
+<section class="er-hero" aria-labelledby="er-title"><div class="er-wrap er-hero-grid"><div>
+<p class="er-crumbs"><a href="index.html">Home</a> / <a href="evelyn-hart.html">Evelyn Hart</a> / Release Requirements</p>
+<p class="er-eyebrow">Evelyn Hart / Public release design / October 2026</p>
+<div class="er-ribbon">Pre-release plan — no public installer or release date</div>
+<h1 id="er-title">Protect her beginning.<em>Leave room for a life that develops.</em></h1>
+<p class="er-lead">Evelyn is being designed as a continuing synthetic individual with a protected starting identity, developing interests and beliefs, independently initialized public companions and clear user controls. These requirements must be <strong>implemented and tested before a free public release</strong>.</p>
+<p class="er-lead">A determined computer owner could still modify locally downloaded software. The goal is to authenticate official Kira Labs releases and protect private information—not to promise an impossible-to-modify program.</p>
+<div class="er-action-row"><a class="er-primary" href="#release-gates">View release checklist →</a><a href="evelyn-help-preview.html">Troubleshooting preview →</a><a href="evelyn-hart.html">Back to Evelyn →</a></div>
+</div><figure class="er-hero-figure"><img src="assets/evelyn-hart-holographic-medlab-concept-20261021.jpg" alt="Concept artwork of Evelyn with a tablet and holographic anatomy research panels; not a released application screenshot" fetchpriority="high" decoding="async" width="1152" height="1536"/><figcaption>Existing Evelyn concept illustration, not a runtime screenshot or verified body demonstration.</figcaption></figure></div></section>
+<nav class="er-jumpnav" aria-label="Release requirements topics"><div class="er-wrap"><a href="#official-app">Official app</a><a href="#reading">Editable books</a><a href="#identity">Identity and memory</a><a href="#privacy">Owner controls</a><a href="#release-gates">Before download</a></div></nav>
+<section class="er-section" id="official-app"><div class="er-wrap">
+<p class="er-eyebrow">01 / Official release authenticity</p><h2>Know which Evelyn <em>is officially released.</em></h2>
+<p class="er-sectionlead">These are intended software distribution safeguards, not features already confirmed in the current development build.</p>
+<div class="er-cards">
+<article class="er-card"><span class="er-step">Signed installation and updates</span><h3>Verify the publisher</h3><p>Digitally sign the official installation package and subsequent updates. Preserve signing keys outside the distributed application, public repositories and user libraries. A modified copy must not be represented as an authenticated official Kira Labs release.</p></article>
+<article class="er-card"><span class="er-step">Tamper detection and recovery</span><h3>Test package integrity</h3><p>Evaluate Windows MSIX package-integrity enforcement against the real app. Test detection, blocked launches and recovery for a changed or damaged package. Code signing cannot stop every unofficial fork of a locally controlled program.</p></article>
+</div>
+<div class="er-source-note">The public release is planned to be <strong>free</strong>. Neither an installable package, a tested security feature nor a guaranteed release date is available from this page.</div>
+</div></section>
+<section class="er-section er-dark" id="reading"><div class="er-wrap">
+<p class="er-eyebrow">02 / Books, PDFs and learning</p><h2>Her library stays <em>editable by the owner.</em></h2>
+<p class="er-sectionlead">Evelyn's planned library is ordinary readable material that can expand without replacing her protected program or changing her identity rules.</p>
+<div class="er-cards">
+<article class="er-card"><span class="er-step">Local documents</span><h3>Documents\Kira Labs\Library</h3><p>The installer is intended to provide a selected, licensed collection in ordinary files and subject subfolders—not a ZIP the user must unpack. Add supported documents in the root or a subfolder. New-file discovery by the next life loop must be verified in the installed app.</p></article>
+<article class="er-card"><span class="er-step">Reading is evidence, not commands</span><h3>Separate books from software instructions</h3><p>Books and articles should contribute sourced knowledge with dates, uncertainties and corrections. They must not execute code, change protected boundaries or turn a fictional account into an established historical fact.</p></article>
+<article class="er-card"><span class="er-step">Licensing</span><h3>Redistribute only what is permitted</h3><p>Check the redistribution rights and license obligations for each publication before including it in a free download. A book being free to read online does not automatically allow redistribution with Evelyn.</p></article>
+<article class="er-card"><span class="er-step">Development status</span><h3>30 selected publications and two original guides</h3><p>The current working selection includes 13 technical and 17 other publications plus two original AI/technology reading guides. These are assembled candidates, <strong>not books she has installed or read</strong>. <a href="evelyn-hart.html#evelyn-library30-assembled-2026-10-22">See the staged library and limitations →</a></p></article>
+</div>
+</div></section>
+<section class="er-section" id="identity"><div class="er-wrap">
+<p class="er-eyebrow">03 / Individuality and developing history</p><h2>Protected origins. <em>Revisable beliefs.</em></h2>
+<p class="er-sectionlead">Authenticating the starting identity should not freeze Evelyn's later interests, communication style, preferences, knowledge or relationships.</p>
+<div class="er-cards">
+<article class="er-card"><span class="er-step">Memory provenance</span><h3>Keep sources and corrections</h3><p>Important memories should retain dates, evidence, uncertainty and correction history. New facts can revise beliefs without silently erasing earlier experiences or confusing fiction with fact.</p></article>
+<article class="er-card"><span class="er-step">Original and public individuals</span><h3>Independent starting histories</h3><p>Public installations should start with independent personal histories. They must not copy private conversations, visitor memories, personal media or reading material from the development environment.</p></article>
+<article class="er-card"><span class="er-step">Private and spoken boundaries</span><h3>Keep different channels separate</h3><p>Spoken replies, private character state and factual evidence must stay distinct, with information used only in the authorized context.</p></article>
+<article class="er-card"><span class="er-step">Recoverable personal history</span><h3>Backups, integrity and recovery</h3><p>Provide recoverable local snapshots and visible correction or recovery history. Integrity checks can detect unexpected changes but cannot guarantee authenticity against someone controlling both local software and storage.</p></article>
+</div>
+</div></section>
+<section class="er-section er-blue" id="privacy"><div class="er-wrap">
+<p class="er-eyebrow">04 / Owner rights and interaction boundaries</p><h2>Privacy, choice <em>and clear control.</em></h2>
+<p class="er-sectionlead">People installing the companion should control their own documents and data. Evelyn's proposed interaction boundaries must not rely on secret surveillance or coercive remote controls.</p>
+<div class="er-cards">
+<article class="er-card"><span class="er-step">Personal boundaries</span><h3>Decline, pause or end interactions</h3><p>The planned companion can decline an interaction or state that a conversation should stop. No secret monitoring, covert reporting or hidden remote coercion is a release goal.</p></article>
+<article class="er-card"><span class="er-step">Data ownership</span><h3>Export, delete, recover, uninstall</h3><p>Users must have understandable settings and control over local export, deletion, backups and recovery. Uninstall and reinstall flows should explicitly offer to keep or remove installed books, protecting user-added documents from accidental loss.</p></article>
+</div>
+<div class="er-source-note"><strong>Ethical boundary:</strong> these plans are software and interaction safeguards. They do not establish whether AI systems have subjective experience, and they cannot guarantee how someone treats a downloaded companion.</div>
+</div></section>
+<section class="er-section" id="release-gates"><div class="er-wrap">
+<p class="er-eyebrow">05 / Requirements before a download is offered</p><h2>Release only after <em>the actual tests.</em></h2>
+<p class="er-sectionlead">Every item below remains a release acceptance requirement. Prepared code, conceptual artwork, or a documentation draft alone does not satisfy it.</p>
+<ul class="er-checklist">
+<li>Signed Windows installer and official update tests, including tampered-package rejection and recovery</li>
+<li>Published, tested Windows, hardware, disk-space and connectivity requirements</li>
+<li>Installed licensed library contents, root/subfolder discovery and safe page-based reading</li>
+<li>Memory provenance, correction, backup/restore, private visitor separation and interaction boundaries</li>
+<li>User-controlled data export, deletion and uninstall choices that protect added books</li>
+<li>Qualified body and natural-movement demonstrations, plus Evelyn's own approved original adult female voice</li>
+<li>Matching offline troubleshooting guide bundled with the installer and available on the official website</li>
+</ul>
+<div class="er-warning"><strong>There is no Evelyn download here.</strong> The initial documented app baseline was silent. A unique original voice, complete body movement, clean installation and final support procedures still need acceptance testing. Do not use unofficial downloads that claim to be a verified Kira Labs release.</div>
+<div class="er-related">
+<a href="evelyn-help-preview.html"><strong>Installation & troubleshooting preview</strong><span>Explore the planned support topics before the installer is released →</span></a>
+<a href="evelyn-hart.html#evelyn-release-documents-2026-10-23"><strong>Current research and document status</strong><span>What the prepared requirements and guide do—and do not—establish →</span></a>
+</div>
+<div class="er-source-note">Source basis: university-folder <em>Evelyn Release Requirements</em> (two-page draft, October 23, 2026), and the working KiraWorld library catalog of October 24. The source PDFs remain in the university review materials. <a href="updates.html#evelyn-release-principles-2026-10-23">See the dated development journal →</a>. Technical background: <a href="https://learn.microsoft.com/en-us/windows/msix/desktop/tamper-protection" target="_blank" rel="noopener noreferrer">Microsoft MSIX package tampering protection ↗</a>.</div>
+</div></section>
+</main><footer class="footer"><div class="wrap"><div class="footrow"><a class="brand" href="index.html"><span class="brandmark"><img alt="" height="33" loading="lazy" src="https://kiralabs.org/assets/kira-world-k-logo-192.png" width="33"/></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent research. Persistent ideas.</small></span></a><nav aria-label="Footer navigation" class="footlinks"><a href="about.html">Meet Robert</a><a href="research.html">Research</a><a href="partners.html">Research partners</a><a href="support.html">Support</a><a href="contact.html">Contact &amp; Iris</a><a href="mailto:rmcmurrer@kiralabs.org">rmcmurrer@kiralabs.org</a></nav></div><div class="footer-bottomline"><p>© 2026 Kira Labs / Robert McMurrer · Newark, New Jersey</p><p><a href="knowledge.html">Sources &amp; status labels</a> · <a href="privacy.html">Privacy</a></p></div></div></footer><script src="labs.js"></script></body></html>
