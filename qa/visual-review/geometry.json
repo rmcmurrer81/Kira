@@ -301,6 +301,32 @@
     "screenshot": "qa/visual-review/newbrain-desktop.jpg"
   },
   {
+    "page": "evelyn-release.html",
+    "device": "desktop",
+    "geometry": {
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/evelyn-release-desktop.jpg"
+  },
+  {
+    "page": "evelyn-help-preview.html",
+    "device": "desktop",
+    "geometry": {
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/evelyn-help-preview-desktop.jpg"
+  },
+  {
     "page": "index.html",
     "device": "wide",
     "geometry": {
@@ -600,6 +626,32 @@
     },
     "errors": [],
     "screenshot": "qa/visual-review/newbrain-wide.jpg"
+  },
+  {
+    "page": "evelyn-release.html",
+    "device": "wide",
+    "geometry": {
+      "scrollWidth": 1980,
+      "viewportWidth": 1980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/evelyn-release-wide.jpg"
+  },
+  {
+    "page": "evelyn-help-preview.html",
+    "device": "wide",
+    "geometry": {
+      "scrollWidth": 1980,
+      "viewportWidth": 1980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/evelyn-help-preview-wide.jpg"
   },
   {
     "page": "index.html",
@@ -903,6 +955,32 @@
     "screenshot": "qa/visual-review/newbrain-tablet.jpg"
   },
   {
+    "page": "evelyn-release.html",
+    "device": "tablet",
+    "geometry": {
+      "scrollWidth": 980,
+      "viewportWidth": 980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/evelyn-release-tablet.jpg"
+  },
+  {
+    "page": "evelyn-help-preview.html",
+    "device": "tablet",
+    "geometry": {
+      "scrollWidth": 980,
+      "viewportWidth": 980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/evelyn-help-preview-tablet.jpg"
+  },
+  {
     "page": "index.html",
     "device": "mobile",
     "geometry": {
@@ -1202,5 +1280,31 @@
     },
     "errors": [],
     "screenshot": "qa/visual-review/newbrain-mobile.jpg"
+  },
+  {
+    "page": "evelyn-release.html",
+    "device": "mobile",
+    "geometry": {
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/evelyn-release-mobile.jpg"
+  },
+  {
+    "page": "evelyn-help-preview.html",
+    "device": "mobile",
+    "geometry": {
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/evelyn-help-preview-mobile.jpg"
   }
 ]
