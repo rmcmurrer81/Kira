@@ -1,0 +1,81 @@
+/* Kira Labs Tools & Apps, source-grounded public directory, October 24 2026 */
+.kta-page{background:#081321;color:#e9f4fc}
+.kta-page main{overflow-x:clip}
+.kta-wrap{width:min(1220px,calc(100% - 48px));margin:auto}
+.kta-page a:focus-visible{outline:3px solid #85eff4;outline-offset:4px}
+.kta-eyebrow{font:800 .72rem/1.55 ui-monospace,Consolas,monospace;letter-spacing:.16em;text-transform:uppercase;color:#83e7f3}
+.kta-hero{padding:clamp(42px,5vw,76px) 0;background:radial-gradient(ellipse at 79% 25%,#1b67854f,transparent 47%),linear-gradient(120deg,#071929,#0b1326);border-bottom:1px solid #66e0eb35}
+.kta-hero-grid{display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:clamp(22px,4vw,57px)}
+.kta-hero h1{font-size:clamp(3rem,5vw,5.25rem);line-height:1.05;letter-spacing:-.05em;margin:13px 0 18px}
+.kta-hero h1 em{display:block;font:italic 400 .74em/1.2 Georgia,serif;color:#84edf5;margin-top:11px;letter-spacing:-.025em}
+.kta-hero-copy>p:not(.kta-eyebrow){line-height:1.7;color:#c8dcec;max-width:625px}
+.kta-button-row{display:flex;align-items:center;flex-wrap:wrap;gap:11px;margin-top:23px}
+.kta-button-row .button{display:inline-flex;align-items:center;min-height:43px;font-size:.84rem;padding:12px 15px;text-decoration:none}
+.kta-hero-copy .kta-hero-status{font-size:.81rem;color:#b5c9d6;margin:20px 0 0}
+.kta-hero-visual{border-radius:17px;border:1px solid #92e9f25e;overflow:hidden;margin:0;background:#102239;box-shadow:0 22px 52px #0207129f}
+.kta-hero-visual img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.kta-hero-visual figcaption{padding:12px 16px;color:#c0d5e2;background:#10293a;font-size:.75rem;line-height:1.6}
+.kta-directory{padding:clamp(49px,5.8vw,86px) 0;background:linear-gradient(180deg,#0b1928,#091321)}
+.kta-directory h2,.kta-evidence h2,.kta-end h2{font-size:clamp(2.1rem,3.6vw,3.4rem);letter-spacing:-.04em;margin:9px 0 17px;line-height:1.13}
+.kta-section-intro{max-width:840px;color:#c8d9e6;font-size:1.03rem;line-height:1.71;margin-bottom:28px}
+.kta-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:21px}
+.kta-card{display:flex;flex-direction:column;min-width:0;background:linear-gradient(135deg,#142b3d,#0a1726);border:1px solid #7bddec3a;border-radius:16px;overflow:hidden;box-shadow:0 12px 34px #01091561}
+.kta-card:hover{border-color:#7bdeed9c;box-shadow:0 18px 46px #01091485}
+.kta-media{position:relative;background:#092034}
+.kta-media>img,.kta-globe{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.kta-globe svg{display:block;width:100%;height:100%}
+.kta-image-caption{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);padding:6px 10px;color:#cbebf8;font-size:.71rem;line-height:1.37;border-radius:6px;background:#031525df;border:1px solid #7edfed57}
+.kta-card-content{padding:25px 27px 27px;display:flex;flex-direction:column;flex:1}
+.kta-card-eyebrow{font:750 .71rem/1.5 ui-monospace,Consolas,monospace;letter-spacing:.07em;text-transform:uppercase;color:#90e2f0;margin:0 0 11px}
+.kta-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.kta-card-head h3{font-size:clamp(1.44rem,2vw,1.9rem);letter-spacing:-.028em;line-height:1.13;margin:0;color:#f7feff}
+.kta-pill{border:1px solid #b0d8e558;border-radius:99px;padding:5px 10px;font-size:.72rem;line-height:1.4;color:#d4e6ee;background:#1c3444}
+.kta-pill-available{color:#b4f6d7;border-color:#6beac477}
+.kta-pill-planned{color:#f3d6a4;border-color:#e4b87577}
+.kta-card-content>p:not(.kta-card-eyebrow){line-height:1.7;color:#cbdce9;margin:0 0 15px}
+.kta-card-content ul{padding:0;list-style:none;margin:0 0 24px;display:grid;gap:10px}
+.kta-card-content li{font-size:.88rem;color:#daeaf4;line-height:1.5;padding-left:21px;position:relative}
+.kta-card-content li:before{content:"✓";color:#80e8ec;position:absolute;left:0}
+.kta-card-link{color:#8df4f7;text-decoration:none;font-weight:760;font-size:.87rem;margin-top:auto;align-self:flex-start;border-bottom:1px solid #73e1ec83;padding-bottom:4px}
+.kta-card-link:hover{color:#dffcff}
+.kta-evidence{padding:68px 0;background:linear-gradient(120deg,#0d293b,#0e1728);border-block:1px solid #83e2f134}
+.kta-evidence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:27px 0}
+.kta-evidence-grid article{border-radius:13px;background:#122d40a8;border:1px solid #8be2ef36;padding:23px}
+.kta-evidence-grid strong{color:#a9f3f7;line-height:1.4}
+.kta-evidence-grid p{color:#cddce8;font-size:.91rem;line-height:1.66;margin:12px 0}
+.kta-evidence-grid a{font-weight:730;font-size:.82rem;color:#90eaf0}
+.kta-source-note{max-width:1020px;line-height:1.7;color:#b7cedc;font-size:.85rem}
+.kta-end{background:#081625;padding:55px 0 73px}
+.kta-end-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:50px}
+.kta-end p:not(.kta-eyebrow){color:#c5d7e4;line-height:1.75;max-width:750px}
+.kta-end .kta-button-row{justify-content:flex-start;align-content:center}
+@media(max-width:900px){.kta-hero-grid,.kta-end-grid{grid-template-columns:1fr}.kta-hero-visual{max-width:760px}.kta-evidence-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.kta-wrap{width:min(100% - 28px,610px)}.kta-grid{grid-template-columns:1fr}.kta-hero{padding:38px 0 50px}.kta-hero h1{font-size:clamp(2.6rem,10vw,4rem)}.kta-directory{padding:45px 0}.kta-card-content{padding:21px}.kta-media img,.kta-globe{aspect-ratio:16/10}.kta-card-head{display:block}.kta-pill{display:inline-flex;margin-top:12px}.kta-evidence{padding:44px 0}.kta-evidence-grid{gap:12px}.kta-end{padding:45px 0}.kta-end .kta-button-row .button{width:100%;justify-content:space-between}}
+@media(prefers-reduced-motion:reduce){.kta-card{transition:none}}
+/* Provisional Voice Designer guide with explicitly non-certified hardware targets. */
+.vdg-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(25px,4vw,55px);align-items:center}
+.vdg-hero .kta-eyebrow a{color:#8eeef7}
+.vdg-warning{display:inline-block;padding:10px 13px;border:1px solid #eab96c87;border-radius:8px;background:#49361b55;color:#ffe5b7;font-size:.81rem;font-weight:730;line-height:1.4}
+.vdg-section{padding:clamp(46px,5.5vw,72px) 0;background:#091727;border-bottom:1px solid #70e0ec2e}
+.vdg-section.vdg-dark{background:#0d2337}
+.vdg-section h2{font-size:clamp(2.15rem,3.4vw,3.1rem);line-height:1.14;letter-spacing:-.038em;margin:10px 0 17px}
+.vdg-intro,.vdg-section>div>p:not(.kta-eyebrow),.vdg-last p{color:#c8d9e5;line-height:1.73;max-width:1030px}
+.vdg-table-scroll{width:100%;overflow-x:auto;border:1px solid #74dbe848;border-radius:13px;background:#102536}
+.vdg-table-scroll table{border-collapse:collapse;width:100%;min-width:740px;font-size:.92rem;line-height:1.6}
+.vdg-table-scroll thead{background:#16425b;color:#eafaff}
+.vdg-table-scroll th,.vdg-table-scroll td{text-align:left;padding:17px 19px;vertical-align:top;border-bottom:1px solid #88e7eb29}
+.vdg-table-scroll th:first-child{width:17%}
+.vdg-table-scroll tbody th{color:#a8f4fb;font-weight:760}
+.vdg-table-scroll tbody td{color:#d4e5f0}
+.vdg-table-scroll tbody tr:nth-child(even){background:#0d1f30}
+.vdg-table-scroll tbody tr:last-child td,.vdg-table-scroll tbody tr:last-child th{border-bottom:0}
+.vdg-note{border-left:3px solid #e4c38b;padding:12px 18px;background:#27314660;color:#dfd9c8!important;font-size:.85rem;line-height:1.65;margin:23px 0 0}
+.vdg-help-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
+.vdg-help-card{display:grid;grid-template-columns:43px 1fr;gap:13px;padding:22px 21px;border-radius:12px;border:1px solid #7bd9ec32;background:#0c192b}
+.vdg-help-card>span{font:780 .75rem ui-monospace,Consolas,monospace;color:#8df5fb;border:1px solid #72d5e575;border-radius:7px;width:33px;height:33px;display:flex;align-items:center;justify-content:center}
+.vdg-help-card h3{font-size:1.1rem;line-height:1.25;margin:0 0 9px;color:#ecfaff}
+.vdg-help-card p{font-size:.9rem;line-height:1.66;color:#bdd3e3;margin:0}
+.vdg-last{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.vdg-last .kta-button-row{align-items:center;justify-content:flex-start}
+@media(max-width:850px){.vdg-hero-grid,.vdg-last{grid-template-columns:1fr}.vdg-help-grid{grid-template-columns:1fr}.vdg-hero .kta-hero-visual{max-width:700px}}
+@media(max-width:620px){.vdg-section{padding:42px 0}.vdg-table-scroll table{font-size:.84rem}.vdg-help-card{padding:17px}.vdg-last .kta-button-row .button{width:100%}}

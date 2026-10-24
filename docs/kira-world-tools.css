@@ -84,3 +84,11 @@
 @media(max-width:900px){.kwt-studio-image img{max-height:490px}.kwt-visual-icon{width:66px;height:66px}.kwt-showcase-intro{align-items:start}}
 @media(max-width:620px){.kwt-studio-showcase{margin:16px 0 28px}.kwt-studio-image img{aspect-ratio:4/3;max-height:380px;object-fit:cover}.kwt-studio-stamp{right:10px;bottom:10px;font-size:.57rem;padding:7px 9px}.kwt-studio-showcase figcaption{padding:13px 14px}.kwt-feature{min-height:0}.kwt-developer-art img{aspect-ratio:4/3}.kwt-showcase-intro{display:block}.kwt-showcase-intro h3{margin:11px 0}.kwt-feature-grid{gap:13px}}
 @media(prefers-reduced-motion:reduce){.kwt-feature{transition:none}}
+
+/* Companion hardware/troubleshooting guide link, release validation pending. */
+.kwt-bridge{background:#0a1e31;border-block:1px solid #8be6ec30;padding:34px 0}
+.kwt-guide-link{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;padding:24px 29px;border:1px solid #72e0ed55;border-radius:14px;background:linear-gradient(135deg,#14344b,#11182c)}
+.kwt-guide-link h3{font-size:1.5rem;line-height:1.2;letter-spacing:-.025em;color:#f4fcff;margin:6px 0 12px}
+.kwt-guide-link p{color:#c8dfeb;line-height:1.7;margin:0}
+.kwt-guide-link .kwt-button{justify-content:center}
+@media(max-width:730px){.kwt-guide-link{grid-template-columns:1fr;padding:21px}.kwt-guide-link .kwt-button{width:100%}}
