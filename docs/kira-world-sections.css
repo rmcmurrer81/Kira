@@ -68,7 +68,7 @@
 .kw-hub-compact{padding:clamp(42px,6vw,77px) 0}
 .kw-hub-compact .kw-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .kw-hub-compact .kw-card img{display:block;aspect-ratio:16/9;width:100%;height:auto;object-fit:cover;object-position:center 44%}
-.kw-hub-compact .kw-card[href="kira-world-avatar-builder.html"] img{object-position:center 18%}
+.kw-hub-compact .kw-card[href="kira-world-avatar-builder.html"] img{object-position:center top}
 .kw-hub-compact .kw-card[href="kira-world-synthetic-robert.html"] img{object-position:center 36%}
 .kw-hub-compact .kw-card-body{padding:16px 18px 19px}
 .kw-hub-compact .kw-card h3{font-size:1.15rem;line-height:1.25;margin:0 0 8px}
@@ -82,7 +82,7 @@
 .kw-hub-compact .kw-hub-summary strong{display:block;font-size:1.07rem;line-height:1.4}
 .kw-hub-compact .kw-hub-summary p:not(.kw-eyebrow){color:#cbddea;line-height:1.6;font-size:.85rem;margin:0}
 .kw-hub-compact .kw-hub-summary .button{font-size:.78rem;white-space:nowrap}
-.kw-detail .kw-hero-art img[src*="evelyn-hart-holographic"]{object-position:center 22%}
+.kw-detail .kw-hero-art img[src*="evelyn-hart-holographic"]{object-position:center top}
 .kw-detail .kw-hero-art img[src*="robert-video-photoalbum"]{object-position:center 35%}
 .kw-detail .kw-hero-art img[src*="kira-world-companionship"]{object-position:center 45%}
 .kw-detail .kw-moved-content{background:#090f1e;position:relative}
