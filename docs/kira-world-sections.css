@@ -160,3 +160,18 @@
  .kw-detail.kw-notebook-page .kw-hero-art img{aspect-ratio:1920/796;object-fit:contain;object-position:center}
  .kw-detail.kw-avatar-page .kw-hero-art img{aspect-ratio:4/3}
 }
+
+/* Kira World seven-topic hub: historical public tools are separate from the seven research areas. */
+.kw-legacy-teaser{background:linear-gradient(120deg,#091b2b,#111628);border-top:1px solid #80d9ec36;padding:clamp(46px,6vw,70px) 0}
+.kw-legacy-teaser .kw-shell{width:min(1190px,calc(100% - 48px));margin-inline:auto}
+.kw-legacy-inner{display:grid;grid-template-columns:minmax(0,1.07fr) minmax(0,.93fr);gap:clamp(25px,4vw,60px);align-items:center}
+.kw-legacy-inner h2{font-size:clamp(2rem,3.7vw,3.35rem);line-height:1.12;letter-spacing:-.035em;margin:12px 0 18px;color:#f0faff}
+.kw-legacy-inner h2 em{font:italic 400 .87em/1.1 Georgia,serif;color:#8de9f3}
+.kw-legacy-content>p:not(.kw-eyebrow){color:#cbddea;line-height:1.72}
+.kw-legacy-content strong{color:#f0faff}
+.kw-legacy-content .kw-legacy-limits{font-size:.84rem;color:#edce9f;margin:14px 0 20px}
+.kw-legacy-content .button{display:inline-flex;align-items:center;min-height:43px}
+.kw-legacy-media{margin:0;border:1px solid #80e1f25a;border-radius:15px;overflow:hidden;box-shadow:0 22px 55px #0007;background:#112237}
+.kw-legacy-media img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.kw-legacy-media figcaption{color:#bbd7e1;padding:12px 15px;font-size:.75rem;line-height:1.55;background:#14283a}
+@media(max-width:800px){.kw-legacy-inner{grid-template-columns:1fr}.kw-legacy-media{max-width:640px}}

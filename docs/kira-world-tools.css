@@ -1,0 +1,57 @@
+/* Kira World Legacy & Developer Tools: planned-release exhibition, October 24, 2026 */
+.kwt-page{background:#06101d;color:#eef8ff}
+.kwt-page main{overflow-x:clip}
+.kwt-page .kwt-wrap{width:min(1220px,calc(100% - 48px));margin-inline:auto}
+.kwt-page h1,.kwt-page h2,.kwt-page h3{color:#f4faff}
+.kwt-page a:focus-visible{outline:3px solid #a1f6fd;outline-offset:4px}
+.kwt-eyebrow{font:750 .74rem/1.5 ui-monospace,Consolas,monospace;letter-spacing:.13em;text-transform:uppercase;color:#8fe9f5}
+.kwt-hero{padding:clamp(42px,6vw,87px) 0 61px;background:radial-gradient(ellipse at 83% 28%,#20618248,transparent 42%),linear-gradient(115deg,#06101d,#11152a);border-bottom:1px solid #83e5f329}
+.kwt-hero-grid{display:grid;grid-template-columns:1fr .98fr;gap:clamp(25px,5vw,65px);align-items:center}
+.kwt-crumb{font-size:.82rem;color:#bed4e4;margin:0 0 19px}.kwt-crumb a{color:#8aeeef}
+.kwt-hero h1{font-size:clamp(2.85rem,5vw,5.1rem);letter-spacing:-.05em;line-height:1.04;margin:12px 0 23px}
+.kwt-hero h1 em{display:block;font:italic 400 .73em/1.16 Georgia,serif;color:#84ecf6;letter-spacing:-.025em;margin-top:10px}
+.kwt-intro{color:#d8e4ef;line-height:1.7;font-size:clamp(1rem,1.4vw,1.16rem);max-width:670px}
+.kwt-status{display:inline-block;background:#61422130;border:1px solid #f2c37666;border-radius:9px;color:#f1d9b4;font-size:.87rem;line-height:1.55;padding:10px 14px;margin:13px 0 7px}
+.kwt-status strong{color:#ffe0a9}
+.kwt-actions{display:flex;flex-wrap:wrap;gap:11px;margin:21px 0 0}
+.kwt-button{display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:12px 16px;text-decoration:none;border:1px solid #8bdded74;background:#0e2738;color:#ebfaff;border-radius:8px;font-size:.85rem;font-weight:760;line-height:1.4}
+.kwt-button-primary{background:#78e7f1;color:#051925;border-color:#78e7f1}
+.kwt-button:hover{box-shadow:0 0 0 2px #88eaf74b}
+.kwt-hero-art{margin:0;border:1px solid #8be3f15c;border-radius:18px;overflow:hidden;background:#0a2434;box-shadow:0 24px 55px #0008}
+.kwt-hero-art img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.kwt-hero-art figcaption,.kwt-work-figure figcaption{font-size:.77rem;color:#b7d4e4;background:#11283b;padding:12px 16px;line-height:1.5}
+.kwt-section{padding:clamp(52px,6vw,82px) 0;border-bottom:1px solid #86d9ea27;scroll-margin-top:24px}
+.kwt-section h2{font-size:clamp(2.15rem,3.6vw,3.65rem);line-height:1.09;letter-spacing:-.042em;margin:9px 0 19px}
+.kwt-section p{line-height:1.71;color:#cad9e7}
+.kwt-lead{font-size:1.12rem;max-width:910px;margin:0 0 30px}
+.kwt-feature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin:28px 0 22px}
+.kwt-feature{min-width:0;padding:27px 23px 25px;border-radius:13px;background:linear-gradient(140deg,#102c42,#101a2d);border:1px solid #81dff03d}
+.kwt-number{font:800 .86rem ui-monospace,Consolas,monospace;color:#90f4fb;border:1px solid #70dce982;border-radius:6px;padding:6px 8px;display:inline-block;margin-bottom:18px}
+.kwt-feature h3{font-size:1.23rem;line-height:1.23;margin:0 0 13px}
+.kwt-feature p{font-size:.93rem;line-height:1.65;margin:0}
+.kwt-caution{margin:25px 0 0;border-left:3px solid #debd81;background:#1824319e;padding:15px 21px;font-size:.9rem}
+.kwt-caution strong{color:#ffdfa8}
+.kwt-process{background:linear-gradient(120deg,#0c2233,#10182d)}
+.kwt-process-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);align-items:center;gap:clamp(22px,4vw,56px)}
+.kwt-steps{display:grid;gap:13px;margin-top:24px}
+.kwt-steps>div{display:grid;grid-template-columns:43px 1fr;gap:12px;border:1px solid #75d1e335;border-radius:9px;padding:14px 18px;background:#101e2ee0}
+.kwt-steps span{color:#76e5ef;font:800 .83rem ui-monospace,Consolas,monospace;padding-top:3px}
+.kwt-steps p{font-size:.93rem;margin:0}
+.kwt-steps strong{color:#edfaff}
+.kwt-work-figure{margin:0;border-radius:17px;overflow:hidden;border:1px solid #8bddf351;box-shadow:0 18px 45px #0007;background:#0c2031}
+.kwt-work-figure img{display:block;width:100%;aspect-ratio:1.66;object-fit:cover}
+.kwt-developers{background:#071422}
+.kwt-duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin:26px 0}
+.kwt-duo article{padding:26px 28px;background:linear-gradient(135deg,#112537,#0c1b29);border:1px solid #83deee30;border-radius:14px}
+.kwt-duo h3{font-size:1.27rem;margin:0 0 13px}
+.kwt-duo p{margin:0}
+.kwt-privacy{border-left:3px solid #7fe3ed;padding:13px 18px;background:#1c3b492f;font-size:.91rem;max-width:1120px}
+.kwt-gates{background:linear-gradient(145deg,#091e2d,#11152a)}
+.kwt-gate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:29px}
+.kwt-gate-grid>div{display:grid;grid-template-columns:37px 1fr;gap:6px 15px;border:1px solid #92d7e72e;border-radius:13px;padding:23px;background:#102536a6}
+.kwt-gate-grid b{grid-row:span 2;color:#82ecf1;font:800 1.2rem ui-monospace,Consolas,monospace}
+.kwt-gate-grid strong{color:#f5fcff;font-size:1.13rem}
+.kwt-gate-grid p{grid-column:2;margin:0;font-size:.92rem}
+.kwt-final-note{margin:25px 0 0;color:#d3e3e8;max-width:1040px}
+@media(max-width:960px){.kwt-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kwt-hero-grid,.kwt-process-grid{grid-template-columns:1fr}.kwt-hero-art,.kwt-work-figure{max-width:740px}}
+@media(max-width:620px){.kwt-page .kwt-wrap{width:min(100% - 30px,580px)}.kwt-feature-grid,.kwt-duo,.kwt-gate-grid{grid-template-columns:1fr}.kwt-hero{padding:33px 0 48px}.kwt-section{padding:44px 0}.kwt-section h2{font-size:clamp(2rem,9vw,2.7rem)}.kwt-feature{padding:21px}.kwt-actions .kwt-button{width:100%;justify-content:space-between}.kwt-hero h1{font-size:clamp(2.65rem,10vw,3.6rem)}.kwt-gate-grid>div{padding:20px}}
