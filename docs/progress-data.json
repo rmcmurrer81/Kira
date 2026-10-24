@@ -4,6 +4,41 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "evelyn-original-voice-preflight-2026-10-24",
+      "title": "Evelyn voice-model inventory verified; recorder startup blocked before speech",
+      "date": "2026-10-24",
+      "date_basis": "Recorded voice audition attempt 1193, saved in October 24 KiraWorld status; verified failed startup, not a completed voice generation",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "13 of 13 cached VoiceDesign model files passed hashing, but recorder process checks rejected startup; zero new WAV, video or lip-sync files resulted.",
+      "body": [
+        "The bounded attempt validated the selected interpreter and output metadata and rehashed all 13 existing model payload files, 4,520,163,832 bytes in total. This established file-preparation integrity for this run, not a finished voice model or a public installer.",
+        "The recorder rejected unexpected additional process generations before starting the actual worker. Both owned process Jobs ended empty and all 16 known handles were closed, while complete lineage coverage for additional generations remained unresolved.",
+        "There was no new audible Evelyn voice, WAV export, video or lip-sync. The next planned work is a smaller no-model startup diagnostic before another separately authorized full audition; the accepted NewBrain Original12 result remains 2/12."
+      ],
+      "boundary": "A recorded failed preflight, not voice synthesis, installed voice continuity, full-body motion, real conversation or public release evidence. Later local attempts are unverified until individually reviewed.",
+      "image": {
+        "path": "assets/evelyn-engineering-cinematic-concept-20261024.jpg",
+        "alt": "Conceptual engineering dashboard illustration, not a measured recorder test capture",
+        "caption": "Concept graphic only; the source report explicitly records zero generated media files."
+      },
+      "sources": [
+        {
+          "label": "October 24 Evelyn voice preflight and measured limits",
+          "url": "evelyn-development.html#evelyn-original-voice-preflight-2026-10-24"
+        },
+        {
+          "label": "Dated public research update",
+          "url": "updates.html#evelyn-original-voice-preflight-2026-10-24"
+        },
+        {
+          "label": "Retained voice attempt status (private repo access may be required)",
+          "url": "https://github.com/rmcmurrer81/KiraWorld/commit/3bdd1d09783ce181520e43d5e2c6441d88a39a00"
+        }
+      ],
+      "evidence_kind": "failed-voice-worker-startup-current-model-hash-preflight-no-audio"
+    },
+    {
       "id": "newbrain-arithmetic-verified-2026-10-24",
       "title": "NewBrain isolated numerical arithmetic verified in 105 synthetic cases",
       "date": "2026-10-24",

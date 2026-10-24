@@ -146,3 +146,34 @@
 @media(max-width:780px){.ehh-home .ehh-cinema .wrap,.ehh-home .ehh-topics .wrap,.ehh-home .ehh-evidence .wrap,.ehh-home .ehh-next .wrap{width:min(100% - 30px,680px)}.ehh-cinema-panel{display:flex;flex-direction:column}.ehh-cinema-copy{order:1;margin:0;padding:25px 23px 22px}.ehh-cinema-art{order:0;min-height:230px;max-height:310px}.ehh-cinema-art img{min-height:230px;max-height:310px}.ehh-cinema-vision{order:2;padding:14px 22px}.ehh-cinema h1{font-size:clamp(3rem,9vw,4.8rem)}.ehh-cinema h1 em{font-size:clamp(1.4rem,4.8vw,2rem)}.ehh-topics h2{font-size:clamp(2.3rem,7vw,3.7rem)}.eht-page .eht-hero-grid{grid-template-columns:1fr}.eht-page .eht-hero-media{max-width:760px}}
 @media(max-width:630px){.ehh-grid>.ehh-card,.ehh-grid>.ehh-card:nth-child(n+5),.ehh-grid>.ehh-card:last-child{grid-column:span 12}.ehh-grid{gap:13px}.ehh-grid>.ehh-card:nth-child(n+5) .ehh-card-image{aspect-ratio:2.1/1}.ehh-card-body{padding:20px}.ehh-cinema-actions a{width:100%;justify-content:space-between}.ehh-cinema-art{min-height:190px}.ehh-cinema-art img{min-height:190px}}
 @media(prefers-reduced-motion:reduce){.ehh-card,.ehh-card-image img{transition:none}.ehh-card:hover .ehh-card-image img{transform:none}}
+
+/* Evelyn authored beginning, evidence boundaries and planned room scene · Oct 24 */
+.eht-bio-section{background:radial-gradient(ellipse at 78% 14%,#2354783e,transparent 48%),linear-gradient(130deg,#0b1a2b,#101629)}
+.eht-bio-layout{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(22px,3.8vw,48px);align-items:start;margin:26px 0 23px}
+.eht-bio-portrait{margin:0;overflow:hidden;border:1px solid #83dcea5a;border-radius:16px;background:#0e2d41;box-shadow:0 14px 34px #0006}
+.eht-bio-portrait img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:48% center}
+.eht-bio-portrait figcaption{padding:13px 16px;font-size:.8rem;line-height:1.6;color:#c6dce8;background:#122c40}
+.eht-bio-content{min-width:0}
+.eht-bio-content p{color:#d5e4ef;line-height:1.75}
+.eht-bio-quote{font:italic 400 clamp(1.08rem,1.65vw,1.35rem)/1.55 Georgia,serif!important;color:#effdff!important;margin:4px 0 21px;padding-left:20px;border-left:3px solid #82e9f3}
+.eht-bio-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0 0}
+.eht-bio-facts div{padding:16px 15px;border:1px solid #80e2ea3c;background:#11283b;border-radius:10px;min-width:0}
+.eht-bio-facts dt{font:.75rem/1.5 ui-monospace,Consolas,monospace;letter-spacing:.09em;text-transform:uppercase;color:#8fe5ef;margin-bottom:6px}
+.eht-bio-facts dd{font-size:.9rem;line-height:1.57;color:#dbeef7;margin:0}
+.eht-bio-boundaries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:23px 0}
+.eht-bio-boundaries article{border-radius:12px;padding:22px 23px;border:1px solid #91dce341;background:#132737}
+.eht-bio-boundaries article span,.eht-gate-label{display:block;text-transform:uppercase;letter-spacing:.11em;font:800 .74rem/1.5 ui-monospace,Consolas,monospace;color:#85e9f4;margin-bottom:10px}
+.eht-bio-boundaries article h3{font-size:1.2rem;margin:0 0 11px;color:#eefbff}
+.eht-bio-boundaries article p{line-height:1.7;font-size:.92rem;color:#cbdde9;margin:0}
+.eht-voice-gates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:25px 0}
+.eht-voice-gates article{min-width:0;padding:23px 22px;border-radius:13px;background:linear-gradient(160deg,#142c41,#0d1c2f);border:1px solid #8eddea4b}
+.eht-voice-gates article:nth-child(2){border-color:#e2bd7a75}
+.eht-voice-gates article:nth-child(3){border-color:#dd9ca15b}
+.eht-voice-gates strong{display:block;font-size:clamp(2.0rem,3vw,3rem);font-weight:770;letter-spacing:-.04em;color:#9bf5fa;line-height:1.15;margin:9px 0}
+.eht-voice-gates h3{font-size:1.15rem;margin:0 0 11px;color:#f4fbff}
+.eht-voice-gates p{line-height:1.65;font-size:.9rem;color:#ccdfed;margin:0}
+.eht-furniture-plan{margin:22px 0;border:1px solid #7bd6e452;border-radius:13px;background:linear-gradient(135deg,#123047,#111c30);padding:22px 26px}
+.eht-furniture-plan h3{font-size:clamp(1.26rem,2.2vw,1.67rem);line-height:1.23;margin:6px 0 12px;color:#f0fdff}
+.eht-furniture-plan p:not(.eyebrow){font-size:.95rem;line-height:1.7;color:#cddfeb;margin:0 0 10px}
+@media(max-width:850px){.eht-bio-layout{grid-template-columns:1fr}.eht-bio-portrait{max-width:710px}.eht-voice-gates{grid-template-columns:1fr}}
+@media(max-width:610px){.eht-bio-facts,.eht-bio-boundaries{grid-template-columns:1fr}.eht-bio-boundaries article{padding:18px}.eht-furniture-plan{padding:18px}.eht-bio-portrait img{aspect-ratio:16/10}}
