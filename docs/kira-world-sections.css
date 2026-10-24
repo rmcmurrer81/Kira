@@ -175,3 +175,7 @@
 .kw-legacy-media img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
 .kw-legacy-media figcaption{color:#bbd7e1;padding:12px 15px;font-size:.75rem;line-height:1.55;background:#14283a}
 @media(max-width:800px){.kw-legacy-inner{grid-template-columns:1fr}.kw-legacy-media{max-width:640px}}
+
+/* Improve the planned Voice Designer teaser photo at desktop and mobile sizes. */
+.kw-legacy-teaser .kw-legacy-media img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 43%;image-rendering:auto}
+.kw-legacy-teaser .kw-legacy-media{box-shadow:0 15px 42px rgba(0,0,0,.55),0 0 0 1px rgba(134,232,252,.12)}

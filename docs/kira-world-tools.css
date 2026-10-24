@@ -55,3 +55,32 @@
 .kwt-final-note{margin:25px 0 0;color:#d3e3e8;max-width:1040px}
 @media(max-width:960px){.kwt-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kwt-hero-grid,.kwt-process-grid{grid-template-columns:1fr}.kwt-hero-art,.kwt-work-figure{max-width:740px}}
 @media(max-width:620px){.kwt-page .kwt-wrap{width:min(100% - 30px,580px)}.kwt-feature-grid,.kwt-duo,.kwt-gate-grid{grid-template-columns:1fr}.kwt-hero{padding:33px 0 48px}.kwt-section{padding:44px 0}.kwt-section h2{font-size:clamp(2rem,9vw,2.7rem)}.kwt-feature{padding:21px}.kwt-actions .kwt-button{width:100%;justify-content:space-between}.kwt-hero h1{font-size:clamp(2.65rem,10vw,3.6rem)}.kwt-gate-grid>div{padding:20px}}
+
+
+/* Cinematic Voice Designer preview: artwork complements, never replaces, executable interface. */
+.kwt-page .kwt-voice{background:radial-gradient(ellipse at 75% 20%,rgba(36,110,146,.23),transparent 54%),linear-gradient(140deg,#071626,#0d1429)}
+.kwt-studio-showcase{position:relative;margin:clamp(20px,3vw,34px) 0 34px;border:1px solid rgba(110,228,247,.47);border-radius:17px;overflow:hidden;background:#081a2c;box-shadow:0 24px 65px #020913aa,0 0 32px #5be8ef13}
+.kwt-studio-image{position:relative;overflow:hidden}
+.kwt-studio-image img{display:block;width:100%;height:auto;max-height:620px;aspect-ratio:1672/941;object-fit:cover;object-position:center 45%;filter:saturate(1.08) contrast(1.025)}
+.kwt-studio-image:after{content:"";position:absolute;inset:44% 0 0;background:linear-gradient(transparent,rgba(4,13,26,.49));pointer-events:none}
+.kwt-studio-stamp{position:absolute;z-index:1;right:20px;bottom:20px;font:750 .72rem/1.4 ui-monospace,Consolas,monospace;text-transform:uppercase;letter-spacing:.065em;border:1px solid #80e9f4ad;border-radius:8px;background:#051628d6;padding:9px 12px;color:#b3f5f9}
+.kwt-studio-showcase figcaption{padding:17px 22px;border-top:1px solid #84dded48;background:linear-gradient(90deg,#102a42,#0c1b2e);font-size:.85rem;line-height:1.64;color:#c4dce9}
+.kwt-studio-showcase figcaption strong{color:#e8faff}
+.kwt-showcase-intro{display:flex;justify-content:space-between;gap:23px;align-items:end;flex-wrap:wrap;margin:20px 0}
+.kwt-showcase-intro .kwt-eyebrow{width:100%;margin:0}
+.kwt-showcase-intro h3{font-size:clamp(1.55rem,2.45vw,2.15rem);margin:0;letter-spacing:-.035em;line-height:1.15}
+.kwt-showcase-intro p:not(.kwt-eyebrow){margin:0;font-size:.9rem;max-width:480px;color:#bcd6e6}
+.kwt-feature-grid{gap:17px}
+.kwt-feature{position:relative;min-height:240px;background:radial-gradient(circle at 10% 2%,#163e54bb,transparent 60%),linear-gradient(145deg,#132941,#0b192b);border-color:#86d9e655;border-radius:16px;box-shadow:0 10px 28px #03081542}
+.kwt-feature:hover{border-color:#9ceff3;box-shadow:0 12px 30px #03152399}
+.kwt-visual-icon{display:flex;align-items:center;justify-content:center;width:72px;height:72px;border:1px solid rgba(115,225,248,.35);border-radius:18px;background:linear-gradient(135deg,rgba(33,115,150,.32),rgba(78,51,139,.2));box-shadow:inset 0 0 18px #58d9f10e,0 9px 18px #0004;margin-bottom:17px;color:#83ebf7}
+.kwt-feature-svg{width:52px;height:52px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 7px #58edfa50)}
+.kwt-feature .kwt-number{position:absolute;right:20px;top:23px;color:#b9f8ff;border-color:#8ce7ee66}
+.kwt-feature h3{margin-top:0}
+.kwt-developer-art{margin:24px 0 19px;border:1px solid #72dbea55;overflow:hidden;border-radius:16px;background:#0e2133;box-shadow:0 19px 44px #0008}
+.kwt-developer-art img{display:block;width:100%;height:auto;max-height:520px;aspect-ratio:1672/941;object-fit:cover;object-position:center center}
+.kwt-developer-art figcaption{padding:14px 19px;color:#b8d6e7;font-size:.79rem;line-height:1.6;background:#102638}
+.kwt-hero-art img{object-position:center 45%}
+@media(max-width:900px){.kwt-studio-image img{max-height:490px}.kwt-visual-icon{width:66px;height:66px}.kwt-showcase-intro{align-items:start}}
+@media(max-width:620px){.kwt-studio-showcase{margin:16px 0 28px}.kwt-studio-image img{aspect-ratio:4/3;max-height:380px;object-fit:cover}.kwt-studio-stamp{right:10px;bottom:10px;font-size:.57rem;padding:7px 9px}.kwt-studio-showcase figcaption{padding:13px 14px}.kwt-feature{min-height:0}.kwt-developer-art img{aspect-ratio:4/3}.kwt-showcase-intro{display:block}.kwt-showcase-intro h3{margin:11px 0}.kwt-feature-grid{gap:13px}}
+@media(prefers-reduced-motion:reduce){.kwt-feature{transition:none}}
