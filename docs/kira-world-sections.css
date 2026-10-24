@@ -126,9 +126,10 @@
 }
 .kw-detail.kw-avatar-page .kw-hero-art{background:#101e34}
 .kw-detail.kw-notebook-page .kw-hero-art img{
-  aspect-ratio:16/9;
-  object-fit:cover;
-  object-position:82% center;
+  aspect-ratio:1920/796;
+  object-fit:contain;
+  object-position:center;
+  background:#0f263b;
 }
 .kw-detail.kw-home-page .kw-hero-art img{
   object-fit:contain;
@@ -152,10 +153,10 @@
   background:#14233b;
 }
 @media(max-width:860px){
- .kw-detail.kw-notebook-page .kw-hero-art img{object-position:78% center}
+ .kw-detail.kw-notebook-page .kw-hero-art img{aspect-ratio:1920/796;object-fit:contain;object-position:center}
  .kw-detail.kw-avatar-page .kw-hero-art img{aspect-ratio:5/4}
 }
 @media(max-width:520px){
- .kw-detail.kw-notebook-page .kw-hero-art img{aspect-ratio:16/10}
+ .kw-detail.kw-notebook-page .kw-hero-art img{aspect-ratio:1920/796;object-fit:contain;object-position:center}
  .kw-detail.kw-avatar-page .kw-hero-art img{aspect-ratio:4/3}
 }
