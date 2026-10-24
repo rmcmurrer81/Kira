@@ -114,3 +114,48 @@
   .kw-hub-compact .kw-hub-summary .button{grid-column:auto;justify-self:stretch;white-space:normal}
   .kw-detail .kw-moved-content .wrap,.kw-detail .kw-moved-content .xf-wide{width:calc(100% - 32px)}
 }
+
+/* Oct 24 visual fidelity: never clip portraits, use high-resolution notebook art. */
+.kw-detail .kw-hero-art{min-width:0}
+.kw-detail .kw-hero-art img{display:block;max-width:100%;height:auto}
+.kw-detail.kw-avatar-page .kw-hero-art img{
+  aspect-ratio:5/4;
+  object-fit:contain;
+  object-position:center;
+  background:radial-gradient(circle at center,#1a3b57,#0c182c);
+}
+.kw-detail.kw-avatar-page .kw-hero-art{background:#101e34}
+.kw-detail.kw-notebook-page .kw-hero-art img{
+  aspect-ratio:16/9;
+  object-fit:cover;
+  object-position:82% center;
+}
+.kw-detail.kw-home-page .kw-hero-art img{
+  object-fit:contain;
+  background:#0d2133;
+}
+.kw-detail .kw-route img[src*="evelyn-hart-holographic"],
+.kw-detail .kw-route img[src*="kira-lisa-companions"],
+.kw-detail .kw-route img[src*="kira-world-companionship"],
+.kw-detail .kw-media-fig img[src*="evelyn-hart-holographic"],
+.kw-detail .kw-media-fig img[src*="kira-lisa-companions"]{
+  object-fit:contain;
+  object-position:center;
+  background:#12263e;
+}
+.kw-detail .kw-route img[src*="kira-hero-landscape"]{
+  object-fit:cover;
+  object-position:82% center;
+}
+.kw-detail .kw-media-fig img[src*="current-home-world-prototype"]{
+  object-fit:contain;
+  background:#14233b;
+}
+@media(max-width:860px){
+ .kw-detail.kw-notebook-page .kw-hero-art img{object-position:78% center}
+ .kw-detail.kw-avatar-page .kw-hero-art img{aspect-ratio:5/4}
+}
+@media(max-width:520px){
+ .kw-detail.kw-notebook-page .kw-hero-art img{aspect-ratio:16/10}
+ .kw-detail.kw-avatar-page .kw-hero-art img{aspect-ratio:4/3}
+}
