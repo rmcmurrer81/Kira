@@ -130,3 +130,18 @@
   .eh-library-visual{margin:22px auto 26px;border-radius:10px;}
   .eh-library-visual figcaption{padding:12px 13px 14px;font-size:.78rem;}
 }
+
+/* October 24, 2026 — review-stage catalog remains collapsed by default */
+.eh-library-catalog{margin:27px auto 28px;border:1px solid rgba(132,230,243,.34);border-radius:14px;background:linear-gradient(130deg,#142c40,#0b1a2c);max-width:1110px;overflow:hidden}
+.eh-library-catalog summary{padding:18px 22px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;color:#9cf2fa;font-weight:800;font-size:1.02rem;list-style:none}
+.eh-library-catalog summary::-webkit-details-marker{display:none}
+.eh-library-catalog summary:after{content:"+";font-size:1.5rem;font-weight:400}
+.eh-library-catalog[open] summary:after{content:"−"}
+.eh-library-catalog[open] summary{border-bottom:1px solid rgba(144,229,248,.25);background:#1a354b}
+.eh-library-catalog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:22px 26px 5px}
+.eh-library-catalog h3{font-size:1.05rem;line-height:1.4;margin:0 0 12px;color:#e9faff}
+.eh-library-catalog ol{margin:0 0 18px;padding-left:23px}
+.eh-library-catalog li{color:#d0e1eb;font-size:.88rem;line-height:1.65;margin:5px 0}
+.eh-library-catalog>p{margin:0;padding:11px 26px 17px;font-size:.87rem;color:#bdcfdc;line-height:1.65}
+.eh-library-catalog>p a{color:#97f0f8}
+@media(max-width:650px){.eh-library-catalog summary{padding:15px 16px;font-size:.92rem}.eh-library-catalog-grid{grid-template-columns:1fr;padding:18px 18px 0;gap:4px}.eh-library-catalog>p{padding:10px 18px 15px}}
