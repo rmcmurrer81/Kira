@@ -29,6 +29,38 @@
       },
       "scrollWidth": 1440,
       "viewportWidth": 1440,
+      "researchPillCircles": [
+        {
+          "x": 78.4,
+          "y": 537.5,
+          "w": 36,
+          "h": 36
+        },
+        {
+          "x": 351.2,
+          "y": 537.5,
+          "w": 36,
+          "h": 36
+        },
+        {
+          "x": 624,
+          "y": 537.5,
+          "w": 36,
+          "h": 36
+        },
+        {
+          "x": 896.8,
+          "y": 537.5,
+          "w": 36,
+          "h": 36
+        },
+        {
+          "x": 1170.1,
+          "y": 537.5,
+          "w": 36,
+          "h": 36
+        }
+      ],
       "heroImgNaturalWidth": null,
       "heroImgNaturalHeight": null
     },
@@ -69,26 +101,9 @@
         "w": 540,
         "h": 178
       },
-      ".xf-world-panorama": {
-        "x": 35,
-        "y": 1244,
-        "w": 1370,
-        "h": 230
-      },
-      ".xf-section": {
-        "x": 0,
-        "y": 627,
-        "w": 1440,
-        "h": 896
-      },
-      ".xf-card-grid": {
-        "x": 35,
-        "y": 829,
-        "w": 1370,
-        "h": 399
-      },
       "scrollWidth": 1440,
       "viewportWidth": 1440,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
       "heroImgNaturalHeight": 796
     },
@@ -143,6 +158,7 @@
       },
       "scrollWidth": 1440,
       "viewportWidth": 1440,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
       "heroImgNaturalHeight": 760
     },
@@ -185,6 +201,7 @@
       },
       "scrollWidth": 1440,
       "viewportWidth": 1440,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 2172,
       "heroImgNaturalHeight": 724
     },
@@ -227,6 +244,7 @@
       },
       "scrollWidth": 1440,
       "viewportWidth": 1440,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
       "heroImgNaturalHeight": 941
     },
@@ -275,6 +293,7 @@
       },
       "scrollWidth": 1440,
       "viewportWidth": 1440,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
       "heroImgNaturalHeight": 941
     },
@@ -311,6 +330,38 @@
       },
       "scrollWidth": 1980,
       "viewportWidth": 1980,
+      "researchPillCircles": [
+        {
+          "x": 314,
+          "y": 559.2,
+          "w": 36,
+          "h": 36
+        },
+        {
+          "x": 604,
+          "y": 559.2,
+          "w": 36,
+          "h": 36
+        },
+        {
+          "x": 894,
+          "y": 559.2,
+          "w": 36,
+          "h": 36
+        },
+        {
+          "x": 1184,
+          "y": 559.2,
+          "w": 36,
+          "h": 36
+        },
+        {
+          "x": 1474.5,
+          "y": 559.2,
+          "w": 36,
+          "h": 36
+        }
+      ],
       "heroImgNaturalWidth": null,
       "heroImgNaturalHeight": null
     },
@@ -351,26 +402,9 @@
         "w": 540,
         "h": 200
       },
-      ".xf-world-panorama": {
-        "x": 265,
-        "y": 1274,
-        "w": 1450,
-        "h": 230
-      },
-      ".xf-section": {
-        "x": 0,
-        "y": 649,
-        "w": 1980,
-        "h": 904
-      },
-      ".xf-card-grid": {
-        "x": 265,
-        "y": 865,
-        "w": 1450,
-        "h": 393
-      },
       "scrollWidth": 1980,
       "viewportWidth": 1980,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
       "heroImgNaturalHeight": 796
     },
@@ -425,6 +459,7 @@
       },
       "scrollWidth": 1980,
       "viewportWidth": 1980,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
       "heroImgNaturalHeight": 760
     },
@@ -467,6 +502,7 @@
       },
       "scrollWidth": 1980,
       "viewportWidth": 1980,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 2172,
       "heroImgNaturalHeight": 724
     },
@@ -509,6 +545,7 @@
       },
       "scrollWidth": 1980,
       "viewportWidth": 1980,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
       "heroImgNaturalHeight": 941
     },
@@ -557,11 +594,313 @@
       },
       "scrollWidth": 1980,
       "viewportWidth": 1980,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
       "heroImgNaturalHeight": 941
     },
     "errors": [],
     "screenshot": "qa/visual-review/newbrain-wide.jpg"
+  },
+  {
+    "page": "index.html",
+    "device": "tablet",
+    "geometry": {
+      ".hl-hero": {
+        "x": 0,
+        "y": 74,
+        "w": 980,
+        "h": 408
+      },
+      ".hl-hero-photo": {
+        "x": 245,
+        "y": 74,
+        "w": 735,
+        "h": 407
+      },
+      ".hl-evidence": {
+        "x": 0,
+        "y": 2509,
+        "w": 980,
+        "h": 1006
+      },
+      ".hl-programs": {
+        "x": 0,
+        "y": 624,
+        "w": 980,
+        "h": 1477
+      },
+      "scrollWidth": 980,
+      "viewportWidth": 980,
+      "researchPillCircles": [
+        {
+          "x": 92.7,
+          "y": 499.8,
+          "w": 36,
+          "h": 36
+        },
+        {
+          "x": 394,
+          "y": 499.8,
+          "w": 36,
+          "h": 36
+        },
+        {
+          "x": 695.8,
+          "y": 499.8,
+          "w": 36,
+          "h": 36
+        },
+        {
+          "x": 92.7,
+          "y": 569.8,
+          "w": 36,
+          "h": 36
+        },
+        {
+          "x": 394.5,
+          "y": 569.8,
+          "w": 36,
+          "h": 36
+        }
+      ],
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/index-tablet.jpg"
+  },
+  {
+    "page": "kira-world.html",
+    "device": "tablet",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 74,
+        "w": 980,
+        "h": 588
+      },
+      ".xf-hero-copy": {
+        "x": 27,
+        "y": 74,
+        "w": 398,
+        "h": 587
+      },
+      ".xf-hero-visual": {
+        "x": 212,
+        "y": 74,
+        "w": 785,
+        "h": 587
+      },
+      ".xf-hero-visual>img": {
+        "x": 212,
+        "y": 74,
+        "w": 785,
+        "h": 587
+      },
+      ".xf-display": {
+        "x": 27,
+        "y": 127,
+        "w": 398,
+        "h": 145
+      },
+      "scrollWidth": 980,
+      "viewportWidth": 980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 796
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/kira-world-tablet.jpg"
+  },
+  {
+    "page": "about.html",
+    "device": "tablet",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 74,
+        "w": 980,
+        "h": 686
+      },
+      ".xf-hero-copy": {
+        "x": 27,
+        "y": 74,
+        "w": 398,
+        "h": 685
+      },
+      ".xf-hero-visual": {
+        "x": 240,
+        "y": 74,
+        "w": 757,
+        "h": 685
+      },
+      ".xf-hero-visual>img": {
+        "x": 240,
+        "y": 74,
+        "w": 757,
+        "h": 685
+      },
+      ".xf-display": {
+        "x": 27,
+        "y": 132,
+        "w": 398,
+        "h": 103
+      },
+      ".xf-section": {
+        "x": 0,
+        "y": 760,
+        "w": 980,
+        "h": 912
+      },
+      ".xf-card-grid": {
+        "x": 35,
+        "y": 930,
+        "w": 910,
+        "h": 606
+      },
+      "scrollWidth": 980,
+      "viewportWidth": 980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": 1920,
+      "heroImgNaturalHeight": 760
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/about-tablet.jpg"
+  },
+  {
+    "page": "contact.html",
+    "device": "tablet",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 74,
+        "w": 980,
+        "h": 366
+      },
+      ".xf-hero-copy": {
+        "x": 44,
+        "y": 115,
+        "w": 428,
+        "h": 284
+      },
+      ".xf-hero-visual": {
+        "x": 178,
+        "y": 74,
+        "w": 802,
+        "h": 365
+      },
+      ".xf-hero-visual>img": {
+        "x": 178,
+        "y": 74,
+        "w": 802,
+        "h": 365
+      },
+      ".xf-display": {
+        "x": 44,
+        "y": 169,
+        "w": 428,
+        "h": 54
+      },
+      "scrollWidth": 980,
+      "viewportWidth": 980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": 2172,
+      "heroImgNaturalHeight": 724
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/contact-tablet.jpg"
+  },
+  {
+    "page": "companion-robotics.html",
+    "device": "tablet",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 74,
+        "w": 980,
+        "h": 439
+      },
+      ".xf-hero-copy": {
+        "x": 44,
+        "y": 87,
+        "w": 419,
+        "h": 412
+      },
+      ".xf-hero-visual": {
+        "x": 276,
+        "y": 74,
+        "w": 704,
+        "h": 438
+      },
+      ".xf-hero-visual>img": {
+        "x": 276,
+        "y": 74,
+        "w": 704,
+        "h": 438
+      },
+      ".xf-display": {
+        "x": 44,
+        "y": 142,
+        "w": 419,
+        "h": 95
+      },
+      "scrollWidth": 980,
+      "viewportWidth": 980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": 1672,
+      "heroImgNaturalHeight": 941
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/companion-robotics-tablet.jpg"
+  },
+  {
+    "page": "newbrain.html",
+    "device": "tablet",
+    "geometry": {
+      ".xf-hero": {
+        "x": 0,
+        "y": 74,
+        "w": 980,
+        "h": 463
+      },
+      ".xf-hero-copy": {
+        "x": 44,
+        "y": 74,
+        "w": 401,
+        "h": 462
+      },
+      ".xf-hero-visual": {
+        "x": 329,
+        "y": 74,
+        "w": 651,
+        "h": 462
+      },
+      ".xf-hero-visual>img": {
+        "x": 329,
+        "y": 74,
+        "w": 651,
+        "h": 462
+      },
+      ".xf-display": {
+        "x": 44,
+        "y": 129,
+        "w": 401,
+        "h": 95
+      },
+      ".xf-section": {
+        "x": 0,
+        "y": 8197,
+        "w": 980,
+        "h": 958
+      },
+      "scrollWidth": 980,
+      "viewportWidth": 980,
+      "researchPillCircles": [],
+      "heroImgNaturalWidth": 1672,
+      "heroImgNaturalHeight": 941
+    },
+    "errors": [],
+    "screenshot": "qa/visual-review/newbrain-tablet.jpg"
   },
   {
     "page": "index.html",
@@ -593,6 +932,38 @@
       },
       "scrollWidth": 390,
       "viewportWidth": 390,
+      "researchPillCircles": [
+        {
+          "x": 23,
+          "y": 886.5,
+          "w": 31,
+          "h": 31
+        },
+        {
+          "x": 202,
+          "y": 886.5,
+          "w": 31,
+          "h": 31
+        },
+        {
+          "x": 23,
+          "y": 942.5,
+          "w": 31,
+          "h": 31
+        },
+        {
+          "x": 202,
+          "y": 942.5,
+          "w": 31,
+          "h": 31
+        },
+        {
+          "x": 112,
+          "y": 998.5,
+          "w": 31,
+          "h": 31
+        }
+      ],
       "heroImgNaturalWidth": null,
       "heroImgNaturalHeight": null
     },
@@ -633,26 +1004,9 @@
         "w": 356,
         "h": 124
       },
-      ".xf-world-panorama": {
-        "x": 16,
-        "y": 2685,
-        "w": 358,
-        "h": 230
-      },
-      ".xf-section": {
-        "x": 0,
-        "y": 965,
-        "w": 390,
-        "h": 1999
-      },
-      ".xf-card-grid": {
-        "x": 16,
-        "y": 1309,
-        "w": 358,
-        "h": 1360
-      },
       "scrollWidth": 390,
       "viewportWidth": 390,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
       "heroImgNaturalHeight": 796
     },
@@ -707,6 +1061,7 @@
       },
       "scrollWidth": 390,
       "viewportWidth": 390,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 1920,
       "heroImgNaturalHeight": 760
     },
@@ -749,6 +1104,7 @@
       },
       "scrollWidth": 390,
       "viewportWidth": 390,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 2172,
       "heroImgNaturalHeight": 724
     },
@@ -791,6 +1147,7 @@
       },
       "scrollWidth": 390,
       "viewportWidth": 390,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
       "heroImgNaturalHeight": 941
     },
@@ -839,6 +1196,7 @@
       },
       "scrollWidth": 390,
       "viewportWidth": 390,
+      "researchPillCircles": [],
       "heroImgNaturalWidth": 1672,
       "heroImgNaturalHeight": 941
     },
