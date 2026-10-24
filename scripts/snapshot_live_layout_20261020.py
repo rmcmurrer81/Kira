@@ -8,7 +8,7 @@ from playwright.sync_api import sync_playwright
 
 out=Path("qa/visual-review")
 out.mkdir(exist_ok=True,parents=True)
-pages=["index.html","kira-world.html","about.html","contact.html","companion-robotics.html","newbrain.html"]
+pages=["index.html","kira-world.html","about.html","contact.html","companion-robotics.html","newbrain.html","evelyn-release.html","evelyn-help-preview.html"]
 report=[]
 with sync_playwright() as p:
     browser=p.chromium.launch(headless=True,args=["--no-sandbox"])
