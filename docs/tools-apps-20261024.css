@@ -79,3 +79,16 @@
 .vdg-last .kta-button-row{align-items:center;justify-content:flex-start}
 @media(max-width:850px){.vdg-hero-grid,.vdg-last{grid-template-columns:1fr}.vdg-help-grid{grid-template-columns:1fr}.vdg-hero .kta-hero-visual{max-width:700px}}
 @media(max-width:620px){.vdg-section{padding:42px 0}.vdg-table-scroll table{font-size:.84rem}.vdg-help-card{padding:17px}.vdg-last .kta-button-row .button{width:100%}}
+
+/* On mobile show each component as a labeled requirement card, not a clipped matrix. */
+@media(max-width:690px){
+ .vdg-table-scroll{overflow:visible}
+ .vdg-table-scroll table,.vdg-table-scroll tbody{display:block;width:100%;min-width:0}
+ .vdg-table-scroll thead{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+ .vdg-table-scroll tbody tr{display:block;padding:17px 16px;border-bottom:1px solid #80deeb4a}
+ .vdg-table-scroll tbody tr:last-child{border-bottom:0}
+ .vdg-table-scroll tbody th,.vdg-table-scroll tbody td{display:block;width:auto;border:0;padding:0;min-width:0;overflow-wrap:anywhere}
+ .vdg-table-scroll tbody th{font-size:1.09rem;color:#98eff7;margin:0 0 14px;line-height:1.35}
+ .vdg-table-scroll tbody td{margin-top:13px;font-size:.9rem;line-height:1.62;color:#deedf6}
+ .vdg-table-scroll tbody td:before{content:attr(data-label);display:block;font:800 .72rem/1.5 ui-monospace,Consolas,monospace;letter-spacing:.065em;text-transform:uppercase;color:#88e2ed;margin-bottom:4px}
+}
