@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "person-creator-renamed-2026-10-24",
+      "title": "Temporary Creator renamed Person Creator",
+      "date": "2026-10-24",
+      "date_basis": "Owner's explicit October 24 naming decision, reflected in public website sources",
+      "status": "working",
+      "track": "Kira World",
+      "summary": "The Kira World creator is now Person Creator because created people may be temporary or continuing; no new runtime capability is implied.",
+      "body": [
+        "Person Creator is the new public name for the earlier Temporary Creator or Temporary AI Creator research. The tool is intended to prepare distinct expert, companion and character identities, some short-lived and some continuing.",
+        "Kira World site labels and topic navigation now use Person Creator. A compatibility redirect preserves the historical Temporary Creator URL and deep links; original dated demonstration titles remain historical records.",
+        "This public naming choice does not verify autonomous personal growth, complete mind/body/voice integration, live conversation, full memory persistence or a public release."
+      ],
+      "boundary": "Naming and documentation decision only; temporary and continuing are design distinctions for individuals, not proven output modes.",
+      "image": {
+        "path": "assets/kira-world-companionship-concept-2026-10-18.jpg",
+        "alt": "Conceptual image of a synthetic companion in a virtual room, not a tested creator application",
+        "caption": "Concept artwork accompanying the naming announcement."
+      },
+      "sources": [
+        {
+          "label": "Person Creator announcement and technical boundaries",
+          "url": "kira-world-person-creator.html#person-creator-renamed-2026-10-24"
+        },
+        {
+          "label": "October 24 development update",
+          "url": "updates.html#person-creator-renamed-2026-10-24"
+        }
+      ],
+      "evidence_kind": "owner-approved-naming-documentation-milestone"
+    },
+    {
       "id": "evelyn-original-voice-preflight-2026-10-24",
       "title": "Evelyn voice-model inventory verified; recorder startup blocked before speech",
       "date": "2026-10-24",

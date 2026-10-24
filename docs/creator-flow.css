@@ -56,3 +56,21 @@
 .creator-twin a{color:#99e5f0}
 @media(max-width:850px){.creator-feature{grid-template-columns:1fr}.creator-feature-media{max-height:360px}.creator-feature-media img{min-height:0;max-height:300px;object-position:center 28%}.creator-twin-steps{grid-template-columns:1fr}}
 @media(max-width:600px){.creator-people-grid{grid-template-columns:1fr}.creator-feature-actions .button{width:100%;text-align:center}.creator-feature-copy{padding:20px}.creator-person-card{padding:18px}.creator-twin{padding:20px}}
+
+/* Person Creator public naming decision, October 24 2026 */
+.pc-rename-section{background:radial-gradient(ellipse at 83% 20%,#2876a147,transparent 48%),linear-gradient(130deg,#091e31,#151b33);border-block:1px solid #7fe3f04d}
+.pc-rename-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(275px,.85fr);gap:clamp(24px,5vw,65px);align-items:center}
+.pc-rename-section h2{font-size:clamp(2.1rem,3.8vw,3.45rem);line-height:1.12;letter-spacing:-.036em;margin:9px 0 19px;color:#f5fcff}
+.pc-rename-section h2 em{color:#85eef3;font:italic 400 .9em Georgia,serif}
+.pc-rename-section p:not(.kw-eyebrow){color:#cfe3ee;font-size:1rem;line-height:1.73}
+.pc-rename-section strong{color:#f5fcff}
+.pc-rename-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.pc-rename-links .button{display:inline-flex;min-height:43px;align-items:center;text-decoration:none}
+.pc-person-types{padding:30px 28px;border:1px solid #83e2ed66;border-radius:17px;background:linear-gradient(145deg,#12394f,#11172c);box-shadow:0 20px 46px #0008}
+.pc-types-overline{color:#98edf2;text-transform:uppercase;letter-spacing:.11em;font:700 .73rem ui-monospace,Consolas,monospace}
+.pc-person-types h3{font-size:1.53rem;margin:15px 0 22px;color:#f1fcff}
+.pc-type-list{display:flex;flex-wrap:wrap;gap:10px}
+.pc-type-list span{border:1px solid #84e5f282;color:#c6fbff;background:#0d2e44;padding:8px 13px;border-radius:21px;font-size:.89rem;font-weight:710}
+.pc-person-types p{font-size:.89rem!important;line-height:1.7;margin:20px 0 0}
+@media(max-width:760px){.pc-rename-grid{grid-template-columns:1fr}.pc-rename-section h2{font-size:clamp(2.05rem,8vw,2.9rem)}}
+@media(max-width:560px){.pc-person-types{padding:23px}.pc-rename-links .button{width:100%;justify-content:center}}
