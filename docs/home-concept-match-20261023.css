@@ -1,0 +1,60 @@
+/* Homepage correction: match approved six-card visual concept, 23 Oct 2026.
+   Final override after historic homepage styles. No new scientific claims. */
+.hl-home,.hl-home .hl-content{max-width:100%;overflow-x:clip}
+.hl-home .hl-shell{max-width:calc(100% - 32px)}
+.hl-home .hl-research-ribbon{background:#05192b;border-top:1px solid rgba(122,237,248,.18);border-bottom:1px solid rgba(122,237,248,.30)}
+.hl-home .hl-research-ribbon .hl-shell{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;align-items:center}
+.hl-home .hl-pillar{min-width:0;display:flex;align-items:center;justify-content:center;gap:11px;padding:17px 10px;text-decoration:none;border-right:1px solid rgba(143,221,242,.14);color:#e4f6ff;font-weight:650;font-size:.75rem;line-height:1.38}
+.hl-home .hl-pillar:last-child{border-right:0}
+.hl-home .hl-pillar:hover{color:#8ef4fa;background:rgba(73,186,212,.08)}
+.hl-home .hl-pillar-mark{flex:none;display:grid;place-items:center;width:36px;height:36px;border:1.5px solid #5de0ee;border-radius:50%;color:#7decf4;background:#091a2e;font:700 18px/1 system-ui}
+.hl-home .hl-programs{padding:clamp(32px,4.7vw,68px) 0 clamp(41px,5vw,78px);background:linear-gradient(180deg,#071927,#0a1c2f 75%,#09192b)}
+.hl-home .hl-programs .hl-section-head{margin-bottom:26px;align-items:end}
+.hl-home .hl-programs .hl-section-head h2{font-size:clamp(1.8rem,3.4vw,3.1rem);letter-spacing:-.046em;line-height:1.12}
+.hl-home .hl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.hl-home .hl-program{display:flex;flex-direction:column;min-width:0;max-width:100%;border:1px solid rgba(100,213,238,.37);border-radius:12px;background:linear-gradient(180deg,#102e45,#0b2237 65%,#081b2e);box-shadow:0 12px 30px rgba(2,9,25,.24);overflow:hidden;transition:transform .18s ease,border-color .18s ease}
+.hl-home .hl-program img{display:block;order:0;width:100%;height:auto!important;aspect-ratio:16/9;object-fit:cover;object-position:center 45%;background:#0d2139}
+.hl-home .hl-program-heading{order:1;flex:none;min-height:0;padding:16px 18px 5px}
+.hl-home .hl-program-heading strong{font-size:clamp(1.07rem,1.5vw,1.27rem);letter-spacing:-.025em;line-height:1.2}
+.hl-home .hl-program-heading span{font-size:.75rem;line-height:1.45;margin-top:5px;color:#b7d1e3}
+.hl-home .hl-program-copy{order:2;display:flex;flex:1;min-height:0;padding:0 18px 17px;gap:12px;flex-direction:column}
+.hl-home .hl-program-copy p{font-size:.87rem;line-height:1.6;margin:0;color:#d1e2ed}
+.hl-home .hl-program-copy .hl-go{font-size:.84rem;line-height:1.35;margin-top:auto;padding-top:9px;color:#88f1fa;text-decoration:underline;text-underline-offset:4px}
+.hl-home .hl-program:hover,.hl-home .hl-program:focus-visible{border-color:#76ecf8;box-shadow:0 17px 35px rgba(1,11,30,.42)}
+.hl-home .hl-program[href="kira-world.html"] img{object-position:center 52%!important}
+.hl-home .hl-program[href="evelyn-hart.html"] img{object-position:center 8%!important}
+.hl-home .hl-program[href="video-studio.html"] img{object-position:center 52%!important}
+.hl-home .hl-evidence{padding:clamp(34px,5vw,66px) 0;background:linear-gradient(150deg,#09192c,#0c2037 70%,#091b30)}
+.hl-home .hl-evidence .hl-evidence-header{margin-bottom:24px}
+.hl-home .hl-evidence .hl-metrics{margin:23px 0 18px}
+.hl-home .hl-evidence>.hl-shell>.hl-evidence-caveat{font-size:.93rem;line-height:1.72}
+.hl-home .hl-evidence-details{margin:24px 0 0;max-width:100%}
+.hl-home .hl-mission{min-height:290px;background-position:center 52%}
+.hl-home .hl-mission-inner{padding-block:clamp(37px,6vw,70px)}
+.hl-home .hl-mission h2{font-size:clamp(2rem,3vw,3rem)}
+/* The concept has the skyline story immediately after the six image cards. */
+@media(max-width:1080px){
+ .hl-home .hl-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+ .hl-home .hl-program-heading{padding:14px 15px 6px}
+ .hl-home .hl-program-copy{padding:0 15px 15px}
+ .hl-home .hl-research-ribbon .hl-shell{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .hl-home .hl-pillar:nth-child(3){border-right:0}
+}
+@media(max-width:650px){
+ .hl-home .hl-shell{width:calc(100% - 32px);max-width:calc(100% - 32px)}
+ .hl-home .hl-grid{grid-template-columns:minmax(0,1fr);gap:15px}
+ .hl-home .hl-program{display:flex;flex-direction:column;grid-template-columns:none;width:100%;max-width:100%}
+ .hl-home .hl-program img{grid-column:auto;grid-row:auto;width:100%;height:auto!important;min-height:0!important;aspect-ratio:16/9;order:0}
+ .hl-home .hl-program-heading{grid-column:auto;grid-row:auto;min-height:0;order:1;padding:14px 16px 6px}
+ .hl-home .hl-program-copy{grid-column:auto;grid-row:auto;order:2;display:flex;min-height:0;padding:0 16px 17px}
+ .hl-home .hl-program-heading strong{font-size:1.18rem}
+ .hl-home .hl-program-copy p{font-size:.86rem}
+ .hl-home .hl-research-ribbon .hl-shell{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hl-home .hl-pillar{justify-content:flex-start;padding:12px 7px;font-size:.67rem;gap:8px;border-right:0;border-bottom:1px solid rgba(143,221,242,.14)}
+ .hl-home .hl-pillar-mark{width:31px;height:31px;font-size:15px}
+ .hl-home .hl-pillar:last-child{grid-column:1 / -1;justify-content:center;border-bottom:0}
+ .hl-home .hl-programs{padding:29px 0 40px}
+ .hl-home .hl-mission{min-height:300px}
+ .hl-home .hl-evidence-header{display:block}
+}
+@media(prefers-reduced-motion:reduce){.hl-home .hl-program{transition:none}}
