@@ -18,10 +18,11 @@
 <div class="er-ribbon">Pre-release plan — no public installer or release date</div>
 <h1 id="er-title">Protect her beginning.<em>Leave room for a life that develops.</em></h1>
 <p class="er-lead">Evelyn is being designed as a continuing synthetic individual with a protected starting identity, developing interests and beliefs, independently initialized public companions and clear user controls. These requirements must be <strong>implemented and tested before a free public release</strong>.</p>
+<p class="er-lead"><strong>Planned connection model:</strong> Internet for first-time installation and required downloads; normal local use without internet once everything is installed. Disconnected operation remains a release acceptance test, not a finished capability.</p>
 <p class="er-lead">A determined computer owner could still modify locally downloaded software. The goal is to authenticate official Kira Labs releases and protect private information—not to promise an impossible-to-modify program.</p>
 <div class="er-action-row"><a class="er-primary" href="#release-gates">View release checklist →</a><a href="evelyn-help-preview.html">Troubleshooting preview →</a><a href="evelyn-hart.html">Back to Evelyn →</a></div>
 </div><figure class="er-hero-figure"><img src="assets/evelyn-hart-holographic-medlab-concept-20261021.jpg" alt="Concept artwork of Evelyn with a tablet and holographic anatomy research panels; not a released application screenshot" fetchpriority="high" decoding="async" width="1152" height="1536"/><figcaption>Existing Evelyn concept illustration, not a runtime screenshot or verified body demonstration.</figcaption></figure></div></section>
-<nav class="er-jumpnav" aria-label="Release requirements topics"><div class="er-wrap"><a href="#official-app">Official app</a><a href="#reading">Editable books</a><a href="#identity">Identity and memory</a><a href="#privacy">Owner controls</a><a href="#release-gates">Before download</a></div></nav>
+<nav class="er-jumpnav" aria-label="Release requirements topics"><div class="er-wrap"><a href="#official-app">Official app</a><a href="#offline-use-after-setup">Setup &amp; offline</a><a href="#reading">Editable books</a><a href="#identity">Identity and memory</a><a href="#privacy">Owner controls</a><a href="#release-gates">Before download</a></div></nav>
 <section class="er-section" id="official-app"><div class="er-wrap">
 <p class="er-eyebrow">01 / Official release authenticity</p><h2>Know which Evelyn <em>is officially released.</em></h2>
 <p class="er-sectionlead">These are intended software distribution safeguards, not features already confirmed in the current development build.</p>
@@ -30,6 +31,18 @@
 <article class="er-card"><span class="er-step">Tamper detection and recovery</span><h3>Test package integrity</h3><p>Evaluate Windows MSIX package-integrity enforcement against the real app. Test detection, blocked launches and recovery for a changed or damaged package. Code signing cannot stop every unofficial fork of a locally controlled program.</p></article>
 </div>
 <div class="er-source-note">The public release is planned to be <strong>free</strong>. Neither an installable package, a tested security feature nor a guaranteed release date is available from this page.</div>
+</div></section>
+<section class="er-section er-blue" id="offline-use-after-setup"><div class="er-wrap">
+<p class="er-eyebrow">Internet for first-time setup / offline operation afterward</p>
+<h2>Connect to install.<em>Then live and learn locally.</em></h2>
+<p class="er-sectionlead">Evelyn's intended distribution model is <strong>internet-required during the initial download and full installation</strong> and <strong>offline-capable core operation once installation finishes</strong>. These are release requirements, not a successfully demonstrated disconnected-system acceptance test.</p>
+<div class="er-cards">
+<article class="er-card"><span class="er-step">01 / Internet required for initial setup</span><h3>Download everything she needs</h3><p>The future installer should fetch and verify all required application files, compatible model weights, selected original voice assets, approved book files and dependencies during setup. It must clearly show total download size and any missing components before claiming that offline readiness is complete.</p></article>
+<article class="er-card"><span class="er-step">02 / Offline after a complete installation</span><h3>Local companionship, without a constant connection</h3><p>After successful preparation, core text conversations, permitted personal memories, the installed reading library, supported avatar functions and Evelyn's approved local voice should operate without internet access. Actual operation with Wi-Fi and Ethernet disconnected still must be tested.</p></article>
+<article class="er-card"><span class="er-step">03 / Optional internet activities</span><h3>Go online when you choose</h3><p>Downloading new models or publications, receiving signed updates, visiting live websites, real-time research and other explicitly authorized online services require internet. These optional services must be identified clearly rather than silently making core local features depend on a remote server.</p></article>
+<article class="er-card"><span class="er-step">04 / Compatibility precheck — design requirement</span><h3>See warnings before installing</h3><p>Before installing, the proposed compatibility screen checks Windows version, RAM, usable GPU and video memory where measurable, disk space and driver information. It should explain when features might be slow or unavailable and allow informed continuation for advisory warnings. Unknown driver status must be described as <em>unverified</em>, not automatically <em>outdated</em>. Hard failures that prevent a working or secure installation must not be waived.</p></article>
+</div>
+<div class="er-source-note"><strong>Release test needed:</strong> complete a clean, network-connected installation, confirm every model and asset is local, disconnect all network access, restart Evelyn and test conversation, voice, existing books, memory restoration and avatar features. Reconnect only for a requested online feature. Publish the measured system requirements after these checks. <a href="evelyn-help-preview.html#installation">See installation &amp; offline troubleshooting topics →</a></div>
 </div></section>
 <section class="er-section er-dark" id="reading"><div class="er-wrap">
 <p class="er-eyebrow">02 / Books, PDFs and learning</p><h2>Her library stays <em>editable by the owner.</em></h2>
@@ -66,6 +79,8 @@
 <ul class="er-checklist">
 <li>Signed Windows installer and official update tests, including tampered-package rejection and recovery</li>
 <li>Published, tested Windows, hardware, disk-space and connectivity requirements</li>
+<li>Advisory hardware and driver compatibility scan before installation, with clear results and Continue/Cancel choices where safe</li>
+<li>Internet-assisted complete initial installation, followed by a verified network-disconnected run of core conversations, local books, original voice, memory and body functions</li>
 <li>Installed licensed library contents, root/subfolder discovery and safe page-based reading</li>
 <li>Memory provenance, correction, backup/restore, private visitor separation and interaction boundaries</li>
 <li>User-controlled data export, deletion and uninstall choices that protect added books</li>
