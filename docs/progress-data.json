@@ -1,8 +1,78 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-23",
+  "reviewed_on": "2026-10-24",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-arithmetic-verified-2026-10-24",
+      "title": "NewBrain isolated numerical arithmetic verified in 105 synthetic cases",
+      "date": "2026-10-24",
+      "date_basis": "Independent/primary reviewed saved-report arithmetic verifier and row-level 105-case CSV published in NewBrain Oct 24 commits; not learner accuracy",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Independent 105/105 saved-report checks passed; conventional arithmetic rounded nonzero target gradients and losses to zero in 30 synthetic cases.",
+      "body": [
+        "A frozen arithmetic verifier ran once on a retained numerical report. Independent and primary review accepted its process controls and custody. The stable loss and gradient formulation matched independent high-precision Decimal references within the declared tolerance across 105 public synthetic cases.",
+        "In 30/105 synthetic cases at confidence margins 40 and 80, conventional arithmetic rounded mathematically nonzero target gradients and losses to zero. Nine invalid-input rejection receipts were reviewed but not independently rerun.",
+        "The earlier report producer still lacks a complete creator CPU-affinity receipt; physical OS I/O and complete outer orchestration remain unverified. NewBrain Original12 complete-answer accuracy is unchanged at 2/12 with no learner-weight updates."
+      ],
+      "boundary": "Synthetic arithmetic reliability result only; not evidence that the learner sees these conditions or that transfer, retention, restart, natural conversation or benchmark accuracy improved.",
+      "image": {
+        "path": "assets/newbrain-cognitive-research-concept-2026-10-18.jpg",
+        "alt": "Existing neural concept artwork, not a numerical test screenshot",
+        "caption": "Illustration accompanies the separately reviewed saved-report arithmetic result."
+      },
+      "sources": [
+        {
+          "label": "NewBrain verified synthetic arithmetic and limits",
+          "url": "newbrain.html#newbrain-arithmetic-verified-2026-10-24"
+        },
+        {
+          "label": "Dated independent review journal",
+          "url": "updates.html#newbrain-arithmetic-verified-2026-10-24"
+        },
+        {
+          "label": "Repository verification record (access may be required)",
+          "url": "https://github.com/rmcmurrer81/newbrain/commit/52e7e4a5c7c4fee00247426d5ea23efc4c61cbf5"
+        }
+      ],
+      "evidence_kind": "independent-saved-report-arithmetic-verification-105-synthetic-cases"
+    },
+    {
+      "id": "evelyn-public-release-preview-2026-10-24",
+      "title": "Evelyn public release requirements and troubleshooting preview published",
+      "date": "2026-10-24",
+      "date_basis": "October 23 university review drafts (2-page requirements and 4-page installation/troubleshooting), October 24 working 30-publication catalog",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "Public pages now explain proposed official software safeguards and future help topics, with all installer tests and original voice still pending.",
+      "body": [
+        "The two-page draft release requirements now have a public roadmap covering signed software, protected starting identity, developing sourced memories, independent private user data, ordinary editable books and owner controls.",
+        "The four-page installation and troubleshooting draft informs a public pre-release support preview for setup, reading/PDF discovery, voice, body, backups and repairs; it is not yet a tested installed-product manual.",
+        "A dated working library catalog identifies 30 publications (13 technical, 17 other) plus two original technology primers. Its 66 files include licenses/provenance, not 66 books. No completed public installer, original voice or installed library-reading test is claimed."
+      ],
+      "boundary": "Documentation and release planning only; source PDFs remain in the university folder. Public installer validation, redistributable library rights, privacy/data controls, real voice and movement must be accepted separately.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Concept Evelyn illustration with tablet and holographic medical panels, not installed app",
+        "caption": "Existing illustrative artwork; release requirements are proposed, not implemented safeguards."
+      },
+      "sources": [
+        {
+          "label": "Public release requirements",
+          "url": "evelyn-release.html"
+        },
+        {
+          "label": "Pre-release installation and troubleshooting topics",
+          "url": "evelyn-help-preview.html"
+        },
+        {
+          "label": "Working catalog and current Evelyn status",
+          "url": "evelyn-hart.html#evelyn-library-working-catalog-2026-10-24"
+        }
+      ],
+      "evidence_kind": "draft-release-documents-public-roadmap-unverified-installer"
+    },
     {
       "id": "newbrain-numerical-run-2026-10-23",
       "title": "NewBrain isolated numerical diagnostic executed; arithmetic still under review",
