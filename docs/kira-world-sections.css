@@ -62,3 +62,55 @@
 @media(max-width:860px){.kw-detail .kw-hero-grid,.kw-detail .kw-media-pair{grid-template-columns:1fr}.kw-detail .kw-hero-art{max-width:720px}.kw-detail .kw-status-grid{grid-template-columns:1fr}.kw-detail .kw-routes,.kw-hub .kw-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kw-hub .kw-head{display:block}.kw-hub .kw-head p{margin-top:12px}}
 @media(max-width:520px){.kw-detail .kw-shell,.kw-hub .kw-shell{width:calc(100% - 30px)}.kw-detail .kw-hero{padding:32px 0 33px}.kw-detail .kw-hero h1{font-size:2.7rem}.kw-detail .kw-navline{padding:11px 15px}.kw-detail .kw-route img{aspect-ratio:16/10}.kw-detail .kw-routes,.kw-hub .kw-grid{grid-template-columns:1fr}.kw-detail .kw-status{padding:18px}.kw-hub .kw-card-body{padding:15px 17px}}
 @media(prefers-reduced-motion:reduce){.kw-detail .kw-route,.kw-hub .kw-card{transition:none}}
+
+/* Kira World is now a short seven-destination hub; the original detailed
+   research moved onto the topic pages without modifying its historical claims. */
+.kw-hub-compact{padding:clamp(42px,6vw,77px) 0}
+.kw-hub-compact .kw-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.kw-hub-compact .kw-card img{display:block;aspect-ratio:16/9;width:100%;height:auto;object-fit:cover;object-position:center 44%}
+.kw-hub-compact .kw-card[href="kira-world-avatar-builder.html"] img{object-position:center 18%}
+.kw-hub-compact .kw-card[href="kira-world-synthetic-robert.html"] img{object-position:center 36%}
+.kw-hub-compact .kw-card-body{padding:16px 18px 19px}
+.kw-hub-compact .kw-card h3{font-size:1.15rem;line-height:1.25;margin:0 0 8px}
+.kw-hub-compact .kw-card p{font-size:.87rem;line-height:1.62;color:#c8ddec}
+.kw-hub-compact .kw-card .kw-card-caveat{font-size:.72rem;line-height:1.45;color:#b1cada;border-top:1px solid rgba(147,225,245,.18);margin:13px 0 0;padding-top:10px}
+.kw-hub-compact .kw-card-wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,42%) minmax(0,58%);align-items:stretch}
+.kw-hub-compact .kw-card-wide img{height:100%;min-height:220px;aspect-ratio:auto;object-fit:cover;object-position:50% 48%}
+.kw-hub-compact .kw-card-wide .kw-card-body{display:flex;justify-content:center;flex-direction:column;padding:19px 27px}
+.kw-hub-compact .kw-head{margin-bottom:25px}
+.kw-hub-compact .kw-hub-summary{display:grid;grid-template-columns:1.05fr 1.35fr auto;align-items:center;gap:23px;margin:27px 0 0;padding:22px 24px;border:1px solid rgba(130,224,247,.31);border-radius:15px;background:linear-gradient(105deg,#102a42,#132339)}
+.kw-hub-compact .kw-hub-summary strong{display:block;font-size:1.07rem;line-height:1.4}
+.kw-hub-compact .kw-hub-summary p:not(.kw-eyebrow){color:#cbddea;line-height:1.6;font-size:.85rem;margin:0}
+.kw-hub-compact .kw-hub-summary .button{font-size:.78rem;white-space:nowrap}
+.kw-detail .kw-hero-art img[src*="evelyn-hart-holographic"]{object-position:center 22%}
+.kw-detail .kw-hero-art img[src*="robert-video-photoalbum"]{object-position:center 35%}
+.kw-detail .kw-hero-art img[src*="kira-world-companionship"]{object-position:center 45%}
+.kw-detail .kw-moved-content{background:#090f1e;position:relative}
+.kw-detail .kw-moved-content .kw-moved-header{padding:38px 0 27px;border-top:1px solid rgba(121,235,243,.27);border-bottom:1px solid rgba(121,235,243,.18);background:linear-gradient(100deg,#0b2638,#12172c)}
+.kw-detail .kw-moved-content .kw-moved-header h2{margin:8px 0 12px}
+.kw-detail .kw-moved-content .kw-moved-header p:not(.kw-eyebrow){max-width:850px;line-height:1.6;color:#bbd1e0;margin-bottom:0}
+.kw-detail .kw-moved-content > section{scroll-margin-top:105px}
+.kw-detail .kw-moved-content .wrap,.kw-detail .kw-moved-content .xf-wide{width:min(1220px,calc(100% - 48px));margin-inline:auto}
+.kw-detail .kw-moved-content .section.rule{padding-top:clamp(36px,5vw,62px);padding-bottom:clamp(36px,5vw,62px)}
+.kw-detail .kw-moved-content img{max-width:100%;height:auto}
+.kw-detail .kw-moved-content .three-grid{align-items:stretch}
+@media(max-width:1000px){
+  .kw-hub-compact .kw-hub-summary{grid-template-columns:1fr 1fr}
+  .kw-hub-compact .kw-hub-summary .button{grid-column:1/-1;justify-self:start}
+}
+@media(max-width:860px){
+  .kw-hub-compact .kw-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kw-hub-compact .kw-card-wide{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .kw-hub-compact{padding:32px 0 38px}
+  .kw-hub-compact .kw-grid{grid-template-columns:1fr;gap:14px}
+  .kw-hub-compact .kw-card-wide{display:block;grid-column:auto}
+  .kw-hub-compact .kw-card-wide img{min-height:0;height:auto;aspect-ratio:16/9}
+  .kw-hub-compact .kw-card-wide .kw-card-body{padding:16px 18px 19px}
+  .kw-hub-compact .kw-card-body{padding:15px 17px 18px}
+  .kw-hub-compact .kw-head{margin-bottom:18px}
+  .kw-hub-compact .kw-hub-summary{grid-template-columns:1fr;padding:18px;gap:12px}
+  .kw-hub-compact .kw-hub-summary .button{grid-column:auto;justify-self:stretch;white-space:normal}
+  .kw-detail .kw-moved-content .wrap,.kw-detail .kw-moved-content .xf-wide{width:calc(100% - 32px)}
+}
