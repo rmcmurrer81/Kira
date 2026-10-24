@@ -174,8 +174,8 @@
         "naturalWidth": 1920,
         "naturalHeight": 796,
         "src": "assets/kira-hero-landscape.webp",
-        "fit": "cover",
-        "position": "82% 50%"
+        "fit": "contain",
+        "position": "50% 50%"
       },
       "kiraPortraitRoutes": [
         {
@@ -590,8 +590,8 @@
         "naturalWidth": 1920,
         "naturalHeight": 796,
         "src": "assets/kira-hero-landscape.webp",
-        "fit": "cover",
-        "position": "82% 50%"
+        "fit": "contain",
+        "position": "50% 50%"
       },
       "kiraPortraitRoutes": [
         {
@@ -1006,8 +1006,8 @@
         "naturalWidth": 1920,
         "naturalHeight": 796,
         "src": "assets/kira-hero-landscape.webp",
-        "fit": "cover",
-        "position": "82% 50%"
+        "fit": "contain",
+        "position": "50% 50%"
       },
       "kiraPortraitRoutes": [
         {
@@ -1422,8 +1422,8 @@
         "naturalWidth": 1920,
         "naturalHeight": 796,
         "src": "assets/kira-hero-landscape.webp",
-        "fit": "cover",
-        "position": "78% 50%"
+        "fit": "contain",
+        "position": "50% 50%"
       },
       "kiraPortraitRoutes": [
         {
