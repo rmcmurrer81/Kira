@@ -4,6 +4,92 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-five-world-replay-2026-10-25",
+      "title": "Five-world replay study reports retention and composition tradeoff",
+      "date": "2026-10-25",
+      "date_basis": "October 25 NewBrain research/retention-replication1207 verified-status report",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Balanced replay 38/40 old cases and 7/20 composition; blocked training 14/40 old and 12/20 composition. Original12 remains 2/12.",
+      "body": [
+        "Five fresh tiny synthetic world/seed pairs with 34 tokens each and equal primary training exposure. Both primary arms acquired 13/20 new answers but showed opposite retention/composition performance.",
+        "15 saved branch states reproduced 270 complete answers after separate-process recovery; 35,840 updates were reviewed from retained evidence. Both arms scored 0/10 on unseen abstention."
+      ],
+      "boundary": "This separate tiny model is not the accepted Original12 learner. No general intelligence, independent full retraining, Qwen comparison or significance claim.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Illustrative neural architecture, not a runtime screenshot",
+        "caption": "Illustration only; actual numerical findings in linked public record."
+      },
+      "sources": [
+        {
+          "label": "Five-world public research record",
+          "url": "reports/newbrain-five-world-replay-2026-10-25.html"
+        },
+        {
+          "label": "Technical explanation",
+          "url": "newbrain.html#newbrain-replay-five-world-2026-10-25"
+        }
+      ],
+      "evidence_kind": "reviewed-small-five-world-retention-composition-tradeoff"
+    },
+    {
+      "id": "avatar-builder-public-sitting-2026-10-25",
+      "title": "Five-second reviewed censored body-rig sitting video",
+      "date": "2026-10-25",
+      "date_basis": "KiraWorld progress1206-sitting verified 120-frame public privacy derivative and attribution",
+      "status": "working",
+      "track": "Body & world interaction",
+      "summary": "Scripted 120-frame sitting test recorded with approved public opaque privacy coverage; natural contact, balance and the final Evelyn body remain open.",
+      "body": [
+        "Five seconds at 24fps with a CC BY 4.0 developmental model; private uncensored originals stay private.",
+        "This does not test autonomous motor control, a generated Evelyn-specific body, tablet pickup or contact physics."
+      ],
+      "boundary": "Scripted developmental reference only; privacy-safe public derivative, not a completed anatomy/movement milestone.",
+      "image": {
+        "path": "assets/evelyn-sitting-poster-20261025.jpg",
+        "alt": "Public privacy-covered developmental 3D rig sitting test still",
+        "caption": "Actual development test frame, not Evelyn's final likeness."
+      },
+      "sources": [
+        {
+          "label": "Watch reviewed sitting diagnostic",
+          "url": "kira-world-avatar-builder.html#avatar-builder-sitting-2026-10-25"
+        }
+      ],
+      "evidence_kind": "120-frame-reviewed-scripted-sitting-public-censored"
+    },
+    {
+      "id": "video-studio-managed-voice-2026-10-25",
+      "title": "Video Studio adds managed original-voice runtime discovery",
+      "date": "2026-10-25",
+      "date_basis": "videostudio commit 40c8b71ab and seven focused path-selection checks",
+      "status": "working",
+      "track": "Video Studio",
+      "summary": "Runtime discovery can use the installed Voice Designer backend; seven configuration tests passed without executing model inference.",
+      "body": [
+        "Overrides remain authoritative while the managed Voice Designer Python and model paths are discovered when configured.",
+        "Voice Designer 0.1.6 remains the only standalone legacy generator edition planned. Future Kira World virtual Voice Box research is separate."
+      ],
+      "boundary": "Seven config/path tests only; end-to-end speech inference or GUI operation was not tested.",
+      "image": {
+        "path": "assets/voice-designer-future-interface-concept-20261024.jpg",
+        "alt": "Voice Designer conceptual illustration, not a working GUI",
+        "caption": "Concept art; narrow runtime-discovery result."
+      },
+      "sources": [
+        {
+          "label": "Voice runtime website note",
+          "url": "updates.html#video-studio-managed-voice-runtime-2026-10-25"
+        },
+        {
+          "label": "GitHub implementation change",
+          "url": "https://github.com/rmcmurrer81/videostudio/commit/40c8b71ab"
+        }
+      ],
+      "evidence_kind": "path-selection-seven-checks-no-model-inference"
+    },
+    {
       "id": "evelyn-head-eyes-conversation-recorded-2026-10-25",
       "title": "Evelyn's 58-second head, eye and generated-conversation video is recorded",
       "date": "2026-10-25",
