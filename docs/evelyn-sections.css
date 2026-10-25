@@ -177,3 +177,21 @@
 .eht-furniture-plan p:not(.eyebrow){font-size:.95rem;line-height:1.7;color:#cddfeb;margin:0 0 10px}
 @media(max-width:850px){.eht-bio-layout{grid-template-columns:1fr}.eht-bio-portrait{max-width:710px}.eht-voice-gates{grid-template-columns:1fr}}
 @media(max-width:610px){.eht-bio-facts,.eht-bio-boundaries{grid-template-columns:1fr}.eht-bio-boundaries article{padding:18px}.eht-furniture-plan{padding:18px}.eht-bio-portrait img{aspect-ratio:16/10}}
+
+/* Approved original Evelyn audio: authentic embedded sample, Oct 24 2026 */
+.ehh-approved-voice-banner{padding:clamp(30px,4vw,50px) 0;background:linear-gradient(120deg,#12374d,#0c1b2c 65%,#151933);border-block:1px solid #82e3f263}
+.ehh-approved-voice-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:clamp(20px,4vw,55px)}
+.ehh-approved-voice-banner h2{font-size:clamp(2rem,3.6vw,3.3rem);letter-spacing:-.035em;line-height:1.11;margin:10px 0 16px;color:#f2faff}
+.ehh-approved-voice-banner h2 em{color:#8cf1f8;font:italic 400 .9em Georgia,serif}
+.ehh-approved-voice-banner p:not(.eyebrow){font-size:.97rem;line-height:1.7;color:#d3e5ed}
+.ehh-voice-script{font:italic 400 clamp(1.1rem,1.6vw,1.4rem)/1.5 Georgia,serif!important;color:#f5fdff!important}
+.ehh-voice-caveat{font-size:.84rem!important;color:#c7dae6!important}
+.ehh-approved-voice-player,.eht-approved-player{display:flex;flex-direction:column;gap:15px;padding:clamp(18px,2.3vw,29px);background:#071e32d9;border:1px solid #6bd8e884;border-radius:16px;box-shadow:0 16px 40px #0108178c}
+.ehh-voice-status{font:800 .72rem/1.45 ui-monospace,Consolas,monospace;letter-spacing:.08em;color:#9af1f6}
+.ehh-approved-voice-player audio,.eht-approved-player audio{display:block;width:100%;min-width:0;max-width:100%}
+.ehh-approved-voice-player a,.eht-approved-links a{font-size:.88rem;font-weight:750;color:#8eeefa;text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+.eht-approved-player{margin:27px 0}
+.eht-approved-player blockquote{font:italic 400 clamp(1.16rem,2vw,1.75rem)/1.5 Georgia,serif;color:#eefaff;margin:3px 0 8px}
+.eht-approved-player p:not(.eyebrow){font-size:.86rem;color:#c8dce6;line-height:1.65}
+.eht-approved-links{display:flex;gap:13px 22px;flex-wrap:wrap}
+@media(max-width:750px){.ehh-approved-voice-grid{grid-template-columns:1fr}.ehh-approved-voice-player{max-width:680px}}

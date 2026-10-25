@@ -4,6 +4,41 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "evelyn-original-voice-approved-2026-10-24",
+      "title": "Evelyn's approved original voice greeting is published",
+      "date": "2026-10-24",
+      "date_basis": "Founder-approved greeting committed October 25 at 02:10 UTC (October 24 Eastern), then uploaded publicly on October 24 Eastern and published on Kira Labs",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "One approved 3.04-second WAV recording is now publicly playable. Evelyn is the last planned synthetic individual to use the older Kira Labs voice generator.",
+      "body": [
+        "The owner approved Evelyn's original spoken introduction, and Codex is using that voice. The 145,964-byte mono PCM16 WAV at 24 kHz was preserved in the private KiraWorld repository and uploaded into the public Kira repository with an identical Git blob.",
+        "The approved recording is publicly playable and downloadable on Evelyn's project page. It is a real audition/voice reference, not evidence of unrestricted new speech, post-restart voice continuity, full voice-to-avatar lip synchronization or a public installer.",
+        "Evelyn is the final planned Kira Labs synthetic individual to use the older voice-generator approach. Video Studio retains a version of it, while future synthetic individuals transition toward separately validated voice technology. The earlier failed test-wrapper attempt remains retained."
+      ],
+      "boundary": "Founder-approved short recorded greeting. Open-ended conversational speech and replacement-voice architecture remain unqualified.",
+      "image": {
+        "path": "assets/evelyn-conversation-cinematic-20261024.jpg",
+        "alt": "Holographic voice concept art, not an actual screenshot of the recording",
+        "caption": "Illustration accompanies a real publicly playable WAV on Evelyn's project page."
+      },
+      "sources": [
+        {
+          "label": "Listen to Evelyn's original voice",
+          "url": "evelyn-hart.html#evelyn-original-voice-approved-2026-10-24"
+        },
+        {
+          "label": "Approved voice evidence and limitations",
+          "url": "evelyn-development.html#evelyn-original-voice-approved-2026-10-24"
+        },
+        {
+          "label": "Dated milestone",
+          "url": "updates.html#evelyn-original-voice-approved-2026-10-24"
+        }
+      ],
+      "evidence_kind": "founder-approved-genuine-wav-audio-public-player"
+    },
+    {
       "id": "person-creator-renamed-2026-10-24",
       "title": "Temporary Creator renamed Person Creator",
       "date": "2026-10-24",
