@@ -1,0 +1,199 @@
+KIRA LABS VOICE DESIGNER 0.1.6-PREVIEW
+Updated October 25, 2026
+
+Create a voice.
+Keep it your own.
+
+Kira Labs Voice Designer
+Installation, everyday use and troubleshooting
+
+Tested backend preview 0.1.6
+
+Installation, uninstall, reinstall and local voice generation passed on the existing Windows test computer. All 11 model files passed verification. The new native interface has not been opened or tested interactively; see the validation limits on pages 5 and 6.
+
+What the tool does
+
+Describe an original adult voice, enter a short line, generate a WAV and listen before keeping it. Setup automatically provisions its own Python, required packages and VoiceDesign model. Initial setup needs internet; generation uses the installed local model. NVIDIA drivers and optional Chatterbox are separate.
+
+Your first voice in four steps
+
+1  Describe | Enter a voice name and traits such as adult age, register, accent, pace and character.
+
+2  Add text | Begin with one short sentence: "Hello. This is my new original voice."
+
+3  Generate | Select Generate voice once. Keep the application open and wait for its status or an error.
+
+4  Listen and save | Use Play, then Save WAV... to export an accepted take. Stop playback ends listening.
+
+Before the first run
+
+Run KiraLabs-VoiceDesigner-Setup-0.1.6-preview.exe and let the prerequisite downloads finish. Read any hardware warnings before choosing whether to continue. The installer is unsigned and may trigger a Windows reputation warning. Do not disable Windows security to force it to run.
+
+Keep a clean master WAV. Descriptions and seeds provide best-effort continuity, not an identical-speaker guarantee for every new line.
+
+
+============================================================
+
+
+BEFORE YOU BEGIN
+
+Install on a suitable computer
+
+Recommended starting point
+
+The successful test system below is the current reference, not a validated minimum. Lower RAM and VRAM configurations remain unqualified. The current backend requires an NVIDIA CUDA GPU; CPU-only generation is not implemented.
+
+Item | Tested reference or recommendation
+
+Operating system | 64-bit Windows. Tested on Windows 11, version 25H2.
+
+System memory | 32 GB RAM tested. A lower-memory minimum has not been established.
+
+Graphics | NVIDIA GeForce RTX 5060 Ti, 16 GB VRAM tested. The backend needs an NVIDIA CUDA GPU and a driver compatible with CUDA 13.0.
+
+Processor | Test host: Intel Core Ultra 9 285K, 24 logical processors. This exact processor is not a stated requirement.
+
+Storage / internet | Setup recommends 30 GB free for runtime, CUDA packages, staging and saved work. Model files total about 4.52 GB. Initial downloads can take a substantial time.
+
+Installation checklist
+
+1. Download the installer from the official Kira Labs release page.
+2. Close any earlier Voice Designer session and run Setup.
+3. Read RAM, graphics and storage messages; choose Continue anyway only after understanding the concern.
+4. Keep Setup open until it reports completion. Progress is also written to data/install.log.
+5. Open the supplied shortcut or Kira Labs Voice Designer.cmd launcher and try one short sentence.
+
+Setup can provision Microsoft's signed x64 Visual C++ runtime when required system DLLs are missing. Windows may ask for administrator approval. Existing runtime 14.50.35719 was detected and skipped on the test computer; the missing-runtime branch remains untested. Setup does not update NVIDIA drivers or automatically reboot Windows.
+
+Hardware warnings
+
+Setup warns below the 32 GB RAM reference, when an NVIDIA adapter is not reported, or below 30 GB free storage. Blocked hardware queries are reported as unknown. Continuing does not add CPU support or prove an untested machine can generate speech.
+
+
+============================================================
+
+
+EVERYDAY WORKFLOW
+
+Design, save and reuse
+
+Write a useful description
+
+Use a name up to 80 characters, a description up to 600 characters and English speech text up to 300 characters. Example: "Original adult woman, clear middle register, warm conversational delivery, moderate pace and a natural American accent." The native interface starts with seed 1161003. Change one trait at a time; retain the accepted name, description and seed.
+
+Save the result
+
+Save WAV... is designed to export a 24 kHz mono PCM16 WAV with an accompanying .voice.json description and seed. Keep both, plus an unmodified master WAV. The installed command-line backend produced valid WAVs in testing; native button interaction and export remain unverified.
+
+Optional: use your WAV with Chatterbox
+
+Chatterbox has a separate installation and dependencies; this installer does not install it. In a compatible Chatterbox application, choose your own original WAV as the voice reference, enter another line and generate a new take. Listen again: changing engines can change pronunciation, timing and likeness.
+
+The official Chatterbox Turbo example accepts a reference using audio_prompt_path. This adapted example is documentation, not a test of Chatterbox inside the installer:
+
+import torchaudio as ta
+from chatterbox.tts_turbo import ChatterboxTurboTTS
+
+tts = ChatterboxTurboTTS.from_pretrained(device="cuda")
+audio = tts.generate(
+    "Here is another line in my original voice.",
+    audio_prompt_path="my_original_voice.wav",
+)
+ta.save("second_line.wav", audio, tts.sr)
+
+Use a clean, single-speaker reference with little background noise. Follow the chosen Chatterbox version's reference guidance. Its example uses a 10-second clip; this is not a proven minimum for every voice or version.
+
+Kira Labs workflow
+
+Evelyn's original voice was designed from text and selected after listening. Her approved 3.04-second recording served as the reference for separate Chatterbox speech, including a recorded dialogue with two generated replies. Its 20.82-second soundtrack became an edited 22.75-second facial-animation video. This was not a live-microphone or conversation-latency qualification.
+
+Official installation and examples: github.com/resemble-ai/chatterbox
+
+
+============================================================
+
+
+CHECK THIS BEFORE CONTACTING SUPPORT
+
+Troubleshooting
+
+Problem | What to check
+
+Setup download fails | Check internet, free space and the exact error. Rerun the official Setup. Keep the log; do not delete model caches just to retry.
+
+Windows path too long | Choose a shorter writable location with Setup's -InstallDir option. The final folder name must be VoiceDesigner. Deep paths can exceed Windows package filename limits.
+
+Progress looks frozen | Runtime and model downloads are large. Check whether data/install.log is advancing; the outer console can update less often.
+
+Missing Python/package | Finish the supplied prerequisite setup. Do not mix random package versions into unrelated Python environments.
+
+Missing DLL / MSVC | Keep the exact VCRUNTIME, MSVCP or other import error. Setup can offer Microsoft's signed runtime; Windows may request elevation. Never obtain individual DLLs from unofficial sites. This missing-runtime branch remains untested.
+
+No NVIDIA GPU | Confirm a compatible NVIDIA CUDA GPU is installed. CPU-only generation is not implemented; Continue anyway cannot provide it.
+
+CUDA / driver error | Keep the error and GPU/driver details. The backend needs CUDA 13.0 compatibility. Consult official NVIDIA support; drivers are separate from Setup.
+
+RAM / VRAM exhausted | Close other memory-heavy applications and try a short line when resources are available. Lower-memory support remains unverified.
+
+No audible sound | Check Windows output device and app/speaker volume. Play the saved WAV in another player. An invalid or zero-byte WAV is a failed result.
+
+Distortion / missing words | Try a short, clearly punctuated sentence and a simpler description. Listen to the saved WAV before using it.
+
+Different voice on new line | Retain an accepted reference WAV and use a compatible reference-based workflow. VoiceDesign is an audition engine.
+
+Windows blocks Setup | Verify the official source and published release information. Retain the warning text. The preview is unsigned; do not disable security to force installation.
+
+Wait for the current job's result or error before starting another. Repeated clicks are not a recovery method.
+
+
+============================================================
+
+
+KEEP YOUR WORK
+
+Files, recovery and support
+
+Back up accepted voices
+
+Setup requests %LOCALAPPDATA%/KiraLabs/VoiceDesigner by default. A packaged desktop host may redirect this per-user path; keep the location reported in the result and logs. The data folder holds voices, models, cache and logs. Keep exported WAV and .voice.json copies in your own backup folder.
+
+Uninstall and reinstall
+
+Use Uninstall.cmd or Windows Installed apps where available. Uninstall removes owned app/runtime files and preserves data, downloaded models and cache. In the 0.1.6 test, the original WAV remained byte-for-byte unchanged; reinstall restored the runtime and generated a distinct new request successfully. No caches were deleted.
+
+Current validation boundary
+
+Tests used a fresh application folder on an existing Windows computer with an existing NVIDIA driver and system prerequisites. The requested default path was redirected by the packaged host. Installation outside that host, a fresh Windows PC, missing-runtime installation and lower-memory systems remain untested. Native Generate voice, Play and Save WAV... interaction also remains unverified.
+
+When asking for help
+
+Include version, Windows version, GPU and driver, installed RAM, failed stage, exact error and relevant setup/app log. Remove personal folder names and private text before sharing. Send a short sample only if you are comfortable sharing it.
+
+Licenses and sources
+
+Kira Labs application code uses MIT. Qwen3-TTS and the selected VoiceDesign model use Apache License 2.0; Python uses the PSF license. The bundled SoX Python package uses BSD-3-Clause; optional separate Chatterbox uses MIT. Retain application, third-party and installed package notices. The bootstrap is unsigned.
+
+Qwen3-TTS: github.com/QwenLM/Qwen3-TTS
+Chatterbox: github.com/resemble-ai/chatterbox
+Microsoft: supported Visual C++ runtime
+Kira Labs: kiralabs.org
+
+
+============================================================
+
+
+KNOW WHAT WAS CHECKED
+
+Interface reference and test record
+
+Previous 0.1.5 interface - actual startup capture
+
+The image below is a genuine capture of the previous installed WPF interface. It is a layout reference, not a screenshot of the new 0.1.6 native application. No button interaction was tested in this capture.
+
+[Image: actual startup capture of previous 0.1.5 WPF interface; not 0.1.6.]
+
+0.1.6 installation | Fresh requested-default-folder setup, uninstall and reinstall returned success. Optional Windows registration reported success. All 11 model files passed SHA-256 verification.
+
+0.1.6 local speech | Installed private runtime generated a new 2.72-second WAV, then a distinct 3.92-second WAV after reinstall. Both were 24 kHz mono PCM16 and played through speakers while recorded.
+
+Not yet qualified | Native interface startup/buttons/export; ordinary nonpackaged-host installation; fresh Windows; missing-runtime branch; lower RAM/VRAM. No claim of a universal minimum.
