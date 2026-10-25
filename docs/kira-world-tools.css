@@ -92,3 +92,18 @@
 .kwt-guide-link p{color:#c8dfeb;line-height:1.7;margin:0}
 .kwt-guide-link .kwt-button{justify-content:center}
 @media(max-width:730px){.kwt-guide-link{grid-template-columns:1fr;padding:21px}.kwt-guide-link .kwt-button{width:100%}}
+
+/* Voice Designer 0.1.6 developer preview: published facts, not a release button */
+.kwt-preview-update{padding:clamp(40px,5vw,70px) 0;background:linear-gradient(125deg,#0a2335,#14172b);border-block:1px solid #83e5ef4d}
+.kwt-preview-update h2{font-size:clamp(2rem,3vw,3.2rem);line-height:1.13;margin:8px 0 18px;letter-spacing:-.04em;color:#f3fcff}
+.kwt-preview-update h2 em{font:italic 400 .91em/1.2 Georgia,serif;color:#8beaf2}
+.kwt-preview-lede{font-size:1.05rem;color:#d1e4ef;line-height:1.76;max-width:1040px}
+.kwt-preview-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0}
+.kwt-preview-metrics article{border-radius:13px;border:1px solid #8ddaea4c;background:#122d43;padding:24px 22px}
+.kwt-preview-metrics article strong{display:block;color:#97edf6;font-size:clamp(1.65rem,2.3vw,2.35rem);line-height:1.18;margin:0 0 13px}
+.kwt-preview-metrics h3{font-size:1.14rem;color:#f2fdff;margin:0 0 10px}
+.kwt-preview-metrics p{font-size:.89rem;line-height:1.68;color:#cbdfec;margin:0}
+.kwt-preview-limit{border-left:3px solid #efc78b;padding:14px 18px;background:#3a332e6b;color:#dfd7cd;line-height:1.73;font-size:.9rem}
+.kwt-preview-links{display:flex;flex-wrap:wrap;gap:18px;margin-top:20px}
+.kwt-preview-links a{color:#99eef5;font-size:.87rem;font-weight:750}
+@media(max-width:810px){.kwt-preview-metrics{grid-template-columns:1fr}}
