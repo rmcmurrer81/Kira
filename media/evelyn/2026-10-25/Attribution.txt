@@ -1,0 +1,7 @@
+Base Female Character by BlackProject, CC BY 4.0.
+https://sketchfab.com/3d-models/base-female-character-ec7445f61d9e499186578b8ef4814b6a
+https://creativecommons.org/licenses/by/4.0/
+
+Kira Labs modified the posing, motion, lighting and framing and created the original dialogue and voice. This developmental avatar is used in an offline rendered replay with explicit scripted operator head/eye controls and recognizer-derived lip timing.
+
+Keep this attribution with public copies and posts.
