@@ -4,6 +4,41 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "evelyn-head-eyes-conversation-recorded-2026-10-25",
+      "title": "Evelyn's 58-second head, eye and generated-conversation video is recorded",
+      "date": "2026-10-25",
+      "date_basis": "October 25 retained GitHub commit 70d31a5a and KiraWorld progress1208 manifest; exact uploaded MP4 matched the saved SHA-256",
+      "status": "working",
+      "track": "Evelyn Hart",
+      "summary": "Four generated Qwen3.5:9b replies in Evelyn's approved voice accompany 1,395 frames of scripted head/eye/blink movement. Hair seam, technical wording and action timing still need correction.",
+      "body": [
+        "Actual reviewed MP4 runs 58.125 seconds, 768×768 at 24fps with AAC audio. Four local Qwen3.5:9b model replies were voiced using Evelyn's approved synthetic voice. The prompts, head and eye moves were planned; animation was rendered offline with recognizer-based lip timing rather than controlled by live autonomous movement.",
+        "The recorded dialogue includes phrases about executing queued commands or acting later, which are mismatched with movements shown already on screen. A visible hair/scalp seam remains during head turns. These issues are not yet verified as corrected.",
+        "The avatar is a modified BlackProject Base Female Character under CC BY 4.0. This is a developmental model, not final Evelyn. The separately recorded private uncensored whole-body sequence is not being published. Live microphone timing, natural-body control, phoneme accuracy, book reading and long-term learning remain unverified; accepted Original12 stays 2/12."
+      ],
+      "boundary": "Authentic bounded recorded dialogue and rendered head/eye animation; not live conversational autonomy, final likeness, factual benchmark improvement or corrected defects. Private originals remain outside public website.",
+      "image": {
+        "path": "assets/evelyn-head-eyes-video-poster-20261025.jpg",
+        "alt": "Actual frame from October 25 recorded Evelyn head, eye, blinking and conversation prototype",
+        "caption": "Actual retained frame from verified 58.125-second public video, not generative art."
+      },
+      "sources": [
+        {
+          "label": "Play 58-second recording with transcript",
+          "url": "evelyn-avatar.html#evelyn-head-eyes-conversation-2026-10-25"
+        },
+        {
+          "label": "Read dated results and remaining bugs",
+          "url": "updates.html#evelyn-head-eyes-conversation-recorded-2026-10-25"
+        },
+        {
+          "label": "Recorded source upload",
+          "url": "https://github.com/rmcmurrer81/Kira/commit/70d31a5a38e4ef1fc6f7e04650d575292143eeab"
+        }
+      ],
+      "evidence_kind": "reviewed-audiovisual-avatar-head-eye-scripted-4-model-replies-not-autonomous"
+    },
+    {
       "id": "voice-designer-0-1-6-backend-2026-10-25",
       "title": "Voice Designer unsigned backend preview installs and generates two WAVs",
       "date": "2026-10-25",
