@@ -1,8 +1,101 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-25",
+  "reviewed_on": "2026-10-26",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-six-world-replay-form-2026-10-26",
+      "title": "Six-world replay-form experiment finds no schedule benefit; value-selection failures measured",
+      "date": "2026-10-26",
+      "date_basis": "Reviewed NewBrain RFORM26 saved-result packet, verified-status and case evidence, October 26 2026",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Both trained replay schedules reached 10/24 new answers and 9/24 transfer. Both lost the same 7 formerly correct old cases, with 324/324 matching restart answers. Original12 remains 2/12.",
+      "body": [
+        "Six fixed synthetic worlds: synchronized and staggered replay differed in old-question form scheduling, but retained identical updates and fact/form exposure. New and transfer correctness did not improve with staggered presentation.",
+        "Old-case totals were 26/48 synchronized, 25/48 staggered. Both retained 19/26 previously correct answers and lost 7; the one-point difference reflects one fewer recovered previously wrong answer.",
+        "Every incorrect final answer first differed at the value token, not EOS. Subject/value sensitivity is a proposed next diagnostic, not a demonstrated fix. All 324 planned restarted final answers matched with zero updates."
+      ],
+      "boundary": "Separate tiny reference learner, not accepted Original12. Both untaught unknown controls 0/12; no general language, Qwen parity, independent external replication, or causal proof that all replay schedules are equivalent.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Concept illustration of neural research, not a frame of the experimental model",
+        "caption": "Illustration only; public report contains exact measured outcomes."
+      },
+      "sources": [
+        {
+          "label": "Full six-world verified results",
+          "url": "reports/newbrain-learning-diagnostics-2026-10-26.html#six-world-replay"
+        },
+        {
+          "label": "Project learning overview",
+          "url": "newbrain.html#newbrain-learning-2026-10-26"
+        }
+      ],
+      "evidence_kind": "verified-six-world-small-model-replay-form-no-improvement-with-restart"
+    },
+    {
+      "id": "newbrain-three-world-learning-2026-10-26",
+      "title": "Three-world ordinary learner acquires some new facts and survives fresh-process restart",
+      "date": "2026-10-26",
+      "date_basis": "Completed October 25 local and recorded October 26 UTC in NewBrain reviewed direct-Python study and saved-data reports",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Without retrieved context, taught versus frozen scored 6/12 versus 0/12 new facts and 4/12 versus 0/12 transfer. Four previously correct old answers were lost; all 540 final answers restarted identically.",
+      "body": [
+        "An unchanged 8,343-parameter experimental reference decoder trained over three fresh 39-token synthetic worlds, completing 15,360 updates. Newly taught complete answers and alternate-form combinations improved versus the frozen reference.",
+        "Old answers changed from 15/24 frozen to 16/24 trained but lost four formerly correct cases and recovered five previously wrong cases. Supplying raw history, latest-event memory or a correct oracle context lowered measured accuracy, showing a separate context-use weakness.",
+        "All 540 restart answers matched exactly in a separate ordinary process with zero updates; unknown/abstention controls, which were not explicitly taught, scored 0/6."
+      ],
+      "boundary": "Separate 3-world closed-vocabulary reference experiment, not Original12. Original12 2/12 and earlier trained 0/12 remain preserved; not broad conversation or Qwen comparison.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Illustrative computational brain architecture, not the executed model",
+        "caption": "Concept image; verified complete-answer scores in report."
+      },
+      "sources": [
+        {
+          "label": "Full ordinary learning results",
+          "url": "reports/newbrain-learning-diagnostics-2026-10-26.html#three-world-learning"
+        },
+        {
+          "label": "NewBrain research overview",
+          "url": "newbrain.html#newbrain-learning-2026-10-26"
+        }
+      ],
+      "evidence_kind": "verified-three-world-ordinary-learning-complete-answer-transfer-restart"
+    },
+    {
+      "id": "avatar-builder-original-head-v9-2026-10-26",
+      "title": "Original procedural head V9 produced clay renders but did not pass realism or Evelyn-likeness review",
+      "date": "2026-10-26",
+      "date_basis": "October 26 V9 original Blender build, four private clay captures, independent visual rejection and geometry-scope audit",
+      "status": "working",
+      "track": "Body & world interaction",
+      "summary": "Kira Labs-authored head geometry generated four clay views and an editable mesh; the V9 appearance failed eye-socket, nose, lip and ear realism review. No final Evelyn head or body was accepted.",
+      "body": [
+        "V7–V9 experiments worked on original Kira Labs head surfaces instead of using a downloaded character as the production foundation. V9 produced four clay renders and an editable BLEND, but independent and primary reviewers rejected the result.",
+        "Visible eye gaps, patch boundaries and unconvincing facial forms remain. Head skin counts met the narrower generator bounds, but aggregate eye-plus-head geometry exceeded the proposed whole-scene limit if it applied to the entire rendered scene.",
+        "Private reference photos and rejected clay frames remain outside the public website; the separate licensed October 25 sitting video does not prove an accepted original Evelyn body."
+      ],
+      "boundary": "Rejected experimental head; no approved likeness, eye cover, facial animation, full-body generation, speech, physiology, clinical validation or released avatar.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Conceptual illustration of Evelyn, not the rejected V9 head clay render",
+        "caption": "Approved public character concept only; rejected V9 images remain private."
+      },
+      "sources": [
+        {
+          "label": "Head V9 honest development status",
+          "url": "kira-world-avatar-builder.html#avatar-builder-original-head-2026-10-26"
+        },
+        {
+          "label": "October 26 development notes",
+          "url": "updates.html#avatar-builder-head-v9-2026-10-26"
+        }
+      ],
+      "evidence_kind": "original-head-geometry-actual-render-v9-rejected-visual-and-aggregate-mesh-scope"
+    },
     {
       "id": "newbrain-five-world-replay-2026-10-25",
       "title": "Five-world replay study reports retention and composition tradeoff",
