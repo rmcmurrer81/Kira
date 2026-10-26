@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-10-26-2.json';
+const filename='knowledge/iris-projects-2026-10-26-3.json';
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
 const loader=fs.readFileSync(path.join(docs,'iris.js'),'utf8');
@@ -13,12 +13,12 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-10-26.2'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-10-26.2'));
+assert.ok(irisPage.includes('iris.js?v=2026-10-26.3'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-10-26.3'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-10-26');
-assert.equal(data.content_version,'2026-10-26.2');
+assert.equal(data.content_version,'2026-10-26.3');
 const knowledge={topics:[],sources:{},public_packs:null};
 iris.prepare(knowledge,data);
 const ask=(q)=>{const response=iris.answer(knowledge,q,'',[],null);assert.ok(response&&response.answer,'No reviewed answer: '+q);return response;};
@@ -40,8 +40,9 @@ const prior24=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects
 assert.equal(iris.validate(prior24),prior24,'Previous October 24 project pack must remain valid');
 const movies=ask('What movies and TV shows might Evelyn Hart discuss?');
 assert.equal(movies.id,'evelyn');assert.equal(movies.facet,'how');assert.match(movies.answer,/Star Trek/);assert.match(movies.answer,/not watched/);
-const body=ask('What is the latest Avatar Builder status?');assert.equal(body.id,'avatar-body');assert.match(body.answer,/V9/);assert.match(body.answer,/V10/);assert.match(body.answer,/34 ordinary software methods/);assert.match(body.answer,/217/);assert.match(body.answer,/473/);assert.match(body.answer,/REJECTED/);assert.match(body.answer,/failed strict side camera/);assert.match(body.answer,/163-bone/);assert.match(body.answer,/13\/28/);assert.match(body.answer,/38 facial observations/);assert.match(body.answer,/unqualified/);
+const body=ask('What is the latest Avatar Builder status?');assert.equal(body.id,'avatar-body');assert.match(body.answer,/V9/);assert.match(body.answer,/V10/);assert.match(body.answer,/34 ordinary software methods/);assert.match(body.answer,/217/);assert.match(body.answer,/473/);assert.match(body.answer,/REJECTED/);assert.match(body.answer,/failed strict side camera/);assert.match(body.answer,/163-bone/);assert.match(body.answer,/13\/28/);assert.match(body.answer,/38 facial observations/);assert.match(body.answer,/23\/23/);assert.match(body.answer,/18 actual Blender static/);assert.match(body.answer,/unqualified/);
 const approvedVoice=ask("Has Evelyn Hart's original voice been approved?");assert.equal(approvedVoice.id,'evelyn');assert.match(approvedVoice.answer,/approved/i);assert.match(approvedVoice.answer,/3.04/);
+const prior262=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-26-2.json'),'utf8'));assert.equal(iris.validate(prior262),prior262,'Original October 26.2 pack valid');
 const prior26=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-26-1.json'),'utf8'));assert.equal(iris.validate(prior26),prior26,'Earlier October 26 Iris pack should remain valid');
 const priorVoicePack=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-24-2.json'),'utf8'));assert.equal(iris.validate(priorVoicePack),priorVoicePack);
 const evelyn=ask('What is the current status of Evelyn Hart?');assert.equal(evelyn.id,'evelyn');assert.ok(evelyn.answer.includes('public'));assert.match(evelyn.answer,/58\.125/);assert.ok(evelyn.answer.includes('30 publications'));
@@ -51,6 +52,7 @@ const last3=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2
 const last23=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-23-2.json'),'utf8'));assert.equal(iris.validate(last23),last23,'Preserved previous October 23 pack must remain valid');
 const previous22=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-22-3.json'),'utf8'));assert.equal(iris.validate(previous22),previous22,'Preserved 30-book October 22 pack must remain valid');
 const previous=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-22-1.json'),'utf8'));assert.equal(iris.validate(previous),previous,'Preserved 22-book pack must remain valid');
+assert.ok(fs.readFileSync(path.join(docs,'kira-world-avatar-builder.html'),'utf8').includes('id="avatar-builder-original-eye-2026-10-26"'));
 for(const project of data.projects){const source=project.source.split('#')[0];assert.ok(fs.existsSync(path.join(docs,source)),'Missing public linked source '+source);}
 assert.ok(moduleCode.includes('LEGACY_SOURCE'),'Historic project pack support missing');
 const chatScript=fs.readFileSync(path.join(docs,'iris-chat-ui.js'),'utf8');
