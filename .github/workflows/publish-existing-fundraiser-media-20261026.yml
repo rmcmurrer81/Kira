@@ -1,0 +1,51 @@
+# Download and publish the EXISTING approved film; no re-encoding, generating, or Codex work.
+name: Publish existing fundraising video on Kira Labs
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-existing-fundraiser-media-20261026.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+jobs:
+  copy-existing-video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download released 720p MP4 and poster; verify original hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p docs/assets
+          base="https://github.com/${GITHUB_REPOSITORY}/releases/download/fundraising-film-2026-10-26"
+          curl --fail --silent --show-error --location --retry 4 --retry-delay 3 "$base/Kira_Labs_Research_Today_Phone_720p.mp4" -o docs/assets/kira-labs-research-today-720p-20261026.mp4
+          curl --fail --silent --show-error --location --retry 4 --retry-delay 3 "$base/Kira_Labs_Fundraiser_Poster.png" -o docs/assets/kira-labs-fundraiser-poster-20261026.png
+          test "$(stat -c%s docs/assets/kira-labs-research-today-720p-20261026.mp4)" -eq 20500149
+          test "$(stat -c%s docs/assets/kira-labs-fundraiser-poster-20261026.png)" -eq 389851
+          echo "6e5ad5f35f43db9183e39b6c781a265306e70d75b20a93357cb8903883882ddd  docs/assets/kira-labs-research-today-720p-20261026.mp4" | sha256sum -c -
+          echo "4265923709a87307c4c0e9bef087cada005616c036b536e4f58de5a9ef23b4c7  docs/assets/kira-labs-fundraiser-poster-20261026.png" | sha256sum -c -
+      - name: Commit copied unchanged existing film
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/assets/kira-labs-research-today-720p-20261026.mp4 docs/assets/kira-labs-fundraiser-poster-20261026.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Host existing approved fundraising MP4 and poster for website playback"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Request Pages build after the video upload
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for retry in 1 2 3 4 5; do
+            if gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"; then exit 0; fi
+            sleep 8
+          done
+          exit 1
