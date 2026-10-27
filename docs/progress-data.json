@@ -35,6 +35,58 @@
       "evidence_kind": "internally-reviewed-six-world-value-weight-direct-and-transfer-gains-with-restart"
     },
     {
+      "id": "avatar-builder-a15-blank-head-2026-10-26",
+      "title": "Twelve original-head A15 renders completed, but appearance rejected",
+      "date": "2026-10-26",
+      "date_basis": "A15 ordinary Blender execution and primary/independent saved visual review, October 26",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "Editable one-mesh original blank Evelyn head and 12 real views saved (16,385 vertices / 16,320 faces); reviewers rejected flat face and blocky jaw/neck.",
+      "body": [
+        "Numeric scene budget and projected-array checks passed after correcting a vertex-group binding failure.",
+        "No accepted Evelyn likeness, fitted face, body, animation or physiology; a previously accepted standalone eye is separate."
+      ],
+      "boundary": "Completed engineering work with rejected visual form, not an accepted full head or character reconstruction. Private render assets not published.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Concept neural artwork, not the rejected Evelyn face",
+        "caption": "Concept art only; the rejected head renders are private."
+      },
+      "sources": [
+        {
+          "label": "A15 verified scope and negative visual review",
+          "url": "kira-world-avatar-builder.html#avatar-builder-a15-blank-head-2026-10-26"
+        }
+      ],
+      "evidence_kind": "verified-original-head-a15-rendered-rejected"
+    },
+    {
+      "id": "newbrain-subject-sensitivity-sixworld-2026-10-26",
+      "title": "Subject-sensitive small learner shows limited new acquisition and older forgetting",
+      "date": "2026-10-26",
+      "date_basis": "Separate six-world subject-sensitivity verified results and restart evidence, October 26",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Frozen vs taught: direct 0/24→6/24, alternate 0/24→5/24, old 33/48→30/48; 192/192 exact restart, Original12 2/12 unchanged.",
+      "body": [
+        "Acquisition in only three of six synthetic worlds, with four formerly correct older answers lost and one old error recovered.",
+        "Distinct-process reload exactly reproduced saved complete answers without new training."
+      ],
+      "boundary": "Separate 8,343-parameter reference model, not NB14, accepted Original12, broad language ability or proof of no forgetting.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Neural concept artwork; not learner execution footage",
+        "caption": "Concept illustration only; see full results report."
+      },
+      "sources": [
+        {
+          "label": "Subject-sensitivity scores",
+          "url": "reports/newbrain-learning-diagnostics-2026-10-26.html#subject-sensitivity"
+        }
+      ],
+      "evidence_kind": "verified-six-world-subject-sensitivity-forgetting"
+    },
+    {
       "id": "newbrain-six-world-replay-form-2026-10-26",
       "title": "Six-world replay-form experiment finds no schedule benefit; value-selection failures measured",
       "date": "2026-10-26",
