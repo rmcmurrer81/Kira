@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-value-weight-verified-2026-10-26",
+      "title": "Value-weighted teaching improves factual answers across six synthetic worlds",
+      "date": "2026-10-26",
+      "date_basis": "Primary and independent saved-evidence review, NB14 research/value-loss-results-2026-10-26/verified-status.txt, October 26 2026",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "In a matched six-world tiny learner, value-weighted versus normal teaching scored 23/24 versus 11/24 on new direct facts, 7/24 versus 2/24 alternate-form answers, and 43/48 versus 29/48 old facts; 288/288 restart answers identical. Accepted Original12 unchanged 2/12.",
+      "body": [
+        "The preregistered loss shifted normalized relative emphasis toward the correct fact-value token (1:1:4:1 for it/is/value/EOS), keeping architecture, vocabulary, SGD, update count, batch order and training examples matched.",
+        "Across six worlds, value weighting added 17 correct new direct/alternate-form answers out of 48, with positive gains in all six worlds. Old-case accuracy gained 15 previously wrong answers and lost one previously correct answer; alternate-form transfer remained 7/24 overall and 0/4 in two worlds.",
+        "Thirty-six thousand eight hundred sixty-four SGD updates and 294,912 example presentations produced 288 complete answers, all repeated after loading 18 saved states in a different process without additional learning. Independent saved-evidence check, not independent rerun of all training steps."
+      ],
+      "boundary": "Separate 8,343-parameter, 39-token synthetic reference model with 64 hidden units, not accepted Original12 (2/12); no broad conversation, autonomous cognition, statistical significance, external replication or Qwen comparison. Original trained failure 0/12 remains preserved.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Concept visualization of neural research; not a screenshot of the executed tiny model",
+        "caption": "Illustration, not model output. Exact results and limitations in the linked research report."
+      },
+      "sources": [
+        {
+          "label": "NB14 public results and limitations",
+          "url": "reports/newbrain-value-weighting-2026-10-26.html"
+        },
+        {
+          "label": "NewBrain current evidence section",
+          "url": "newbrain.html#newbrain-value-weight-2026-10-26"
+        }
+      ],
+      "evidence_kind": "internally-reviewed-six-world-value-weight-direct-and-transfer-gains-with-restart"
+    },
+    {
       "id": "newbrain-six-world-replay-form-2026-10-26",
       "title": "Six-world replay-form experiment finds no schedule benefit; value-selection failures measured",
       "date": "2026-10-26",
