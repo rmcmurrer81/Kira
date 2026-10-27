@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-10-26-6.json';
+const filename='knowledge/iris-projects-2026-10-27-1.json';
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
 const loader=fs.readFileSync(path.join(docs,'iris.js'),'utf8');
@@ -13,12 +13,12 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-10-26.6'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-10-26.6'));
+assert.ok(irisPage.includes('iris.js?v=2026-10-27.1'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-10-27.1'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
-assert.equal(data.reviewed_on,'2026-10-26');
-assert.equal(data.content_version,'2026-10-26.6');
+assert.equal(data.reviewed_on,'2026-10-27');
+assert.equal(data.content_version,'2026-10-27.1');
 for(const score of ['23/24','7/24','43/48','17 additional','288/288'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(score),'Missing verified NB14 result '+score);
 for(const id of ['world','avatar-body','evelyn'])assert.ok(data.projects.find(p=>p.id===id).evidence.includes('fundraising-film.html'),'Fundraising film must be covered by Iris: '+id);
 const knowledge={topics:[],sources:{},public_packs:null};
@@ -64,4 +64,12 @@ assert.ok(moduleCode.includes('LEGACY_SOURCE'),'Historic project pack support mi
 const chatScript=fs.readFileSync(path.join(docs,'iris-chat-ui.js'),'utf8');
 assert.ok(irisPage.includes('id="iris-chat-transcript"')&&irisPage.includes('iris-chat-ui.js')&&irisPage.includes('iris-chat-ui.css'));
 assert.ok(chatScript.includes('MutationObserver')&&chatScript.includes("addMessage('iris'"));
+
+for(const q of ['NB15','NB16','9/24','7/24','8/24','2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(q),'Oct 27 NB check '+q);
+for(const q of ['A16','31 head','three ear','26.48','128-point','UNBOUND'])assert.ok(data.projects.find(p=>p.id==='avatar-body').status.includes(q),'Oct 27 A16 check '+q);
+const old266=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-26-6.json'),'utf8'));
+assert.equal(iris.validate(old266),old266,'Oct 26.6 historical Iris pack remains valid');
+for(const f of ['newbrain-transfer-replay-2026-10-27.html','avatar-head-ear-a16-2026-10-27.html'])assert.ok(fs.existsSync(path.join(docs,'reports',f)));
+assert.ok(fs.readFileSync(path.join(docs,'newbrain.html'),'utf8').includes('id="newbrain-nb15-nb16-2026-10-27"'));
+assert.ok(fs.readFileSync(path.join(docs,'kira-world-avatar-builder.html'),'utf8').includes('id="avatar-builder-a16-2026-10-27"'));
 console.log('Iris October 26 Person Creator checks passed: integrity, 12 project sources, 30-book and historical library titles, bubble chat markup, research boundaries, Creator, movie plans, and legacy notes');
