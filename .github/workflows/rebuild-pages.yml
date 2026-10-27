@@ -17,6 +17,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Reject prohibited Robert imagery before publishing
         run: python scripts/check_rejected_public_media.py
+      - name: Prevent publication of linked personal numbers
+        run: node tests/test-public-google-voice-contact-20261027.cjs
       - name: Request GitHub Pages rebuild
         env:
           GH_TOKEN: ${{ github.token }}
