@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-10-28-4.json';
+const filename='knowledge/iris-projects-2026-10-28-5.json';
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
 const loader=fs.readFileSync(path.join(docs,'iris.js'),'utf8');
@@ -13,17 +13,18 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-10-28.4'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-10-28.4'));
+assert.ok(irisPage.includes('iris.js?v=2026-10-28.5'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-10-28.5'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-10-28');
-assert.equal(data.content_version,'2026-10-28.4');
+assert.equal(data.content_version,'2026-10-28.5');
 for(const fact of ['65 checks','6,324 vertices','nine measured','Seven female torso calls UNRUN'])assert.ok(data.projects.find(p=>p.id==='avatar-body').status.includes(fact),'Missing October 28 body finding: '+fact);
 for(const s of ['11/12','4/12','2 previously correct abstention controls lost','candidate NOT adopted'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(s),'Missing verified Oct 27–28 outcome '+s);
 for(const score of ['23/24','7/24','43/48','17 additional','288/288'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(score),'Missing verified NB14 result '+score);
 for(const id of ['world','avatar-body','evelyn'])assert.ok(data.projects.find(p=>p.id===id).evidence.includes('fundraising-film.html'),'Fundraising film must be covered by Iris: '+id);
 const previousIris=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-27-1.json'),'utf8'));assert.equal(iris.validate(previousIris),previousIris,'Prior Oct27 knowledge must remain valid');
+const priorOct284=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-28-4.json'),'utf8'));assert.equal(iris.validate(priorOct284),priorOct284,'Prior October 28.4 founder education and project notes retained');
 const priorOct283=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-28-3.json'),'utf8'));assert.equal(iris.validate(priorOct283),priorOct283,'Prior October 28.3 knowledge retained');
 const priorOct282=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-28-2.json'),'utf8'));assert.equal(iris.validate(priorOct282),priorOct282,'Prior October 28.2 knowledge retained');
 const previousOct28=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-28-1.json'),'utf8'));assert.equal(iris.validate(previousOct28),previousOct28,'Prior Oct28.1 notes retained');
@@ -84,7 +85,14 @@ const chatScript=fs.readFileSync(path.join(docs,'iris-chat-ui.js'),'utf8');
 assert.ok(irisPage.includes('id="iris-chat-transcript"')&&irisPage.includes('iris-chat-ui.js')&&irisPage.includes('iris-chat-ui.css'));
 assert.ok(chatScript.includes('MutationObserver')&&chatScript.includes("addMessage('iris'"));
 
-for(const q of ['NB15','NB16','9/24','7/24','8/24','2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(q),'Oct 27 NB check '+q);
+for(const q of ['NB15','NB16','9/24','7/24','8/24','2/12'])assert.ok(priorOct284.projects.find(p=>p.id==='newbrain').status.includes(q),'Preserved historical Oct 27 NB check '+q);
+for(const q of ['routing projection exactly zero','routing-only training','1/12','2/12','global','full adaptation'])assert.ok((data.projects.find(p=>p.id==='newbrain').status+' '+data.projects.find(p=>p.id==='newbrain').technical).includes(q),'Missing latest Oct28 routing / retention status '+q);
+for(const q of ['14 saved fixed inspection views','3,086 vertices','8 targeted checks','REJECTED'])assert.ok(data.projects.find(p=>p.id==='avatar-body').status.includes(q),'Missing latest A41 body result '+q);
+for(const f of ['docs/newbrain.html','docs/kira-world-avatar-builder.html','docs/updates.html']){
+ const content=fs.readFileSync(path.join(__dirname,'..',f),'utf8');
+ assert.ok(content.includes('newbrain-routing-retention-2026-10-28')||content.includes('avatar-builder-a41-2026-10-28')||content.includes('newbrain-avatar-a41-review-2026-10-28'),f+' missing latest documented results');
+}
+
 for(const q of ['A16','31 head','three ear','26.48','128-point','UNBOUND'])assert.ok(previousOct28.projects.find(p=>p.id==='avatar-body').status.includes(q),'Preserved Oct 27 A16 history check '+q);
 for(const q of ['full-sequence','NOT runtime-ready','NOT run'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(q),'Source-only NewBrain qualifier: '+q);
 for(const q of ['chin projection','submental floor','NOT run'])assert.ok(data.projects.find(p=>p.id==='avatar-body').status.includes(q),'Unrun Avatar Builder source: '+q);
