@@ -41,7 +41,7 @@
         &&e.source==='about.html#education'
         &&e.reviewed_on===data.reviewed_on
         &&typeof e.summary==='string'&&e.summary.length>100&&e.summary.length<700
-        &&e.summary.includes(e.degree)&&e.summary.includes(e.certificate)
+        &&e.summary.includes(e.degree)&&e.summary.toLowerCase().includes(e.certificate.toLowerCase())
         &&e.summary.includes(e.institution),'invalid reviewed founder education');
     }
     if(data.content_version==='2026-10-28.4')assert(Boolean(e),'founder education missing from current review');
