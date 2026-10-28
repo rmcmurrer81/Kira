@@ -31,6 +31,20 @@
       assert(p.source===SOURCE[p.id]||(p.id==='avatar-body'&&['2026-10-27.1','2026-10-28.1'].includes(data.content_version)&&p.source==='kira-world-avatar-builder.html#avatar-builder-a16-2026-10-27')||(p.id==='newbrain'&&data.content_version==='2026-10-27.1'&&p.source==='newbrain.html#newbrain-nb15-nb16-2026-10-27')||(p.id==='newbrain'&&['2026-10-26.5','2026-10-26.6'].includes(data.content_version)&&p.source==='newbrain.html#newbrain-value-weight-2026-10-26')||(p.id==='avatar-body'&&data.content_version==='2026-10-26.6'&&p.source==='kira-world-avatar-builder.html#avatar-builder-a15-blank-head-2026-10-26')||(p.id==='newbrain'&&/^2026-10-26\.[1-4]$/.test(data.content_version)&&p.source==='newbrain.html#newbrain-learning-2026-10-26')||(['2026-10-26.3','2026-10-26.4','2026-10-26.5'].includes(data.content_version)&&p.id==='avatar-body'&&p.source==='kira-world-avatar-builder.html#avatar-builder-original-eye-2026-10-26')||(data.content_version==='2026-10-26.2'&&p.id==='avatar-body'&&p.source==='kira-world-avatar-builder.html#avatar-builder-reference-anatomy-2026-10-26')||(data.content_version<'2026-10-26.1'&&p.source===PREVIOUS_SOURCE[p.id])||(data.content_version==='2026-10-26.1'&&p.id==='avatar-body'&&p.source==='kira-world-avatar-builder.html#avatar-builder-original-head-2026-10-26')||(p.id==='evelyn'&&data.content_version<'2026-10-24.3'&&p.source==='evelyn-hart.html#evelyn-library-working-catalog-2026-10-24')||(p.id==='temporary-creator'&&data.content_version<'2026-10-24.2'&&p.source==='kira-world.html#temporary-ai-creator')||(data.reviewed_on<'2026-10-22'&&p.source===LEGACY_SOURCE[p.id])||(p.id==='evelyn'&&data.content_version==='2026-10-22.1'&&p.source==='evelyn-hart.html#evelyn-library22-assembled-2026-10-22')||(data.content_version.startsWith('2026-10-22.')&&((p.id==='newbrain'&&p.source==='newbrain.html#newbrain-public-b-training-verified-2026-10-22')||(p.id==='evelyn'&&p.source==='evelyn-hart.html#evelyn-library30-assembled-2026-10-22')))||(['2026-10-23.1','2026-10-23.2'].includes(data.content_version)&&((p.id==='newbrain'&&p.source==='newbrain.html#newbrain-control-2026-10-23')||(p.id==='evelyn'&&p.source==='evelyn-hart.html#evelyn-source-review-2026-10-23')))||(data.content_version==='2026-10-23.3'&&((p.id==='newbrain'&&p.source==='newbrain.html#newbrain-synthetic-control-2026-10-23')||(p.id==='evelyn'&&p.source==='evelyn-hart.html#evelyn-capture-and-voice-review-2026-10-23')))||(data.content_version==='2026-10-23.4'&&((p.id==='newbrain'&&p.source==='newbrain.html#newbrain-numerical-diagnostic-run-2026-10-23')||(p.id==='evelyn'&&p.source==='evelyn-hart.html#evelyn-selective-censorship-source-2026-10-23'))),'invalid visitor source');
       for(const key of FACETS)assert(typeof p[key]==='string'&&p[key].trim()&&p[key].length<3000,'missing '+key);
     }
+    const e=data.founder_education;
+    if(e!==undefined){
+      assert(e&&e.id==='robert'&&e.title==='Robert McMurrer · Education'
+        &&e.institution==='University of Phoenix'
+        &&e.degree==='Bachelor of Science in Business'
+        &&e.certificate==='Undergraduate Marketing Certificate'
+        &&e.conferred==='March 2020'
+        &&e.source==='about.html#education'
+        &&e.reviewed_on===data.reviewed_on
+        &&typeof e.summary==='string'&&e.summary.length>100&&e.summary.length<700
+        &&e.summary.includes(e.degree)&&e.summary.includes(e.certificate)
+        &&e.summary.includes(e.institution),'invalid reviewed founder education');
+    }
+    if(data.content_version==='2026-10-28.4')assert(Boolean(e),'founder education missing from current review');
     return data;
   }
   function prepare(k,data){
@@ -42,6 +56,20 @@
         project_names:p.aliases,terms:p.aliases,sources:[source],coverage:{},next:suggestions(p),
         followups:Object.fromEntries(FACETS.filter(f=>f!=='overview').map(f=>[f,{answer:p[f],sources:[source]}]))};
       const i=k.topics.findIndex(t=>t.id===p.id);if(i<0)k.topics.push(t);else k.topics[i]=t;
+    }
+    // Append newly verified public founder education without changing archived
+    // biography/credit packs or exposing the source transcript.
+    if(data.founder_education){
+      const e=data.founder_education;
+      k.founder_education=e;
+      k.sources['iris-founder-education']={label:'Robert McMurrer · education · reviewed '+e.reviewed_on,url:e.source};
+      const sentence=' He earned a Bachelor of Science in Business and an undergraduate Marketing Certificate from the University of Phoenix in 2020.';
+      if(k.bio)for(const key of ['short','expanded'])if(typeof k.bio[key]==='string'&&!k.bio[key].includes(e.degree))k.bio[key]+=sentence;
+      const robert=k.topics.find(t=>t.id==='robert');
+      if(robert){
+        if(!robert.answer.includes(e.degree))robert.answer+=sentence;
+        if(!robert.sources.includes('iris-founder-education'))robert.sources.push('iris-founder-education');
+      }
     }
     // The current project answers replace old claims, including legacy pack routes.
     // Biography, credits, book records and other projects remain untouched.
@@ -109,6 +137,21 @@
     const data=k.iris_projects;if(!data)return null;
     const originalQuestion=normalizeQuestion(question),found=detect(data.projects,originalQuestion);
     const q=(found.corrections||[]).reduce((s,c)=>s.replace(c.from,c.to),originalQuestion);
+    // Only answer questions about Robert's verified education. Never infer
+    // degrees held by another person or publish details from the transcript.
+    const e=data.founder_education;
+    const educationIntent=/\b(?:degree|degrees|education|college|university|studied|study|studies|major|majored|graduate|graduated|graduation|academic|bachelor|certificate|certificates|credentials|credential|qualification|qualifications|school|schooling)\b/.test(q);
+    const namedFounder=/\b(?:robert|mcmurrer|founder)\b/.test(q);
+    const followupFounder=(lastTopic==='robert'||lastTopic.startsWith('bio:'))&&/^(?:(?:and|what about)\s+)?(?:his|he)\b/.test(q);
+    const otherPerson=/\b(?:evelyn|lisa|maya|rosalind|roz)\b/.test(q);
+    if(e&&educationIntent&&(namedFounder||followupFounder)&&!otherPerson){
+      const specialized=/\b(?:gpa|grade|grades|transcript|student number|birthdate|high school|doctorate|phd|masters|master)\b/.test(q);
+      return {id:'robert',title:e.title,
+        answer:specialized?'The public biography verifies a Bachelor of Science in Business and an undergraduate Marketing Certificate from the University of Phoenix, both conferred in March 2020. It does not provide the additional academic or personal record you asked about.':e.summary,
+        facet:'education',label:'REVIEWED FOUNDER BIOGRAPHY · '+e.reviewed_on,
+        sources:['iris-founder-education'],next:['Who is Robert McMurrer?','What is Kira Labs?'],
+        retrieval:{content_version:data.content_version,subject_ids:['robert'],intent:'education',reviewed_on:e.reviewed_on}};
+    }
     let projects=found.matches;
     // A longer retained concept wins over a shorter embedded current alias.
     if(projects.length===1){
