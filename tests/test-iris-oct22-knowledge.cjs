@@ -19,7 +19,7 @@ const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-10-28');
 assert.equal(data.content_version,'2026-10-28.1');
-for(const s of ['11/12','4/12','both previously correct abstention controls lost','candidate NOT adopted'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(s),'Missing verified Oct 27–28 outcome '+s);
+for(const s of ['11/12','4/12','2 previously correct abstention controls lost','candidate NOT adopted'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(s),'Missing verified Oct 27–28 outcome '+s);
 for(const score of ['23/24','7/24','43/48','17 additional','288/288'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(score),'Missing verified NB14 result '+score);
 for(const id of ['world','avatar-body','evelyn'])assert.ok(data.projects.find(p=>p.id===id).evidence.includes('fundraising-film.html'),'Fundraising film must be covered by Iris: '+id);
 const previousIris=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-27-1.json'),'utf8'));assert.equal(iris.validate(previousIris),previousIris,'Prior Oct27 knowledge must remain valid');
