@@ -4,6 +4,68 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-original-routing-retention-2026-10-28",
+      "title": "Original NewBrain routing identified, but matched training has no accepted gain",
+      "date": "2026-10-28",
+      "date_basis": "October 28 saved read-only original checkpoint diagnosis, separate matched retention comparison, and reviewed routing-only versus full-adaptation development results",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "The original checkpoint's routing projection was zero on twelve read-only development inputs. Training routing parameters alone did not change correct free answers on a separate 24-question development partition; a distinct Original12 anchor candidate scored 1/12 versus matched control 2/12. Accepted Original12 remains 2/12.",
+      "body": [
+        "Read-only diagnosis found an exactly zero routing projection in the unchanged 11,914-parameter core; its recurrent path remained sensitive to token order. An independent process reproduced the observation record without updates.",
+        "In an operational 384-update-per-arm development study, routing-only training stayed 0/12 answerable and 4/12 missing-information, identical to its baseline. Full-parameter training reached 1/12 and 6/12 but lost two previously correct abstentions; the predefined goal failed. This was a separate development set, not Original12.",
+        "A distinct matched 256-update immutable-reference retention study scored 1/12 on its anchored candidate, against 2/12 for its control. No new checkpoint was adopted; the earlier accepted Original12 remains 2/12."
+      ],
+      "boundary": "These are negative, scoped internal research outcomes. Historical development-case global novelty, full runtime resource accounting, broad generalization, consciousness, and equivalence to Qwen remain unverified. No private state or protected questions are published.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Conceptual illustration of artificial neural activity, not a generated NewBrain test result",
+        "caption": "Illustration only. Study results are the documented numeric observations."
+      },
+      "sources": [
+        {
+          "label": "Latest NewBrain routing and retention report",
+          "url": "newbrain.html#newbrain-routing-retention-2026-10-28"
+        },
+        {
+          "label": "Dated development update",
+          "url": "updates.html#newbrain-avatar-a41-review-2026-10-28"
+        }
+      ],
+      "evidence_kind": "reviewed-original-core-zero-routing-and-negative-matched-development-retention-tests"
+    },
+    {
+      "id": "avatar-original-head-curved-torso-a41-2026-10-28",
+      "title": "Original head and cropped-torso components rendered but rejected visually",
+      "date": "2026-10-28",
+      "date_basis": "October 28 reviewed A41 original blank-head and curved cropped-torso engineering results, with saved Blender inspection evidence",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "An original 16,385-vertex head saved 14 fixed inspection views and stayed visually rejected. Two authored 3,086-vertex cropped-torso models produced six clay views each; eight targeted checks passed, but the shapes remained unaccepted.",
+      "body": [
+        "Original head A41 passed 16 scoped geometry checks and produced 14 fixed Blender inspection views and an editable file. It preserved the 128 neck-boundary points and 16,320 faces. The capsule-like cranium, flat face, weak jaw and neck transition remained visibly wrong.",
+        "Two distinct authored cropped torso controls each exported 3,086 vertices and 3,000 faces, with six clay views and an editable Blender file. Eight targeted tests passed (six analytic and two mesh checks); curved supports reduced rectangular attachment artifacts.",
+        "Pointed or conical breast projections and a sharply angular rear contour failed the visual form review. Targeted numeric checks do not certify a realistic human body or a complete historical test-suite pass."
+      ],
+      "boundary": "No approved Evelyn facial likeness, integrated eye pair, whole-body rig, movement, functioning organs, medical anatomy or physiology. Private images and individual reference data remain unpublished.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Kira Labs Evelyn concept illustration, not the rejected original head or torso Blender output",
+        "caption": "Concept image, not an inspected render or proof of accepted human anatomy."
+      },
+      "sources": [
+        {
+          "label": "Avatar Builder A41 construction and rejection review",
+          "url": "kira-world-avatar-builder.html#avatar-builder-a41-2026-10-28"
+        },
+        {
+          "label": "Dated development update",
+          "url": "updates.html#newbrain-avatar-a41-review-2026-10-28"
+        }
+      ],
+      "evidence_kind": "reviewed-avatar-a41-head14view-and-curved-torso12view-unaccepted"
+    },
+    {
       "id": "avatar-original-shapes22-2026-10-28",
       "title": "Original head correction changes width but leaves profile-depth defects unresolved",
       "date": "2026-10-28",
