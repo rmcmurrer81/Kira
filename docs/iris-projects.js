@@ -44,7 +44,7 @@
         &&e.summary.includes(e.degree)&&e.summary.toLowerCase().includes(e.certificate.toLowerCase())
         &&e.summary.includes(e.institution),'invalid reviewed founder education');
     }
-    if(data.content_version==='2026-10-28.4')assert(Boolean(e),'founder education missing from current review');
+    if(data.content_version>='2026-10-28.4')assert(Boolean(e),'founder education missing from current review');
     return data;
   }
   function prepare(k,data){
