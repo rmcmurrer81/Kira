@@ -1,8 +1,62 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-26",
+  "reviewed_on": "2026-10-28",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-original12-weighted-oct28",
+      "title": "Original12 weighted attempt: two gains and two losses, no net improvement",
+      "date": "2026-10-28",
+      "date_basis": "Reviewed saved October 28 original12-weighted25 verified-status source and independent scoring",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Original neural core 2/12 baseline and 2/12 after weighted training; two previously wrong cases correct, but both prior correct abstention controls lost. No checkpoint adopted.",
+      "body": [
+        "One frozen 384-update weighted intervention, 2,304 presentations, full generated answers and a verified zero-update restart. No intermediate protected scoring or seed/dose selection.",
+        "Two previously wrong substantive questions became correct; two earlier abstention successes were lost (0/2 retained). Net score stayed 2/12 and the accepted checkpoint was preserved.",
+        "Weighting was combined with further development-data exposure; its isolated causal effect cannot be established without matched controls."
+      ],
+      "boundary": "No Original12 accuracy improvement, no accepted checkpoint replacement, no broad conversation or independent external research replication.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Conceptual brain artwork, not a frame from NewBrain's test",
+        "caption": "Illustration only; measurements are in the linked research report."
+      },
+      "sources": [
+        {
+          "label": "Oct 28 research report",
+          "url": "reports/newbrain-original-core-2026-10-28.html#original12-weighted"
+        }
+      ],
+      "evidence_kind": "reviewed-original12-two-gains-two-losses-no-net-improvement"
+    },
+    {
+      "id": "newbrain-original-core-nb21-oct27",
+      "title": "Original NewBrain neural core learns narrow synthetic associations",
+      "date": "2026-10-27",
+      "date_basis": "Reviewed October 27 original-core NB21 verified-status and separate-process restart",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "On a separate known-token symbolic task, direct complete answers improved 0/12 to 11/12 and reordered questions 0/12 to 4/12; all 48 frozen/trained responses were reproducible after restart. Original12 unchanged.",
+      "body": [
+        "Three fresh worlds, 768 updates and 3,072 presentations using the unchanged 11,914-parameter/42-token original core code on isolated historical-state copies.",
+        "Complete generated direct answers improved from 0/12 to 11/12; reordered forms from 0/12 to 4/12, leaving most unfamiliar word orders wrong.",
+        "48/48 complete records and EOS matched after separate-process restart; delayed retention unmeasured. Experimental state forks were not adopted as the reference checkpoint."
+      ],
+      "boundary": "Different small symbolic acquisition task, not Original12 generalization improvement, new vocabulary, general intelligence or Qwen parity.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Conceptual brain artwork, not a frame from NewBrain's test",
+        "caption": "Illustration only; measurements are in the linked research report."
+      },
+      "sources": [
+        {
+          "label": "Oct 27 original-core acquisition",
+          "url": "reports/newbrain-original-core-2026-10-28.html#nb21"
+        }
+      ],
+      "evidence_kind": "reviewed-original-core-nb21-symbolic-acquisition-restarted-retention-unmeasured"
+    },
     {
       "id": "newbrain-value-weight-verified-2026-10-26",
       "title": "Value-weighted teaching improves factual answers across six synthetic worlds",
