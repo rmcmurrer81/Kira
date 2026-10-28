@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "avatar-original-shapes22-2026-10-28",
+      "title": "Original head correction changes width but leaves profile-depth defects unresolved",
+      "date": "2026-10-28",
+      "date_basis": "October 28 reviewed original-shapes22 verified-status and saved geometry/inspection records, KiraWorld commit 7299b16f",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "65 scoped checks, 12 renders and three editable Blender saves; 6,324 vertices moved at most 6.944 mm, but all nine measured front/back profile sections changed 0 mm. Original head remains visually rejected and seven torso calls were unrun.",
+      "body": [
+        "Original head scene remained 16,385 vertices and 16,320 faces with all 128 neck attachment boundary positions unchanged; final projected neutral geometry round-tripped in the saved data.",
+        "The lateral adjustment widened lower-face support, moving 6,324 vertices by at most 6.944 mm, while all nine measured profile slices showed exactly zero front/back depth change. The bulbous cranium, flat elongated face and under-chin/neck transition remain.",
+        "Owner, primary and independent reviewers rejected the result. Intermediate raw symmetry failure remains archived; seven female-torso calls were not run. No accepted fitted eyes, complete head, body, animation or physiology resulted."
+      ],
+      "boundary": "Executed numerical geometry checks do not prove visual realism or full body functionality. The separately accepted standalone eye remains independent; private renders and recordings are not public demonstrations.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Kira Labs Evelyn conceptual art, not a screenshot of the rejected experimental head",
+        "caption": "Concept illustration only; inspected rejected head renders remain private."
+      },
+      "sources": [
+        {
+          "label": "Detailed measured original-head report",
+          "url": "reports/avatar-original-head-shape-2026-10-28.html"
+        },
+        {
+          "label": "Latest Avatar Builder state",
+          "url": "kira-world-avatar-builder.html#avatar-builder-head-depth-2026-10-28"
+        }
+      ],
+      "evidence_kind": "reviewed-oct28-original-head-6324-vertex-lateral-change-nine-zero-depth-profile-slices-rejected"
+    },
+    {
       "id": "newbrain-original12-weighted-oct28",
       "title": "Original12 weighted attempt: two gains and two losses, no net improvement",
       "date": "2026-10-28",
