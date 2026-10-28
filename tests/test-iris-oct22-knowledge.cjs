@@ -70,7 +70,7 @@ assert.ok(irisPage.includes('id="iris-chat-transcript"')&&irisPage.includes('iri
 assert.ok(chatScript.includes('MutationObserver')&&chatScript.includes("addMessage('iris'"));
 
 for(const q of ['NB15','NB16','9/24','7/24','8/24','2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(q),'Oct 27 NB check '+q);
-for(const q of ['A16','31 head','three ear','26.48','128-point','UNBOUND'])assert.ok(data.projects.find(p=>p.id==='avatar-body').status.includes(q),'Oct 27 A16 check '+q);
+for(const q of ['A16','31 head','three ear','26.48','128-point','UNBOUND'])assert.ok(previousOct28.projects.find(p=>p.id==='avatar-body').status.includes(q),'Preserved Oct 27 A16 history check '+q);
 const old266=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-26-6.json'),'utf8'));
 assert.equal(iris.validate(old266),old266,'Oct 26.6 historical Iris pack remains valid');
 for(const f of ['newbrain-transfer-replay-2026-10-27.html','avatar-head-ear-a16-2026-10-27.html'])assert.ok(fs.existsSync(path.join(docs,'reports',f)));
