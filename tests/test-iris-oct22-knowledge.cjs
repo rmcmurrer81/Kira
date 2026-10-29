@@ -108,7 +108,7 @@ for(const [f,anchor] of [
  ['updates.html','newbrain-avatar-results-2026-10-29']]){
  assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('id="'+anchor+'"'),'Missing October29 measured web section '+f);
 }
-for(const [path,id] of [['newbrain.html','newbrain-diagnostic-custody-2026-10-29'],['kira-world-avatar-builder.html','avatar-builder-camera-transport-source-2026-10-29'],['updates.html','newbrain-evidence-archive-2026-10-29']])assert.ok(fs.readFileSync(path.join(docs,path),'utf8').includes('id="'+id+'"'),'Missing later Oct29 engineering note '+path);
+for(const [pagePath,id] of [['newbrain.html','newbrain-diagnostic-custody-2026-10-29'],['kira-world-avatar-builder.html','avatar-builder-camera-transport-source-2026-10-29'],['updates.html','newbrain-evidence-archive-2026-10-29']])assert.ok(fs.readFileSync(path.join(docs,pagePath),'utf8').includes('id="'+id+'"'),'Missing later Oct29 engineering note '+pagePath);
 const progress=JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8'));
 assert.equal(progress.reviewed_on,'2026-10-29');
 for(const milestone of ['newbrain-routing-math-and-answer-tests-2026-10-29','avatar-builder-original-a44-a45-2026-10-29'])assert.ok(progress.milestones.some(m=>m.id===milestone),'Missing October29 Lab Timeline milestone '+milestone);
