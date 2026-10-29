@@ -4,6 +4,68 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-actual62-216-outputs-unscored-2026-10-29",
+      "title": "NewBrain produces 216 complete answer records; host-identity check prevents scoring",
+      "date": "2026-10-29",
+      "date_basis": "Original-core Actual62 independently reviewed primary and distinct-restart receipts with failed native execution-identity qualification",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Both 384-update adaptation arms completed and scientific DATA passed the archive limits. Primary and restart produced 108 complete answers each, but an incorrect host hash prevented the whole comparison's qualification and answer scoring. Original12 unchanged 2/12.",
+      "body": [
+        "Prerequisite validation passed 58 malformed typed-input and two pre-model-entry rejection cases. An independently written input producer created the four six-row teaching arrays and seven rank-probe arrays. Primary study executed training without updating the accepted checkpoint.",
+        "The scientific archive contained 175,017,705 raw bytes and 122,485,745 compressed bytes and passed its unchanged category limits; 108 complete primary records and 108 restart records were saved. The individual outputs passed local validation.",
+        "The complete 108-pair restart qualification failed because changing memory availability snapshots were given as the immutable host identifier; no scoring or learning gain was accepted. Subsequent host/context repair code was independently static-reviewed, but the new checks have not executed."
+      ],
+      "boundary": "No new valid taught, held-out, factual-answer or Original12 accuracy score. Historical overlap coverage is incomplete; records cannot be treated as an independent replication or an accepted new model. Protected questions, state arrays and private logs stay unpublished.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Concept neural illustration, not a screenshot of the Actual62 NewBrain execution",
+        "caption": "Illustration only; genuine scientific outputs were retained privately."
+      },
+      "sources": [
+        {
+          "label": "Actual62 complete-answer diagnostic details",
+          "url": "newbrain.html#newbrain-typed-input-host-2026-10-29"
+        },
+        {
+          "label": "Dated late October 29 study and limits",
+          "url": "updates.html#newbrain-avatar-late-2026-10-29"
+        }
+      ],
+      "evidence_kind": "reviewed-actual62-216-generated-host-identity-failure-not-scored"
+    },
+    {
+      "id": "avatar-reference-a60-constraint-rejection-2026-10-29",
+      "title": "Original head constraint excludes authored cheek-width target before another rejected solve",
+      "date": "2026-10-29",
+      "date_basis": "A60 actual Blender reference geometry/camera capture and analytic bounded-control target rejection; later Source61/63 unrun static review",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "Original geometry reference capture completed for head and two torso variants, including eight installed Blender camera records. A proposed cheek-width target exceeded the unchanged per-control 12 mm displacement contract and was excluded before construction.",
+      "body": [
+        "The actual Blender reference retained 16,385 head vertices and 16,320 faces, plus separate 3,086-vertex/3,000-face retained and diagnostic cropped torso surfaces. Indexed mesh/attachment records were preserved; eight camera input/runtime receipts came from Blender 5.1.2.",
+        "Under the existing nonnegative convex B-spline basis, each surface support point is bounded to 12 mm from its parent when all contributing cage controls have that bound. The signed width difference between two supports is bounded by 24 mm. One authored target exceeded that necessary bound.",
+        "The specific head target was rejected analytically without modifying limits or executing a new head solve. Further explicit per-control/tied-group contracts and actual-surface comparison guards remain source-reviewed but unrun."
+      ],
+      "boundary": "A proposed engineering target being outside an allowed movement contract is not evidence of anatomical impossibility. Neither this reference capture nor the source phase produced an accepted head, torso, rig, organ or functional physiology. No private reference photos or test meshes were published.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Existing Kira Labs concept artwork, not the rejected measured original 3D head",
+        "caption": "Concept illustration; actual original reference meshes remain private."
+      },
+      "sources": [
+        {
+          "label": "Actual original geometry and cheek-width bound",
+          "url": "kira-world-avatar-builder.html#avatar-builder-reference-bounds-2026-10-29"
+        },
+        {
+          "label": "Dated head and NewBrain review",
+          "url": "updates.html#newbrain-avatar-late-2026-10-29"
+        }
+      ],
+      "evidence_kind": "reviewed-a60-blender-capture-analytical-12mm-24mm-bound-rejected-target"
+    },
+    {
       "id": "newbrain-routing-math-and-answer-tests-2026-10-29",
       "title": "NewBrain routed signals strengthened mathematically, but complete factual answers remain incorrect",
       "date": "2026-10-29",
