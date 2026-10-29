@@ -1,8 +1,70 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-28",
+  "reviewed_on": "2026-10-29",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-routing-math-and-answer-tests-2026-10-29",
+      "title": "NewBrain routed signals strengthened mathematically, but complete factual answers remain incorrect",
+      "date": "2026-10-29",
+      "date_basis": "Reviewed October 29 Actual47 numerical qualification, Actual49 matched Original12 routing comparison and Actual51 separate development full-versus-routing study",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "A unit-RMS routed feature increased a fixed numerical logit effect, but its candidate scored 1/12 versus control 2/12 on Original12. Separate full-parameter development training scored 2/12, both unknown-answer controls, with zero correct facts. No accepted checkpoint change.",
+      "body": [
+        "Actual47 exercised 988 completed native objective/gradient evaluations, 480 parameter finite differences and 18 feature differences. In one fixed first-prefix check, normalized routing had a 0.11136 L2 effect on centered logits versus approximately 0.0000000504 with legacy routing. The top answer-token choice was unchanged.",
+        "Actual49 compared two matched 384-update routing-only arms on the previously used Original12 content. Legacy routing scored 0/10 factual and 2/2 missing-information (2/12); normalized routing scored 0/10 factual and 1/2 missing-information (1/12). The candidate was not adopted.",
+        "Actual51 separately used 24 development teaching rows and 12 sealed development evaluation questions. Routing-only and unadapted answers were 0/12, while all-parameter training scored 2/12 solely on missing-information controls. No correct factual answer was produced. Actual52 complete-answer diagnostics remain source-reviewed but unrun."
+      ],
+      "boundary": "Numerical branch strength does not establish factual learning, held-out generalization or production readiness. Actual49 reused original content; Actual51's historical per-row exclusion coverage was incomplete. Original12 accepted score remains 2/12; private keys, states and question payloads are not published.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Abstract Kira Labs neural research concept, not an output of the measured NewBrain system",
+        "caption": "Concept illustration, not a frame from a scientific run."
+      },
+      "sources": [
+        {
+          "label": "Measured NewBrain results",
+          "url": "newbrain.html#newbrain-mathematics-and-learning-2026-10-29"
+        },
+        {
+          "label": "Dated results and limitations",
+          "url": "updates.html#newbrain-avatar-results-2026-10-29"
+        }
+      ],
+      "evidence_kind": "reviewed-actual47-math-actual49-original12-negative-actual51-development-negative"
+    },
+    {
+      "id": "avatar-builder-original-a44-a45-2026-10-29",
+      "title": "Original head A45 and cropped torso A44 show measured geometry corrections but still fail realism",
+      "date": "2026-10-29",
+      "date_basis": "October 28 local / October 29 UTC reviewed original head A45 and cropped torso A44 saved geometry, renders and visual assessments",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "A45 original 16,385-vertex head produced 14 reviewed images and passed bounded surface checks but remained visually rejected. A44's two cropped torsos passed scoped mesh audits and produced 12 views, yet their chest and body silhouettes also remained unacceptable.",
+      "body": [
+        "The A45 blank-head correction changed 63 of 144 cage controls within unchanged displacement bounds; 11 authored shape targets were met. It preserved 128 indexed neck-boundary points, produced a Blender-editable model and 14 inspection images. Reviewers rejected its capsule-like upper vault, long flat face, weak jaw and chin-to-neck transition.",
+        "Both A44 cropped-torso meshes had 3,086 vertices, 3,000 faces, one connected component and four intentional open attachment/crop boundaries. A controlled revision moved 174 vertices along the front/back axis without moving 176 locked boundary coordinates. Twelve matched neutral views were preserved.",
+        "Reviewers still rejected both torso variants for pointed breast shapes, weak chest transitions and simplified rear form. Further proportional comparisons, head metrics and torso-apex source corrections remain unrun."
+      ],
+      "boundary": "Passing numeric geometry, fixed-camera rendering and editable exports do not establish a realistic human head, Evelyn likeness, accepted full body, fitted eyes, physiology, rigging or motion. All private adult-body renders and personal references remain unpublished.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Concept illustration of Evelyn, not a realistic or accepted reconstruction from the A44/A45 experiments",
+        "caption": "Illustration only; the actual unaccepted geometry renders remain private."
+      },
+      "sources": [
+        {
+          "label": "Avatar Builder A44 and A45 results",
+          "url": "kira-world-avatar-builder.html#avatar-builder-a44-a45-2026-10-29"
+        },
+        {
+          "label": "Dated development review",
+          "url": "updates.html#newbrain-avatar-results-2026-10-29"
+        }
+      ],
+      "evidence_kind": "reviewed-a44-torso-a45-head-rendered-unaccepted"
+    },
     {
       "id": "newbrain-original-routing-retention-2026-10-28",
       "title": "Original NewBrain routing identified, but matched training has no accepted gain",
