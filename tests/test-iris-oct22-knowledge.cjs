@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-10-29-1.json';
+const filename='knowledge/iris-projects-2026-10-29-2.json';
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
 const loader=fs.readFileSync(path.join(docs,'iris.js'),'utf8');
@@ -13,12 +13,13 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-10-29.1'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-10-29.1'));
+assert.ok(irisPage.includes('iris.js?v=2026-10-29.2'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-10-29.2'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-10-29');
-assert.equal(data.content_version,'2026-10-29.1');
+assert.equal(data.content_version,'2026-10-29.2');
+const priorOct291=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-29-1.json'),'utf8'));assert.equal(iris.validate(priorOct291),priorOct291,'Previous October 29.1 review remains valid');
 const priorOct285=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-28-5.json'),'utf8'));assert.equal(iris.validate(priorOct285),priorOct285,'Previous October 28.5 review remains valid');
 for(const fact of ['65 checks','6,324 vertices','nine measured','Seven female torso calls UNRUN'])assert.ok(priorOct285.projects.find(p=>p.id==='avatar-body').status.includes(fact),'Preserved October 28 body finding: '+fact);
 for(const s of ['11/12','4/12','2 previously correct abstention controls lost','candidate NOT adopted'])assert.ok(priorOct285.projects.find(p=>p.id==='newbrain').status.includes(s),'Preserved verified Oct 27–28 outcome '+s);
@@ -53,7 +54,9 @@ const nb=ask('What are the latest NewBrain test results?');
 assert.equal(nb.id,'newbrain');assert.equal(nb.facet,'status');
 for(const q of ['OCTOBER 29','Actual47','Actual49','Actual51','Actual52','0/10 factual','1/12','2/12','UNRUN','checkpoint NOT adopted'])assert.ok(nb.answer.includes(q),'Latest Oct29 NewBrain review missing '+q);
 assert.ok(nb.sources.includes('iris-current-newbrain'));
-assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-mathematics-and-learning-2026-10-29');
+assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-diagnostic-custody-2026-10-29');
+assert.equal(priorOct291.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-mathematics-and-learning-2026-10-29');
+for(const q of ['Actual53','Actual57','136 MiB','Source58','UNRUN','NO qualified answer set'])assert.ok(nb.answer.includes(q),'Latest incomplete newbrain evidence missing '+q);
 const historicalNB=priorOct285.projects.find(p=>p.id==='newbrain').status;
 for(const q of ['6/12','10/24','23/24','43/48','11/12','candidate NOT adopted','17 additional','540','324','2/3','3/3','105/105','30/105','20 generations','UNSCORED','freshness guard','84,826','105-case','312,524','192/192','33/48','30/48'])assert.ok(historicalNB.includes(q),'Preserved earlier learning detail '+q);
 const creators=ask('How does the Temporary AI Creator work?');
@@ -71,7 +74,9 @@ assert.equal(movies.id,'evelyn');assert.equal(movies.facet,'how');assert.match(m
 const body=ask('What is the latest Avatar Builder status?');
 assert.equal(body.id,'avatar-body');assert.equal(body.facet,'status');
 for(const q of ['OCTOBER 29','A45','A44','16,385 vertices','14 matched inspection images','174 localized','176 locked','REJECTED','UNRUN'])assert.ok(body.answer.includes(q),'Latest A44/A45 review missing '+q);
-assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-a44-a45-2026-10-29');
+assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-camera-transport-source-2026-10-29');
+assert.equal(priorOct291.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-a44-a45-2026-10-29');
+for(const q of ['LATER OCTOBER 29','Camera-transport','UNRUN','No new anatomical geometry'])assert.ok(body.answer.includes(q),'Latest camera source review missing '+q);
 const historicalBody=priorOct285.projects.find(p=>p.id==='avatar-body').status;
 for(const q of ['V9','V10','34 ordinary software methods','217','473','REJECTED','failed strict side camera','163-bone','13/28','38 facial observations','23/23','18 actual Blender static','unqualified','A15','12 actual inspected','16,385','6,324'])assert.ok(historicalBody.includes(q),'Preserved earlier body evidence '+q);
 const approvedVoice=ask("Has Evelyn Hart's original voice been approved?");assert.equal(approvedVoice.id,'evelyn');assert.match(approvedVoice.answer,/approved/i);assert.match(approvedVoice.answer,/3.04/);
@@ -103,6 +108,7 @@ for(const [f,anchor] of [
  ['updates.html','newbrain-avatar-results-2026-10-29']]){
  assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('id="'+anchor+'"'),'Missing October29 measured web section '+f);
 }
+for(const [path,id] of [['newbrain.html','newbrain-diagnostic-custody-2026-10-29'],['kira-world-avatar-builder.html','avatar-builder-camera-transport-source-2026-10-29'],['updates.html','newbrain-evidence-archive-2026-10-29']])assert.ok(fs.readFileSync(path.join(docs,path),'utf8').includes('id="'+id+'"'),'Missing later Oct29 engineering note '+path);
 const progress=JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8'));
 assert.equal(progress.reviewed_on,'2026-10-29');
 for(const milestone of ['newbrain-routing-math-and-answer-tests-2026-10-29','avatar-builder-original-a44-a45-2026-10-29'])assert.ok(progress.milestones.some(m=>m.id===milestone),'Missing October29 Lab Timeline milestone '+milestone);
