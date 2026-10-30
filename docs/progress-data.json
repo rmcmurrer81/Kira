@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-source72-software-2026-10-30",
+      "title": "NewBrain language and memory extension passed software checks, not conversation learning",
+      "date": "2026-10-30",
+      "date_basis": "One reviewed Source72 direct software invocation, six assertion groups and separate source/backend guard",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "A separately versioned UTF-8 text, memory and confirmed-teaching extension completed one software qualification with exit code 0. Real conversation learning, checkpoint migration and generalization were not measured; accepted Original12 remains 2/12.",
+      "body": [
+        "The new source path retains the original recurrent/routing research lineage but adds typed ordinary messages, dynamic vocabulary, byte fallback, owner-scoped attributed memory/corrections, explicit teaching calls, configurable limits and versioned save/restart interfaces.",
+        "One direct software invocation ran for 0.238731 seconds with six software assertion groups plus a source/backend guard returning normally. These are group results, not a total count of independent examples or learning trials. Mirrored copies are not separate experiments.",
+        "No real historical checkpoint migration, trained unfamiliar-word conversation, language understanding score, qualified live UI or new accepted model was demonstrated. Test a separately approved lesson, correction and distinct-process restart before claiming semantic improvement."
+      ],
+      "boundary": "Software interface checks only; original 11,914-parameter, 42-token Original12 remains 2/12. No neural learning improvement, private benchmark disclosure or clinical/avatar capability follows.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Concept art representing research neural networks, not a screenshot of Source72 execution",
+        "caption": "Concept art. Qualified result: software entry only, not conversational AI behavior."
+      },
+      "sources": [
+        {
+          "label": "Reviewed Source72 software-qualification report",
+          "url": "reports/newbrain-language-source72-2026-10-30.html"
+        },
+        {
+          "label": "NewBrain project status",
+          "url": "newbrain.html#newbrain-open-language-source72-2026-10-30"
+        }
+      ],
+      "evidence_kind": "reviewed-software-qualification-one-invocation-six-groups-no-learning-score"
+    },
+    {
       "id": "newbrain-ordinary-conversation-gate-2026-10-30",
       "title": "Ordinary-language greeting blocked by original NewBrain's fixed input format",
       "date": "2026-10-30",
@@ -14,7 +45,7 @@
       "body": [
         "The single read-only call used the preserved 11,914-parameter original decoder. It produced a recorded input-format rejection, zero answer tokens, no EOS and no training. This verifies a narrow interface limitation, not failed semantic understanding.",
         "One separate software prerequisite passed 73 content/entry/restart checks, but the associated learning study was rejected before model entry for incomplete evidence-contract support. Another bounded validator passed 46 valid inputs and 46 intended rejection cases, with the learning study later blocked by expired execution permissions.",
-        "Flexible vocabulary, longer replies, ordinary-text conversation and remembered corrections are proposed as future independent work. A larger tokenizer or chat wrapper alone cannot be counted as neural language learning or understanding."
+        "A separately versioned Source72 path subsequently passed software interface assertions, not a real language-learning trial; it does not change the original decoder's rejected input result or accepted Original12 2/12."
       ],
       "boundary": "No ordinary conversation was completed; no new factual answer, semantic generalization, scored learning or accepted checkpoint was demonstrated. Source preparation and unentered studies are not runtime milestones. No protected questions or private conversations were published.",
       "image": {
