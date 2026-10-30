@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-word-study-a87-a92-2026-10-30",
+      "title": "NewBrain fixed familiar-word gains persisted; held-out word meaning failed",
+      "date": "2026-10-30",
+      "date_basis": "Independently reviewed A87 128-update word study and A92 exact 20-response distinct-process replay",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Fixed familiar probes improved from 0/5 to 2/5; 20/20 complete records persisted on restart, but six substantive held-out probes remained 0/6 and old uncertainty controls regressed from 2/2 to 0/2.",
+      "body": [
+        "One previously attempted word was practiced with 128 neural updates using the 32,812-parameter native UTF-8 extension, not 128 conversations or a first word.",
+        "Familiar probes 0/5→2/5; held-out meaning/use/context 0/6; differently worded delayed 0/1; previously correct unknown controls 2/2→0/2; total final correct 3/20.",
+        "A92 read-only fresh process reproduced all 20/20 native final generation dictionaries with no extra training, including the wrong answers. Later Source93 checks are unrun."
+      ],
+      "boundary": "Full predefined learning success false; no new vocabulary, neuron growth or adopted checkpoint. Accepted Original12 still 2/12 and not rerun. Private lessons, states and media remain unpublished.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Previously approved neural-network concept illustration, not a screenshot of A87 or A92",
+        "caption": "Illustration only. Fixed-known 2/5, substantive held-out 0/6."
+      },
+      "sources": [
+        {
+          "label": "Reviewed A87/A92 report",
+          "url": "reports/newbrain-word-study-a87-a92-2026-10-30.html"
+        },
+        {
+          "label": "NewBrain October 30 results",
+          "url": "newbrain.html#newbrain-word-study-a87-a92-2026-10-30"
+        }
+      ],
+      "evidence_kind": "a87-known-0of5-to-2of5-a92-20of20-exact-heldout-0of6-original12-unchanged"
+    },
+    {
       "id": "newbrain-word-lesson-a75-restart-2026-10-30",
       "title": "NewBrain word lesson and memory restart work; word meaning still 0/3",
       "date": "2026-10-30",
