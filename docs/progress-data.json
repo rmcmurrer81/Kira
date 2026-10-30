@@ -1,8 +1,39 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-29",
+  "reviewed_on": "2026-10-30",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-ordinary-conversation-gate-2026-10-30",
+      "title": "Ordinary-language greeting blocked by original NewBrain's fixed input format",
+      "date": "2026-10-30",
+      "date_basis": "Reviewed original 42-token read-only Actual71 ordinary-conversation attempt, and separately completed A64/A67 bounded software observations",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "One ordinary greeting was rejected before generation because the frozen original decoder requires special MEMORY/QUERY structure and its five greeting tokens were outside the 42-token vocabulary. No answer or score resulted. The original checkpoint and accepted Original12 2/12 remain unchanged.",
+      "body": [
+        "The single read-only call used the preserved 11,914-parameter original decoder. It produced a recorded input-format rejection, zero answer tokens, no EOS and no training. This verifies a narrow interface limitation, not failed semantic understanding.",
+        "One separate software prerequisite passed 73 content/entry/restart checks, but the associated learning study was rejected before model entry for incomplete evidence-contract support. Another bounded validator passed 46 valid inputs and 46 intended rejection cases, with the learning study later blocked by expired execution permissions.",
+        "Flexible vocabulary, longer replies, ordinary-text conversation and remembered corrections are proposed as future independent work. A larger tokenizer or chat wrapper alone cannot be counted as neural language learning or understanding."
+      ],
+      "boundary": "No ordinary conversation was completed; no new factual answer, semantic generalization, scored learning or accepted checkpoint was demonstrated. Source preparation and unentered studies are not runtime milestones. No protected questions or private conversations were published.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Conceptual neural-network art, not a frame of the rejected original NewBrain conversation",
+        "caption": "Illustration only. Test result: input-format rejection before response generation."
+      },
+      "sources": [
+        {
+          "label": "Original read-only greeting result",
+          "url": "newbrain.html#newbrain-conversation-interface-2026-10-30"
+        },
+        {
+          "label": "Dated limitations and software-boundary checks",
+          "url": "updates.html#newbrain-ordinary-greeting-2026-10-30"
+        }
+      ],
+      "evidence_kind": "reviewed-original-core-single-natural-greeting-input-rejection-zero-responses-unchanged-checkpoint"
+    },
     {
       "id": "newbrain-actual62-216-outputs-unscored-2026-10-29",
       "title": "NewBrain produces 216 complete answer records; host-identity check prevents scoring",
