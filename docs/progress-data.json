@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-word-lesson-a75-restart-2026-10-30",
+      "title": "NewBrain word lesson and memory restart work; word meaning still 0/3",
+      "date": "2026-10-30",
+      "date_basis": "Reviewed Actual75 separate native word-lesson and distinct-process saved-model/memory restart evidence",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "A migrated 300-token/32,812-parameter NewBrain extension retained one corrected word lesson through an exact separate-process restart. The three meaning/application answers stayed 0/3 correct, while one missing-information control improved from 0/1 to 1/1.",
+      "body": [
+        "The original 11,914-parameter/42-token state was explicitly preserved and separately migrated to the UTF-8 text extension; sixteen full updates rehearsed one human-authorized explanation/correction rather than sixteen conversations.",
+        "Meaning, rephrasing and application stayed 0/3 before and after. The saved-context application was still 0/1. The model's factual replies contained only the opening article and EOS, even as the teacher-forced loss dropped from 10.40055 to 7.34226.",
+        "Nine post-training evaluation answers and complete generation records matched exactly after a distinct-process restart, with no additional learning; the saved explanation, correction history and confirmed teaching targets persisted. The isolated missing-information control improved to 1/1."
+      ],
+      "boundary": "No complete word-meaning acquisition, general conversational competence, semantic transfer, neural structural growth, qualified power-loss persistence or accepted new checkpoint. Original12 stays 2/12 and was not rerun. One rehearsal task, not multiple conversations. Private lesson text and states are not published.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Concept illustration of neural research; not a screenshot of the NewBrain word lesson",
+        "caption": "Illustration only. Measured word-learning result: 0/3 before and after."
+      },
+      "sources": [
+        {
+          "label": "A75 complete word lesson results and restart boundary",
+          "url": "reports/newbrain-word-lesson-a75-2026-10-30.html"
+        },
+        {
+          "label": "Current NewBrain experimental status",
+          "url": "newbrain.html#newbrain-word-lesson-a75-2026-10-30"
+        }
+      ],
+      "evidence_kind": "a75-native-word-lesson-16-updates-0of3-semantic-1of1-unknown-and-exact-9of9-restart"
+    },
+    {
       "id": "newbrain-source72-software-2026-10-30",
       "title": "NewBrain language and memory extension passed software checks, not conversation learning",
       "date": "2026-10-30",
