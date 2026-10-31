@@ -20,8 +20,8 @@
   'knowledge/projects-2026-09-12-1.json':null
  });
  // Immutable release path: never overwrite a pack needed by a cached loader.
- const PROJECT_NOTES='knowledge/iris-projects-2026-10-30-6.json';
- const PROJECT_SHA256='461b9a12e8cb7c2cdbf9b72f623632a5bd005a03ac298e8eca78ea2effafe4b0';
+ const PROJECT_NOTES='knowledge/iris-projects-2026-10-31-1.json';
+ const PROJECT_SHA256='55b4169bb5b4e80733c316dd9a1326d096c219ef7654a6bfb3eec53ca498dc25';
  const status=document.getElementById('guide-status'),send=document.getElementById('send-question');
  const nativeFetch=window.fetch.bind(window);
  async function blobHash(text){

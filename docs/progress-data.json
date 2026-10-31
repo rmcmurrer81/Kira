@@ -1,8 +1,70 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-30",
+  "reviewed_on": "2026-10-31",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-a108-native-reply-diagnostic-2026-10-31",
+      "title": "One NewBrain reply diverged before EOS; no new learning gain",
+      "date": "2026-10-31",
+      "date_basis": "Single A108 native response/diagnostic and import-only check",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "A108 measured one mismatched native reply; first reference token ranked 77 and EOS came second. No teaching updates or benchmark rescore.",
+      "body": [
+        "Two ordinary processes exited 0, with just one generated reply; diagnostic added no further generation or forward call.",
+        "Four training counters and parameters unchanged; this is not a new linguistic accuracy measure or proof of an EOS fix.",
+        "Original12 remains 2/12, not rerun. Full outer runtime and physical I/O unverified."
+      ],
+      "boundary": "Not a new semantic score, independent replication or checkpoint adoption. Private prompts and archives remain unpublished.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Previously approved neural concept illustration, not A108 execution imagery",
+        "caption": "Concept only; one reply measured."
+      },
+      "sources": [
+        {
+          "label": "A108 public report",
+          "url": "reports/newbrain-native-reply-diagnostic-a108-2026-10-31.html"
+        },
+        {
+          "label": "NewBrain October31 status",
+          "url": "newbrain.html#newbrain-single-reply-a108-2026-10-31"
+        }
+      ],
+      "evidence_kind": "a108-one-reply-first-token-divergence-eos-second-no-learning"
+    },
+    {
+      "id": "avatar-source109-connection-2026-10-31",
+      "title": "Head–torso original connection source prepared; unrun",
+      "date": "2026-10-31",
+      "date_basis": "October31 Source109 static code review without new geometry execution",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "128-point head-neck to 64/128-point torso attachment source and neutral Blender/GLB exporter staged; no accepted connected mesh or body.",
+      "body": [
+        "Source-only indexed original head–torso seam, independent registration and 140,000 vertex/face limits.",
+        "Geometry, Blender exports/imports, assertions, renders and motion UNRUN; old visual rejections unchanged.",
+        "No full Evelyn person, functional human anatomy, or completed fictional-character reconstruction."
+      ],
+      "boundary": "Source is not an accepted body or clinical anatomy; private references and source media are not published.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Previously approved Avatar Builder illustration, not a Source109 mesh",
+        "caption": "Source only; no connected head/body execution."
+      },
+      "sources": [
+        {
+          "label": "Source109 public report",
+          "url": "reports/avatar-connected-head-torso-source109-2026-10-31.html"
+        },
+        {
+          "label": "Avatar Builder October31 status",
+          "url": "kira-world-avatar-builder.html#avatar-builder-connected-head-torso-source109-2026-10-31"
+        }
+      ],
+      "evidence_kind": "source109-original-head-torso-neutral-connection-source-only-unrun"
+    },
     {
       "id": "newbrain-continuing-lesson-a98-persistence-2026-10-30",
       "title": "NewBrain continuing-lesson state saved/restarted; semantic learning untested",
