@@ -1,0 +1,8 @@
+# Install only for the projects you actively test.
+strands-agents
+strands-agents-tools
+boto3
+psycopg[binary]
+google-genai<3.0.0
+google-adk
+calle-ai==0.2.0
