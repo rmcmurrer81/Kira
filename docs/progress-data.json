@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-continuing-lesson-a98-persistence-2026-10-30",
+      "title": "NewBrain continuing-lesson state saved/restarted; semantic learning untested",
+      "date": "2026-10-30",
+      "date_basis": "One bounded A98 native software test October 30; separate blocked A101/A103 preparation October 31 UTC",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two authorized continuing-lesson state transitions and 22/22 no-mutation checks passed, with exact separate-process restart. Follow-up entry checks stopped before new model execution; no language-learning score changed.",
+      "body": [
+        "A98 used an isolated 29,977-parameter/265-codec-entry native UTF-8 experimental instance; two continuing updates were saved/reloaded while retaining predecessor practice and history.",
+        "The old practice stopped without complete free output. A98 proved bounded persistence and 22/22 defensive checks, not successful free-answer learning, generalization, or long-term forgetting resistance.",
+        "A101/A103 October 31 UTC failed preparatory gates before new model execution. Source99/102 diagnostics remain unrun. Earlier familiar 2/5, held-out 0/6 and accepted Original12 2/12 remain separate."
+      ],
+      "boundary": "Not a new trained language-understanding result, independent three-run replication, physical I/O proof or power-loss durability. Original12 remains 2/12, not rerun; private states and prompts are unpublished.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved concept illustration of neural research, not A98 execution imagery",
+        "caption": "Concept only. A98: 2/2 transitions, 22/22 defensive checks."
+      },
+      "sources": [
+        {
+          "label": "NewBrain A98 reviewed public report",
+          "url": "reports/newbrain-continuing-lesson-a98-2026-10-30.html"
+        },
+        {
+          "label": "Updated NewBrain research summary",
+          "url": "newbrain.html#newbrain-continuing-lesson-a98-2026-10-30"
+        }
+      ],
+      "evidence_kind": "a98-bounded-continuing-lessons-two-authorized-updates-twentytwo-checks-exact-restart-no-score"
+    },
+    {
       "id": "newbrain-word-study-a87-a92-2026-10-30",
       "title": "NewBrain fixed familiar-word gains persisted; held-out word meaning failed",
       "date": "2026-10-30",
