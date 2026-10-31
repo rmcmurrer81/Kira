@@ -18,7 +18,7 @@ assert.ok(irisPage.includes('iris-projects.js?v=2026-10-31.2'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-10-31');
-assert.equal(data.content_version,'2026-10-31.2';
+assert.equal(data.content_version,'2026-10-31.2');
 const priorOct311=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-31-1.json'),'utf8'));assert.equal(iris.validate(priorOct311),priorOct311,'Preserve prior Oct31.1 pack with original A108/Source109 findings');
 const priorOct306=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-30-6.json'),'utf8'));assert.equal(iris.validate(priorOct306),priorOct306,'Preserve Oct30.6 A98 archive');
 for(const q of ['LATEST OCT31 A108','rank 77','Original12 2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(q),'Missing A108 reviewed fact '+q);
