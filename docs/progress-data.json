@@ -4,6 +4,68 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "avatar-motion-software-2026-10-31",
+      "title": "Reusable motion library passed 22/22 pure software checks",
+      "date": "2026-10-31",
+      "date_basis": "One independently reviewed isolated software bundle, no actual body movement",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "Reusable motion definitions, CPU walk phase, blending and private practice registry passed 22/22 pure software tests; actual movement and body-transfer remain untested.",
+      "body": [
+        "Independent corrections to candidate evidence binding, GLB validation, races and private-field checks.",
+        "Mocked artifact ingestion and format fixtures contain no avatar; body inheritance is inactive.",
+        "No accepted Evelyn body, animated contact, functional organs or fictional-character reconstruction."
+      ],
+      "boundary": "Isolated software checks do not show learned or visually accepted movement. Mirrors are not independent experiments.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Approved Avatar Builder concept illustration, not a motion recording",
+        "caption": "Concept only; software qualification, not body animation."
+      },
+      "sources": [
+        {
+          "label": "Reviewed public report",
+          "url": "reports/avatar-motion-software-boundary-2026-10-31.html"
+        },
+        {
+          "label": "Avatar Builder status",
+          "url": "kira-world-avatar-builder.html#avatar-builder-motion-library-2026-10-31"
+        }
+      ],
+      "evidence_kind": "motion-library-22-pure-software-tests-no-animated-body"
+    },
+    {
+      "id": "newbrain-native-api-agreement-2026-10-31",
+      "title": "NewBrain native call paths agreed in one unscored test",
+      "date": "2026-10-31",
+      "date_basis": "One ordinary two-restore software-path comparison; zero teaching updates",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "talk and model.generate yielded identical complete native reports and true EOS. Zero neural updates; no learning score change.",
+      "body": [
+        "Earlier malformed caller/codec input failed before generation; failed evidence remains distinct.",
+        "One later separately nominated two-restore comparison matched output with unchanged parameters and training counters.",
+        "Accepted Original12 remains 2/12, not rerun; this is not semantic progress."
+      ],
+      "boundary": "Unscored API consistency only, not a new language-learning result or checkpoint adoption.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved research concept art, not a run screenshot",
+        "caption": "Illustration only; one unscored comparison."
+      },
+      "sources": [
+        {
+          "label": "Reviewed public report",
+          "url": "reports/newbrain-native-api-path-agreement-2026-10-31.html"
+        },
+        {
+          "label": "NewBrain status",
+          "url": "newbrain.html#newbrain-native-api-agreement-2026-10-31"
+        }
+      ],
+      "evidence_kind": "native-api-two-restore-complete-output-agreement-zero-updates"
+    },
+    {
       "id": "newbrain-a108-native-reply-diagnostic-2026-10-31",
       "title": "One NewBrain reply diverged before EOS; no new learning gain",
       "date": "2026-10-31",
