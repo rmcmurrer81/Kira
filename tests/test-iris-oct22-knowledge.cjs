@@ -104,7 +104,7 @@ assert.equal(movies.id,'evelyn');assert.equal(movies.facet,'how');assert.match(m
 const body=ask('What is the latest Avatar Builder status?');
 assert.equal(body.id,'avatar-body');assert.equal(body.facet,'status');
 for(const q of ['OCTOBER 29','A45','A44','16,385 vertices','14 matched inspection images','174 localized','176 locked','REJECTED','UNRUN'])assert.ok(body.answer.includes(q),'Latest A44/A45 review missing '+q);
-assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-reference-bounds-2026-10-29');
+assert.equal(priorOct306.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-reference-bounds-2026-10-29');
 assert.equal(priorOct292.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-camera-transport-source-2026-10-29');
 for(const q of ['LATEST A60','16,385','3,086','eight camera','12 mm','24 mm','Source61','Source63','UNRUN'])assert.ok(body.answer.includes(q),'A60 head constraint evidence missing '+q);
 assert.equal(priorOct291.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-a44-a45-2026-10-29');
@@ -146,7 +146,8 @@ for(const [pagePath,anchor] of [['newbrain.html','newbrain-word-lesson-a75-2026-
 for(const [pagePath,anchor] of [['newbrain.html','newbrain-continuation-a94-2026-10-30'],['updates.html','newbrain-continuation-a94-2026-10-30']])assert.ok(fs.readFileSync(path.join(docs,pagePath),'utf8').includes('id="'+anchor+'"'),'A94 input extent report missing '+pagePath);
 for(const [pagePath,anchor] of [['newbrain.html','newbrain-continuing-lesson-a98-2026-10-30'],['updates.html','newbrain-continuing-lessons-a98-2026-10-30'],['reports/newbrain-continuing-lesson-a98-2026-10-30.html','software-results'],['reports/newbrain-continuing-lesson-a98-2026-10-30.html','later-entry']])assert.ok(fs.readFileSync(path.join(docs,pagePath),'utf8').includes('id="'+anchor+'"'),'Missing A98 public anchor '+pagePath+'#'+anchor);
 const progress=JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8'));
-assert.equal(progress.reviewed_on,'2026-10-30');
+assert.equal(progress.reviewed_on,'2026-10-31');
+for(const milestone of ['newbrain-a108-native-reply-diagnostic-2026-10-31','avatar-source109-connection-2026-10-31'])assert.ok(progress.milestones.some(m=>m.id===milestone),'Missing Oct31 milestone '+milestone);
 assert.ok(progress.milestones.some(m=>m.id==='newbrain-continuing-lesson-a98-persistence-2026-10-30'),'A98 timeline entry missing');
 assert.ok(progress.milestones.some(m=>m.id==='newbrain-word-study-a87-a92-2026-10-30'),'A87/A92 dated milestone missing');
 assert.ok(progress.milestones.some(m=>m.id==='newbrain-word-lesson-a75-restart-2026-10-30'),'A75 measured result missing on timeline');
