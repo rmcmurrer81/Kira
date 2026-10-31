@@ -213,6 +213,10 @@
     // Answer concrete questions from the appropriate reviewed evidence facet,
     // rather than rejecting a well-defined subject because of conversational wording.
     if(p.id==='newbrain'&&/\b(?:gradient|gradients|checker|arithmetic|30 30|numerical audit)\b/.test(q))selected='technical';
+    // A108's measured one-reply outcome is explicitly reviewed in the status facet.
+    // Compound phrasing such as 'what did NewBrain A108 establish, and did Original12 improve?'
+    // must not be mistaken for a request to invent an unreviewed overview.
+    if(p.id==='newbrain'&&/\ba108\b/.test(q)&&selected==='overview')selected='status';
     // The library and film/TV questions refer to curated Evelyn project notes,
     // not Robert's book catalogue or the unrelated entertainment-credit topics.
     if(p.id==='evelyn'&&/\b(?:books?|catalogue?|library|titles|reading list)\b/.test(q)&&/\b(?:what|which|list|show|starter|included|titles|catalog|catalogue)\b/.test(q)&&!/\b(?:cost|price|pricing|rights|license|licence|privacy)\b/.test(q))selected='evidence';
