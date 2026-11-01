@@ -211,7 +211,7 @@
         const guidePrivacy=/\b(?:does|will|can|do) (?:iris|this website|the website|this site|the site|you) (?:send|save|store|share|keep|record|transmit|collect|retain|protect|access)\b|\bis (?:iris|this website|the website|this site|the site|this chat|this conversation) (?:private|secure|saved|stored|sent|shared)\b|\b(?:iris|website|site guide) (?:privacy|data|chat)\b|privacy (?:of|for) (?:iris|the website)\b/.test(projectQuery)||(!projectNamed&&!/\b(?:it|its|they|their)\b/.test(projectQuery)&&/\bthis (?:chat|conversation)\b/.test(projectQuery));
         if(privacyQuestion&&(guidePrivacy||(!projectNamed&&!projectContext&&/\b(?:iris|website|site guide|my questions|my chat)\b/.test(projectQuery))))return {...k.topics.find(t=>t.id==='privacy'),id:'privacy'};
         const contactRequest=/^(?:(?:can|could|would) you |please )?(?:send|contact|email|message|tell (?:him|robert)|pass along)\b|^(?:how (?:can|do) i|can i) (?:send|contact|email|message)\b/.test(projectQuery);
-        if(contactRequest&&/\b(robert|him|message|email)\b/.test(q)&&!/\b(shiftbrief|employee|books|credits)\b/.test(q))return make('Send Robert a message','Use the Send message form beside this guide. It submits directly through FormSubmit without opening an email app. This conversation itself is not sent to Robert.');
+        if(contactRequest&&/\b(robert|him|message|email)\b/.test(q)&&!/\b(shiftbrief|employee|books|credits)\b/.test(q))return {...make('Send Robert a message','To contact Robert, select “Send Robert a message” in the Sources below. This opens the Contact page, where you can fill out and submit the message form. Your Iris chat is separate and is not sent to Robert.'),sources:['iris-contact']};
         const current=root.KiraIrisProjects?.answer(k,question,lastTopic,exchanges,result);
         if(current)return current;
         if(/\b(iris|website guide|site guide|who are you|your name)\b/.test(q))return {...k.topics.find(t=>t.id==='voice'),id:'voice'};
@@ -219,7 +219,7 @@
         if(routed)result=routed.reply;
         let answer=original.enrich(k,question,routed?.context||lastTopic,exchanges,result);
         answer={...answer,title:rename(answer.title),answer:cleanText(answer.answer)};
-        if(!answer.answer)return make('Ask Robert about that detail','The current published notes do not provide a reliable answer to that question. You can send Robert a message using the form.');
+        if(!answer.answer)return make('Ask Robert about that detail','The current published notes do not provide a reliable answer to that question. You can send Robert a message using the form on the Contact page.');
         if(answer.next)answer.next=answer.next.filter(x=>!excluded.test(x)).map(rename);
         answer.sources=(answer.sources||[]).filter(id=>k.sources[id]);
         if(!answer.sources.length)answer.sources=['iris-contact'];

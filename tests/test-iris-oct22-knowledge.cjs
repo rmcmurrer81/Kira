@@ -196,4 +196,21 @@ assert.equal(iris.validate(old266),old266,'Oct 26.6 historical Iris pack remains
 for(const f of ['newbrain-transfer-replay-2026-10-27.html','avatar-head-ear-a16-2026-10-27.html'])assert.ok(fs.existsSync(path.join(docs,'reports',f)));
 assert.ok(fs.readFileSync(path.join(docs,'newbrain.html'),'utf8').includes('id="newbrain-nb15-nb16-2026-10-27"'));
 assert.ok(fs.readFileSync(path.join(docs,'kira-world-avatar-builder.html'),'utf8').includes('id="avatar-builder-a16-2026-10-27"'));
+
+/* Current floating/full-page Iris contact instructions must not refer to a nearby form.
+   Only the Contact page has that form. */
+const contactPolicyNov1=require('../docs/iris-policy.js');
+const contactKnowledgeNov1={topics:[],sources:{'iris-contact':{label:'Send Robert a message',url:'contact.html#direct-contact'}},iris_projects:{projects:[]}};
+const contactReplyNov1=contactPolicyNov1.wrap({enrich:()=>({title:'Fallback',answer:'Fallback',sources:[]})},null)
+  .enrich(contactKnowledgeNov1,'Send Robert a message','',[],null);
+assert.equal(contactReplyNov1.title,'Send Robert a message');
+assert.match(contactReplyNov1.answer,/Contact page/);
+assert.match(contactReplyNov1.answer,/select “Send Robert a message”/);
+assert.match(contactReplyNov1.answer,/not sent to Robert/);
+assert.doesNotMatch(contactReplyNov1.answer,/beside this guide|next to (?:Iris|this guide)/i);
+assert.deepEqual(contactReplyNov1.sources,['iris-contact']);
+assert.ok(irisPage.includes('iris-policy.js?v=2026-11-01.2'));
+assert.ok(irisPage.includes('href="contact.html#direct-contact"'));
+assert.ok(fs.readFileSync(path.join(docs,'contact.html'),'utf8').includes('id="direct-contact"'));
+
 console.log('Iris October 26 Person Creator checks passed: integrity, 12 project sources, 30-book and historical library titles, bubble chat markup, research boundaries, Creator, movie plans, and legacy notes');
