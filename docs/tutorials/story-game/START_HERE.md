@@ -3,7 +3,9 @@
 Original Kira Labs teaching example: five story nodes, three shape-drawn locations, two characters and two endings. It is deterministic JavaScript, **not an AI conversation, mocap capture, learned motion or a finished Kira World feature**. All artwork is drawn with CSS shapes. No game engine, model, external artwork or API key is required.
 
 ## 1. Download and open
-Keep these three files together in one folder: `index.html`, `style.css`, `game.js`. Double-click `index.html` to open the game in your browser. A file named `index.html.txt` will not behave the same; show filename extensions in Windows File Explorer. Use a plain-text editor, not a word processor. Save, then refresh after each change. Make a backup before editing.
+Easiest: download the [complete starter ZIP](https://kiralabs.org/tutorials/story-game/starter.zip), extract it, then open `index.html`. The archive contains only the tutorial source/guide/tests and five approved finished dialogue clips; no private voice references. The archive link needs an internet connection, but the extracted game can play locally.
+
+If downloading files individually, keep these three files together in one folder: `index.html`, `style.css`, `game.js`. Double-click `index.html` to open the game in your browser. A file named `index.html.txt` will not behave the same; show filename extensions in Windows File Explorer. Use a plain-text editor, not a word processor. Save, then refresh after each change. Make a backup before editing.
 
 From GitHub, open each file and use **Download raw file**; save with the exact names. Do not download the GitHub page itself as HTML. `test.cjs` is an optional developer test, not needed to play. Five optional finished dialogue WAVs use Robert’s explicitly approved synthetic voice. Download the `audio` folder too if you want sound. The game remains fully playable with text if clips are missing or muted. No private voice reference recordings are included.
 
