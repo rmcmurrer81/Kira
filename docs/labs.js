@@ -22,7 +22,7 @@
   // Give the public guide its own navigation destination. It does not send messages.
   document.querySelectorAll('#primary-nav, .footlinks').forEach(links => {
     if (links.querySelector('a[href="iris.html"]')) return;
-    const a=document.createElement('a');a.href='iris.html';a.textContent='Ask Iris';
+    const a=document.createElement('a');a.href=new URL('iris.html',document.currentScript?.src||document.baseURI).href;a.textContent='Ask Iris';
     if (location.pathname.endsWith('/iris.html')) a.setAttribute('aria-current','page');
     links.insertBefore(a, links.querySelector('a[href="contact.html"],a.contact') || null);
   });
@@ -149,7 +149,7 @@
   const partnerNav=document.getElementById('primary-nav');
   if(partnerNav&&!partnerNav.querySelector('a[href="partners.html"]')){
     const supportLink=partnerNav.querySelector('a[href="support.html"]');
-    const item=document.createElement('a');item.href='partners.html';item.textContent='Partners';
+    const item=document.createElement('a');item.href=new URL('partners.html',document.currentScript?.src||document.baseURI).href;item.textContent='Partners';
     if(supportLink)supportLink.insertAdjacentElement('afterend',item);
     else partnerNav.appendChild(item);
   }

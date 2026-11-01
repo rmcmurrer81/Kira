@@ -2,6 +2,11 @@ name: Iris public knowledge QA
 on:
   push:
     paths:
+      - "docs/**/*.html"
+      - "docs/labs.js"
+      - "docs/iris-float.css"
+      - "docs/iris-embedded.css"
+      - "tests/test-sitewide-iris.cjs"
       - "docs/iris.html"
       - "docs/iris.js"
       - "docs/iris-projects.js"
@@ -25,3 +30,5 @@ jobs:
           node-version: "22"
       - name: Verify October 22 Iris notes and routes
         run: node tests/test-iris-oct22-knowledge.cjs
+      - name: Verify Iris launcher is loaded across public pages
+        run: node tests/test-sitewide-iris.cjs
