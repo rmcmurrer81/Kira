@@ -3,7 +3,7 @@
 **This is an original teaching demo, not production Iris or a language model.** Starter files are being shared in the existing public Kira repository. The manual hosting instructions below do not create a separate website, account or repository for you. The HTML can also be opened locally; do not assume a hosted demo is available until its URL is verified. The source is original tutorial code inspired by the idea of a small website guide. Its answers are written rules, not generated intelligence.
 
 ## Open it on your computer
-1. Download and extract the ZIP into a folder.
+1. From the [public tutorial folder](https://github.com/rmcmurrer81/Kira/tree/main/docs/tutorials/nova), open `index.html` and use GitHub's **Download raw file** control to save it as `index.html`. Save `test.cjs` alongside it only if you want the optional Node tests. If you received the standalone tutorial ZIP instead, extract it into a folder. The HTML file is self-contained; no other files are needed to run it.
 2. Double-click `index.html`. Choose your browser if asked. No installation or API key is needed.
 3. Press **Ask Nova**, type **What is NewBrain?**, then click Send or press Enter.
 4. Try **Who won the moon race?** Notice the honest fallback instead of an invented answer.
