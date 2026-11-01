@@ -1,0 +1,48 @@
+/* Iris voice choices. Matches Kira Labs navy/cyan, including floating embed. */
+.kb-iris-page .iris-voice-picker{
+ display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px 10px;align-items:center;
+ margin:10px 0 12px;padding:10px 13px;border:1px solid rgba(116,222,237,.34);
+ border-radius:14px;background:linear-gradient(120deg,#10263d,#102032);color:#e7f7fc
+}
+.kb-iris-page .iris-voice-picker label{font-size:12px;font-weight:700;color:#d5f3fc;white-space:nowrap}
+.kb-iris-page .iris-voice-picker select{
+ display:block;min-width:0;width:100%;max-width:100%;height:37px;
+ border:1px solid #86cfe28c;border-radius:9px;
+ padding:6px 9px;background:#071a2c;color:#f1faff;
+ font:500 12px/1.35 Arial,Helvetica,sans-serif;text-overflow:ellipsis
+}
+.kb-iris-page .iris-voice-picker select option,
+.kb-iris-page .iris-voice-picker select optgroup{color:#f5faff;background:#122a42}
+.kb-iris-page .iris-voice-picker button{
+ min-height:37px;padding:6px 12px;border-radius:9px;
+ border:1px solid #8fe6f1a6;background:#1c4d6b;color:#f1fbff;
+ font:700 12px/1.2 Arial,Helvetica,sans-serif;cursor:pointer
+}
+.kb-iris-page .iris-voice-picker button:hover:not(:disabled){background:#22688c;border-color:#a9f8ff}
+.kb-iris-page .iris-voice-picker button:disabled,
+.kb-iris-page .iris-voice-picker select:disabled{opacity:.55;cursor:not-allowed}
+.kb-iris-page .iris-voice-picker :focus-visible{outline:3px solid #91efff;outline-offset:2px}
+.kb-iris-page .iris-voice-picker .iris-voice-note{
+ grid-column:1/-1;color:#b3cddc;font-size:10px;line-height:1.4;
+ overflow-wrap:anywhere
+}
+html.iris-embedded .kb-iris-page .iris-voice-picker{
+ flex:none;grid-template-columns:auto minmax(0,1fr) auto;gap:5px 6px;
+ margin:0 0 6px;padding:6px 8px;border-radius:10px
+}
+html.iris-embedded .kb-iris-page .iris-voice-picker label{font-size:10px}
+html.iris-embedded .kb-iris-page .iris-voice-picker select{height:31px;font-size:11px;padding:5px 6px}
+html.iris-embedded .kb-iris-page .iris-voice-picker button{min-height:31px;font-size:10px;padding:5px 9px}
+html.iris-embedded .kb-iris-page .iris-voice-picker .iris-voice-note{
+ max-height:29px;overflow-y:auto;font-size:9px;line-height:1.3
+}
+@media(max-width:560px){
+ .kb-iris-page .iris-voice-picker{grid-template-columns:minmax(0,1fr) auto}
+ .kb-iris-page .iris-voice-picker label{grid-column:1/-1}
+ .kb-iris-page .iris-voice-picker select{grid-column:1}
+ .kb-iris-page .iris-voice-picker button{grid-column:2}
+ html.iris-embedded .kb-iris-page .iris-voice-picker{grid-template-columns:auto minmax(0,1fr) auto}
+ html.iris-embedded .kb-iris-page .iris-voice-picker label{grid-column:1}
+ html.iris-embedded .kb-iris-page .iris-voice-picker select{grid-column:2}
+ html.iris-embedded .kb-iris-page .iris-voice-picker button{grid-column:3}
+}
