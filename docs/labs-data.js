@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-10-22",
+  "prepared_on": "2026-11-01",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,40 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-historical-context-selection-2026-11-01",
+      "title": "NewBrain historical context selection: 34/37 evidence matches",
+      "project": "NewBrain",
+      "track": "Independent synthetic evidence-retrieval qualification",
+      "date": "2026-11-01",
+      "reviewed_on": "2026-11-01",
+      "status": "development",
+      "date_basis": "NewBrain source committed November 1 UTC; reviewed November 1. No protected benchmark rerun.",
+      "summary": "Opt-in historical evidence retrieval met 34/37 answerable contracts at all tested scales; defaults reached context-budget failures on larger histories. Not neural answer accuracy.",
+      "body": "Four actual isolated memory-only routes and five nested scales across 40 questions yielded 800 retrieval calls. Historical evidence matches changed 0/11 to 11/11; current-state evidence stayed 23/26.\n\nSeparately 1,024 real native-model updates and 30 generations did not produce successful complete known, held-out or retention answers. A larger curriculum is ongoing and unscored.",
+      "boundary": "Selector not integrated with the native answer builder, neural generation, real multi-owner privacy or production. Original12 remains 2/12.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Concept art representing neural research, not an actual historical-memory evaluation screenshot",
+        "caption": "Concept illustration, not experimental footage.",
+        "label": "Illustration, not a test result"
+      },
+      "sources": [
+        {
+          "label": "Public reviewed retrieval report",
+          "url": "reports/newbrain-opt-in-historical-context-2026-11-01.html"
+        },
+        {
+          "label": "NewBrain dated project section",
+          "url": "newbrain.html#newbrain-opt-in-context-selection-2026-11-01"
+        },
+        {
+          "label": "Dated text update",
+          "url": "updates.html#newbrain-historical-context-selection-2026-11-01"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-opt-in-context-selection-2026-11-01"
+    },
     {
       "id": "evelyn-library22-assembled-2026-10-22",
       "title": "Evelyn library: 22 complete publications staged",
