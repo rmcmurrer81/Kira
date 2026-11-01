@@ -1,0 +1,16 @@
+PASS initial text and no autoplay
+PASS valid cast and ordered lines
+PASS unknown speaker and unsafe path rejected
+PASS third character works without changing player
+PASS Next changes speaker and text without audio
+PASS sequence does not advance when play promise resolves
+PASS ended advances in exact speaker order
+PASS Next cancels sequence and pauses old line
+PASS stale ended cannot advance after Next
+PASS Stop cancels without changing subtitle
+PASS Replay stops previous clip
+PASS missing/rejected play stops sequence with text fallback
+PASS error event has same fallback
+PASS late play result after Stop remains stopped
+PASS restart returns first line and stays silent
+15 checks passed. Mock DOM/audio only; real browser/playback not tested.

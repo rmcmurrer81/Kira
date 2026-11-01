@@ -1,0 +1,8 @@
+[
+ {"title":"Map characters to folders","file":"conversation.js","section":"1. CAST","note":"Fictional Mira/Sol. Folders do not generate or guarantee different voices."},
+ {"title":"Put lines in order","file":"conversation.js","section":"2. ORDERED LINES","fields":["speaker","text","file"]},
+ {"title":"Name + subtitle + path","code":"const line = lines[index];\nreturn {name:cast[line.speaker].name,\n  text:line.text,\n  path:cast[line.speaker].voiceFolder+line.file};","note":"Excerpt from describeLine; retain validation in complete code."},
+ {"title":"Start is not finished","code":"clip.play(); // promise: playback started\nclip.addEventListener('ended', ended); // natural finish","note":"Illustrative excerpt, not a complete error-handled player."},
+ {"title":"Sequential turns","code":"const result = await playOne(token);\nif (token !== generation || result !== 'ended') return;\nlineIndex++; showLine();","note":"Excerpt: full function also checks last line."},
+ {"title":"A third character","code":"lee: {name:'Lee', voiceFolder:'audio/lee/'}\n{speaker:'lee', text:'I can help carry the supplies.', file:'04-supplies.wav'}","note":"Separate map entry and dialogue item, not contiguous executable code."}
+]
