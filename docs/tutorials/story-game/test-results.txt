@@ -1,0 +1,22 @@
+PASS valid story data
+PASS three locations and two reachable endings
+PASS invalid destination caught
+PASS initial park is text-only and does not steal focus
+PASS coordinate foot placement, facing and layers
+PASS choice updates all scene parts
+PASS old detached button cannot navigate twice
+PASS both ending paths and restart
+PASS number keys select branch and R restarts
+PASS repeated and input keys ignored
+PASS unknown scene preserves current state
+PASS grid and reduced motion controls
+PASS voice-off replay cannot start audio
+PASS enabling voice does not autoplay
+PASS explicit play selects relative scene WAV
+PASS navigation stops previous audio
+PASS play rejection shows honest fallback
+PASS missing audio event shows fallback
+PASS stale play promise cannot claim current playback
+PASS mute stops voice and leaves captions
+PASS no external runtime assets/storage/service API
+21 checks passed. Node DOM/audio mocks; no real GUI/audio/mobile/accessibility verification.

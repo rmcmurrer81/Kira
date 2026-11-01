@@ -1,0 +1,32 @@
+[
+  {
+    "scene": "park",
+    "speaker": "mira",
+    "text": "Look, Sol! This old lantern still flickers. Should we fix it in the workshop, or take it to the rooftop and watch the sky?",
+    "audio": "audio/park.wav"
+  },
+  {
+    "scene": "workshop",
+    "speaker": "sol",
+    "text": "The loose switch is fixed! We can share the warm light with our neighbors, or carry it upstairs for a quiet night of stars.",
+    "audio": "audio/workshop.wav"
+  },
+  {
+    "scene": "rooftop",
+    "speaker": "mira",
+    "text": "The city looks different from up here. We could stay and count the stars, or bring this little light back to our neighbors.",
+    "audio": "audio/rooftop.wav"
+  },
+  {
+    "scene": "ending-light",
+    "speaker": "sol",
+    "text": "One little lantern gave us something to share. Tomorrow, let us invite everyone to make a lantern of their own. The end.",
+    "audio": "audio/ending-light.wav"
+  },
+  {
+    "scene": "ending-stars",
+    "speaker": "mira",
+    "text": "We found no secret treasure, but we found time to wonder together. Tomorrow, we will draw the constellations we imagined. The end.",
+    "audio": "audio/ending-stars.wav"
+  }
+]
