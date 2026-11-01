@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#091629">
+  <title>Play The Little Signal — Kira Labs Arcade</title>
+  <meta name="description" content="Play The Little Signal, a free choose-your-path story game with Mira and Sol. Two endings, keyboard support and optional spoken dialogue.">
+  <link rel="canonical" href="https://kiralabs.org/arcade/little-signal/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Little Signal — Kira Labs Arcade">
+  <meta property="og:description" content="Follow a glowing lantern with Mira and Sol. Choose your path, then learn to make the game yourself.">
+  <meta property="og:image" content="https://kiralabs.org/assets/social-card.jpg">
+  <link rel="icon" href="../../assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css?v=20261101.1">
+  <script src="game.js" defer></script>
+  <script src="../../labs.js?v=20261101-iris-float4" defer></script>
+</head>
+<body class="arcade-playing">
+<main>
+  <nav class="arcade-game-nav" aria-label="Arcade navigation"><a href="../">← All arcade games</a><span aria-hidden="true">/</span><span>The Little Signal</span><a class="arcade-game-learn" href="../../tutorials/story-game/">Learn to build this game ↗</a></nav>
+  <header class="masthead"><p class="kicker">KIRA LABS ARCADE · GAME 001</p><h1>The Little Signal</h1><p>Two friends. One little lantern. Two possible endings. Choose where the story goes.</p></header>
+  <section aria-label="The Little Signal story game" class="game">
+    <div class="scene-bar"><h2 id="scene-title" tabindex="-1">Loading the story…</h2><span id="scene-count"></span></div>
+    <div id="stage" class="stage park" role="img" aria-label="The game stage">
+      <div class="scenery" aria-hidden="true"><div class="sun"></div><div class="cloud"></div><div class="hill"></div><div class="tree"><i></i></div><div class="workbench"></div><div class="window"></div><div class="skyline"></div><div class="lantern"></div><div class="ground"></div></div>
+      <div id="characters" aria-hidden="true"></div><div id="grid" class="grid" aria-hidden="true" hidden><span>x → · y ↓ · feet use x/y percentages</span></div>
+      <div class="stage-label" id="location-label" aria-hidden="true"></div>
+    </div>
+    <div class="dialogue"><p id="speaker" class="speaker"></p><p id="line" aria-live="polite"></p><p id="audio-status" class="audio-status" role="status">Voice is muted. Choose Enable voice to hear this scene, or keep reading.</p></div>
+    <div id="choices" class="choices" aria-label="Story choices"></div>
+    <div class="toolbar"><button id="restart" type="button">Restart (R)</button><button id="voice" type="button" aria-pressed="false">Enable voice</button><button id="replay" type="button">Play voice line</button><button id="toggle-grid" type="button" aria-pressed="false">Show coordinate grid</button><label><input id="reduce-motion" type="checkbox"> Reduce motion</label></div>
+    <p class="hint">Choose using the buttons, Tab + Enter or number keys 1 / 2. Press R to restart. Captions stay visible. Optional audio uses an approved synthetic voice. Characters and movement are scripted, not AI-generated in real time.</p>
+  </section>
+  <footer class="arcade-game-footer">
+    <p><strong>Finished the story?</strong> Try the other ending—or learn to edit the scenes yourself.</p>
+    <div class="arcade-game-footer-links"><a href="../">Explore the Arcade</a><a href="../../tutorials/story-game/">Open the original coding tutorial</a><a href="../../tutorials/story-game/starter.zip">Download the beginner starter ZIP</a><a href="../../index.html">Kira Labs home</a></div>
+    <p class="arcade-game-credit">An original Kira Labs beginner story game. Nothing you type or choose is sent to Robert. The arcade copy is separate from the teaching edition.</p>
+  </footer>
+</main>
+<noscript>This game needs JavaScript to move between scenes. The original beginner lesson includes readable story source.</noscript>
+</body>
+</html>

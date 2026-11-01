@@ -1,0 +1,23 @@
+/* Arcade play edition: the teaching edition and its styles remain untouched. */
+:root{color-scheme:light}
+body.arcade-playing{background:radial-gradient(ellipse at 50% 0,#1a3552 0,#0e2036 40%,#091529 90%);min-height:100vh}
+.arcade-playing main{max-width:1050px;padding-top:28px;padding-bottom:54px}
+.arcade-game-nav{display:flex;align-items:center;gap:11px;flex-wrap:wrap;color:#c2d5e5;font-size:.86rem;margin-bottom:36px}
+.arcade-game-nav a{color:#e4ecfb;text-underline-offset:4px}
+.arcade-game-nav a:hover{color:#ffe1a7}
+.arcade-game-nav .arcade-game-learn{margin-left:auto;color:#ffe3aa;font-weight:750}
+.arcade-playing .masthead{margin-bottom:23px}
+.arcade-playing .masthead .kicker{color:#f5c378}
+.arcade-playing .masthead h1{color:#fff;letter-spacing:-.04em}
+.arcade-playing .masthead>p:not(.kicker){color:#d0deed}
+.arcade-playing .game{border:2px solid #e3c99b;box-shadow:0 14px 50px #02081488,7px 7px 0 #bf9867}
+.arcade-playing .arcade-game-footer{padding:33px 5px 10px;color:#c4d1e5}
+.arcade-playing .arcade-game-footer p{max-width:none;color:#c4d1e5}
+.arcade-playing .arcade-game-footer strong{color:#fff}
+.arcade-game-footer-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:19px}
+.arcade-game-footer-links a{color:#f7d59c;font-weight:700;text-underline-offset:4px}
+.arcade-game-footer-links a:hover{color:#fff}
+.arcade-playing .arcade-game-credit{margin-top:24px;font-size:.77rem;color:#a6bcd0}
+.arcade-playing .hint{padding-bottom:21px}
+.arcade-playing a:focus-visible{outline:3px solid #ffe0a3;outline-offset:4px}
+@media(max-width:600px){.arcade-playing main{padding-top:18px}.arcade-game-nav{margin-bottom:24px}.arcade-game-nav .arcade-game-learn{margin-left:0;width:100%}.arcade-playing .game{box-shadow:3px 3px 0 #bf9867}.arcade-playing .arcade-game-footer{padding-inline:6px}}

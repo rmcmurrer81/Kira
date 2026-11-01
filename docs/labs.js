@@ -19,6 +19,23 @@
     shop.textContent = 'Shop';
     links.insertBefore(shop, links.querySelector('a.contact, a[href="contact.html"]'));
   });
+  // Make the arcade discoverable on existing pages without editing every header.
+  const arcadeUrl = new URL('arcade/', document.currentScript?.src || document.baseURI).href;
+  const arcadePath = new URL(arcadeUrl).pathname;
+  document.querySelectorAll('#primary-nav, .footlinks').forEach(links => {
+    const linked = Array.from(links.querySelectorAll('a[href]')).some(a => {
+      try {
+        const u = new URL(a.href);
+        return u.origin === new URL(arcadeUrl).origin && (u.pathname === arcadePath || u.pathname === arcadePath+'index.html');
+      } catch { return false; }
+    });
+    if (linked) return;
+    const a = document.createElement('a');
+    a.href = arcadeUrl;
+    a.className = 'arcade-link';
+    a.textContent = 'Arcade';
+    links.insertBefore(a, links.querySelector('a.shop-link, a.contact, a[href="contact.html"]') || null);
+  });
   // Iris is already available from the floating launcher. The full-page guide
   // stays linked in the footer, not in the primary navigation.
   const irisUrl = new URL('iris.html', document.currentScript?.src || document.baseURI).href;
