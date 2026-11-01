@@ -139,7 +139,7 @@
       panel.hidden = false;
       launcher.setAttribute('aria-expanded', 'true');
       // Load once on first use; closing never discards the conversation.
-      if (!frame.hasAttribute('src')) frame.src = new URL('iris.html?embed=1', sharedScriptBase).href;
+      if (!frame.hasAttribute('src')) frame.src = new URL('iris.html?embed=1&v=20261101.2', sharedScriptBase).href;
       closer.focus();
     }
     launcher.addEventListener('click', () => panel.hidden ? openIris() : closeIris());

@@ -10,7 +10,7 @@ const skip = new Set(['iris.html','kira-world-temporary-creator.html','google7fc
 const publicPages = fs.readdirSync(docs).filter(file => file.endsWith('.html') && !skip.has(file)).map(file=>file);
 publicPages.push(...fs.readdirSync(path.join(docs,'reports')).filter(f=>f.endsWith('.html')).map(f=>'reports/'+f));
 for(const directory of ['business','investors']) publicPages.push(directory+'/index.html');
-const version='20261101-iris-float3';
+const version='20261101-iris-float4';
 const all = new Set();
 for(const page of publicPages){
   assert(!all.has(page),'Duplicate public page: '+page); all.add(page);
@@ -34,7 +34,7 @@ assert.ok(!sharedJs.includes('Give the public guide its own navigation destinati
 assert.ok(sharedJs.includes("if (a.href === irisUrl) a.remove()"),'Explicit header cleanup missing');
 const iris=fs.readFileSync(path.join(docs,'iris.html'),'utf8');
 assert.ok(iris.includes('labs.js?v='+version),'Iris page must load the current shared script');
-assert.ok(iris.includes('iris-embedded.css?v=20261101.1'),'Iris embed CSS missing');
+assert.ok(iris.includes('iris-embedded.css?v=20261101.2'),'Iris embed CSS missing');
 assert.ok(iris.includes("get('embed')!=='1'"),'Standalone Iris must remain distinct');
 assert.ok(fs.existsSync(path.join(docs,'iris-float.css')),'Launcher CSS missing');
 assert.ok(fs.existsSync(path.join(docs,'iris-embedded.css')),'Embedded mode CSS missing');

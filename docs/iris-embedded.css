@@ -81,3 +81,8 @@ html.iris-embedded .kb-iris-page .guide-meta #voice-status{
   html.iris-embedded .kb-iris-page #guide-status{max-height:22px}
   html.iris-embedded .kb-iris-page .guide-meta:has(#voice-status){margin:2px 0!important}
 }
+
+/* Keep each Iris answer legible now that the compact shortcuts are hidden. */
+html.iris-embedded .kb-iris-page .iris-chat-bubble{font-size:13px;max-width:93%}
+html.iris-embedded .kb-iris-page .iris-chat-bubble p{font-size:13px;line-height:1.56}
+html.iris-embedded .kb-iris-page .iris-chat-row.from-visitor .iris-chat-bubble{max-width:93%}
