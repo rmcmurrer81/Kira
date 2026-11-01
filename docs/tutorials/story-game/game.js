@@ -72,9 +72,10 @@ function stopAudio() {
 }
 async function playLine() {
   stopAudio();
-  if (!voiceEnabled) { setStatus('Voice is off. Turn it on, then choose Play voice line.'); return; }
+  if (!voiceEnabled) { setStatus('Voice is muted. Choose Enable voice to hear this scene.'); return; }
   const token=audioEpoch, clip=new Audio(SCENES[currentId].audio);
   audio=clip;
+  clip.volume=0.8; // Conservative starting level; listeners still control device volume.
   setStatus('Loading optional voice… Captions remain available.');
   clip.addEventListener('ended',()=>{ if(token===audioEpoch) setStatus('Voice finished. Captions remain available.'); });
   clip.addEventListener('error',()=>{ if(token===audioEpoch) setStatus('Voice file unavailable. Continue using the dialogue text.'); });
@@ -114,7 +115,7 @@ function showScene(id,{speak=false,focus=true}={}) {
     button.addEventListener('click',()=>{if(currentId===id) showScene(choice.to,{speak:true});});choices.append(button);
   });
   if(scene.ending){const end=document.createElement('p');end.textContent='You reached an ending. Restart to try another path.';choices.append(end);}
-  setStatus(voiceEnabled?'Voice ready. Play the line or choose a path.':'Text mode. Optional voice files are not required to play.');
+  setStatus(voiceEnabled?'Voice enabled. Choose Play voice line or a story path.':'Voice is muted. Choose Enable voice to hear this scene, or keep reading.');
   if(focus) $('scene-title').focus();
   if(speak && voiceEnabled) void playLine();
   return true;
@@ -122,8 +123,9 @@ function showScene(id,{speak=false,focus=true}={}) {
 // 7. CONTROLS: real buttons support mouse, touch, Tab and Enter.
 $('restart').addEventListener('click',()=>showScene('park',{speak:false}));
 $('voice').addEventListener('click',()=>{
-  voiceEnabled=!voiceEnabled;stopAudio();$('voice').setAttribute('aria-pressed',String(voiceEnabled));$('voice').textContent='Voice: '+(voiceEnabled?'on':'off');
-  setStatus(voiceEnabled?'Voice enabled. Choose Play voice line to start.':'Voice off. The story remains playable with captions.');
+  voiceEnabled=!voiceEnabled;stopAudio();$('voice').setAttribute('aria-pressed',String(voiceEnabled));$('voice').textContent=voiceEnabled?'Mute voice':'Enable voice';
+  if(voiceEnabled) void playLine();
+  else setStatus('Voice muted. The story remains playable with captions.');
 });
 $('replay').addEventListener('click',()=>void playLine());
 $('toggle-grid').addEventListener('click',()=>{const grid=$('grid');grid.hidden=!grid.hidden;$('toggle-grid').setAttribute('aria-pressed',String(!grid.hidden));});

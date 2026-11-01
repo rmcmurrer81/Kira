@@ -11,12 +11,13 @@ PASS repeated and input keys ignored
 PASS unknown scene preserves current state
 PASS grid and reduced motion controls
 PASS voice-off replay cannot start audio
-PASS enabling voice does not autoplay
+PASS explicit Enable voice click starts current line
 PASS explicit play selects relative scene WAV
-PASS navigation stops previous audio
+PASS navigation stops previous audio and choice plays new line
 PASS play rejection shows honest fallback
 PASS missing audio event shows fallback
 PASS stale play promise cannot claim current playback
 PASS mute stops voice and leaves captions
 PASS no external runtime assets/storage/service API
-21 checks passed. Node DOM/audio mocks; no real GUI/audio/mobile/accessibility verification.
+PASS restart stops sound without opening clip
+22 checks passed. Node DOM/audio mocks; no real GUI/audio/mobile/accessibility verification.

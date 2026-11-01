@@ -5,7 +5,7 @@ Original Kira Labs teaching example: five story nodes, three shape-drawn locatio
 ## 1. Download and open
 Keep these three files together in one folder: `index.html`, `style.css`, `game.js`. Double-click `index.html` to open the game in your browser. A file named `index.html.txt` will not behave the same; show filename extensions in Windows File Explorer. Use a plain-text editor, not a word processor. Save, then refresh after each change. Make a backup before editing.
 
-From GitHub, open each file and use **Download raw file**; save with the exact names. Do not download the GitHub page itself as HTML. `test.cjs` is an optional developer test, not needed to play. No audio clips are supplied: the public starter is fully playable with text. Create an `audio` folder yourself if you want to add your own permitted recordings; the text-only starter does not supply an empty folder.
+From GitHub, open each file and use **Download raw file**; save with the exact names. Do not download the GitHub page itself as HTML. `test.cjs` is an optional developer test, not needed to play. Five optional finished dialogue WAVs use Robert’s explicitly approved synthetic voice. Download the `audio` folder too if you want sound. The game remains fully playable with text if clips are missing or muted. No private voice reference recordings are included.
 
 Controls: click/tap a choice, use Tab then Enter, or press number 1 or 2. R or Restart goes back to the park. Turn on the coordinate grid to see placement. Reduce motion skips optional wave/entry animation. System reduced-motion preference is also respected by CSS. These are controls, not proof of complete accessibility; test your own browser and assistive tools.
 
@@ -70,10 +70,10 @@ choices: [
 
 `showScene` stops old speech, changes state, updates the background, draws characters, sets dialogue, replaces choices and moves keyboard focus to the heading. The display uses `textContent`, not visitor-controlled HTML. An ending has `ending:true` and an empty choices array; Restart remains available. `validateStory` catches unknown destination IDs, locations, speakers and some position errors. It is not a complete schema validator; add checks as your game grows.
 
-## 8. Optional voice: your own recordings only
-**No character WAVs, private reference clips or voice-cloning models are included or licensed by this starter.** Record yourself or use an original voice you are authorized to distribute. Do not clone a real person without permission. This lesson does not require a voice-generation tool.
+## 8. Optional voice: finished clips or your own recordings
+**The included WAVs are finished character dialogue in Robert’s approved synthetic voice, not private reference packs or voice-cloning models.** Mira and Sol are fictional characters; both use the same approved voice in this edition. For replacements, record yourself or use a voice you are authorized to distribute. Do not clone a real person without permission. This lesson does not require a voice-generation tool.
 
-Create an `audio` folder beside `index.html`. Use the exact lines in `dialogue-manifest.json`, listen to every clip, and save:
+Keep the supplied `audio` folder beside `index.html`. If replacing clips, use the exact lines in `dialogue-manifest.json`, listen to every clip, and save:
 
 - `audio/park.wav` — Mira
 - `audio/workshop.wav` — Sol
@@ -83,21 +83,21 @@ Create an `audio` folder beside `index.html`. Use the exact lines in `dialogue-m
 
 The file must actually be a browser-playable WAV, not just renamed from another format. Captions come from `scene.line`; ensure recordings match. Test pronunciation, volume, silence and every ending. User recordings are not covered by our test results.
 
-Voice starts off. Turning it on does not play immediately. Click **Play voice line** or choose a path after enabling voice. `new Audio(scene.audio)` prepares a relative clip; `await clip.play()` may reject. Missing or rejected files leave the text game usable and show a fallback status. `stopAudio()` pauses and resets the old clip. `audioEpoch` is a sequence number so a late play promise cannot report an old scene as currently playing. Restart stops voice and never automatically narrates the opening line. Voice on/off is retained until refresh, not permanently saved.
+The page starts muted. Click **Enable voice** to enable voice and immediately request the current line. The button then becomes **Mute voice**, which stops playback. **Play voice line** repeats the current line while voice is enabled. Selecting a story path with voice enabled requests its new line. `new Audio(scene.audio)` prepares a relative clip; `await clip.play()` may reject. Missing or rejected files leave the text game usable and show a fallback status. `stopAudio()` pauses and resets the old clip. `audioEpoch` is a sequence number so a late play promise cannot report an old scene as currently playing. Restart stops voice and never automatically narrates the opening line. Voice on/off is retained until refresh, not permanently saved. The playback element starts at volume 0.8; device settings and clip loudness still matter, so lower your device volume if needed.
 
 Official playback reference: https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play
 
 ## 9. Test and debug one change at a time
-Try every route to both endings. Try rapid clicks, keyboard choices, Restart, grid and reduced motion. Enable voice with no clips and verify the fallback. Add your own clip only if permitted, then test rejected playback, navigation before it ends and quick Replay clicks. Inspect desktop and narrow screens; check that feet align and controls stay readable.
+Try every route to both endings. Try rapid clicks, keyboard choices, Restart, grid and reduced motion. Test the supplied clips, then temporarily rename a clip in a local copy to verify the missing-file fallback. Add replacement clips only if permitted; test rejected playback, navigation before a line ends and quick Replay clicks. Inspect desktop and narrow screens; check that feet align and controls stay readable.
 
 Common mistakes:
 - Blank or unstyled page: check the file extensions and that all files share one folder.
 - Choice fails: compare `to` with the exact scene key, including hyphens/capitalization.
 - Broken script: restore the last edit; check quotes, commas and brackets.
 - Wrong position: y refers to feet, not the head; x/y are percentages.
-- Silent voice: no clips are supplied. Check Voice on, filenames, actual WAV format and browser permission. Silence is not proof of successful playback.
+- Silent voice: use Enable voice, check that the `audio` folder was downloaded, and verify filenames, actual WAV format and browser permission. Silence is not proof of successful playback.
 
-Optional automated tests with an already installed Node.js: open a terminal in the folder and run `node test.cjs`. Preparation passed 21 logic/DOM/audio-mock checks. This does **not** verify actual browser graphics, real sound, mobile layout, assistive technology or model intelligence. Real-browser checks should be recorded separately.
+Optional automated tests with an already installed Node.js: open a terminal in the folder and run `node test.cjs`. Preparation passed 22 logic/DOM/audio-mock checks, including click-to-play, stop-on-navigation, restart, rejected play and stale promises. This does **not** verify actual browser graphics, real sound, mobile layout, assistive technology or model intelligence. Real-browser checks should be recorded separately.
 
 ## 10. Put your own copy on a website
 Test locally first and review your hosting provider's rules yourself. For GitHub Pages, create your own public repository with a README, upload the three starter files at its root, and include only recordings you may distribute. In Settings → Pages, choose Deploy from a branch, main, /(root), then Save. Wait for deployment, use Visit site and test all branches again. No secret keys, private information or voice references belong in a public repository. A public repo exposes its source. No separate account or website was created for you by these instructions.
