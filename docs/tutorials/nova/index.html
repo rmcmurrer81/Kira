@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nova · Build a tiny website guide</title>
+<style>
+/* 1. STYLE: all styles are local; no fonts or images are downloaded. */
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#0b1324;color:#eef5ff}*{box-sizing:border-box}body{margin:0;line-height:1.55}main{max-width:900px;padding:8vh 24px 120px;margin:auto}.eyebrow{color:#68e3cf;letter-spacing:.15em;font-weight:700;font-size:.8rem}h1{font-size:clamp(2.3rem,6vw,4.2rem);line-height:1.1;max-width:700px;margin:20px 0}p{max-width:650px;color:#c8d5e8}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:35px 0}.card{background:#14223b;border:1px solid #34445f;padding:20px;border-radius:16px}.card strong{display:block;color:#68e3cf}a{color:#8fdcff}button,input{font:inherit}button{cursor:pointer;border:1px solid #405674;border-radius:10px;padding:9px 13px;background:#1b304e;color:#fff}button:hover{background:#29476c}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #ffd27b;outline-offset:3px}[hidden]{display:none!important}
+#nova-launcher{position:fixed;right:24px;bottom:24px;background:#68e3cf;color:#072325;border:0;font-weight:800;padding:16px 22px;border-radius:40px;box-shadow:0 8px 30px #0005}
+#nova-panel{position:fixed;right:24px;bottom:90px;width:min(410px,calc(100vw - 32px));height:min(560px,calc(100dvh - 110px));display:flex;flex-direction:column;background:#111f35;border:1px solid #52617b;border-radius:20px;box-shadow:0 18px 60px #0007;overflow:hidden}
+.nova-header{display:flex;align-items:center;justify-content:space-between;padding:15px 18px;background:#20334e}.nova-header h2{font-size:1.15rem;margin:0}.nova-notice{margin:0;padding:9px 18px;font-size:.76rem;color:#d8e1ef;background:#17283f}.nova-log{flex:1;overflow:auto;padding:16px}.bubble{max-width:94%;padding:11px 13px;border-radius:14px;background:#223650;margin-bottom:12px;overflow-wrap:anywhere}.bubble.user{background:#315147;margin-left:auto}.bubble p{color:#fff;margin:0;white-space:pre-wrap}.speaker{font-size:.72rem;color:#bcd3ec;font-weight:700;display:block;margin-bottom:3px}.source{display:inline-block;font-size:.75rem;padding:3px 7px;margin-top:9px;border:1px solid #5f7898;border-radius:15px}.nova-form{padding:12px;border-top:1px solid #34445f}.nova-form label{display:block;font-size:.76rem;margin-bottom:6px}.input-row{display:flex;gap:7px}input{width:100%;min-width:0;padding:10px;background:#0b1628;color:#fff;border:1px solid #6b7f9d;border-radius:9px}.tools{padding:0 12px 12px}.tools button{padding:4px 9px;font-size:.75rem}
+@media(max-width:450px){#nova-panel{right:16px}#nova-launcher{right:16px}main{padding-top:35px}}
+</style>
+</head>
+<body>
+<main>
+<div class="eyebrow">KIRA LABS · BEGINNER CODING LAB</div>
+<h1>A tiny chatbot.<br>A clear first step.</h1>
+<p>Meet Nova: an original, rule-based website guide you can open on your own computer. No account, API key, installation or language model is needed for this demo.</p>
+<div class="cards"><div class="card"><strong>1 · Name it</strong>Change one setting to give your guide a name.</div><div class="card"><strong>2 · Teach a small FAQ</strong>Write a few answers and official source links.</div><div class="card"><strong>3 · Test honestly</strong>Try a known question, then something it cannot answer.</div></div>
+<p>This local teaching demo is inspired by the website-guide idea, not a copy of production Iris. It does not learn, search the web or remember after a refresh. Opening an official source link leaves this demo.</p>
+<a href="https://kiralabs.org" target="_blank" rel="noopener noreferrer">Explore kiralabs.org ↗</a>
+</main>
+<!-- 2. EMBED: this widget markup belongs just before your page's closing body tag. -->
+<button id="nova-launcher" type="button" aria-expanded="false" aria-controls="nova-panel">Ask Nova</button>
+<section id="nova-panel" aria-labelledby="nova-title" hidden>
+<header class="nova-header"><h2 id="nova-title">Nova · website guide</h2><button id="nova-close" type="button" aria-label="Close chat">Close</button></header>
+<p class="nova-notice">Local teaching demo—not a message to Robert. Do not enter private information.</p>
+<div id="nova-log" class="nova-log" role="log" aria-live="polite" aria-relevant="additions" aria-label="Chat messages"></div>
+<form id="nova-form" class="nova-form"><label for="nova-question">Ask about Kira Labs, NewBrain or contact (240 characters maximum)</label><div class="input-row"><input id="nova-question" name="question" maxlength="240" autocomplete="off" placeholder="What is NewBrain?"><button type="submit">Send</button></div></form>
+<div class="tools"><button id="nova-clear" type="button">Clear chat</button></div>
+</section>
+<script>
+'use strict';
+// 3. NAME: change this single setting. It updates the title and messages.
+const BOT_NAME = 'Nova';
+const MAX_LENGTH = 240;
+// 4. FACTS: a small explicit FAQ, not training data or an LLM.
+// Source IDs keep links on this fixed allowlist, never on user-supplied URLs.
+const SOURCES = Object.freeze({
+  home: { label: 'Kira Labs website', url: 'https://kiralabs.org' },
+  newbrain: { label: 'NewBrain project', url: 'https://kiralabs.org/newbrain.html' },
+  contact: { label: 'Contact page', url: 'https://kiralabs.org/contact.html' }
+});
+const FAQ = [
+  { matches: /\b(newbrain|new brain)\b/i, text: 'NewBrain is experimental learning and memory research at Kira Labs. This demo does not establish broad parity with other models. See the project page for evidence and limitations.', source: 'newbrain' },
+  { matches: /\b(contact|email|message robert)\b/i, text: 'Use the official Kira Labs contact page to find contact information. Typing here does not send a message to Robert.', source: 'contact' },
+  { matches: /\b(kira labs|kiralabs)\b/i, text: 'Kira Labs is an independent AI research project. Visit the official website to explore the work and its goals.', source: 'home' },
+  { matches: /^(hi|hello|hey)[!.?\s]*$/i, text: 'Hello! Ask about Kira Labs, NewBrain or contact. I match a few written rules; I am not a language model.' }
+];
+// 5. MATCH: first matching rule wins. Unknown questions get an honest fallback.
+function answerQuestion(raw) {
+  const question = String(raw ?? '').trim().slice(0, MAX_LENGTH);
+  if (!question) return null;
+  const fact = FAQ.find(item => item.matches.test(question));
+  return fact ? { text: fact.text, source: fact.source } : {
+    text: 'I only know this small FAQ. Try “Kira Labs”, “NewBrain” or “contact”. I cannot answer that question, learn from it or send it to Robert.'
+  };
+}
+const byId = id => document.getElementById(id);
+const launcher = byId('nova-launcher');
+const panel = byId('nova-panel');
+const log = byId('nova-log');
+const input = byId('nova-question');
+launcher.textContent = 'Ask ' + BOT_NAME;
+byId('nova-title').textContent = BOT_NAME + ' · website guide';
+// 6. DISPLAY SAFELY: textContent displays text instead of interpreting HTML.
+function addMessage(text, speaker, sourceId) {
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble' + (speaker === 'You' ? ' user' : '');
+  const label = document.createElement('span');
+  label.className = 'speaker';
+  label.textContent = speaker;
+  const paragraph = document.createElement('p');
+  paragraph.textContent = text;
+  bubble.append(label, paragraph);
+  if (Object.prototype.hasOwnProperty.call(SOURCES, sourceId)) {
+    const source = SOURCES[sourceId];
+    const link = document.createElement('a');
+    link.className = 'source';
+    link.href = source.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = source.label + ' ↗';
+    bubble.append(link);
+  }
+  log.append(bubble);
+  log.scrollTop = log.scrollHeight;
+}
+function setOpen(open) {
+  panel.hidden = !open;
+  launcher.setAttribute('aria-expanded', String(open));
+  (open ? input : launcher).focus();
+}
+function resetChat() {
+  log.replaceChildren();
+  input.value = '';
+  addMessage('I’m ' + BOT_NAME + '. Ask about Kira Labs, NewBrain or contact. This is a small local FAQ, not a message to Robert.', BOT_NAME);
+}
+launcher.addEventListener('click', () => setOpen(panel.hidden));
+byId('nova-close').addEventListener('click', () => setOpen(false));
+panel.addEventListener('keydown', event => { if (event.key === 'Escape') setOpen(false); });
+byId('nova-clear').addEventListener('click', () => { resetChat(); input.focus(); });
+// 7. SEND: a form handles the Send button and Enter without duplicate handlers.
+byId('nova-form').addEventListener('submit', event => {
+  event.preventDefault();
+  const question = input.value.trim().slice(0, MAX_LENGTH);
+  const answer = answerQuestion(question);
+  if (!answer) return;
+  addMessage(question, 'You');
+  addMessage(answer.text, BOT_NAME, answer.source);
+  input.value = '';
+  input.focus();
+});
+resetChat();
+</script>
+</body>
+</html>

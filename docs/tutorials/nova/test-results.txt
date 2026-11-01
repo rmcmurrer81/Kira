@@ -1,0 +1,19 @@
+PASS empty and whitespace ignored
+PASS NewBrain experimental wording and source
+PASS contact is not a sent message
+PASS Kira Labs fact
+PASS unknown fallback and no accidental hi substring
+PASS greeting is whole phrase
+PASS one welcome, named launcher and title
+PASS open updates hidden, expanded and input focus
+PASS empty submit adds nothing
+PASS submit adds question and sourced answer then clears input
+PASS HTML-looking input remains inert text
+PASS limit enforced even if DOM maxlength bypassed
+PASS untrusted source URL creates no link
+PASS prototype source name creates no link
+PASS clear resets to one welcome and empty input
+PASS Escape closes and focuses launcher
+PASS close button closes
+PASS no network, storage, eval or external resources in application
+18 checks passed. DOM mocks are not real-browser visual or accessibility tests.
