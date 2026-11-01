@@ -1,6 +1,7 @@
 'use strict';
 // 1. CAST: IDs map to display names and folders. These are fictional characters.
-// No recordings are supplied. Record yourself or use voices you may distribute.
+// Three approved finished Robert-voice clips are supplied. No private references.
+// Replace them only with recordings you may use/distribute.
 const CHARACTERS = {
   mira: {name:'Mira', voiceFolder:'audio/mira/'},
   sol: {name:'Sol', voiceFolder:'audio/sol/'}
@@ -98,4 +99,4 @@ $('stop').addEventListener('click',()=>{stopPlayback();status('Stopped. The curr
 $('restart').addEventListener('click',()=>{stopPlayback();lineIndex=0;showLine();status('Restarted in text mode. No sound starts automatically.');});
 const errors=validateConversation(CHARACTERS,DIALOGUE);
 if(errors.length){status(errors.join('; '));for(const id of ['next','replay','sequence','stop','restart'])$(id).disabled=true;}
-else {showLine();status('Text mode. No recordings are included; add your own permitted WAV files to try sound.');}
+else {showLine();status('Ready in text mode. Replay plays this line; Play remaining lines plays the conversation. Both roles use Robert’s approved synthetic voice.');}

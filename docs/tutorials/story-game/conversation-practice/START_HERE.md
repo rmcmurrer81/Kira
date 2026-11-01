@@ -1,11 +1,11 @@
 # Extension exercise: two or more characters taking turns
 
-**Separate text-first code exercise. No audio clips are included. This exercise does not modify the live story game.** Download the [practice ZIP](https://kiralabs.org/tutorials/story-game/conversation-practice/practice.zip), extract it, then open `index.html` locally. Original Mira and Sol dialogue; no voice recordings, private references or new voice identities are included. The live game currently uses Robert's approved synthetic voice for both fictional characters. This exercise shows how your own permitted recordings could be organized into separate folders; distinct folder names do not create distinct voices.
+**Separate text-first code exercise with three optional finished dialogue recordings. This exercise does not modify the original live story game.** Download the [practice ZIP](https://kiralabs.org/tutorials/story-game/conversation-practice/practice.zip), extract it, then open `index.html` locally. Original Mira and Sol dialogue: both fictional roles use Robert’s explicitly approved synthetic voice. The supplied WAVs are finished dialogue, not private voice references or a new voice identity. The exercise also shows how replacement recordings can be organized into separate folders. Distinct folder names do not create distinct voices; use different permitted voices if you want distinct speakers.
 
 ## Open and try text first
 Keep `index.html` and `conversation.js` together, then open `index.html` in a modern browser. No installation or API key is needed. Next line changes the speaker and subtitle without sound. Restart text returns to the first line. Replay current line tries one recording. Play remaining lines requests an ordered sequence. Stop audio cancels playback without changing the subtitle. On first load, nothing plays.
 
-No WAVs are supplied. Replay or sequence will report missing audio, keep the current text and stop; use Next to keep reading. To try sound, create these folders and add your own permitted recordings of the exact lines:
+Three finished WAVs are supplied in the paths below. Download and extract the complete ZIP to preserve these folders. Replay or sequence will report missing audio if a file is absent, keep the current text and stop; use Next to keep reading. Keep the original folder structure, or replace the clips with your own permitted recordings of the exact lines:
 
 ```text
 audio/
@@ -81,6 +81,6 @@ Record the exact line into `audio/lee/04-supplies.wav` using a permitted voice. 
 - Add Lee: name and relative file path resolve correctly.
 - Check real playback, device volume, mobile layout and assistive tools yourself.
 
-Run `node test.cjs` if Node is already installed. Fifteen tests passed using mock DOM/audio objects, covering ordering, mapping, a third character, cancellation and failure cases. No actual browser playback or audio assets were verified for this extension. Volume starts at 0.8; this is not a guarantee about device loudness.
+Run `node test.cjs` if Node is already installed. Fifteen tests passed using mock DOM/audio objects, covering ordering, mapping, a third character, cancellation and failure cases. The mock tests do not establish actual browser playback. Finished audio verification and browser checks must be recorded separately. Volume starts at 0.8; this is not a guarantee about device loudness.
 
 Playback semantics reference: https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play
