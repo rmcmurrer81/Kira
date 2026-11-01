@@ -6,6 +6,9 @@ on:
       - "docs/labs.js"
       - "docs/iris-float.css"
       - "docs/iris-embedded.css"
+      - "docs/iris-voice.js"
+      - "docs/iris-voice.css"
+      - "tests/test-iris-soft-voice.cjs"
       - "tests/test-sitewide-iris.cjs"
       - "docs/iris.html"
       - "docs/iris.js"
@@ -32,3 +35,5 @@ jobs:
         run: node tests/test-iris-oct22-knowledge.cjs
       - name: Verify Iris launcher is loaded across public pages
         run: node tests/test-sitewide-iris.cjs
+      - name: Verify Iris soft female voice opt-in and fallback
+        run: node tests/test-iris-soft-voice.cjs
