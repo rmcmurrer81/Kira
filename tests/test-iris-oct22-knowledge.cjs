@@ -100,7 +100,7 @@ const nb=ask('What are the latest NewBrain test results?');
 assert.equal(nb.id,'newbrain');assert.equal(nb.facet,'status');
 for(const q of ['OCTOBER 29','Actual47','Actual49','Actual51','Actual52','0/10 factual','1/12','2/12','UNRUN','checkpoint NOT adopted'])assert.ok(priorOct293.projects.find(p=>p.id==='newbrain').status.includes(q),'Preserved Oct29 previous NewBrain review '+q);
 assert.ok(nb.sources.includes('iris-current-newbrain'));
-assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-native-adam-candidate-2026-11-01');assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-connected-neutral-body-review-2026-10-31');
+assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-native-adam-candidate-2026-11-01');assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-profile-fields-2026-11-01');
 assert.equal(priorOct313.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-a116-practice-eligibility-2026-10-31');assert.equal(priorOct313.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-camera-source112-2026-10-31');
 assert.equal(priorOct312.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-single-reply-a108-2026-10-31');assert.equal(priorOct312.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-connected-head-torso-source109-2026-10-31');
 assert.equal(priorOct305.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-continuation-a94-2026-10-30');
