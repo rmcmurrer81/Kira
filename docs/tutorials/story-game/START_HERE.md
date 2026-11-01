@@ -5,7 +5,7 @@ Original Kira Labs teaching example: five story nodes, three shape-drawn locatio
 ## 1. Download and open
 Keep these three files together in one folder: `index.html`, `style.css`, `game.js`. Double-click `index.html` to open the game in your browser. A file named `index.html.txt` will not behave the same; show filename extensions in Windows File Explorer. Use a plain-text editor, not a word processor. Save, then refresh after each change. Make a backup before editing.
 
-From GitHub, open each file and use **Download raw file**; save with the exact names. Do not download the GitHub page itself as HTML. `test.cjs` is an optional developer test, not needed to play. No audio clips are supplied: the public starter is fully playable with text. The empty `audio` folder is only where your own permitted recordings would go.
+From GitHub, open each file and use **Download raw file**; save with the exact names. Do not download the GitHub page itself as HTML. `test.cjs` is an optional developer test, not needed to play. No audio clips are supplied: the public starter is fully playable with text. Create an `audio` folder yourself if you want to add your own permitted recordings; the text-only starter does not supply an empty folder.
 
 Controls: click/tap a choice, use Tab then Enter, or press number 1 or 2. R or Restart goes back to the park. Turn on the coordinate grid to see placement. Reduce motion skips optional wave/entry animation. System reduced-motion preference is also respected by CSS. These are controls, not proof of complete accessibility; test your own browser and assistive tools.
 
