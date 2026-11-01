@@ -19,12 +19,26 @@
     shop.textContent = 'Shop';
     links.insertBefore(shop, links.querySelector('a.contact, a[href="contact.html"]'));
   });
-  // Give the public guide its own navigation destination. It does not send messages.
-  document.querySelectorAll('#primary-nav, .footlinks').forEach(links => {
-    if (links.querySelector('a[href="iris.html"]')) return;
-    const a=document.createElement('a');a.href=new URL('iris.html',document.currentScript?.src||document.baseURI).href;a.textContent='Ask Iris';
-    if (location.pathname.endsWith('/iris.html')) a.setAttribute('aria-current','page');
+  // Iris is already available from the floating launcher. The full-page guide
+  // stays linked in the footer, not in the primary navigation.
+  const irisUrl = new URL('iris.html', document.currentScript?.src || document.baseURI).href;
+  document.querySelectorAll('#primary-nav a[href], .site-header nav a[href]').forEach(a => {
+    if (a.href === irisUrl) a.remove();
+  });
+  document.querySelectorAll('.footlinks').forEach(links => {
+    if (Array.from(links.querySelectorAll('a[href]')).some(a => a.href === irisUrl)) return;
+    const a = document.createElement('a');
+    a.href = irisUrl;
+    a.textContent = 'Ask Iris';
     links.insertBefore(a, links.querySelector('a[href="contact.html"],a.contact') || null);
+  });
+  // The stand-alone business and investor pages use a different footer.
+  document.querySelectorAll('.site-footer .footer-inner').forEach(footer => {
+    if (Array.from(footer.querySelectorAll('a[href]')).some(a => a.href === irisUrl)) return;
+    const a = document.createElement('a');
+    a.href = irisUrl;
+    a.textContent = 'Ask Iris';
+    footer.appendChild(a);
   });
   // Contact is a message channel; Iris is a separate informational guide.
   document.querySelectorAll('.footlinks a[href="contact.html"]').forEach(a=>{
