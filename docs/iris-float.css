@@ -1,0 +1,22 @@
+/* Floating Iris on public Kira Labs pages. Original styling, not third-party UI. */
+.kira-iris-widget{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:1200;font-family:Arial,Helvetica,sans-serif;line-height:1.4;color:#effbff}
+.kira-iris-widget,.kira-iris-widget *{box-sizing:border-box}
+.kira-iris-launcher{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:7px 17px 7px 8px;border:1px solid #80ebf6a6;border-radius:100px;cursor:pointer;background:linear-gradient(125deg,#0d2338,#173c5a);color:#f6fcff;box-shadow:0 8px 32px #020916b8,0 0 0 4px #58cbe719;font:700 14px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.015em;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.kira-iris-launcher:hover{transform:translateY(-2px);border-color:#b9faff;box-shadow:0 12px 36px #020916d1,0 0 0 5px #58cbe728}
+.kira-iris-launcher[aria-expanded="true"]{background:linear-gradient(125deg,#173751,#0d2b45);border-color:#baf8ff}
+.kira-iris-mark{display:grid;place-items:center;flex:none;width:37px;height:37px;border:1px solid #6eddec;border-radius:50%;background:radial-gradient(circle at 35% 30%,#204f67,#0a1b30);color:#a1f8ff;font:italic 25px/1 Georgia,serif}
+.kira-iris-panel{position:absolute;right:0;bottom:calc(100% + 13px);display:flex;flex-direction:column;width:min(410px,calc(100vw - 30px));height:min(650px,calc(100dvh - 103px));min-height:260px;max-height:calc(100vh - 103px);overflow:hidden;border:1px solid #78deed8c;border-radius:19px;background:#091b2d;box-shadow:0 22px 85px #000a,0 0 0 1px #ffffff0d}
+.kira-iris-panel[hidden]{display:none!important}
+.kira-iris-panel-head{display:flex;align-items:center;gap:10px;flex:none;min-height:64px;padding:11px 12px 11px 15px;background:linear-gradient(110deg,#142c45,#0c2338);border-bottom:1px solid #70b9dc51}
+.kira-iris-panel-head .kira-iris-mark{width:38px;height:38px;font-size:25px}
+.kira-iris-panel-brand{display:grid;gap:1px;min-width:0;flex:1}
+.kira-iris-panel-brand strong{font-size:16px;letter-spacing:.01em;color:#f6fcff}
+.kira-iris-panel-brand small{font-size:10px;color:#b7d6e3;letter-spacing:.02em}
+.kira-iris-panel-actions{display:flex;align-items:center;gap:4px;flex:none}
+.kira-iris-panel-actions a,.kira-iris-panel-actions button{display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:36px;margin:0;padding:7px;border:1px solid transparent;border-radius:9px;background:#ffffff0c;color:#e5f8ff;text-decoration:none;font-size:18px;line-height:1;cursor:pointer}
+.kira-iris-panel-actions a:hover,.kira-iris-panel-actions button:hover{border-color:#77d9e6;background:#ffffff20}
+.kira-iris-frame{display:block;width:100%;min-width:0;min-height:0;flex:1;border:0;background:#091523;color-scheme:dark}
+.kira-iris-panel-foot{flex:none;padding:6px 12px 8px;background:#0b2033;border-top:1px solid #ffffff19;color:#b4cfde;text-align:center;font-size:10px}
+.kira-iris-widget :focus-visible{outline:3px solid #9cecff;outline-offset:3px}
+@media(max-width:600px){.kira-iris-widget{right:max(13px,env(safe-area-inset-right));bottom:max(13px,env(safe-area-inset-bottom))}.kira-iris-launcher{min-width:53px;min-height:53px;padding:7px;border-radius:100px}.kira-iris-launcher-label{position:absolute;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;width:1px;height:1px;overflow:hidden}.kira-iris-panel{width:calc(100vw - 26px);height:min(660px,calc(100dvh - 85px));max-height:calc(100vh - 85px);bottom:calc(100% + 9px);border-radius:16px}}
+@media(prefers-reduced-motion:reduce){.kira-iris-launcher{transition:none}.kira-iris-launcher:hover{transform:none}}
