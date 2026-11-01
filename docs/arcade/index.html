@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#081222">
   <title>Kira Labs Arcade — Play, Explore & Learn</title>
-  <meta name="description" content="Play free, original browser games from Kira Labs. Start with The Little Signal, then follow a beginner coding tutorial to make your own.">
+  <meta name="description" content="Play original browser games from Kira Labs: Code Quest teaches JavaScript through an eight-mission adventure, The Little Signal offers branching stories, and Firefly Trail is a complete beginner example.">
   <link rel="canonical" href="https://kiralabs.org/arcade/">
   <meta property="og:title" content="Kira Labs Arcade — Play, Explore & Learn">
-  <meta property="og:description" content="Free little games and the code behind them. Play The Little Signal, then learn to make your own.">
+  <meta property="og:description" content="Play Code Quest, The Little Signal, and The Firefly Trail. Learn to program a complete browser game from start to finish.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://kiralabs.org/assets/social-card.jpg">
   <link rel="icon" href="../assets/favicon.png">
   <link rel="stylesheet" href="../labs.css">
-  <link rel="stylesheet" href="arcade.css?v=20261101.1">
+  <link rel="stylesheet" href="arcade.css?v=20261101.2">
   <script src="../labs.js?v=20261101-iris-float4" defer></script>
 </head>
 <body class="arcade-home">
@@ -33,9 +33,9 @@
         <div class="ar-hero-copy">
           <p class="ar-eyebrow"><span class="ar-pixel" aria-hidden="true">✦</span> KIRA LABS · THE ARCADE</p>
           <h1 id="ar-title">Big curiosity.<br><em>Little games.</em></h1>
-          <p class="ar-intro">A playful corner of Kira Labs where you can enjoy an original browser game and, if you're curious, discover the code that makes it work.</p>
-          <div class="ar-actions"><a class="ar-button ar-button-primary" href="little-signal/">Play The Little Signal <span aria-hidden="true">→</span></a><a class="ar-button ar-button-outline" href="../tutorials/story-game/">Learn to build it</a></div>
-          <p class="ar-fine">Free to play · No signup · Works in a modern browser · Voice is optional</p>
+          <p class="ar-intro">Play original adventures, write actual JavaScript to solve puzzles, and learn to build a complete browser game yourself.</p>
+          <div class="ar-actions"><a class="ar-button ar-button-primary" href="code-quest/">Play Code Quest <span aria-hidden="true">→</span></a><a class="ar-button ar-button-outline" href="code-quest/learn.html">Build your first game</a></div>
+          <p class="ar-fine">Free to play · No signup · Play on desktop or phone · Your code runs in your browser</p>
         </div>
         <div class="ar-hero-art" aria-hidden="true">
           <div class="ar-art-stars"><i></i><i></i><i></i><i></i><i></i></div>
@@ -48,31 +48,41 @@
     </section>
     <section class="ar-games" aria-labelledby="ar-games-title">
       <div class="ar-shell">
-        <div class="ar-section-head"><div><p class="ar-eyebrow">NOW PLAYING · GAME 001</p><h2 id="ar-games-title">Pick a game. Choose your path.</h2></div><p>Our first game is a short illustrated story with two possible endings. More games can join the shelf as they are built.</p></div>
-        <article class="ar-feature-card">
-          <div class="ar-card-icon" aria-hidden="true"><span>✧</span></div>
+        <div class="ar-section-head"><div><p class="ar-eyebrow">NOW PLAYING · THREE COMPLETE ADVENTURES</p><h2 id="ar-games-title">Pick a game. Make a discovery.</h2></div><p>Choose an interactive coding adventure, a short branching story, or a smaller open-source learning example. Every game has a complete ending.</p></div>
+        <article class="ar-feature-card ar-codequest-feature">
+          <div class="ar-card-icon ar-codequest-art" aria-hidden="true"><span>⌘</span><small>CODE / QUEST</small></div>
           <div class="ar-card-body">
-            <p class="ar-overline">BRANCHING STORY · SHORT ADVENTURE</p>
-            <h3>The Little Signal</h3>
-            <p>Mira and Sol discover an old lantern. Will they repair it, share its light or explore the stars? Your choices change their story.</p>
-            <div class="ar-tags"><span>Two endings</span><span>Keyboard &amp; touch</span><span>Optional spoken dialogue</span></div>
-            <div class="ar-actions ar-card-actions"><a class="ar-button ar-button-primary" href="little-signal/">Play now <span aria-hidden="true">→</span></a><a class="ar-text-link" href="../tutorials/story-game/">See the beginner tutorial <span aria-hidden="true">↗</span></a></div>
+            <p class="ar-overline">NEW · INTERACTIVE CODING ADVENTURE · GAME 002</p>
+            <h3>Code Quest: Save Starlight Bay</h3>
+            <p>A blackout has swallowed the village. Help Mira and PIX the robot restore the ancient beacon by writing and running real JavaScript. Complete eight story missions—from your first string to loops, arrays and functions—and see the full ending.</p>
+            <div class="ar-tags"><span>8 missions + finale</span><span>Actual JavaScript</span><span>Hints &amp; examples</span><span>Progress saved on device</span></div>
+            <div class="ar-actions ar-card-actions"><a class="ar-button ar-button-primary" href="code-quest/">Play Code Quest <span aria-hidden="true">→</span></a><a class="ar-text-link" href="code-quest/learn.html">Learn to build your own game <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
+        <div class="ar-secondary-grid">
+          <article class="ar-small-card">
+            <div class="ar-small-art ar-small-signal" aria-hidden="true">✧</div>
+            <div class="ar-small-copy"><p class="ar-overline">BRANCHING STORY · GAME 001</p><h3>The Little Signal</h3><p>Mira and Sol find an old lantern. Choose a path, share its light and discover two different endings.</p><div class="ar-tags"><span>2 endings</span><span>Touch &amp; keyboard</span><span>Optional spoken dialogue</span></div><a class="ar-button ar-button-outline" href="little-signal/">Play The Little Signal →</a><a class="ar-text-link" href="../tutorials/story-game/">Original story tutorial</a></div>
+          </article>
+          <article class="ar-small-card">
+            <div class="ar-small-art ar-small-firefly" aria-hidden="true">🦊</div>
+            <div class="ar-small-copy"><p class="ar-overline">NEW · COMPLETE BEGINNER GAME · GAME 003</p><h3>The Firefly Trail</h3><p>Follow Wisp the fox, collect gifts, cross a moonlit river and restore a mountain beacon. Then copy the entire game and change the story.</p><div class="ar-tags"><span>Different endings</span><span>Full source included</span><span>Replayable</span></div><a class="ar-button ar-button-outline" href="code-quest/your-first-game.html">Play The Firefly Trail →</a><a class="ar-text-link" href="code-quest/learn.html">Build a complete game from scratch</a></div>
+          </article>
+        </div>
       </div>
     </section>
     <section class="ar-learn" aria-labelledby="ar-learn-title">
       <div class="ar-shell">
-        <div class="ar-section-head"><div><p class="ar-eyebrow">FROM PLAYER TO CREATOR</p><h2 id="ar-learn-title">Wonder how it works?</h2></div><p>The games are for everyone. The matching lessons are for anyone who wants to try coding.</p></div>
+        <div class="ar-section-head"><div><p class="ar-eyebrow">FROM PLAYER TO CREATOR</p><h2 id="ar-learn-title">Wonder how it works?</h2></div><p>Whether you're a beginner or just curious, you can play a whole game and then see exactly how to program one.</p></div>
         <div class="ar-steps">
-          <div class="ar-step"><strong>01</strong><h3>Play</h3><p>Try different choices and see how one game can tell more than one story.</p></div>
-          <div class="ar-step"><strong>02</strong><h3>Look inside</h3><p>Follow the existing beginner lesson, download the starter files and inspect the JavaScript.</p></div>
-          <div class="ar-step"><strong>03</strong><h3>Make it yours</h3><p>Change a character, write a scene or build a brand-new game of your own.</p></div>
+          <div class="ar-step"><strong>01</strong><h3>Play</h3><p>Play Code Quest, debug your code, or explore different endings in The Little Signal and The Firefly Trail.</p></div>
+          <div class="ar-step"><strong>02</strong><h3>Look inside</h3><p>Read working HTML, CSS and JavaScript. Copy the entire Firefly Trail game with one button.</p></div>
+          <div class="ar-step"><strong>03</strong><h3>Make it yours</h3><p>Create a new scene, change a choice, test every ending and publish a finished adventure.</p></div>
         </div>
-        <div class="ar-bottom"><p><strong>Made at Kira Labs.</strong> These are small, scripted games—not demonstrations of NewBrain or an autonomous AI.</p><a class="ar-text-link" href="../tutorials/story-game/">Start the Little Signal coding lesson <span aria-hidden="true">→</span></a></div>
+        <div class="ar-bottom"><p><strong>Made at Kira Labs.</strong> These are small, scripted games—not demonstrations of NewBrain or an autonomous AI.</p><a class="ar-text-link" href="code-quest/learn.html">Build a complete adventure game <span aria-hidden="true">→</span></a></div>
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="wrap"><div class="footrow"><a class="brand" href="../index.html"><span class="brandmark"><img src="../assets/kira-world-k-logo-192.png" alt="" width="33" height="33"></span><span class="brandwords"><strong>Kira Labs</strong><small>Play. Learn. Create.</small></span></a><nav class="footlinks" aria-label="Footer navigation"><a href="../index.html">Kira Labs home</a><a href="../tools-apps.html">Tools &amp; Apps</a><a href="./">Arcade</a><a href="../tutorials/story-game/">Coding tutorial</a><a href="../contact.html">Contact</a></nav></div><div class="footer-bottomline"><p>© 2026 Kira Labs / Robert McMurrer · Newark, New Jersey</p><p>Small games, big possibilities.</p></div></div></footer>
+  <footer class="footer"><div class="wrap"><div class="footrow"><a class="brand" href="../index.html"><span class="brandmark"><img src="../assets/kira-world-k-logo-192.png" alt="" width="33" height="33"></span><span class="brandwords"><strong>Kira Labs</strong><small>Play. Learn. Create.</small></span></a><nav class="footlinks" aria-label="Footer navigation"><a href="../index.html">Kira Labs home</a><a href="../tools-apps.html">Tools &amp; Apps</a><a href="./">Arcade</a><a href="../tutorials/story-game/">Coding tutorial</a><a href="../contact.html">Contact</a></nav></div><div class="footer-bottomline"><p>© 2026 Kira Labs / Robert McMurrer · Newark, New Jersey</p><p>Play. Learn. Create.</p></div></div></footer>
 </body>
 </html>
