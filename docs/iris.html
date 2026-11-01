@@ -4,7 +4,35 @@
 <link rel="canonical" href="https://kiralabs.org/iris.html"/><meta property="og:type" content="website"/><meta property="og:title" content="Meet Iris — Kira Labs Website Guide"/><meta property="og:description" content="Explore Kira Labs' published projects, research, books and films with Iris, the website guide."/>
 <meta property="og:image" content="https://kiralabs.org/assets/kira-labs-hero.webp"/><link rel="icon" href="https://kiralabs.org/assets/favicon.png"/>
 <link rel="stylesheet" href="labs.css"/><link rel="stylesheet" href="about-contact-showcase.css?v=20261020"/><link rel="stylesheet" href="iris-page.css?v=20261020c"/>
-<link rel="stylesheet" href="fidelity-website-20261020.css?v=20261020-5"/><link rel="stylesheet" href="iris-chat-ui.css?v=20261022-messenger1"/></head><body class="xf-page xf-iris contact-page kb-contact kb-iris-page"><a class="skip" href="#main">Skip to main content</a><header class="site-header"><div class="wrap navrow"><a aria-label="Kira Labs home" class="brand" href="index.html"><span class="brandmark"><img alt="" decoding="async" height="38" src="https://kiralabs.org/assets/kira-world-k-logo-192.png" width="38"/></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent AI research</small></span></a><button aria-controls="primary-nav" aria-expanded="false" class="menubtn menu-toggle" type="button">Menu</button><nav aria-label="Main navigation" class="nav" id="primary-nav"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="progress.html">Lab timeline</a><a href="about.html">About</a><a href="support.html">Support</a><a class="contact" href="contact.html">Contact</a></nav></div></header>
+<link rel="stylesheet" href="fidelity-website-20261020.css?v=20261020-5"/><link rel="stylesheet" href="iris-chat-ui.css?v=20261022-messenger1"/><link rel="stylesheet" href="iris-embedded.css?v=20261101.1"/>
+<script>
+/* The same published Iris chat in a compact on-site frame. No new answer engine. */
+(()=>{
+  if(new URLSearchParams(location.search).get('embed')!=='1')return;
+  document.documentElement.classList.add('iris-embedded');
+  addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&!document.getElementById('profiles-dialog')?.open&&window.parent!==window){
+      event.preventDefault();
+      window.parent.postMessage({type:'kira-iris-close'},location.origin);
+    }
+  });
+  document.addEventListener('click',event=>{
+    const link=event.target.closest('a[href]');
+    if(!link)return;
+    try{
+      const target=new URL(link.href,location.href);
+      if(!['http:','https:'].includes(target.protocol))return;
+      if(target.origin===location.origin){
+        if(target.pathname===location.pathname&&target.search===location.search&&target.hash)return;
+        link.target='_top';
+      }else{
+        link.target='_blank';
+        link.rel='noopener noreferrer';
+      }
+    }catch{}
+  },true);
+})();
+</script></head><body class="xf-page xf-iris contact-page kb-contact kb-iris-page"><a class="skip" href="#main">Skip to main content</a><header class="site-header"><div class="wrap navrow"><a aria-label="Kira Labs home" class="brand" href="index.html"><span class="brandmark"><img alt="" decoding="async" height="38" src="https://kiralabs.org/assets/kira-world-k-logo-192.png" width="38"/></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent AI research</small></span></a><button aria-controls="primary-nav" aria-expanded="false" class="menubtn menu-toggle" type="button">Menu</button><nav aria-label="Main navigation" class="nav" id="primary-nav"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="progress.html">Lab timeline</a><a href="about.html">About</a><a href="support.html">Support</a><a class="contact" href="contact.html">Contact</a></nav></div></header>
 <main id="main"><section class="xf-hero xf-hero-iris" aria-labelledby="xf-iris-title"><div class="xf-hero-inner"><div class="xf-hero-copy"><p class="xf-overline">Kira Labs / Published knowledge guide</p><h1 class="xf-display" id="xf-iris-title">Meet Iris.<em>Your guide to Kira Labs.</em></h1><p class="xf-subheading">Ask about Kira Labs projects, NewBrain research, Kira World, and Robert's film, book and research work. Iris draws on published website knowledge and sources.</p><p class="xf-iris-label">Iris is a public site chatbot — not Kira, Lisa, Evelyn, or a way to send Robert a message.</p><div class="xf-hero-actions"><a class="button primary" href="#iris-title">Chat with Iris ↓</a><a class="button" href="results.html">Research results →</a><a class="button" href="contact.html">Contact Robert →</a></div></div><figure class="xf-hero-visual"><img src="assets/kira-labs-hero.webp" alt="Concept illustration of a digital Kira Labs research interface, not a verified image of Iris herself" fetchpriority="high" decoding="async"/><figcaption>Research guide · illustrative interface concept</figcaption></figure></div></section><section class="xf-section xf-iris-topics" aria-labelledby="xf-iris-topics-title"><div class="xf-wide"><div class="xf-section-top"><div><p class="xf-overline">What Iris can help with</p><h2 class="xf-section-title" id="xf-iris-topics-title">One guide.<em>The whole lab.</em></h2></div><p>Explore published pages and background about the projects. Check research answers against their dated source records.</p></div><div class="xf-card-grid">
 <a class="xf-card" href="#iris-title"><div class="xf-card-copy"><span class="xf-card-tag">◈ Website guide</span><h3>Find information</h3><p>Find public topics, projects and updates.</p></div></a>
 <a class="xf-card" href="#iris-title"><div class="xf-card-copy"><span class="xf-card-tag">◎ Projects</span><h3>What is being built?</h3><p>NewBrain, Kira World, Person Creator and other developments.</p></div></a>
