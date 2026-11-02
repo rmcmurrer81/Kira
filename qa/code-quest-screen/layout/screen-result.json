@@ -1,0 +1,1528 @@
+{
+  "browser": "156.0.4314.58",
+  "stats": {
+    "assertions": 6077,
+    "desktopMissions": 56,
+    "viewports": [
+      {
+        "width": 2048,
+        "height": 805
+      },
+      {
+        "width": 1366,
+        "height": 768
+      },
+      {
+        "width": 1165,
+        "height": 800
+      },
+      {
+        "width": 1165,
+        "height": 600
+      }
+    ],
+    "layouts": [
+      {
+        "label": "edited-no-route 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "run-at-junction recovery 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 1 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 1 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 1 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 2 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 2 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "wrong code retry 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 2 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 3 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 3 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 3 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 4 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 4 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 4 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 5 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 5 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 5 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 6 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 6 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 6 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 7 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 7 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 7 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 8 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 8 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 8 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 9 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 9 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 9 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 10 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 10 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 10 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 11 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 11 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 11 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 12 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 12 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 12 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 13 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 13 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 13 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 14 junction 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 14 blocked 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "mission 14 cleared 2048x805",
+        "width": 2048,
+        "height": 805,
+        "scrollHeight": 805,
+        "scrollWidth": 2048,
+        "maxBottom": 764
+      },
+      {
+        "label": "edited-no-route 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "run-at-junction recovery 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 1 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 1 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 1 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 2 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 2 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "wrong code retry 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 2 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 3 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 3 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 3 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 4 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 4 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 4 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 5 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 5 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 5 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 6 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 6 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 6 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 7 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 7 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 7 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 8 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 8 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 8 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 9 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 9 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 9 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 10 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 10 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 10 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 11 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 11 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 11 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 12 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 12 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 12 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 13 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 13 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 13 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 14 junction 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 14 blocked 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "mission 14 cleared 1366x768",
+        "width": 1366,
+        "height": 768,
+        "scrollHeight": 768,
+        "scrollWidth": 1366,
+        "maxBottom": 727
+      },
+      {
+        "label": "edited-no-route 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "run-at-junction recovery 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 1 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 1 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 1 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 2 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 2 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "wrong code retry 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 2 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 3 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 3 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 3 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 4 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 4 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 4 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 5 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 5 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 5 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 6 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 6 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 6 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 7 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 7 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 7 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 8 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 8 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 8 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 9 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 9 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 9 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 10 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 10 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 10 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 11 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 11 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 11 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 12 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 12 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 12 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 13 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 13 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 13 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 14 junction 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 14 blocked 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "mission 14 cleared 1165x800",
+        "width": 1165,
+        "height": 800,
+        "scrollHeight": 800,
+        "scrollWidth": 1165,
+        "maxBottom": 759
+      },
+      {
+        "label": "edited-no-route 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "run-at-junction recovery 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 1 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 1 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 1 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 2 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 2 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 594.46875
+      },
+      {
+        "label": "wrong code retry 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 589.46875
+      },
+      {
+        "label": "mission 2 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 589.46875
+      },
+      {
+        "label": "mission 3 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 3 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 594.46875
+      },
+      {
+        "label": "mission 3 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 589.46875
+      },
+      {
+        "label": "mission 4 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 4 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 4 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 5 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 5 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 5 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 6 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 6 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 6 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 7 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 7 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 7 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 8 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 8 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 8 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 9 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 9 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 9 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 10 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 10 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 10 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 11 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 11 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 11 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 12 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 12 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 12 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 13 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 13 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 13 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 14 junction 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 14 blocked 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      },
+      {
+        "label": "mission 14 cleared 1165x600",
+        "width": 1165,
+        "height": 600,
+        "scrollHeight": 600,
+        "scrollWidth": 1165,
+        "maxBottom": 581
+      }
+    ],
+    "accessibility": [
+      {
+        "name": "mobile-390",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "deviceScaleFactor": 1,
+        "passed": true
+      },
+      {
+        "name": "mobile-320",
+        "viewport": {
+          "width": 320,
+          "height": 844
+        },
+        "deviceScaleFactor": 1,
+        "passed": true
+      },
+      {
+        "name": "zoom-equivalent-200",
+        "viewport": {
+          "width": 683,
+          "height": 384
+        },
+        "deviceScaleFactor": 2,
+        "passed": true
+      }
+    ],
+    "screenshots": [
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\edited-no-route-2048x805.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\first-success-2048x805.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\complete-2048x805.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\edited-no-route-1366x768.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\first-success-1366x768.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\complete-1366x768.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\edited-no-route-1165x800.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\first-success-1165x800.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\complete-1165x800.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\edited-no-route-1165x600.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\first-success-1165x600.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\complete-1165x600.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\mobile-390.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\mobile-320.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\layout\\zoom-equivalent-200.png"
+    ]
+  },
+  "sources": {
+    "index.html": "f357a8528b964b447a68f09ed80841befefd6646a8b3e86af783113606017221",
+    "game.css": "eb686e275e3392203218c081f0dd40d0ce65cb21e7016242398cdd9ba18961b2",
+    "screen.css": "9e4748c46187d9dc3e346f9c10bb5ca2214fa848f444740f333273e195af5688",
+    "game.js": "910ff05a77dc00f3b67080b0d70662ae1880e41033137bbc7bda773ed79122e7",
+    "scene.js": "808683d4c0b795b5c8a5f4ca1a217044fde6b071ddd63a8d28e4c2112b093140",
+    "scene-fallback.js": "fe378b8bf53ab79bd925e480a5132ed4bfa700260548c57d4a1971697422424a",
+    "missions.js": "4437c73a1b77ec55104550e7bf5f378392d81c8d158c56972544d6bb7c2e04b4",
+    "encounters.js": "e0e18a84c89e51f14dd457f1d0e04dd2ff6dcff81b102258493200216a1f6a25",
+    "quest-state.js": "379ac9c01009df08754d7809aa834d1e8eb844711bd4bbb3e267d27e7c00bb10",
+    "choices.js": "9645fa796f9a56b85001e0291c0be84627b0b1f569b95dced9608fff0b6261d8",
+    "voice.js": "86fd0833b8cee4aa8489d5aec2b1f317a5aaa240e9f39ddea89202282ef12c2f",
+    "sandbox.js": "e6e2c139bc95991a8b0b6b261eaff03baef7e55a76de74f62b3d89192b953efc"
+  },
+  "scope": "Desktop document fits one viewport; mobile and 200%-zoom-equivalent viewport allow vertical scrolling. Browser zoom shortcut and physical devices are not verified."
+}

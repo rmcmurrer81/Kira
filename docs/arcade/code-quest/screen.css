@@ -1,0 +1,131 @@
+/* The adventure workbench: prerequisites and actions share the scene viewport.
+ * Smaller/zoomed viewports use ordinary document flow; nothing is clipped. */
+.cq-page{margin:0;background:#071427;color:#e5eff1}
+.cq-page *{box-sizing:border-box}
+.cq-page button{cursor:pointer;font:inherit}
+.cq-page button:disabled{cursor:not-allowed}
+.cq-page :focus-visible{outline:3px solid #ffe2a4;outline-offset:3px}
+.cq-sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
+.cq-duplicate{display:none!important}
+.cq-page .site-header{position:relative;top:auto;min-height:44px}
+.cq-page .site-header .navrow{min-height:44px;padding:4px 0;gap:16px}
+.cq-page .site-header .wrap{width:calc(100% - 24px);max-width:none}
+.cq-page .brandmark,.cq-page .brandmark img{width:28px;height:28px;min-width:28px}
+.cq-page .brandwords strong{font-size:15px}
+.cq-page .brandwords small{display:none}
+.cq-page .site-header .nav{gap:18px}
+.cq-page .site-header .nav a{font-size:13px;padding:5px 8px}
+.cq-shell{width:calc(100% - 24px);max-width:none;padding:0;margin:0 auto}
+.cq-appbar{display:flex;align-items:center;gap:16px;min-height:56px}
+.cq-app-title{display:flex;align-items:baseline;gap:12px;white-space:nowrap}
+.cq-app-title h1{font-size:22px;letter-spacing:-.03em;margin:0;color:#ffe2a4}
+.cq-app-title>span{font-size:13px;color:#bed2db}
+#chapterCount{font-size:13px;white-space:nowrap;color:#d6e9e5}
+.cq-app-tools{margin-left:auto;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.cq-page .cq-app-tools button,.cq-editor-toolbar button,.cq-guided-tools button,.cq-route-heading button,.cq-render-status button,.cq-output-heading button{border:1px solid #547183;border-radius:7px;background:#183347;color:#e1f1f4;padding:6px 10px;min-height:34px;font-size:13px;line-height:1.25}
+#voiceStatus{font-size:12px;color:#b5c9d5}
+.cq-flow{list-style:none;display:flex;align-items:center;gap:24px;margin:0 0 8px;padding:0 8px;min-height:32px;color:#a3b7c5;font-size:14px}
+.cq-flow li{display:flex;align-items:center;gap:7px}
+.cq-flow b{display:grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#233b4d;color:#a8becb;font-size:13px}
+.cq-flow li[aria-current=step]{color:#ffe2a4;font-weight:750}
+.cq-flow li[aria-current=step] b{background:#ffe2a4;color:#142634}
+.cq-playdesk{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(460px,1fr);gap:12px;align-items:stretch}
+.cq-world-card{margin:0;border-radius:12px;display:flex;flex-direction:column;min-width:0;min-height:0}
+.cq-scene-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;background:#102438}
+.cq-scene-heading h2{font-size:19px;line-height:1.25;letter-spacing:-.015em;margin:3px 0 0;color:#f3e6c5}
+#chapterName{font-size:10px;letter-spacing:.07em;color:#b0cad3}
+.cq-scene-heading .cq-chip{font-size:11px;white-space:nowrap}
+.cq-world-card .cq-stage{height:450px;min-height:260px;flex:1;scroll-margin:12px}
+.cq-stage .cq-cinematic{font-size:13px;left:15px;top:13px;max-width:90%}
+.cq-stage .cq-world-status{font-size:12px;left:15px;top:40px;max-width:90%}
+.cq-town-strip{padding:10px 14px;display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:15px;border-top:1px solid #446373;background:linear-gradient(115deg,#302a32,#182d3c)}
+#threatTitle{font-size:14px;line-height:1.3}
+#questNeed{font-size:13px;line-height:1.35;margin:3px 0 0}
+.cq-defense label{font-size:12px;gap:5px;margin:0 0 6px}
+.cq-render-status{padding:5px 10px;align-items:center;font-size:11px;gap:10px;border:0;line-height:1.3}
+.cq-render-status button{font-size:11px;min-height:28px;white-space:nowrap;padding:4px 8px}
+.cq-editor-card{padding:10px 12px;border-radius:12px;display:flex;flex-direction:column;gap:7px;min-width:0;min-height:0;background:#10283b}
+.cq-encounter{padding:0;background:transparent;display:block}
+.cq-route-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 6px}
+.cq-encounter h2{font-size:15px;line-height:1.3;margin:0;color:#e1edf0}
+.cq-route-heading button{font-size:12px;min-height:28px;white-space:nowrap;padding:4px 7px}
+.cq-route-choices{grid-template-columns:1fr 1fr;gap:7px}
+.cq-route{padding:8px 10px;min-height:44px;border-radius:8px;position:relative}
+.cq-route strong{font-size:14px;line-height:1.25;margin:0}
+.cq-route span{display:none}
+.cq-route[aria-pressed=true]:after{content:'Selected';display:block;font-size:11px;color:#f1d9aa;margin-top:3px}
+.cq-current-action{border-left:3px solid #e6c58a;padding:5px 8px;background:#263b45;color:#ffe4ad;font-size:14px;line-height:1.35;font-weight:650;min-height:30px}
+.cq-task{font-size:14px;line-height:1.4}
+.cq-task strong{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#a0c9d2}
+.cq-task p{margin:2px 0 0}
+.cq-guided{background:transparent;border:0;border-radius:0;padding:0;margin:0}
+.cq-guided>p{font-size:13px;line-height:1.35;margin:0 0 6px;color:#c5d9df}
+.cq-guided-tools{display:flex;gap:7px;flex-wrap:wrap}
+.cq-guided-tools button{font-size:12px;min-height:32px;padding:5px 8px}
+#codeForm{display:flex;flex-direction:column;min-height:125px;flex:1;gap:5px;margin:0}
+.cq-editor-toolbar{display:flex;align-items:center;justify-content:space-between;gap:7px}
+.cq-editor-toolbar label{font-size:13px;font-weight:700;white-space:nowrap}
+.cq-editor-toolbar>div{display:flex;gap:5px;flex-wrap:wrap}
+.cq-editor-toolbar button{font-size:12px;padding:4px 7px;min-height:30px}
+#codeInput{display:block;flex:1;width:100%;height:auto;min-height:85px;padding:10px 12px;border:1px solid #648697;border-radius:8px;background:#081a29;color:#e4f6df;font:15px/1.5 Consolas,monospace;resize:none;tab-size:2;overflow:auto}
+.cq-output{padding:8px 10px;margin:0;border-radius:8px;min-height:66px;flex:none}
+.cq-output-heading{gap:6px;display:flex;align-items:center}
+.cq-output-heading strong{font-size:14px;line-height:1.25}
+.cq-output-heading button{margin-left:auto;font-size:11px;min-height:26px;padding:3px 7px}
+.cq-output-heading #outputIcon{font-size:14px}
+#outputText{font-size:13px;line-height:1.35;margin:3px 0 0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.cq-actionbar{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cq-actionbar .cq-btn{min-height:44px;padding:8px 10px;font-size:15px;line-height:1.3}
+.cq-storage-note{font-size:10px;line-height:1.3;margin:0;color:#a9c3ce}
+.cq-dialog{width:min(680px,calc(100% - 28px));max-height:calc(100dvh - 32px);overflow:auto;margin:auto;padding:22px;border:1px solid #819a9d;border-radius:14px;color:#e8f2ed;background:#102b3d;box-shadow:0 20px 100px #000a;font-size:16px;line-height:1.65}
+.cq-dialog::backdrop{background:#000b}
+.cq-dialog-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:14px}
+.cq-dialog-heading h2{font-size:23px;line-height:1.3;margin:0;color:#ffe2a4}
+.cq-dialog button{border:1px solid #72929d;border-radius:7px;padding:8px 12px;min-height:44px;background:#23465a;color:#f4f8ec;line-height:1.4}
+.cq-dialog h3{font-size:17px;color:#ffe2a4}
+.cq-dialog .cq-worked p{font-size:15px;line-height:1.6}
+.cq-dialog .cq-journey{margin:0 0 16px}
+.cq-dialog .cq-map{flex-wrap:wrap}
+.cq-dialog .cq-map button{width:40px;min-width:40px;height:40px;min-height:40px;padding:0}
+.cq-dialog .cq-inventory-item{font-size:14px}
+.cq-dialog .cq-choice-panel{margin:0;padding:0;border:0;background:transparent}
+.cq-dialog .cq-choice-option{min-height:70px;text-align:left}
+.cq-dialog .cq-choice-option strong{font-size:15px}
+.cq-dialog .cq-choice-option code{font-size:14px}
+.cq-dialog .cq-action-log{flex-wrap:wrap}
+.cq-dialog .cq-action-log code{font-size:14px}
+.cq-dialog.cq-ending{text-align:left;max-width:680px}
+.cq-page .kira-iris-widget{position:fixed;right:12px;bottom:8px;margin:0;z-index:1199}
+/* This page has its own Iris teaching controls. Keep the site assistant reachable
+ * through the full Iris link in About, without a launcher over gameplay. */
+.cq-page .kira-iris-widget:not(:has(.kira-iris-panel:not([hidden]))){display:none}
+@media(min-width:1000px) and (min-height:560px){
+ .cq-page #game{height:calc(100dvh - 44px);min-height:0}
+ .cq-shell{height:100%;display:flex;flex-direction:column;padding-bottom:10px}
+ .cq-playdesk{flex:1;min-height:0}
+ .cq-world-card .cq-stage{height:0;min-height:0}
+ .cq-page .site-header{height:44px}
+}
+@media(min-width:1000px) and (min-height:560px) and (max-height:680px){
+ .cq-appbar{min-height:44px}.cq-app-title>span{display:none}.cq-flow{min-height:27px;margin-bottom:5px}
+ .cq-editor-card{gap:5px;padding:8px 10px}.cq-guided>p{display:none}.cq-output{min-height:57px;padding:6px 8px}#outputText{-webkit-line-clamp:1}
+ .cq-task p{font-size:13px}.cq-task strong{font-size:10px}.cq-scene-heading{padding:8px 12px}.cq-scene-heading h2{font-size:17px}
+ .cq-town-strip{padding:8px 12px}.cq-route{padding:6px 8px}.cq-current-action{font-size:13px;padding:4px 7px}
+ .cq-storage-note{display:none}.cq-editor-toolbar button{min-height:28px}
+}
+@media(max-width:1199px){.cq-app-title>span{display:none}.cq-app-tools{gap:5px}#voiceStatus{display:none}.cq-playdesk{grid-template-columns:minmax(0,1fr) minmax(460px,1fr)}}
+@media(max-width:999px),(max-height:559px){
+ .cq-shell{padding-bottom:16px}.cq-appbar{flex-wrap:wrap;gap:8px;padding:10px 0}.cq-app-tools{margin:0;width:100%;gap:6px}.cq-app-tools button{min-height:40px}
+ .cq-playdesk{grid-template-columns:1fr}.cq-world-card .cq-stage{height:340px;min-height:260px;flex:none}.cq-editor-card{gap:10px;padding:14px}
+ .cq-flow{gap:13px;padding:0;margin-bottom:10px;font-size:13px;flex-wrap:wrap}.cq-flow b{width:20px;height:20px}
+ #codeForm{min-height:180px}#codeInput{min-height:140px;resize:vertical}.cq-current-action{font-size:15px}.cq-guided>p{font-size:14px}
+ .cq-actionbar{position:sticky;bottom:0;padding:8px 0;background:#10283b;z-index:10}.cq-actionbar .cq-btn{font-size:14px}.cq-storage-note{font-size:12px}
+ .cq-page .site-header .navrow{min-height:44px}.cq-page .site-header .nav{z-index:30}.cq-page .menubtn{min-height:36px}
+}
+@media(max-width:420px){
+ .cq-shell{width:calc(100% - 16px)}.cq-app-title h1{font-size:21px}.cq-app-tools button{font-size:12px;padding:7px}.cq-flow{gap:8px;font-size:12px}
+ .cq-world-card .cq-stage{height:280px;min-height:260px}.cq-scene-heading{padding:10px}.cq-scene-heading h2{font-size:17px}.cq-scene-heading .cq-chip{font-size:10px}
+ .cq-town-strip{grid-template-columns:1fr;gap:9px}.cq-defense{max-width:180px}.cq-stage .cq-cinematic{font-size:11px}.cq-stage .cq-world-status{font-size:11px}
+ .cq-editor-card{padding:10px}.cq-editor-toolbar{align-items:flex-start}.cq-editor-toolbar>div{justify-content:flex-end}.cq-editor-toolbar button{font-size:11px;min-height:36px}
+ .cq-guided-tools button{min-height:40px}.cq-route strong{font-size:13px}.cq-dialog{padding:16px}.cq-dialog-heading h2{font-size:21px}
+}

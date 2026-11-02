@@ -3,7 +3,7 @@
 (() => {
   "use strict";
   const $=id=>document.getElementById(id), MISSIONS=window.CodeQuestMissions, ROUTES=window.CodeQuestEncounters;
-  const STORE="kira-code-quest-stoneward-v3", VERSION="20261102-stoneward2";
+  const STORE="kira-code-quest-stoneward-v3", VERSION="20261102-stoneward3";
   let saved=null;try{saved=JSON.parse(localStorage.getItem(STORE)||"null");}catch(_){}
   const quest=window.CodeQuestState.create({missions:MISSIONS,encounters:ROUTES,saved}), state=quest.data;
   const voice=window.CodeQuestVoice.init({toggle:$("voiceToggle"),replay:$("voiceReplay"),status:$("voiceStatus")});
@@ -16,13 +16,14 @@
   const credited=()=>state.rooms.map(r=>Object.values(r.gates).some(Boolean));
   const worldOptions=()=>({mission:mission(),index:state.level,cleared:credited(),inventory:state.inventory,
     encounter:{route:route()?.kind||"safe",revealed:Boolean(route()),blocking:Boolean(route()&&!quest.gateOpen())}});
-  function save(){try{localStorage.setItem(STORE,JSON.stringify(state));$("saveStatus").textContent="Your passages, encounters, rewards and code save on this device. Earlier adventure saves are kept.";}
+  function save(){try{localStorage.setItem(STORE,JSON.stringify(state));$("saveStatus").textContent="Code, passages and rewards save automatically on this device.";}
     catch(_){$("saveStatus").textContent="This browser is not saving progress. You can still play the quest.";}
   }
   function cue(kind){if(!voice.isEnabled())return;if(!effects.enabled)effects.enable();effects.cue(kind);}
   function setOutput(kind,title,message,actions=[]){
     $("outputPanel").dataset.state=kind;$("outputTitle").textContent=title;$("outputText").textContent=message;
-    $("outputIcon").textContent=kind==="success"?"✦":kind==="error"?"!":"◇";
+    $("outputIcon").textContent=kind==="success"?"✓":kind==="error"?"!":"→";
+    $("resultTitle").textContent=title;$("resultText").textContent=message;
     $("actionLog").replaceChildren(...actions.slice(0,12).map(a=>{const c=document.createElement("code");c.textContent=a.type+"("+(a.value===null?"":JSON.stringify(a.value))+")";return c;}));
   }
   function stopActive(){
@@ -32,6 +33,9 @@
     $("stage").classList.remove("is-running");$("skipAnimation").hidden=true;
   }
   function resetWorld(){world?.reset(worldOptions());}
+  function openDialog(id){const d=$(id);if(!d.open)d.showModal();}
+  function closeDialogs(){document.querySelectorAll(".cq-dialog[open]").forEach(d=>d.close());}
+  function reveal(element){const b=element.getBoundingClientRect();if(b.top<0||b.bottom>innerHeight)element.scrollIntoView({behavior:"instant",block:"center"});}
   function revealAction(){
     const stage=$("stage"),bounds=stage.getBoundingClientRect();
     const header=document.querySelector(".site-header")?.getBoundingClientRect();
@@ -55,7 +59,14 @@
     $("previousButton").disabled=state.level===0;
     $("nextButton").disabled=busy||!open;$("easyContinue").hidden=busy||!open;
     $("nextButton").textContent=state.level===MISSIONS.length-1?"See the town's fate →":"Continue the quest →";
-    $("runButton").disabled=busy||!active;$("runButton").textContent=busy?"PIX is acting...":"▶ Run my code";
+    // At a junction, Run explains the prerequisite instead of silently locking.
+    $("runButton").disabled=busy;$("runButton").textContent=busy?"PIX is acting...":"Run my code";
+    const step=!active?"route":open?"continue":"code";
+    $("flowSteps").querySelectorAll("li").forEach(li=>{if(li.dataset.step===step)li.setAttribute("aria-current","step");else li.removeAttribute("aria-current");});
+    $("currentAction").textContent=busy?"Watch the encounter. Your code and supplies are safe.":!active?
+      (state.drafts[state.level]?"Your edit is saved. Choose either passage above, then Run your code.":"First: choose either passage above. Then edit and Run your code."):
+      open?"Passage cleared. Press Continue to reach the next encounter.":"Next: make the coding change below, then press Run my code.";
+    $("nextButton").setAttribute("aria-describedby","currentAction");
     $("startLessonButton").textContent=active?"Face this encounter: use code ↓":"Begin here: choose a passage ↓";
     $("enterPuzzleButton").hidden=!active;$("enterPuzzleButton").disabled=busy;
     $("retreatButton").hidden=!active;
@@ -65,6 +76,7 @@
       if(i===state.level)b.setAttribute("aria-current","step");b.addEventListener("click",()=>goTo(i));return b;
     }));
     $("choiceButtons").querySelectorAll("button").forEach(b=>{b.disabled=busy||!active;});
+    $("choiceRouteNote").hidden=Boolean(active);$("choiceRouteButton").hidden=Boolean(active);
     $("routeChoices").querySelectorAll("button").forEach(b=>{b.disabled=busy;});
     $("gateStatus").dataset.state=!active?"junction":open?"cleared":"blocked";
     $("gateStatus").textContent=!active?"Choose a passage. Every route is guarded by a coding encounter.":open?"Passage cleared. The reward is secured. You can continue.":active.blocked+" Use the code below to get through. You can return to the junction safely.";
@@ -83,7 +95,7 @@
       const b=document.createElement("button");b.className="cq-route";b.type="button";
       b.setAttribute("aria-pressed",String(active?.id===r.id));b.dataset.route=r.id;
       const label=document.createElement("strong");label.textContent=r.label;
-      const desc=document.createElement("span");desc.textContent=r.description;b.append(label,desc);
+      const desc=document.createElement("span");desc.textContent=r.description;b.append(label,desc);b.title=r.description;b.setAttribute("aria-label",r.label+". "+r.description);
       b.addEventListener("click",()=>chooseRoute(r.id));return b;
     }));
   }
@@ -92,12 +104,12 @@
     $("choiceButtons").replaceChildren(...window.CodeQuestChoices[state.level].map(option=>{
       const b=document.createElement("button");b.type="button";b.className="cq-choice-option";
       const strong=document.createElement("strong");strong.textContent=option.label;const c=document.createElement("code");c.textContent=option.code;b.append(strong,c);
-      b.addEventListener("click",()=>{if(busy)return;selectedChoice=option;$("codeInput").value=option.code;quest.setDraft(option.code);save();run();});return b;
+      b.addEventListener("click",()=>{if(busy)return;closeDialogs();selectedChoice=option;$("codeInput").value=option.code;quest.setDraft(option.code);save();run();});return b;
     }));
   }
   function guided(){
     const g=mission().guided;$("guidedStep").hidden=!g;if(!g)return;
-    $("guidedText").textContent=state.level===0?'PIX is asleep. The greeting below says friend. Change only friend to PIX; the name inside this message wakes your companion.':"Try one small edit. "+g.label;
+    $("guidedText").textContent=state.level===0?'say() speaks the text inside quotes. Keep the punctuation; change only friend to PIX.':"Try one small edit. "+g.label;
     $("guidedButton").textContent=g.label;$("workedExample").replaceChildren();
     if(state.level===0){const line=document.createElement("pre"),mark=document.createElement("mark");mark.textContent="friend";line.append('say("Hello, ',mark,'!");');$("workedExample").append(line);}
     const from=document.createElement("code"),to=document.createElement("code"),arrow=document.createElement("span");from.textContent=g.before;to.textContent=g.after;arrow.textContent="→";$("workedExample").append(from,arrow,to);
@@ -108,13 +120,13 @@
     for(const [id,text] of Object.entries({chapterName:m.chapter,topicName:m.topic,sceneTitle:m.title,sceneCaption:m.place,speaker:m.speaker,storyText:m.story,goalText:m.goal,lessonTitle:m.lessonTitle,lessonText:m.lesson,sceneCue:m.cue,worldStatus:m.objective}))$(id).textContent=text;
     $("codeInput").value=state.drafts[state.level]??m.starter;
     $("hintBox").hidden=true;$("hintButton").setAttribute("aria-expanded","false");$("moreHintButton").hidden=false;$("solutionButton").hidden=true;
-    $("pixSpeech").hidden=true;$("ending").hidden=true;$("stage").dataset.theme=m.theme;$("stage").classList.remove("is-success");
+    $("pixSpeech").hidden=true;$("ending").close();$("ending").hidden=true;$("stage").dataset.theme=m.theme;$("stage").classList.remove("is-success");
     $("energy").querySelectorAll("i").forEach(i=>i.classList.remove("charged"));
     $("board").textContent="PIX waits at the entrance. "+m.quest.need;
     guided();renderChoices();renderRoutes();progress();save();
     const active=route();
     setOutput(quest.gateOpen()?"success":"ready",quest.gateOpen()?"This passage is open":active?"Your code can open the way":"Choose your passage first",
-      quest.gateOpen()?m.explanation+" The reward is in your inventory. Continue when ready.":active?m.goal+" Use the highlighted edit or choose a command.":"The game master has shown two routes above. Explore one to reveal its encounter; then use code to get through.");
+      quest.gateOpen()?m.explanation+" The reward is in your inventory. Continue when ready.":active?m.goal+" Use the highlighted edit or choose a command.":"Choose either passage at the top of this workspace. Your code is saved; selecting a route will keep your edit.");
     const ticket=generation;graphicsReady?.then(()=>{if(ticket===generation)resetWorld();});
     if(announce)voice.read(m.story+" "+(active?(quest.gateOpen()?active.clear:active.narration+" "+m.goal):"Two passages wait ahead. Choose a route."));
     if(quest.completedCount()===MISSIONS.length&&quest.gateOpen()&&state.level===MISSIONS.length-1)ending(false);
@@ -129,12 +141,14 @@
     if(quest.gateOpen())resetWorld();
     else{const opts=worldOptions();world.reset({...opts,encounter:{...opts.encounter,revealed:false}});await world.enterEncounter({route:active.kind});}
     if(ticket!==generation)return;busy=false;progress();save();
-    $("enterPuzzleButton").focus({preventScroll:true});
+    // The route buttons were rebuilt. Recover keyboard focus only if it fell
+    // back to the body, leaving anyone who began typing undisturbed.
+    if(document.activeElement===document.body)$("routeChoices").querySelector('[aria-pressed="true"]')?.focus({preventScroll:true});
   }
   function retreat(){
     stopActive();quest.retreat();render(false);
     const text="You step back to the junction. Your recovered parts are safe. Choose another passage, or return to the same encounter and try its code again.";
-    $("encounterText").textContent=text;voice.read(text);$("encounterPanel").scrollIntoView({behavior:"instant",block:"center"});
+    $("encounterText").textContent=text;voice.read(text);reveal($("encounterPanel"));
   }
   function simulate(m,actions,features=[]){
     const dirs=["east","south","west","north"];let {x,y,dir}=m.start;
@@ -199,7 +213,7 @@
   }
   async function run(){
     if(busy)return;
-    if(!route()){setOutput("error","Choose a passage first","A coding encounter waits on each route. Use the passage buttons above.");$("encounterPanel").scrollIntoView({behavior:"instant",block:"center"});return;}
+    if(!route()){setOutput("ready","Your code is saved. Choose a passage.","Choose either passage at the top of this workspace, then Run the same code. Continue unlocks after the encounter is solved.");reveal($("encounterPanel"));$("routeChoices").querySelector("button")?.focus({preventScroll:true});return;}
     const code=$("codeInput").value;if(!code.trim()){setOutput("error","Your editor is empty","Reset code brings back this encounter's starting point.");return;}
     if(code.length>6000){setOutput("error","That program is too long","Keep your quest program to 6,000 characters.");return;}
     stopActive();quest.setDraft(code);save();voice.stop();busy=true;progress();$("pixSpeech").hidden=true;
@@ -216,23 +230,24 @@
     }catch(_){finish({ok:false,error:"This browser blocked the teaching runner. Try a current browser."},ticket);}
   }
   function hint(stage=0){
+    document.querySelectorAll(".cq-dialog[open]").forEach(d=>{if(d.id!=="helpDialog")d.close();});openDialog("helpDialog");
     hintStage=stage;$("hintBox").hidden=false;$("hintButton").setAttribute("aria-expanded","true");
     $("hintTitle").textContent=stage?"Iris shows the exact change":"The game master's nudge";$("hintText").textContent=mission().hints[stage];
     $("moreHintButton").hidden=stage>0;$("solutionButton").hidden=stage===0;
     voice.read("Here is a way through this encounter. "+$("hintText").textContent);
   }
   function goTo(index){
-    if(!quest.canVisit(index))return;stopActive();quest.goTo(index);render();
-    $("sceneTitle").focus({preventScroll:true});$("stage").scrollIntoView({behavior:"instant",block:"start"});
+    if(!quest.canVisit(index))return;closeDialogs();stopActive();quest.goTo(index);render();
+    $("routeChoices").querySelector("button")?.focus({preventScroll:true});reveal($("encounterPanel"));
   }
-  function ending(scroll=true){$("ending").hidden=false;if(scroll)$("ending").scrollIntoView({behavior:reduced()?"instant":"smooth",block:"start"});}
+  function ending(show=true){$("ending").hidden=false;if(show){closeDialogs();openDialog("ending");}}
   function restart(){if(!confirm("Start a new Stoneward quest? Your passages, quest rewards and code for this adventure will reset."))return;
-    stopActive();quest.restart();render();$("stage").scrollIntoView({behavior:"instant",block:"start"});
+    closeDialogs();stopActive();quest.restart();render();reveal($("encounterPanel"));
   }
   function jumpToPuzzle(){
-    if(!route()){$("encounterPanel").scrollIntoView({behavior:"instant",block:"center"});$("routeChoices").querySelector("button")?.focus({preventScroll:true});return;}
-    if(mission().guided){$("guidedStep").scrollIntoView({behavior:"instant",block:"center"});$("findTokenButton").focus({preventScroll:true});}
-    else{$("codeInput").focus();$("codeInput").scrollIntoView({behavior:"instant",block:"center"});}
+    if(!route()){reveal($("encounterPanel"));$("routeChoices").querySelector("button")?.focus({preventScroll:true});return;}
+    if(mission().guided){reveal($("guidedStep"));$("findTokenButton").focus({preventScroll:true});}
+    else{$("codeInput").focus();reveal($("codeInput"));}
   }
   $("sceneTitle").tabIndex=-1;
   $("codeForm").addEventListener("submit",e=>{e.preventDefault();selectedChoice=null;run();});
@@ -252,14 +267,14 @@
   $("findTokenButton").addEventListener("click",()=>{
     const g=mission().guided;if(!g)return;const editor=$("codeInput"),at=editor.value.lastIndexOf(g.before);
     if(at<0){setOutput("ready","Reset code can bring that part back","Keep experimenting, or reset to the original example.");return;}
-    editor.focus();editor.setSelectionRange(at,at+g.before.length);editor.scrollIntoView({behavior:"instant",block:"center"});
+    editor.focus();editor.setSelectionRange(at,at+g.before.length);reveal(editor);
     const message="The highlighted part is "+g.before+". Type "+g.after+" to replace it, then run your code.";
     setOutput("ready","This is the part you change",message);voice.read(message);
   });
   $("skipAnimation").addEventListener("click",()=>{skipRequested=true;$("skipAnimation").hidden=true;});
   $("hintButton").addEventListener("click",()=>hint(0));$("easyHint").addEventListener("click",()=>hint(0));$("moreHintButton").addEventListener("click",()=>hint(1));
   $("solutionButton").addEventListener("click",()=>{
-    stopActive();selectedChoice=null;$("codeInput").value=mission().solution;quest.setDraft(mission().solution);save();progress();resetWorld();
+    closeDialogs();stopActive();selectedChoice=null;$("codeInput").value=mission().solution;quest.setDraft(mission().solution);save();progress();resetWorld();
     setOutput("ready","A worked plan is in the editor",mission().lesson+" Run it to see the encounter respond.");voice.read(mission().lesson+" Now run the code.");$("codeInput").focus();
   });
   $("resetButton").addEventListener("click",()=>{stopActive();state.drafts[state.level]=null;render();$("codeInput").focus();});
@@ -269,6 +284,14 @@
   $("startLessonButton").addEventListener("click",jumpToPuzzle);$("enterPuzzleButton").addEventListener("click",jumpToPuzzle);
   $("retreatButton").addEventListener("click",retreat);
   $("voiceToggle").addEventListener("click",()=>{if(!voice.isEnabled())effects.disable();});
+  for(const [button,dialog] of Object.entries({openStory:"storyDialog",openJourney:"journeyDialog",openAbout:"aboutDialog",openChoices:"choicesDialog",openResult:"resultDialog"}))$(button).addEventListener("click",()=>openDialog(dialog));
+  $("choiceRouteButton").addEventListener("click",()=>{closeDialogs();jumpToPuzzle();});
+  $("helpDialog").addEventListener("close",()=>$("hintButton").setAttribute("aria-expanded","false"));
+  $("storyReplay").addEventListener("click",()=>{
+    voice.read(mission().story+" "+$("encounterText").textContent);
+    if(!voice.isEnabled())$("voiceReplay").click();
+  });
+  document.querySelectorAll("[data-close-dialog]").forEach(button=>button.addEventListener("click",()=>button.closest("dialog").close()));
   $("restartButton").addEventListener("click",restart);$("replayButton").addEventListener("click",restart);
   addEventListener("pagehide",event=>{stopActive();voice.stop();if(!event.persisted)world?.dispose?.();});
   addEventListener("pageshow",event=>{if(event.persisted){resetWorld();progress();}});

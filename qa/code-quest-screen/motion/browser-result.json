@@ -1,0 +1,1345 @@
+{
+  "browserVersion": "156.0.4314.58",
+  "stats": {
+    "assertions": 1029,
+    "mainRoutes": 14,
+    "alternativeRoutes": 14,
+    "hostilePrograms": 12,
+    "screenshots": [
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\desktop-junction.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\ambush-begin.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\ambush-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\ambush-end.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\lever-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\movement-begin.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\movement-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\movement-end.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\turn-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\collect-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\ward-complete.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\desktop-complete.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\ending.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\desktop-active-stage-800.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\desktop-active-stage-600.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\creature-wraith.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\creature-crawler.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\creature-hound.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\creature-lurker.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\creature-sentinel.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\alternative-ending.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\mobile.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\mobile-fallback.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\fallback-begin.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-screen\\motion\\fallback-end.png"
+    ],
+    "animationEvidence": {
+      "lever": {
+        "before": {
+          "theme": "workshop",
+          "index": 1,
+          "progress": 0.07142857142857142,
+          "action": "ready",
+          "time": 0,
+          "frameDuration": 0,
+          "frameProgress": 0,
+          "frameElapsed": 0,
+          "actor": {
+            "x": -2.1,
+            "z": 0.525,
+            "yaw": 1.5707963267948966,
+            "y": 0,
+            "headYaw": 0,
+            "armAngle": 0,
+            "legAngle": 0,
+            "reach": 0,
+            "carrying": true,
+            "awake": true,
+            "id": "b00b6acf-f7f7-4679-a058-0fc34a8f9145"
+          },
+          "device": {
+            "energy": 0,
+            "gateOpen": 0,
+            "collected": [],
+            "beam": 0,
+            "lever": 0
+          },
+          "items": [
+            {
+              "id": 1,
+              "x": 0.6,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            },
+            {
+              "id": 2,
+              "x": 1.5499999999999998,
+              "y": 0.48,
+              "z": -1.25,
+              "visible": true
+            },
+            {
+              "id": 3,
+              "x": 2.5,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            }
+          ],
+          "reward": {
+            "id": "ward-lantern",
+            "kind": "part",
+            "x": 2.25,
+            "y": 0.95,
+            "z": -0.7,
+            "homeX": 2.25,
+            "homeZ": -0.7,
+            "visible": true,
+            "claimed": false
+          },
+          "spatial": false,
+          "destination": {
+            "x": 2.1,
+            "z": -0.525,
+            "yaw": 1.5707963267948966
+          },
+          "encounter": {
+            "route": "safe",
+            "blocking": true,
+            "revealed": true,
+            "creature": {
+              "archetype": "crawler",
+              "x": 0.9,
+              "y": 0,
+              "z": 1.25,
+              "armAngle": 0,
+              "visible": false
+            }
+          },
+          "objective": "Charge all three sockets to make a ward lantern for the descent.",
+          "inventory": [
+            "pix-companion"
+          ],
+          "mode": "webgl",
+          "renderCount": 71,
+          "threat": {
+            "strength": 0.9285714285714286,
+            "visible": true,
+            "retreat": 0.3571428571428571
+          },
+          "camera": {
+            "x": 8.2,
+            "y": 7.5,
+            "z": 11.2,
+            "aspect": 1.0581717451523547
+          },
+          "renderer": {
+            "calls": 190,
+            "triangles": 15194
+          }
+        },
+        "mid": {
+          "theme": "workshop",
+          "index": 1,
+          "progress": 0.07142857142857142,
+          "action": "charge",
+          "time": 0.832,
+          "frameDuration": 1350,
+          "frameProgress": 0.6162962962962963,
+          "frameElapsed": 832,
+          "actor": {
+            "x": -1.581555026161336,
+            "z": 0.34138407176547314,
+            "yaw": 1.9111782654368035,
+            "y": 0,
+            "headYaw": 0,
+            "armAngle": -1.2206921146571343,
+            "legAngle": 0,
+            "reach": 0.8587765222159017,
+            "carrying": true,
+            "awake": true,
+            "id": "b00b6acf-f7f7-4679-a058-0fc34a8f9145"
+          },
+          "device": {
+            "energy": 1.3767901917390646,
+            "gateOpen": 0,
+            "collected": [],
+            "beam": 0,
+            "lever": 0.97076304966162
+          },
+          "items": [
+            {
+              "id": 1,
+              "x": 0.6,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            },
+            {
+              "id": 2,
+              "x": 1.5499999999999998,
+              "y": 0.48,
+              "z": -1.25,
+              "visible": true
+            },
+            {
+              "id": 3,
+              "x": 2.5,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            }
+          ],
+          "reward": {
+            "id": "ward-lantern",
+            "kind": "part",
+            "x": 2.25,
+            "y": 0.95,
+            "z": -0.7,
+            "homeX": 2.25,
+            "homeZ": -0.7,
+            "visible": true,
+            "claimed": false
+          },
+          "spatial": false,
+          "destination": {
+            "x": 2.1,
+            "z": -0.525,
+            "yaw": 1.5707963267948966
+          },
+          "encounter": {
+            "route": "safe",
+            "blocking": true,
+            "revealed": true,
+            "creature": {
+              "archetype": "crawler",
+              "x": 0.9,
+              "y": 0,
+              "z": 1.25,
+              "armAngle": 0,
+              "visible": false
+            }
+          },
+          "objective": "Charge all three sockets to make a ward lantern for the descent.",
+          "inventory": [
+            "pix-companion"
+          ],
+          "mode": "webgl",
+          "renderCount": 125,
+          "threat": {
+            "strength": 0.9285714285714286,
+            "visible": true,
+            "retreat": 0.3571428571428571
+          },
+          "camera": {
+            "x": 8.013200645103925,
+            "y": 7.387920387062355,
+            "z": 10.90112103216628,
+            "aspect": 1.0581717451523547
+          },
+          "renderer": {
+            "calls": 189,
+            "triangles": 15182
+          }
+        },
+        "after": {
+          "theme": "workshop",
+          "index": 1,
+          "progress": 0.14285714285714285,
+          "action": "ready",
+          "time": 3.262,
+          "frameDuration": 1900,
+          "frameProgress": 1,
+          "frameElapsed": 1900,
+          "actor": {
+            "x": -2.1,
+            "z": 0.525,
+            "yaw": 1.5707963267948966,
+            "y": 0,
+            "headYaw": 0,
+            "armAngle": 0,
+            "legAngle": 0,
+            "reach": 0,
+            "carrying": true,
+            "awake": true,
+            "id": "b00b6acf-f7f7-4679-a058-0fc34a8f9145"
+          },
+          "device": {
+            "energy": 3,
+            "gateOpen": 1,
+            "collected": [],
+            "beam": 0,
+            "lever": 0
+          },
+          "items": [
+            {
+              "id": 1,
+              "x": 0.6,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            },
+            {
+              "id": 2,
+              "x": 1.5499999999999998,
+              "y": 0.48,
+              "z": -1.25,
+              "visible": true
+            },
+            {
+              "id": 3,
+              "x": 2.5,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            }
+          ],
+          "reward": {
+            "id": "ward-lantern",
+            "kind": "part",
+            "x": -2.0999999999999996,
+            "y": 1.05,
+            "z": 0.345,
+            "homeX": 2.25,
+            "homeZ": -0.7,
+            "visible": false,
+            "claimed": true
+          },
+          "spatial": false,
+          "destination": {
+            "x": 2.1,
+            "z": -0.525,
+            "yaw": 1.5707963267948966
+          },
+          "encounter": {
+            "route": "safe",
+            "blocking": false,
+            "revealed": true,
+            "creature": {
+              "archetype": "crawler",
+              "x": 2.9,
+              "y": 0,
+              "z": -2.5,
+              "armAngle": 0,
+              "visible": false
+            }
+          },
+          "objective": "Charge all three sockets to make a ward lantern for the descent.",
+          "inventory": [
+            "pix-companion"
+          ],
+          "mode": "webgl",
+          "renderCount": 280,
+          "threat": {
+            "strength": 0.8571428571428572,
+            "visible": true,
+            "retreat": 0.7142857142857142
+          },
+          "camera": {
+            "x": 8.2,
+            "y": 7.5,
+            "z": 11.2,
+            "aspect": 1.0581717451523547
+          },
+          "renderer": {
+            "calls": 180,
+            "triangles": 14338
+          }
+        }
+      },
+      "movement": {
+        "begin": {
+          "theme": "courtyard",
+          "index": 2,
+          "progress": 0.14285714285714285,
+          "action": "ready",
+          "time": 0,
+          "frameDuration": 0,
+          "frameProgress": 0,
+          "frameElapsed": 0,
+          "actor": {
+            "x": -3.1500000000000004,
+            "z": 0.525,
+            "yaw": 1.5707963267948966,
+            "y": 0,
+            "headYaw": 0,
+            "armAngle": 0,
+            "legAngle": 0,
+            "reach": 0,
+            "carrying": true,
+            "awake": true,
+            "id": "b00b6acf-f7f7-4679-a058-0fc34a8f9145"
+          },
+          "device": {
+            "energy": 0,
+            "gateOpen": 0,
+            "collected": [],
+            "beam": 0,
+            "lever": 0
+          },
+          "items": [
+            {
+              "id": 1,
+              "x": 0.6,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            },
+            {
+              "id": 2,
+              "x": 1.5499999999999998,
+              "y": 0.48,
+              "z": -1.25,
+              "visible": true
+            },
+            {
+              "id": 3,
+              "x": 2.5,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            }
+          ],
+          "reward": {
+            "id": "twin-crypt-keys",
+            "kind": "part",
+            "x": 0,
+            "y": 0.95,
+            "z": -0.025000000000000022,
+            "homeX": 0,
+            "homeZ": -0.025000000000000022,
+            "visible": true,
+            "claimed": false
+          },
+          "spatial": true,
+          "destination": {
+            "x": 0,
+            "z": 0.525,
+            "yaw": 1.5707963267948966
+          },
+          "encounter": {
+            "route": "safe",
+            "blocking": true,
+            "revealed": true,
+            "creature": {
+              "archetype": "hound",
+              "x": 0.9,
+              "y": 0,
+              "z": 1.25,
+              "armAngle": 0,
+              "visible": false
+            }
+          },
+          "objective": "Send PIX three squares east onto the glowing chest stone.",
+          "inventory": [
+            "pix-companion",
+            "ward-lantern"
+          ],
+          "mode": "webgl",
+          "renderCount": 366,
+          "threat": {
+            "strength": 0.8571428571428572,
+            "visible": true,
+            "retreat": 0.7142857142857142
+          },
+          "camera": {
+            "x": 8.2,
+            "y": 7.5,
+            "z": 11.2,
+            "aspect": 1.0581717451523547
+          },
+          "renderer": {
+            "calls": 191,
+            "triangles": 15710
+          }
+        },
+        "mid": {
+          "theme": "courtyard",
+          "index": 2,
+          "progress": 0.14285714285714285,
+          "action": "step",
+          "time": 0.272,
+          "frameDuration": 650,
+          "frameProgress": 0.41846153846153844,
+          "frameElapsed": 272,
+          "actor": {
+            "x": -2.7522846456076473,
+            "z": 0.525,
+            "yaw": 1.5707963267948966,
+            "y": 0,
+            "headYaw": 0,
+            "armAngle": 0.318258402461149,
+            "legAngle": -0.45465486065878435,
+            "reach": 0,
+            "carrying": true,
+            "awake": true,
+            "id": "b00b6acf-f7f7-4679-a058-0fc34a8f9145"
+          },
+          "device": {
+            "energy": 0,
+            "gateOpen": 0,
+            "collected": [],
+            "beam": 0,
+            "lever": 0
+          },
+          "items": [
+            {
+              "id": 1,
+              "x": 0.6,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            },
+            {
+              "id": 2,
+              "x": 1.5499999999999998,
+              "y": 0.48,
+              "z": -1.25,
+              "visible": true
+            },
+            {
+              "id": 3,
+              "x": 2.5,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            }
+          ],
+          "reward": {
+            "id": "twin-crypt-keys",
+            "kind": "part",
+            "x": 0,
+            "y": 0.95,
+            "z": -0.025000000000000022,
+            "homeX": 0,
+            "homeZ": -0.025000000000000022,
+            "visible": true,
+            "claimed": false
+          },
+          "spatial": true,
+          "destination": {
+            "x": 0,
+            "z": 0.525,
+            "yaw": 1.5707963267948966
+          },
+          "encounter": {
+            "route": "safe",
+            "blocking": true,
+            "revealed": true,
+            "creature": {
+              "archetype": "hound",
+              "x": 0.9,
+              "y": 0,
+              "z": 1.25,
+              "armAngle": 0,
+              "visible": false
+            }
+          },
+          "objective": "Send PIX three squares east onto the glowing chest stone.",
+          "inventory": [
+            "pix-companion",
+            "ward-lantern"
+          ],
+          "mode": "webgl",
+          "renderCount": 385,
+          "threat": {
+            "strength": 0.8571428571428572,
+            "visible": true,
+            "retreat": 0.7142857142857142
+          },
+          "camera": {
+            "x": 8.006526024005987,
+            "y": 7.383915614403593,
+            "z": 10.89044163840958,
+            "aspect": 1.0581717451523547
+          },
+          "renderer": {
+            "calls": 189,
+            "triangles": 15446
+          }
+        },
+        "end": {
+          "theme": "courtyard",
+          "index": 2,
+          "progress": 0.21428571428571427,
+          "action": "ready",
+          "time": 3.8649999999999998,
+          "frameDuration": 1900,
+          "frameProgress": 1,
+          "frameElapsed": 1900,
+          "actor": {
+            "x": 0,
+            "z": 0.525,
+            "yaw": 1.5707963267948966,
+            "y": 0,
+            "headYaw": 0,
+            "armAngle": 0,
+            "legAngle": 0,
+            "reach": 0,
+            "carrying": true,
+            "awake": true,
+            "id": "b00b6acf-f7f7-4679-a058-0fc34a8f9145"
+          },
+          "device": {
+            "energy": 0,
+            "gateOpen": 1,
+            "collected": [],
+            "beam": 0,
+            "lever": 0
+          },
+          "items": [
+            {
+              "id": 1,
+              "x": 0.6,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            },
+            {
+              "id": 2,
+              "x": 1.5499999999999998,
+              "y": 0.48,
+              "z": -1.25,
+              "visible": true
+            },
+            {
+              "id": 3,
+              "x": 2.5,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            }
+          ],
+          "reward": {
+            "id": "twin-crypt-keys",
+            "kind": "part",
+            "x": 0,
+            "y": 1.05,
+            "z": 0.34500000000000003,
+            "homeX": 0,
+            "homeZ": -0.025000000000000022,
+            "visible": false,
+            "claimed": true
+          },
+          "spatial": true,
+          "destination": {
+            "x": 0,
+            "z": 0.525,
+            "yaw": 1.5707963267948966
+          },
+          "encounter": {
+            "route": "safe",
+            "blocking": false,
+            "revealed": true,
+            "creature": {
+              "archetype": "hound",
+              "x": 2.9,
+              "y": 0,
+              "z": -2.5,
+              "armAngle": 0,
+              "visible": false
+            }
+          },
+          "objective": "Send PIX three squares east onto the glowing chest stone.",
+          "inventory": [
+            "pix-companion",
+            "ward-lantern"
+          ],
+          "mode": "webgl",
+          "renderCount": 617,
+          "threat": {
+            "strength": 0.7857142857142857,
+            "visible": true,
+            "retreat": 1.0714285714285714
+          },
+          "camera": {
+            "x": 8.2,
+            "y": 7.5,
+            "z": 11.2,
+            "aspect": 1.0581717451523547
+          },
+          "renderer": {
+            "calls": 181,
+            "triangles": 14590
+          }
+        },
+        "pixelDifference": {
+          "beginToMid": 0.36473191132775873,
+          "midToEnd": 0.3744887192497043
+        }
+      },
+      "turn": {
+        "mid": {
+          "theme": "river",
+          "index": 3,
+          "progress": 0.21428571428571427,
+          "action": "turn",
+          "time": 1.616,
+          "frameDuration": 650,
+          "frameProgress": 0.4676923076923077,
+          "frameElapsed": 304,
+          "actor": {
+            "x": -1.05,
+            "z": -1.5750000000000002,
+            "yaw": 0.861415428120859,
+            "y": 0,
+            "headYaw": 0.24871338452908223,
+            "armAngle": 0,
+            "legAngle": -0.06679238662997634,
+            "reach": 0,
+            "carrying": true,
+            "awake": true,
+            "id": "b00b6acf-f7f7-4679-a058-0fc34a8f9145"
+          },
+          "device": {
+            "energy": 0,
+            "gateOpen": 0,
+            "collected": [],
+            "beam": 0,
+            "lever": 0
+          },
+          "items": [
+            {
+              "id": 1,
+              "x": 0.6,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            },
+            {
+              "id": 2,
+              "x": 1.5499999999999998,
+              "y": 0.48,
+              "z": -1.25,
+              "visible": true
+            },
+            {
+              "id": 3,
+              "x": 2.5,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            }
+          ],
+          "reward": {
+            "id": "crypt-crossing",
+            "kind": "passage",
+            "x": -1.05,
+            "y": 0.95,
+            "z": -0.025000000000000022,
+            "homeX": -1.05,
+            "homeZ": -0.025000000000000022,
+            "visible": true,
+            "claimed": false
+          },
+          "spatial": true,
+          "destination": {
+            "x": -1.05,
+            "z": 0.525,
+            "yaw": 1.5707963267948966
+          },
+          "encounter": {
+            "route": "safe",
+            "blocking": true,
+            "revealed": true,
+            "creature": {
+              "archetype": "lurker",
+              "x": 0.9,
+              "y": 0,
+              "z": 1.25,
+              "armAngle": 0,
+              "visible": false
+            }
+          },
+          "objective": "Cross east twice, turn south, then reach the crypt sluice.",
+          "inventory": [
+            "pix-companion",
+            "ward-lantern",
+            "twin-crypt-keys"
+          ],
+          "mode": "webgl",
+          "renderCount": 791,
+          "threat": {
+            "strength": 0.7857142857142857,
+            "visible": true,
+            "retreat": 1.0714285714285714
+          },
+          "camera": {
+            "x": 8.001029292376733,
+            "y": 7.38061757542604,
+            "z": 10.881646867802774,
+            "aspect": 1.0581717451523547
+          },
+          "renderer": {
+            "calls": 186,
+            "triangles": 14894
+          }
+        },
+        "after": {
+          "theme": "river",
+          "index": 3,
+          "progress": 0.2857142857142857,
+          "action": "ready",
+          "time": 4.377000000000001,
+          "frameDuration": 1100,
+          "frameProgress": 1,
+          "frameElapsed": 1100,
+          "actor": {
+            "x": -1.05,
+            "z": 0.525,
+            "yaw": 0,
+            "y": 0,
+            "headYaw": 0,
+            "armAngle": 0,
+            "legAngle": 0,
+            "reach": 0,
+            "carrying": true,
+            "awake": true,
+            "id": "b00b6acf-f7f7-4679-a058-0fc34a8f9145"
+          },
+          "device": {
+            "energy": 0,
+            "gateOpen": 1,
+            "collected": [],
+            "beam": 0,
+            "lever": 0
+          },
+          "items": [
+            {
+              "id": 1,
+              "x": 0.6,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            },
+            {
+              "id": 2,
+              "x": 1.5499999999999998,
+              "y": 0.48,
+              "z": -1.25,
+              "visible": true
+            },
+            {
+              "id": 3,
+              "x": 2.5,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            }
+          ],
+          "reward": {
+            "id": "crypt-crossing",
+            "kind": "passage",
+            "x": -1.05,
+            "y": 0.95,
+            "z": -0.025000000000000022,
+            "homeX": -1.05,
+            "homeZ": -0.025000000000000022,
+            "visible": false,
+            "claimed": true
+          },
+          "spatial": true,
+          "destination": {
+            "x": -1.05,
+            "z": 0.525,
+            "yaw": 1.5707963267948966
+          },
+          "encounter": {
+            "route": "safe",
+            "blocking": false,
+            "revealed": true,
+            "creature": {
+              "archetype": "lurker",
+              "x": 2.9,
+              "y": 0,
+              "z": -2.5,
+              "armAngle": 0,
+              "visible": false
+            }
+          },
+          "objective": "Cross east twice, turn south, then reach the crypt sluice.",
+          "inventory": [
+            "pix-companion",
+            "ward-lantern",
+            "twin-crypt-keys"
+          ],
+          "mode": "webgl",
+          "renderCount": 971,
+          "threat": {
+            "strength": 0.7142857142857143,
+            "visible": true,
+            "retreat": 1.4285714285714284
+          },
+          "camera": {
+            "x": 8.2,
+            "y": 7.5,
+            "z": 11.2,
+            "aspect": 1.0581717451523547
+          },
+          "renderer": {
+            "calls": 186,
+            "triangles": 14894
+          }
+        }
+      },
+      "collect": {
+        "before": {
+          "theme": "meadow",
+          "index": 9,
+          "progress": 0.6428571428571429,
+          "action": "ready",
+          "time": 0,
+          "frameDuration": 1000,
+          "frameProgress": 1,
+          "frameElapsed": 1000,
+          "actor": {
+            "x": -1.05,
+            "z": 0.525,
+            "yaw": 1.5707963267948966,
+            "y": 0,
+            "headYaw": 0,
+            "armAngle": 0,
+            "legAngle": 0,
+            "reach": 0,
+            "carrying": true,
+            "awake": true,
+            "id": "d85f13a3-5882-4863-b895-e39c0dd0ea64"
+          },
+          "device": {
+            "energy": 0,
+            "gateOpen": 0,
+            "collected": [],
+            "beam": 0,
+            "lever": 0
+          },
+          "items": [
+            {
+              "id": 1,
+              "x": 0.6,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            },
+            {
+              "id": 2,
+              "x": 1.5499999999999998,
+              "y": 0.48,
+              "z": -1.25,
+              "visible": true
+            },
+            {
+              "id": 3,
+              "x": 2.5,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            }
+          ],
+          "reward": {
+            "id": "ward-crystal-set",
+            "kind": "part",
+            "x": 2.25,
+            "y": 0.95,
+            "z": -0.7,
+            "homeX": 2.25,
+            "homeZ": -0.7,
+            "visible": true,
+            "claimed": false
+          },
+          "spatial": false,
+          "destination": {
+            "x": 2.1,
+            "z": -0.525,
+            "yaw": 1.5707963267948966
+          },
+          "encounter": {
+            "route": "safe",
+            "blocking": true,
+            "revealed": true,
+            "creature": {
+              "archetype": "hound",
+              "x": 0.9,
+              "y": 0,
+              "z": 1.25,
+              "armAngle": 0,
+              "visible": false
+            }
+          },
+          "objective": "Collect ward crystals 1, 2 and 3 from the cavern.",
+          "inventory": [
+            "pix-companion",
+            "ward-lantern",
+            "twin-crypt-keys",
+            "crypt-crossing",
+            "chain-lift-access",
+            "warden-seal",
+            "keeper-ally",
+            "ember-mine-pass",
+            "focusing-lens"
+          ],
+          "mode": "webgl",
+          "renderCount": 48,
+          "threat": {
+            "strength": 0.3571428571428571,
+            "visible": true,
+            "retreat": 3.2142857142857144
+          },
+          "camera": {
+            "x": 8.2,
+            "y": 7.5,
+            "z": 11.2,
+            "aspect": 1.0581717451523547
+          },
+          "renderer": {
+            "calls": 197,
+            "triangles": 16252
+          }
+        },
+        "mid": {
+          "theme": "meadow",
+          "index": 9,
+          "progress": 0.6428571428571429,
+          "action": "collect",
+          "time": 0.907,
+          "frameDuration": 1500,
+          "frameProgress": 0.6046666666666667,
+          "frameElapsed": 907,
+          "actor": {
+            "x": 0.17999999999999994,
+            "z": -0.09999999999999998,
+            "yaw": 2.44293282886833,
+            "y": 0,
+            "headYaw": 0,
+            "armAngle": -1.4123822338425451,
+            "legAngle": 0,
+            "reach": 0.9415881558950301,
+            "carrying": true,
+            "awake": true,
+            "id": "d85f13a3-5882-4863-b895-e39c0dd0ea64"
+          },
+          "device": {
+            "energy": 0,
+            "gateOpen": 0,
+            "collected": [],
+            "beam": 0,
+            "lever": 0
+          },
+          "items": [
+            {
+              "id": 1,
+              "x": 0.34182223415798607,
+              "y": 0.8303841107855903,
+              "z": -0.39714604112413193,
+              "visible": true
+            },
+            {
+              "id": 2,
+              "x": 1.5499999999999998,
+              "y": 0.48,
+              "z": -1.25,
+              "visible": true
+            },
+            {
+              "id": 3,
+              "x": 2.5,
+              "y": 0.48,
+              "z": -0.6,
+              "visible": true
+            }
+          ],
+          "reward": {
+            "id": "ward-crystal-set",
+            "kind": "part",
+            "x": 2.25,
+            "y": 0.95,
+            "z": -0.7,
+            "homeX": 2.25,
+            "homeZ": -0.7,
+            "visible": true,
+            "claimed": false
+          },
+          "spatial": false,
+          "destination": {
+            "x": 2.1,
+            "z": -0.525,
+            "yaw": 1.5707963267948966
+          },
+          "encounter": {
+            "route": "safe",
+            "blocking": true,
+            "revealed": true,
+            "creature": {
+              "archetype": "hound",
+              "x": 0.9,
+              "y": 0,
+              "z": 1.25,
+              "armAngle": 0,
+              "visible": false
+            }
+          },
+          "objective": "Collect ward crystals 1, 2 and 3 from the cavern.",
+          "inventory": [
+            "pix-companion",
+            "ward-lantern",
+            "twin-crypt-keys",
+            "crypt-crossing",
+            "chain-lift-access",
+            "warden-seal",
+            "keeper-ally",
+            "ember-mine-pass",
+            "focusing-lens"
+          ],
+          "mode": "webgl",
+          "renderCount": 107,
+          "threat": {
+            "strength": 0.3571428571428571,
+            "visible": true,
+            "retreat": 3.2142857142857144
+          },
+          "camera": {
+            "x": 8.010715190891323,
+            "y": 7.386429114534795,
+            "z": 10.897144305426119,
+            "aspect": 1.0581717451523547
+          },
+          "renderer": {
+            "calls": 197,
+            "triangles": 16252
+          }
+        },
+        "after": {
+          "theme": "meadow",
+          "index": 9,
+          "progress": 0.7142857142857143,
+          "action": "ready",
+          "time": 6.401999999999999,
+          "frameDuration": 1900,
+          "frameProgress": 1,
+          "frameElapsed": 1900,
+          "actor": {
+            "x": -1.05,
+            "z": 0.525,
+            "yaw": 1.5707963267948966,
+            "y": 0,
+            "headYaw": 0,
+            "armAngle": 0,
+            "legAngle": 0,
+            "reach": 0,
+            "carrying": true,
+            "awake": true,
+            "id": "d85f13a3-5882-4863-b895-e39c0dd0ea64"
+          },
+          "device": {
+            "energy": 0,
+            "gateOpen": 1,
+            "collected": [
+              1,
+              2,
+              3
+            ],
+            "beam": 0,
+            "lever": 0
+          },
+          "items": [
+            {
+              "id": 1,
+              "x": -1.0499999999999998,
+              "y": 1.05,
+              "z": 0.355,
+              "visible": false
+            },
+            {
+              "id": 2,
+              "x": -1.0499999999999998,
+              "y": 1.05,
+              "z": 0.355,
+              "visible": false
+            },
+            {
+              "id": 3,
+              "x": -1.0499999999999998,
+              "y": 1.05,
+              "z": 0.355,
+              "visible": false
+            }
+          ],
+          "reward": {
+            "id": "ward-crystal-set",
+            "kind": "part",
+            "x": -1.0499999999999998,
+            "y": 1.05,
+            "z": 0.345,
+            "homeX": 2.25,
+            "homeZ": -0.7,
+            "visible": false,
+            "claimed": true
+          },
+          "spatial": false,
+          "destination": {
+            "x": 2.1,
+            "z": -0.525,
+            "yaw": 1.5707963267948966
+          },
+          "encounter": {
+            "route": "safe",
+            "blocking": false,
+            "revealed": true,
+            "creature": {
+              "archetype": "hound",
+              "x": 2.9,
+              "y": 0,
+              "z": -2.5,
+              "armAngle": 0,
+              "visible": false
+            }
+          },
+          "objective": "Collect ward crystals 1, 2 and 3 from the cavern.",
+          "inventory": [
+            "pix-companion",
+            "ward-lantern",
+            "twin-crypt-keys",
+            "crypt-crossing",
+            "chain-lift-access",
+            "warden-seal",
+            "keeper-ally",
+            "ember-mine-pass",
+            "focusing-lens"
+          ],
+          "mode": "webgl",
+          "renderCount": 458,
+          "threat": {
+            "strength": 0.2857142857142857,
+            "visible": true,
+            "retreat": 3.5714285714285716
+          },
+          "camera": {
+            "x": 8.2,
+            "y": 7.5,
+            "z": 11.2,
+            "aspect": 1.0581717451523547
+          },
+          "renderer": {
+            "calls": 180,
+            "triangles": 13836
+          }
+        }
+      }
+    },
+    "renderers": [
+      "webgl",
+      "context-loss-fallback",
+      "blocked-webgl-fallback"
+    ],
+    "creatureArchetypes": [
+      "wraith",
+      "crawler",
+      "hound",
+      "lurker",
+      "sentinel"
+    ],
+    "animationSamples": [
+      {
+        "action": "encounter",
+        "progress": 0.464,
+        "elapsed": 464,
+        "duration": 1000,
+        "clockControlled": true
+      },
+      {
+        "action": "claim",
+        "progress": 0.37894736842105264,
+        "elapsed": 720,
+        "duration": 1900,
+        "clockControlled": true
+      },
+      {
+        "action": "charge",
+        "progress": 0.6162962962962963,
+        "elapsed": 832,
+        "duration": 1350,
+        "clockControlled": true
+      },
+      {
+        "action": "step",
+        "progress": 0.39384615384615385,
+        "elapsed": 256,
+        "duration": 650,
+        "clockControlled": true
+      },
+      {
+        "action": "step",
+        "progress": 0.41846153846153844,
+        "elapsed": 272,
+        "duration": 650,
+        "clockControlled": true
+      },
+      {
+        "action": "turn",
+        "progress": 0.4676923076923077,
+        "elapsed": 304,
+        "duration": 650,
+        "clockControlled": true
+      },
+      {
+        "action": "collect",
+        "progress": 0.6046666666666667,
+        "elapsed": 907,
+        "duration": 1500,
+        "clockControlled": true
+      },
+      {
+        "action": "say",
+        "progress": 0.464,
+        "elapsed": 464,
+        "duration": 1000,
+        "clockControlled": true
+      },
+      {
+        "action": "say",
+        "progress": 0.464,
+        "elapsed": 464,
+        "duration": 1000,
+        "clockControlled": true
+      }
+    ],
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "contactContrast": 12.456386640765842,
+    "desktopActionVisibility": [
+      {
+        "top": 214.140625,
+        "bottom": 691.265625,
+        "headerBottom": 44,
+        "height": 800,
+        "busy": true
+      },
+      {
+        "top": 187.640625,
+        "bottom": 495.265625,
+        "headerBottom": 44,
+        "height": 600,
+        "busy": true
+      }
+    ],
+    "mutedSpeechCalls": 4,
+    "menuContrast": 12.456386640765842,
+    "contextLoss": "native-extension"
+  },
+  "sources": {
+    "index.html": "f357a8528b964b447a68f09ed80841befefd6646a8b3e86af783113606017221",
+    "game.css": "eb686e275e3392203218c081f0dd40d0ce65cb21e7016242398cdd9ba18961b2",
+    "screen.css": "9e4748c46187d9dc3e346f9c10bb5ca2214fa848f444740f333273e195af5688",
+    "game.js": "910ff05a77dc00f3b67080b0d70662ae1880e41033137bbc7bda773ed79122e7",
+    "scene.js": "808683d4c0b795b5c8a5f4ca1a217044fde6b071ddd63a8d28e4c2112b093140",
+    "scene-fallback.js": "fe378b8bf53ab79bd925e480a5132ed4bfa700260548c57d4a1971697422424a",
+    "missions.js": "4437c73a1b77ec55104550e7bf5f378392d81c8d158c56972544d6bb7c2e04b4",
+    "encounters.js": "e0e18a84c89e51f14dd457f1d0e04dd2ff6dcff81b102258493200216a1f6a25",
+    "quest-state.js": "379ac9c01009df08754d7809aa834d1e8eb844711bd4bbb3e267d27e7c00bb10",
+    "choices.js": "9645fa796f9a56b85001e0291c0be84627b0b1f569b95dced9608fff0b6261d8",
+    "voice.js": "86fd0833b8cee4aa8489d5aec2b1f317a5aaa240e9f39ddea89202282ef12c2f",
+    "sandbox.js": "e6e2c139bc95991a8b0b6b261eaff03baef7e55a76de74f62b3d89192b953efc",
+    "vendor/three.module.min.js": "852c06b9fe936cf8ebc2870c86370d1015c310b04de98cdfc07f4efaf6afd2af",
+    "vendor/three.core.min.js": "4183cee05f0aa093682fdf551363a16bb20bd92b68e14f7576905f45c461ba82",
+    "../arcade-voice.js": "f030ac31250d9e6be8321ed622c2ed9254f0ec9eb9d0a0a85cab112896a34e38"
+  },
+  "audio": "Narration API mocked here; audible speaker output is not verified."
+}

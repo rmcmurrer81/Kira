@@ -10,11 +10,11 @@ function loadBrowser(){
   throw new Error('Set PLAYWRIGHT_MODULE to an existing Playwright installation.');
 }
 const {chromium}=loadBrowser(),docs=path.resolve(__dirname,'../docs');
-const output=process.env.QA_OUTPUT||path.resolve(__dirname,'../qa/code-quest-stoneward');
+const output=process.env.QA_OUTPUT||path.resolve(__dirname,'../qa/code-quest-screen/motion');
 const STORE='kira-code-quest-stoneward-v3';
 const executablePath=process.env.CHROMIUM_PATH||(process.platform==='win32'?'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe':'/usr/bin/chromium');
 const stats={assertions:0,mainRoutes:0,alternativeRoutes:0,hostilePrograms:0,screenshots:[],animationEvidence:{},renderers:[],creatureArchetypes:[],animationSamples:[]};
-const sourceNames=['index.html','game.css','game.js','scene.js','scene-fallback.js','missions.js','encounters.js','quest-state.js','choices.js','voice.js','sandbox.js','vendor/three.module.min.js','vendor/three.core.min.js','../arcade-voice.js'];
+const sourceNames=['index.html','game.css','screen.css','game.js','scene.js','scene-fallback.js','missions.js','encounters.js','quest-state.js','choices.js','voice.js','sandbox.js','vendor/three.module.min.js','vendor/three.core.min.js','../arcade-voice.js'];
 const sourceHashes=()=>Object.fromEntries(sourceNames.map(name=>[name,crypto.createHash('sha256').update(fs.readFileSync(path.join(docs,'arcade/code-quest',name))).digest('hex')]));
 const check=(actual,expected,label)=>{assert.deepEqual(actual,expected,label);stats.assertions++;};
 const match=(actual,expected,label)=>{assert.match(actual,expected,label);stats.assertions++;};
@@ -124,6 +124,7 @@ function pixelDifference(a,b){
   }
   const solution=(page,index)=>page.evaluate(i=>window.CodeQuestMissions[i].solution,index);
   async function noOverflow(page){check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'World and quest UI have no horizontal overflow');}
+  async function openChoices(page){await page.locator('#openChoices').click();check(await page.locator('#choicesDialog').evaluate(el=>el.open),true,'The no-typing commands open as an accessible disclosure');}
   async function unobstructed(page,selector){await page.locator(selector).scrollIntoViewIfNeeded();check(await page.locator(selector).evaluate(el=>{const r=el.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return hit===el||el.contains(hit);}),true,selector+' is accessible');}
   async function contrast(page,selector){
     const ratio=await page.locator(selector).evaluate(el=>{const style=getComputedStyle(el),rgb=v=>(v.match(/[\d.]+/g)||[]).slice(0,3).map(Number),luma=rgb=>rgb.map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;}).reduce((s,v,i)=>s+v*[.2126,.7152,.0722][i],0);const f=luma(rgb(style.color)),b=luma(rgb(style.backgroundColor));return (Math.max(f,b)+.05)/(Math.min(f,b)+.05);});
@@ -140,7 +141,7 @@ function pixelDifference(a,b){
   async function frame(page,name){const state=await snapshot(page),png=await shot(page,name,'#worldArt');return {state,png};}
   async function blockedProgress(page,index){
     check(await page.locator('#nextButton').isDisabled(),true,'Code must clear the current passage before Next');
-    check(await page.locator('#easyContinue').isVisible(),false,'No large Continue before the gate is clear');
+    check(await page.locator('#nextButton').isVisible(),true,'The locked Continue button stays visibly in the workspace');
     if(index<13){check(await page.locator('#journeyMap button').nth(index+1).isDisabled(),true,'The journey map cannot skip an unsolved passage');await page.locator('#journeyMap button').nth(index+1).evaluate(el=>el.dispatchEvent(new Event('click')));}
     await page.locator('#nextButton').evaluate(el=>el.dispatchEvent(new Event('click')));
     check(await mission(page),'Mission '+(index+1)+' of 14','Unsolved passage cannot be skipped by navigation handlers');
@@ -187,9 +188,9 @@ function pixelDifference(a,b){
     check(initial.renderer.triangles>1000&&initial.renderer.calls>20,true,'The renderer draws substantial mesh geometry');
     stats.webglVersion=await page.evaluate(()=>{const gl=document.querySelector('#worldArt canvas').getContext('webgl2');return gl?.getParameter(gl.VERSION);});match(stats.webglVersion,/WebGL/,'The action world owns a real WebGL context');
     stats.contactContrast=await contrast(page,'.site-header .nav a.contact');
-    await page.locator('#startLessonButton').click();
-    check(await page.locator('#routeChoices').evaluate(el=>el===document.activeElement||el.contains(document.activeElement)),true,'Begin here first points to the route decision');
-    check((await room(page)).route,null,'Begin here never silently chooses a route');await shot(page,'desktop-junction');
+    check(await page.locator('#routeChoices button').first().isVisible(),true,'The first route decision is visible beside the code');
+    check(await page.locator('#flowSteps [aria-current="step"]').getAttribute('data-step'),'route','The visible sequence names the missing prerequisite');
+    check((await room(page)).route,null,'The interface never silently chooses a route');await shot(page,'desktop-junction');
     // Wrong turns are animated, visible, recoverable, and still code-gated.
     const ambushBefore=await frame(page,'ambush-begin');
     const ambushMid=await sampleAction(page,page.locator('#routeChoices button').nth(1),'encounter',.2,.7,async()=>{
@@ -209,8 +210,7 @@ function pixelDifference(a,b){
     await page.locator('#retreatButton').click();await idle(page);await gate(page,'junction');check((await saved(page)).inventory,[],'Retreat keeps inventory intact');
     check((await room(page)).route,null,'Retreat returns to the junction');await blockedProgress(page,0);
     await choose(page,0);check(await page.locator('#codeInput').inputValue(),'openGate(); say("Wrong greeting");','Retreat preserves the learner draft');
-    await page.locator('#resetButton').click();await page.locator('#startLessonButton').click();
-    check(await page.evaluate(()=>document.activeElement?.id),'findTokenButton','After route choice, Begin here points to the exact edit');
+    await page.locator('#resetButton').click();check(await page.locator('#findTokenButton').isVisible(),true,'The exact-edit helper is inline with the program');
     await page.locator('#findTokenButton').click();
     check(await page.locator('#codeInput').evaluate(el=>el.value.slice(el.selectionStart,el.selectionEnd)),'friend','The actual word in the program is highlighted');
     await page.keyboard.insertText('PIX');match(await page.locator('#codeInput').inputValue(),/Hello, PIX!/);await blockedProgress(page,0);
@@ -252,29 +252,30 @@ function pixelDifference(a,b){
       }else await run(page,code);
       stats.mainRoutes++;await credit(page,i);check((await snapshot(page)).actor.id,actorId,'The actor is not replaced by command playback');
       if(i===5){await page.reload();await ready(page);check((await room(page)).phase,'cleared');await credit(page,i);actorId=(await snapshot(page)).actor.id;}
-      if(i<13)await page.locator('#easyContinue').click();
+      if(i<13)await page.locator('#nextButton').click();
     }
-    check(stats.mainRoutes,14);check((await saved(page)).inventory.length,14);check((await saved(page)).defense,100);check(await page.locator('#ending').isVisible(),true,'The town is saved only after all code-gated rooms');
-    check((await snapshot(page)).device.beam,1,'The final ward beam is actually rendered');check((await snapshot(page)).threat.visible,false,'The restored defenses remove the approaching threat');await shot(page,'ward-complete','#worldArt');await shot(page,'ending','#ending');await shot(page,'desktop-complete');
-    await page.reload();await ready(page);check(await page.locator('#ending').isVisible(),true,'Reload retains the earned ending');check((await saved(page)).inventory.length,14);await noOverflow(page);await desktop.close();
+    check(stats.mainRoutes,14);check((await saved(page)).inventory.length,14);check((await saved(page)).defense,100);check(await page.locator('#ending').evaluate(el=>el.open),false,'The earned ending waits for the visible Continue action');
+    check((await snapshot(page)).device.beam,1,'The final ward beam is actually rendered');check((await snapshot(page)).threat.visible,false,'The restored defenses remove the approaching threat');await shot(page,'ward-complete','#worldArt');await shot(page,'desktop-complete');
+    await page.locator('#nextButton').click();check(await page.locator('#ending').isVisible(),true,'The town ending opens after all code-gated rooms');await shot(page,'ending','#ending');
+    await page.reload();await ready(page);check(await page.locator('#nextButton').isEnabled(),true,'Reload retains the earned ending');await page.locator('#nextButton').click();check(await page.locator('#ending').isVisible(),true,'The ending remains readable after reload');check((await saved(page)).inventory.length,14);await noOverflow(page);await desktop.close();
 
-    // A desktop editor can also be far below the world. An explicit Run must
-    // reveal the actual in-flight pose, then return feedback and Continue.
+    // The desktop scene, routes and editor now remain together on one screen,
+    // including during a real rendered action and after its result.
     stats.desktopActionVisibility=[];
     for(const height of [800,600]){
       const narrowDesktop=await context({viewport:{width:1165,height}}),vp=await narrowDesktop.newPage();await installAnimationClock(vp);await vp.goto(url);await ready(vp);await choose(vp,0);
       await vp.locator('#codeInput').fill(await solution(vp,0));await vp.locator('#codeInput').scrollIntoViewIfNeeded();
-      check(await vp.locator('#stage').evaluate(el=>{const r=el.getBoundingClientRect();return r.bottom<=0||r.top>=innerHeight;}),true,'Regression setup begins with the dungeon offscreen at the desktop editor');
+      check(await vp.locator('#stage').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=document.querySelector('.site-header').getBoundingClientRect().bottom&&r.bottom<=innerHeight;}),true,'The scene remains visible while editing code');
+      check(await vp.evaluate(()=>document.documentElement.scrollHeight<=innerHeight+1&&scrollY===0),true,'Desktop editing needs no document scroll');
       await sampleAction(vp,vp.locator('#runButton'),'say',.2,.7,async()=>{
         const bounds=await vp.locator('#stage').evaluate(el=>{const r=el.getBoundingClientRect();return {top:r.top,bottom:r.bottom,headerBottom:document.querySelector('.site-header').getBoundingClientRect().bottom,height:innerHeight,busy:el.classList.contains('is-running')};});
-        check(bounds.busy,true,'Visibility is checked while the actual action is running');check(bounds.top>=bounds.headerBottom&&bounds.bottom<=bounds.height,true,'Desktop Run brings the complete animated stage below the sticky header');stats.desktopActionVisibility.push(bounds);await shot(vp,'desktop-active-stage-'+height,'#stage');
+        check(bounds.busy,true,'Visibility is checked while the actual action is running');check(bounds.top>=bounds.headerBottom&&bounds.bottom<=bounds.height,true,'The complete animated stage stays visible beside the editor');
+        check(await vp.locator('#codeInput').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=document.querySelector('.site-header').getBoundingClientRect().bottom&&r.bottom<=innerHeight;}),true,'The program is visible at the same time as its actual action');check(await vp.evaluate(()=>scrollY===0),true,'Running code does not scroll the desktop game');stats.desktopActionVisibility.push(bounds);await shot(vp,'desktop-active-stage-'+height,'#stage');
       });
       await result(vp);
-      // The product intentionally scrolls smoothly after completion. Wait for
-      // the viewport outcome, rather than inspecting its first compositor frame.
-      await vp.waitForFunction(()=>{const panel=document.querySelector('#outputPanel').getBoundingClientRect(),button=document.querySelector('#easyContinue'),next=button.getBoundingClientRect(),top=document.querySelector('.site-header').getBoundingClientRect().bottom;return !button.hidden&&panel.top>=top&&panel.bottom<=innerHeight&&next.top>=top&&next.bottom<=innerHeight;},null,{timeout:5000});
+      await vp.waitForFunction(()=>{const panel=document.querySelector('#outputPanel').getBoundingClientRect(),button=document.querySelector('#nextButton'),next=button.getBoundingClientRect(),top=document.querySelector('.site-header').getBoundingClientRect().bottom;return !button.disabled&&panel.top>=top&&panel.bottom<=innerHeight&&next.top>=top&&next.bottom<=innerHeight;},null,{timeout:5000});
       check(await vp.locator('#outputPanel').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=document.querySelector('.site-header').getBoundingClientRect().bottom&&r.bottom<=innerHeight;}),true,'Completed desktop action returns feedback to the viewport');check(await vp.locator('#nextButton').isEnabled(),true,'The visible result enables Continue');
-      check(await vp.locator('#easyContinue').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=document.querySelector('.site-header').getBoundingClientRect().bottom&&r.bottom<=innerHeight;}),true,'Completion also reveals the large Continue control');await narrowDesktop.close();
+      check(await vp.locator('#nextButton').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=document.querySelector('.site-header').getBoundingClientRect().bottom&&r.bottom<=innerHeight;}),true,'The primary Continue control stays in the same viewport');check(await vp.evaluate(()=>scrollY===0),true,'Feedback needs no desktop document scroll');await narrowDesktop.close();
     }
 
     // Every alternative route remains a genuine coding encounter. Retrying and
@@ -289,7 +290,10 @@ function pixelDifference(a,b){
       if(creature.visible&&!stats.creatureArchetypes.includes(creature.archetype)){stats.creatureArchetypes.push(creature.archetype);await shot(ap,'creature-'+creature.archetype,'#worldArt');}
       if(i===0){
         await ap.locator('#voiceToggle').click();const spoken=await ap.evaluate(()=>window.__speechCalls.at(-1));check(spoken.voice,'Microsoft Jenny Online (Natural)');check([spoken.rate,spoken.pitch,spoken.volume],[.96,1,1]);
-        await ap.locator('#choicePanel summary').click();await ap.locator('#choiceButtons button').nth(1).click();await result(ap,'error');
+        await ap.locator('#hintButton').click();await ap.keyboard.press('Escape');const beforeReplay=await ap.evaluate(()=>window.__speechCalls.length);await ap.locator('#openStory').click();await ap.locator('#storyReplay').click();
+        await ap.waitForFunction(before=>window.__speechCalls.length>before,beforeReplay);const replay=await ap.evaluate(before=>window.__speechCalls.slice(before).map(call=>call.text).join(' '),beforeReplay);
+        const sceneStart=await ap.locator('#storyText').textContent();check(replay.includes(sceneStart.split(/\s+/).slice(0,6).join(' ')),true,'Story Replay reads the current scene after a hint, not the cached hint');await ap.keyboard.press('Escape');
+        await openChoices(ap);await ap.locator('#choiceButtons button').nth(1).click();await result(ap,'error');check(await ap.locator('#choicesDialog').evaluate(el=>el.open),false,'Choosing a command returns to the actual encounter');
       }else{const wrong=await ap.evaluate(i=>window.CodeQuestChoices[i][1].code,i);await run(ap,wrong,'error');}
       check((await saved(ap)).inventory,inventory,'Wrong code never grants a route reward');check((await saved(ap)).defense,protection,'Wrong code cannot improve town protection');check((await room(ap)).gates[selected.route],false);await blockedProgress(ap,i);
       if(i>0)check(await ap.evaluate(()=>window.__speechCalls.length),speechBefore,'Muted route selection and wrong code do not restart narration');
@@ -302,7 +306,7 @@ function pixelDifference(a,b){
         match(await ap.locator('#actionLog').innerText(),/PIX/,'Visible command output retains PIX');await ap.locator('#voiceToggle').click();stats.mutedSpeechCalls=await ap.evaluate(()=>window.__speechCalls.length);
       }else{
         // No-typing selections still use real bounded programs and code checks.
-        if(!await ap.locator('#choiceButtons button').first().isVisible())await ap.locator('#choicePanel summary').click();
+        await openChoices(ap);
         await ap.locator('#choiceButtons button').first().click();await result(ap);
       }
       stats.alternativeRoutes++;await credit(ap,i);
@@ -316,7 +320,7 @@ function pixelDifference(a,b){
     }
     check(stats.alternativeRoutes,14);check((await saved(ap)).inventory.length,14);check((await saved(ap)).defense,100);check(await ap.evaluate(()=>window.__speechCalls.length),0,'Narration stays off through later route choices, code and reloads');check(await ap.locator('#voiceToggle').getAttribute('aria-pressed'),'false');
     check(stats.creatureArchetypes.slice().sort(),['crawler','hound','lurker','sentinel','wraith'],'All five original creature models are encountered');
-    await shot(ap,'alternative-ending','#ending');
+    await ap.locator('#nextButton').click();await shot(ap,'alternative-ending','#ending');
     ap.once('dialog',dialog=>dialog.accept());await ap.locator('#replayButton').click();await ready(ap);await gate(ap,'junction');check((await saved(ap)).inventory,[],'Replay resets this quest only');check((await saved(ap)).defense,0);
     // Actual-worker host escapes and limits with intercepted, harmless targets.
     const hostile=['delete self.fetch; say(String(fetch).includes("[native code]") ? "native fetch exposed" : "not native");','fetch("https://example.invalid/probe");','self.fetch("https://example.invalid/probe");','globalThis.fetch("https://example.invalid/probe");','say.constructor("return fetch")()("https://example.invalid/probe");','importScripts("https://example.invalid/probe");','new WebSocket("wss://example.invalid/probe");','({}).constructor.constructor("return self")();','import("https://example.invalid/probe");','while (true) {}','for (let i=0; i<1000; i++) { say("x"); }','function repeat() { repeat(); } repeat();'];
@@ -336,14 +340,14 @@ function pixelDifference(a,b){
     // action world offscreen. Lose a real WebGL context on the 390px run.
     for(const width of [390,320]){
       const mobile=await context({viewport:{width,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce'}),mp=await mobile.newPage();await mp.goto(url);await ready(mp);await noOverflow(mp);stats.menuContrast=await contrast(mp,'.site-header .menubtn');
-      await mp.locator('#startLessonButton').tap();check(await mp.locator('#routeChoices').evaluate(el=>el===document.activeElement||el.contains(document.activeElement)),true,'Touch Begin here finds the route decision');
-      await choose(mp,1);await mp.locator('#startLessonButton').tap();check(await mp.evaluate(()=>document.activeElement?.id),'findTokenButton','Touch Begin here finds the small code edit');
+      check(await mp.locator('#routeChoices button').first().isVisible(),true,'Mobile exposes the route decision beside the task');
+      await choose(mp,1);check(await mp.locator('#findTokenButton').isVisible(),true,'Mobile exposes the exact edit helper');
       if(width===390&&(await snapshot(mp)).mode==='webgl'){
         await shot(mp,'mobile');
         stats.contextLoss=await mp.evaluate(()=>{const canvas=document.querySelector('#worldArt canvas'),gl=canvas.getContext('webgl2')||canvas.getContext('webgl'),ext=gl?.getExtension('WEBGL_lose_context');if(ext){ext.loseContext();return 'native-extension';}canvas.dispatchEvent(new Event('webglcontextlost',{cancelable:true}));return 'event';});
         await mp.waitForFunction(()=>window.CodeQuestWorld.snapshot().mode==='fallback',null,{timeout:10000});check((await snapshot(mp)).encounter.blocking,true,'Context loss preserves the active obstacle');stats.renderers.push('context-loss-fallback');
       }
-      await mp.locator('#guidedButton').tap();await run(mp);await credit(mp,0);await unobstructed(mp,'#easyContinue');check(await mp.locator('#easyContinue').evaluate(el=>el.getBoundingClientRect().height>=44),true,'Continue has a usable touch target');
+      await mp.locator('#guidedButton').tap();await run(mp);await credit(mp,0);await unobstructed(mp,'#nextButton');check(await mp.locator('#nextButton').evaluate(el=>el.getBoundingClientRect().height>=44),true,'Continue has a usable touch target');
       if(width===390)await shot(mp,'mobile-fallback');await mp.locator('#nextButton').tap();await gate(mp,'junction');await choose(mp,0);await mp.locator('#guidedButton').tap();await run(mp);await mp.reload();await ready(mp);await credit(mp,1);await noOverflow(mp);await mobile.close();
     }
 

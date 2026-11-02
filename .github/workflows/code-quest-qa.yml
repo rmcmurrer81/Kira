@@ -38,8 +38,12 @@ jobs:
           echo "CHROMIUM_PATH=$(node -e 'process.stdout.write(require("playwright").chromium.executablePath())')" >> "$GITHUB_ENV"
       - name: Test dungeon routes, animated action timelines, recovery and worker escapes
         run: node tests/test-code-quest-browser.cjs
+      - name: Test one-screen desktop layout, saved-draft recovery and accessible reading dialogs
+        run: node tests/test-code-quest-screen.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: code-quest-browser-evidence
-          path: qa/code-quest-stoneward
+          path: |
+            qa/code-quest-stoneward
+            qa/code-quest-screen
