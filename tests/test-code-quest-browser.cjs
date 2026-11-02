@@ -280,4 +280,3 @@ function pixelDifference(a,b){
     console.log('Speech audibility is not established by this suite.');
   }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
 })().catch(error=>{console.error(error);server.close();process.exitCode=1;});
-
