@@ -1,0 +1,49 @@
+{
+  "browserVersion": "156.0.4314.58",
+  "cpuRate": 8,
+  "acknowledgementDelay": 1500,
+  "repeats": 3,
+  "stats": {
+    "assertions": 47,
+    "mainRoutes": 0,
+    "alternativeRoutes": 0,
+    "hostilePrograms": 0,
+    "screenshots": [
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-stress\\timing-0-begin.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-stress\\timing-0-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-stress\\timing-0-end.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-stress\\timing-1-begin.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-stress\\timing-1-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-stress\\timing-1-end.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-stress\\timing-2-begin.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-stress\\timing-2-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-stress\\timing-2-end.png"
+    ],
+    "animationEvidence": {},
+    "renderers": [],
+    "creatureArchetypes": [],
+    "animationSamples": [
+      {
+        "action": "encounter",
+        "progress": 0.464,
+        "elapsed": 464,
+        "duration": 1000,
+        "clockControlled": true
+      },
+      {
+        "action": "encounter",
+        "progress": 0.464,
+        "elapsed": 464,
+        "duration": 1000,
+        "clockControlled": true
+      },
+      {
+        "action": "encounter",
+        "progress": 0.464,
+        "elapsed": 464,
+        "duration": 1000,
+        "clockControlled": true
+      }
+    ]
+  }
+}

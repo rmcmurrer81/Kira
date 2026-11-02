@@ -1,34 +1,36 @@
 {
   "browserVersion": "156.0.4314.58",
   "stats": {
-    "assertions": 966,
+    "assertions": 1002,
     "mainRoutes": 14,
     "alternativeRoutes": 14,
     "hostilePrograms": 12,
     "screenshots": [
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\desktop-junction.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\ambush-begin.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\ambush-mid.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\ambush-end.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\lever-mid.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\movement-begin.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\movement-mid.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\movement-end.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\turn-mid.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\collect-mid.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\ward-complete.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\ending.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\desktop-complete.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\creature-wraith.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\creature-crawler.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\creature-hound.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\creature-lurker.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\creature-sentinel.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\alternative-ending.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\mobile.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\mobile-fallback.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\fallback-begin.png",
-      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-storm\\qa\\code-quest-stoneward\\fallback-end.png"
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\desktop-junction.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\ambush-begin.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\ambush-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\ambush-end.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\lever-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\movement-begin.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\movement-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\movement-end.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\turn-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\collect-mid.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\ward-complete.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\ending.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\desktop-complete.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\desktop-active-stage-800.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\desktop-active-stage-600.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\creature-wraith.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\creature-crawler.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\creature-hound.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\creature-lurker.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\creature-sentinel.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\alternative-ending.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\mobile.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\mobile-fallback.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\fallback-begin.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\stoneward-clock-full\\fallback-end.png"
     ],
     "animationEvidence": {
       "lever": {
@@ -52,7 +54,7 @@
             "reach": 0,
             "carrying": true,
             "awake": true,
-            "id": "544ee637-38ae-4a45-8c23-a7379cb5fc45"
+            "id": "f066d502-01c6-459c-93d8-7011f5061572"
           },
           "device": {
             "energy": 0,
@@ -119,7 +121,7 @@
             "pix-companion"
           ],
           "mode": "webgl",
-          "renderCount": 109,
+          "renderCount": 71,
           "threat": {
             "strength": 0.9285714285714286,
             "visible": true,
@@ -141,29 +143,29 @@
           "index": 1,
           "progress": 0.07142857142857142,
           "action": "charge",
-          "time": 0.6455999996185301,
+          "time": 0.826,
           "frameDuration": 1350,
-          "frameProgress": 0.4782222219396519,
-          "frameElapsed": 645.5999996185301,
+          "frameProgress": 0.6118518518518519,
+          "frameElapsed": 826,
           "actor": {
             "x": -1.581555026161336,
             "z": 0.34138407176547314,
             "yaw": 1.9111782654368035,
             "y": 0,
             "headYaw": 0,
-            "armAngle": -1.3156437887544274,
+            "armAngle": -1.2327944120263745,
             "legAngle": 0,
-            "reach": 0.9916365432700579,
+            "reach": 0.8695833351828185,
             "carrying": true,
             "awake": true,
-            "id": "544ee637-38ae-4a45-8c23-a7379cb5fc45"
+            "id": "f066d502-01c6-459c-93d8-7011f5061572"
           },
           "device": {
-            "energy": 0.30182853475636495,
+            "energy": 1.3369535717116294,
             "gateOpen": 0,
             "collected": [],
             "beam": 0,
-            "lever": 0.8867420479449991
+            "lever": 0.9760856824352783
           },
           "items": [
             {
@@ -223,16 +225,16 @@
             "pix-companion"
           ],
           "mode": "webgl",
-          "renderCount": 176,
+          "renderCount": 125,
           "threat": {
             "strength": 0.9285714285714286,
             "visible": true,
             "retreat": 0.3571428571428571
           },
           "camera": {
-            "x": 7.400467904764455,
-            "y": 6.480280742858673,
-            "z": 9.380748647623129,
+            "x": 7.412221167984922,
+            "y": 6.487332700790953,
+            "z": 9.399553868775875,
             "aspect": 2.4963503649635035
           },
           "renderer": {
@@ -245,7 +247,7 @@
           "index": 1,
           "progress": 0.14285714285714285,
           "action": "ready",
-          "time": 3.2631999993324285,
+          "time": 3.2560000000000002,
           "frameDuration": 1900,
           "frameProgress": 1,
           "frameElapsed": 1900,
@@ -260,7 +262,7 @@
             "reach": 0,
             "carrying": true,
             "awake": true,
-            "id": "544ee637-38ae-4a45-8c23-a7379cb5fc45"
+            "id": "f066d502-01c6-459c-93d8-7011f5061572"
           },
           "device": {
             "energy": 3,
@@ -327,7 +329,7 @@
             "pix-companion"
           ],
           "mode": "webgl",
-          "renderCount": 441,
+          "renderCount": 280,
           "threat": {
             "strength": 0.8571428571428572,
             "visible": true,
@@ -366,7 +368,7 @@
             "reach": 0,
             "carrying": true,
             "awake": true,
-            "id": "544ee637-38ae-4a45-8c23-a7379cb5fc45"
+            "id": "f066d502-01c6-459c-93d8-7011f5061572"
           },
           "device": {
             "energy": 0,
@@ -434,7 +436,7 @@
             "ward-lantern"
           ],
           "mode": "webgl",
-          "renderCount": 593,
+          "renderCount": 368,
           "threat": {
             "strength": 0.8571428571428572,
             "visible": true,
@@ -456,22 +458,22 @@
           "index": 2,
           "progress": 0.14285714285714285,
           "action": "step",
-          "time": 0.12109999990463256,
+          "time": 0.266,
           "frameDuration": 650,
-          "frameProgress": 0.18630769216097318,
-          "frameElapsed": 121.09999990463257,
+          "frameProgress": 0.40923076923076923,
+          "frameElapsed": 266,
           "actor": {
-            "x": -3.054242119685324,
+            "x": -2.7663910481565774,
             "z": 0.525,
             "yaw": 1.5707963267948966,
             "y": 0,
             "headYaw": 0,
-            "armAngle": -0.15263378371964947,
-            "legAngle": 0.2180482624566421,
+            "armAngle": 0.33579548162029854,
+            "legAngle": -0.4797078308861408,
             "reach": 0,
             "carrying": true,
             "awake": true,
-            "id": "544ee637-38ae-4a45-8c23-a7379cb5fc45"
+            "id": "f066d502-01c6-459c-93d8-7011f5061572"
           },
           "device": {
             "energy": 0,
@@ -539,16 +541,16 @@
             "ward-lantern"
           ],
           "mode": "webgl",
-          "renderCount": 608,
+          "renderCount": 387,
           "threat": {
             "strength": 0.8571428571428572,
             "visible": true,
             "retreat": 0.7142857142857142
           },
           "camera": {
-            "x": 7.48950962615718,
-            "y": 6.533705775694308,
-            "z": 9.52321540185149,
+            "x": 7.408076666069339,
+            "y": 6.484845999641603,
+            "z": 9.392922665710941,
             "aspect": 2.4963503649635035
           },
           "renderer": {
@@ -561,7 +563,7 @@
           "index": 2,
           "progress": 0.21428571428571427,
           "action": "ready",
-          "time": 3.874899999141693,
+          "time": 3.8580000000000005,
           "frameDuration": 1900,
           "frameProgress": 1,
           "frameElapsed": 1900,
@@ -576,7 +578,7 @@
             "reach": 0,
             "carrying": true,
             "awake": true,
-            "id": "544ee637-38ae-4a45-8c23-a7379cb5fc45"
+            "id": "f066d502-01c6-459c-93d8-7011f5061572"
           },
           "device": {
             "energy": 0,
@@ -644,7 +646,7 @@
             "ward-lantern"
           ],
           "mode": "webgl",
-          "renderCount": 991,
+          "renderCount": 619,
           "threat": {
             "strength": 0.7857142857142857,
             "visible": true,
@@ -662,8 +664,8 @@
           }
         },
         "pixelDifference": {
-          "beginToMid": 0.1803306342780027,
-          "midToEnd": 0.1865740740740741
+          "beginToMid": 0.21804672349253595,
+          "midToEnd": 0.22357333994798478
         }
       },
       "turn": {
@@ -672,22 +674,22 @@
           "index": 3,
           "progress": 0.21428571428571427,
           "action": "turn",
-          "time": 1.4562999994277963,
+          "time": 1.61,
           "frameDuration": 650,
-          "frameProgress": 0.22676923062251053,
-          "frameElapsed": 147.39999990463184,
+          "frameProgress": 0.4676923076923077,
+          "frameElapsed": 304,
           "actor": {
             "x": -1.05,
             "z": -1.5750000000000002,
-            "yaw": 1.3651006086618684,
+            "yaw": 0.861415428120859,
             "y": 0,
-            "headYaw": 0.16341612114997037,
+            "headYaw": 0.24871338452908223,
             "armAngle": 0,
-            "legAngle": 0.0319809340567491,
+            "legAngle": -0.06679238662997634,
             "reach": 0,
             "carrying": true,
             "awake": true,
-            "id": "544ee637-38ae-4a45-8c23-a7379cb5fc45"
+            "id": "f066d502-01c6-459c-93d8-7011f5061572"
           },
           "device": {
             "energy": 0,
@@ -756,16 +758,16 @@
             "twin-crypt-keys"
           ],
           "mode": "webgl",
-          "renderCount": 1249,
+          "renderCount": 793,
           "threat": {
             "strength": 0.7857142857142857,
             "visible": true,
             "retreat": 1.0714285714285714
           },
           "camera": {
-            "x": 7.469267103080023,
-            "y": 6.5215602618480135,
-            "z": 9.490827364928037,
+            "x": 7.401029292376734,
+            "y": 6.48061757542604,
+            "z": 9.381646867802774,
             "aspect": 2.4963503649635035
           },
           "renderer": {
@@ -778,7 +780,7 @@
           "index": 3,
           "progress": 0.2857142857142857,
           "action": "ready",
-          "time": 4.389799999237061,
+          "time": 4.37,
           "frameDuration": 1100,
           "frameProgress": 1,
           "frameElapsed": 1100,
@@ -793,7 +795,7 @@
             "reach": 0,
             "carrying": true,
             "awake": true,
-            "id": "544ee637-38ae-4a45-8c23-a7379cb5fc45"
+            "id": "f066d502-01c6-459c-93d8-7011f5061572"
           },
           "device": {
             "energy": 0,
@@ -862,7 +864,7 @@
             "twin-crypt-keys"
           ],
           "mode": "webgl",
-          "renderCount": 1550,
+          "renderCount": 973,
           "threat": {
             "strength": 0.7142857142857143,
             "visible": true,
@@ -901,7 +903,7 @@
             "reach": 0,
             "carrying": true,
             "awake": true,
-            "id": "279f95d1-c70b-4483-aee3-7e1e747a937f"
+            "id": "f3e22c12-8ead-4028-bfc2-c46cfb73f786"
           },
           "device": {
             "energy": 0,
@@ -998,22 +1000,22 @@
           "index": 9,
           "progress": 0.6428571428571429,
           "action": "collect",
-          "time": 0.7698000000953675,
+          "time": 0.901,
           "frameDuration": 1500,
-          "frameProgress": 0.5132000000635784,
-          "frameElapsed": 769.8000000953675,
+          "frameProgress": 0.6006666666666667,
+          "frameElapsed": 901,
           "actor": {
             "x": 0.17999999999999994,
             "z": -0.09999999999999998,
             "yaw": 2.44293282886833,
             "y": 0,
             "headYaw": 0,
-            "armAngle": -1.46008088784287,
+            "armAngle": -1.4246306536981002,
             "legAngle": 0,
-            "reach": 0.9733872585619133,
+            "reach": 0.9497537691320668,
             "carrying": true,
             "awake": true,
-            "id": "279f95d1-c70b-4483-aee3-7e1e747a937f"
+            "id": "f3e22c12-8ead-4028-bfc2-c46cfb73f786"
           },
           "device": {
             "energy": 0,
@@ -1025,9 +1027,9 @@
           "items": [
             {
               "id": 1,
-              "x": 0.513871349662273,
-              "y": 0.596888882601201,
-              "z": -0.5323274890203573,
+              "x": 0.349538777126736,
+              "y": 0.8199116596137154,
+              "z": -0.4032090391710069,
               "visible": true
             },
             {
@@ -1088,16 +1090,16 @@
             "focusing-lens"
           ],
           "mode": "webgl",
-          "renderCount": 128,
+          "renderCount": 107,
           "threat": {
             "strength": 0.3571428571428571,
             "visible": true,
             "retreat": 3.2142857142857144
           },
           "camera": {
-            "x": 7.400171943345995,
-            "y": 6.480103166007598,
-            "z": 9.380275109353594,
+            "x": 7.40991855456217,
+            "y": 6.485951132737302,
+            "z": 9.395869687299472,
             "aspect": 2.4963503649635035
           },
           "renderer": {
@@ -1110,7 +1112,7 @@
           "index": 9,
           "progress": 0.7142857142857143,
           "action": "ready",
-          "time": 6.4226000000953665,
+          "time": 6.414,
           "frameDuration": 1900,
           "frameProgress": 1,
           "frameElapsed": 1900,
@@ -1125,7 +1127,7 @@
             "reach": 0,
             "carrying": true,
             "awake": true,
-            "id": "279f95d1-c70b-4483-aee3-7e1e747a937f"
+            "id": "f3e22c12-8ead-4028-bfc2-c46cfb73f786"
           },
           "device": {
             "energy": 0,
@@ -1204,7 +1206,7 @@
             "focusing-lens"
           ],
           "mode": "webgl",
-          "renderCount": 701,
+          "renderCount": 459,
           "threat": {
             "strength": 0.2857142857142857,
             "visible": true,
@@ -1235,16 +1237,97 @@
       "lurker",
       "sentinel"
     ],
+    "animationSamples": [
+      {
+        "action": "encounter",
+        "progress": 0.464,
+        "elapsed": 464,
+        "duration": 1000,
+        "clockControlled": true
+      },
+      {
+        "action": "claim",
+        "progress": 0.37894736842105264,
+        "elapsed": 720,
+        "duration": 1900,
+        "clockControlled": true
+      },
+      {
+        "action": "charge",
+        "progress": 0.6118518518518519,
+        "elapsed": 826,
+        "duration": 1350,
+        "clockControlled": true
+      },
+      {
+        "action": "step",
+        "progress": 0.40923076923076923,
+        "elapsed": 266,
+        "duration": 650,
+        "clockControlled": true
+      },
+      {
+        "action": "step",
+        "progress": 0.40923076923076923,
+        "elapsed": 266,
+        "duration": 650,
+        "clockControlled": true
+      },
+      {
+        "action": "turn",
+        "progress": 0.4676923076923077,
+        "elapsed": 304,
+        "duration": 650,
+        "clockControlled": true
+      },
+      {
+        "action": "collect",
+        "progress": 0.6006666666666667,
+        "elapsed": 901,
+        "duration": 1500,
+        "clockControlled": true
+      },
+      {
+        "action": "say",
+        "progress": 0.464,
+        "elapsed": 464,
+        "duration": 1000,
+        "clockControlled": true
+      },
+      {
+        "action": "say",
+        "progress": 0.464,
+        "elapsed": 464,
+        "duration": 1000,
+        "clockControlled": true
+      }
+    ],
     "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
     "contactContrast": 12.456386640765842,
+    "desktopActionVisibility": [
+      {
+        "top": 164.25,
+        "bottom": 714.25,
+        "headerBottom": 83,
+        "height": 800,
+        "busy": true
+      },
+      {
+        "top": 114.25,
+        "bottom": 564.25,
+        "headerBottom": 83,
+        "height": 600,
+        "busy": true
+      }
+    ],
     "mutedSpeechCalls": 4,
     "menuContrast": 12.456386640765842,
     "contextLoss": "native-extension"
   },
   "sources": {
-    "index.html": "89e0f1b99aeb8f036dbbe68952d227e59634ff1853db8a26c257ef365d48e70f",
-    "game.css": "a7a99c18b3ed0dc708db443d4cd8e97f721f1324d6b73d753fdc3eeee5ed0526",
-    "game.js": "b0d90686eb1a4b6b95e07a66afc9cc1a69f9fb56b0d421516199c2c92a193ff4",
+    "index.html": "d434ab862aaef945cc4c03ded45ad221d83016a2d61beb14b9bebaa3dc3b6472",
+    "game.css": "3632ccff69637c90e0d3c85e7a053a8e9c073890a39862c810702f2251fa1e26",
+    "game.js": "c94b9137f0fa12275371bb96eb4764f5e62ae719422fa888f1258d659cfb0356",
     "scene.js": "d35adaaf5224d017088c02e8b5e06f4a404a73827c4311ec300a494b892ca247",
     "scene-fallback.js": "ee702f4070fdfd4a50200b4e86875a2fe4a03a97774ed36ec9f17ccd46486247",
     "missions.js": "6b17ae4ea4a236d8cf7386de5fac1fabcbf76508ebc6dbb192af652740808de4",

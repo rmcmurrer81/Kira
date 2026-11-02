@@ -13,7 +13,7 @@ const {chromium}=loadBrowser(),docs=path.resolve(__dirname,'../docs');
 const output=process.env.QA_OUTPUT||path.resolve(__dirname,'../qa/code-quest-stoneward');
 const STORE='kira-code-quest-stoneward-v3';
 const executablePath=process.env.CHROMIUM_PATH||(process.platform==='win32'?'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe':'/usr/bin/chromium');
-const stats={assertions:0,mainRoutes:0,alternativeRoutes:0,hostilePrograms:0,screenshots:[],animationEvidence:{},renderers:[],creatureArchetypes:[]};
+const stats={assertions:0,mainRoutes:0,alternativeRoutes:0,hostilePrograms:0,screenshots:[],animationEvidence:{},renderers:[],creatureArchetypes:[],animationSamples:[]};
 const sourceNames=['index.html','game.css','game.js','scene.js','scene-fallback.js','missions.js','encounters.js','quest-state.js','choices.js','voice.js','sandbox.js','vendor/three.module.min.js','vendor/three.core.min.js','../arcade-voice.js'];
 const sourceHashes=()=>Object.fromEntries(sourceNames.map(name=>[name,crypto.createHash('sha256').update(fs.readFileSync(path.join(docs,'arcade/code-quest',name))).digest('hex')]));
 const check=(actual,expected,label)=>{assert.deepEqual(actual,expected,label);stats.assertions++;};
@@ -50,6 +50,42 @@ function pixelDifference(a,b){
   const origin='http://127.0.0.1:'+server.address().port,url=origin+'/arcade/code-quest/';
   const browser=await chromium.launch({executablePath,headless:true,args:['--no-sandbox','--enable-unsafe-swiftshader']});
   const errors=[],unexpected=[];
+  const clocks=new WeakMap(),clockStart=Date.UTC(2026,0,1);
+  const delay=milliseconds=>new Promise(resolve=>setTimeout(resolve,milliseconds));
+  async function installAnimationClock(page){
+    // Install before application code captures RAF/performance. Wall-clock GPU
+    // or click-ack latency must not consume the short pose-sampling window.
+    await page.clock.install({time:clockStart});clocks.set(page,{nextPause:clockStart});
+  }
+  async function controlledAction(page,button,inspect){
+    const clock=clocks.get(page);assert(clock,'Install the animation clock before navigation');
+    await button.scrollIntoViewIfNeeded();check(await button.isVisible(),true,'Sampled action control is visible');check(await button.isEnabled(),true,'Sampled action control is enabled');
+    // All callers pause at an idle boundary, never in an already-running tween.
+    clock.nextPause+=3600000;await page.clock.pauseAt(clock.nextPause);
+    try{
+      // Force skips Playwright's two-RAF stability wait while the clock is held;
+      // it still dispatches a real pointer click at the checked button.
+      await button.click({force:true});
+      const acknowledgementDelay=Number(process.env.CODE_QUEST_CLICK_ACK_DELAY_MS)||0;
+      if(acknowledgementDelay)await delay(acknowledgementDelay);
+      const at=async(action,low=.15,high=.78)=>{
+        const midpoint=(low+high)/2,deadline=Date.now()+30000;let previous;
+        while(Date.now()<deadline){
+          const state=await snapshot(page);previous=state;
+          if(state.action===action&&state.frameProgress>=midpoint&&state.frameProgress<high){
+            stats.animationSamples.push({action,progress:state.frameProgress,elapsed:state.frameElapsed,duration:state.frameDuration,clockControlled:true});return state;
+          }
+          // Worker loading and message delivery use real IO. Do not advance the
+          // page's watchdog while waiting for that worker to start its animation.
+          if(state.action==='ready')await delay(10);
+          else await page.clock.runFor(16);
+        }
+        throw new Error('Controlled animation did not reach '+action+' midpoint: '+JSON.stringify({action:previous?.action,progress:previous?.frameProgress}));
+      };
+      return await inspect(at);
+    }finally{await page.clock.resume();}
+  }
+  const sampleAction=(page,button,action,low,high,inspect)=>controlledAction(page,button,async at=>{await at(action,low,high);return inspect?inspect():snapshot(page);});
   async function context(options={}){
     const ctx=await browser.newContext(options);
     await ctx.route('**/*',route=>{const u=route.request().url();if(!u.startsWith(origin+'/')){unexpected.push(u);return route.abort();}return route.continue();});
@@ -95,7 +131,9 @@ function pixelDifference(a,b){
   }
   async function shot(page,name,selector){
     const filename=path.join(output,name+'.png');let png;
-    if(selector)png=await page.locator(selector).screenshot({path:filename});
+    // Element screenshots wait for two RAF stability frames. A page clip instead
+    // captures the real, already-rendered GPU pose while the test clock is held.
+    if(selector){const element=page.locator(selector);await element.evaluate(el=>el.scrollIntoView({block:'center',behavior:'instant'}));const clip=await element.boundingBox();assert(clip,'Screenshot target has bounds');png=await page.screenshot({path:filename,clip});}
     else{await page.evaluate(()=>{document.activeElement?.blur();scrollTo({top:0,behavior:'instant'});});png=await page.screenshot({path:filename,fullPage:true});}
     stats.screenshots.push(filename);return png;
   }
@@ -113,11 +151,34 @@ function pixelDifference(a,b){
     check(data.defense,expected.defense,'Town defense follows the recovered quest parts');match(await page.locator('#defenseLabel').innerText(),new RegExp('^'+expected.defense+'%$'),'Town protection is visible');
     check((await room(page)).phase,'cleared','Code actually clears the active route');await gate(page,'cleared');check(await page.locator('#nextButton').isEnabled(),true,'Cleared route permits Continue');
   }
-  async function waitAction(page,action,low=.15,high=.78){await page.waitForFunction(({action,low,high})=>{const s=window.CodeQuestWorld.snapshot();return s.action===action&&s.frameProgress>low&&s.frameProgress<high;},{action,low,high},{timeout:20000});}
   try{
+    const timingRepeats=Number(process.env.CODE_QUEST_TIMING_REPEATS)||0;
+    if(timingRepeats){
+      // Reproduce the CI hazard deliberately: software rendering + slow CPU +
+      // an acknowledgment delay longer than the whole one-second encounter.
+      // The sampled pose is still produced by actual RAF callbacks and WebGL.
+      const slow=await context({viewport:{width:1165,height:800}}),probe=await slow.newPage();await installAnimationClock(probe);
+      const cdp=await slow.newCDPSession(probe),cpuRate=Number(process.env.CODE_QUEST_CPU_RATE)||8;
+      await cdp.send('Emulation.setCPUThrottlingRate',{rate:cpuRate});await probe.goto(url);await ready(probe);
+      for(let index=0;index<timingRepeats;index++){
+        if(index){await probe.locator('#retreatButton').click();await idle(probe);await gate(probe,'junction');}
+        const begin=await frame(probe,'timing-'+index+'-begin');
+        const mid=await controlledAction(probe,probe.locator('#routeChoices button').nth(1),async at=>{
+          check((await snapshot(probe)).frameProgress,0,'Click acknowledgment latency cannot advance the paused tween');
+          await at('encounter',.2,.7);const mid=await frame(probe,'timing-'+index+'-mid');
+          check(mid.state.encounter.creature.y>.2,true,'Slow-CPU creature genuinely reaches an airborne pose');check(Math.abs(mid.state.encounter.creature.armAngle)>.1,true,'Slow-CPU pose has articulated creature arms');return mid;
+        });
+        await idle(probe);const end=await frame(probe,'timing-'+index+'-end');
+        check([begin.state.actor.id,mid.state.actor.id,end.state.actor.id],[begin.state.actor.id,begin.state.actor.id,begin.state.actor.id],'Stress frames keep the real actor');
+        check(pixelDifference(begin.png,mid.png)>.001,true,'Stress begin and airborne pixels differ');check(pixelDifference(mid.png,end.png)>.001,true,'Stress airborne and end pixels differ');
+      }
+      check(errors,[]);check(unexpected,[]);check(sourceHashes(),startingSources,'Product source stays unchanged during timing stress');
+      fs.writeFileSync(path.join(output,'timing-result.json'),JSON.stringify({browserVersion:browser.version(),cpuRate,acknowledgementDelay:Number(process.env.CODE_QUEST_CLICK_ACK_DELAY_MS)||0,repeats:timingRepeats,stats},null,2)+'\n');
+      console.log('Stoneward controlled-animation stress passed: '+JSON.stringify({assertions:stats.assertions,repeats:timingRepeats,cpuRate,acknowledgementDelay:Number(process.env.CODE_QUEST_CLICK_ACK_DELAY_MS)||0,samples:stats.animationSamples}));await slow.close();return;
+    }
     // A normal-motion desktop run supplies real geometry/joint/pixel evidence.
     const desktop=await context({viewport:{width:1440,height:1050}});
-    const page=await desktop.newPage();await page.goto(url);await ready(page);
+    const page=await desktop.newPage();await installAnimationClock(page);await page.goto(url);await ready(page);
     check(await mission(page),'Mission 1 of 14','Fresh Stoneward quest');await gate(page,'junction');await blockedProgress(page,0);
     check((await saved(page)).inventory,[],'Route text does not award equipment');check((await saved(page)).defense,0,'Town protection begins at zero');
     const initial=await snapshot(page);stats.renderers.push(initial.mode);check(initial.mode,'webgl','Desktop evidence uses the actual locally vendored Three.js renderer');
@@ -131,10 +192,10 @@ function pixelDifference(a,b){
     check((await room(page)).route,null,'Begin here never silently chooses a route');await shot(page,'desktop-junction');
     // Wrong turns are animated, visible, recoverable, and still code-gated.
     const ambushBefore=await frame(page,'ambush-begin');
-    await page.locator('#routeChoices button').nth(1).click();await waitAction(page,'encounter',.2,.7);
-    const ambushMid=await frame(page,'ambush-mid');
-    check(ambushMid.state.encounter.creature.y>.2,true,'The creature physically leaps from the side passage');
-    check(Math.abs(ambushMid.state.encounter.creature.armAngle)>.1,true,'The leaping creature has moving joints');
+    const ambushMid=await sampleAction(page,page.locator('#routeChoices button').nth(1),'encounter',.2,.7,async()=>{
+      const mid=await frame(page,'ambush-mid');check(mid.state.encounter.creature.y>.2,true,'The creature physically leaps from the side passage');
+      check(Math.abs(mid.state.encounter.creature.armAngle)>.1,true,'The leaping creature has moving joints');return mid;
+    });
     await idle(page);const ambushEnd=await frame(page,'ambush-end');
     check(ambushEnd.state.encounter.revealed,true);check(ambushEnd.state.encounter.blocking,true,'The creature keeps blocking the passage after its entrance');
     check(ambushEnd.state.encounter.creature.visible,true);check(ambushEnd.state.device.gateOpen,0,'Physical bars remain closed until code passes');
@@ -153,7 +214,7 @@ function pixelDifference(a,b){
     await page.locator('#findTokenButton').click();
     check(await page.locator('#codeInput').evaluate(el=>el.value.slice(el.selectionStart,el.selectionEnd)),'friend','The actual word in the program is highlighted');
     await page.keyboard.insertText('PIX');match(await page.locator('#codeInput').inputValue(),/Hello, PIX!/);await blockedProgress(page,0);
-    await page.locator('#runButton').click();await waitAction(page,'claim',.15,.6);await page.locator('#skipAnimation').click();await result(page);
+    await sampleAction(page,page.locator('#runButton'),'claim',.15,.6,()=>page.locator('#skipAnimation').click({force:true}));await result(page);
     stats.mainRoutes++;await credit(page,0);check((await snapshot(page)).reward.claimed,true,'Skipping a completed code action still physically claims the quest reward');
     check((await snapshot(page)).actor.carrying,true,'The recovered part is carried on the actor');
     await page.reload();await ready(page);check((await room(page)).phase,'cleared','Reload preserves the chosen route and cleared gate');await credit(page,0);
@@ -165,26 +226,29 @@ function pixelDifference(a,b){
       if(i===1){await page.locator('#hintButton').click();check(await page.locator('#solutionButton').isVisible(),false,'First hint teaches before solving');await page.locator('#moreHintButton').click();check(await page.locator('#solutionButton').isVisible(),true);await page.locator('#solutionButton').click();await blockedProgress(page,i);}
       const code=await solution(page,i);
       if(i===1){
-        const before=await snapshot(page);await page.locator('#codeInput').fill(code);await page.locator('#runButton').click();await waitAction(page,'charge',.47,.75);const mid=await snapshot(page);
-        check(Math.abs(mid.actor.armAngle)>.1&&mid.actor.reach>.1,true,'PIX reaches for the lever using articulated arms');check(mid.device.lever>.1,true,'The lever itself turns');check(mid.device.energy>before.device.energy&&mid.device.energy<3,true,'Energy changes while the lever is being used');
-        await shot(page,'lever-mid','#worldArt');await result(page);check((await snapshot(page)).device.energy,3,'Lever action ends with three charged sockets');stats.animationEvidence.lever={before,mid,after:await snapshot(page)};
+        const before=await snapshot(page);await page.locator('#codeInput').fill(code);const mid=await sampleAction(page,page.locator('#runButton'),'charge',.47,.75,async()=>{
+          const mid=await snapshot(page);check(Math.abs(mid.actor.armAngle)>.1&&mid.actor.reach>.1,true,'PIX reaches for the lever using articulated arms');check(mid.device.lever>.1,true,'The lever itself turns');check(mid.device.energy>before.device.energy&&mid.device.energy<3,true,'Energy changes while the lever is being used');await shot(page,'lever-mid','#worldArt');return mid;
+        });
+        await result(page);check((await snapshot(page)).device.energy,3,'Lever action ends with three charged sockets');stats.animationEvidence.lever={before,mid,after:await snapshot(page)};
       }else if(i===2){
-        await page.locator('#codeInput').fill(code);await page.locator('#runButton').click();await waitAction(page,'step',.12,.65);await page.locator('#resetButton').click();await idle(page);
+        await page.locator('#codeInput').fill(code);await sampleAction(page,page.locator('#runButton'),'step',.12,.65,()=>page.locator('#resetButton').click({force:true}));await idle(page);
         check((await saved(page)).inventory.length,2,'Resetting mid-step never grants the abandoned reward');await gate(page,'blocked');await blockedProgress(page,i);
         check(Math.abs((await snapshot(page)).actor.x+3.15)<1e-9,true,'Reset returns the persistent actor to the safe entrance');
-        const begin=await frame(page,'movement-begin');await page.locator('#codeInput').fill(code);await page.locator('#runButton').click();await waitAction(page,'step',.16,.65);const mid=await frame(page,'movement-mid');await result(page);const end=await frame(page,'movement-end');
+        const begin=await frame(page,'movement-begin');await page.locator('#codeInput').fill(code);const mid=await sampleAction(page,page.locator('#runButton'),'step',.16,.65,()=>frame(page,'movement-mid'));await result(page);const end=await frame(page,'movement-end');
         check([begin.state.actor.id,mid.state.actor.id,end.state.actor.id],[actorId,actorId,actorId],'Movement uses one persistent actor');
         check(Math.hypot(mid.state.actor.x-begin.state.actor.x,mid.state.actor.z-begin.state.actor.z)>.02,true,'PIX is between the actual start and end positions');
         check(Math.abs(mid.state.actor.legAngle)>.01&&Math.abs(mid.state.actor.armAngle)>.01,true,'Arms and legs articulate mid-step');check(end.state.actor.x!==begin.state.actor.x||end.state.actor.z!==begin.state.actor.z,true,'The actor reaches a different world position');
         const beginToMid=pixelDifference(begin.png,mid.png),midToEnd=pixelDifference(mid.png,end.png);check(beginToMid>.001,true,'Movement begins changing actual canvas pixels');check(midToEnd>.001,true,'Rendered mid and endpoint frames differ');
         stats.animationEvidence.movement={begin:begin.state,mid:mid.state,end:end.state,pixelDifference:{beginToMid,midToEnd}};
       }else if(i===3){
-        await page.locator('#codeInput').fill(code);await page.locator('#runButton').click();await waitAction(page,'turn',.2,.7);const mid=await snapshot(page);
-        check(mid.actor.yaw>0&&mid.actor.yaw<Math.PI/2,true,'Turn interpolates through an intermediate body orientation');check(Math.abs(mid.actor.headYaw)>.02,true,'The head turns with the body');await shot(page,'turn-mid','#worldArt');await result(page);stats.animationEvidence.turn={mid,after:await snapshot(page)};
+        await page.locator('#codeInput').fill(code);const mid=await sampleAction(page,page.locator('#runButton'),'turn',.2,.7,async()=>{
+          const mid=await snapshot(page);check(mid.actor.yaw>0&&mid.actor.yaw<Math.PI/2,true,'Turn interpolates through an intermediate body orientation');check(Math.abs(mid.actor.headYaw)>.02,true,'The head turns with the body');await shot(page,'turn-mid','#worldArt');return mid;
+        });await result(page);stats.animationEvidence.turn={mid,after:await snapshot(page)};
         await page.emulateMedia({reducedMotion:'reduce'});
       }else if(i===9){
-        await page.emulateMedia({reducedMotion:'no-preference'});const before=await snapshot(page);await page.locator('#codeInput').fill(code);await page.locator('#runButton').click();await waitAction(page,'collect',.5,.7);const mid=await snapshot(page);
-        check(mid.items[0].y>before.items[0].y,true,'The crystal moves upward through PIX\'s reach');check(mid.actor.reach>.1,true,'PIX reaches for the crystal');await shot(page,'collect-mid','#worldArt');await result(page);const after=await snapshot(page);check(after.device.collected,[1,2,3],'All crystal items enter the pack');check(after.items.every(item=>!item.visible),true,'Collected meshes leave the chamber');stats.animationEvidence.collect={before,mid,after};await page.emulateMedia({reducedMotion:'reduce'});
+        await page.emulateMedia({reducedMotion:'no-preference'});const before=await snapshot(page);await page.locator('#codeInput').fill(code);const mid=await sampleAction(page,page.locator('#runButton'),'collect',.5,.7,async()=>{
+          const mid=await snapshot(page);check(mid.items[0].y>before.items[0].y,true,'The crystal moves upward through PIX\'s reach');check(mid.actor.reach>.1,true,'PIX reaches for the crystal');await shot(page,'collect-mid','#worldArt');return mid;
+        });await result(page);const after=await snapshot(page);check(after.device.collected,[1,2,3],'All crystal items enter the pack');check(after.items.every(item=>!item.visible),true,'Collected meshes leave the chamber');stats.animationEvidence.collect={before,mid,after};await page.emulateMedia({reducedMotion:'reduce'});
       }else await run(page,code);
       stats.mainRoutes++;await credit(page,i);check((await snapshot(page)).actor.id,actorId,'The actor is not replaced by command playback');
       if(i===5){await page.reload();await ready(page);check((await room(page)).phase,'cleared');await credit(page,i);actorId=(await snapshot(page)).actor.id;}
@@ -193,6 +257,25 @@ function pixelDifference(a,b){
     check(stats.mainRoutes,14);check((await saved(page)).inventory.length,14);check((await saved(page)).defense,100);check(await page.locator('#ending').isVisible(),true,'The town is saved only after all code-gated rooms');
     check((await snapshot(page)).device.beam,1,'The final ward beam is actually rendered');check((await snapshot(page)).threat.visible,false,'The restored defenses remove the approaching threat');await shot(page,'ward-complete','#worldArt');await shot(page,'ending','#ending');await shot(page,'desktop-complete');
     await page.reload();await ready(page);check(await page.locator('#ending').isVisible(),true,'Reload retains the earned ending');check((await saved(page)).inventory.length,14);await noOverflow(page);await desktop.close();
+
+    // A desktop editor can also be far below the world. An explicit Run must
+    // reveal the actual in-flight pose, then return feedback and Continue.
+    stats.desktopActionVisibility=[];
+    for(const height of [800,600]){
+      const narrowDesktop=await context({viewport:{width:1165,height}}),vp=await narrowDesktop.newPage();await installAnimationClock(vp);await vp.goto(url);await ready(vp);await choose(vp,0);
+      await vp.locator('#codeInput').fill(await solution(vp,0));await vp.locator('#codeInput').scrollIntoViewIfNeeded();
+      check(await vp.locator('#stage').evaluate(el=>{const r=el.getBoundingClientRect();return r.bottom<=0||r.top>=innerHeight;}),true,'Regression setup begins with the dungeon offscreen at the desktop editor');
+      await sampleAction(vp,vp.locator('#runButton'),'say',.2,.7,async()=>{
+        const bounds=await vp.locator('#stage').evaluate(el=>{const r=el.getBoundingClientRect();return {top:r.top,bottom:r.bottom,headerBottom:document.querySelector('.site-header').getBoundingClientRect().bottom,height:innerHeight,busy:el.classList.contains('is-running')};});
+        check(bounds.busy,true,'Visibility is checked while the actual action is running');check(bounds.top>=bounds.headerBottom&&bounds.bottom<=bounds.height,true,'Desktop Run brings the complete animated stage below the sticky header');stats.desktopActionVisibility.push(bounds);await shot(vp,'desktop-active-stage-'+height,'#stage');
+      });
+      await result(vp);
+      // The product intentionally scrolls smoothly after completion. Wait for
+      // the viewport outcome, rather than inspecting its first compositor frame.
+      await vp.waitForFunction(()=>{const panel=document.querySelector('#outputPanel').getBoundingClientRect(),button=document.querySelector('#easyContinue'),next=button.getBoundingClientRect(),top=document.querySelector('.site-header').getBoundingClientRect().bottom;return !button.hidden&&panel.top>=top&&panel.bottom<=innerHeight&&next.top>=top&&next.bottom<=innerHeight;},null,{timeout:5000});
+      check(await vp.locator('#outputPanel').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=document.querySelector('.site-header').getBoundingClientRect().bottom&&r.bottom<=innerHeight;}),true,'Completed desktop action returns feedback to the viewport');check(await vp.locator('#nextButton').isEnabled(),true,'The visible result enables Continue');
+      check(await vp.locator('#easyContinue').evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=document.querySelector('.site-header').getBoundingClientRect().bottom&&r.bottom<=innerHeight;}),true,'Completion also reveals the large Continue control');await narrowDesktop.close();
+    }
 
     // Every alternative route remains a genuine coding encounter. Retrying and
     // returning to the junction preserve equipment, but cannot bypass its gate.

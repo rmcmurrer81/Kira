@@ -11,7 +11,7 @@ This revision replaces the prior flat scene with a locally rendered, stylized 3D
 - Creature geometry: [wraith](creature-wraith.png), [hound](creature-hound.png), [crawler](creature-crawler.png), [lurker](creature-lurker.png), [sentinel](creature-sentinel.png)
 - [Mobile 3D view](mobile.png), [Canvas fallback](mobile-fallback.png), [restored wards](ward-complete.png)
 
-These are browser screenshots of the implemented renderer and game, not proposed artwork. Action QA samples position, yaw, joints, device and inventory state at beginning/middle/end, preserves actor identity, and compares decoded image pixels. The final frozen-source Edge run passed 966 assertions; see browser-result.json. Walking changed decoded image pixels by 18.03% from begin to middle and 18.66% from middle to end, with a stable actor identity and changing articulated joints.
+These are browser screenshots of the implemented renderer and game, not proposed artwork. Action QA samples position, yaw, joints, device and inventory state at beginning/middle/end, preserves actor identity, and compares decoded image pixels. The final frozen-source Edge run passed 1,002 assertions; see browser-result.json. Walking changed decoded image pixels by 21.80% from begin to middle and 22.36% from middle to end, with a stable actor identity and changing articulated joints.
 
 ## Adventure and learning
 
@@ -28,3 +28,9 @@ The shared arcade regression entry point calls the new Code Quest contracts; the
 ## Limits
 
 Graphics are stylized procedural 3D with a Canvas fallback, not cinematic or photorealistic production assets. Mobile checks use emulation; physical iOS/Android devices and audible speaker listening are untested. Save normalization prevents accidental out-of-order progress; browser-local saves are not authenticated or cheat-proof. The teaching language remains a small bounded JavaScript subset, not general JavaScript execution.
+
+## Desktop action visibility and deterministic capture
+
+Version 20261102-stoneward2 reveals the full action stage on explicit Run/route actions at desktop widths as well as mobile, then returns to feedback and Continue. The stage fits short desktop viewports above the sticky header. Browser checks confirm active-scene and settled result/CTA visibility at 1165x800 and 1165x600. See desktop-active-stage-800.png and desktop-active-stage-600.png. Typing does not trigger automatic scrolling.
+
+CI previously missed a brief animation window after a delayed click acknowledgment. Midpoint samples now pause the browser clock before the real pointer action, advance the actual RAF/performance timeline, and hold the real GPU-rendered pose through capture. Position, joint and decoded-pixel assertions remain. A separate stress run passed 47 assertions across three repetitions at 8x CPU slowdown with a deliberate 1500ms acknowledgment delay. This is controlled animation verification, not a wall-clock frame-rate benchmark.

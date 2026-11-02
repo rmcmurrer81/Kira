@@ -3,7 +3,7 @@
 (() => {
   "use strict";
   const $=id=>document.getElementById(id), MISSIONS=window.CodeQuestMissions, ROUTES=window.CodeQuestEncounters;
-  const STORE="kira-code-quest-stoneward-v3", VERSION="20261102-stoneward1";
+  const STORE="kira-code-quest-stoneward-v3", VERSION="20261102-stoneward2";
   let saved=null;try{saved=JSON.parse(localStorage.getItem(STORE)||"null");}catch(_){}
   const quest=window.CodeQuestState.create({missions:MISSIONS,encounters:ROUTES,saved}), state=quest.data;
   const voice=window.CodeQuestVoice.init({toggle:$("voiceToggle"),replay:$("voiceReplay"),status:$("voiceStatus")});
@@ -32,6 +32,21 @@
     $("stage").classList.remove("is-running");$("skipAnimation").hidden=true;
   }
   function resetWorld(){world?.reset(worldOptions());}
+  function revealAction(){
+    const stage=$("stage"),bounds=stage.getBoundingClientRect();
+    const header=document.querySelector(".site-header")?.getBoundingClientRect();
+    const safeTop=Math.max(16,(header?.bottom||0)+12),safeBottom=innerHeight-16;
+    if(bounds.top<safeTop||bounds.bottom>safeBottom){
+      const desiredTop=safeTop+Math.max(0,(safeBottom-safeTop-bounds.height)/2);
+      // Scroll the document directly: nested overflow containers and asymmetric
+      // scroll margins can move scrollIntoView's center below a short viewport.
+      window.scrollBy({top:bounds.top-desiredTop,behavior:"instant"});
+    }
+  }
+  function revealResult(){
+    const panel=$("outputPanel"),bounds=panel.getBoundingClientRect();
+    if(bounds.top<90||bounds.bottom>innerHeight-20)panel.scrollIntoView({behavior:reduced()?"instant":"smooth",block:"center"});
+  }
   function progress(){
     const count=quest.completedCount(),active=route(),open=quest.gateOpen();
     $("chapterCount").textContent="Mission "+(state.level+1)+" of "+MISSIONS.length;
@@ -109,7 +124,7 @@
     const active=route(),ticket=generation;busy=true;progress();
     $("worldStatus").textContent=active.blocked;
     voice.read(quest.gateOpen()?"You return to a passage you already cleared. "+active.clear:active.narration+" "+mission().goal);
-    if(matchMedia("(max-width:1000px)").matches)$("stage").scrollIntoView({behavior:"instant",block:"center"});
+    revealAction();
     await graphicsReady;if(ticket!==generation)return;
     if(quest.gateOpen())resetWorld();
     else{const opts=worldOptions();world.reset({...opts,encounter:{...opts.encounter,revealed:false}});await world.enterEncounter({route:active.kind});}
@@ -180,7 +195,7 @@
     setOutput(ok?"success":"error",ok?"The passage is yours":"The encounter needs another idea",message,actions);
     save();progress();cue(ok?"win":"wrong");
     if(quest.completedCount()===MISSIONS.length&&quest.gateOpen())ending(false);
-    if(matchMedia("(max-width:1000px)").matches)$("outputPanel").scrollIntoView({behavior:reduced()?"instant":"smooth",block:"center"});
+    revealResult();
   }
   async function run(){
     if(busy)return;
@@ -189,7 +204,7 @@
     if(code.length>6000){setOutput("error","That program is too long","Keep your quest program to 6,000 characters.");return;}
     stopActive();quest.setDraft(code);save();voice.stop();busy=true;progress();$("pixSpeech").hidden=true;
     $("stage").classList.add("is-running");
-    if(matchMedia("(max-width:1000px)").matches)$("stage").scrollIntoView({behavior:"instant",block:"center"});
+    revealAction();
     setOutput("ready","PIX faces the encounter","Each attempt starts from the safe entrance. Your supplies are kept.");
     const ticket=generation;await graphicsReady;if(ticket!==generation)return;resetWorld();
     try{
