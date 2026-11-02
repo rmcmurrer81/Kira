@@ -40,6 +40,8 @@ jobs:
         run: node tests/test-code-quest-browser.cjs
       - name: Test one-screen desktop layout, saved-draft recovery and accessible reading dialogs
         run: node tests/test-code-quest-screen.cjs
+      - name: Test current-draft guidance, helper preservation and earned-progress wording
+        run: node tests/test-code-quest-guidance.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -47,3 +49,4 @@ jobs:
           path: |
             qa/code-quest-stoneward
             qa/code-quest-screen
+            qa/code-quest-guidance

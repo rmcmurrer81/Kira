@@ -3,12 +3,12 @@
 (() => {
   "use strict";
   const $=id=>document.getElementById(id), MISSIONS=window.CodeQuestMissions, ROUTES=window.CodeQuestEncounters;
-  const STORE="kira-code-quest-stoneward-v3", VERSION="20261102-stoneward3";
+  const STORE="kira-code-quest-stoneward-v3", VERSION="20261102-stoneward4";
   let saved=null;try{saved=JSON.parse(localStorage.getItem(STORE)||"null");}catch(_){}
   const quest=window.CodeQuestState.create({missions:MISSIONS,encounters:ROUTES,saved}), state=quest.data;
   const voice=window.CodeQuestVoice.init({toggle:$("voiceToggle"),replay:$("voiceReplay"),status:$("voiceStatus")});
   const effects=window.KiraArcadeVoice.create();
-  let world=null,graphicsReady,worker=null,watchdog=null,generation=0,busy=false,hintStage=0,skipRequested=false,selectedChoice=null;
+  let world=null,graphicsReady,worker=null,watchdog=null,generation=0,busy=false,hintStage=0,skipRequested=false,selectedChoice=null,checkedDraft=null;
   const reduced=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
   const mission=()=>MISSIONS[state.level];
   const room=()=>quest.room();
@@ -51,6 +51,40 @@
     const panel=$("outputPanel"),bounds=panel.getBoundingClientRect();
     if(bounds.top<90||bounds.bottom>innerHeight-20)panel.scrollIntoView({behavior:reduced()?"instant":"smooth",block:"center"});
   }
+  // Draft wording is deliberately neutral. A changed comment, wrong program or
+  // incomplete edit is "untested", never evidence of a solved encounter.
+  function instruction(){
+    const m=mission(),code=$("codeInput").value,active=route(),changed=code!==m.starter;
+    const checked=checkedDraft&&checkedDraft.level===state.level&&checkedDraft.route===active?.id&&checkedDraft.code===code;
+    const status=checked?(checkedDraft.ok?"verified":"retry"):quest.gateOpen()?"cleared-earlier":changed?"untested":"starter";
+    let next;
+    if(status==="verified")next="Your code passed. Press Continue to reach the next encounter.";
+    else if(status==="retry")next=quest.gateOpen()?"This run needs work. Your earlier reward is safe; retry or Continue.":"This run needs work. Review the feedback or Teach me / hints, then try again.";
+    else if(status==="cleared-earlier")next="Passage cleared earlier. Run to check this draft, or Continue with your reward.";
+    else if(!active)next=changed?"Your draft is saved. Choose a passage, then Run to check it.":"First: choose a passage. Then make the coding change and Run.";
+    else next=changed?"Your draft is saved. Press Run to check it.":"Next: make the coding change below, then press Run my code.";
+    const goal=status==="starter"||(!m.guided&&status==="untested")?m.goal:next;
+    return {status,changed,next,goal};
+  }
+  function storyCopy(){
+    let story=mission().story;
+    if(instruction().changed){
+      if(state.level===0)story=story.replace(" Change friend to PIX.","");
+      if(state.level===1)story=story.replace("Give crystals the value 3; the lantern will hold back the things below.","The lantern needs three crystals to hold back the things below.");
+    }
+    return story;
+  }
+  function currentNarration(){return storyCopy()+" "+$("encounterText").textContent+" "+instruction().next;}
+  function syncInstructions(){
+    const info=instruction();$("goalText").textContent=info.goal;
+    $("currentAction").textContent=busy?"Watch the encounter. Your code and supplies are safe.":info.next;
+    $("storyText").textContent=storyCopy();
+    $("lessonText").textContent=state.level===0&&info.changed?
+      'A string is text inside quotation marks. say() makes PIX speak that text. The starting example used friend; its working example uses PIX. Your draft is kept. '+info.next:mission().lesson;
+    guided();
+    if(!$("hintBox").hidden)updateHint();
+    voice.remember(currentNarration());
+  }
   function progress(){
     const count=quest.completedCount(),active=route(),open=quest.gateOpen();
     $("chapterCount").textContent="Mission "+(state.level+1)+" of "+MISSIONS.length;
@@ -63,9 +97,7 @@
     $("runButton").disabled=busy;$("runButton").textContent=busy?"PIX is acting...":"Run my code";
     const step=!active?"route":open?"continue":"code";
     $("flowSteps").querySelectorAll("li").forEach(li=>{if(li.dataset.step===step)li.setAttribute("aria-current","step");else li.removeAttribute("aria-current");});
-    $("currentAction").textContent=busy?"Watch the encounter. Your code and supplies are safe.":!active?
-      (state.drafts[state.level]?"Your edit is saved. Choose either passage above, then Run your code.":"First: choose either passage above. Then edit and Run your code."):
-      open?"Passage cleared. Press Continue to reach the next encounter.":"Next: make the coding change below, then press Run my code.";
+    syncInstructions();
     $("nextButton").setAttribute("aria-describedby","currentAction");
     $("startLessonButton").textContent=active?"Face this encounter: use code ↓":"Begin here: choose a passage ↓";
     $("enterPuzzleButton").hidden=!active;$("enterPuzzleButton").disabled=busy;
@@ -108,12 +140,18 @@
     }));
   }
   function guided(){
-    const g=mission().guided;$("guidedStep").hidden=!g;if(!g)return;
-    $("guidedText").textContent=state.level===0?'say() speaks the text inside quotes. Keep the punctuation; change only friend to PIX.':"Try one small edit. "+g.label;
-    $("guidedButton").textContent=g.label;$("workedExample").replaceChildren();
-    if(state.level===0){const line=document.createElement("pre"),mark=document.createElement("mark");mark.textContent="friend";line.append('say("Hello, ',mark,'!");');$("workedExample").append(line);}
-    const from=document.createElement("code"),to=document.createElement("code"),arrow=document.createElement("span");from.textContent=g.before;to.textContent=g.after;arrow.textContent="→";$("workedExample").append(from,arrow,to);
-    const explanation=document.createElement("p");explanation.textContent=state.level===0?'say("Hello, PIX!"); passes a text message to say(). Keep the quotation marks and punctuation.':mission().lesson;$("workedExample").append(explanation);
+    const m=mission(),g=m.guided,info=instruction();$("guidedStep").hidden=!g;$("guidedStep").dataset.status=info.status;if(!g)return;
+    const original=!info.changed;
+    $("guidedText").textContent=original?(state.level===0?'say() speaks the text inside quotes. Keep the punctuation; change only friend to PIX.':"Try one small edit. "+g.label):info.next;
+    $("guidedButton").textContent=original?g.label:"See original example";
+    $("findTokenButton").textContent=original?"Point to the part I change":"Look at my draft";
+    $("workedExample").replaceChildren();
+    const label=document.createElement("strong");label.textContent=original?"Starting example":"Original working example (reference)";$("workedExample").append(label);
+    const line=document.createElement("pre");
+    if(original&&state.level===0){const mark=document.createElement("mark");mark.textContent="friend";line.append('say("Hello, ',mark,'!");');}
+    else line.textContent=original?m.starter:m.solution;
+    $("workedExample").append(line);
+    const explanation=document.createElement("p");explanation.textContent=original?m.lesson:"This example explains the original task. Your current draft is kept; Run checks what it does. "+info.next;$("workedExample").append(explanation);
   }
   function render(announce=true){
     stopActive();voice.stop();hintStage=0;const m=mission();
@@ -125,17 +163,17 @@
     $("board").textContent="PIX waits at the entrance. "+m.quest.need;
     guided();renderChoices();renderRoutes();progress();save();
     const active=route();
-    setOutput(quest.gateOpen()?"success":"ready",quest.gateOpen()?"This passage is open":active?"Your code can open the way":"Choose your passage first",
-      quest.gateOpen()?m.explanation+" The reward is in your inventory. Continue when ready.":active?m.goal+" Use the highlighted edit or choose a command.":"Choose either passage at the top of this workspace. Your code is saved; selecting a route will keep your edit.");
+    setOutput(instruction().status==="verified"?"success":"ready",quest.gateOpen()?"Passage cleared earlier":active?"Your code can open the way":"Choose your passage first",
+      quest.gateOpen()?"This passage was cleared earlier. Your reward is safe. Run to check this draft, or Continue.":instruction().next);
     const ticket=generation;graphicsReady?.then(()=>{if(ticket===generation)resetWorld();});
-    if(announce)voice.read(m.story+" "+(active?(quest.gateOpen()?active.clear:active.narration+" "+m.goal):"Two passages wait ahead. Choose a route."));
+    if(announce)voice.read(currentNarration());
     if(quest.completedCount()===MISSIONS.length&&quest.gateOpen()&&state.level===MISSIONS.length-1)ending(false);
   }
   async function chooseRoute(id){
     stopActive();if(!quest.chooseRoute(id))return;render(false);
     const active=route(),ticket=generation;busy=true;progress();
     $("worldStatus").textContent=active.blocked;
-    voice.read(quest.gateOpen()?"You return to a passage you already cleared. "+active.clear:active.narration+" "+mission().goal);
+    voice.read(quest.gateOpen()?"You return to a passage you already cleared. "+active.clear:active.narration+" "+instruction().next);
     revealAction();
     await graphicsReady;if(ticket!==generation)return;
     if(quest.gateOpen())resetWorld();
@@ -158,7 +196,7 @@
       if(a.type==="move"){
         for(let n=0;n<a.value;n++){
           if(dir==="east")x++;else if(dir==="west")x--;else if(dir==="south")y++;else y--;
-          if(x<0||x>6||y<0||y>3)return{actions,features,x,y,dir,frames,path,error:"That route reaches the edge of the safe path. "+m.goal};
+          if(x<0||x>6||y<0||y>3)return{actions,features,x,y,dir,frames,path,error:"That route reaches the edge of the safe path. Review your movement commands, or open Teach me / hints for the original example."};
           path.push({x,y,dir});frames.push({pos:{x,y,dir},action:{type:"step",value:n+1},path:path.slice()});
         }
       }else frames.push({pos:{x,y,dir},action:a,path:path.slice()});
@@ -188,11 +226,12 @@
     }
     if(ticket!==generation)return;
     const ok=!sim.error&&m.check(sim);
-    await complete(ok,sim.error||(ok?m.success:"The obstacle still blocks your way. "+m.goal),payload.actions,ticket);
+    await complete(ok,sim.error||(ok?m.success:"This run did not clear the encounter. Review Teach me / hints for the original example, then try your code again."),payload.actions,ticket);
   }
   async function complete(ok,message,actions,ticket){
     await world.complete({...worldOptions(),success:ok});
     if(ticket!==generation)return;
+    checkedDraft={level:state.level,route:route()?.id,code:$("codeInput").value,ok};
     if(ok)quest.solve();else quest.fail();
     busy=false;skipRequested=false;$("skipAnimation").hidden=true;$("stage").classList.remove("is-running");$("stage").classList.toggle("is-success",ok);
     if(selectedChoice)message=selectedChoice.why+" "+message;
@@ -202,7 +241,7 @@
       $("encounterText").textContent=active.clear;
       voice.read(active.clear+" You secure "+m.quest.reward.name+". Town protection is now "+state.defense+" percent. "+(state.defense===100?"The stormwraith cannot reach the town.":"Another passage leads deeper. Continue when you are ready."));
     }else{message+=" Nothing is lost. Try another change, ask Iris for help, or retreat to the junction.";
-      voice.read("The passage remains blocked. PIX and your supplies are safe. "+m.goal+" Ask for a hint, or return to the junction.");
+      voice.read("This run needs another idea. PIX and your supplies are safe. Review the feedback or Teach me / hints, then try again.");
     }
     $("easyInstruction").textContent=selectedChoice?selectedChoice.why+(ok?" The way is open.":" Try a different command."):
       ok?"Your code opened the way. Continue the quest.":"PIX is safe. Try again or use a hint.";
@@ -229,11 +268,18 @@
       current.postMessage({code});
     }catch(_){finish({ok:false,error:"This browser blocked the teaching runner. Try a current browser."},ticket);}
   }
+  function updateHint(){
+    const info=instruction(),original=!info.changed;
+    $("hintTitle").textContent=original?(hintStage?"Iris shows the exact change":"The game master's nudge"):(hintStage?"Original example (reference)":"Your current draft");
+    $("hintText").textContent=original?mission().hints[hintStage]:hintStage?"Original working example: "+mission().solution+" This is a reference, not a request to replace your current draft. "+info.next:info.next+" Editing alone does not clear the encounter; Run checks your instructions.";
+    $("moreHintButton").textContent=original?"Show the exact change":"Show the original example";
+    $("moreHintButton").hidden=hintStage>0;$("solutionButton").hidden=hintStage===0;
+    $("solutionButton").textContent=original?"Put a working example in my editor":"Use this example (replaces my draft)";
+  }
   function hint(stage=0){
     document.querySelectorAll(".cq-dialog[open]").forEach(d=>{if(d.id!=="helpDialog")d.close();});openDialog("helpDialog");
     hintStage=stage;$("hintBox").hidden=false;$("hintButton").setAttribute("aria-expanded","true");
-    $("hintTitle").textContent=stage?"Iris shows the exact change":"The game master's nudge";$("hintText").textContent=mission().hints[stage];
-    $("moreHintButton").hidden=stage>0;$("solutionButton").hidden=stage===0;
+    updateHint();
     voice.read("Here is a way through this encounter. "+$("hintText").textContent);
   }
   function goTo(index){
@@ -242,7 +288,7 @@
   }
   function ending(show=true){$("ending").hidden=false;if(show){closeDialogs();openDialog("ending");}}
   function restart(){if(!confirm("Start a new Stoneward quest? Your passages, quest rewards and code for this adventure will reset."))return;
-    closeDialogs();stopActive();quest.restart();render();reveal($("encounterPanel"));
+    closeDialogs();stopActive();checkedDraft=null;quest.restart();render();reveal($("encounterPanel"));
   }
   function jumpToPuzzle(){
     if(!route()){reveal($("encounterPanel"));$("routeChoices").querySelector("button")?.focus({preventScroll:true});return;}
@@ -254,18 +300,23 @@
   $("codeInput").addEventListener("input",()=>{
     selectedChoice=null;if(busy){stopActive();resetWorld();setOutput("ready","Your new draft is ready","Run the changed code to face this encounter again.");}
     quest.setDraft($("codeInput").value);save();progress();
+    setOutput("ready","Your current draft",instruction().next);
   });
   $("codeInput").addEventListener("keydown",e=>{if(e.key==="Enter"&&(e.ctrlKey||e.metaKey)){e.preventDefault();selectedChoice=null;run();}});
   $("guidedButton").addEventListener("click",()=>{
-    const m=mission(),g=m.guided;if(!g)return;stopActive();selectedChoice=null;
-    let at=$("codeInput").value.lastIndexOf(g.before);if(at<0){$("codeInput").value=m.starter;at=$("codeInput").value.lastIndexOf(g.before);}
+    const m=mission(),g=m.guided;if(!g)return;
+    if(instruction().changed){hint(1);return;}
+    stopActive();selectedChoice=null;
+    let at=$("codeInput").value.lastIndexOf(g.before);if(at<0)return;
     if(at>=0)$("codeInput").setRangeText(g.after,at,at+g.before.length,"select");
     quest.setDraft($("codeInput").value);save();progress();resetWorld();
-    const message="You changed "+g.before+" to "+g.after+". "+m.lesson+" Run the code to see its effect on the encounter.";
+    const message="Your edited draft is saved. "+instruction().next;
     setOutput("ready","One edit made. Now use it.",message);voice.read(message);$("codeInput").focus();
   });
   $("findTokenButton").addEventListener("click",()=>{
-    const g=mission().guided;if(!g)return;const editor=$("codeInput"),at=editor.value.lastIndexOf(g.before);
+    const g=mission().guided;if(!g)return;const editor=$("codeInput");
+    if(instruction().changed){editor.focus({preventScroll:true});reveal(editor);setOutput("ready","Your current draft",instruction().next);voice.read(instruction().next);return;}
+    const at=editor.value.lastIndexOf(g.before);
     if(at<0){setOutput("ready","Reset code can bring that part back","Keep experimenting, or reset to the original example.");return;}
     editor.focus();editor.setSelectionRange(at,at+g.before.length);reveal(editor);
     const message="The highlighted part is "+g.before+". Type "+g.after+" to replace it, then run your code.";
@@ -275,9 +326,9 @@
   $("hintButton").addEventListener("click",()=>hint(0));$("easyHint").addEventListener("click",()=>hint(0));$("moreHintButton").addEventListener("click",()=>hint(1));
   $("solutionButton").addEventListener("click",()=>{
     closeDialogs();stopActive();selectedChoice=null;$("codeInput").value=mission().solution;quest.setDraft(mission().solution);save();progress();resetWorld();
-    setOutput("ready","A worked plan is in the editor",mission().lesson+" Run it to see the encounter respond.");voice.read(mission().lesson+" Now run the code.");$("codeInput").focus();
+    setOutput("ready","Original example copied",instruction().next);voice.read(instruction().next);$("codeInput").focus();
   });
-  $("resetButton").addEventListener("click",()=>{stopActive();state.drafts[state.level]=null;render();$("codeInput").focus();});
+  $("resetButton").addEventListener("click",()=>{stopActive();checkedDraft=null;state.drafts[state.level]=null;render();$("codeInput").focus();});
   $("previousButton").addEventListener("click",()=>goTo(state.level-1));
   $("nextButton").addEventListener("click",()=>{if(!busy&&quest.gateOpen())state.level===MISSIONS.length-1?ending():goTo(state.level+1);});
   $("easyContinue").addEventListener("click",()=>$("nextButton").click());
@@ -288,7 +339,7 @@
   $("choiceRouteButton").addEventListener("click",()=>{closeDialogs();jumpToPuzzle();});
   $("helpDialog").addEventListener("close",()=>$("hintButton").setAttribute("aria-expanded","false"));
   $("storyReplay").addEventListener("click",()=>{
-    voice.read(mission().story+" "+$("encounterText").textContent);
+    voice.read(currentNarration());
     if(!voice.isEnabled())$("voiceReplay").click();
   });
   document.querySelectorAll("[data-close-dialog]").forEach(button=>button.addEventListener("click",()=>button.closest("dialog").close()));

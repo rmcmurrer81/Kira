@@ -105,16 +105,18 @@
       }
       next();
     }
+    // Refresh Replay's text without speaking on each editor input.
+    function remember(text) { if (typeof text === 'string') latest = text.trim(); }
     function read(text) {
       if (typeof text !== 'string') return;
-      latest = text.trim();
+      remember(text);
       if (enabled) speak();
     }
     if (!supported) {
       if (toggle) toggle.disabled = true;
       if (replay) replay.disabled = true;
       updateStatus('Speech is unavailable in this browser. Your adventure and all its text still work.');
-      return {read, stop, isEnabled: () => false};
+      return {read, remember, stop, isEnabled: () => false};
     }
     toggle.addEventListener('click', () => {
       enabled = !enabled;
@@ -135,7 +137,7 @@
       updateStatus();
     });
     updateStatus();
-    return {read, stop, isEnabled: () => enabled};
+    return {read, remember, stop, isEnabled: () => enabled};
   }
   window.CodeQuestVoice = Object.freeze({init});
 })();

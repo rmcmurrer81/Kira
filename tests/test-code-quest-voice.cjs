@@ -35,6 +35,23 @@ function setup({voices = [], supported = true, fail = false} = {}) {
     voiceschanged() { voiceEvents.get('voiceschanged')?.(); }};
 }
 const voice = (name, lang = 'en-US', isDefault = false) => ({name, lang, default: isDefault});
+// Editing refreshes the next Replay without interrupting speech or autoplaying.
+{
+  const s = setup();
+  s.api.remember('Your draft is saved. Choose a passage, then Run to check PIX.');
+  assert.equal(s.spoken.length, 0);
+  s.replay.click();
+  assert.match(s.spoken[0].text, /Run to check picks/);
+  const calls = s.spoken.length, canceled = s.synth.canceled;
+  s.api.remember('The current draft is untested. Run to check it.');
+  assert.equal(s.spoken.length, calls);
+  assert.equal(s.synth.canceled, canceled);
+  s.replay.click();
+  assert.equal(s.spoken.at(-1).text, 'The current draft is untested. Run to check it.');
+  const unsupported = setup({supported:false});
+  unsupported.api.remember('Text guidance remains available.');
+  assert.equal(unsupported.spoken.length, 0);
+}
 function finishSpeech(s) {
   for (let index = 0; index < s.spoken.length; index++) {
     assert.ok(index < 100, 'speech chunking must terminate');

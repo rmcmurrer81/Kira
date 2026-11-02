@@ -1,0 +1,29 @@
+{
+  "browser": "156.0.4314.58",
+  "stats": {
+    "assertions": 508,
+    "changedDrafts": 19,
+    "verifiedMissions": 3,
+    "screenshots": [
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-guidance\\saved-pix-no-route.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-guidance\\saved-pix-route.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-guidance\\verified-pix.png",
+      "C:\\Users\\robmc\\Documents\\Codex\\2026-11-01\\task-3\\code-quest-screen\\qa\\code-quest-guidance\\edited-after-success-reload.png"
+    ]
+  },
+  "sources": {
+    "index.html": "146e642fac12a3393a0e67417b67ae97cbe52b736560129bc491cf8a48e5b9b0",
+    "game.css": "eb686e275e3392203218c081f0dd40d0ce65cb21e7016242398cdd9ba18961b2",
+    "screen.css": "9e4748c46187d9dc3e346f9c10bb5ca2214fa848f444740f333273e195af5688",
+    "game.js": "b6c0da803141b2f6342a7bbe85549103af3b275f8c481d77d90ac11a45f85477",
+    "scene.js": "808683d4c0b795b5c8a5f4ca1a217044fde6b071ddd63a8d28e4c2112b093140",
+    "scene-fallback.js": "fe378b8bf53ab79bd925e480a5132ed4bfa700260548c57d4a1971697422424a",
+    "missions.js": "4437c73a1b77ec55104550e7bf5f378392d81c8d158c56972544d6bb7c2e04b4",
+    "encounters.js": "e0e18a84c89e51f14dd457f1d0e04dd2ff6dcff81b102258493200216a1f6a25",
+    "quest-state.js": "379ac9c01009df08754d7809aa834d1e8eb844711bd4bbb3e267d27e7c00bb10",
+    "choices.js": "9645fa796f9a56b85001e0291c0be84627b0b1f569b95dced9608fff0b6261d8",
+    "voice.js": "72afe4e010026be417f313ffd58230dc3b3f2c395e3723cadc41a305639dc81d",
+    "sandbox.js": "e6e2c139bc95991a8b0b6b261eaff03baef7e55a76de74f62b3d89192b953efc"
+  },
+  "scope": "Actual isolated Edge UI and bounded Worker. Speech API is mocked; audible speech and physical devices are not verified."
+}
