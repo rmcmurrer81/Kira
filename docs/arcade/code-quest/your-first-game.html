@@ -138,25 +138,70 @@ h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.18;letter-spacing:-.03em;mar
 @media(max-width:550px){.world{height:265px}.fox-character{left:17%;transform:scale(.88);transform-origin:bottom center}.beacon{right:5%;transform:scale(.83);transform-origin:bottom center}.tree.t5{left:79%}.firefly{width:23px;height:23px}.audio-tools button{flex-grow:1}}
 @media(prefers-reduced-motion:reduce){.world *, .world *:before, .world *:after,.content.story-enter{animation:none!important;transition:none!important}}
 
+
+/* Visible goals, hands-on plans, and feedback: no click-through victories. */
+[hidden]{display:none!important}
+.mission-brief{margin:0 0 20px;padding:14px 18px;border-left:3px solid #f5d38f;background:#172e48;border-radius:0 12px 12px 0;color:#e7f0f9;font-size:.95rem}
+.mission-brief span{font-size:.82rem;color:#c2d7e5}
+.audio-tools{margin-bottom:14px}.audio-tools #voiceStatus{max-width:100%}
+.world{height:320px}.firefly{min-width:44px;min-height:44px;border:13px solid transparent;background-clip:padding-box;box-shadow:0 0 18px #ffe788;background-color:#ffe788}
+.world[data-scene="trail"]{background:linear-gradient(#122b39,#235958 69%,#19372c 70%)}
+.world[data-scene="trail"] .forest{opacity:1}
+.world[data-scene="trail"] .fox-character{left:25%}
+.world[data-beam="forest"] .beacon-light{background:#b1e7e3;box-shadow:0 0 35px 12px #a5e8e8}
+.world[data-beam="home"] .beacon-light{background:#ffe9a2;box-shadow:0 0 45px 18px #ffe9a2}
+.beacon-rays{position:absolute;right:13%;bottom:130px;width:420px;height:130px;z-index:2;background:linear-gradient(270deg,#ffedb966,transparent);clip-path:polygon(100% 46%,0 0,0 100%);opacity:0;transform-origin:right center;transition:opacity .5s,transform .8s;pointer-events:none}
+.world[data-beam="forest"] .beacon-rays{opacity:.7;transform:rotate(28deg)}
+.world[data-beam="home"] .beacon-rays,.world[data-scene="ending"] .beacon-rays{opacity:1;transform:rotate(-12deg)}
+.world[data-scene="ending"] .beacon-rays{animation:beacon-sweep 8s ease-in-out infinite alternate}
+.river-route{position:absolute;left:18%;right:15%;bottom:93px;display:flex;justify-content:space-around;z-index:5;gap:15px}
+.river-route span{background:#20354d;border:2px solid #e6d39f;border-radius:50%;color:#fff5ca;display:grid;place-items:center;width:42px;height:42px;font-size:1.3rem;box-shadow:0 3px 12px #0008}
+.river-route span.crossed{background:#287f71;box-shadow:0 0 22px #a8ffdd}
+.world[data-scene="river"] .fox-character{left:8%;bottom:107px;transform:scale(.72);animation:none;transition:left .55s ease}
+.world[data-scene="river"][data-step="1"] .fox-character{left:28%}
+.world[data-scene="river"][data-step="2"] .fox-character{left:48%}
+.world[data-scene="river"][data-step="3"] .fox-character{left:68%}
+.objective{border-left:3px solid #99dacb;padding:8px 13px;background:#1f3c50;color:#f1fbf7;border-radius:0 8px 8px 0;font-weight:750;margin:0 0 18px}
+.challenge{padding:18px;margin-bottom:18px;background:#0d2038;border:1px solid #58768f;border-radius:16px}
+.challenge h3{margin:0 0 8px;font-size:1rem}.challenge p{margin:8px 0 14px;color:#cbdce8;font-size:.92rem}
+.clue-strip,.plan-strip{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:13px 0}
+.clue-tile,.plan-tile{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:7px 13px;border-radius:10px;background:#294760;border:1px solid #769bb6;color:#fff2c4;font-weight:750}
+.clue-arrow{color:#acddcb}.plan-tile{min-width:70px;background:#183b47;border-style:dashed;color:#d9e8ee}
+.route-preview{position:relative;height:72px;margin:15px 0 5px;border-radius:12px;overflow:hidden;background:linear-gradient(#193d50 66%,#4b9ca2 67%,#1b596b);border:1px solid #537e91}.route-preview:before{content:"";position:absolute;left:6%;right:5%;height:6px;bottom:19px;background:#cfb888;border-radius:4px}.route-stone{position:absolute;bottom:10px;transform:translateX(-50%);width:27px;height:25px;display:grid;place-items:center;background:#3e667b;color:#fff2be;border:1px solid #e2c998;border-radius:7px;font-size:.75rem}.route-fox{position:absolute;left:8%;bottom:22px;transform:translateX(-50%);font-size:2.1rem;line-height:1;transition:left .5s ease}.challenge .route-caption{font-size:.8rem;color:#bbd5e3;margin:5px 0 14px}
+.button-row{display:flex;gap:9px;flex-wrap:wrap}.challenge button{border:1px solid #7297a7;color:#eefbff;background:#254960;border-radius:10px;min-height:46px;padding:10px 15px;font:inherit;font-weight:750}
+.challenge button:hover:not(:disabled){background:#34667a}.challenge button:disabled{opacity:.45;cursor:default}
+.challenge button.primary{background:#f0ce8c;color:#13263b;border-color:#f0ce8c}.challenge button[aria-pressed="true"]{background:#2d6b60;border-color:#bbf2d1}
+.feedback{border:1px solid #e4c68d;background:#3d3d3b;color:#fff1d6;border-radius:12px;padding:13px 16px;margin:0 0 18px}
+.feedback.good{background:#1f4e4a;border-color:#8bceba;color:#e3fff5}
+.choices:empty{display:none}.choice small{display:block;font-size:.82rem;font-weight:450;color:#c3dae8;margin-top:3px}
+.choice .choice-label{flex:1;color:#f6fbff}.choice:disabled{opacity:.5;cursor:default}
+.learning{font-size:.82rem;color:#bdd4e5;margin-top:20px}.learning summary{cursor:pointer;min-height:44px;padding:8px 0}.learning p{margin:8px 0}.learning code{display:block;color:#f3d999;overflow-wrap:anywhere;background:#0a1c30;padding:12px;border-radius:9px}
+.finish-list{padding-left:20px;margin:8px 0}.finish-list li{margin:6px 0}.companion-badge{position:absolute;left:42%;bottom:110px;z-index:9;font-size:2rem;animation:bob 2s ease-in-out infinite;pointer-events:none}
+@keyframes beacon-sweep{to{transform:rotate(7deg)}}
+@media(max-width:550px){.world{height:275px}.mission-brief{font-size:.86rem}.audio-tools button{font-size:.86rem;padding:9px 12px}.content{padding:22px 17px}.challenge{padding:14px}.river-route{bottom:94px}.river-route span{width:36px;height:36px}.beacon-rays{right:7%}.caption,.glow-meter{font-size:.65rem;max-width:48%}.fox-character{max-width:105px}.clue-tile,.plan-tile{padding:6px 9px}.story{line-height:1.65}}
+@media(prefers-reduced-motion:reduce){.route-fox,.world,.world *, .world *:before,.world *:after,.content.story-enter{animation:none!important;transition:none!important}}
+
 </style>
 </head>
 <body>
 <main class="wrapper">
 <div class="header"><span class="logo">✦ KIRA LABS · YOUR FIRST GAME</span><a class="back" href="https://kiralabs.org/arcade/code-quest/learn.html">← Back to the tutorial</a></div>
 <h1>The <em>Firefly Trail</em></h1>
-<p class="subtitle">A living storybook adventure — follow Wisp, catch fireflies and choose your own ending.</p>
+<p class="subtitle">A living storybook adventure — help three lost fireflies get home. Your plan brings the beacon back to life.</p>
+<p class="mission-brief"><strong>Your mission:</strong> Rescue 3 fireflies → guide Wisp across the river → repair the beacon.<br><span>No timer. No lost lives. Look, listen, try a plan, and change it when you need to.</span></p>
 <div class="audio-tools" aria-label="Game narration and sound controls">
 <button id="playSound" class="sound-start" type="button">🔊 Start adventure with Iris voice</button>
+<button id="playQuiet" type="button">Start quietly</button>
 <button id="voiceToggle" class="sound-toggle" type="button" aria-pressed="false">Turn sound on</button>
 <button id="readAgain" class="sound-replay" type="button">↻ Hear scene again</button>
-<span id="voiceStatus" role="status" aria-live="polite">Tap Start to hear the story</span>
+<span id="voiceStatus" role="status" aria-live="polite">Choose voice or quiet play. All clues are also visible.</span>
 </div>
 <div class="status" aria-label="Game status">
  <span id="progress">Chapter 1 of 5</span>
- <span id="bag">Backpack: empty</span>
+ <span id="bag">Backpack: empty</span><span id="rescueCount">Rescued: 0 / 3</span>
 </div>
 <section class="scene">
- <div class="art world" id="world" data-scene="start" aria-label="Animated adventure scenery" role="img">
+ <div class="art world" id="world" data-scene="start" aria-label="Adventure world" role="group">
  <span class="moon"></span><span class="stars">✦ ✧ ✦</span>
  <div class="clouds"><i></i><i></i><i></i></div>
  <div class="mountain-layer"><i></i><i></i><i></i></div>
@@ -165,16 +210,21 @@ h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.18;letter-spacing:-.03em;mar
  <div class="river-scene" aria-hidden="true"><div class="river-stream"></div><div class="bridge"><i></i><i></i><i></i><i></i></div><div class="river-wisp">✧</div></div>
  <div class="beacon" aria-hidden="true"><span class="beacon-light"></span><span class="beacon-roof"></span><span class="beacon-tower"></span></div>
  <div class="fox-character" id="foxCharacter" aria-hidden="true"><div class="fox-tail"></div><div class="fox-body"></div><div class="fox-head"><span class="fox-ear ear-left"></span><span class="fox-ear ear-right"></span><span class="fox-face"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="nose"></i><i class="mouth"></i></span></div><div class="fox-paws"></div></div>
- <div class="firefly-swarm" id="fireflySwarm" aria-label="Catch floating fireflies"></div>
+ <div class="beacon-rays" aria-hidden="true"></div><div id="riverRoute" class="river-route" aria-hidden="true"></div>
+ <div class="firefly-swarm" id="fireflySwarm" aria-label="Lost fireflies"></div>
  <div class="shimmer-burst" id="shimmerBurst" aria-hidden="true">✦</div>
  <span class="caption" id="location">The sleepy village</span>
- <span class="glow-meter" id="glowMeter">✨ Fireflies: 0 / 3</span>
+ <span class="glow-meter" id="glowMeter">✦ The beacon needs you</span>
 </div>
  <div class="content">
   <p class="eyebrow" id="speaker">WISP THE FOX</p>
-  <h2 id="title">The Night the Fireflies Vanished</h2>
+  <h2 id="title" tabindex="-1">The Night the Fireflies Vanished</h2>
   <p id="story" class="story" aria-live="polite"></p>
+  <p id="objective" class="objective"></p>
+  <div id="challenge" class="challenge" hidden></div>
+  <p id="feedback" class="feedback" role="status" aria-live="polite" hidden></p>
   <div id="choices" class="choices" aria-label="Your choices"></div>
+  <details id="learning" class="learning"><summary>How this becomes a game you can build</summary><p id="codeLesson"></p><code id="codeExample"></code></details>
   <div id="final" class="final" hidden></div>
   <button id="restart" class="restart" type="button" hidden>↻ Play from the beginning</button>
  </div>
@@ -182,319 +232,345 @@ h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.18;letter-spacing:-.03em;mar
 <p class="small">A complete browser game made with HTML, CSS, and JavaScript. No downloads or accounts needed to play. <a href="https://kiralabs.org/arcade/code-quest/learn.html">Learn how to make your own copy.</a></p>
 </main>
 <script>
-/* Kira Labs arcade voice — same fixed, gentle English voice preference as Iris.
- * Iris and the games use the browser's SpeechSynthesis voices (no selector).
- * Voice starts only after a player click. Sound never records a microphone.
- * Game effects are original tones synthesized in the visitor's browser.
- */
+/* Iris-matched browser narration. Kept inline so the tutorial's downloaded
+ * single HTML file still works. Voice availability depends on the browser;
+ * this is not a fixed recording and no microphone is used. */
 (() => {
   "use strict";
-  const priorities=[
-    /\bJenny\b.*\bNatural\b/i, /\bAva\b.*\bNatural\b/i,
-    /\bEmma\b.*\bNatural\b/i, /\bSonia\b.*\bNatural\b/i,
-    /\bAria\b.*\bNatural\b/i, /\bSamantha\b/i, /\bZira\b/i,
-    /\bHazel\b/i, /\bSusan\b/i, /\bKaren\b/i,
-    /\bMoira\b/i, /\bAllison\b/i
-  ];
-  const getEngine=()=>window.speechSynthesis;
-  const supported=()=>Boolean(getEngine()&&window.SpeechSynthesisUtterance);
-  const chooseVoice=()=>{
-    if(!supported())return null;
-    const voices=Array.from(getEngine().getVoices()||[]).filter(v=>/^en(?:-|_|$)/i.test(v.lang||""));
-    for(const pattern of priorities){const voice=voices.find(v=>pattern.test(v.name||""));if(voice)return voice;}
+  const priorities=[/\bJenny\b.*\bNatural\b/i,/\bAva\b.*\bNatural\b/i,
+    /\bEmma\b.*\bNatural\b/i,/\bSonia\b.*\bNatural\b/i,/\bAria\b.*\bNatural\b/i,
+    /\bSamantha\b/i,/\bZira\b/i,/\bHazel\b/i,/\bSusan\b/i,/\bKaren\b/i,/\bMoira\b/i,/\bAllison\b/i];
+  function chooseVoice(){
+    const voices=Array.from(window.speechSynthesis?.getVoices()||[]).filter(v=>/^en(?:-|_|$)/i.test(v.lang||""));
+    for(const pattern of priorities){const found=voices.find(v=>pattern.test(v.name||""));if(found)return found;}
     return voices.find(v=>v.default)||voices[0]||null;
-  };
-  const chunk=text=>{
-    const pieces=String(text||"").replace(/\s+/g," ").trim().match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[];
-    const output=[];let part="";
-    for(const sentence of pieces){
-      for(const word of sentence.trim().split(/\s+/)){
-        if(!word)continue;
-        if(part && part.length+word.length+1>205){output.push(part);part="";}
-        part+=(part?" ":"")+word;
-      }
+  }
+  function chunk(text){
+    const result=[];let part="";
+    for(const word of String(text||"").replace(/\s+/g," ").trim().split(" ")){
+      if(part&&part.length+word.length+1>205){result.push(part);part="";}
+      if(word)part+=(part?" ":"")+word;
     }
-    if(part)output.push(part);
-    return output.slice(0,30);
-  };
-  window.KiraArcadeVoice={
-    create(options={}){
-      const synth=getEngine(), Utterance=window.SpeechSynthesisUtterance;
-      const available=supported();
-      let enabled=false,token=0,sfx=null,vol=null;
-      const status=typeof options.onStatus==="function"?options.onStatus:()=>{};
-      function stop(){
-        token++;
-        if(available)synth.cancel();
-        options.onSpeaking?.(false);
-      }
-      function disable(){
-        enabled=false;stop();
-        if(sfx){try{sfx.suspend();}catch(_){}}
-        status("Sound off");
-      }
-      function enable(){
-        if(!available){status("Voice unavailable in this browser");return false;}
-        enabled=true;
-        // getVoices() triggers population in browsers that load voices asynchronously.
-        synth.getVoices();
-        status("Sound on · Iris voice");
-        return true;
-      }
-      function speak(text){
-        if(!enabled||!available)return false;
-        stop();
-        const parts=chunk(text);
-        if(!parts.length)return false;
-        const ticket=token,voice=chooseVoice();
-        let i=0;
-        const next=()=>{
-          if(ticket!==token||!enabled)return;
-          if(i>=parts.length){options.onSpeaking?.(false);status("Sound on · Iris voice");return;}
-          const utter=new Utterance(parts[i++]);
-          if(voice)utter.voice=voice;
-          utter.lang=voice?.lang||"en-US";
-          utter.rate=0.96;utter.pitch=1;utter.volume=1;
-          utter.onstart=()=>{if(ticket!==token)return;options.onSpeaking?.(true);status("Narrating with Iris voice…");};
-          utter.onend=next;
-          utter.onerror=event=>{
-            if(ticket!==token||event.error==="canceled"||event.error==="interrupted")return;
-            options.onSpeaking?.(false);
-            status("Narration could not play · try replay");
-          };
-          try{synth.speak(utter);}catch(_){options.onSpeaking?.(false);status("Narration unavailable");}
+    if(part)result.push(part);return result;
+  }
+  window.KiraArcadeVoice={chooseVoice,priorities,create(options={}){
+    const synth=window.speechSynthesis,Utterance=window.SpeechSynthesisUtterance;
+    const supported=Boolean(synth&&Utterance&&typeof synth.speak==="function");
+    let enabled=false,token=0,timer=null,utterance=null,sfx=null,volume=null;
+    const status=message=>options.onStatus?.(message);
+    const speaking=value=>options.onSpeaking?.(value);
+    const clearTimer=()=>{if(timer!==null){clearTimeout(timer);timer=null;}};
+    function stop(){token++;clearTimer();if(supported)synth.cancel();utterance=null;speaking(false);}
+    function enable(){
+      enabled=true;
+      if(supported)synth.getVoices();
+      status(supported?"Sound on · voice starts when playback begins":"Browser narration unavailable · sound effects and text still work");
+      return true;
+    }
+    function disable(){enabled=false;stop();if(sfx)sfx.suspend().catch(()=>{});status("Sound off · read and play at your own pace");}
+    function speak(text){
+      stop();if(!enabled)return false;
+      if(document.hidden){status("Narration paused · Hear scene again when you return");return false;}
+      if(!supported){status("Browser narration unavailable · every clue is written below");return false;}
+      const parts=chunk(text),ticket=token;let index=0;
+      const fail=()=>{
+        if(ticket!==token)return;
+        stop();status("Voice did not play. Try Hear scene again, or use a browser with an English speech voice. Text and effects still work.");
+      };
+      function next(){
+        clearTimer();if(ticket!==token||!enabled)return;
+        if(index>=parts.length){utterance=null;speaking(false);status("Sound on · ready for your next move");return;}
+        const selected=chooseVoice();
+        utterance=new Utterance(parts[index++]);
+        if(selected)utterance.voice=selected;
+        utterance.lang=selected?.lang||"en-US";
+        utterance.rate=0.96;utterance.pitch=1;utterance.volume=1;
+        utterance.onstart=()=>{
+          if(ticket!==token)return;clearTimer();speaking(true);
+          status("Narrating · "+(selected?.name||"browser English voice")+" · Iris voice settings");
         };
-        next();return true;
+        utterance.onend=()=>{if(ticket===token)next();};
+        utterance.onerror=event=>{if(ticket===token&&event.error!=="canceled"&&event.error!=="interrupted")fail();};
+        status("Starting narration…");
+        timer=setTimeout(fail,7000);
+        try{synth.speak(utterance);}catch(_){fail();}
       }
-      function cue(kind="tap"){
-        if(!enabled)return;
-        const AC=window.AudioContext||window.webkitAudioContext;
-        if(!AC)return;
-        try{
-          if(!sfx){sfx=new AC();vol=sfx.createGain();vol.gain.value=0.095;vol.connect(sfx.destination);}
-          if(sfx.state==="suspended")sfx.resume();
-          const melody=kind==="win"?[[523,0],[659,.14],[784,.29],[1047,.44]]
-            :kind==="scene"?[[440,0],[588,.12]]:kind==="wrong"?[[260,0],[220,.12]]:[[540,0]];
-          melody.forEach(([frequency,delay])=>{
-            const osc=sfx.createOscillator(),gain=sfx.createGain(),at=sfx.currentTime+delay;
-            osc.type="sine";osc.frequency.setValueAtTime(frequency,at);
-            gain.gain.setValueAtTime(0,at);
-            gain.gain.linearRampToValueAtTime(0.20,at+0.02);
-            gain.gain.exponentialRampToValueAtTime(0.001,at+0.20);
-            osc.connect(gain);gain.connect(vol);osc.start(at);osc.stop(at+0.21);
-          });
-        }catch(_){/* Speech remains available when Web Audio is blocked. */}
-      }
-      window.addEventListener("pagehide",()=>{stop();if(sfx)try{sfx.close();}catch(_){}},{once:true});
-      return {enable,disable,stop,speak,cue,get enabled(){return enabled;},get supported(){return available;},chooseVoice};
-    },
-    chooseVoice,priorities
-  };
+      next();return true;
+    }
+    function cue(kind="tap"){
+      if(!enabled||document.hidden)return;
+      const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+      try{
+        if(!sfx){sfx=new AC();volume=sfx.createGain();volume.gain.value=.18;volume.connect(sfx.destination);}
+        if(sfx.state==="suspended")sfx.resume().catch(()=>{});
+        const melody=kind==="win"?[[523,0],[659,.14],[784,.28],[1047,.44]]:
+          kind==="scene"?[[392,0],[587,.13]]:kind==="wrong"?[[294,0],[262,.16]]:kind==="step"?[[660,0]]:[[784,0],[988,.1]];
+        for(const [frequency,delay] of melody){
+          const osc=sfx.createOscillator(),gain=sfx.createGain(),at=sfx.currentTime+delay;
+          osc.type="sine";osc.frequency.setValueAtTime(frequency,at);gain.gain.setValueAtTime(0,at);
+          gain.gain.linearRampToValueAtTime(.22,at+.025);gain.gain.exponentialRampToValueAtTime(.001,at+.3);
+          osc.connect(gain);gain.connect(volume);osc.start(at);osc.stop(at+.32);
+        }
+      }catch(_){/* Narration/text remain available if Web Audio is unsupported. */}
+    }
+    addEventListener("pagehide",()=>{stop();if(sfx)sfx.suspend().catch(()=>{});});
+    document.addEventListener("visibilitychange",()=>{if(document.hidden){stop();if(enabled)status("Narration paused · Hear scene again when you return");}});
+    return {enable,disable,stop,speak,cue,chooseVoice,get enabled(){return enabled;},get supported(){return supported;}};
+  }};
 })();
 </script>
 <script>
-/* STEP 2: This JavaScript tells the full story, from beginning to ending.
-   Edit the titles, text, and choices to write YOUR OWN adventure. */
-
-// An object holds all the scenes. Each scene has choices that lead onward.
+/* STEP 2: Scenes tell the story. Edit a title or story to make it your own.
+   Choices lead to scenes; challenges change state before a path opens. */
 const scenes = {
-  start: {
-    chapter: 1, speaker: "WISP THE FOX", place: "The sleepy village",
-    title: "The Night the Fireflies Vanished",
-    story: "The mountain beacon is dark. Without its light, the fireflies cannot find their way home. Wisp, a brave fox with a tiny lantern, asks you to help before dawn. Where should you look for a light?",
-    choices: [
-      { text: "Visit the village lantern-maker", next: "village" },
-      { text: "Search the silver forest", next: "forest" }
-    ]
-  },
-  village: {
-    chapter: 2, speaker: "THE LANTERN-MAKER", place: "The village workshop",
-    title: "A Gift for the Journey",
-    story: "The lantern-maker is packing up for the night. “I have a warm lantern and a little compass,” she says. “Take one. I hope it helps you reach the summit.”",
-    choices: [
-      { text: "Take the warm lantern", gift: "lantern", next: "river" },
-      { text: "Take the brass compass", gift: "compass", next: "river" }
-    ]
-  },
-  forest: {
-    chapter: 2, speaker: "WISP THE FOX", place: "The silver forest",
-    title: "A Shimmer Between the Trees",
-    story: "A lost firefly dances among the branches. Beside it, a tiny moth struggles beneath a leaf. You have time to help only one before the moon sinks lower.",
-    choices: [
-      { text: "Catch a safe spark of firefly light", gift: "spark", next: "river" },
-      { text: "Free the little moon moth", gift: "moth", next: "river" }
-    ]
-  },
-  river: {
-    chapter: 3, speaker: "THE RIVER SPIRIT", place: "Glasswater Crossing",
-    title: "The Bridge of Whispers",
-    story: "A rushing river blocks the path to Beacon Hill. You can cross the old bridge, or ask the patient river spirit to help. Every choice is a new line in your story.",
-    choices: [
-      { text: "Cross the old bridge with courage", gift: "courage", next: "hill" },
-      { text: "Ask the river spirit for guidance", gift: "patience", next: "hill" }
-    ]
-  },
-  hill: {
-    chapter: 4, speaker: "WISP THE FOX", place: "Beacon Hill",
-    title: "The Last Little Flame",
-    story: "At last you reach the beacon. The sky is fading, and below you the fireflies are waiting. Wisp asks, “How do you want to bring the light back?”",
-    choices: [
-      { text: "Use the gift from my journey", next: "ending", action: "gift" },
-      { text: "Call all the forest friends to help", next: "ending", action: "friends" }
-    ]
-  }
+  start:{chapter:1,speaker:"WISP THE FOX",place:"The sleepy village",title:"Three little lights. One way home.",
+    story:"A storm has put out the mountain beacon. Pip, Fern and Luma — three young fireflies — are lost in the woods. I’m Wisp. Help me find them, cross Glasswater River, and shine a path back to their village. We can take our time and work it out together.",
+    objective:"First, choose where to prepare. Each route gives you a different useful tool.",
+    choices:[{text:"Visit the lantern-maker",detail:"Choose a steady lantern or a path-finding compass.",next:"village"},{text:"Follow the forest trail",detail:"Find a bright spark or make a moth friend.",next:"forest"}]},
+  village:{chapter:2,speaker:"THE LANTERN-MAKER",place:"The village workshop",title:"Choose what you’ll carry",
+    story:"“The lantern keeps the fireflies still while you help them,” says the maker. “The compass finds the first safe river step for you. Both can help relight the beacon — but in different ways.” Take one tool. The other will stay here for the next traveler.",
+    objective:"Choose a tool: easier rescues, or a head start at the river?",
+    choices:[{text:"Take the warm lantern",detail:"Its gentle glow steadies the moving fireflies.",gift:"lantern",next:"trail"},{text:"Take the brass compass",detail:"It puts the first safe river step into your plan.",gift:"compass",next:"trail"}]},
+  forest:{chapter:2,speaker:"WISP THE FOX",place:"The silver forest",title:"A spark, or a new friend?",
+    story:"A storm-spark glows safely inside a crystal. Nearby, a moon moth asks for a ride out of the rain. The spark can power the beacon immediately. If you help the moth, she will help you find the last lost firefly. Which companion will you bring?",
+    objective:"Choose a bright power source, or a friend who helps with the rescue.",
+    choices:[{text:"Carry the storm-spark",detail:"Arrive at the beacon with its light already powered.",gift:"spark",next:"trail"},{text:"Give the moon moth a ride",detail:"She guides the third firefly after you rescue two.",gift:"moth",next:"trail"}]},
+  trail:{chapter:3,speaker:"WISP THE FOX",place:"The lost-light grove",title:"Find Pip, Fern and Luma",
+    story:"There they are! Guide each glowing firefly into Wisp’s sheltered lantern so nobody gets left behind. You can tap a light in the scenery or use the steady name buttons below. This is a rescue, not a race.",
+    objective:"Bring all 3 fireflies with you before leaving the grove.",
+    choices:[{text:"Bring the fireflies to the river",next:"river"}]},
+  river:{chapter:4,speaker:"THE RIVER SPIRIT",place:"Glasswater Crossing",title:"Make a safe path for Wisp",
+    story:"The storm loosened the bridge. The river spirit lights three safe stepping stones in order. Build a three-step plan from those symbols, then send Wisp across. If a step doesn’t match, Wisp stops safely and shows you what to change. Nothing is lost.",
+    objective:"Read the glowing trail left to right. Put those 3 symbols in your plan, then try it.",
+    choices:[{text:"Climb with everyone to the beacon",next:"hill"}]},
+  hill:{chapter:5,speaker:"WISP THE FOX",place:"Beacon Hill",title:"Make the light reach home",
+    story:"We made it — but a dark beacon cannot guide our friends. A working beacon needs a light source, an open shutter, and a beam pointed toward the village. Try the controls and watch the tower respond. Test your beam when your plan is ready.",
+    objective:"Power the light + open the shutter + aim at the village. Then test the beacon.",
+    choices:[]}
 };
 
-// STEP 3: Variables remember the player's choices.
-let currentScene = "start";
-let backpack = [];
-let endingText = "";
-
-
-// Audio starts from a player's click, using exactly the same preferred voice
-// sequence, speed and pitch as Iris on kiralabs.org.
-const voice = window.KiraArcadeVoice.create({
-  onStatus(message) { document.getElementById("voiceStatus").textContent = message; },
-  onSpeaking(speaking) { document.getElementById("foxCharacter").classList.toggle("speaking",speaking); }
-});
-let hasChosenSound = false;
-let firefliesCaught = 0;
-const fireflies = document.getElementById("fireflySwarm");
-
-function narrateScene() {
-  const scene = scenes[currentScene];
-  if (endingText) {
-    voice.speak("The Fireflies Return! " + endingText);
-  } else {
-    voice.speak(scene.title + ". " + scene.story);
+// STEP 3: Variables remember the choices and the challenge state.
+let currentScene="start",backpack=[],endingText="";
+let started=false,hasChosenSound=false,rescued=[],route=[],plan=[],crossed=false,busy=false;
+let shutterOpen=false,lightLoaded=false,beamTarget="forest",attempts=0,run=0;
+const symbols=[{id:"leaf",label:"Leaf",icon:"❧"},{id:"moon",label:"Moon",icon:"☾"},{id:"star",label:"Star",icon:"★"},{id:"sun",label:"Sun",icon:"☀"}];
+const friends=["Pip","Fern","Luma"];
+const giftNames={lantern:"warm lantern",compass:"brass compass",spark:"storm-spark",moth:"moon moth"};
+const $=id=>document.getElementById(id);
+const world=$("world");
+const voice=window.KiraArcadeVoice.create({onStatus(message){$("voiceStatus").textContent=message;},onSpeaking(speaking){$("foxCharacter").classList.toggle("speaking",speaking);}});
+function shuffled(values){const out=[...values];for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]];}return out;}
+function symbol(id){return symbols.find(item=>item.id===id);}
+function routeWords(){return route.map(id=>symbol(id).label).join(", then ");}
+function syncSoundButtons(){
+  $("playSound").hidden=hasChosenSound;$("playQuiet").hidden=started;
+  $("voiceToggle").hidden=!started;$("readAgain").hidden=!started;
+  $("voiceToggle").textContent=voice.enabled?"🔇 Mute sound":"🔊 Turn sound on";
+  $("voiceToggle").setAttribute("aria-pressed",String(voice.enabled));
+}
+function narrateScene(){
+  const scene=scenes[currentScene];
+  const extra=currentScene==="river"&&!endingText?" The safe order is "+routeWords()+".":"";
+  voice.speak(endingText?"The fireflies are home. "+endingText:scene.title+". "+scene.story+" "+(scene.objective||"")+extra);
+}
+function startAdventure(withSound){
+  started=true;hasChosenSound=true;
+  if(withSound)voice.enable();else voice.disable();
+  syncSoundButtons();showScene(false);$("title").focus({preventScroll:true});if(withSound){voice.cue("scene");narrateScene();}
+}
+$("playSound").addEventListener("click",()=>startAdventure(true));
+$("playQuiet").addEventListener("click",()=>startAdventure(false));
+$("voiceToggle").addEventListener("click",()=>{if(voice.enabled)voice.disable();else{voice.enable();voice.cue("scene");narrateScene();}syncSoundButtons();});
+$("readAgain").addEventListener("click",()=>{if(!voice.enabled)voice.enable();syncSoundButtons();narrateScene();});
+function feedback(text,good=false){
+  $("feedback").textContent=text;$("feedback").hidden=false;$("feedback").classList.toggle("good",good);
+  voice.cue(good?"tap":"wrong");voice.speak(text);
+}
+function button(text,handler,options={}){
+  const el=document.createElement("button");el.type="button";el.textContent=text;el.addEventListener("click",handler);
+  if(options.className)el.className=options.className;if(options.disabled)el.disabled=true;
+  if(options.pressed!==undefined)el.setAttribute("aria-pressed",String(options.pressed));
+  return el;
+}
+function paragraph(text){const p=document.createElement("p");p.textContent=text;return p;}
+function row(){const el=document.createElement("div");el.className="button-row";return el;}
+function heading(text){const h=document.createElement("h3");h.textContent=text;return h;}
+function updateStatus(){
+  $("progress").textContent=endingText?"Mission complete":"Chapter "+scenes[currentScene].chapter+" of 5";
+  $("bag").textContent="Backpack: "+(backpack.map(g=>giftNames[g]||g).join(", ")||"empty");
+  $("rescueCount").textContent="Rescued: "+rescued.length+" / 3";
+  $("glowMeter").textContent=endingText?"✦ Everyone is home!":currentScene==="trail"?"✦ Rescued "+rescued.length+" / 3":"✦ Keep all three together";
+}
+function renderFireflies(){
+  const swarm=$("fireflySwarm");swarm.replaceChildren();
+  for(const name of friends){
+    const light=button("",()=>rescue(name),{disabled:currentScene!=="trail"||rescued.includes(name)||!started||Boolean(endingText)});
+    light.className="firefly";light.setAttribute("aria-label","Guide "+name+" to safety");light.title=name;
+    if(currentScene!=="trail")light.setAttribute("aria-hidden","true");
+    if(rescued.includes(name)&&!endingText)light.classList.add("is-caught");
+    if(backpack.includes("lantern"))light.style.animation="none";
+    swarm.appendChild(light);
   }
 }
-function syncSoundButtons() {
-  document.getElementById("playSound").hidden = hasChosenSound;
-  document.getElementById("voiceToggle").textContent = voice.enabled ? "🔇 Mute sound" : "🔊 Turn sound on";
-  document.getElementById("voiceToggle").setAttribute("aria-pressed", String(voice.enabled));
+function rescue(name){
+  if(currentScene!=="trail"||rescued.includes(name)||busy||endingText)return;
+  rescued.push(name);
+  let message=name+" is safe in Wisp’s lantern. "+rescued.length+" of 3 rescued.";
+  if(backpack.includes("moth")&&rescued.length===2){
+    const last=friends.find(n=>!rescued.includes(n));rescued.push(last);message+=" Your moon moth friend finds "+last+". All three are together!";
+  }else if(rescued.length===3)message="All three are safe! Pip, Fern and Luma are ready to cross the river with you.";
+  renderFireflies();updateStatus();renderChallenge();renderChoices();feedback(message,true);
+  const burst=$("shimmerBurst");burst.classList.remove("pop");void burst.offsetWidth;burst.classList.add("pop");
+  if(rescued.length===3)$("choices").querySelector("button")?.focus({preventScroll:true});
+  else $("challenge").querySelector("button:not(:disabled)")?.focus({preventScroll:true});
 }
-function beginWithSound() {
-  hasChosenSound=true;
-  if (voice.enable()) { voice.cue("scene"); narrateScene(); }
-  syncSoundButtons();
-}
-document.getElementById("playSound").addEventListener("click",beginWithSound);
-document.getElementById("voiceToggle").addEventListener("click",()=>{
-  hasChosenSound=true;
-  if(voice.enabled)voice.disable();
-  else { voice.enable();narrateScene(); }
-  syncSoundButtons();
-});
-document.getElementById("readAgain").addEventListener("click",()=>{
-  if(!voice.enabled)beginWithSound();
-  else narrateScene();
-});
-// Three floating fireflies can be caught at any time. This little action
-// makes every location interactive instead of a static picture.
-for(let i=0;i<3;i++){
-  const light=document.createElement("button");
-  light.type="button";
-  light.className="firefly";
-  light.setAttribute("aria-label","Catch floating firefly "+(i+1));
-  light.title="Catch this firefly!";
-  light.addEventListener("click",()=>{
-    if(endingText||light.classList.contains("is-caught"))return;
-    if(!hasChosenSound)beginWithSound();
-    firefliesCaught=Math.min(3,firefliesCaught+1);
-    light.classList.add("is-caught");light.disabled=true;
-    document.getElementById("glowMeter").textContent="✨ Fireflies: "+firefliesCaught+" / 3";
-    const burst=document.getElementById("shimmerBurst");
-    burst.style.left=light.style.left||getComputedStyle(light).left;
-    burst.style.top=light.style.top||getComputedStyle(light).top;
-    burst.classList.remove("pop");void burst.offsetWidth;burst.classList.add("pop");
-    voice.cue(firefliesCaught===3?"win":"tap");
-    if(firefliesCaught===3) voice.speak("You caught all three glowing fireflies! Amazing!");
-  });
-  fireflies.appendChild(light);
-}
-function animateWorld(){
-  const world=document.getElementById("world");
-  world.dataset.scene=endingText?"ending":currentScene;
-  world.classList.remove("is-entering");
-  void world.offsetWidth;
-  world.classList.add("is-entering");
-  const content=document.querySelector(".content");
-  content.classList.remove("story-enter");void content.offsetWidth;content.classList.add("story-enter");
-  if(!endingText){
-    // Give the next chapter new animated fireflies to catch.
-    firefliesCaught=0;
-    document.getElementById("glowMeter").textContent="✨ Fireflies: 0 / 3";
-    for(const light of fireflies.children){light.classList.remove("is-caught");light.disabled=false;}
-  }else{
-    document.getElementById("glowMeter").textContent="✦ The fireflies have come home!";
+function renderRouteWorld(){
+  const el=$("riverRoute");el.replaceChildren();el.hidden=currentScene!=="river";
+  if(currentScene==="river")for(let i=0;i<route.length;i++){
+    const tile=document.createElement("span");tile.textContent=symbol(route[i]).icon;
+    if(i<Number(world.dataset.step||0))tile.className="crossed";el.appendChild(tile);
   }
 }
-syncSoundButtons();
-
-// STEP 4: A function updates the webpage to show the current scene.
-function showScene() {
-  const scene = scenes[currentScene];
-  document.getElementById("progress").textContent = endingText ? "Adventure complete" : "Chapter " + scene.chapter + " of 5";
-  document.getElementById("bag").textContent = "Backpack: " + (backpack.length ? backpack.join(", ") : "empty");
-  document.getElementById("location").textContent = endingText ? "The shining summit" : scene.place;
-  document.getElementById("speaker").textContent = endingText ? "THE END · YOUR STORY" : scene.speaker;
-  document.getElementById("title").textContent = endingText ? "The Fireflies Return!" : scene.title;
-  document.getElementById("story").textContent = endingText ? endingText : scene.story;
-
-  const choices = document.getElementById("choices");
-  choices.replaceChildren(); // Remove old buttons before drawing the next choices.
-
-  // A loop creates one clickable button for every available choice.
-  if (!endingText) {
-    for (const choice of scene.choices) {
-      const button = document.createElement("button");
-      button.className = "choice";
-      button.type = "button";
-      button.textContent = choice.text + "  →";
-      button.addEventListener("click", () => choose(choice));
-      choices.appendChild(button);
+function renderChallenge(){
+  const panel=$("challenge");panel.replaceChildren();panel.hidden=!started||Boolean(endingText)||!["trail","river","hill"].includes(currentScene);
+  if(panel.hidden)return;
+  if(currentScene==="trail"){
+    panel.append(heading("Help the three lost lights"));
+    const help=backpack.includes("lantern")?"Your lantern steadies the lights in the scenery. You can also use these buttons.":backpack.includes("moth")?"Your moth will find the last firefly after you rescue two.":"The lights move, but these buttons do not. Both ways work — no fast clicking needed.";
+    panel.append(paragraph(help));const buttons=row();
+    for(const name of friends)buttons.append(button(rescued.includes(name)?"✓ "+name+" is safe":"Guide "+name+" to safety",()=>rescue(name),{disabled:rescued.includes(name)}));
+    panel.append(buttons);
+  }
+  if(currentScene==="river"){
+    panel.append(heading(crossed?"Everyone crossed safely":"The spirit’s safe stepping-stone order"));
+    const clue=document.createElement("div");clue.className="clue-strip";clue.setAttribute("aria-label","Safe route: "+routeWords());
+    route.forEach((id,i)=>{if(i){const arrow=document.createElement("span");arrow.className="clue-arrow";arrow.textContent="→";clue.append(arrow);}const tile=document.createElement("span");tile.className="clue-tile";tile.textContent=symbol(id).icon+" "+symbol(id).label;clue.append(tile);});panel.append(clue);
+    if(crossed){appendRoutePreview(panel,true);panel.append(paragraph("Your plan matched the trail. You brought all three fireflies across — now the beacon is within reach."));return;}
+    panel.append(paragraph(backpack.includes("compass")?"Your compass supplied the first step. Finish the plan in the same order as the glowing stones.":"Build your plan left to right. You can undo or clear it before trying. The symbols are clues, not a memory test."));
+    const tiles=document.createElement("div");tiles.className="plan-strip";tiles.setAttribute("aria-label","Your plan");
+    for(let i=0;i<3;i++){const tile=document.createElement("span");tile.className="plan-tile";tile.textContent=(i+1)+". "+(plan[i]?symbol(plan[i]).icon+" "+symbol(plan[i]).label:"—");tiles.append(tile);}panel.append(tiles);
+    appendRoutePreview(panel);
+    const commands=row();for(const item of symbols)commands.append(button(item.icon+" "+item.label,()=>{if(busy||plan.length>=3)return;plan.push(item.id);voice.cue("tap");renderChallenge();(plan.length===3?$("challenge").querySelector("button.primary"):$("challenge").querySelector('[data-command="'+item.id+'"]'))?.focus({preventScroll:true});},{disabled:busy||plan.length>=3}));
+    [...commands.children].forEach((el,i)=>el.dataset.command=symbols[i].id);panel.append(commands);
+    const controls=row();controls.style.marginTop="12px";
+    controls.append(button("↶ Undo step",()=>{if(busy)return;plan.pop();renderChallenge();$("challenge").querySelector("[data-command]")?.focus({preventScroll:true});},{disabled:busy||!plan.length}),button("Clear plan",()=>{if(busy)return;plan=[];renderChallenge();$("challenge").querySelector("[data-command]")?.focus({preventScroll:true});},{disabled:busy||!plan.length}),button(busy?"Wisp is trying your plan…":"▶ Try this route",testRoute,{className:"primary",disabled:busy||plan.length!==3}));panel.append(controls);
+  }
+  if(currentScene==="hill"){
+    panel.append(heading("Beacon control panel"));
+    const source=backpack.includes("lantern")?"lantern flame":backpack.includes("spark")?"storm-spark":backpack.includes("moth")?"moon moth’s shared glow":"fireflies’ shared glow, focused through the compass glass";
+    panel.append(paragraph("Light: "+(lightLoaded?"powered":"not powered")+" · Shutter: "+(shutterOpen?"open":"closed")+" · Beam aimed at: "+beamTarget+"."));
+    panel.append(paragraph("Your power source: "+source+". The village is the fireflies’ home; a beam aimed at the forest will not guide them there."));
+    const controls=row();
+    controls.append(button(lightLoaded?"✓ Light powered":"Add the light source",()=>{if(busy)return;lightLoaded=true;updateBeacon();renderChallenge();$("challenge").querySelector('[data-control="shutter"]')?.focus({preventScroll:true});feedback("The "+source+" powers the lamp. Now the light needs an open shutter and a path to the village.",true);},{disabled:lightLoaded,pressed:lightLoaded}),
+      button(shutterOpen?"Shutter open · close it":"Open the shutter",()=>{if(busy)return;shutterOpen=!shutterOpen;updateBeacon();renderChallenge();$("challenge").querySelector('[data-control="shutter"]')?.focus({preventScroll:true});feedback(shutterOpen?"Shutter open. The light can now leave the tower.":"Shutter closed. The light stays inside the tower.",true);},{pressed:shutterOpen}),
+      button(beamTarget==="village"?"Aimed home · turn to forest":"Aim toward the village",()=>{if(busy)return;beamTarget=beamTarget==="village"?"forest":"village";updateBeacon();renderChallenge();$("challenge").querySelector('[data-control="aim"]')?.focus({preventScroll:true});feedback(beamTarget==="village"?"The beam is aimed toward the village — the fireflies’ home.":"The beam is aimed toward the forest, away from home.",true);},{pressed:beamTarget==="village"}));
+    [...controls.children].forEach((el,i)=>el.dataset.control=["power","shutter","aim"][i]);panel.append(controls);const test=button("✦ Test the beacon",testBeacon,{className:"primary"});test.style.marginTop="14px";panel.append(test);
+  }
+}
+function appendRoutePreview(panel,complete=false){
+    const preview=document.createElement("div");preview.className="route-preview";preview.id="routePreview";preview.setAttribute("role","img");
+    for(let i=1;i<=3;i++){const stone=document.createElement("span");stone.className="route-stone";stone.style.left=(8+i*28)+"%";stone.textContent=String(i);stone.setAttribute("aria-hidden","true");preview.append(stone);}
+    const fox=document.createElement("span");fox.id="routeFox";fox.className="route-fox";fox.textContent="🦊";fox.setAttribute("aria-hidden","true");preview.append(fox);panel.append(preview);
+    const watch=paragraph(complete?"3 of 3 safe steps — everyone made it across!":busy?"Watch Wisp try one step at a time…":"Wisp will try your plan here — no rushing, and no falling.");watch.className="route-caption";panel.append(watch);
+    updateRoutePreview();
+}
+function updateRoutePreview(){
+  const fox=document.getElementById("routeFox"),preview=document.getElementById("routePreview");
+  const steps=Number(world.dataset.step||0);
+  if(fox)fox.style.left=(8+steps*28)+"%";
+  if(preview)preview.setAttribute("aria-label","Wisp has crossed "+steps+" of 3 safe steps");
+}
+function updateBeacon(){world.dataset.beam=lightLoaded&&shutterOpen?(beamTarget==="village"?"home":"forest"):"off";}
+async function testRoute(){
+  if(busy||crossed||plan.length!==3||currentScene!=="river")return;
+  busy=true;attempts++;voice.stop();$("feedback").hidden=true;world.dataset.step="0";renderRouteWorld();renderChallenge();
+  const ticket=run,delay=matchMedia("(prefers-reduced-motion: reduce)").matches?80:620;
+  for(let i=0;i<3;i++){
+    await new Promise(resolve=>setTimeout(resolve,delay));if(ticket!==run||currentScene!=="river")return;
+    if(plan[i]!==route[i]){
+      busy=false;const wrong=symbol(plan[i]).label,correct=symbol(route[i]).label;
+      plan=plan.slice(0,i);renderChallenge();
+      feedback("Wisp stopped safely at step "+(i+1)+". You planned "+wrong+", but the glowing stone says "+correct+". The earlier steps are kept. Add "+correct+" next, then finish your plan.");
+      $("challenge").querySelector('[data-command="'+route[i]+'"]')?.focus({preventScroll:true});return;
     }
+    world.dataset.step=String(i+1);renderRouteWorld();updateRoutePreview();voice.cue("step");
   }
-  document.getElementById("final").hidden = !endingText;
-  document.getElementById("final").textContent = endingText ? "✦ Your adventure has a complete ending. Try the other paths and discover a different result!" : "";
-  document.getElementById("restart").hidden = !endingText;
-  animateWorld();
+  // Let the last visible step finish before showing the success controls.
+  await new Promise(resolve=>setTimeout(resolve,delay));if(ticket!==run||currentScene!=="river")return;
+  busy=false;crossed=true;renderChallenge();renderChoices();feedback("Your plan worked! Wisp and all three fireflies crossed safely. Let’s climb to the beacon.",true);$("choices").querySelector("button")?.focus({preventScroll:true});
+}
+function testBeacon(){
+  if(currentScene!=="hill"||busy||endingText)return;
+  if(!lightLoaded){feedback("The lamp has no power yet. Add the light source from your journey, then test again.");return;}
+  if(!shutterOpen){feedback("The lamp is glowing inside, but its closed shutter blocks the beam. Open the shutter so the light can escape.");return;}
+  if(beamTarget!=="village"){feedback("Look — the beam reaches the forest, not home. Turn it toward the village so Pip, Fern and Luma can follow it.");return;}
+  if(rescued.length!==3||!crossed)return; // Completion depends on real game state.
+  const gift=backpack[0];
+  const outcome={lantern:"The maker’s lantern paints a warm golden trail across the valley. You chose steady light, rescued each friend, and carried that same flame all the way home.",compass:"Your compass found the first safe step. Now its glass focuses the fireflies’ shared glow into a silver path. A tool for finding your way became a tool for helping others.",spark:"The storm-spark hums inside the beacon. The energy left by the storm now lights a path home — because you gave it the right direction.",moth:"The moon moth shares her glow with the beacon. The friend you helped found your last firefly and now lights the valley. Your kindness became part of the rescue."};
+  endingText=(outcome[gift]||"Your light reaches the village.")+" Pip, Fern and Luma flutter safely home. Wisp grins: ‘We didn’t just wish for a happy ending. We made a plan, tried it, and made it work.’";
+  showScene();voice.cue("win");narrateScene();
+}
+function renderChoices(){
+  const el=$("choices");el.replaceChildren();if(!started||endingText)return;
+  for(const choice of scenes[currentScene].choices||[]){
+    const blocked=currentScene==="trail"&&rescued.length<3||currentScene==="river"&&!crossed;
+    if(blocked)continue;
+    const sceneAtRender=currentScene;
+    const b=button("",()=>{if(sceneAtRender===currentScene)choose(choice);},{className:"choice"});
+    const label=document.createElement("span");label.className="choice-label";label.textContent=choice.text;
+    if(choice.detail){const detail=document.createElement("small");detail.textContent=choice.detail;label.append(detail);}
+    const arrow=document.createElement("span");arrow.textContent="→";arrow.setAttribute("aria-hidden","true");b.append(label,arrow);el.append(b);
+  }
+}
+const lessons={start:["Scenes are objects. A choice points to the next scene — your story is a map the player can explore.",'choose({ next: "forest" });'],village:["A variable remembers your tool. That choice changes later gameplay, not just the text.",'backpack.push("lantern");'],forest:["An if statement can give a choice a real consequence: a companion helps when a condition is met.",'if (backpack.includes("moth")) { /* a friend helps */ }'],trail:["The game stores each rescued name in an array. The next path opens only when all three are safe.",'if (rescued.length === 3) { /* open the river path */ }'],river:["Your plan is a sequence. A loop tries one step at a time. Feedback tells you where to debug it.",'if (plan[step] !== route[step]) { /* stop safely and explain */ }'],hill:["A condition can check several things together. AND (&&) means every part must be true.",'if (lightLoaded && shutterOpen && beamTarget === "village") { /* light the way home */ }']};
+
+// STEP 4: This function renders the scene from the current state.
+function showScene(focus=true){
+  const scene=scenes[currentScene];updateStatus();
+  $("location").textContent=endingText?"The shining summit":scene.place;
+  $("speaker").textContent=endingText?"MISSION COMPLETE · YOUR STORY":scene.speaker;
+  $("title").textContent=endingText?"Three little lights, safely home":scene.title;
+  $("story").textContent=endingText?endingText:scene.story;
+  $("objective").textContent=endingText?"You rescued everyone, built a safe route, and repaired the beacon.":scene.objective||"Choose your next move.";
+  $("feedback").hidden=true;world.dataset.scene=endingText?"ending":currentScene;
+  world.classList.remove("is-entering");void world.offsetWidth;world.classList.add("is-entering");
+  document.querySelector(".content").classList.remove("story-enter");void world.offsetWidth;document.querySelector(".content").classList.add("story-enter");
+  world.querySelector(".companion-badge")?.remove();
+  if(backpack.includes("moth")){const companion=document.createElement("span");companion.className="companion-badge";companion.textContent="🦋";companion.setAttribute("aria-hidden","true");world.append(companion);}
+  renderFireflies();renderRouteWorld();renderChallenge();renderChoices();updateBeacon();
+  const lesson=lessons[currentScene]||lessons.start;$("codeLesson").textContent=lesson[0];$("codeExample").textContent=lesson[1];
+  $("final").hidden=!endingText;$("final").replaceChildren();
+  if(endingText){
+    $("final").append(heading("Your journey mattered"));
+    const list=document.createElement("ul");list.className="finish-list";
+    for(const text of ["3 of 3 fireflies rescued — nobody left behind.","River plan tested "+attempts+" time"+(attempts===1?"":"s")+". Trying again is how plans improve.","Your "+giftNames[backpack[0]]+" changed the way you played."]){const li=document.createElement("li");li.textContent=text;list.append(li);}$("final").append(list,paragraph("Replay with another tool for a different advantage, a new river route, and a different ending. Or return to the tutorial to change this game yourself."));
+  }
+  $("restart").hidden=!started;
+  if(focus){$("title").focus({preventScroll:true});if(world.getBoundingClientRect().top<0)world.scrollIntoView({block:"start",behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth"});}
 }
 
-// STEP 5: An if statement changes the ending using your collected items.
-function choose(choice) {
-  if(!hasChosenSound)beginWithSound();
-  voice.stop();
-  voice.cue("tap");
-  if (choice.gift) backpack.push(choice.gift); // Arrays can grow with push().
-  if (choice.next === "ending") {
-    if (choice.action === "friends") {
-      endingText = "You call into the night. The river spirit, lantern-maker, moon moth, and hundreds of fireflies answer. Together they lift the beacon's flame. The forest shines again—because you chose to work together.";
-    } else if (backpack.includes("lantern") || backpack.includes("spark")) {
-      endingText = "You lift your treasured light. A golden flame leaps from the lantern to the beacon, and every firefly finds its way home. Wisp cheers: “Your choices saved the forest!”";
-    } else {
-      endingText = "Your gift is not a flame—but it gave you the courage and wisdom to reach the summit. You place your hands on the beacon and ask Wisp for help. Together, you spark a gentle silver light. The fireflies return.";
-    }
-  } else {
-    currentScene = choice.next;
+// STEP 5: A choice changes state; important paths have explicit conditions.
+function choose(choice){
+  if(!started||busy||endingText)return;
+  if(currentScene==="trail"&&rescued.length<3||currentScene==="river"&&!crossed)return;
+  if(!scenes[choice.next])return;
+  voice.stop();if(choice.gift&&!backpack.includes(choice.gift))backpack.push(choice.gift);
+  // Tutorial-added scenes can still lead to the river without skipping the rescue.
+  currentScene=choice.next==="river"&&rescued.length<3?"trail":choice.next;
+  if(currentScene==="river"){
+    route=shuffled(symbols.map(s=>s.id)).slice(0,3);plan=backpack.includes("compass")?[route[0]]:[];crossed=false;world.dataset.step="0";
   }
-  showScene();
-  voice.cue(endingText?"win":"scene");
-  narrateScene();
+  if(currentScene==="hill")lightLoaded=backpack.includes("spark");
+  showScene();voice.cue("scene");narrateScene();
 }
 
-// STEP 6: Replay brings the whole adventure back to the beginning.
-document.getElementById("restart").addEventListener("click", () => {
-  currentScene = "start";
-  backpack = [];
-  endingText = "";
-  voice.stop();
-  voice.cue("scene");
-  showScene();
-  narrateScene();
+// STEP 6: Replay resets the entire state, not just the text.
+$("restart").addEventListener("click",()=>{
+  run++;currentScene="start";backpack=[];endingText="";rescued=[];route=[];plan=[];crossed=false;busy=false;
+  shutterOpen=false;lightLoaded=false;beamTarget="forest";attempts=0;world.dataset.step="0";
+  voice.stop();showScene();voice.cue("scene");narrateScene();
 });
-showScene(); // Start the game!
+syncSoundButtons();showScene(false);
 </script>
 </body>
 </html>
