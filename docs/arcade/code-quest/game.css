@@ -252,3 +252,61 @@
 .cq-page .site-header .menubtn,.cq-page .site-header .nav a.contact{color:#e4f3fb;background:#142d43;border:1px solid #526f82}
 .cq-page .site-header .menubtn:hover,.cq-page .site-header .nav a.contact:hover{color:#fff;background:#284a60}
 .cq-voice #startLessonButton{font-size:.78rem;min-height:40px}
+
+/* Stoneward: persistent rendered dungeon, exploration and rescue state. */
+.cq-shell{max-width:1370px;width:min(1370px,calc(100% - 40px))}
+.cq-world-card{border:1px solid #506274;border-radius:18px;overflow:hidden;background:#102238;box-shadow:0 24px 65px #0006;margin-bottom:22px}
+.cq-world-card>.cq-card-top{padding:14px 18px}
+.cq-stage{height:550px;min-height:350px;background:#121c29}
+.cq-world{z-index:1;inset:0}
+.cq-world canvas{display:block;width:100%;height:100%;touch-action:pan-y}
+.cq-stage:before{z-index:2;background:linear-gradient(#05111b99,transparent 32%,transparent 74%,#07111a88);pointer-events:none}
+.cq-stage .cq-board{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;left:0;top:0;transform:none;border:0}
+.cq-cinematic{top:18px;left:22px;font-size:.82rem;max-width:85%;text-shadow:0 2px 5px #000}
+.cq-world-status{top:48px;left:22px;max-width:90%;font-size:.77rem;color:#dfebe5;text-shadow:0 2px 6px #000}
+.cq-scene-caption{left:20px;bottom:14px;font-size:.73rem;background:#0c2235c9;padding:6px 11px}
+.cq-speech{left:17%;bottom:auto;top:28%;max-width:55%;font-size:.9rem;z-index:6}
+.cq-energy{right:22px;bottom:18px}
+.cq-skip-animation{right:20px;bottom:59px;font-size:.75rem}
+.cq-render-status{display:flex;gap:12px;justify-content:space-between;padding:10px 18px;background:#0c1d2c;color:#9db7c6;font-size:.68rem;border-bottom:1px solid #385263}
+.cq-quest-hud{display:grid;grid-template-columns:1.7fr 1fr;gap:12px 25px;border:1px solid #7e6253;background:linear-gradient(115deg,#342831,#182d3c);border-radius:16px;padding:17px 21px;margin:0 0 20px}
+.cq-quest-hud .cq-overline{display:block;font-size:.62rem;letter-spacing:.12em;color:#ebaf8d;margin-bottom:6px}
+#threatTitle{display:block;font-size:.98rem;line-height:1.4;color:#ffe3cb}
+#questNeed{color:#d0dbe0;font-size:.8rem;line-height:1.5;margin:7px 0 0}
+.cq-defense{align-self:center}
+.cq-defense label{display:flex;justify-content:space-between;color:#d3e7e4;font-size:.77rem;gap:10px;margin-bottom:10px}
+.cq-defense strong{color:#f5d698}
+.cq-defense progress{display:block;width:100%;height:11px;border:0;border-radius:20px;overflow:hidden;background:#263d48}
+.cq-defense progress::-webkit-progress-bar{background:#263d48}
+.cq-defense progress::-webkit-progress-value{background:linear-gradient(90deg,#75b8b3,#f3d189);border-radius:20px}
+.cq-defense progress::-moz-progress-bar{background:#90cdc0}
+.cq-inventory{grid-column:1/-1;display:flex;gap:6px;flex-wrap:wrap;border-top:1px solid #a6b3b42a;padding-top:10px}
+.cq-inventory-item{padding:5px 9px;border-radius:6px;border:1px solid #7a8e7a;background:#102a32;color:#e8dfba;font-size:.68rem}
+.cq-inventory-empty{font-size:.72rem;color:#b0bec6}
+.cq-encounter{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:15px 25px;padding:23px;background:#152a3c}
+.cq-encounter h2{font-size:1.5rem;line-height:1.3;letter-spacing:-.02em;color:#f3e6c5;margin:0 0 9px}
+.cq-encounter .cq-overline{font-size:.62rem;margin:0 0 7px}
+#encounterText{color:#cfdee6;font-size:.88rem;line-height:1.7;margin:0}
+.cq-route-choices{display:grid;gap:9px;align-content:start}
+.cq-route{display:block;text-align:left;border:1px solid #77848a;background:linear-gradient(110deg,#263d4b,#1a3042);padding:14px 16px;border-radius:10px;color:#f9e8bd;min-height:75px}
+.cq-route:hover{background:#31505c;border-color:#c4c9ac}
+.cq-route[aria-pressed="true"]{border-color:#e6c58a;box-shadow:inset 3px 0 #e6c58a;background:#394c4c}
+.cq-route strong{display:block;font-size:.88rem;line-height:1.45;margin-bottom:5px}
+.cq-route span{display:block;color:#c6d7df;font-size:.75rem;line-height:1.5}
+.cq-route:disabled{opacity:.65;cursor:wait}
+.cq-encounter>.cq-controls{grid-column:1/-1}
+.cq-gate-status{grid-column:1/-1;margin:0;padding:12px 15px;border:1px solid #6f7880;border-radius:9px;color:#d9e1e5;background:#102538;font-size:.79rem;line-height:1.6}
+.cq-gate-status[data-state="blocked"]{border-color:#a27b5c;color:#f9dfba;background:#3d302e}
+.cq-gate-status[data-state="cleared"]{border-color:#76ab98;color:#c1f2db;background:#143b3a}
+.cq-layout{grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr)}
+.cq-layout .cq-story{height:fit-content}
+.cq-storycopy h2{font-size:1.9rem}
+.cq-storycopy{padding:24px}
+#storyText{font-size:.92rem}
+.cq-editor-card{padding:24px}
+.cq-about{max-width:1000px}
+#graphicsStatus[data-mode="webgl"]{color:#b7dacc}
+@media(max-width:1000px){.cq-stage{height:480px}.cq-layout{grid-template-columns:1fr}.cq-encounter{grid-template-columns:1fr}.cq-encounter>.cq-controls,.cq-gate-status{grid-column:auto}.cq-storycopy{padding:22px}.cq-quest-hud{grid-template-columns:1.5fr 1fr}}
+@media(max-width:700px){.cq-shell{width:calc(100% - 24px)}.cq-stage{height:370px;min-height:300px}.cq-world-card>.cq-card-top{padding:12px}.cq-cinematic{left:13px;top:13px;font-size:.68rem}.cq-world-status{left:13px;top:36px;font-size:.65rem}.cq-quest-hud{grid-template-columns:1fr;gap:13px;padding:16px}#threatTitle{font-size:.87rem}#questNeed{font-size:.75rem}.cq-defense{grid-column:auto}.cq-inventory{grid-column:auto}.cq-inventory-item{font-size:.6rem;padding:4px 7px}.cq-render-status{font-size:.6rem;padding:9px 12px;display:block;line-height:1.7}.cq-render-status span{display:block}.cq-encounter{padding:19px 15px;gap:14px}.cq-encounter h2{font-size:1.35rem}#encounterText{font-size:.81rem}.cq-route{padding:12px;min-height:78px}.cq-route strong{font-size:.81rem}.cq-route span{font-size:.72rem}.cq-gate-status{font-size:.75rem;padding:11px}.cq-encounter>.cq-controls .cq-btn{flex-basis:100%;min-height:44px;font-size:.8rem}.cq-speech{top:25%;font-size:.77rem;max-width:66%;left:9%}.cq-scene-caption{font-size:.61rem;left:10px;bottom:10px;max-width:72%}.cq-energy{right:10px;bottom:12px}.cq-skip-animation{right:10px;bottom:47px}.cq-editor-card{padding:20px 17px}.cq-storycopy h2{font-size:1.75rem}}
+@media(max-width:380px){.cq-stage{height:340px;min-height:300px}.cq-cinematic{font-size:.6rem}.cq-world-status{font-size:.6rem}}
+

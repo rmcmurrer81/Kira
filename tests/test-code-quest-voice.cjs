@@ -35,6 +35,64 @@ function setup({voices = [], supported = true, fail = false} = {}) {
     voiceschanged() { voiceEvents.get('voiceschanged')?.(); }};
 }
 const voice = (name, lang = 'en-US', isDefault = false) => ({name, lang, default: isDefault});
+function finishSpeech(s) {
+  for (let index = 0; index < s.spoken.length; index++) {
+    assert.ok(index < 100, 'speech chunking must terminate');
+    s.spoken[index].onend();
+  }
+  return s.spoken.map(utterance => utterance.text).join(' ');
+}
+
+// Pronunciation changes only standalone names, including punctuation and possessives.
+for (const [text, expected] of [
+  ['PIX Pix pix pIx', 'picks picks picks picks'],
+  ['Hello, PIX! (PIX) [PIX] {PIX}: "PIX"; /PIX/ +PIX=PIX.', 'Hello, picks! (picks) [picks] {picks}: "picks"; /picks/ +picks=picks.'],
+  ["PIX's and PIX’s lanterns.", "picks's and picks’s lanterns."],
+  ['PIX—PIX/PIX,PIX:PIX-PIX', 'picks—picks/picks,picks:picks-picks'],
+  ['Pixel PIXEL pixels pixel PIXL PIXie apix PIX2 2PIX _PIX PIX_ myPIX PIXme', 'Pixel PIXEL pixels pixel PIXL PIXie apix PIX2 2PIX _PIX PIX_ myPIX PIXme'],
+  ['éPIX PIXé \u0301PIX PIX\u0301', 'éPIX PIXé \u0301PIX PIX\u0301']
+]) {
+  const s = setup();
+  s.api.read(text);
+  assert.equal(s.spoken.length, 0, 'normalizing a read must not enable speech');
+  s.replay.click();
+  assert.equal(finishSpeech(s), expected);
+}
+
+// Expanding PIX to picks happens before chunking, preserving the 210-character target.
+{
+  const s = setup();
+  const text = ('PIX ').repeat(90).trim();
+  s.api.read(text); s.replay.click();
+  assert.equal(finishSpeech(s), ('picks ').repeat(90).trim());
+  assert.ok(s.spoken.every(utterance => utterance.text.length <= 210));
+  s.toggle.click();
+  s.replay.click();
+  assert.equal(s.spoken.at(-1).text.split(' ')[0], 'picks', 'replaying the original read preserves the pronunciation');
+}
+
+// The actual story, solution, saved draft and validation keep the original PIX spelling.
+{
+  const window = {};
+  const missionsSource = fs.readFileSync(path.join(__dirname, '../docs/arcade/code-quest/missions.js'), 'utf8');
+  vm.runInNewContext(missionsSource, {window});
+  const mission = window.CodeQuestMissions[0], originalMission = JSON.stringify(mission);
+  const scene = control(), editor = {value:mission.solution};
+  const saved = {drafts:[mission.solution]}, originalSaved = JSON.stringify(saved);
+  scene.textContent = mission.story;
+  const s = setup();
+  s.api.read(scene.textContent); s.replay.click();
+  const spokenText = finishSpeech(s);
+  assert.match(spokenText, /\bpicks\b/);
+  assert.doesNotMatch(spokenText, /\bPIX\b/i);
+  assert.equal(scene.textContent, mission.story);
+  assert.match(scene.textContent, /\bPIX\b/);
+  assert.equal(editor.value, 'say("Hello, PIX!");');
+  assert.equal(JSON.stringify(saved), originalSaved);
+  assert.equal(JSON.stringify(mission), originalMission);
+  assert.equal(mission.check({actions:[{type:'say',value:'Hello, PIX!'}]}), true);
+  assert.equal(mission.check({actions:[{type:'say',value:'Hello, picks!'}]}), false);
+}
 
 // Rendering new scenes, even while a browser asynchronously loads voices, cannot autoplay.
 {
@@ -140,4 +198,4 @@ for (const options of [{supported: false}, {fail: true}]) {
 const iris = fs.readFileSync(path.join(__dirname, '../docs/iris-voice.js'), 'utf8');
 const priorities = text => text.match(/const priorities\s*=\s*\[([\s\S]*?)\];/)[1].replace(/\s/g, '');
 assert.equal(priorities(source), priorities(iris));
-console.log('Code Quest voice passed: no autoplay, Iris voice priorities/settings, chunks, mute/replay, cancellation and unavailable speech.');
+console.log('Code Quest voice passed: speech-only PIX pronunciation, unchanged story/code/validation, no autoplay, Iris voice priorities/settings, chunks, mute/replay, cancellation and unavailable speech.');

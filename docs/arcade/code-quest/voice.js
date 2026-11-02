@@ -19,6 +19,11 @@
     /\bMoira\b/i,
     /\bAllison\b/i
   ];
+  function narrationText(text) {
+    // Speak the robot's name as a word, without changing visible text or code.
+    // Letters, marks, numbers and underscores keep PIX inside longer names intact.
+    return text.replace(/(^|[^\p{L}\p{M}\p{N}_])pix(?=$|[^\p{L}\p{M}\p{N}_])/giu, '$1picks');
+  }
   function partsOf(text) {
     const units = text.replace(/\s+/g, ' ').trim().match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [];
     const result = [];
@@ -71,7 +76,7 @@
     function speak() {
       stop();
       if (!supported || !enabled || !latest) { updateStatus(); return; }
-      const current = token, chunks = partsOf(latest);
+      const current = token, chunks = partsOf(narrationText(latest));
       let chosen = chooseVoice(), index = 0;
       function next() {
         if (current !== token || !enabled) return;

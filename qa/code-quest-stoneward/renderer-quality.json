@@ -1,0 +1,716 @@
+{
+  "first": {
+    "theme": "workshop",
+    "index": 0,
+    "progress": 0,
+    "action": "ready",
+    "time": 0,
+    "frameDuration": 0,
+    "frameProgress": 0,
+    "frameElapsed": 0,
+    "actor": {
+      "x": -2.1,
+      "z": 0.525,
+      "yaw": 1.5707963267948966,
+      "y": 0,
+      "headYaw": 0,
+      "armAngle": 0,
+      "legAngle": 0,
+      "reach": 0,
+      "carrying": false,
+      "awake": false,
+      "id": "a604c359-0ee6-4704-94c7-3c5e24e0b292"
+    },
+    "device": {
+      "energy": 0,
+      "gateOpen": 0,
+      "collected": [],
+      "beam": 0,
+      "lever": 0
+    },
+    "items": [
+      {
+        "id": 1,
+        "x": 0.6,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      },
+      {
+        "id": 2,
+        "x": 1.5499999999999998,
+        "y": 0.48,
+        "z": -1.25,
+        "visible": true
+      },
+      {
+        "id": 3,
+        "x": 2.5,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      }
+    ],
+    "reward": {
+      "id": "quest-part-0",
+      "kind": "part",
+      "x": 2.25,
+      "y": 0.95,
+      "z": -0.7,
+      "homeX": 2.25,
+      "homeZ": -0.7,
+      "visible": true,
+      "claimed": false
+    },
+    "spatial": false,
+    "destination": {
+      "x": 1.05,
+      "z": 0.525,
+      "yaw": 1.5707963267948966
+    },
+    "encounter": {
+      "route": "safe",
+      "blocking": false,
+      "revealed": false,
+      "creature": {
+        "archetype": "wraith",
+        "x": 0.9,
+        "y": 0,
+        "z": 1.25,
+        "armAngle": 0,
+        "visible": false
+      }
+    },
+    "objective": "",
+    "inventory": [],
+    "mode": "webgl",
+    "renderCount": 3,
+    "threat": {
+      "strength": 1,
+      "visible": true,
+      "retreat": 0
+    },
+    "camera": {
+      "x": 7.6,
+      "y": 6.6,
+      "z": 9.7,
+      "aspect": 1.4285714285714286
+    },
+    "renderer": {
+      "calls": 185,
+      "triangles": 15162
+    }
+  },
+  "wraith": {
+    "theme": "workshop",
+    "index": 0,
+    "progress": 0,
+    "action": "encounter",
+    "time": 0.5791000001907348,
+    "frameDuration": 1000,
+    "frameProgress": 0.5791000001907348,
+    "frameElapsed": 579.1000001907348,
+    "actor": {
+      "x": -2.3132421373558354,
+      "z": 0.3311435114946951,
+      "yaw": 1.5707963267948966,
+      "y": 0,
+      "headYaw": -0.3392488548842836,
+      "armAngle": -0.823890076147546,
+      "legAngle": 0,
+      "reach": 0,
+      "carrying": false,
+      "awake": false,
+      "id": "a604c359-0ee6-4704-94c7-3c5e24e0b292"
+    },
+    "device": {
+      "energy": 0,
+      "gateOpen": 0,
+      "collected": [],
+      "beam": 0,
+      "lever": 0
+    },
+    "items": [
+      {
+        "id": 1,
+        "x": 0.6,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      },
+      {
+        "id": 2,
+        "x": 1.5499999999999998,
+        "y": 0.48,
+        "z": -1.25,
+        "visible": true
+      },
+      {
+        "id": 3,
+        "x": 2.5,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      }
+    ],
+    "reward": {
+      "id": "quest-part-0",
+      "kind": "part",
+      "x": 2.25,
+      "y": 0.95,
+      "z": -0.7,
+      "homeX": 2.25,
+      "homeZ": -0.7,
+      "visible": true,
+      "claimed": false
+    },
+    "spatial": false,
+    "destination": {
+      "x": 1.05,
+      "z": 0.525,
+      "yaw": 1.5707963267948966
+    },
+    "encounter": {
+      "route": "ambush",
+      "blocking": true,
+      "revealed": true,
+      "creature": {
+        "archetype": "wraith",
+        "x": 2.2381893947207034,
+        "y": 1.5508519080424394,
+        "z": 1.3264679654126117,
+        "armAngle": 1.3569954195371343,
+        "visible": true
+      }
+    },
+    "objective": "",
+    "inventory": [],
+    "mode": "webgl",
+    "renderCount": 65,
+    "threat": {
+      "strength": 1,
+      "visible": true,
+      "retreat": 0
+    },
+    "camera": {
+      "x": 7.406143511494695,
+      "y": 6.483686106896816,
+      "z": 9.389829618391511,
+      "aspect": 1.4285714285714286
+    },
+    "renderer": {
+      "calls": 208,
+      "triangles": 17648
+    }
+  },
+  "crawler": {
+    "theme": "workshop",
+    "index": 1,
+    "progress": 0,
+    "action": "encounter",
+    "time": 0.4564000000953674,
+    "frameDuration": 1000,
+    "frameProgress": 0.4564000000953674,
+    "frameElapsed": 456.40000009536743,
+    "actor": {
+      "x": -2.3179394351290368,
+      "z": 0.3268732407917847,
+      "yaw": 1.5707963267948966,
+      "y": 0,
+      "headYaw": -0.34672182861437684,
+      "armAngle": -0.8420387266349152,
+      "legAngle": 0,
+      "reach": 0,
+      "carrying": false,
+      "awake": true,
+      "id": "a604c359-0ee6-4704-94c7-3c5e24e0b292"
+    },
+    "device": {
+      "energy": 0,
+      "gateOpen": 0,
+      "collected": [],
+      "beam": 0,
+      "lever": 0
+    },
+    "items": [
+      {
+        "id": 1,
+        "x": 0.6,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      },
+      {
+        "id": 2,
+        "x": 1.5499999999999998,
+        "y": 0.48,
+        "z": -1.25,
+        "visible": true
+      },
+      {
+        "id": 3,
+        "x": 2.5,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      }
+    ],
+    "reward": {
+      "id": "quest-part-1",
+      "kind": "part",
+      "x": 2.25,
+      "y": 0.95,
+      "z": -0.7,
+      "homeX": 2.25,
+      "homeZ": -0.7,
+      "visible": true,
+      "claimed": false
+    },
+    "spatial": false,
+    "destination": {
+      "x": 1.05,
+      "z": 0.525,
+      "yaw": 1.5707963267948966
+    },
+    "encounter": {
+      "route": "ambush",
+      "blocking": true,
+      "revealed": true,
+      "creature": {
+        "archetype": "crawler",
+        "x": 2.8783198265111283,
+        "y": 1.5850140736657228,
+        "z": 1.3630468472292072,
+        "armAngle": 1.3868873144575073,
+        "visible": true
+      }
+    },
+    "objective": "",
+    "inventory": [],
+    "mode": "webgl",
+    "renderCount": 156,
+    "threat": {
+      "strength": 1,
+      "visible": true,
+      "retreat": 0
+    },
+    "camera": {
+      "x": 7.401873240791784,
+      "y": 6.481123944475071,
+      "z": 9.382997185266854,
+      "aspect": 1.4285714285714286
+    },
+    "renderer": {
+      "calls": 206,
+      "triangles": 16538
+    }
+  },
+  "hound": {
+    "theme": "courtyard",
+    "index": 2,
+    "progress": 0,
+    "action": "encounter",
+    "time": 0.4559000001907348,
+    "frameDuration": 1000,
+    "frameProgress": 0.4559000001907348,
+    "frameElapsed": 455.9000001907348,
+    "actor": {
+      "x": -2.317891979537388,
+      "z": 0.32691638223873837,
+      "yaw": 1.5707963267948966,
+      "y": 0,
+      "headYaw": -0.3466463310822079,
+      "armAngle": -0.8418553754853619,
+      "legAngle": 0,
+      "reach": 0,
+      "carrying": false,
+      "awake": true,
+      "id": "a604c359-0ee6-4704-94c7-3c5e24e0b292"
+    },
+    "device": {
+      "energy": 0,
+      "gateOpen": 0,
+      "collected": [],
+      "beam": 0,
+      "lever": 0
+    },
+    "items": [
+      {
+        "id": 1,
+        "x": 0.6,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      },
+      {
+        "id": 2,
+        "x": 1.5499999999999998,
+        "y": 0.48,
+        "z": -1.25,
+        "visible": true
+      },
+      {
+        "id": 3,
+        "x": 2.5,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      }
+    ],
+    "reward": {
+      "id": "quest-part-2",
+      "kind": "part",
+      "x": 1.05,
+      "y": 0.95,
+      "z": -0.025000000000000022,
+      "homeX": 1.05,
+      "homeZ": -0.025000000000000022,
+      "visible": true,
+      "claimed": false
+    },
+    "spatial": true,
+    "destination": {
+      "x": 1.05,
+      "z": 0.525,
+      "yaw": 1.5707963267948966
+    },
+    "encounter": {
+      "route": "ambush",
+      "blocking": true,
+      "revealed": true,
+      "creature": {
+        "archetype": "hound",
+        "x": 2.880924636159432,
+        "y": 1.5846689420900932,
+        "z": 1.3631956934948246,
+        "armAngle": 1.3865853243288315,
+        "visible": true
+      }
+    },
+    "objective": "",
+    "inventory": [],
+    "mode": "webgl",
+    "renderCount": 259,
+    "threat": {
+      "strength": 1,
+      "visible": true,
+      "retreat": 0
+    },
+    "camera": {
+      "x": 7.401916382238738,
+      "y": 6.481149829343242,
+      "z": 9.38306621158198,
+      "aspect": 1.4285714285714286
+    },
+    "renderer": {
+      "calls": 212,
+      "triangles": 17006
+    }
+  },
+  "lurker": {
+    "theme": "river",
+    "index": 3,
+    "progress": 0,
+    "action": "encounter",
+    "time": 0.4561000000953673,
+    "frameDuration": 1000,
+    "frameProgress": 0.4561000000953673,
+    "frameElapsed": 456.10000009536725,
+    "actor": {
+      "x": -2.3179110262903886,
+      "z": 0.3268990670087376,
+      "yaw": 1.5707963267948966,
+      "y": 0,
+      "headYaw": -0.3466766327347091,
+      "armAngle": -0.8419289652128651,
+      "legAngle": 0,
+      "reach": 0,
+      "carrying": false,
+      "awake": true,
+      "id": "a604c359-0ee6-4704-94c7-3c5e24e0b292"
+    },
+    "device": {
+      "energy": 0,
+      "gateOpen": 0,
+      "collected": [],
+      "beam": 0,
+      "lever": 0
+    },
+    "items": [
+      {
+        "id": 1,
+        "x": 0.6,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      },
+      {
+        "id": 2,
+        "x": 1.5499999999999998,
+        "y": 0.48,
+        "z": -1.25,
+        "visible": true
+      },
+      {
+        "id": 3,
+        "x": 2.5,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      }
+    ],
+    "reward": {
+      "id": "quest-part-3",
+      "kind": "passage",
+      "x": 1.05,
+      "y": 0.95,
+      "z": -0.025000000000000022,
+      "homeX": 1.05,
+      "homeZ": -0.025000000000000022,
+      "visible": true,
+      "claimed": false
+    },
+    "spatial": true,
+    "destination": {
+      "x": 1.05,
+      "z": 0.525,
+      "yaw": 1.5707963267948966
+    },
+    "encounter": {
+      "route": "ambush",
+      "blocking": true,
+      "revealed": true,
+      "creature": {
+        "archetype": "lurker",
+        "x": 2.8798827678701815,
+        "y": 1.584807463930099,
+        "z": 1.3631361581640102,
+        "armAngle": 1.3867065309388364,
+        "visible": true
+      }
+    },
+    "objective": "",
+    "inventory": [],
+    "mode": "webgl",
+    "renderCount": 364,
+    "threat": {
+      "strength": 1,
+      "visible": true,
+      "retreat": 0
+    },
+    "camera": {
+      "x": 7.4018990670087375,
+      "y": 6.481139440205242,
+      "z": 9.38303850721398,
+      "aspect": 1.4285714285714286
+    },
+    "renderer": {
+      "calls": 198,
+      "triangles": 15836
+    }
+  },
+  "sentinel": {
+    "theme": "archive",
+    "index": 5,
+    "progress": 0,
+    "action": "encounter",
+    "time": 0.4453000000000002,
+    "frameDuration": 1000,
+    "frameProgress": 0.4453000000000002,
+    "frameElapsed": 445.3000000000002,
+    "actor": {
+      "x": -2.3167596041537433,
+      "z": 0.32794581440568804,
+      "yaw": 1.5707963267948966,
+      "y": 0,
+      "headYaw": -0.34484482479004597,
+      "armAngle": -0.8374802887758259,
+      "legAngle": 0,
+      "reach": 0,
+      "carrying": false,
+      "awake": true,
+      "id": "a604c359-0ee6-4704-94c7-3c5e24e0b292"
+    },
+    "device": {
+      "energy": 0,
+      "gateOpen": 0,
+      "collected": [],
+      "beam": 0,
+      "lever": 0
+    },
+    "items": [
+      {
+        "id": 1,
+        "x": 0.6,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      },
+      {
+        "id": 2,
+        "x": 1.5499999999999998,
+        "y": 0.48,
+        "z": -1.25,
+        "visible": true
+      },
+      {
+        "id": 3,
+        "x": 2.5,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      }
+    ],
+    "reward": {
+      "id": "quest-part-5",
+      "kind": "part",
+      "x": 2.25,
+      "y": 0.95,
+      "z": -0.7,
+      "homeX": 2.25,
+      "homeZ": -0.7,
+      "visible": true,
+      "claimed": false
+    },
+    "spatial": false,
+    "destination": {
+      "x": 1.05,
+      "z": 0.525,
+      "yaw": 1.5707963267948966
+    },
+    "encounter": {
+      "route": "ambush",
+      "blocking": true,
+      "revealed": true,
+      "creature": {
+        "archetype": "sentinel",
+        "x": 2.936029328738999,
+        "y": 1.5764334847544959,
+        "z": 1.3663445330708,
+        "armAngle": 1.3793792991601839,
+        "visible": true
+      }
+    },
+    "objective": "",
+    "inventory": [],
+    "mode": "webgl",
+    "renderCount": 466,
+    "threat": {
+      "strength": 1,
+      "visible": true,
+      "retreat": 0
+    },
+    "camera": {
+      "x": 7.402945814405688,
+      "y": 6.4817674886434125,
+      "z": 9.3847133030491,
+      "aspect": 1.4285714285714286
+    },
+    "renderer": {
+      "calls": 212,
+      "triangles": 16290
+    }
+  },
+  "restored": {
+    "theme": "beacon",
+    "index": 13,
+    "progress": 1,
+    "action": "ready",
+    "time": 1.1071999998092652,
+    "frameDuration": 1100,
+    "frameProgress": 1,
+    "frameElapsed": 1100,
+    "actor": {
+      "x": 0,
+      "z": 0.525,
+      "yaw": 1.5707963267948966,
+      "y": 0,
+      "headYaw": 0,
+      "armAngle": 0,
+      "legAngle": 0,
+      "reach": 0,
+      "carrying": false,
+      "awake": true,
+      "id": "a604c359-0ee6-4704-94c7-3c5e24e0b292"
+    },
+    "device": {
+      "energy": 0,
+      "gateOpen": 1,
+      "collected": [],
+      "beam": 1,
+      "lever": 0
+    },
+    "items": [
+      {
+        "id": 1,
+        "x": 0.6,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      },
+      {
+        "id": 2,
+        "x": 1.5499999999999998,
+        "y": 0.48,
+        "z": -1.25,
+        "visible": true
+      },
+      {
+        "id": 3,
+        "x": 2.5,
+        "y": 0.48,
+        "z": -0.6,
+        "visible": true
+      }
+    ],
+    "reward": {
+      "id": "restored-stormward",
+      "kind": "defense",
+      "x": 2.25,
+      "y": 0.95,
+      "z": -0.7,
+      "homeX": 2.25,
+      "homeZ": -0.7,
+      "visible": false,
+      "claimed": true
+    },
+    "spatial": false,
+    "destination": {
+      "x": -2.1,
+      "z": 0.525,
+      "yaw": 1.5707963267948966
+    },
+    "encounter": {
+      "route": "safe",
+      "blocking": false,
+      "revealed": false,
+      "creature": {
+        "archetype": "wraith",
+        "x": 0.9,
+        "y": 0,
+        "z": 1.25,
+        "armAngle": 0,
+        "visible": false
+      }
+    },
+    "objective": "",
+    "inventory": [],
+    "mode": "webgl",
+    "renderCount": 968,
+    "threat": {
+      "strength": 0,
+      "visible": false,
+      "retreat": 5
+    },
+    "camera": {
+      "x": 7.6,
+      "y": 6.6,
+      "z": 9.7,
+      "aspect": 1.4285714285714286
+    },
+    "renderer": {
+      "calls": 156,
+      "triangles": 12528
+    }
+  }
+}
