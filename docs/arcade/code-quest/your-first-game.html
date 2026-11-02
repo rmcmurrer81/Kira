@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Firefly Trail — Make Your Own First Adventure Game</title>
+<meta name="description" content="A complete, original beginner JavaScript story adventure. Follow Wisp the fox, make decisions, collect gifts, and see how your choices light the mountain beacon.">
+<style>
+/* STEP 1: CSS is how our HTML becomes a beautiful game. */
+:root{color-scheme:dark;--ink:#f7f4e9;--muted:#cfdae6;--gold:#f4d38d}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(ellipse at 50% 3%,#385575,#101d35 61%,#071325)}
+a{color:var(--gold)}
+button{font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid #ffe4a3;outline-offset:3px}
+.wrapper{max-width:860px;margin:auto;padding:30px 20px 64px}
+.header{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:26px}
+.logo{font-size:.76rem;letter-spacing:.15em;font-weight:900;color:#f3cd8e}
+.back{color:#d9eff6;font-size:.85rem}
+h1{font-size:clamp(2.4rem,6vw,4.1rem);line-height:1;letter-spacing:-.05em;margin:0 0 7px}
+h1 em{color:var(--gold);font-style:normal}
+.subtitle{color:#cbdbe9;margin:0 0 20px}
+.status{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.status span{background:#1f3650;border:1px solid #547088;border-radius:100px;padding:8px 13px;font-size:.82rem;color:#def0f7}
+.scene{background:#132743;border:1px solid #627b90;border-radius:24px;overflow:hidden;box-shadow:0 20px 70px #0008}
+.art{height:245px;position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(#142d52 0%,#456c85 70%,#3e6561 70%,#1b414d)}
+.art::before{content:"";position:absolute;bottom:-105px;left:-20%;height:200px;width:100%;background:#477f73;border-radius:60%;transform:rotate(-8deg);z-index:1}
+.art::after{content:"";position:absolute;bottom:-100px;right:-20%;height:190px;width:100%;background:#29536a;border-radius:60%;transform:rotate(12deg);z-index:1}
+.moon{position:absolute;right:14%;top:15px;width:75px;height:75px;background:#fbeac3;border-radius:50%;box-shadow:0 0 75px #ffedb487}
+.stars{position:absolute;left:14%;top:25%;font-size:1.4rem;letter-spacing:1.5em;color:#fdf1c9;text-shadow:0 0 10px #ffe7a3}
+.fox{position:absolute;left:18%;bottom:20px;font-size:5.4rem;z-index:3;filter:drop-shadow(0 14px 15px #08182f);animation:bob 3s ease-in-out infinite}
+.light{position:absolute;right:21%;bottom:57px;font-size:3.6rem;z-index:3;text-shadow:0 0 28px #fceba0}
+.caption{position:absolute;bottom:9px;left:14px;z-index:4;background:#18384dc7;border-radius:30px;padding:4px 12px;font-size:.74rem;color:#d7ebee}
+.content{padding:26px 30px 32px}
+.eyebrow{font-size:.74rem;letter-spacing:.15em;color:#a7dad1;font-weight:900;margin:0 0 8px}
+h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.18;letter-spacing:-.03em;margin:0 0 12px}
+.story{color:#d3e1ee;line-height:1.8;margin:0 0 22px;min-height:84px}
+.choices{display:grid;gap:11px}
+.choice{display:flex;justify-content:space-between;align-items:center;gap:13px;width:100%;text-align:left;min-height:54px;background:#29475e;border:1px solid #66879a;color:#f6fbff;border-radius:13px;padding:13px 17px;font-weight:770}
+.choice:hover{background:#35667b;border-color:#c2eee9}
+.choice span:last-child{color:#ffd6a0}
+.final{background:linear-gradient(115deg,#275858,#36576e);border:1px solid #9ed3a9;border-radius:16px;padding:18px;color:#f0ffeb;margin-top:13px;line-height:1.7}
+.restart{margin-top:16px;background:#f5d38f;color:#1f2d3a;border:0;border-radius:12px;padding:12px 20px;font-weight:850}
+.small{color:#bbcbdf;font-size:.82rem;margin-top:22px}
+@keyframes bob{50%{transform:translateY(-10px)}}
+@media(max-width:550px){.wrapper{padding:21px 12px 50px}.art{height:205px}.fox{left:10%;font-size:4.7rem}.light{right:13%}.content{padding:23px 20px}.story{min-height:unset}}
+@media(prefers-reduced-motion:reduce){.fox{animation:none}}
+</style>
+</head>
+<body>
+<main class="wrapper">
+<div class="header"><span class="logo">✦ KIRA LABS · YOUR FIRST GAME</span><a class="back" href="learn.html">← Back to the tutorial</a></div>
+<h1>The <em>Firefly Trail</em></h1>
+<p class="subtitle">An original mini adventure. Every choice changes the path.</p>
+<div class="status" aria-label="Game status">
+ <span id="progress">Chapter 1 of 5</span>
+ <span id="bag">Backpack: empty</span>
+</div>
+<section class="scene">
+ <div class="art" aria-hidden="true"><span class="moon"></span><span class="stars">✦ ✧ ✦</span><span class="fox">🦊</span><span class="light" id="light">🏮</span><span class="caption" id="location">The sleepy village</span></div>
+ <div class="content">
+  <p class="eyebrow" id="speaker">WISP THE FOX</p>
+  <h2 id="title">The Night the Fireflies Vanished</h2>
+  <p id="story" class="story" aria-live="polite"></p>
+  <div id="choices" class="choices" aria-label="Your choices"></div>
+  <div id="final" class="final" hidden></div>
+  <button id="restart" class="restart" type="button" hidden>↻ Play from the beginning</button>
+ </div>
+</section>
+<p class="small">A complete browser game made with HTML, CSS, and JavaScript. No downloads or accounts needed to play. <a href="learn.html">Learn how to make your own copy.</a></p>
+</main>
+<script>
+/* STEP 2: This JavaScript tells the full story, from beginning to ending.
+   Edit the titles, text, and choices to write YOUR OWN adventure. */
+
+// An object holds all the scenes. Each scene has choices that lead onward.
+const scenes = {
+  start: {
+    chapter: 1, speaker: "WISP THE FOX", place: "The sleepy village",
+    title: "The Night the Fireflies Vanished",
+    story: "The mountain beacon is dark. Without its light, the fireflies cannot find their way home. Wisp, a brave fox with a tiny lantern, asks you to help before dawn. Where should you look for a light?",
+    choices: [
+      { text: "Visit the village lantern-maker", next: "village" },
+      { text: "Search the silver forest", next: "forest" }
+    ]
+  },
+  village: {
+    chapter: 2, speaker: "THE LANTERN-MAKER", place: "The village workshop",
+    title: "A Gift for the Journey",
+    story: "The lantern-maker is packing up for the night. “I have a warm lantern and a little compass,” she says. “Take one. I hope it helps you reach the summit.”",
+    choices: [
+      { text: "Take the warm lantern", gift: "lantern", next: "river" },
+      { text: "Take the brass compass", gift: "compass", next: "river" }
+    ]
+  },
+  forest: {
+    chapter: 2, speaker: "WISP THE FOX", place: "The silver forest",
+    title: "A Shimmer Between the Trees",
+    story: "A lost firefly dances among the branches. Beside it, a tiny moth struggles beneath a leaf. You have time to help only one before the moon sinks lower.",
+    choices: [
+      { text: "Catch a safe spark of firefly light", gift: "spark", next: "river" },
+      { text: "Free the little moon moth", gift: "moth", next: "river" }
+    ]
+  },
+  river: {
+    chapter: 3, speaker: "THE RIVER SPIRIT", place: "Glasswater Crossing",
+    title: "The Bridge of Whispers",
+    story: "A rushing river blocks the path to Beacon Hill. You can cross the old bridge, or ask the patient river spirit to help. Every choice is a new line in your story.",
+    choices: [
+      { text: "Cross the old bridge with courage", gift: "courage", next: "hill" },
+      { text: "Ask the river spirit for guidance", gift: "patience", next: "hill" }
+    ]
+  },
+  hill: {
+    chapter: 4, speaker: "WISP THE FOX", place: "Beacon Hill",
+    title: "The Last Little Flame",
+    story: "At last you reach the beacon. The sky is fading, and below you the fireflies are waiting. Wisp asks, “How do you want to bring the light back?”",
+    choices: [
+      { text: "Use the gift from my journey", next: "ending", action: "gift" },
+      { text: "Call all the forest friends to help", next: "ending", action: "friends" }
+    ]
+  }
+};
+
+// STEP 3: Variables remember the player's choices.
+let currentScene = "start";
+let backpack = [];
+let endingText = "";
+
+// STEP 4: A function updates the webpage to show the current scene.
+function showScene() {
+  const scene = scenes[currentScene];
+  document.getElementById("progress").textContent = endingText ? "Adventure complete" : "Chapter " + scene.chapter + " of 5";
+  document.getElementById("bag").textContent = "Backpack: " + (backpack.length ? backpack.join(", ") : "empty");
+  document.getElementById("location").textContent = endingText ? "The shining summit" : scene.place;
+  document.getElementById("speaker").textContent = endingText ? "THE END · YOUR STORY" : scene.speaker;
+  document.getElementById("title").textContent = endingText ? "The Fireflies Return!" : scene.title;
+  document.getElementById("story").textContent = endingText ? endingText : scene.story;
+
+  const choices = document.getElementById("choices");
+  choices.replaceChildren(); // Remove old buttons before drawing the next choices.
+
+  // A loop creates one clickable button for every available choice.
+  if (!endingText) {
+    for (const choice of scene.choices) {
+      const button = document.createElement("button");
+      button.className = "choice";
+      button.type = "button";
+      button.textContent = choice.text + "  →";
+      button.addEventListener("click", () => choose(choice));
+      choices.appendChild(button);
+    }
+  }
+  document.getElementById("final").hidden = !endingText;
+  document.getElementById("final").textContent = endingText ? "✦ Your adventure has a complete ending. Try the other paths and discover a different result!" : "";
+  document.getElementById("restart").hidden = !endingText;
+  document.getElementById("light").textContent = endingText ? "🌟" : "🏮";
+}
+
+// STEP 5: An if statement changes the ending using your collected items.
+function choose(choice) {
+  if (choice.gift) backpack.push(choice.gift); // Arrays can grow with push().
+  if (choice.next === "ending") {
+    if (choice.action === "friends") {
+      endingText = "You call into the night. The river spirit, lantern-maker, moon moth, and hundreds of fireflies answer. Together they lift the beacon's flame. The forest shines again—because you chose to work together.";
+    } else if (backpack.includes("lantern") || backpack.includes("spark")) {
+      endingText = "You lift your treasured light. A golden flame leaps from the lantern to the beacon, and every firefly finds its way home. Wisp cheers: “Your choices saved the forest!”";
+    } else {
+      endingText = "Your gift is not a flame—but it gave you the courage and wisdom to reach the summit. You place your hands on the beacon and ask Wisp for help. Together, you spark a gentle silver light. The fireflies return.";
+    }
+  } else {
+    currentScene = choice.next;
+  }
+  showScene();
+}
+
+// STEP 6: Replay brings the whole adventure back to the beginning.
+document.getElementById("restart").addEventListener("click", () => {
+  currentScene = "start";
+  backpack = [];
+  endingText = "";
+  showScene();
+});
+showScene(); // Start the game!
+</script>
+</body>
+</html>

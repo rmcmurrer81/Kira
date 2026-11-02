@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071427">
+<meta name="description" content="Play Code Quest, a free complete story adventure where you learn JavaScript by solving puzzles and rescuing Starlight Bay.">
+<meta property="og:title" content="Code Quest: Save Starlight Bay — Kira Labs Arcade">
+<meta property="og:description" content="Eight beginner-friendly coding missions, one complete adventure, and real JavaScript you can run in your browser.">
+<link rel="canonical" href="https://kiralabs.org/arcade/code-quest/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="stylesheet" href="../../labs.css">
+<link rel="stylesheet" href="game.css?v=1">
+<script src="../../labs.js?v=20261101-iris-float4" defer></script>
+<script src="game.js?v=1" defer></script>
+<title>Code Quest: Save Starlight Bay — Kira Labs Arcade</title>
+</head>
+<body class="cq-page">
+<a class="skip" href="#game">Skip to the game</a>
+<header class="site-header">
+ <div class="wrap navrow">
+  <a class="brand" href="../../index.html" aria-label="Kira Labs home">
+   <span class="brandmark"><img src="../../assets/kira-world-k-logo-192.png" alt="" width="38" height="38"></span>
+   <span class="brandwords"><strong>Kira Labs</strong><small>Independent AI research</small></span>
+  </a>
+  <button class="menubtn menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button>
+  <nav class="nav" id="primary-nav" aria-label="Main navigation">
+   <a href="../../index.html">Home</a><a href="../../projects.html">Projects</a><a href="../../research.html">Research</a><a href="../../tools-apps.html">Tools &amp; Apps</a><a href="../" aria-current="page">Arcade</a><a class="contact" href="../../contact.html">Contact</a>
+  </nav>
+ </div>
+</header>
+<main id="game">
+ <div class="cq-shell">
+  <div class="cq-header">
+   <div><p class="cq-overline">KIRA LABS ARCADE / AN ORIGINAL PROGRAMMING ADVENTURE</p>
+    <h1>Code <em>Quest</em><span class="cq-star" aria-hidden="true">✦</span></h1>
+    <p class="cq-subtitle">Save Starlight Bay. One line of code at a time.</p>
+   </div>
+   <div class="cq-header-actions"><a class="cq-pill-link" href="../"><span aria-hidden="true">←</span> All arcade games</a><a class="cq-pill-link" href="learn.html">Build your own game <span aria-hidden="true">↗</span></a></div>
+  </div>
+  <section class="cq-progress" aria-label="Your progress">
+   <div class="cq-progress-top"><span id="chapterCount">Mission 1 of 8</span><span id="progressLabel">0 of 8 complete</span></div>
+   <div class="cq-progress-track" role="progressbar" id="progressBar" aria-label="Completed missions" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><div id="progressFill"></div></div>
+  </section>
+  <div class="cq-layout">
+   <section class="cq-story" aria-labelledby="sceneTitle">
+    <div class="cq-card-top"><span class="cq-chip" id="chapterName">CHAPTER 1 · THE BLACKOUT</span><span class="cq-chip cq-chip-gold" id="topicName">STRINGS</span></div>
+    <div class="cq-stage">
+     <div class="cq-sky"><span class="cq-moon"></span><span class="cq-star-s1">✦</span><span class="cq-star-s2">✧</span><span class="cq-star-s3">✦</span></div>
+     <div class="cq-hills"></div>
+     <div class="cq-lighthouse" id="lighthouse" aria-hidden="true"><span class="cq-beam"></span><span class="cq-tower"></span><span class="cq-roof"></span></div>
+     <div class="cq-board" id="board" role="img" aria-label="The adventure world"></div>
+     <div class="cq-sprite" id="pixSprite" aria-hidden="true"><div class="cq-antenna"></div><div class="cq-head"><i></i><i></i></div><div class="cq-bodybot"><span>✦</span></div><div class="cq-feet"></div></div>
+     <div class="cq-scene-caption" id="sceneCaption">Starlight Bay · 11:47 PM</div>
+    </div>
+    <div class="cq-storycopy">
+     <p class="cq-speaker" id="speaker">MIRA · YOUR GUIDE</p>
+     <h2 id="sceneTitle">A Voice in the Dark</h2>
+     <p id="storyText">The lights are out all across Starlight Bay. Mira asks for help waking PIX, the workshop robot.</p>
+     <div class="cq-goal"><div class="cq-goal-symbol" aria-hidden="true">✧</div><div><strong>Your mission</strong><p id="goalText">Write a friendly message to PIX.</p></div></div>
+    </div>
+   </section>
+   <section class="cq-editor-card" aria-label="Coding workspace">
+    <div class="cq-editor-top"><div><p class="cq-code-eyebrow">YOUR PROGRAM</p><h2>Write the next chapter</h2></div><span class="cq-js-badge">JavaScript</span></div>
+    <div class="cq-coach"><span class="cq-coach-icon" aria-hidden="true">?</span><div><strong id="lessonTitle">How strings work</strong><p id="lessonText">A string is text inside quotation marks.</p></div></div>
+    <form id="codeForm">
+     <label class="cq-editor-label" for="codeInput">Edit the code, then run it</label>
+     <div class="cq-codewrap"><div class="cq-codechrome"><span class="cq-dot"></span><span class="cq-dot"></span><span class="cq-dot"></span><span>mission.js</span></div>
+      <textarea id="codeInput" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" rows="8" aria-describedby="keyboardHelp" required></textarea></div>
+     <p class="cq-keyboard" id="keyboardHelp">Tip: Press Ctrl + Enter (or ⌘ + Enter) to run. You can also use the button below.</p>
+     <div class="cq-controls"><button id="runButton" class="cq-btn cq-btn-main" type="submit"><span aria-hidden="true">▶</span> Run my code</button><button id="hintButton" class="cq-btn cq-btn-soft" type="button">Get a hint</button><button id="resetButton" class="cq-btn cq-btn-plain" type="button">Reset code</button></div>
+    </form>
+    <div id="hintBox" class="cq-hint" hidden><strong>PIX's hint</strong><p id="hintText"></p><button type="button" id="solutionButton">Show a working example</button></div>
+    <div class="cq-output" aria-live="polite" aria-atomic="true" id="outputPanel"><div class="cq-output-heading"><span id="outputIcon" aria-hidden="true">⌁</span><strong id="outputTitle">Ready to code</strong></div><p id="outputText">Make one small change and press Run my code. Mistakes are part of learning.</p><div id="actionLog" class="cq-action-log"></div></div>
+    <div class="cq-navigation"><button type="button" class="cq-btn cq-btn-plain" id="previousButton">← Previous</button><button type="button" class="cq-btn cq-btn-next" id="nextButton" disabled>Next mission →</button></div>
+    <p class="cq-storage-note">Progress saves on this device. No signup, no ads, and no code is sent to Kira Labs.</p>
+   </section>
+  </div>
+  <section id="ending" class="cq-ending" hidden aria-labelledby="endingTitle">
+    <div class="cq-ending-stars" aria-hidden="true">✦ ✧ ✦ ✧ ✦</div>
+    <p class="cq-overline">STORY COMPLETE · ALL EIGHT MISSIONS</p>
+    <h2 id="endingTitle">The beacon shines again!</h2>
+    <p>The night sky fills with color. Mira laughs as PIX waves to the whole town. Starlight Bay is saved—and you wrote the code that made it happen.</p>
+    <div class="cq-end-stats"><strong>8 missions complete</strong><span>Strings · Variables · Commands · Directions · Conditions · Loops · Arrays · Functions</span></div>
+    <div class="cq-end-actions"><button type="button" class="cq-btn cq-btn-main" id="replayButton">Play the story again</button><a class="cq-btn cq-btn-soft" href="learn.html">Build a game from scratch</a></div>
+  </section>
+  <section class="cq-about" aria-label="About this game"><h2>Adventure first. Coding as you go.</h2><p>Each puzzle runs real JavaScript in a short-lived browser worker. Your commands make PIX speak, move, collect treasures and power the beacon. Read the hints whenever you like, and explore the full step-by-step <a href="learn.html">beginner game-making lesson</a> afterward.</p><p>This is a self-contained educational game, not a live AI simulation. <a href="https://github.com/rmcmurrer81/Kira/tree/main/docs/arcade/code-quest">View its source code</a>.</p></section>
+ </div>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-bottomline"><p>© 2026 Kira Labs · An original browser game</p><p><a href="../">Arcade</a> · <a href="../../index.html">Kira Labs home</a></p></div></div></footer>
+</body>
+</html>

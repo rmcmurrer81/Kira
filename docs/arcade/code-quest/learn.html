@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071427">
+<title>Build Your First Complete Adventure Game — Kira Labs Arcade</title>
+<meta name="description" content="A free beginner tutorial teaching you to create a complete browser story game, from the first HTML file through choices, JavaScript variables, functions, different endings and replay.">
+<link rel="canonical" href="https://kiralabs.org/arcade/code-quest/learn.html">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="stylesheet" href="../../labs.css">
+<script src="../../labs.js?v=20261101-iris-float4" defer></script>
+<style>
+body{background:#071427;color:#eaf2ff}
+.lesson-shell{width:min(1050px,calc(100% - 36px));margin:auto;padding:54px 0 90px}
+.lesson-eyebrow{font-size:.76rem;letter-spacing:.15em;font-weight:830;color:#f3c381;margin:0 0 17px}
+.lesson-hero h1{font-size:clamp(2.5rem,5.4vw,4.7rem);line-height:1.07;letter-spacing:-.05em;color:#fff;margin:0 0 18px;max-width:880px}
+.lesson-hero h1 em{color:#ffd08a;font-style:normal}
+.lesson-hero p:not(.lesson-eyebrow){color:#c4d8e9;font-size:1.1rem;line-height:1.7;max-width:770px}
+.lesson-actions{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 38px}
+.lesson-button{display:inline-flex;align-items:center;gap:8px;padding:13px 19px;background:#f4ca86;color:#182b3c;border:1px solid #f4ca86;border-radius:10px;text-decoration:none;font-weight:820;min-height:45px;font-size:.93rem;cursor:pointer}
+.lesson-button:hover{background:#ffe3b7;color:#182b3c}
+.lesson-button.alt{background:#24475c;border-color:#557b91;color:#fff}
+.lesson-button.alt:hover{background:#356377}
+.lesson-card{border:1px solid #3a5a73;background:#12273d;border-radius:22px;padding:30px;margin:24px 0}
+.lesson-card h2{font-size:1.75rem;color:#fff;letter-spacing:-.03em;margin:0 0 15px}
+.lesson-card p,.lesson-card li{color:#d2e1ef;line-height:1.75}
+.lesson-card a:not(.lesson-button){color:#ffd395}
+.lesson-card ol,.lesson-card ul{padding-left:24px}
+.lesson-card li{margin-bottom:8px}
+.lesson-number{display:inline-flex;align-items:center;justify-content:center;background:#ffe0a0;color:#253447;width:37px;height:37px;border-radius:10px;font-weight:900;font-size:1rem;margin-right:9px;vertical-align:middle}
+.lesson-code{overflow:auto;background:#081525;border:1px solid #54728b;color:#c8edff;border-radius:12px;padding:18px;font:14px/1.75 ui-monospace,Consolas,monospace;white-space:pre}
+.lesson-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.lesson-note{background:#223e51;border-left:4px solid #92d1d5;border-radius:10px;padding:14px 17px;margin-top:14px;color:#dceaf5;line-height:1.6}
+.lesson-preview{width:100%;height:640px;border:1px solid #52768b;border-radius:12px;background:#0f1e2e}
+.lesson-source{display:block;width:100%;min-height:230px;max-height:460px;resize:vertical;background:#071325;border:1px solid #5a7e95;border-radius:13px;color:#dcefff;padding:14px;font:13px/1.5 ui-monospace,Consolas,monospace}
+.lesson-source-status{font-size:.88rem;color:#c9dfee;min-height:22px;margin:10px 0}
+.lesson-toc{color:#e2f2ff;font-weight:790}
+.lesson-card strong{color:#fff}
+.lesson-card code:not(.lesson-code code){font-family:ui-monospace,Consolas,monospace;background:#2a455b;color:#e0f6ff;border-radius:5px;padding:2px 5px}
+.lesson-shell a:focus-visible,.lesson-shell button:focus-visible,.lesson-shell textarea:focus-visible{outline:3px solid #ffe0a0;outline-offset:3px}
+.lesson-end{margin-top:42px;color:#a9c3d8;font-size:.89rem}
+@media(max-width:700px){.lesson-shell{padding-top:32px}.lesson-card{padding:23px 19px}.lesson-grid{grid-template-columns:1fr}.lesson-preview{height:560px}.lesson-actions .lesson-button{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the lesson</a>
+<header class="site-header">
+<div class="wrap navrow">
+<a class="brand" href="../../index.html" aria-label="Kira Labs home"><span class="brandmark"><img src="../../assets/kira-world-k-logo-192.png" alt="" width="38" height="38"></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent AI research</small></span></a>
+<button class="menubtn menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button>
+<nav class="nav" id="primary-nav" aria-label="Main navigation"><a href="../../index.html">Home</a><a href="../../projects.html">Projects</a><a href="../../research.html">Research</a><a href="../../tools-apps.html">Tools &amp; Apps</a><a href="../" aria-current="page">Arcade</a><a class="contact" href="../../contact.html">Contact</a></nav>
+</div></header>
+<main id="main" class="lesson-shell">
+<section class="lesson-hero">
+<p class="lesson-eyebrow">KIRA LABS · FREE BEGINNER PROGRAMMING LESSON</p>
+<h1>Make a <em>whole game.</em><br>From first file to final scene.</h1>
+<p>This is not a video about merely walking a character back and forth. You'll make <strong>The Firefly Trail</strong>: a complete story adventure with a beginning, two story routes, inventory, a river crossing, several endings, and a replay button. Then you can write your own version.</p>
+<div class="lesson-actions"><a href="your-first-game.html" class="lesson-button">Play the finished game →</a><a class="lesson-button alt" href="your-first-game.html" download="index.html">Download the complete HTML file ↓</a><a href="./" class="lesson-button alt">Play Code Quest →</a></div>
+</section>
+
+<section class="lesson-card">
+<h2><span class="lesson-number">1</span> See what you're going to build</h2>
+<p>Meet Wisp the fox. The fireflies have lost their way, and the mountain beacon has gone dark. Your choices determine what gifts you find and how the adventure ends. Try playing it right here:</p>
+<iframe class="lesson-preview" src="your-first-game.html" title="Play The Firefly Trail, the complete example game" loading="lazy"></iframe>
+<p class="lesson-note">This is the finished, working example—not a mockup. It uses only HTML, CSS and JavaScript, so it runs without installing a game engine.</p>
+</section>
+
+<section class="lesson-card">
+<h2><span class="lesson-number">2</span> Create your very first game file</h2>
+<ol>
+<li>Make a new folder on your computer named <code>my-adventure-game</code>.</li>
+<li>Open Notepad on Windows, or a free code editor like Visual Studio Code.</li>
+<li>Create a new file called <code>index.html</code>. In Windows Notepad, choose <strong>Save as type: All files</strong> so it does not become <code>index.html.txt</code>.</li>
+<li>Press <strong>Copy complete game code</strong> below, paste into the new file, and save it as UTF-8.</li>
+<li>Double-click <code>index.html</code>. Your browser should open a complete, playable game. Try every ending, then use the replay button.</li>
+</ol>
+<div class="lesson-actions"><button id="copyCode" class="lesson-button" type="button">Copy complete game code</button><a class="lesson-button alt" href="your-first-game.html" download="index.html">Save complete game file</a></div>
+<p id="sourceStatus" class="lesson-source-status" role="status" aria-live="polite">Loading the original source from this game…</p>
+<label for="sourceCode" style="display:block;margin-bottom:8px;font-weight:750;color:#eaf2ff">All the code for the complete game (HTML + CSS + JavaScript)</label>
+<textarea id="sourceCode" class="lesson-source" readonly spellcheck="false" aria-label="Complete source code for The Firefly Trail">Loading…</textarea>
+</section>
+
+<section class="lesson-card">
+<h2><span class="lesson-number">3</span> Understand what each language does</h2>
+<div class="lesson-grid">
+<div><h3>HTML builds the page</h3><p>HTML gives the game its title, story area, choice buttons and replay control. These are the pieces you see on screen.</p>
+<pre class="lesson-code"><code>&lt;h2 id="title"&gt;Your story&lt;/h2&gt;
+&lt;p id="story"&gt;&lt;/p&gt;
+&lt;div id="choices"&gt;&lt;/div&gt;</code></pre></div>
+<div><h3>CSS brings the world to life</h3><p>CSS controls the colors, atmosphere, readable text, button styles and layout on phones.</p>
+<pre class="lesson-code"><code>.scene {
+  background: #132743;
+  border-radius: 24px;
+  padding: 20px;
+}</code></pre></div>
+<div><h3>JavaScript remembers the adventure</h3><p>Variables hold the current scene, your backpack and the ending you unlock.</p>
+<pre class="lesson-code"><code>let currentScene = "start";
+let backpack = [];
+let endingText = "";</code></pre></div>
+<div><h3>Functions make it interactive</h3><p>Clicking a choice calls a function, updates your backpack and displays the next scene. The replay button resets those variables.</p>
+<pre class="lesson-code"><code>function choose(choice) {
+  if (choice.gift) {
+    backpack.push(choice.gift);
+  }
+  // Continue to the next scene...
+}</code></pre></div>
+</div>
+</section>
+
+<section class="lesson-card">
+<h2><span class="lesson-number">4</span> See the complete adventure structure</h2>
+<p>Every choice has a destination. The finished game contains a branching route, then a shared river crossing and summit, followed by alternate endings. That's a complete, repeatable game loop:</p>
+<pre class="lesson-code"><code>BEGINNING: The fireflies disappear
+           |
+           +-- Visit the lantern-maker --+
+           |                            |
+           +-- Search the forest -------+
+                                        |
+                    Glasswater River crossing
+                                        |
+                       Reach the mountain beacon
+                                        |
+                      Choose how to restore light
+                                        |
+                         DIFFERENT STORY ENDINGS
+                                        |
+                               PLAY AGAIN</code></pre>
+<p>The scene <code>start</code> contains buttons that move you to <code>village</code> or <code>forest</code>. Both routes eventually lead to <code>river</code>, then <code>hill</code>. When the player makes the last choice, an <code>if</code> statement picks the right ending.</p>
+</section>
+
+<section class="lesson-card">
+<h2><span class="lesson-number">5</span> Write a new chapter yourself</h2>
+<p>Now change the game. Open your <code>index.html</code> and look for <code>const scenes = {</code>. A scene is an object with a title, narrative and choices. You can start by modifying the village story or add a new <code>cave</code> scene.</p>
+<pre class="lesson-code"><code>cave: {
+  chapter: 3,
+  speaker: "THE OLD OWL",
+  place: "A hidden crystal cave",
+  title: "The Owl's Secret",
+  story: "A wise owl offers you a moonstone.",
+  choices: [
+    { text: "Accept the moonstone",
+      gift: "moonstone", next: "river" },
+    { text: "Thank the owl and continue",
+      next: "river" }
+  ]
+},</code></pre>
+<p>Put that object inside <code>scenes</code> between other scene objects, separated by commas. Then update a forest choice so its <code>next</code> property is <code>"cave"</code>. Save and refresh. You have created a new playable chapter!</p>
+<p>You can also replace Wisp with a robot, move the story to another planet, add more scenes, add scores, change the CSS colors, or write your own endings. Try one change at a time and play the story again to test it.</p>
+</section>
+
+<section class="lesson-card">
+<h2><span class="lesson-number">6</span> Test, finish and share the game</h2>
+<ul>
+<li>Play from the first scene to a final ending on both story routes.</li>
+<li>Check that every choice points to a real scene name, and each item can be collected.</li>
+<li>Try every final choice. Make sure replay returns to the beginning with an empty backpack.</li>
+<li>Check buttons and story text on both a desktop and a phone-sized window.</li>
+<li>Keep the original code file somewhere safe. When your game is ready, put its <code>index.html</code> in a new folder under a website's <code>arcade</code> directory and link to it from the arcade homepage.</li>
+</ul>
+<div class="lesson-note"><strong>Congratulations:</strong> after these steps you have not just practiced code—you have created, played, tested and finished a complete browser game. You can make the next story entirely your own.</div>
+<div class="lesson-actions"><a class="lesson-button" href="your-first-game.html">Play Firefly Trail →</a><a class="lesson-button alt" href="./">Return to Code Quest →</a><a class="lesson-button alt" href="../">Explore the whole arcade →</a></div>
+</section>
+<p class="lesson-end">Made by Kira Labs for curious beginners. You may copy and customize The Firefly Trail example code for your own projects; please keep third-party material you add properly licensed.</p>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-bottomline"><p>© 2026 Kira Labs · Learn by building</p><p><a href="../">Arcade</a> · <a href="../../index.html">Kira Labs home</a></p></div></div></footer>
+<script>
+(() => {
+  const output=document.getElementById("sourceCode");
+  const status=document.getElementById("sourceStatus");
+  const btn=document.getElementById("copyCode");
+  let source="";
+  fetch("your-first-game.html").then(r=>{
+    if(!r.ok)throw new Error("Source not available");
+    return r.text();
+  }).then(text=>{
+    source=text;output.value=text;
+    status.textContent="Complete working game source loaded. You can copy it all with the button.";
+  }).catch(()=>{
+    status.textContent="The preview is available above. To get the code, use Save complete game file.";
+    output.value="The source is available using the download link above.";
+    btn.disabled=true;
+  });
+  btn.addEventListener("click",async()=>{
+    if(!source)return;
+    try{
+      await navigator.clipboard.writeText(source);
+      status.textContent="Copied! Paste into index.html and save. Your entire game is ready to run.";
+    }catch(_){
+      status.textContent="Your browser blocked clipboard access. Use Save complete game file instead.";
+    }
+  });
+})();
+</script>
+</body>
+</html>
