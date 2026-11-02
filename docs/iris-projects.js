@@ -130,6 +130,10 @@
     if(/\b(conscious|consciousness|sentient|sentience|human brain|certified|certification|proven|guarantee|guaranteed|safe(?:ty)?|risks?|manufactur\w*|alien proof|extraterrestrial proof|replace qwen|replaces qwen|real brain)\b/.test(q)||/\b(?:turn|make|build)\b.*\bworking (?:robot|invention)\b/.test(q))return 'limits';
     if(/(?:how (?:do|can|should)|can|could) i (?:run|start|install|set up)|(?:setup|installation) requirements|\b(?:mac|macos|linux|windows)\b/.test(q))return 'technical';
     if(/\b(?:what|which) (?:local )?models?\b|\bmodels?\b.*\b(?:use|uses|powers|powering)\b/.test(q))return 'technical';
+    // Dated research and acceptance questions use reviewed status, rather than
+    // treating natural-language wording as an undocumented general overview.
+    if(/\b(?:readout|original12|workspace launcher)\b/.test(q)&&/\b(?:prove|proved|improve|improved|verified|checked|establish|established|passed|failed|latest|november)\b/.test(q))return 'status';
+    if(/\b(?:accepted|approved|rejected|unapproved)\b/.test(q)&&/\b(?:head|body|avatar|model|candidate|face)\b/.test(q))return 'status';
     if(/\b(?:latest|newest)\b/.test(q))return 'status';
     if(/\b(?:full.body|whole body|body plan|camera|zoom|framing|life loop)\b/.test(q))return 'status';
     if(/\b(tests?|tested|testing|fixtures?|benchmark|benchmarks|measured|evidence|validation|validated|results?|reproducible|ran|unrun)\b/.test(q))return 'evidence';

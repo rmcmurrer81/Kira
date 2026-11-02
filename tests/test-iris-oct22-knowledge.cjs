@@ -13,8 +13,8 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-11-02.1'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-11-02.1'));
+assert.ok(irisPage.includes('iris.js?v=2026-11-02.1-routing1'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-11-02.1-routing1'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-11-02');
@@ -84,6 +84,16 @@ const previousOct28=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-pr
 const knowledge={topics:[],sources:{},public_packs:null};
 iris.prepare(knowledge,data);
 const ask=(q)=>{const response=iris.answer(knowledge,q,'',[],null);assert.ok(response&&response.answer,'No reviewed answer: '+q);return response;};
+
+const currentReadout=ask('What did the November 2 NewBrain content-state readout prove, and did Original12 improve?');
+assert.equal(currentReadout.id,'newbrain');
+assert.ok(['status','compound'].includes(currentReadout.facet));
+assert.match(currentReadout.answer,/LATEST NOV02 SOURCE/);
+assert.match(currentReadout.answer,/Original12 accepted 2\/12/);
+const currentBody=ask('Was a full Evelyn body accepted on November 2, or just the Avatar Builder workspace launcher checked?');
+assert.match(currentBody.answer,/LATEST NOV02 WORKSPACE/);
+assert.match(currentBody.answer,/No new original body/);
+
 const directA108=ask('What did NewBrain A108 establish, and did Original12 improve?');
 assert.equal(directA108.id,'newbrain');assert.equal(directA108.facet,'status');assert.match(directA108.answer,/rank 77/);assert.match(directA108.answer,/Original12(?: accepted)? 2\/12/);
 const directSource109=ask('Is the Source109 head torso connected body finished?');
