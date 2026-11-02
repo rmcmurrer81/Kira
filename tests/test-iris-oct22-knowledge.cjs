@@ -206,10 +206,12 @@ assert.ok(timelineText.includes('"prepared_on": "2026-11-02"'),'Nov2 picture tim
 for(const id of ['newbrain-content-readout-boundary-2026-11-02','avatar-workspace-identity-2026-11-02'])assert.ok(timelineText.includes('"id": "'+id+'"'),'Nov2 picture timeline milestone missing: '+id);
 const timelineData=JSON.parse(timelineText.replace(/^[\s\S]*?window\.KIRA_LABS_TIMELINE\s*=\s*/,'').replace(/;\s*$/,''));
 assert.equal(timelineData.prepared_on,'2026-11-02');
-assert.equal(timelineData.milestones[0].date,'2026-11-02');
-assert.equal(timelineData.milestones[1].date,'2026-11-02');
-assert.match(timelineData.milestones[0].boundary,/does not prove semantic understanding/);
-assert.match(timelineData.milestones[1].boundary,/not proof/);
+for(const id of ['newbrain-content-mean-qualification-failed-2026-11-02','newbrain-content-readout-boundary-2026-11-02','avatar-workspace-identity-2026-11-02']){
+ assert.equal(timelineData.milestones.find(m=>m.id===id)?.date,'2026-11-02','Missing dated milestone '+id);
+}
+assert.match(timelineData.milestones.find(m=>m.id==='newbrain-content-readout-boundary-2026-11-02').boundary,/does not prove semantic understanding/);
+assert.match(timelineData.milestones.find(m=>m.id==='avatar-workspace-identity-2026-11-02').boundary,/not proof/);
+assert.match(timelineData.milestones.find(m=>m.id==='newbrain-content-mean-qualification-failed-2026-11-02').body,/216 genuine teaching updates/);
 
 const progress=JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8'));
 assert.equal(progress.reviewed_on,'2026-10-31');
