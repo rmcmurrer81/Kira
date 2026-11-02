@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-01",
+  "prepared_on": "2026-11-02",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,74 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-content-readout-boundary-2026-11-02",
+      "title": "NewBrain readout source passes bounded checks; language learning still fails",
+      "project": "NewBrain",
+      "track": "Neural readout design and separately measured language learning",
+      "date": "2026-11-02",
+      "reviewed_on": "2026-11-02",
+      "status": "development",
+      "date_basis": "November 2 reviewed optional native readout source; preceding distinct continuing-language measurement retained without re-running Original12.",
+      "summary": "Optional content-state readout passed scoped source tests; separate teaching probes stayed 0/6 for direct, paraphrase and unfamiliar use. Original12 remains 2/12.",
+      "body": "The opt-in content-state mean direct readout proposes averaging delivered content-position recurrent states rather than using only the terminal state. Source review covered 11 groups and 37 negative cases; the ordinary suite recorded 79 passes and 34 optional skips. No newly qualified practice run established a learning gain.\n\nA separate earlier continuing attention-policy study measured 0/6 direct acquisition, 0/6 paraphrase and 0/6 unfamiliar use, with 2/6 unsupported-question outcomes. These denominators describe that study only. Accepted Original12 remains 2/12 and was not rerun.",
+      "boundary": "Source-check success, gradient routing, persistence or retrieval does not prove semantic understanding, improved generated answers, deployed learning, or a new accepted checkpoint.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved Kira Labs neural-research concept art, not a NewBrain test screenshot",
+        "caption": "Illustration only; separate bounded source checks and negative learning measurements.",
+        "label": "Concept image, not experimental evidence"
+      },
+      "sources": [
+        {
+          "label": "November 2 public research review",
+          "url": "reports/newbrain-avatar-research-2026-11-02.html#newbrain-nov02-readout"
+        },
+        {
+          "label": "NewBrain dated status",
+          "url": "newbrain.html#newbrain-readout-source-2026-11-02"
+        },
+        {
+          "label": "Readable November 2 update",
+          "url": "updates.html#research-review-2026-11-02"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-readout-source-2026-11-02"
+    },
+    {
+      "id": "avatar-workspace-identity-2026-11-02",
+      "title": "Avatar Builder workspace identity verified; no accepted new body",
+      "project": "Kira World",
+      "track": "Avatar Builder launcher boundary and anatomy acceptance",
+      "date": "2026-11-02",
+      "reviewed_on": "2026-11-02",
+      "status": "development",
+      "date_basis": "KiraWorld committed workspace-identity validation; 12 scoped offline tests and actual Windows HTTP startup/state/page check.",
+      "summary": "The Avatar Builder shortcut now verifies its local workspace identity. Its 12 offline tests and Windows HTTP checks do not qualify body generation, realistic Evelyn geometry or anatomy.",
+      "body": "The new launcher checks that the selected local workspace is the intended Avatar Builder target. The recorded validation includes 12 offline tests and a real Windows HTTP startup, state and page check; native GUI testing was not established.\n\nSeparate source-only profile-driven 68-control geometry and reference measurements remain experimental. Previously rendered original head and body revisions were visually rejected. No finished original Evelyn head, independently accepted fictional reconstruction, physically demonstrated movement or functioning digestion, urinary or reproductive anatomy was established.",
+      "boundary": "A safer development shortcut is not proof of native image-to-body inference, accepted meshes, actual body movement, medical simulation or working internal organs.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Previously approved Avatar Builder research concept illustration, not a verified full-body render",
+        "caption": "Illustration only; no completed or accepted body shown.",
+        "label": "Concept art, not native output"
+      },
+      "sources": [
+        {
+          "label": "November 2 public research review",
+          "url": "reports/newbrain-avatar-research-2026-11-02.html"
+        },
+        {
+          "label": "Avatar Builder dated status",
+          "url": "kira-world-avatar-builder.html#avatar-builder-workspace-identity-2026-11-02"
+        },
+        {
+          "label": "Readable November 2 update",
+          "url": "updates.html#research-review-2026-11-02"
+        }
+      ],
+      "project_page": "kira-world-avatar-builder.html#avatar-builder-workspace-identity-2026-11-02"
+    },
     {
       "id": "newbrain-historical-context-selection-2026-11-01",
       "title": "NewBrain historical context selection: 34/37 evidence matches",
