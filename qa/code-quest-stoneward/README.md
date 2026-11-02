@@ -11,7 +11,7 @@ This revision replaces the prior flat scene with a locally rendered, stylized 3D
 - Creature geometry: [wraith](creature-wraith.png), [hound](creature-hound.png), [crawler](creature-crawler.png), [lurker](creature-lurker.png), [sentinel](creature-sentinel.png)
 - [Mobile 3D view](mobile.png), [Canvas fallback](mobile-fallback.png), [restored wards](ward-complete.png)
 
-These are browser screenshots of the implemented renderer and game, not proposed artwork. Action QA samples position, yaw, joints, device and inventory state at beginning/middle/end, preserves actor identity, and compares decoded image pixels. See browser-result.json after the final pinned run completes.
+These are browser screenshots of the implemented renderer and game, not proposed artwork. Action QA samples position, yaw, joints, device and inventory state at beginning/middle/end, preserves actor identity, and compares decoded image pixels. The final frozen-source Edge run passed 966 assertions; see browser-result.json. Walking changed decoded image pixels by 18.03% from begin to middle and 18.66% from middle to end, with a stable actor identity and changing articulated joints.
 
 ## Adventure and learning
 
