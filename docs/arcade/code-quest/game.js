@@ -119,6 +119,52 @@
     }
   ];
 
+  // Story-first play: each card is a complete, real JavaScript example.
+  // Players can choose without typing and open the code editor whenever ready.
+  const EASY_CHOICES=[
+    [
+      {label:'Wake PIX by saying “Hello, PIX!”',code:'say("Hello, PIX!");',why:"A string is a piece of text between quotation marks. PIX recognizes his name!"},
+      {label:'Just say “Hello, friend!”',code:'say("Hello, friend!");',why:"That's a friendly message, but PIX is waiting to hear his own name."},
+      {label:'Charge the lantern',code:'charge(3);',why:"Charging is useful later, but first we need to wake PIX by speaking."}
+    ],
+    [
+      {label:'Put 3 crystals into the charger',code:"let crystals = 3;\ncharge(crystals);",why:"A variable stores the number 3, and PIX uses it to fill the charger."},
+      {label:'Use just 1 crystal',code:"let crystals = 1;\ncharge(crystals);",why:"The lantern still needs more crystals to power on."},
+      {label:'Use an empty charger',code:"let crystals = 0;\ncharge(crystals);",why:"There is no energy in an empty charger."}
+    ],
+    [
+      {label:'Move PIX three squares forward',code:"move(3);",why:"A move command tells PIX exactly how many squares to walk."},
+      {label:'Move PIX only one square',code:"move(1);",why:"PIX has two more squares to travel."},
+      {label:'Walk five squares instead',code:"move(5);",why:"That goes past the glowing stone."}
+    ],
+    [
+      {label:'Go forward, turn right and cross the bridge',code:'move(2);\nturn("right");\nmove(2);',why:"Order matters. PIX goes east, turns south, then walks two more squares."},
+      {label:'Turn left at the bridge',code:'move(2);\nturn("left");\nmove(2);',why:"PIX has turned toward the waterfall, not the path."},
+      {label:'Keep going straight',code:'move(2);\nmove(2);',why:"The bridge bends. PIX needs to turn to reach the end."}
+    ],
+    [
+      {label:'Open the gate with 2 keys',code:"let keys = 2;\nif (keys >= 2) {\n  openGate();\n}",why:"if checks the number of keys. Two keys meet the condition."},
+      {label:'Demand 3 keys',code:"let keys = 2;\nif (keys >= 3) {\n  openGate();\n}",why:"Mira has two keys. The gate must not require three."},
+      {label:'Open only with fewer than 2 keys',code:"let keys = 2;\nif (keys < 2) {\n  openGate();\n}",why:"That condition is false because Mira has two keys."}
+    ],
+    [
+      {label:'Repeat one step four times',code:"for (let step = 0; step < 4; step++) {\n  move(1);\n}",why:"A loop repeats a small action. PIX makes four steps automatically."},
+      {label:'Repeat only twice',code:"for (let step = 0; step < 2; step++) {\n  move(1);\n}",why:"PIX needs to travel two more squares."},
+      {label:'Repeat six times',code:"for (let step = 0; step < 6; step++) {\n  move(1);\n}",why:"That's too far down the corridor."}
+    ],
+    [
+      {label:'Collect all three stars: 1, 2 and 3',code:"const stars = [1, 2, 3];\nfor (const star of stars) {\n  collect(star);\n}",why:"An array holds all three star numbers, and a loop visits each one."},
+      {label:'Collect only stars 1 and 2',code:"const stars = [1, 2];\nfor (const star of stars) {\n  collect(star);\n}",why:"A star is still missing from the meadow."},
+      {label:'Collect 2, 3 and 4',code:"const stars = [2, 3, 4];\nfor (const star of stars) {\n  collect(star);\n}",why:"You need star 1 as well as 2 and 3."}
+    ],
+    [
+      {label:'Call the function to light the beacon!',code:'function lightBeacon() {\n  charge(3);\n  say("Light Starlight Bay!");\n}\nlightBeacon();',why:"A function groups commands, but calling it makes everything happen!"},
+      {label:'Build a function but never call it',code:'function lightBeacon() {\n  charge(3);\n  say("Light Starlight Bay!");\n}',why:"You defined the function, but PIX won't run it until you call its name."},
+      {label:'Call a function with no power',code:'function lightBeacon() {\n  charge(0);\n  say("Light Starlight Bay!");\n}\nlightBeacon();',why:"The beacon needs all three crystals to shine."}
+    ]
+  ];
+  const WORLDS=["workshop","workshop","village","river","archive","station","meadow","beacon"];
+
   const $=id=>document.getElementById(id);
   const el={
     count:$("chapterCount"),progressLabel:$("progressLabel"),progressBar:$("progressBar"),progressFill:$("progressFill"),
@@ -129,11 +175,36 @@
     hintText:$("hintText"),solution:$("solutionButton"),output:$("outputPanel"),outputTitle:$("outputTitle"),
     outputIcon:$("outputIcon"),outputText:$("outputText"),actionLog:$("actionLog"),
     previous:$("previousButton"),next:$("nextButton"),board:$("board"),stage:document.querySelector(".cq-stage"),
-    ending:$("ending"),replay:$("replayButton")
+    ending:$("ending"),replay:$("replayButton"),
+    choiceButtons:$("choiceButtons"),easyHint:$("easyHint"),choicePanel:$("choicePanel"),
+    easyInstruction:$("easyInstruction"),easyContinue:$("easyContinue"),codeDetails:$("codeDetails"),
+    startSound:$("startSound"),soundToggle:$("soundToggle"),hearAgain:$("hearAgain"),soundStatus:$("soundStatus"),
+    pixSprite:$("pixSprite"),stageFlash:$("stageFlash")
   };
   const STORE="kira-code-quest-starlight-v1";
   const state={level:0,cleared:Array(MISSIONS.length).fill(false),drafts:Array(MISSIONS.length).fill(null)};
   let worker=null,timeout=null,animator=null;
+  let selectedChoice=null,soundDecisionMade=false;
+  const voice=window.KiraArcadeVoice.create({
+    onStatus(message){el.soundStatus.textContent=message;},
+    onSpeaking(speaking){el.pixSprite.classList.toggle("cq-talking",speaking);}
+  });
+  function updateSoundButtons(){
+    el.startSound.hidden=soundDecisionMade;
+    el.soundToggle.setAttribute("aria-pressed",String(voice.enabled));
+    el.soundToggle.textContent=voice.enabled?"🔇 Mute narration":"🔊 Turn sound on";
+  }
+  function narrateScene(){
+    const m=MISSIONS[state.level];
+    voice.speak(m.title+". "+m.story+" Your mission: "+m.goal);
+  }
+  function startVoice(){
+    soundDecisionMade=true;
+    if(voice.enable()){voice.cue("scene");narrateScene();}
+    updateSoundButtons();
+  }
+  function activateSoundFromChoice(){if(!soundDecisionMade)startVoice();}
+  updateSoundButtons();
   try{
     const saved=JSON.parse(localStorage.getItem(STORE)||"null");
     if(saved && Array.isArray(saved.cleared) && saved.cleared.length===MISSIONS.length) {
@@ -171,6 +242,57 @@
       el.actionLog.appendChild(tag);
     }
   }
+  function renderChoices(){
+    el.choiceButtons.replaceChildren();
+    EASY_CHOICES[state.level].forEach((option,i)=>{
+      const button=document.createElement("button");
+      button.type="button";
+      button.className="cq-choice-option";
+      const label=document.createElement("span");
+      label.className="cq-choice-name";
+      label.textContent=(i+1)+". "+option.label;
+      const code=document.createElement("code");
+      code.className="cq-choice-code";
+      code.textContent=option.code.length>115?option.code.slice(0,112)+"…":option.code;
+      button.appendChild(label);
+      button.appendChild(code);
+      button.addEventListener("click",()=>chooseEasy(option,button));
+      el.choiceButtons.appendChild(button);
+    });
+    el.easyInstruction.textContent=state.cleared[state.level]
+      ?"This mission is complete! Continue the adventure below or explore the code."
+      :"Tap a command below to help PIX. No typing, spelling or programming experience needed.";
+    el.easyContinue.hidden=!state.cleared[state.level];
+  }
+  function chooseEasy(option,button){
+    activateSoundFromChoice();
+    selectedChoice={option,button,level:state.level};
+    el.editor.value=option.code;
+    state.drafts[state.level]=option.code;
+    save();
+    el.choiceButtons.querySelectorAll(".cq-choice-option").forEach(b=>b.classList.remove("is-selected","is-correct","is-try-again"));
+    button.classList.add("is-selected");
+    run();
+  }
+  function animateResult(ok){
+    el.stage.classList.remove("cq-success-effect","cq-try-effect");
+    void el.stage.offsetWidth;
+    el.stage.classList.add(ok?"cq-success-effect":"cq-try-effect");
+    if(ok)el.pixSprite.classList.add("cq-celebrate");
+    setTimeout(()=>el.pixSprite.classList.remove("cq-celebrate"),900);
+  }
+  function describeSelection(ok,detail){
+    if(selectedChoice && selectedChoice.level===state.level){
+      selectedChoice.button.classList.add(ok?"is-correct":"is-try-again");
+      if(ok){
+        el.easyInstruction.textContent=selectedChoice.option.why+" Click Continue the story to keep playing!";
+      }else{
+        el.easyInstruction.textContent=selectedChoice.option.why+" Try another button — PIX can wait!";
+      }
+    }
+    if(ok){voice.cue("win");voice.speak("You did it! "+detail+" Now choose Continue the story.");}
+    else{voice.cue("wrong");voice.speak("Not quite. "+(selectedChoice?.option.why||"Try another command or tap the clue."));}
+  }
   function updateProgress(){
     const done=state.cleared.filter(Boolean).length;
     el.count.textContent="Mission "+(state.level+1)+" of "+MISSIONS.length;
@@ -179,7 +301,8 @@
     el.progressFill.style.width=(100*done/MISSIONS.length)+"%";
     el.previous.disabled=state.level===0;
     el.next.disabled=!state.cleared[state.level];
-    el.next.textContent=state.level===MISSIONS.length-1?"See the ending →":"Next mission →";
+    el.next.textContent=state.level===MISSIONS.length-1?"See the ending →":"Continue the story →";
+    el.easyContinue.hidden=!state.cleared[state.level];
   }
   function tileKey(x,y){return x+","+y;}
   function renderBoard(pos,path=[]){
@@ -221,14 +344,19 @@
     el.editor.value=state.drafts[state.level]??m.starter;
     el.hintText.textContent=m.hint;el.hint.hidden=true;el.hintBtn.setAttribute("aria-expanded","false");
     el.stage.classList.toggle("is-lit",state.cleared[MISSIONS.length-1]);
+    el.stage.dataset.world=WORLDS[state.level];
+    el.stage.classList.remove("cq-success-effect","cq-try-effect");
+    selectedChoice=null;
+    renderChoices();
     el.ending.hidden=true;
     setOutput(state.cleared[state.level]?"success":"ready",
       state.cleared[state.level]?"Mission already complete":"Ready to code",
-      state.cleared[state.level]?"You solved this chapter. You can run it again, change your code, or continue.":"Read the story, edit the JavaScript, and press Run my code. Mistakes are part of learning.");
+      state.cleared[state.level]?"You solved this chapter. You can run it again, change your code, or continue.":"Choose one of the big buttons above. You can open the coding editor later if you want.");
     renderBoard(m.start);
     updateProgress();
     save();
     if(state.cleared.every(Boolean) && state.level===MISSIONS.length-1)showEnding(false);
+    if(voice.enabled){voice.cue("scene");narrateScene();}
   }
   function simulate(m,actions){
     const directions=["east","south","west","north"];
@@ -263,28 +391,34 @@
   }
   function showEnding(scroll=true){
     el.ending.hidden=false;el.stage.classList.add("is-lit");
+    if(voice.enabled)voice.speak("The beacon shines again! The whole town celebrates. You saved Starlight Bay!");
     if(scroll) el.ending.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth",block:"nearest"});
   }
   function onResult(payload,runLevel,code){
     stopActive();
     if(runLevel!==state.level)return;
     if(!payload || !payload.ok){
-      setOutput("error","That code needs a little repair",payload&&payload.error ? payload.error : "The program could not be started. Check the code and try again.");
+      setOutput("error","PIX needs a little help",payload&&payload.error ? payload.error : "Try another command.");
+      animateResult(false);describeSelection(false,"");
       return;
     }
     const m=MISSIONS[state.level];
     const sim=simulate(m,payload.actions);
     animate(sim.path);
-    if(sim.error){setOutput("error","Almost! PIX needs a new route",sim.error,payload.actions);return;}
+    if(sim.error){setOutput("error","PIX took a wrong turn",sim.error,payload.actions);animateResult(false);describeSelection(false,"");return;}
     if(m.check(sim,code)){
       state.cleared[state.level]=true;
       save();
       updateProgress();
       el.stage.classList.toggle("is-lit",state.cleared[MISSIONS.length-1]);
-      setOutput("success","Mission complete! ✦",m.success,payload.actions);
+      setOutput("success","Wonderful! PIX did it! ✦",m.success,payload.actions);
+      animateResult(true);
+      describeSelection(true,m.success);
+      el.easyContinue.hidden=false;
       if(state.cleared.every(Boolean))showEnding();
     } else {
-      setOutput("error","Not quite—try another change","Your JavaScript ran, but it didn't meet the mission goal. Check the goal on the left, or ask PIX for a hint.",payload.actions);
+      setOutput("error","Try a different choice","PIX followed that command, but it didn’t get us to the next scene. Choose another button or tap the clue.",payload.actions);
+      animateResult(false);describeSelection(false,"");
     }
   }
   function run(){
@@ -311,7 +445,24 @@
     timeout=setTimeout(()=>finish({ok:false,error:"Your code ran for too long (possibly an endless loop). Check the loop condition and try again."}),1400);
     running.postMessage({code});
   }
-  el.form.addEventListener("submit",e=>{e.preventDefault();run();});
+  el.startSound.addEventListener("click",startVoice);
+  el.soundToggle.addEventListener("click",()=>{
+    soundDecisionMade=true;
+    if(voice.enabled)voice.disable();else{voice.enable();narrateScene();}
+    updateSoundButtons();
+  });
+  el.hearAgain.addEventListener("click",()=>{
+    if(!voice.enabled){startVoice();}else narrateScene();
+  });
+  el.easyHint.addEventListener("click",()=>{
+    activateSoundFromChoice();
+    const hint=MISSIONS[state.level].hint;
+    el.hint.hidden=false;el.hintBtn.setAttribute("aria-expanded","true");
+    el.easyInstruction.textContent="PIX's clue: "+hint;
+    voice.speak("PIX's clue. "+hint);
+  });
+  el.easyContinue.addEventListener("click",()=>el.next.click());
+  el.form.addEventListener("submit",e=>{e.preventDefault();activateSoundFromChoice();selectedChoice=null;run();});
   el.editor.addEventListener("input",()=>{state.drafts[state.level]=el.editor.value;save();});
   el.editor.addEventListener("keydown",e=>{
     if(e.key==="Enter"&&(e.ctrlKey||e.metaKey)){e.preventDefault();run();}
