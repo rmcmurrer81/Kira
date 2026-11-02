@@ -445,15 +445,11 @@ function renderChallenge(){
     panel.append(heading(crossed?"Everyone crossed safely":"The spirit’s safe stepping-stone order"));
     const clue=document.createElement("div");clue.className="clue-strip";clue.setAttribute("aria-label","Safe route: "+routeWords());
     route.forEach((id,i)=>{if(i){const arrow=document.createElement("span");arrow.className="clue-arrow";arrow.textContent="→";clue.append(arrow);}const tile=document.createElement("span");tile.className="clue-tile";tile.textContent=symbol(id).icon+" "+symbol(id).label;clue.append(tile);});panel.append(clue);
-    if(crossed){panel.append(paragraph("Your plan matched the trail. You brought all three fireflies across — now the beacon is within reach."));return;}
+    if(crossed){appendRoutePreview(panel,true);panel.append(paragraph("Your plan matched the trail. You brought all three fireflies across — now the beacon is within reach."));return;}
     panel.append(paragraph(backpack.includes("compass")?"Your compass supplied the first step. Finish the plan in the same order as the glowing stones.":"Build your plan left to right. You can undo or clear it before trying. The symbols are clues, not a memory test."));
     const tiles=document.createElement("div");tiles.className="plan-strip";tiles.setAttribute("aria-label","Your plan");
     for(let i=0;i<3;i++){const tile=document.createElement("span");tile.className="plan-tile";tile.textContent=(i+1)+". "+(plan[i]?symbol(plan[i]).icon+" "+symbol(plan[i]).label:"—");tiles.append(tile);}panel.append(tiles);
-    const preview=document.createElement("div");preview.className="route-preview";preview.id="routePreview";preview.setAttribute("role","img");
-    for(let i=1;i<=3;i++){const stone=document.createElement("span");stone.className="route-stone";stone.style.left=(8+i*28)+"%";stone.textContent=String(i);stone.setAttribute("aria-hidden","true");preview.append(stone);}
-    const fox=document.createElement("span");fox.id="routeFox";fox.className="route-fox";fox.textContent="🦊";fox.setAttribute("aria-hidden","true");preview.append(fox);panel.append(preview);
-    const watch=paragraph(busy?"Watch Wisp try one step at a time…":"Wisp will try your plan here — no rushing, and no falling.");watch.className="route-caption";panel.append(watch);
-    updateRoutePreview();
+    appendRoutePreview(panel);
     const commands=row();for(const item of symbols)commands.append(button(item.icon+" "+item.label,()=>{if(busy||plan.length>=3)return;plan.push(item.id);voice.cue("tap");renderChallenge();(plan.length===3?$("challenge").querySelector("button.primary"):$("challenge").querySelector('[data-command="'+item.id+'"]'))?.focus({preventScroll:true});},{disabled:busy||plan.length>=3}));
     [...commands.children].forEach((el,i)=>el.dataset.command=symbols[i].id);panel.append(commands);
     const controls=row();controls.style.marginTop="12px";
@@ -470,6 +466,13 @@ function renderChallenge(){
       button(beamTarget==="village"?"Aimed home · turn to forest":"Aim toward the village",()=>{if(busy)return;beamTarget=beamTarget==="village"?"forest":"village";updateBeacon();renderChallenge();$("challenge").querySelector('[data-control="aim"]')?.focus({preventScroll:true});feedback(beamTarget==="village"?"The beam is aimed toward the village — the fireflies’ home.":"The beam is aimed toward the forest, away from home.",true);},{pressed:beamTarget==="village"}));
     [...controls.children].forEach((el,i)=>el.dataset.control=["power","shutter","aim"][i]);panel.append(controls);const test=button("✦ Test the beacon",testBeacon,{className:"primary"});test.style.marginTop="14px";panel.append(test);
   }
+}
+function appendRoutePreview(panel,complete=false){
+    const preview=document.createElement("div");preview.className="route-preview";preview.id="routePreview";preview.setAttribute("role","img");
+    for(let i=1;i<=3;i++){const stone=document.createElement("span");stone.className="route-stone";stone.style.left=(8+i*28)+"%";stone.textContent=String(i);stone.setAttribute("aria-hidden","true");preview.append(stone);}
+    const fox=document.createElement("span");fox.id="routeFox";fox.className="route-fox";fox.textContent="🦊";fox.setAttribute("aria-hidden","true");preview.append(fox);panel.append(preview);
+    const watch=paragraph(complete?"3 of 3 safe steps — everyone made it across!":busy?"Watch Wisp try one step at a time…":"Wisp will try your plan here — no rushing, and no falling.");watch.className="route-caption";panel.append(watch);
+    updateRoutePreview();
 }
 function updateRoutePreview(){
   const fox=document.getElementById("routeFox"),preview=document.getElementById("routePreview");
@@ -492,6 +495,8 @@ async function testRoute(){
     }
     world.dataset.step=String(i+1);renderRouteWorld();updateRoutePreview();voice.cue("step");
   }
+  // Let the last visible step finish before showing the success controls.
+  await new Promise(resolve=>setTimeout(resolve,delay));if(ticket!==run||currentScene!=="river")return;
   busy=false;crossed=true;renderChallenge();renderChoices();feedback("Your plan worked! Wisp and all three fireflies crossed safely. Let’s climb to the beacon.",true);$("choices").querySelector("button")?.focus({preventScroll:true});
 }
 function testBeacon(){
