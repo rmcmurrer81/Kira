@@ -25,6 +25,40 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-content-mean-qualification-failed-2026-11-02",
+      "title": "Measured native readout fails complete language-learning qualification",
+      "project": "NewBrain",
+      "track": "Completed fixed local neural learning experiment",
+      "date": "2026-11-02",
+      "reviewed_on": "2026-11-02",
+      "status": "development",
+      "date_basis": "Later November 2 fixed study following the source-only review; public aggregates reviewed, not independent private-case reproduction",
+      "summary": "216 genuine teaching updates and 72 generations; four answer groups scored 0/6 at baseline, immediately after and on restart; Original12 remains 2/12.",
+      "body": "An independently authored fixed local experiment completed 216 genuine teaching updates and 72 full generations. Direct facts, untrained paraphrases, unfamiliar two-fact uses and correct abstention each scored 0/6 at baseline, immediately after and at fresh restart. All 24 immediate-versus-restart full answer pairs matched exactly but were incorrect; strict study-custody checks passed and learning criteria failed.\n\nEarlier attention-policy research used different fresh cases, so no cross-study regression can be inferred. Protected Original12 accepted 2/12 was not rerun.",
+      "boundary": "Private cases and model states withheld. This is neither a Qwen replacement nor an accepted model, verified neural understanding, or a production deployment.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved Kira Labs neural-research concept art, not a NewBrain test screenshot",
+        "caption": "Illustration only; separate bounded source checks and negative learning measurements.",
+        "label": "Concept image, not experimental evidence"
+      },
+      "sources": [
+        {
+          "label": "Completed public learning report",
+          "url": "reports/newbrain-content-readout-qualification-2026-11-02.html#readout-qualification-2026-11-02"
+        },
+        {
+          "label": "NewBrain dated result",
+          "url": "newbrain.html#newbrain-content-readout-qualification-2026-11-02"
+        },
+        {
+          "label": "Development update",
+          "url": "updates.html#newbrain-readout-completed-2026-11-02"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-content-readout-qualification-2026-11-02"
+    },
+    {
       "id": "newbrain-content-readout-boundary-2026-11-02",
       "title": "NewBrain readout source passes bounded checks; language learning still fails",
       "project": "NewBrain",
