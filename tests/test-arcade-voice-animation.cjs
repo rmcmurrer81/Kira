@@ -277,6 +277,8 @@ async function testFirefly(){
     assert.equal(JSON.stringify(read('plan')),'["moon"]','Wrong step keeps the correct prefix and gives a retry');
     assert.equal(read('rescued.length'),3,'A mistaken route never loses a rescued friend');
     read('plan=route.slice();attempts=0;');await Promise.all([read('testRoute()'),read('testRoute()')]);assert.equal(read('attempts'),1,'Repeated Play cannot start overlapping crossings');
+    assert.equal(get('routePreview')?.attributes['aria-label'],'Wisp has crossed 3 of 3 safe steps','Completed mobile route stays visible');
+    assert.equal(get('routeFox')?.style.left,'92%','Final Wisp position is retained at the third stone');
     get('choices').children[0].click();assert.equal(read('currentScene'),'hill');assert.equal(read('lightLoaded'),gift==='spark','Spark powers the beacon immediately');
     for(let mask=0;mask<8;mask++){
       read('endingText="";lightLoaded='+Boolean(mask&1)+';shutterOpen='+Boolean(mask&2)+';beamTarget='+JSON.stringify(mask&4?'village':'forest')+';testBeacon();');
