@@ -10,9 +10,10 @@
 <link rel="canonical" href="https://kiralabs.org/arcade/code-quest/">
 <link rel="icon" href="../../assets/favicon.png">
 <link rel="stylesheet" href="../../labs.css">
-<link rel="stylesheet" href="game.css?v=1">
+<link rel="stylesheet" href="game.css?v=2">
 <script src="../../labs.js?v=20261101-iris-float4" defer></script>
-<script src="game.js?v=1" defer></script>
+<script src="../arcade-voice.js?v=2" defer></script>
+<script src="game.js?v=2" defer></script>
 <title>Code Quest: Save Starlight Bay — Kira Labs Arcade</title>
 </head>
 <body class="cq-page">
@@ -34,10 +35,16 @@
   <div class="cq-header">
    <div><p class="cq-overline">KIRA LABS ARCADE / AN ORIGINAL PROGRAMMING ADVENTURE</p>
     <h1>Code <em>Quest</em><span class="cq-star" aria-hidden="true">✦</span></h1>
-    <p class="cq-subtitle">Save Starlight Bay. One line of code at a time.</p>
+    <p class="cq-subtitle">Save Starlight Bay. Play a colorful adventure and learn real programming as you go.</p>
    </div>
    <div class="cq-header-actions"><a class="cq-pill-link" href="../"><span aria-hidden="true">←</span> All arcade games</a><a class="cq-pill-link" href="learn.html">Build your own game <span aria-hidden="true">↗</span></a></div>
   </div>
+  <section class="cq-intro-controls" aria-label="Start voice and adventure">
+   <button type="button" class="cq-btn cq-btn-main cq-start-sound" id="startSound">🔊 Start the adventure with Iris voice</button>
+   <button type="button" class="cq-btn cq-btn-soft" id="soundToggle" aria-pressed="false">🔊 Turn sound on</button>
+   <button type="button" class="cq-btn cq-btn-plain" id="hearAgain">↻ Hear this part again</button>
+   <span id="soundStatus" role="status" aria-live="polite">Choose Start to hear the story, or play using the buttons below.</span>
+  </section>
   <section class="cq-progress" aria-label="Your progress">
    <div class="cq-progress-top"><span id="chapterCount">Mission 1 of 8</span><span id="progressLabel">0 of 8 complete</span></div>
    <div class="cq-progress-track" role="progressbar" id="progressBar" aria-label="Completed missions" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><div id="progressFill"></div></div>
@@ -45,7 +52,17 @@
   <div class="cq-layout">
    <section class="cq-story" aria-labelledby="sceneTitle">
     <div class="cq-card-top"><span class="cq-chip" id="chapterName">CHAPTER 1 · THE BLACKOUT</span><span class="cq-chip cq-chip-gold" id="topicName">STRINGS</span></div>
-    <div class="cq-stage">
+    <div class="cq-stage" id="adventureStage" data-world="workshop">
+      <div class="cq-world-background" aria-hidden="true">
+        <div class="cq-world-workshop"><div class="cq-workbench"></div><div class="cq-workshop-bulb"></div><div class="cq-gears">⚙ ⚙</div></div>
+        <div class="cq-world-village"><div class="cq-village-house one"><i></i></div><div class="cq-village-house two"><i></i></div></div>
+        <div class="cq-world-river"><span class="cq-water"></span><span class="cq-bridge"></span></div>
+        <div class="cq-world-archive"><span class="cq-gate left"></span><span class="cq-gate right"></span></div>
+        <div class="cq-world-station"><span class="cq-rail"></span><span class="cq-train-light"></span></div>
+        <div class="cq-world-meadow"><span class="cq-flower f1">✿</span><span class="cq-flower f2">✿</span><span class="cq-flower f3">✿</span></div>
+      </div>
+      <div class="cq-particles" id="particles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="cq-flash" id="stageFlash" aria-hidden="true"></div>
      <div class="cq-sky"><span class="cq-moon"></span><span class="cq-star-s1">✦</span><span class="cq-star-s2">✧</span><span class="cq-star-s3">✦</span></div>
      <div class="cq-hills"></div>
      <div class="cq-lighthouse" id="lighthouse" aria-hidden="true"><span class="cq-beam"></span><span class="cq-tower"></span><span class="cq-roof"></span></div>
@@ -61,8 +78,17 @@
     </div>
    </section>
    <section class="cq-editor-card" aria-label="Coding workspace">
-    <div class="cq-editor-top"><div><p class="cq-code-eyebrow">YOUR PROGRAM</p><h2>Write the next chapter</h2></div><span class="cq-js-badge">JavaScript</span></div>
+    <div class="cq-editor-top"><div><p class="cq-code-eyebrow">HELP PIX SAVE THE VILLAGE</p><h2>Choose what happens next</h2></div><span class="cq-js-badge">Learn JavaScript</span></div>
     <div class="cq-coach"><span class="cq-coach-icon" aria-hidden="true">?</span><div><strong id="lessonTitle">How strings work</strong><p id="lessonText">A string is text inside quotation marks.</p></div></div>
+    <section class="cq-choice-panel" aria-labelledby="easyTitle">
+      <h3 id="easyTitle">Pick an answer to continue the story</h3>
+      <p class="cq-easy-instruction" id="easyInstruction">No typing needed. Tap a big button and watch PIX respond.</p>
+      <div class="cq-choice-grid" id="choiceButtons"></div>
+      <button class="cq-need-hint" type="button" id="easyHint">💡 Not sure? Show me a clue</button>
+    </section>
+    <details class="cq-code-details" id="codeDetails">
+      <summary>⌨ Want to type code yourself? Open the coding editor</summary>
+      <p>These are real JavaScript commands. You can edit and run them whenever you want.</p>
     <form id="codeForm">
      <label class="cq-editor-label" for="codeInput">Edit the code, then run it</label>
      <div class="cq-codewrap"><div class="cq-codechrome"><span class="cq-dot"></span><span class="cq-dot"></span><span class="cq-dot"></span><span>mission.js</span></div>
@@ -70,8 +96,9 @@
      <p class="cq-keyboard" id="keyboardHelp">Tip: Press Ctrl + Enter (or ⌘ + Enter) to run. You can also use the button below.</p>
      <div class="cq-controls"><button id="runButton" class="cq-btn cq-btn-main" type="submit"><span aria-hidden="true">▶</span> Run my code</button><button id="hintButton" class="cq-btn cq-btn-soft" type="button">Get a hint</button><button id="resetButton" class="cq-btn cq-btn-plain" type="button">Reset code</button></div>
     </form>
+    </details>
     <div id="hintBox" class="cq-hint" hidden><strong>PIX's hint</strong><p id="hintText"></p><button type="button" id="solutionButton">Show a working example</button></div>
-    <div class="cq-output" aria-live="polite" aria-atomic="true" id="outputPanel"><div class="cq-output-heading"><span id="outputIcon" aria-hidden="true">⌁</span><strong id="outputTitle">Ready to code</strong></div><p id="outputText">Make one small change and press Run my code. Mistakes are part of learning.</p><div id="actionLog" class="cq-action-log"></div></div>
+    <div class="cq-output" aria-live="polite" aria-atomic="true" id="outputPanel"><div class="cq-output-heading"><span id="outputIcon" aria-hidden="true">⌁</span><strong id="outputTitle">Ready to code</strong></div><p id="outputText">Choose a button above to control PIX. The computer will show you the JavaScript behind your choice.</p><div id="actionLog" class="cq-action-log"></div></div>
     <div class="cq-navigation"><button type="button" class="cq-btn cq-btn-plain" id="previousButton">← Previous</button><button type="button" class="cq-btn cq-btn-next" id="nextButton" disabled>Next mission →</button></div>
     <p class="cq-storage-note">Progress saves on this device. No signup, no ads, and no code is sent to Kira Labs.</p>
    </section>
@@ -84,7 +111,7 @@
     <div class="cq-end-stats"><strong>8 missions complete</strong><span>Strings · Variables · Commands · Directions · Conditions · Loops · Arrays · Functions</span></div>
     <div class="cq-end-actions"><button type="button" class="cq-btn cq-btn-main" id="replayButton">Play the story again</button><a class="cq-btn cq-btn-soft" href="learn.html">Build a game from scratch</a></div>
   </section>
-  <section class="cq-about" aria-label="About this game"><h2>Adventure first. Coding as you go.</h2><p>Each puzzle runs real JavaScript in a short-lived browser worker. Your commands make PIX speak, move, collect treasures and power the beacon. Read the hints whenever you like, and explore the full step-by-step <a href="learn.html">beginner game-making lesson</a> afterward.</p><p>This is a self-contained educational game, not a live AI simulation. <a href="https://github.com/rmcmurrer81/Kira/tree/main/docs/arcade/code-quest">View its source code</a>.</p></section>
+  <section class="cq-about" aria-label="About this game"><h2>Adventure first. Coding as you go.</h2><p>Each puzzle runs real JavaScript in a short-lived browser worker. Your commands make PIX speak, move, collect treasures and power the beacon. Choose simple answers or open the optional code editor, and explore the full step-by-step <a href="learn.html">beginner game-making lesson</a> afterward.</p><p>This is a self-contained educational game, not a live AI simulation. <a href="https://github.com/rmcmurrer81/Kira/tree/main/docs/arcade/code-quest">View its source code</a>.</p></section>
  </div>
 </main>
 <footer class="footer"><div class="wrap"><div class="footer-bottomline"><p>© 2026 Kira Labs · An original browser game</p><p><a href="../">Arcade</a> · <a href="../../index.html">Kira Labs home</a></p></div></div></footer>
