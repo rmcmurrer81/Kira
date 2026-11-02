@@ -55,13 +55,13 @@ body{background:#071427;color:#eaf2ff}
 <section class="lesson-hero">
 <p class="lesson-eyebrow">KIRA LABS · FREE BEGINNER PROGRAMMING LESSON</p>
 <h1>Make a <em>whole game.</em><br>From first file to final scene.</h1>
-<p>This is not a video about merely walking a character back and forth. You'll make <strong>The Firefly Trail</strong>: a complete story adventure with a beginning, two story routes, inventory, a river crossing, several endings, and a replay button. Then you can write your own version.</p>
+<p>This is not a video about merely walking a character back and forth. You'll make <strong>The Firefly Trail</strong>: a complete story adventure with a beginning, two story routes, inventory, a river crossing, several endings, and a replay button, moving scenery, animated characters, and optional narration using the same preferred browser voice as Iris. Then you can write your own version.</p>
 <div class="lesson-actions"><a href="your-first-game.html" class="lesson-button">Play the finished game →</a><a class="lesson-button alt" href="your-first-game.html" download="index.html">Download the complete HTML file ↓</a><a href="./" class="lesson-button alt">Play Code Quest →</a></div>
 </section>
 
 <section class="lesson-card">
 <h2><span class="lesson-number">1</span> See what you're going to build</h2>
-<p>Meet Wisp the fox. The fireflies have lost their way, and the mountain beacon has gone dark. Your choices determine what gifts you find and how the adventure ends. Try playing it right here:</p>
+<p>Meet Wisp the fox. The fireflies have lost their way, and the mountain beacon has gone dark. Click glowing fireflies, watch Wisp move through different scenes, and choose how the story ends. Press <strong>Start adventure with Iris voice</strong> to hear the narration. Try playing it here:</p>
 <iframe class="lesson-preview" src="your-first-game.html" title="Play The Firefly Trail, the complete example game" loading="lazy"></iframe>
 <p class="lesson-note">This is the finished, working example—not a mockup. It uses only HTML, CSS and JavaScript, so it runs without installing a game engine.</p>
 </section>
@@ -88,7 +88,7 @@ body{background:#071427;color:#eaf2ff}
 <pre class="lesson-code"><code>&lt;h2 id="title"&gt;Your story&lt;/h2&gt;
 &lt;p id="story"&gt;&lt;/p&gt;
 &lt;div id="choices"&gt;&lt;/div&gt;</code></pre></div>
-<div><h3>CSS brings the world to life</h3><p>CSS controls the colors, atmosphere, readable text, button styles and layout on phones.</p>
+<div><h3>CSS brings the world to life</h3><p>CSS animates the fox, moving clouds, river, floating fireflies, different landscapes, buttons and responsive layout on phones.</p>
 <pre class="lesson-code"><code>.scene {
   background: #132743;
   border-radius: 24px;
@@ -130,6 +130,9 @@ let endingText = "";</code></pre></div>
 </section>
 
 <section class="lesson-card">
+<section class="lesson-note" aria-label="How the animations and voice work">
+<strong>Want to change the animations or narration?</strong> Open the downloaded game in your code editor. The CSS selectors <code>.world[data-scene="forest"]</code>, <code>.world[data-scene="river"]</code> and <code>@keyframes</code> control the animated backgrounds and movement. The <code>showScene()</code> function changes locations when you choose a path. <code>narrateScene()</code> reads the story using the same fixed English voice preference as Iris; the browser may choose a fallback if that voice isn't installed. Audio begins only after the player taps Start or makes a choice.
+</section>
 <h2><span class="lesson-number">5</span> Write a new chapter yourself</h2>
 <p>Now change the game. Open your <code>index.html</code> and look for <code>const scenes = {</code>. A scene is an object with a title, narrative and choices. You can start by modifying the village story or add a new <code>cave</code> scene.</p>
 <pre class="lesson-code"><code>cave: {

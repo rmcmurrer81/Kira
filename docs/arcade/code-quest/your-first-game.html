@@ -45,19 +45,131 @@ h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.18;letter-spacing:-.03em;mar
 @keyframes bob{50%{transform:translateY(-10px)}}
 @media(max-width:550px){.wrapper{padding:21px 12px 50px}.art{height:205px}.fox{left:10%;font-size:4.7rem}.light{right:13%}.content{padding:23px 20px}.story{min-height:unset}}
 @media(prefers-reduced-motion:reduce){.fox{animation:none}}
+
+/* ANIMATED STORY WORLD — each location has its own landscape and moving cast */
+.audio-tools{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-bottom:20px}
+.audio-tools button{border-radius:999px;min-height:45px;padding:10px 17px;font-weight:820;border:1px solid #97b7c6;background:#244c5f;color:#f1f7ff}
+.audio-tools .sound-start{border-color:#f5d48b;background:#f5d48b;color:#172b3d;box-shadow:0 4px 22px #ffc95f4d}
+.audio-tools button:hover{filter:brightness(1.19)}
+.audio-tools #voiceStatus{font-size:.81rem;color:#c4d9eb;flex-basis:100%;min-height:20px}
+.world{height:310px;isolation:isolate;transition:background 1s ease;overflow:hidden}
+.world::before,.world::after{z-index:1;pointer-events:none}
+.world .moon{transition:all 1s ease}
+.world .stars{animation:glimmer 3s ease-in-out infinite;white-space:nowrap}
+.clouds{position:absolute;inset:0;z-index:1;pointer-events:none}
+.clouds i{position:absolute;top:45px;left:-35%;width:150px;height:40px;background:#ddeaff25;border-radius:50%;filter:blur(10px);animation:cloud-drift 25s linear infinite}
+.clouds i:nth-child(2){top:100px;animation-duration:37s;animation-delay:-14s;width:210px;height:30px}
+.clouds i:nth-child(3){top:10px;animation-duration:31s;animation-delay:-22s;width:120px}
+.mountain-layer{position:absolute;inset:0;pointer-events:none;z-index:1}
+.mountain-layer i{position:absolute;bottom:32px;left:38%;width:390px;height:190px;background:#496b76;clip-path:polygon(48% 0,100% 100%,0 100%);opacity:.55}
+.mountain-layer i:nth-child(2){left:1%;bottom:37px;width:360px;height:165px;background:#4e6379}
+.mountain-layer i:nth-child(3){left:70%;bottom:30px;background:#395e72;width:280px;height:148px}
+.village,.forest,.river-scene,.beacon{position:absolute;inset:0;z-index:3;opacity:0;transition:opacity .45s ease;pointer-events:none}
+.world[data-scene="start"] .village,.world[data-scene="village"] .village{opacity:1}
+.world[data-scene="forest"] .forest{opacity:1}
+.world[data-scene="river"] .river-scene{opacity:1}
+.world[data-scene="hill"] .beacon,.world[data-scene="ending"] .beacon{opacity:1}
+.world[data-scene="village"]{background:linear-gradient(#293b6c 0%,#8b7280 72%,#496f61 72%,#315344)}
+.world[data-scene="forest"]{background:linear-gradient(#122b39 0%,#235958 69%,#21504b 69%,#19372c)}
+.world[data-scene="river"]{background:linear-gradient(#223957 0%,#59788c 69%,#2c686a 69%,#1a4e65)}
+.world[data-scene="hill"]{background:linear-gradient(#202b55 0%,#455987 69%,#4b6b69 69%,#2c4a4b)}
+.world[data-scene="ending"]{background:linear-gradient(#4c4a83 0%,#b28d98 69%,#8e9b83 69%,#527869)}
+.house{position:absolute;bottom:33px;left:11%;width:85px;height:74px;background:#8f6270;border:4px solid #39415f;border-radius:7px;z-index:2;box-shadow:0 0 30px #ffde8940}
+.house:before{content:"";position:absolute;left:-11px;top:-41px;width:101px;height:43px;background:#be8277;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.house i{position:absolute;top:18px;left:15px;height:20px;width:18px;background:#ffe8a0;box-shadow:31px 0 #ffe8a0,0 0 24px #ffc987}
+.house b{position:absolute;bottom:0;left:34px;width:18px;height:23px;background:#3d4859}
+.house.h2{left:68%;bottom:47px;transform:scale(.75);background:#72618d}
+.village .path{position:absolute;bottom:-50px;left:32%;height:115px;width:130px;background:#c9b08266;transform:skew(-20deg);border-radius:60%}
+.tree{position:absolute;bottom:35px;width:74px;height:200px;background:#142b3e;clip-path:polygon(49% 0,93% 34%,76% 34%,100% 70%,62% 70%,60% 100%,40% 100%,38% 70%,0 70%,24% 34%,7% 34%);filter:drop-shadow(0 4px 14px #09192d)}
+.tree.t1{left:7%;height:190px}.tree.t2{left:25%;height:230px}.tree.t3{left:50%;height:180px}.tree.t4{left:71%;height:215px}.tree.t5{left:88%;height:170px}
+.world[data-scene="forest"] .moon{width:45px;height:45px;top:34px}
+.river-stream{position:absolute;bottom:2px;left:0;width:100%;height:115px;background:repeating-linear-gradient(170deg,#2a9ca4bb 0 12px,#3cbed0bb 14px 18px,#183f69aa 21px 28px);animation:flow 5s linear infinite}
+.bridge{position:absolute;left:13%;bottom:99px;width:80%;height:24px;background:#7c5d64;transform:skew(-5deg);border-radius:7px;box-shadow:0 13px 4px #1d344588;display:flex;gap:13%;align-items:end}
+.bridge i{height:45px;width:7px;background:#b29b79;box-shadow:12px 0 #806563}
+.river-wisp{font-size:4.5rem;position:absolute;right:19%;bottom:120px;color:#ffedab;text-shadow:0 0 60px #fff4bb;animation:bob 4s ease-in-out infinite}
+.beacon{left:auto;right:19%;bottom:21px;top:auto;width:160px;height:240px;z-index:4}
+.beacon-tower{position:absolute;bottom:0;left:48px;background:linear-gradient(90deg,#71849e,#e7dfd1,#7e8ba6);height:162px;width:65px;clip-path:polygon(21% 0,79% 0,100% 100%,0 100%);border:4px solid #39475e}
+.beacon-roof{position:absolute;bottom:161px;left:40px;width:81px;height:43px;background:#c57671;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.beacon-light{position:absolute;left:61px;top:36px;width:38px;height:39px;background:#9eb4c4;border:6px solid #42546c;border-radius:9px;z-index:2}
+.world[data-scene="ending"] .beacon-light{background:#fff4bd;box-shadow:0 0 40px 22px #fff0af,0 0 130px 72px #ffd885aa;animation:beacon-glow 2.4s ease-in-out infinite}
+.fox-character{position:absolute;left:26%;bottom:24px;width:110px;height:120px;z-index:8;animation:fox-step 3.4s ease-in-out infinite;filter:drop-shadow(0 10px 11px #071d2ca0)}
+.fox-body{position:absolute;width:75px;height:74px;left:16px;bottom:0;background:#ef914c;border-radius:55% 55% 34% 34%;border:3px solid #a5573c}
+.fox-body:after{content:"";position:absolute;width:39px;height:49px;bottom:0;left:15px;background:#ffdec0;border-radius:55% 55% 32% 32%}
+.fox-tail{position:absolute;width:75px;height:28px;left:-31px;bottom:24px;background:linear-gradient(90deg,#ffefd6 0 22%,#da6c3c 22%);border-radius:90% 20% 50% 80%;transform:rotate(30deg);transform-origin:right center;animation:tail-wag .85s ease-in-out infinite alternate}
+.fox-head{position:absolute;left:13px;top:2px;width:84px;height:68px;background:#ff9c4d;border:3px solid #bc683f;border-radius:40% 40% 48% 48%;z-index:2}
+.fox-ear{position:absolute;top:-24px;width:36px;height:43px;background:#e87843;border:3px solid #af573e;clip-path:polygon(10% 95%,50% 0,100% 94%);z-index:-1}
+.ear-left{left:-4px;transform:rotate(-17deg)}.ear-right{right:-4px;transform:rotate(17deg)}
+.fox-face{position:absolute;bottom:0;left:8px;width:64px;height:34px;background:#fff3d7;border-radius:65% 65% 45% 45%}
+.eye{position:absolute;top:-19px;width:8px;height:13px;border-radius:50%;background:#222c3b}
+.eye-left{left:13px}.eye-right{right:13px}
+.nose{position:absolute;left:27px;top:8px;width:12px;height:9px;background:#433742;border-radius:45%}
+.mouth{position:absolute;left:31px;top:19px;width:4px;height:2px;background:#5e363a;border-radius:50%}
+.fox-character.speaking .mouth{height:9px;animation:fox-talk .19s steps(2) infinite}
+.fox-paws{position:absolute;bottom:0;left:25px;width:27px;height:13px;background:#533d3b;box-shadow:30px 0 #533d3b;border-radius:12px;z-index:3;animation:paw-step .38s ease-in-out infinite alternate}
+.world.is-entering .fox-character{animation:fox-arrive .75s cubic-bezier(.2,.8,.2,1),fox-step 3s .75s ease-in-out infinite}
+.firefly-swarm{position:absolute;inset:0;z-index:12;pointer-events:none}
+.firefly{position:absolute;top:42%;left:45%;width:27px;height:27px;background:#ffdf71;border:4px solid #fff2bb;border-radius:50%;box-shadow:0 0 14px 6px #ffe788,0 0 38px 9px #ffe8a199;animation:fly-a 4.8s ease-in-out infinite;pointer-events:auto;cursor:pointer;transition:transform .2s,opacity .3s}
+.firefly:hover{transform:scale(1.35)}
+.firefly:focus-visible{outline:3px solid #fff;outline-offset:5px}
+.firefly:nth-child(1){top:32%;left:44%;animation-delay:-1s}.firefly:nth-child(2){top:52%;left:72%;animation-delay:-3s}.firefly:nth-child(3){top:22%;left:66%;animation-delay:-2s}
+.firefly.is-caught{opacity:0;pointer-events:none;animation:none;transform:scale(2)}
+.glow-meter{position:absolute;right:13px;bottom:9px;color:#fff5bf;background:#263d5acc;border:1px solid #ffdfa780;border-radius:30px;padding:5px 12px;z-index:13;font-size:.72rem;font-weight:800}
+.shimmer-burst{position:absolute;left:45%;top:43%;color:#fff3b2;font-size:2.4rem;z-index:14;opacity:0;pointer-events:none}
+.shimmer-burst.pop{animation:burst .65s ease-out}
+.caption{left:13px;bottom:9px;z-index:13}
+.world[data-scene="ending"] .firefly{animation:fly-a 1.8s ease-in-out infinite;box-shadow:0 0 22px 13px #ffefb9}
+.world[data-scene="ending"] .firefly-swarm .firefly{opacity:1!important;pointer-events:none}
+.world[data-scene="ending"] .fox-character{animation:fox-celebrate .7s ease-in-out infinite alternate}
+.content{transition:opacity .3s ease}
+.content.story-enter{animation:story-enter .45s ease both}
+@keyframes glimmer{50%{opacity:.35;filter:brightness(1.5)}}
+@keyframes cloud-drift{to{transform:translateX(1200px)}}
+@keyframes flow{to{background-position:220px 0}}
+@keyframes beacon-glow{50%{filter:brightness(1.4)}}
+@keyframes fox-step{50%{transform:translateY(-10px) rotate(-3deg)}}
+@keyframes fox-arrive{from{transform:translateX(-160px) scale(.7);opacity:.3}to{transform:translateX(0) scale(1);opacity:1}}
+@keyframes fox-celebrate{to{transform:translateY(-25px) rotate(8deg)}}
+@keyframes tail-wag{to{transform:rotate(53deg)}}
+@keyframes paw-step{to{transform:translateY(-4px)}}
+@keyframes fox-talk{50%{height:2px}}
+@keyframes fly-a{0%,100%{transform:translate(0,0) scale(.85);opacity:.8}25%{transform:translate(19px,-24px) scale(1.07);opacity:1}50%{transform:translate(-12px,-36px) scale(.8);opacity:.7}75%{transform:translate(-26px,12px) scale(1.05);opacity:1}}
+@keyframes burst{0%{opacity:0;transform:scale(.2)}35%{opacity:1}100%{opacity:0;transform:scale(2.5)}}
+@keyframes story-enter{from{opacity:.55;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:550px){.world{height:265px}.fox-character{left:17%;transform:scale(.88);transform-origin:bottom center}.beacon{right:5%;transform:scale(.83);transform-origin:bottom center}.tree.t5{left:79%}.firefly{width:23px;height:23px}.audio-tools button{flex-grow:1}}
+@media(prefers-reduced-motion:reduce){.world *, .world *:before, .world *:after,.content.story-enter{animation:none!important;transition:none!important}}
+
 </style>
 </head>
 <body>
 <main class="wrapper">
 <div class="header"><span class="logo">✦ KIRA LABS · YOUR FIRST GAME</span><a class="back" href="https://kiralabs.org/arcade/code-quest/learn.html">← Back to the tutorial</a></div>
 <h1>The <em>Firefly Trail</em></h1>
-<p class="subtitle">An original mini adventure. Every choice changes the path.</p>
+<p class="subtitle">A living storybook adventure — follow Wisp, catch fireflies and choose your own ending.</p>
+<div class="audio-tools" aria-label="Game narration and sound controls">
+<button id="playSound" class="sound-start" type="button">🔊 Start adventure with Iris voice</button>
+<button id="voiceToggle" class="sound-toggle" type="button" aria-pressed="false">Turn sound on</button>
+<button id="readAgain" class="sound-replay" type="button">↻ Hear scene again</button>
+<span id="voiceStatus" role="status" aria-live="polite">Tap Start to hear the story</span>
+</div>
 <div class="status" aria-label="Game status">
  <span id="progress">Chapter 1 of 5</span>
  <span id="bag">Backpack: empty</span>
 </div>
 <section class="scene">
- <div class="art" aria-hidden="true"><span class="moon"></span><span class="stars">✦ ✧ ✦</span><span class="fox">🦊</span><span class="light" id="light">🏮</span><span class="caption" id="location">The sleepy village</span></div>
+ <div class="art world" id="world" data-scene="start" aria-label="Animated adventure scenery" role="img">
+ <span class="moon"></span><span class="stars">✦ ✧ ✦</span>
+ <div class="clouds"><i></i><i></i><i></i></div>
+ <div class="mountain-layer"><i></i><i></i><i></i></div>
+ <div class="village" aria-hidden="true"><div class="house h1"><i></i><b></b></div><div class="house h2"><i></i><b></b></div><span class="path"></span></div>
+ <div class="forest" aria-hidden="true"><i class="tree t1"></i><i class="tree t2"></i><i class="tree t3"></i><i class="tree t4"></i><i class="tree t5"></i></div>
+ <div class="river-scene" aria-hidden="true"><div class="river-stream"></div><div class="bridge"><i></i><i></i><i></i><i></i></div><div class="river-wisp">✧</div></div>
+ <div class="beacon" aria-hidden="true"><span class="beacon-light"></span><span class="beacon-roof"></span><span class="beacon-tower"></span></div>
+ <div class="fox-character" id="foxCharacter" aria-hidden="true"><div class="fox-tail"></div><div class="fox-body"></div><div class="fox-head"><span class="fox-ear ear-left"></span><span class="fox-ear ear-right"></span><span class="fox-face"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="nose"></i><i class="mouth"></i></span></div><div class="fox-paws"></div></div>
+ <div class="firefly-swarm" id="fireflySwarm" aria-label="Catch floating fireflies"></div>
+ <div class="shimmer-burst" id="shimmerBurst" aria-hidden="true">✦</div>
+ <span class="caption" id="location">The sleepy village</span>
+ <span class="glow-meter" id="glowMeter">✨ Fireflies: 0 / 3</span>
+</div>
  <div class="content">
   <p class="eyebrow" id="speaker">WISP THE FOX</p>
   <h2 id="title">The Night the Fireflies Vanished</h2>
@@ -69,6 +181,117 @@ h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.18;letter-spacing:-.03em;mar
 </section>
 <p class="small">A complete browser game made with HTML, CSS, and JavaScript. No downloads or accounts needed to play. <a href="https://kiralabs.org/arcade/code-quest/learn.html">Learn how to make your own copy.</a></p>
 </main>
+<script>
+/* Kira Labs arcade voice — same fixed, gentle English voice preference as Iris.
+ * Iris and the games use the browser's SpeechSynthesis voices (no selector).
+ * Voice starts only after a player click. Sound never records a microphone.
+ * Game effects are original tones synthesized in the visitor's browser.
+ */
+(() => {
+  "use strict";
+  const priorities=[
+    /\bJenny\b.*\bNatural\b/i, /\bAva\b.*\bNatural\b/i,
+    /\bEmma\b.*\bNatural\b/i, /\bSonia\b.*\bNatural\b/i,
+    /\bAria\b.*\bNatural\b/i, /\bSamantha\b/i, /\bZira\b/i,
+    /\bHazel\b/i, /\bSusan\b/i, /\bKaren\b/i,
+    /\bMoira\b/i, /\bAllison\b/i
+  ];
+  const getEngine=()=>window.speechSynthesis;
+  const supported=()=>Boolean(getEngine()&&window.SpeechSynthesisUtterance);
+  const chooseVoice=()=>{
+    if(!supported())return null;
+    const voices=Array.from(getEngine().getVoices()||[]).filter(v=>/^en(?:-|_|$)/i.test(v.lang||""));
+    for(const pattern of priorities){const voice=voices.find(v=>pattern.test(v.name||""));if(voice)return voice;}
+    return voices.find(v=>v.default)||voices[0]||null;
+  };
+  const chunk=text=>{
+    const pieces=String(text||"").replace(/\s+/g," ").trim().match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[];
+    const output=[];let part="";
+    for(const sentence of pieces){
+      for(const word of sentence.trim().split(/\s+/)){
+        if(!word)continue;
+        if(part && part.length+word.length+1>205){output.push(part);part="";}
+        part+=(part?" ":"")+word;
+      }
+    }
+    if(part)output.push(part);
+    return output.slice(0,30);
+  };
+  window.KiraArcadeVoice={
+    create(options={}){
+      const synth=getEngine(), Utterance=window.SpeechSynthesisUtterance;
+      const available=supported();
+      let enabled=false,token=0,sfx=null,vol=null;
+      const status=typeof options.onStatus==="function"?options.onStatus:()=>{};
+      function stop(){
+        token++;
+        if(available)synth.cancel();
+        options.onSpeaking?.(false);
+      }
+      function disable(){
+        enabled=false;stop();
+        if(sfx){try{sfx.suspend();}catch(_){}}
+        status("Sound off");
+      }
+      function enable(){
+        if(!available){status("Voice unavailable in this browser");return false;}
+        enabled=true;
+        // getVoices() triggers population in browsers that load voices asynchronously.
+        synth.getVoices();
+        status("Sound on · Iris voice");
+        return true;
+      }
+      function speak(text){
+        if(!enabled||!available)return false;
+        stop();
+        const parts=chunk(text);
+        if(!parts.length)return false;
+        const ticket=token,voice=chooseVoice();
+        let i=0;
+        const next=()=>{
+          if(ticket!==token||!enabled)return;
+          if(i>=parts.length){options.onSpeaking?.(false);status("Sound on · Iris voice");return;}
+          const utter=new Utterance(parts[i++]);
+          if(voice)utter.voice=voice;
+          utter.lang=voice?.lang||"en-US";
+          utter.rate=0.96;utter.pitch=1;utter.volume=1;
+          utter.onstart=()=>{if(ticket!==token)return;options.onSpeaking?.(true);status("Narrating with Iris voice…");};
+          utter.onend=next;
+          utter.onerror=event=>{
+            if(ticket!==token||event.error==="canceled"||event.error==="interrupted")return;
+            options.onSpeaking?.(false);
+            status("Narration could not play · try replay");
+          };
+          try{synth.speak(utter);}catch(_){options.onSpeaking?.(false);status("Narration unavailable");}
+        };
+        next();return true;
+      }
+      function cue(kind="tap"){
+        if(!enabled)return;
+        const AC=window.AudioContext||window.webkitAudioContext;
+        if(!AC)return;
+        try{
+          if(!sfx){sfx=new AC();vol=sfx.createGain();vol.gain.value=0.095;vol.connect(sfx.destination);}
+          if(sfx.state==="suspended")sfx.resume();
+          const melody=kind==="win"?[[523,0],[659,.14],[784,.29],[1047,.44]]
+            :kind==="scene"?[[440,0],[588,.12]]:kind==="wrong"?[[260,0],[220,.12]]:[[540,0]];
+          melody.forEach(([frequency,delay])=>{
+            const osc=sfx.createOscillator(),gain=sfx.createGain(),at=sfx.currentTime+delay;
+            osc.type="sine";osc.frequency.setValueAtTime(frequency,at);
+            gain.gain.setValueAtTime(0,at);
+            gain.gain.linearRampToValueAtTime(0.20,at+0.02);
+            gain.gain.exponentialRampToValueAtTime(0.001,at+0.20);
+            osc.connect(gain);gain.connect(vol);osc.start(at);osc.stop(at+0.21);
+          });
+        }catch(_){/* Speech remains available when Web Audio is blocked. */}
+      }
+      window.addEventListener("pagehide",()=>{stop();if(sfx)try{sfx.close();}catch(_){}},{once:true});
+      return {enable,disable,stop,speak,cue,get enabled(){return enabled;},get supported(){return available;},chooseVoice};
+    },
+    chooseVoice,priorities
+  };
+})();
+</script>
 <script>
 /* STEP 2: This JavaScript tells the full story, from beginning to ending.
    Edit the titles, text, and choices to write YOUR OWN adventure. */
@@ -127,6 +350,88 @@ let currentScene = "start";
 let backpack = [];
 let endingText = "";
 
+
+// Audio starts from a player's click, using exactly the same preferred voice
+// sequence, speed and pitch as Iris on kiralabs.org.
+const voice = window.KiraArcadeVoice.create({
+  onStatus(message) { document.getElementById("voiceStatus").textContent = message; },
+  onSpeaking(speaking) { document.getElementById("foxCharacter").classList.toggle("speaking",speaking); }
+});
+let hasChosenSound = false;
+let firefliesCaught = 0;
+const fireflies = document.getElementById("fireflySwarm");
+
+function narrateScene() {
+  const scene = scenes[currentScene];
+  if (endingText) {
+    voice.speak("The Fireflies Return! " + endingText);
+  } else {
+    voice.speak(scene.title + ". " + scene.story);
+  }
+}
+function syncSoundButtons() {
+  document.getElementById("playSound").hidden = hasChosenSound;
+  document.getElementById("voiceToggle").textContent = voice.enabled ? "🔇 Mute sound" : "🔊 Turn sound on";
+  document.getElementById("voiceToggle").setAttribute("aria-pressed", String(voice.enabled));
+}
+function beginWithSound() {
+  hasChosenSound=true;
+  if (voice.enable()) { voice.cue("scene"); narrateScene(); }
+  syncSoundButtons();
+}
+document.getElementById("playSound").addEventListener("click",beginWithSound);
+document.getElementById("voiceToggle").addEventListener("click",()=>{
+  hasChosenSound=true;
+  if(voice.enabled)voice.disable();
+  else { voice.enable();narrateScene(); }
+  syncSoundButtons();
+});
+document.getElementById("readAgain").addEventListener("click",()=>{
+  if(!voice.enabled)beginWithSound();
+  else narrateScene();
+});
+// Three floating fireflies can be caught at any time. This little action
+// makes every location interactive instead of a static picture.
+for(let i=0;i<3;i++){
+  const light=document.createElement("button");
+  light.type="button";
+  light.className="firefly";
+  light.setAttribute("aria-label","Catch floating firefly "+(i+1));
+  light.title="Catch this firefly!";
+  light.addEventListener("click",()=>{
+    if(endingText||light.classList.contains("is-caught"))return;
+    if(!hasChosenSound)beginWithSound();
+    firefliesCaught=Math.min(3,firefliesCaught+1);
+    light.classList.add("is-caught");light.disabled=true;
+    document.getElementById("glowMeter").textContent="✨ Fireflies: "+firefliesCaught+" / 3";
+    const burst=document.getElementById("shimmerBurst");
+    burst.style.left=light.style.left||getComputedStyle(light).left;
+    burst.style.top=light.style.top||getComputedStyle(light).top;
+    burst.classList.remove("pop");void burst.offsetWidth;burst.classList.add("pop");
+    voice.cue(firefliesCaught===3?"win":"tap");
+    if(firefliesCaught===3) voice.speak("You caught all three glowing fireflies! Amazing!");
+  });
+  fireflies.appendChild(light);
+}
+function animateWorld(){
+  const world=document.getElementById("world");
+  world.dataset.scene=endingText?"ending":currentScene;
+  world.classList.remove("is-entering");
+  void world.offsetWidth;
+  world.classList.add("is-entering");
+  const content=document.querySelector(".content");
+  content.classList.remove("story-enter");void content.offsetWidth;content.classList.add("story-enter");
+  if(!endingText){
+    // Give the next chapter new animated fireflies to catch.
+    firefliesCaught=0;
+    document.getElementById("glowMeter").textContent="✨ Fireflies: 0 / 3";
+    for(const light of fireflies.children){light.classList.remove("is-caught");light.disabled=false;}
+  }else{
+    document.getElementById("glowMeter").textContent="✦ The fireflies have come home!";
+  }
+}
+syncSoundButtons();
+
 // STEP 4: A function updates the webpage to show the current scene.
 function showScene() {
   const scene = scenes[currentScene];
@@ -154,11 +459,14 @@ function showScene() {
   document.getElementById("final").hidden = !endingText;
   document.getElementById("final").textContent = endingText ? "✦ Your adventure has a complete ending. Try the other paths and discover a different result!" : "";
   document.getElementById("restart").hidden = !endingText;
-  document.getElementById("light").textContent = endingText ? "🌟" : "🏮";
+  animateWorld();
 }
 
 // STEP 5: An if statement changes the ending using your collected items.
 function choose(choice) {
+  if(!hasChosenSound)beginWithSound();
+  voice.stop();
+  voice.cue("tap");
   if (choice.gift) backpack.push(choice.gift); // Arrays can grow with push().
   if (choice.next === "ending") {
     if (choice.action === "friends") {
@@ -172,6 +480,8 @@ function choose(choice) {
     currentScene = choice.next;
   }
   showScene();
+  voice.cue(endingText?"win":"scene");
+  narrateScene();
 }
 
 // STEP 6: Replay brings the whole adventure back to the beginning.
@@ -179,7 +489,10 @@ document.getElementById("restart").addEventListener("click", () => {
   currentScene = "start";
   backpack = [];
   endingText = "";
+  voice.stop();
+  voice.cue("scene");
   showScene();
+  narrateScene();
 });
 showScene(); // Start the game!
 </script>
