@@ -132,7 +132,7 @@
     if(/\b(?:what|which) (?:local )?models?\b|\bmodels?\b.*\b(?:use|uses|powers|powering)\b/.test(q))return 'technical';
     // Dated research and acceptance questions use reviewed status, rather than
     // treating natural-language wording as an undocumented general overview.
-    if(/\b(?:readout|original12|workspace launcher)\b/.test(q)&&/\b(?:prove|proved|improve|improved|verified|checked|establish|established|passed|failed|latest|november)\b/.test(q))return 'status';
+    if(/\b(?:readout|workspace launcher)\b/.test(q)&&/\b(?:prove|proved|improve|improved|verified|checked|establish|established|passed|failed|latest|november)\b/.test(q))return 'status';
     if(/\b(?:accepted|approved|rejected|unapproved)\b/.test(q)&&/\b(?:head|body|avatar|model|candidate|face)\b/.test(q))return 'status';
     if(/\b(?:latest|newest)\b/.test(q))return 'status';
     if(/\b(?:full.body|whole body|body plan|camera|zoom|framing|life loop)\b/.test(q))return 'status';
@@ -229,6 +229,9 @@
     if(p.id==='newbrain'&&/\ba108\b/.test(q)&&selected==='overview')selected='status';
     if(p.id==='newbrain'&&/\b(?:native api|two restore|model generate)\b/.test(q)&&selected==='overview')selected='status';
     if(p.id==='avatar-body'&&/\b(?:motion library|motion practice|walk phase)\b/.test(q)&&selected==='overview')selected='status';
+    // Dated content-state readout queries use the reviewed Nov 2 status.
+    // Preserve earlier A108/Original12 response routing and unknown-topic guards.
+    if(p.id==='newbrain'&&/\b(?:readout|content state mean)\b/.test(q)&&/\b(?:november 2|nov 2|2026 11 02)\b/.test(q))return reply(p,'status',data);
     // The library and film/TV questions refer to curated Evelyn project notes,
     // not Robert's book catalogue or the unrelated entertainment-credit topics.
     if(p.id==='evelyn'&&/\b(?:books?|catalogue?|library|titles|reading list)\b/.test(q)&&/\b(?:what|which|list|show|starter|included|titles|catalog|catalogue)\b/.test(q)&&!/\b(?:cost|price|pricing|rights|license|licence|privacy)\b/.test(q))selected='evidence';
