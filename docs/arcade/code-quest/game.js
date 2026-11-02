@@ -1,511 +1,314 @@
-/* Code Quest: Save Starlight Bay. Original Kira Labs educational game.
- * Every coding puzzle runs locally in a disposable web worker (sandbox.js).
- * State persists only in this browser's localStorage, never on a server.
- */
+/* Code Quest: The Last Light. Player text is parsed by sandbox.js, never evaluated.
+ * Each attempt starts at the scene entrance. Only bounded teaching actions reach the world. */
 (() => {
   "use strict";
-  const MISSIONS = [
-    {
-      chapter:"CHAPTER 1 · THE BLACKOUT", topic:"STRINGS", speaker:"MIRA · THE INVENTOR",
-      title:"A Voice in the Dark", place:"The workshop · 11:47 PM",
-      story:"Something has stolen the light from Starlight Bay. Outside, everyone is waiting for the midnight festival. Mira pulls a sheet from her little robot. “This is PIX. He can help us—but first, he needs to hear his name.”",
-      goal:"Change the text inside the quotes to say: Hello, PIX!",
-      lessonTitle:"1. Strings tell the story",
-      lesson:"Text in JavaScript belongs inside quotation marks. The say() command makes PIX speak those exact words.",
-      starter:'// Change "friend" to the robot’s name.\nsay("Hello, friend!");',
-      solution:'say("Hello, PIX!");',
-      hint:"Inside say( ... ), replace friend with PIX. Keep both quotation marks and the semicolon.",
-      success:"PIX opens his bright blue eyes. “Hello, Mira! Hello, programmer!” The first spark is back.",
-      start:{x:1,y:2,dir:"east"}, target:{x:4,y:2,icon:"✦"},
-      check:(r) => r.actions.some(a => a.type==="say" && a.value.trim().toLowerCase()==="hello, pix!")
-    },
-    {
-      chapter:"CHAPTER 1 · THE BLACKOUT", topic:"VARIABLES", speaker:"PIX · WORKSHOP ROBOT",
-      title:"The Crystal Charger", place:"The workshop · 11:52 PM",
-      story:"PIX points to a lantern with three empty crystal sockets. “We need three crystals,” he says. “This machine stores its charge in a variable. Can you give it enough energy?”",
-      goal:"Set crystals to 3 or more, then run charge(crystals).",
-      lessonTitle:"2. Variables remember values",
-      lesson:"let creates a named container for information. Change the number stored in crystals and watch the lantern respond.",
-      starter:"// We need at least three crystals.\nlet crystals = 1;\ncharge(crystals);",
-      solution:"let crystals = 3;\ncharge(crystals);",
-      hint:"The variable already exists. Change the 1 to 3, then leave charge(crystals) in place.",
-      success:"Three crystal sockets flash to life! A map appears on the wall: the old beacon is across the village.",
-      start:{x:1,y:2,dir:"east"}, target:{x:5,y:1,icon:"💎"},
-      check:(r) => r.actions.some(a => a.type==="charge" && a.value>=3)
-    },
-    {
-      chapter:"CHAPTER 2 · THE JOURNEY", topic:"COMMANDS", speaker:"MIRA · THE INVENTOR",
-      title:"The Moonlit Courtyard", place:"Village courtyard · 12:01 AM",
-      story:"The workshop doors open onto a silent courtyard. PIX can move only when you give him instructions. Three squares ahead is the glowing stone that opens the path to the river.",
-      goal:"Make PIX move exactly 3 squares to the right, ending on the glowing stone.",
-      lessonTitle:"3. Commands make things happen",
-      lesson:"move(3) tells PIX to move three squares. Change the number between parentheses to control how far he travels.",
-      starter:"// One step is not enough.\nmove(1);",
-      solution:"move(3);",
-      hint:"PIX starts at the left edge of the trail. Use move(3); instead of move(1);.",
-      success:"PIX lands on the glowing stone. The village gates slide open, revealing a moonlit river.",
-      start:{x:0,y:2,dir:"east"}, target:{x:3,y:2,icon:"✨"},
-      check:(r) => r.x===3 && r.y===2
-    },
-    {
-      chapter:"CHAPTER 2 · THE JOURNEY", topic:"DIRECTIONS", speaker:"PIX · WORKSHOP ROBOT",
-      title:"The Twisting Bridge", place:"Moonwater River · 12:08 AM",
-      story:"A glass bridge bends around a dark waterfall. PIX has to go two squares east, turn right toward the riverbank, then go two squares south. A wrong turn sends him toward the old ruins!",
-      goal:"Travel east 2 squares, turn right, then travel south 2 squares.",
-      lessonTitle:"4. Order matters",
-      lesson:"JavaScript runs your commands from top to bottom. turn('right') changes PIX's direction before the next move.",
-      starter:'move(2);\nturn("left");\nmove(2);',
-      solution:'move(2);\nturn("right");\nmove(2);',
-      hint:"PIX begins facing east. A right turn points south; a left turn points north. Change only the direction word.",
-      success:"The bridge lights beneath his feet. On the other side, an enormous iron door guards the next path.",
-      start:{x:0,y:0,dir:"east"}, target:{x:2,y:2,icon:"🏁"},
-      check:(r) => r.x===2 && r.y===2
-    },
-    {
-      chapter:"CHAPTER 3 · THE LOST ARCHIVE", topic:"IF STATEMENTS", speaker:"MIRA · THE INVENTOR",
-      title:"The Gatekeeper's Riddle", place:"The Archive · 12:17 AM",
-      story:"An old brass gatekeeper speaks: “Only a traveler with at least two keys may enter.” Mira checks her bag. Two keys! But the gate's program is asking for too many.",
-      goal:"Fix the if statement so the gate opens when keys is 2.",
-      lessonTitle:"5. Conditions make decisions",
-      lesson:"if (condition) runs the code in braces only when the condition is true. >= means greater than or equal to.",
-      starter:"let keys = 2;\nif (keys >= 3) {\n  openGate();\n}",
-      solution:"let keys = 2;\nif (keys >= 2) {\n  openGate();\n}",
-      hint:"Mira has 2 keys. The gate currently requires 3. Change the number after >= to 2.",
-      success:"The gatekeeper bows. “The condition is true. Welcome, friends.” Inside, a starrail hums to life.",
-      start:{x:1,y:2,dir:"east"}, target:{x:5,y:2,icon:"🚪"},
-      check:(r,code) => /\bif\s*\(/.test(code) && r.actions.some(a=>a.type==="openGate")
-    },
-    {
-      chapter:"CHAPTER 3 · THE LOST ARCHIVE", topic:"LOOPS", speaker:"PIX · WORKSHOP ROBOT",
-      title:"The Clockwork Starrail", place:"Starrail Station · 12:26 AM",
-      story:"A long clockwork corridor leads toward the hill. PIX can take one step at a time, but repeating the same command four times would be tedious. “Let's make the computer do the repeating!” he says.",
-      goal:"Use a loop to move 1 square at a time until PIX reaches square 4.",
-      lessonTitle:"6. Loops repeat your commands",
-      lesson:"A for loop runs the code between { } again and again. Change the stop number to tell PIX to take four steps.",
-      starter:"// Repeat the command four times.\nfor (let step = 0; step < 2; step++) {\n  move(1);\n}",
-      solution:"for (let step = 0; step < 4; step++) {\n  move(1);\n}",
-      hint:"The loop starts at 0 and stops before the number after <. Change step < 2 to step < 4.",
-      success:"The starrail carries PIX safely through the corridor. Ahead, three falling stars wait to be gathered.",
-      start:{x:0,y:2,dir:"east"}, target:{x:4,y:2,icon:"🌠"},
-      check:(r,code) => r.x===4 && r.y===2 && /\b(?:for|while)\s*\(/.test(code) && r.actions.filter(a=>a.type==="move").length>=4
-    },
-    {
-      chapter:"CHAPTER 4 · THE STARFALL", topic:"ARRAYS", speaker:"MIRA · THE INVENTOR",
-      title:"Three Pieces of Starlight", place:"Starfall Meadow · 12:35 AM",
-      story:"At the foot of Beacon Hill, three little stars have fallen into the grass. Each has a number: 1, 2 and 3. PIX's collection program lists the stars it knows about, but one is missing.",
-      goal:"Update the array so PIX collects stars 1, 2 and 3.",
-      lessonTitle:"7. Arrays keep lists together",
-      lesson:"An array is a list inside square brackets. The for...of loop visits each item in the array, one at a time.",
-      starter:"// Add the missing star.\nconst stars = [1, 2];\nfor (const star of stars) {\n  collect(star);\n}",
-      solution:"const stars = [1, 2, 3];\nfor (const star of stars) {\n  collect(star);\n}",
-      hint:"The array currently contains 1 and 2. Add a comma and 3 before the closing square bracket.",
-      success:"All three stars settle inside PIX's lantern. The tower doors swing open, and the village gathers below.",
-      start:{x:2,y:2,dir:"east"}, target:{x:5,y:1,icon:"⭐"},
-      check:(r,code) => /\bfor\s*\(/.test(code) && [1,2,3].every(id=>r.actions.some(a=>a.type==="collect" && a.value===id))
-    },
-    {
-      chapter:"CHAPTER 5 · THE BEACON", topic:"FUNCTIONS", speaker:"PIX · WORKSHOP ROBOT",
-      title:"Light Starlight Bay!", place:"Beacon Hill · 12:44 AM",
-      story:"The ancient beacon stands silent. PIX has written a function with all the steps needed to light it—but he forgot to call it. Mira takes your hand. “One last command. The whole town is counting on you.”",
-      goal:"Call the lightBeacon function after its closing brace.",
-      lessonTitle:"8. Functions package useful actions",
-      lesson:"A function gives a name to a group of commands. Defining a function isn't enough—you must call it with parentheses to run its instructions.",
-      starter:'function lightBeacon() {\n  charge(3);\n  say("Light Starlight Bay!");\n}\n// Your turn: call lightBeacon below.',
-      solution:'function lightBeacon() {\n  charge(3);\n  say("Light Starlight Bay!");\n}\nlightBeacon();',
-      hint:"The function is already defined. On a new line after }, write lightBeacon(); with parentheses and a semicolon.",
-      success:"A brilliant beam rushes into the stars! The village glows gold. The festival is saved, and PIX cheers for his newest coding partner.",
-      start:{x:3,y:2,dir:"east"}, target:{x:5,y:1,icon:"🏮"},
-      check:(r,code) => /\bfunction\s+\w+\s*\(/.test(code) && r.actions.some(a=>a.type==="charge" && a.value>=3) && r.actions.some(a=>a.type==="say" && a.value.toLowerCase().includes("starlight bay"))
-    }
-  ];
-
-  // Story-first play: each card is a complete, real JavaScript example.
-  // Players can choose without typing and open the code editor whenever ready.
-  const EASY_CHOICES=[
-    [
-      {label:'Wake PIX by saying “Hello, PIX!”',code:'say("Hello, PIX!");',why:"A string is a piece of text between quotation marks. PIX recognizes his name!"},
-      {label:'Just say “Hello, friend!”',code:'say("Hello, friend!");',why:"That's a friendly message, but PIX is waiting to hear his own name."},
-      {label:'Charge the lantern',code:'charge(3);',why:"Charging is useful later, but first we need to wake PIX by speaking."}
-    ],
-    [
-      {label:'Put 3 crystals into the charger',code:"let crystals = 3;\ncharge(crystals);",why:"A variable stores the number 3, and PIX uses it to fill the charger."},
-      {label:'Use just 1 crystal',code:"let crystals = 1;\ncharge(crystals);",why:"The lantern still needs more crystals to power on."},
-      {label:'Use an empty charger',code:"let crystals = 0;\ncharge(crystals);",why:"There is no energy in an empty charger."}
-    ],
-    [
-      {label:'Move PIX three squares forward',code:"move(3);",why:"A move command tells PIX exactly how many squares to walk."},
-      {label:'Move PIX only one square',code:"move(1);",why:"PIX has two more squares to travel."},
-      {label:'Walk five squares instead',code:"move(5);",why:"That goes past the glowing stone."}
-    ],
-    [
-      {label:'Go forward, turn right and cross the bridge',code:'move(2);\nturn("right");\nmove(2);',why:"Order matters. PIX goes east, turns south, then walks two more squares."},
-      {label:'Turn left at the bridge',code:'move(2);\nturn("left");\nmove(2);',why:"PIX has turned toward the waterfall, not the path."},
-      {label:'Keep going straight',code:'move(2);\nmove(2);',why:"The bridge bends. PIX needs to turn to reach the end."}
-    ],
-    [
-      {label:'Open the gate with 2 keys',code:"let keys = 2;\nif (keys >= 2) {\n  openGate();\n}",why:"if checks the number of keys. Two keys meet the condition."},
-      {label:'Demand 3 keys',code:"let keys = 2;\nif (keys >= 3) {\n  openGate();\n}",why:"Mira has two keys. The gate must not require three."},
-      {label:'Open only with fewer than 2 keys',code:"let keys = 2;\nif (keys < 2) {\n  openGate();\n}",why:"That condition is false because Mira has two keys."}
-    ],
-    [
-      {label:'Repeat one step four times',code:"for (let step = 0; step < 4; step++) {\n  move(1);\n}",why:"A loop repeats a small action. PIX makes four steps automatically."},
-      {label:'Repeat only twice',code:"for (let step = 0; step < 2; step++) {\n  move(1);\n}",why:"PIX needs to travel two more squares."},
-      {label:'Repeat six times',code:"for (let step = 0; step < 6; step++) {\n  move(1);\n}",why:"That's too far down the corridor."}
-    ],
-    [
-      {label:'Collect all three stars: 1, 2 and 3',code:"const stars = [1, 2, 3];\nfor (const star of stars) {\n  collect(star);\n}",why:"An array holds all three star numbers, and a loop visits each one."},
-      {label:'Collect only stars 1 and 2',code:"const stars = [1, 2];\nfor (const star of stars) {\n  collect(star);\n}",why:"A star is still missing from the meadow."},
-      {label:'Collect 2, 3 and 4',code:"const stars = [2, 3, 4];\nfor (const star of stars) {\n  collect(star);\n}",why:"You need star 1 as well as 2 and 3."}
-    ],
-    [
-      {label:'Call the function to light the beacon!',code:'function lightBeacon() {\n  charge(3);\n  say("Light Starlight Bay!");\n}\nlightBeacon();',why:"A function groups commands, but calling it makes everything happen!"},
-      {label:'Build a function but never call it',code:'function lightBeacon() {\n  charge(3);\n  say("Light Starlight Bay!");\n}',why:"You defined the function, but PIX won't run it until you call its name."},
-      {label:'Call a function with no power',code:'function lightBeacon() {\n  charge(0);\n  say("Light Starlight Bay!");\n}\nlightBeacon();',why:"The beacon needs all three crystals to shine."}
-    ]
-  ];
-  const WORLDS=["workshop","workshop","village","river","archive","station","meadow","beacon"];
-
-  const $=id=>document.getElementById(id);
-  const el={
-    count:$("chapterCount"),progressLabel:$("progressLabel"),progressBar:$("progressBar"),progressFill:$("progressFill"),
-    chapter:$("chapterName"),topic:$("topicName"),title:$("sceneTitle"),place:$("sceneCaption"),
-    speaker:$("speaker"),story:$("storyText"),goal:$("goalText"),lessonTitle:$("lessonTitle"),
-    lesson:$("lessonText"),editor:$("codeInput"),form:$("codeForm"),
-    run:$("runButton"),hintBtn:$("hintButton"),reset:$("resetButton"),hint:$("hintBox"),
-    hintText:$("hintText"),solution:$("solutionButton"),output:$("outputPanel"),outputTitle:$("outputTitle"),
-    outputIcon:$("outputIcon"),outputText:$("outputText"),actionLog:$("actionLog"),
-    previous:$("previousButton"),next:$("nextButton"),board:$("board"),stage:document.querySelector(".cq-stage"),
-    ending:$("ending"),replay:$("replayButton"),
-    choiceButtons:$("choiceButtons"),easyHint:$("easyHint"),choicePanel:$("choicePanel"),
-    easyInstruction:$("easyInstruction"),easyContinue:$("easyContinue"),codeDetails:$("codeDetails"),
-    startSound:$("startSound"),soundToggle:$("soundToggle"),hearAgain:$("hearAgain"),soundStatus:$("soundStatus"),
-    pixSprite:$("pixSprite"),stageFlash:$("stageFlash")
-  };
-  const STORE="kira-code-quest-starlight-v1";
+  const MISSIONS=window.CodeQuestMissions, $=id=>document.getElementById(id);
+  const STORE="kira-code-quest-last-light-v2", VERSION="20261102-integrated1";
   const state={level:0,cleared:Array(MISSIONS.length).fill(false),drafts:Array(MISSIONS.length).fill(null)};
-  let worker=null,timeout=null,animator=null;
-  let selectedChoice=null,soundDecisionMade=false;
-  const voice=window.KiraArcadeVoice.create({
-    onStatus(message){el.soundStatus.textContent=message;},
-    onSpeaking(speaking){el.pixSprite.classList.toggle("cq-talking",speaking);}
-  });
-  function updateSoundButtons(){
-    el.startSound.hidden=soundDecisionMade;
-    el.soundToggle.setAttribute("aria-pressed",String(voice.enabled));
-    el.soundToggle.textContent=voice.enabled?"🔇 Mute narration":"🔊 Turn sound on";
-  }
-  function narrateScene(){
-    const m=MISSIONS[state.level];
-    voice.speak(m.title+". "+m.story+" Your mission: "+m.goal);
-  }
-  function startVoice(){
-    soundDecisionMade=true;
-    if(voice.enable()){voice.cue("scene");narrateScene();}
-    updateSoundButtons();
-  }
-  function activateSoundFromChoice(){if(!soundDecisionMade)startVoice();}
-  updateSoundButtons();
-  try{
-    const saved=JSON.parse(localStorage.getItem(STORE)||"null");
-    if(saved && Array.isArray(saved.cleared) && saved.cleared.length===MISSIONS.length) {
-      state.cleared=saved.cleared.map(Boolean);
-      const firstUnfinished=state.cleared.findIndex(done=>!done);
-      const ceiling=firstUnfinished<0?MISSIONS.length-1:firstUnfinished;
+  const voice=window.CodeQuestVoice.init({toggle:$("voiceToggle"),replay:$("voiceReplay"),status:$("voiceStatus")});
+  // Reuse the landed arcade's opt-in sound cues; only CodeQuestVoice narrates.
+  const effects=window.KiraArcadeVoice.create();
+  const reduced=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let worker=null,watchdog=null,timer=null,generation=0,busy=false,hintStage=0,pendingPlayback=null,selectedChoice=null;
+  const robot='<svg viewBox="0 0 62 72" aria-hidden="true"><path d="M31 13V4" stroke="#b4e6e7" stroke-width="4"/><circle cx="31" cy="4" r="4" fill="#ffe4a3"/><rect x="8" y="14" width="46" height="30" rx="12" fill="#a8edeb" stroke="#234960" stroke-width="3"/><rect x="14" y="21" width="34" height="16" rx="7" fill="#15324a"/><circle cx="24" cy="29" r="3" fill="#b5ffff"/><circle cx="38" cy="29" r="3" fill="#b5ffff"/><rect x="16" y="44" width="30" height="22" rx="7" fill="#6bafb7"/><path d="M31 48l3 5-3 5-3-5z" fill="#ffe3a4"/><path d="M20 68h6m10 0h6" stroke="#b4e6e7" stroke-width="5" stroke-linecap="round"/></svg>';
+  $("worldArt").innerHTML='<svg viewBox="0 0 700 440" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="night" x2="0" y2="1"><stop stop-color="#0c1a36"/><stop offset="1" stop-color="#597586"/></linearGradient><linearGradient id="water" x2="0" y2="1"><stop stop-color="#347487"/><stop offset="1" stop-color="#102842"/></linearGradient><radialGradient id="halo"><stop stop-color="#ffe9af" stop-opacity=".5"/><stop offset="1" stop-color="#ffe9af" stop-opacity="0"/></radialGradient></defs><rect width="700" height="440" fill="url(#night)"/><circle cx="539" cy="82" r="78" fill="url(#halo)"/><circle cx="539" cy="82" r="30" fill="#fff0cc"/><g class="world-stars" fill="#d9f7ff"><circle cx="61" cy="87" r="2"/><circle cx="146" cy="46" r="2"/><circle cx="280" cy="98" r="2"/><circle cx="384" cy="54" r="2"/><circle cx="633" cy="142" r="2"/><circle cx="210" cy="158" r="2"/></g><path d="M0 236Q130 102 270 232Q423 107 600 225L700 173V440H0" fill="#25475b"/><path d="M0 276Q171 202 330 276Q519 197 700 269V440H0" fill="#193a49"/><g class="world-village"><path d="M428 277v-64l39-34 40 34v64m11 0v-90l50-43 48 43v90" fill="#243951" stroke="#70858b" stroke-width="2"/><path d="M451 232h17v25h-17m94-49h20v27h-20m29-27h20v27h-20" fill="#e7b36c" class="world-windows"/><path d="M0 360Q350 281 700 350V440H0" fill="#294b4d"/></g><g class="world-workshop"><path d="M0 0h44v300H0m612-300h88v440h-88" fill="#192d42"/><path d="M0 0h700v28H0" fill="#3f4956"/><path d="M48 175h110v10H48m-5 100h200v14H43m15 0v116m163-116v116" stroke="#9e7e5d" stroke-width="9"/><path d="M80 143v31m24-48v48m24-24v24" stroke="#7dafbb" stroke-width="12"/><circle cx="166" cy="208" r="24" fill="none" stroke="#718798" stroke-width="9"/><circle cx="166" cy="208" r="8" fill="#c9b382"/><path d="M300 28v58" stroke="#b69d7c" stroke-width="3"/><path d="M271 103q29-48 58 0z" fill="#b9a27f"/><circle cx="300" cy="103" r="65" fill="url(#halo)" class="world-lamp"/></g><g class="world-river"><path d="M250 226Q453 275 319 340Q215 393 430 440H700V300Q517 282 566 235Z" fill="url(#water)"/><g class="world-ripples" stroke="#8cdbd7" stroke-width="2" opacity=".45"><path d="M390 285h63m12 24h88m-213 43h70m49 39h90m-6 22h98"/></g><path d="M228 291Q398 212 570 288" fill="none" stroke="#9cb4bb" stroke-width="18"/><path d="M228 267Q398 188 570 264" fill="none" stroke="#cee6df" stroke-width="3"/><path d="M259 257v24m48-41v28m50-36v28m50-26v26m50-19v26m49-11v25" stroke="#87a5ad" stroke-width="3"/></g><g class="world-archive"><path d="M440 315V122Q518 30 598 122V315" fill="#13263a" stroke="#779399" stroke-width="15"/><path d="M462 315V131Q519 60 576 131V315" fill="#3d4b60"/><g class="world-gate" stroke="#b8a77e" stroke-width="6"><path d="M479 110v200m26-216v216m26-216v216m26-200v200"/></g><circle cx="519" cy="163" r="19" fill="#d5b176"/><path d="M519 150v15l9 7" stroke="#3c4150" stroke-width="3"/><path d="M30 158h179v10H30m0 71h179v10H30" fill="#9a8265"/><path d="M48 113v42m20-42v42m27-35v35m25-49v49m28-39v39m24-49v49m-125 43v41m30-35v35m29-43v43m29-39v39m29-42v42" stroke="#6997a4" stroke-width="13"/></g><g class="world-rail"><path d="M0 340L700 230m-700 140L700 255" stroke="#8db3bb" stroke-width="6"/><path d="M60 329l7 33m77-46l7 34m78-47l7 34m78-47l7 34m78-48l7 34m78-47l7 34m78-47l7 34m78-48l7 34" stroke="#596f79" stroke-width="8"/><g class="world-train"><rect x="430" y="179" width="159" height="91" rx="20" fill="#577f86" stroke="#a1c4c3" stroke-width="3"/><path d="M447 195h30v35h-30m45-35h30v35h-30m45-35h30v35h-30" fill="#e6c588"/><circle cx="460" cy="276" r="15" fill="#142e40" stroke="#a1c4c3" stroke-width="4"/><circle cx="563" cy="259" r="15" fill="#142e40" stroke="#a1c4c3" stroke-width="4"/></g></g><g class="world-meadow"><path d="M0 330Q300 249 700 322V440H0" fill="#315853"/><g fill="#ffe0a6" class="world-fallen-stars"><path d="M410 252l7 15 17 2-13 11 3 17-14-9-15 9 4-17-13-11 17-2z"/><path d="M490 230l7 15 17 2-13 11 3 17-14-9-15 9 4-17-13-11 17-2z"/><path d="M566 265l7 15 17 2-13 11 3 17-14-9-15 9 4-17-13-11 17-2z"/></g><path d="M32 325l7-23 8 22m53 17l6-30 9 28m74-12l5-22 8 22m390 0l6-30 7 30" stroke="#73a38a" stroke-width="4"/></g><g class="world-beacon"><path d="M492 305l17-169h63l21 169" fill="#c4d2ca" stroke="#7b9caa" stroke-width="3"/><path d="M510 167h63m-67 55h74" stroke="#a9665d" stroke-width="19"/><path d="M502 131v-30h75v30" fill="#8296a2" stroke="#38556c" stroke-width="5"/><path d="M491 100l48-38 51 38" fill="#b46e5d"/><path class="world-beam" d="M539 115L0 12V220Z" fill="#ffe6a3" opacity="0"/><rect class="world-light" x="515" y="104" width="49" height="23" fill="#314b60"/></g><g class="world-mira" transform="translate(612 319)"><path d="M-17-5l-5 49h44L17-5" fill="#b67c6a"/><circle cy="-24" r="16" fill="#dfb589"/><path d="M-18-22q2-34 31-17l7 19-14-8-22 8" fill="#26313e"/><path d="M-10 44l-4 28m24-28l5 28" stroke="#172e41" stroke-width="9"/><path d="M-21 9l-14 21m54-21l14 21" stroke="#dfb589" stroke-width="7" stroke-linecap="round"/></g><g class="world-fireflies" fill="#b7f6ce"><circle cx="213" cy="300" r="2"/><circle cx="572" cy="346" r="3"/><circle cx="345" cy="175" r="2"/><circle cx="90" cy="233" r="2"/></g></svg>';
+  try {
+    let saved=JSON.parse(localStorage.getItem(STORE)||"null");
+    if(!saved){
+      // The opening four concepts match the original eight-mission edition.
+      // Keep that save untouched and transfer credit only before new chapters.
+      const legacy=JSON.parse(localStorage.getItem("kira-code-quest-starlight-v1")||"null");
+      if(legacy&&Array.isArray(legacy.cleared)&&legacy.cleared.length===8){
+        const cleared=Array(MISSIONS.length).fill(false);let open=true;
+        for(let i=0;i<4;i++){open=open&&legacy.cleared[i]===true;cleared[i]=open;}
+        const ceiling=cleared.indexOf(false);
+        saved={level:Math.min(ceiling,Number.isInteger(legacy.level)?Math.max(0,legacy.level):0),cleared,drafts:Array(MISSIONS.length).fill(null)};
+      }
+    }
+    if(saved&&Array.isArray(saved.cleared)&&saved.cleared.length===MISSIONS.length){
+      // Only a contiguous completed path unlocks later scenes.
+      let open=true;
+      state.cleared=saved.cleared.map(value=>{open=open&&value===true;return open;});
+      const first=state.cleared.indexOf(false),ceiling=first<0?MISSIONS.length-1:first;
       state.level=Math.max(0,Math.min(ceiling,Number.isInteger(saved.level)?saved.level:0));
-      if(Array.isArray(saved.drafts) && saved.drafts.length===MISSIONS.length){
-        state.drafts=saved.drafts.map(v=>typeof v==="string" ? v.slice(0,6000) : null);
-      }
+      if(Array.isArray(saved.drafts))state.drafts=MISSIONS.map((_,i)=>typeof saved.drafts[i]==="string"?saved.drafts[i].slice(0,6000):null);
     }
-  }catch(_){/* Privacy modes may block storage; playing still works. */}
-  const save=()=>{
-    try{localStorage.setItem(STORE,JSON.stringify(state));}catch(_){/* No account or network needed. */}
-  };
-  const fmtAction=a=>{
-    if(a.type==="say") return 'say('+JSON.stringify(a.value)+')';
-    if(a.type==="openGate") return "openGate()";
-    return a.type+"("+JSON.stringify(a.value)+")";
-  };
-  function setOutput(kind,title,message,actions=[]){
-    el.output.dataset.state=kind;
-    el.outputTitle.textContent=title;
-    el.outputIcon.textContent=kind==="success"?"✓":kind==="error"?"!":"⌁";
-    el.outputText.textContent=message;
-    el.actionLog.replaceChildren();
-    actions.slice(0,13).forEach(a=>{
-      const tag=document.createElement("code");
-      tag.textContent=fmtAction(a);
-      el.actionLog.appendChild(tag);
-    });
-    if(actions.length>13){
-      const tag=document.createElement("code");
-      tag.textContent="+"+(actions.length-13)+" more";
-      el.actionLog.appendChild(tag);
-    }
+  } catch (_) { /* Corrupt or blocked storage never blocks play. */ }
+  function save(){
+    try {localStorage.setItem(STORE,JSON.stringify(state));$("saveStatus").textContent="Your code and progress save on this device. You can come back anytime.";}
+    catch(_){$("saveStatus").textContent="This browser is not saving progress. You can still play this adventure.";}
   }
-  function renderChoices(){
-    el.choiceButtons.replaceChildren();
-    EASY_CHOICES[state.level].forEach((option,i)=>{
-      const button=document.createElement("button");
-      button.type="button";
-      button.className="cq-choice-option";
-      const label=document.createElement("span");
-      label.className="cq-choice-name";
-      label.textContent=(i+1)+". "+option.label;
+  function setOutput(kind,title,text,actions=[]){
+    $("outputPanel").dataset.state=kind;
+    $("outputTitle").textContent=title;$("outputText").textContent=text;
+    $("outputIcon").textContent=kind==="success"?"✦":kind==="error"?"!":"✧";
+    $("actionLog").replaceChildren(...actions.slice(0,12).map(a=>{
       const code=document.createElement("code");
-      code.className="cq-choice-code";
-      code.textContent=option.code.length>115?option.code.slice(0,112)+"…":option.code;
-      button.appendChild(label);
-      button.appendChild(code);
-      button.addEventListener("click",()=>chooseEasy(option,button));
-      el.choiceButtons.appendChild(button);
-    });
-    el.easyInstruction.textContent=state.cleared[state.level]
-      ?"This mission is complete! Continue the adventure below or explore the code."
-      :"Tap a command below to help PIX. No typing, spelling or programming experience needed.";
-    el.easyContinue.hidden=!state.cleared[state.level];
-  }
-  function chooseEasy(option,button){
-    activateSoundFromChoice();
-    selectedChoice={option,button,level:state.level};
-    el.editor.value=option.code;
-    state.drafts[state.level]=option.code;
-    save();
-    el.choiceButtons.querySelectorAll(".cq-choice-option").forEach(b=>b.classList.remove("is-selected","is-correct","is-try-again"));
-    button.classList.add("is-selected");
-    run();
-  }
-  function animateResult(ok){
-    el.stage.classList.remove("cq-success-effect","cq-try-effect");
-    void el.stage.offsetWidth;
-    el.stage.classList.add(ok?"cq-success-effect":"cq-try-effect");
-    if(ok)el.pixSprite.classList.add("cq-celebrate");
-    setTimeout(()=>el.pixSprite.classList.remove("cq-celebrate"),900);
-  }
-  function describeSelection(ok,detail){
-    if(selectedChoice && selectedChoice.level===state.level){
-      selectedChoice.button.classList.add(ok?"is-correct":"is-try-again");
-      if(ok){
-        el.easyInstruction.textContent=selectedChoice.option.why+" Click Continue the story to keep playing!";
-      }else{
-        el.easyInstruction.textContent=selectedChoice.option.why+" Try another button — PIX can wait!";
-      }
-    }
-    if(ok){voice.cue("win");voice.speak("You did it! "+detail+" Now choose Continue the story.");}
-    else{voice.cue("wrong");voice.speak("Not quite. "+(selectedChoice?.option.why||"Try another command or tap the clue."));}
-  }
-  function updateProgress(){
-    const done=state.cleared.filter(Boolean).length;
-    el.count.textContent="Mission "+(state.level+1)+" of "+MISSIONS.length;
-    el.progressLabel.textContent=done+" of "+MISSIONS.length+" complete";
-    el.progressBar.setAttribute("aria-valuenow",String(done));
-    el.progressFill.style.width=(100*done/MISSIONS.length)+"%";
-    el.previous.disabled=state.level===0;
-    el.next.disabled=!state.cleared[state.level];
-    el.next.textContent=state.level===MISSIONS.length-1?"See the ending →":"Continue the story →";
-    el.easyContinue.hidden=!state.cleared[state.level];
-  }
-  function tileKey(x,y){return x+","+y;}
-  function renderBoard(pos,path=[]){
-    const mission=MISSIONS[state.level];
-    const current=pos||mission.start;
-    const traveled=new Set(path.map(p=>tileKey(p.x,p.y)));
-    const fragment=document.createDocumentFragment();
-    for(let y=0;y<4;y++){
-      for(let x=0;x<7;x++){
-        const tile=document.createElement("span");
-        tile.className="cq-tile";
-        if((x+y)%3===0)tile.classList.add("is-trail");
-        if(traveled.has(tileKey(x,y)))tile.classList.add("is-path");
-        if(mission.target && mission.target.x===x && mission.target.y===y){
-          tile.classList.add("is-goal");tile.textContent=mission.target.icon;
-        }
-        if(current.x===x && current.y===y){
-          tile.classList.add("is-robot");tile.textContent="🤖";
-        }
-        fragment.appendChild(tile);
-      }
-    }
-    el.board.replaceChildren(fragment);
-    el.board.setAttribute("aria-label","PIX is at column "+(current.x+1)+", row "+(current.y+1)+", facing "+current.dir+". The glowing destination is marked on the grid.");
+      code.textContent=a.type+"("+(a.value===null?"":JSON.stringify(a.value))+")";return code;
+    }));
   }
   function stopActive(){
+    generation++;busy=false;pendingPlayback=null;$("skipAnimation").hidden=true;
     if(worker){worker.terminate();worker=null;}
-    if(timeout!==null){clearTimeout(timeout);timeout=null;}
-    if(animator!==null){clearInterval(animator);animator=null;}
-    el.run.disabled=false;el.run.innerHTML='<span aria-hidden="true">▶</span> Run my code';
+    if(watchdog!==null){clearTimeout(watchdog);watchdog=null;}
+    if(timer!==null){clearTimeout(timer);timer=null;}
+    $("runButton").disabled=false;$("runButton").textContent="▶ 2. Run my code";
+    $("stage").classList.remove("is-running");
+  }
+  function progress(){
+    const done=state.cleared.filter(Boolean).length,first=state.cleared.indexOf(false);
+    $("chapterCount").textContent="Mission "+(state.level+1)+" of "+MISSIONS.length;
+    $("progressLabel").textContent=done+" / "+MISSIONS.length+" sparks restored";
+    $("progressFill").style.width=(100*done/MISSIONS.length)+"%";
+    $("progressBar").setAttribute("aria-valuenow",String(done));
+    $("progressBar").setAttribute("aria-valuemax",String(MISSIONS.length));
+    $("previousButton").disabled=state.level===0;
+    $("nextButton").disabled=busy||!state.cleared[state.level];
+    $("easyContinue").hidden=busy||!state.cleared[state.level];
+    $("nextButton").textContent=state.level===MISSIONS.length-1?"See the dawn →":"3. Continue the story →";
+    $("startLessonButton").textContent=state.level===0?"Begin here: make your first change ↓":"Show this mission's next move ↓";
+    $("journeyMap").replaceChildren(...MISSIONS.map((m,i)=>{
+      const b=document.createElement("button");b.type="button";
+      b.textContent=state.cleared[i]?"✦":String(i+1);
+      b.disabled=first>=0&&i>first;
+      b.setAttribute("aria-label","Mission "+(i+1)+": "+m.title+(b.disabled?" (locked)":state.cleared[i]?" (complete)":""));
+      if(i===state.level)b.setAttribute("aria-current","step");
+      b.addEventListener("click",()=>goTo(i));return b;
+    }));
+  }
+  function cue(kind){
+    if(!voice.isEnabled())return;
+    if(!effects.enabled)effects.enable();
+    effects.cue(kind);
+  }
+  function renderChoices(){
+    selectedChoice=null;
+    $("easyInstruction").textContent="Read a command and its effect, then choose what PIX should do. You can keep learning without typing.";
+    $("choiceButtons").replaceChildren(...window.CodeQuestChoices[state.level].map(option=>{
+      const button=document.createElement("button");button.type="button";button.className="cq-choice-option";
+      const label=document.createElement("strong");label.textContent=option.label;
+      const code=document.createElement("code");code.textContent=option.code;
+      button.append(label,code);
+      button.addEventListener("click",()=>{
+        if(busy)stopActive();
+        selectedChoice=option;$("codeInput").value=option.code;
+        state.drafts[state.level]=option.code;save();
+        $("easyInstruction").textContent=option.why;
+        run();
+      });return button;
+    }));
+  }
+  function board(pos,path=[]){
+    const m=MISSIONS[state.level],visited=new Set(path.map(p=>p.x+","+p.y));
+    const spatial=[2,3,7,8,11].includes(state.level);
+    $("stage").classList.toggle("is-spatial",spatial);
+    const tiles=[];
+    for(let y=0;y<4;y++)for(let x=0;x<7;x++){
+      const tile=document.createElement("span");tile.className="cq-tile";
+      if(visited.has(x+","+y))tile.classList.add("is-path");
+      if(spatial&&m.target.x===x&&m.target.y===y){tile.classList.add("is-goal");tile.textContent="✦";}
+      if(pos.x===x&&pos.y===y){tile.classList.add("is-robot");tile.innerHTML=robot;tile.dataset.direction=pos.dir;}
+      tiles.push(tile);
+    }
+    $("board").replaceChildren(...tiles);
+    $("board").setAttribute("aria-label",spatial?"PIX: column "+(pos.x+1)+", row "+(pos.y+1)+", facing "+pos.dir+". Destination: column "+(m.target.x+1)+", row "+(m.target.y+1)+".":"PIX is waiting for your command. "+m.objective);
+  }
+  function guided(){
+    const g=MISSIONS[state.level].guided;
+    $("guidedStep").hidden=!g;
+    if(!g)return;
+    $("guidedText").textContent=state.level===0
+      ?'The line below says Hello, friend! to PIX. A string is the message inside the quotes. Change just friend to PIX. Leave "Hello, " and the ! alone.'
+      :"Try one tiny edit. "+g.label;
+    $("guidedButton").textContent=g.label;
+    $("workedExample").replaceChildren();
+    if(state.level===0){
+      const line=document.createElement("pre"),mark=document.createElement("mark");mark.textContent="friend";
+      line.append('say("Hello, ',mark,'!");');$("workedExample").append(line);
+    }
+    const before=document.createElement("code"),after=document.createElement("code");
+    before.textContent=g.before;after.textContent=g.after;
+    const arrow=document.createElement("span");arrow.textContent="→";
+    $("workedExample").append(before,arrow,after);
+    const small=document.createElement("p");
+    small.textContent=state.level===0?'say("Hello, PIX!"); means: tell PIX to say the text Hello, PIX! The quotes mark text; they are not spoken.':MISSIONS[state.level].lesson;
+    $("workedExample").append(small);
   }
   function render(){
-    stopActive();
+    stopActive();voice.stop();hintStage=0;
     const m=MISSIONS[state.level];
-    el.chapter.textContent=m.chapter;el.topic.textContent=m.topic;
-    el.title.textContent=m.title;el.place.textContent=m.place;el.speaker.textContent=m.speaker;
-    el.story.textContent=m.story;el.goal.textContent=m.goal;
-    el.lessonTitle.textContent=m.lessonTitle;el.lesson.textContent=m.lesson;
-    el.editor.value=state.drafts[state.level]??m.starter;
-    el.hintText.textContent=m.hint;el.hint.hidden=true;el.hintBtn.setAttribute("aria-expanded","false");
-    el.stage.classList.toggle("is-lit",state.cleared[MISSIONS.length-1]);
-    el.stage.dataset.world=WORLDS[state.level];
-    el.stage.classList.remove("cq-success-effect","cq-try-effect");
-    selectedChoice=null;
-    renderChoices();
-    el.ending.hidden=true;
-    setOutput(state.cleared[state.level]?"success":"ready",
-      state.cleared[state.level]?"Mission already complete":"Ready to code",
-      state.cleared[state.level]?"You solved this chapter. You can run it again, change your code, or continue.":"Choose one of the big buttons above. You can open the coding editor later if you want.");
-    renderBoard(m.start);
-    updateProgress();
-    save();
-    if(state.cleared.every(Boolean) && state.level===MISSIONS.length-1)showEnding(false);
-    if(voice.enabled){voice.cue("scene");narrateScene();}
+    for(const [id,value] of Object.entries({chapterName:m.chapter,topicName:m.topic,sceneTitle:m.title,sceneCaption:m.place,speaker:m.speaker,storyText:m.story,goalText:m.goal,lessonTitle:m.lessonTitle,lessonText:m.lesson,sceneCue:m.cue,worldStatus:m.objective}))$(id).textContent=value;
+    $("codeInput").value=state.drafts[state.level]??m.starter;
+    $("hintBox").hidden=true;$("hintButton").setAttribute("aria-expanded","false");
+    $("moreHintButton").hidden=false;$("solutionButton").hidden=true;
+    $("stage").dataset.theme=m.theme;$("stage").classList.remove("is-success","gate-open","stars-collected");
+    $("stage").classList.toggle("is-asleep",state.level===0&&!state.cleared[0]);
+    $("stage").classList.toggle("is-lit",state.cleared.every(Boolean));
+    $("energy").querySelectorAll("i").forEach(i=>i.classList.remove("charged"));
+    $("pixSpeech").hidden=true;$("ending").hidden=true;
+    board(m.start);guided();renderChoices();progress();save();
+    const done=state.cleared[state.level];
+    setOutput(done?"success":"ready",done?"This spark is yours":"Start with one small change",
+      done?m.explanation+" Continue the story when you are ready.":state.level===0?'1. Find friend in the code. Change it to PIX (the button above can help). 2. Press Run my code. Then watch PIX wake up.':m.goal+" Then press Run my code.");
+    voice.read(m.title+". "+m.story+" Your next move. "+m.goal+" "+m.lesson);
+    if(state.cleared.every(Boolean)&&state.level===MISSIONS.length-1)ending(false);
   }
-  function simulate(m,actions){
-    const directions=["east","south","west","north"];
-    let x=m.start.x,y=m.start.y,dir=m.start.dir;
-    const path=[{x,y,dir}];
+  function simulate(m,actions,features=[]){
+    const dirs=["east","south","west","north"];
+    let {x,y,dir}=m.start;
+    const frames=[],path=[{x,y,dir}];
     for(const a of actions){
-      if(a.type==="turn"){
-        const di=directions.indexOf(dir);
-        dir=directions[(di+(a.value==="right"?1:3))%4];
-        path.push({x,y,dir});
-      } else if(a.type==="move"){
-        for(let step=0;step<a.value;step++){
-          if(dir==="east")x++;else if(dir==="west")x--;
-          else if(dir==="south")y++;else if(dir==="north")y--;
-          if(x<0||x>6||y<0||y>3)
-            return {actions,x,y,dir,path,error:"PIX walked off the map. Check the number of steps and the direction of your turn."};
-          path.push({x,y,dir});
+      if(a.type==="turn")dir=dirs[(dirs.indexOf(dir)+(a.value==="right"?1:3))%4];
+      if(a.type==="move"){
+        for(let n=0;n<a.value;n++){
+          if(dir==="east")x++;else if(dir==="west")x--;else if(dir==="south")y++;else y--;
+          if(x<0||x>6||y<0||y>3)return {actions,features,x,y,dir,path,frames,error:"PIX reached the edge of the map. "+m.goal+" Reset code or ask for help, then try again."};
+          path.push({x,y,dir});frames.push({pos:{x,y,dir},action:{type:"step",value:n+1},path:path.slice()});
         }
-      }
+      }else frames.push({pos:{x,y,dir},action:a,path:path.slice()});
     }
-    return {actions,x,y,dir,path};
+    return {actions,features,x,y,dir,path,frames};
   }
-  function animate(path){
-    if(animator!==null){clearInterval(animator);animator=null;}
-    if(path.length<2){renderBoard(path[0]);return;}
-    let i=0;
-    animator=setInterval(()=>{
-      renderBoard(path[i],path.slice(0,i+1));
-      i++;
-      if(i>=path.length){clearInterval(animator);animator=null;renderBoard(path[path.length-1],path);}
-    },175);
+  function worldAction(frame){
+    board(frame.pos,frame.path);
+    const a=frame.action;
+    $("worldStatus").textContent=a.type==="step"?"PIX takes another step…":a.type==="say"?"PIX finds his voice.":a.type==="charge"?"The lantern gathers energy.":a.type==="openGate"?"The ancient gate is opening.":a.type==="collect"?"A fallen star joins your lantern.":"PIX turns "+a.value+".";
+    if(a.type==="say"){$("stage").classList.remove("is-asleep");$("pixSpeech").textContent=a.value;$("pixSpeech").hidden=false;}
+    if(a.type==="charge")$("energy").querySelectorAll("i").forEach((i,n)=>i.classList.toggle("charged",n<Math.min(3,a.value)));
+    if(a.type==="openGate")$("stage").classList.add("gate-open");
+    if(a.type==="collect"){$("stage").classList.add("stars-collected");$("energy").querySelectorAll("i").forEach((i,n)=>{if(n<a.value)i.classList.add("charged");});}
   }
-  function showEnding(scroll=true){
-    el.ending.hidden=false;el.stage.classList.add("is-lit");
-    if(voice.enabled)voice.speak("The beacon shines again! The whole town celebrates. You saved Starlight Bay!");
-    if(scroll) el.ending.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth",block:"nearest"});
-  }
-  function onResult(payload,runLevel,code){
-    stopActive();
-    if(runLevel!==state.level)return;
-    if(!payload || !payload.ok){
-      setOutput("error","PIX needs a little help",payload&&payload.error ? payload.error : "Try another command.");
-      animateResult(false);describeSelection(false,"");
-      return;
+  function play(sim,done){
+    const ticket=generation;let index=0;
+    if(reduced()){sim.frames.forEach(worldAction);done();return;}
+    pendingPlayback=()=>{if(timer!==null){clearTimeout(timer);timer=null;}sim.frames.forEach(worldAction);pendingPlayback=null;done();};
+    $("skipAnimation").hidden=false;
+    function step(){
+      if(ticket!==generation)return;
+      if(index>=sim.frames.length){timer=setTimeout(()=>{timer=null;if(ticket===generation)done();},900);return;}
+      worldAction(sim.frames[index++]);
+      timer=setTimeout(step,sim.frames[index-1].action.type==="say"?800:360);
     }
+    step();
+  }
+  function finish(payload){
+    if(worker){worker.terminate();worker=null;}
+    if(watchdog!==null){clearTimeout(watchdog);watchdog=null;}
+    if(!payload?.ok){complete(false,payload?.error||"The runner could not start. Reset your code and try again.");return;}
     const m=MISSIONS[state.level];
-    const sim=simulate(m,payload.actions);
-    animate(sim.path);
-    if(sim.error){setOutput("error","PIX took a wrong turn",sim.error,payload.actions);animateResult(false);describeSelection(false,"");return;}
-    if(m.check(sim,code)){
-      state.cleared[state.level]=true;
-      save();
-      updateProgress();
-      el.stage.classList.toggle("is-lit",state.cleared[MISSIONS.length-1]);
-      setOutput("success","Wonderful! PIX did it! ✦",m.success,payload.actions);
-      animateResult(true);
-      describeSelection(true,m.success);
-      el.easyContinue.hidden=false;
-      if(state.cleared.every(Boolean))showEnding();
-    } else {
-      setOutput("error","Try a different choice","PIX followed that command, but it didn’t get us to the next scene. Choose another button or tap the clue.",payload.actions);
-      animateResult(false);describeSelection(false,"");
+    const sim=simulate(m,payload.actions,payload.features);
+    setOutput("ready","Watch your instructions become actions","PIX follows your code from top to bottom.",payload.actions);
+    play(sim,()=>{
+      if(sim.error){complete(false,sim.error,payload.actions);return;}
+      const ok=m.check(sim);
+      complete(ok,ok?m.success+" "+m.explanation+" Choose Continue the story to discover what happens next.":"PIX followed your code. "+m.goal+" "+m.hints[Math.min(1,hintStage)],payload.actions);
+    });
+  }
+  function complete(ok,message,actions=[]){
+    busy=false;pendingPlayback=null;$("skipAnimation").hidden=true;$("runButton").disabled=false;$("runButton").textContent="▶ 2. Run my code";$("stage").classList.remove("is-running");
+    if(ok){
+      state.cleared[state.level]=true;save();$("stage").classList.add("is-success");
+      $("worldStatus").textContent="✦ Spark restored · "+MISSIONS[state.level].title;
+      if(state.cleared.every(Boolean)){$("stage").classList.add("is-lit");ending(false);}
     }
+    if(selectedChoice){
+      message=selectedChoice.why+" "+message;
+      $("easyInstruction").textContent=selectedChoice.why+(ok?" You did it! Continue the story below.":" PIX is safe. Choose another command or try the guided edit.");
+    }
+    cue(ok?"win":"wrong");
+    setOutput(ok?"success":"error",ok?"You changed their world!":"A small repair, then try again",message,actions);
+    voice.read((ok?"You did it! ":"Let's try again. ")+message);progress();
+    if(matchMedia("(max-width: 1000px)").matches)$("outputPanel").scrollIntoView({behavior:reduced()?"instant":"smooth",block:"center"});
   }
   function run(){
-    if(worker)return;
-    const code=el.editor.value;
-    if(code.length>6000){setOutput("error","Code is too long","Keep your mission code under 6,000 characters.");return;}
-    const runLevel=state.level;
-    state.drafts[state.level]=code;save();
-    setOutput("ready","PIX is following your instructions…","Your code is running locally in the browser.");
-    el.run.disabled=true;el.run.textContent="Running…";
-    let running;
-    try{running=new Worker("sandbox.js?v=1");}catch(_){
-      el.run.disabled=false;el.run.textContent="Run my code";
-      setOutput("error","Code runner unavailable","This browser blocked JavaScript workers. Try opening the game in a current version of Chrome, Edge, Firefox, or Safari.");
-      return;
-    }
-    worker=running;
-    const finish=data=>{
-      if(worker!==running)return;
-      onResult(data,runLevel,code);
-    };
-    running.onmessage=e=>finish(e.data);
-    running.onerror=()=>finish({ok:false,error:"The JavaScript runner stopped unexpectedly. Please check the code."});
-    timeout=setTimeout(()=>finish({ok:false,error:"Your code ran for too long (possibly an endless loop). Check the loop condition and try again."}),1400);
-    running.postMessage({code});
+    if(busy)return;stopActive();
+    const code=$("codeInput").value;
+    if(!code.trim()){setOutput("error","Your editor is empty","Press Reset code to bring back this mission's starting point.");return;}
+    if(code.length>6000){setOutput("error","That program is too long","Keep this adventure program to 6,000 characters.");return;}
+    state.drafts[state.level]=code;save();voice.stop();
+    $("stage").classList.remove("is-success","gate-open","stars-collected");
+    $("stage").classList.add("is-running");$("pixSpeech").hidden=true;
+    if(matchMedia("(max-width: 1000px)").matches)$("stage").scrollIntoView({behavior:"instant",block:"center"});
+    $("energy").querySelectorAll("i").forEach(i=>i.classList.remove("charged"));
+    board(MISSIONS[state.level].start);busy=true;progress();
+    $("runButton").disabled=true;$("runButton").textContent="PIX is following your code…";
+    setOutput("ready","Your story is moving","Each attempt begins safely at the start of this scene.");
+    const ticket=generation;
+    try{
+      const current=new Worker("sandbox.js?v="+VERSION);worker=current;
+      current.onmessage=e=>{if(ticket===generation&&worker===current)finish(e.data);};
+      current.onerror=()=>{if(ticket===generation&&worker===current)finish({ok:false,error:"The teaching runner did not load. Please reload this page and try again."});};
+      watchdog=setTimeout(()=>{if(ticket===generation)finish({ok:false,error:"That program took too long. Use a smaller loop, or Reset code and try again."});},1800);
+      current.postMessage({code});
+    }catch(_){finish({ok:false,error:"This browser blocked the teaching runner. Open the game in a current Chrome, Edge, Firefox or Safari browser."});}
   }
-  el.startSound.addEventListener("click",startVoice);
-  el.soundToggle.addEventListener("click",()=>{
-    soundDecisionMade=true;
-    if(voice.enabled)voice.disable();else{voice.enable();narrateScene();}
-    updateSoundButtons();
-  });
-  el.hearAgain.addEventListener("click",()=>{
-    if(!voice.enabled){startVoice();}else narrateScene();
-  });
-  el.easyHint.addEventListener("click",()=>{
-    activateSoundFromChoice();
-    const hint=MISSIONS[state.level].hint;
-    el.hint.hidden=false;el.hintBtn.setAttribute("aria-expanded","true");
-    el.easyInstruction.textContent="PIX's clue: "+hint;
-    voice.speak("PIX's clue. "+hint);
-  });
-  el.easyContinue.addEventListener("click",()=>el.next.click());
-  el.form.addEventListener("submit",e=>{e.preventDefault();activateSoundFromChoice();selectedChoice=null;run();});
-  el.editor.addEventListener("input",()=>{state.drafts[state.level]=el.editor.value;save();});
-  el.editor.addEventListener("keydown",e=>{
-    if(e.key==="Enter"&&(e.ctrlKey||e.metaKey)){e.preventDefault();run();}
-    if(e.key==="Tab"){
-      e.preventDefault();
-      const from=el.editor.selectionStart,to=el.editor.selectionEnd;
-      el.editor.setRangeText("  ",from,to,"end");
-      state.drafts[state.level]=el.editor.value;save();
-    }
-  });
-  el.hintBtn.addEventListener("click",()=>{
-    el.hint.hidden=!el.hint.hidden;
-    el.hintBtn.setAttribute("aria-expanded",String(!el.hint.hidden));
-  });
-  el.solution.addEventListener("click",()=>{
-    el.editor.value=MISSIONS[state.level].solution;
-    state.drafts[state.level]=el.editor.value;save();
-    setOutput("ready","A working example is in your editor","Read the lines, then press Run my code to see why this solution works.");
-    el.editor.focus();
-  });
-  el.reset.addEventListener("click",()=>{
-    el.editor.value=MISSIONS[state.level].starter;state.drafts[state.level]=null;save();
-    setOutput("ready","Editor reset","This chapter's starter code is back. Your completed missions are still saved.");
-    renderBoard(MISSIONS[state.level].start);
-  });
+  function hint(stage=0){
+    hintStage=stage;$("hintBox").hidden=false;$("hintButton").setAttribute("aria-expanded","true");
+    $("hintTitle").textContent=stage?"The exact change":"A nudge from Iris";
+    $("hintText").textContent=MISSIONS[state.level].hints[stage];
+    $("moreHintButton").hidden=stage>0;$("solutionButton").hidden=stage===0;
+    voice.read($("hintText").textContent);
+  }
   function goTo(index){
-    if(index<0||index>=MISSIONS.length)return;
-    const first=state.cleared.findIndex(done=>!done);
-    if(first>=0 && index>first)return;
+    const first=state.cleared.indexOf(false);
+    if(index<0||index>=MISSIONS.length||(first>=0&&index>first))return;
     state.level=index;render();
-    document.querySelector(".cq-progress").scrollIntoView({behavior:"instant",block:"start"});
+    $("sceneTitle").focus({preventScroll:true});
+    $("stage").scrollIntoView({behavior:"instant",block:"start"});
   }
-  el.previous.addEventListener("click",()=>goTo(state.level-1));
-  el.next.addEventListener("click",()=>{
-    if(!state.cleared[state.level])return;
-    if(state.level===MISSIONS.length-1)showEnding();
-    else goTo(state.level+1);
+  function ending(scroll=true){
+    $("ending").hidden=false;$("stage").classList.add("is-lit");
+    if(scroll)$("ending").scrollIntoView({behavior:reduced()?"instant":"smooth",block:"start"});
+  }
+  function restart(){
+    if(!window.confirm("Begin again? This resets Code Quest's 14-mission adventure on this device."))return;
+    state.level=0;state.cleared.fill(false);state.drafts.fill(null);render();
+    $("stage").scrollIntoView({behavior:"instant",block:"start"});
+  }
+  $("sceneTitle").tabIndex=-1;
+  $("codeForm").addEventListener("submit",e=>{e.preventDefault();selectedChoice=null;run();});
+  $("codeInput").addEventListener("input",()=>{selectedChoice=null;if(busy){stopActive();progress();setOutput("ready","Your new draft is ready","Run your changed code to try this scene again.");}state.drafts[state.level]=$("codeInput").value;save();});
+  $("codeInput").addEventListener("keydown",e=>{
+    if(e.key==="Enter"&&(e.ctrlKey||e.metaKey)){e.preventDefault();selectedChoice=null;run();}
+    // Keep Tab's normal focus navigation so keyboard users can leave the editor.
   });
-  el.replay.addEventListener("click",()=>{
-    if(!window.confirm("Replay from the beginning? Your completed missions will reset on this device."))return;
-    state.level=0;state.cleared=Array(MISSIONS.length).fill(false);state.drafts=Array(MISSIONS.length).fill(null);
-    render();document.querySelector(".cq-progress").scrollIntoView({behavior:"instant",block:"start"});
+  $("guidedButton").addEventListener("click",()=>{
+    const m=MISSIONS[state.level],g=m.guided;if(!g)return;stopActive();selectedChoice=null;
+    let index=$("codeInput").value.lastIndexOf(g.before);
+    if(index<0){$("codeInput").value=m.starter;index=$("codeInput").value.lastIndexOf(g.before);}
+    if(index>=0){$("codeInput").setRangeText(g.after,index,index+g.before.length,"select");}
+    state.drafts[state.level]=$("codeInput").value;save();progress();
+    const text="You changed "+g.before+" to "+g.after+". "+m.lesson+" Now press Run my code to see the effect.";
+    setOutput("ready","You made the change. Now try it.",text);voice.read(text);$("codeInput").focus();
   });
-  window.addEventListener("pagehide",stopActive);
+  $("findTokenButton").addEventListener("click",()=>{
+    const g=MISSIONS[state.level].guided;if(!g)return;
+    const editor=$("codeInput"),index=editor.value.lastIndexOf(g.before);
+    if(index<0){setOutput("ready","Try Reset code to find that part again","Your code has changed. Reset code brings back the original example, or keep experimenting.");return;}
+    editor.focus();editor.setSelectionRange(index,index+g.before.length);
+    editor.scrollIntoView({behavior:"instant",block:"center"});
+    const text='The highlighted part is '+g.before+'. Type '+g.after+' to replace it. Then press Run my code.';
+    setOutput("ready","This is the part you change",text);voice.read(text);
+  });
+  $("skipAnimation").addEventListener("click",()=>{if(pendingPlayback)pendingPlayback();});
+  $("hintButton").addEventListener("click",()=>hint(0));
+  $("easyHint").addEventListener("click",()=>{hint(0);$("easyInstruction").textContent=MISSIONS[state.level].hints[0];});
+  $("moreHintButton").addEventListener("click",()=>hint(1));
+  $("solutionButton").addEventListener("click",()=>{
+    stopActive();selectedChoice=null;const m=MISSIONS[state.level];$("codeInput").value=m.solution;state.drafts[state.level]=m.solution;save();progress();
+    setOutput("ready","Read this example, then run it",m.lesson+" Press Run my code to watch these lines work.");
+    voice.read(m.lesson+" Now press Run my code.");$("codeInput").focus();
+  });
+  $("resetButton").addEventListener("click",()=>{stopActive();state.drafts[state.level]=null;render();$("codeInput").focus();});
+  $("previousButton").addEventListener("click",()=>goTo(state.level-1));
+  $("nextButton").addEventListener("click",()=>{if(!busy&&state.cleared[state.level])state.level===MISSIONS.length-1?ending():goTo(state.level+1);});
+  $("easyContinue").addEventListener("click",()=>$("nextButton").click());
+  $("startLessonButton").addEventListener("click",()=>{
+    if(MISSIONS[state.level].guided){$("guidedStep").scrollIntoView({behavior:"instant",block:"center"});$("findTokenButton").focus({preventScroll:true});}
+    else{$("codeInput").focus();$("codeInput").scrollIntoView({behavior:"instant",block:"center"});}
+  });
+  $("voiceToggle").addEventListener("click",()=>{if(!voice.isEnabled())effects.disable();});
+  $("restartButton").addEventListener("click",restart);$("replayButton").addEventListener("click",restart);
+  addEventListener("pagehide",()=>{stopActive();voice.stop();});
   render();
 })();

@@ -1,0 +1,43 @@
+name: Code Quest adventure QA
+on:
+  push:
+    paths:
+      - "docs/arcade/code-quest/**"
+      - "tests/test-code-quest-*.cjs"
+      - ".github/workflows/code-quest-qa.yml"
+  pull_request:
+    paths:
+      - "docs/arcade/code-quest/**"
+      - "tests/test-code-quest-*.cjs"
+      - ".github/workflows/code-quest-qa.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  adventure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check teaching interpreter and narration
+        run: |
+          node tests/test-code-quest-interpreter.cjs
+          node tests/test-code-quest-voice.cjs
+          node tests/test-arcade.cjs
+          python scripts/check_rejected_public_media.py
+          node tests/test-public-google-voice-contact-20261027.cjs
+      - name: Prepare browser QA
+        run: |
+          npm install --no-save playwright@1.61.0
+          npx playwright install --with-deps chromium
+          echo "CHROMIUM_PATH=$(node -e 'process.stdout.write(require("playwright").chromium.executablePath())')" >> "$GITHUB_ENV"
+      - name: Play all fourteen missions and test mobile recovery and worker escapes
+        run: node tests/test-code-quest-browser.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: code-quest-browser-evidence
+          path: qa/code-quest-last-light
