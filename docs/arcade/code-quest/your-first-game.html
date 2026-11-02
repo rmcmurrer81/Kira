@@ -269,6 +269,7 @@ h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.18;letter-spacing:-.03em;mar
     function disable(){enabled=false;stop();if(sfx)sfx.suspend().catch(()=>{});status("Sound off · read and play at your own pace");}
     function speak(text){
       stop();if(!enabled)return false;
+      if(document.hidden){status("Narration paused · Hear scene again when you return");return false;}
       if(!supported){status("Browser narration unavailable · every clue is written below");return false;}
       const parts=chunk(text),ticket=token;let index=0;
       const fail=()=>{
@@ -296,7 +297,7 @@ h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.18;letter-spacing:-.03em;mar
       next();return true;
     }
     function cue(kind="tap"){
-      if(!enabled)return;
+      if(!enabled||document.hidden)return;
       const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
       try{
         if(!sfx){sfx=new AC();volume=sfx.createGain();volume.gain.value=.18;volume.connect(sfx.destination);}
@@ -374,7 +375,7 @@ function narrateScene(){
 function startAdventure(withSound){
   started=true;hasChosenSound=true;
   if(withSound)voice.enable();else voice.disable();
-  syncSoundButtons();showScene(false);if(withSound){voice.cue("scene");narrateScene();}
+  syncSoundButtons();showScene(false);$("title").focus({preventScroll:true});if(withSound){voice.cue("scene");narrateScene();}
 }
 $("playSound").addEventListener("click",()=>startAdventure(true));
 $("playQuiet").addEventListener("click",()=>startAdventure(false));
@@ -447,7 +448,7 @@ function renderChallenge(){
     panel.append(paragraph(backpack.includes("compass")?"Your compass supplied the first step. Finish the plan in the same order as the glowing stones.":"Build your plan left to right. You can undo or clear it before trying. The symbols are clues, not a memory test."));
     const tiles=document.createElement("div");tiles.className="plan-strip";tiles.setAttribute("aria-label","Your plan");
     for(let i=0;i<3;i++){const tile=document.createElement("span");tile.className="plan-tile";tile.textContent=(i+1)+". "+(plan[i]?symbol(plan[i]).icon+" "+symbol(plan[i]).label:"—");tiles.append(tile);}panel.append(tiles);
-    const commands=row();for(const item of symbols)commands.append(button(item.icon+" "+item.label,()=>{if(busy||plan.length>=3)return;plan.push(item.id);renderChallenge();(plan.length===3?$("challenge").querySelector("button.primary"):$("challenge").querySelector('[data-command="'+item.id+'"]'))?.focus({preventScroll:true});},{disabled:busy||plan.length>=3}));
+    const commands=row();for(const item of symbols)commands.append(button(item.icon+" "+item.label,()=>{if(busy||plan.length>=3)return;plan.push(item.id);voice.cue("tap");renderChallenge();(plan.length===3?$("challenge").querySelector("button.primary"):$("challenge").querySelector('[data-command="'+item.id+'"]'))?.focus({preventScroll:true});},{disabled:busy||plan.length>=3}));
     [...commands.children].forEach((el,i)=>el.dataset.command=symbols[i].id);panel.append(commands);
     const controls=row();controls.style.marginTop="12px";
     controls.append(button("↶ Undo step",()=>{if(busy)return;plan.pop();renderChallenge();$("challenge").querySelector("[data-command]")?.focus({preventScroll:true});},{disabled:busy||!plan.length}),button("Clear plan",()=>{if(busy)return;plan=[];renderChallenge();$("challenge").querySelector("[data-command]")?.focus({preventScroll:true});},{disabled:busy||!plan.length}),button(busy?"Wisp is trying your plan…":"▶ Try this route",testRoute,{className:"primary",disabled:busy||plan.length!==3}));panel.append(controls);
@@ -527,7 +528,7 @@ function showScene(focus=true){
     const list=document.createElement("ul");list.className="finish-list";
     for(const text of ["3 of 3 fireflies rescued — nobody left behind.","River plan tested "+attempts+" time"+(attempts===1?"":"s")+". Trying again is how plans improve.","Your "+giftNames[backpack[0]]+" changed the way you played."]){const li=document.createElement("li");li.textContent=text;list.append(li);}$("final").append(list,paragraph("Replay with another tool for a different advantage, a new river route, and a different ending. Or return to the tutorial to change this game yourself."));
   }
-  $("restart").hidden=!endingText;
+  $("restart").hidden=!started;
   if(focus){$("title").focus({preventScroll:true});if(world.getBoundingClientRect().top<0)world.scrollIntoView({block:"start",behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth"});}
 }
 
