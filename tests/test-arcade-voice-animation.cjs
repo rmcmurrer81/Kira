@@ -207,40 +207,90 @@ function testSharedVoice(){
   voice.disable();
 }
 
-function testFirefly(){
+async function testFirefly(){
   assert.equal(fireflyScripts.length,2,'Standalone game must contain its own voice and story scripts');
   assert(fireflyHtml.includes('.world[data-scene="forest"]')&&fireflyHtml.includes('.world[data-scene="river"]'),'Changing scenery missing');
-  for(let pathNumber=0;pathNumber<16;pathNumber++){
-    const {get,document}=dom(fireflyHtml),spoken=[];
-    const voices=[{name:'Microsoft Jenny Online (Natural)',lang:'en-US'}];
-    const synth={getVoices:()=>voices,speak:utter=>{spoken.push(utter);utter.onstart?.()},cancel(){}};
-    const window={
-      speechSynthesis:synth,SpeechSynthesisUtterance:class{constructor(text){this.text=text}},
-      addEventListener(){},AudioContext:undefined,webkitAudioContext:undefined
-    };
-    const ctx={document,window,getComputedStyle:()=>({top:'25px',left:'50px'})};
-    vm.runInNewContext(fireflyScripts[0],ctx,{timeout:1000});
-    vm.runInNewContext(fireflyScripts[1],ctx,{timeout:1000});
-    const fireflies=get('fireflySwarm').children;
-    assert.equal(fireflies.length,3);
-    fireflies[0].click();
-    assert(fireflies[0].classList.contains('is-caught'));
-    for(let stage=0;stage<4;stage++){
-      const choice=get('choices').children[(pathNumber>>stage)&1];
-      assert(choice,'Missing Firefly Trail scene button');
-      choice.click();
+  assert(fireflyHtml.includes('route-preview'),'Route playback must also be visible beside the mobile controls');
+  const endings=new Set();
+  for(const gift of ['lantern','compass','spark','moth']){
+    // This richer DOM stub is local to Firefly. Do not weaken Code Quest checks.
+    const ids=new Set([...fireflyHtml.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
+    const roots=new Map(),spoken=[],events={};
+    class StoryElement{
+      constructor(tag='div'){this.tagName=tag;this.children=[];this.dataset={};this.style={};this.attributes={};this.listeners={};this.className='';this.hidden=false;this.disabled=false;this.textContent='';this.id='';this.offsetWidth=10;
+        this.classList={add:c=>{if(!this.classList.contains(c))this.className+=' '+c;},remove:c=>{this.className=this.className.split(' ').filter(x=>x!==c).join(' ');},contains:c=>this.className.split(' ').includes(c),toggle:(c,on)=>{if(on)this.classList.add(c);else this.classList.remove(c);}};
+      }
+      append(...children){for(const child of children){this.children.push(child);child.parent=this;}}
+      appendChild(child){this.append(child);return child;}
+      replaceChildren(...children){this.children=[];this.append(...children);}
+      addEventListener(name,fn){this.listeners[name]=fn;}
+      setAttribute(name,value){this.attributes[name]=String(value);}
+      click(){if(!this.disabled)this.listeners.click?.({preventDefault(){}});}
+      focus(){}scrollIntoView(){}getBoundingClientRect(){return {top:5};}
+      remove(){if(this.parent)this.parent.children=this.parent.children.filter(child=>child!==this);}
+      all(){return this.children.flatMap(child=>[child,...child.all()]);}
+      querySelector(selector){return this.all().find(child=>{
+        const attr=selector.match(/^\[data-([\w-]+)(?:="([^"]+)")?\]$/);
+        if(attr){const value=child.dataset[attr[1]];return attr[2]?value===attr[2]:value!==undefined;}
+        if(selector.startsWith('.'))return child.classList.contains(selector.slice(1));
+        if(selector==='button:not(:disabled)')return child.tagName==='button'&&!child.disabled;
+        if(selector==='button.primary')return child.tagName==='button'&&child.classList.contains('primary');
+        return selector==='button'&&child.tagName==='button';
+      })||null;}
     }
-    assert.equal(get('world').dataset.scene,'ending','Wrong world at story finale');
-    assert.equal(get('restart').hidden,false,'Missing replay button');
-    assert.equal(get('final').hidden,false,'Missing ending');
-    assert(spoken.length>0,'Voice did not play from user gesture');
-    assert.equal(spoken[0].voice.name,'Microsoft Jenny Online (Natural)');
-    get('restart').click();
-    assert.equal(get('world').dataset.scene,'start');
-    assert.equal(get('bag').textContent,'Backpack: empty');
+    const get=id=>{
+      if(ids.has(id)){if(!roots.has(id)){const el=new StoryElement();el.id=id;roots.set(id,el);}return roots.get(id);}
+      return [...roots.values()].flatMap(el=>el.all()).find(el=>el.id===id)||null;
+    };
+    const content=new StoryElement();
+    const document={hidden:false,getElementById:get,createElement:tag=>new StoryElement(tag),querySelector:()=>content,addEventListener:(name,fn)=>{events[name]=fn;}};
+    const voices=[{name:'Microsoft Jenny Online (Natural)',lang:'en-US'}];
+    const synth={getVoices:()=>voices,speak:utter=>{spoken.push(utter);utter.onstart?.();},cancel(){}};
+    const window={speechSynthesis:synth,SpeechSynthesisUtterance:class{constructor(text){this.text=text;}},AudioContext:undefined,webkitAudioContext:undefined};
+    const ctx=vm.createContext({document,window,matchMedia:()=>({matches:true}),addEventListener:(name,fn)=>{events[name]=fn;},setTimeout:(fn,ms)=>setTimeout(fn,ms<1000?0:ms),clearTimeout});
+    for(const script of fireflyScripts)vm.runInContext(script,ctx,{timeout:1000,contextCodeGeneration:{strings:false,wasm:false}});
+    const read=code=>vm.runInContext(code,ctx,{timeout:1000});
+    assert.equal(get('choices').children.length,0,'Fresh game waits for explicit voice/quiet start');
+    assert.equal(spoken.length,0,'Fresh game cannot autoplay speech');
+    assert.equal(get('fireflySwarm').children.length,3,'Keep the three animated fireflies');
+    get('fireflySwarm').children[0].click();assert.equal(read('rescued.length'),0,'Cannot rescue before the mission starts');
+    get('playSound').click();
+    assert(spoken.length>0,'Explicit Start should request narration');
+    assert.equal(spoken[0].voice.name,'Microsoft Jenny Online (Natural)');assert.equal(spoken[0].rate,.96);assert.equal(spoken[0].pitch,1);
+    get('choices').children[['lantern','compass'].includes(gift)?0:1].click();
+    get('choices').children[['lantern','spark'].includes(gift)?0:1].click();
+    assert.equal(read('currentScene'),'trail');assert.equal(get('choices').children.length,0,'Cannot click through the rescue');
+    get('fireflySwarm').children[0].click();
+    assert(get('fireflySwarm').children[0].classList.contains('is-caught'),'Rescued firefly leaves the scene');
+    get('fireflySwarm').children[0].click();assert.equal(read('rescued.length'),1,'Double click cannot duplicate a rescue');
+    get('fireflySwarm').children[1].click();assert.equal(read('rescued.length'),gift==='moth'?3:2,'Moth helps find the last firefly');
+    if(gift!=='moth')get('fireflySwarm').children[2].click();
+    assert.equal(read('rescued.length'),3);get('choices').children[0].click();
+    assert.equal(read('currentScene'),'river');assert.equal(read('plan.length'),gift==='compass'?1:0,'Compass supplies one safe step');
+    // The old 16 four-click auto-wins were the reported bug. Enumerate every
+    // three-command plan instead: exactly one of 64 is a successful crossing.
+    for(const a of ['leaf','moon','star','sun'])for(const b of ['leaf','moon','star','sun'])for(const c of ['leaf','moon','star','sun']){
+      read('route=["moon","star","leaf"];plan='+JSON.stringify([a,b,c])+';crossed=false;busy=false;');
+      await read('testRoute()');assert.equal(read('crossed'),a==='moon'&&b==='star'&&c==='leaf','Only the matching route may cross');
+    }
+    read('plan=["moon","sun","sun"];crossed=false;busy=false;');await read('testRoute()');
+    assert.equal(JSON.stringify(read('plan')),'["moon"]','Wrong step keeps the correct prefix and gives a retry');
+    assert.equal(read('rescued.length'),3,'A mistaken route never loses a rescued friend');
+    read('plan=route.slice();attempts=0;');await Promise.all([read('testRoute()'),read('testRoute()')]);assert.equal(read('attempts'),1,'Repeated Play cannot start overlapping crossings');
+    get('choices').children[0].click();assert.equal(read('currentScene'),'hill');assert.equal(read('lightLoaded'),gift==='spark','Spark powers the beacon immediately');
+    for(let mask=0;mask<8;mask++){
+      read('endingText="";lightLoaded='+Boolean(mask&1)+';shutterOpen='+Boolean(mask&2)+';beamTarget='+JSON.stringify(mask&4?'village':'forest')+';testBeacon();');
+      assert.equal(read('Boolean(endingText)'),mask===7,'Beacon needs power AND an open shutter AND correct direction');
+    }
+    assert.equal(get('world').dataset.scene,'ending');assert.equal(get('final').hidden,false);assert.equal(get('restart').hidden,false);
+    endings.add(read('endingText'));get('restart').click();
+    assert.equal(read('currentScene'),'start');assert.equal(get('bag').textContent,'Backpack: empty');
+    assert.equal(JSON.stringify(read('[rescued,route,plan,endingText,crossed,lightLoaded,shutterOpen,attempts]')),'[[],[],[],"",false,false,false,0]','Replay resets all challenge state');
+    get('voiceToggle').click();const count=spoken.length;get('choices').children[0].click();assert.equal(spoken.length,count,'Scene changes respect explicit mute');
   }
+  assert.equal(endings.size,4,'The four tools produce distinct earned endings');
 }
+
 testQuest();
 testSharedVoice();
-testFirefly();
-console.log('Animated arcade and Iris voice passed: 14 interpreted Code Quest missions, all 42 choices, no-typing retries/continue, opt-in narration/celebration, and 16 unchanged Firefly paths.');
+testFirefly().then(()=>console.log('Animated arcade and Iris voice passed: 14 interpreted Code Quest missions, all 42 choices, no-typing retries/continue, opt-in narration/celebration, and four earned Firefly endings with 256 route checks and 32 beacon configurations.')).catch(error=>{console.error(error);process.exitCode=1;});
