@@ -36,7 +36,9 @@ for(const [id,link] of [['newbrain','newbrain.html#newbrain-owned-record-prefix-
   assert.equal(data.projects.find(p=>p.id===id).source,link);
   assert.ok(fs.readFileSync(path.join(docs,link.split('#')[0]),'utf8').includes('id="'+link.split('#')[1]+'"'));
 }
-for(const term of ['nine invented metadata','0/6','Original12 accepted 2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(term),'Missing latest NewBrain research scope '+term);
+assert.ok(priorNov41.projects.find(p=>p.id==='newbrain').status.includes('nine invented metadata'),'Preserve exact prior Nov4.1 reader source test count');
+assert.ok(data.projects.find(p=>p.id==='newbrain').evidence.includes('nine portable metadata/source groups'),'Current Nov4.2 reader evidence must remain available');
+for(const term of ['0/6','Original12 accepted 2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(term),'Missing latest NewBrain measured limits '+term);
 assert.ok(data.projects.find(p=>p.id==='avatar-body').status.includes('V2 ten invented tests'));
 for(const id of ['newbrain-record-reader-2026-11-04','avatar-regional-scheduler-2026-11-04'])assert.ok(fs.readFileSync(path.join(docs,'updates.html'),'utf8').includes('id="'+id+'"'));
 const priorNov31=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-03-1.json'),'utf8'));
