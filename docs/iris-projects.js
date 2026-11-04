@@ -4,8 +4,8 @@
  */
 (function(root){
   'use strict';
-  const IDS=["newbrain","ideaforge","humanoid-researcher","world","bluebook","avatar-body","aster","patient-horizon","physiology-bridge","healthspan","temporary-creator","evelyn"];
-  const SOURCE={"newbrain":"newbrain.html#newbrain-original-core-2026-10-28","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"kira-world.html#temporary-ai-creator","bluebook":"knowledge.html#bluebook","avatar-body":"kira-world-avatar-builder.html#avatar-builder-head-depth-2026-10-28","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"kira-world-person-creator.html#person-creator-renamed-2026-10-24","evelyn":"evelyn-avatar.html#evelyn-head-eyes-conversation-2026-10-25"};
+  const IDS=["newbrain","ideaforge","humanoid-researcher","world","bluebook","avatar-body","aster","patient-horizon","physiology-bridge","healthspan","temporary-creator","evelyn","arcade"];
+  const SOURCE={"newbrain":"newbrain.html#newbrain-original-core-2026-10-28","ideaforge":"knowledge.html#ideaforge","humanoid-researcher":"knowledge.html#humanoid-researcher","world":"kira-world.html#temporary-ai-creator","bluebook":"knowledge.html#bluebook","avatar-body":"kira-world-avatar-builder.html#avatar-builder-head-depth-2026-10-28","aster":"projects.html","patient-horizon":"patient-horizon.html","physiology-bridge":"patient-horizon.html#physiology-bridge","healthspan":"research.html#healthspan-lab","temporary-creator":"kira-world-person-creator.html#person-creator-renamed-2026-10-24","evelyn":"evelyn-avatar.html#evelyn-head-eyes-conversation-2026-10-25","arcade":"arcade/index.html#ar-games-title"};
   // Dated October 29 additions use new source sections; archived reviews keep their own links.
   const CURRENT_SOURCE={"newbrain":"newbrain.html#newbrain-mathematics-and-learning-2026-10-29","avatar-body":"kira-world-avatar-builder.html#avatar-builder-a44-a45-2026-10-29"};
   const OCT29_LATER_SOURCE={"newbrain":"newbrain.html#newbrain-diagnostic-custody-2026-10-29","avatar-body":"kira-world-avatar-builder.html#avatar-builder-camera-transport-source-2026-10-29"};
@@ -41,7 +41,8 @@
     const assert=(ok,message)=>{if(!ok)throw Error('Public project notes: '+message);};
     assert(data?.schema_version===1&&/^\d{4}-\d{2}-\d{2}\.\d+$/.test(data.content_version),'invalid version');
     assert(/^\d{4}-\d{2}-\d{2}$/.test(data.reviewed_on)&&data.content_version.startsWith(data.reviewed_on),'invalid review date');
-    assert(Array.isArray(data.projects)&&data.projects.length===IDS.length,'incomplete project set');
+    const expectedCount=data.content_version>='2026-11-03.2'?IDS.length:IDS.length-1;
+    assert(Array.isArray(data.projects)&&data.projects.length===expectedCount,'incomplete project set');
     const seen=new Set();
     for(const p of data.projects){
       assert(IDS.includes(p.id)&&!seen.has(p.id),'invalid project');seen.add(p.id);
@@ -50,6 +51,7 @@
       assert(p.source===SOURCE[p.id]||(data.content_version>='2026-11-03.1'&&NOV03_SOURCE[p.id]===p.source)||(data.content_version>='2026-11-02.2'&&NOV02_LATER_SOURCE[p.id]===p.source)||(data.content_version>='2026-11-02.1'&&NOV02_SOURCE[p.id]===p.source)||(data.content_version>='2026-11-01.2'&&NOV01_LATER_SOURCE[p.id]===p.source)||(data.content_version>='2026-11-01.1'&&NOV01_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-31.5'&&OCT31_MEMORY_BODY_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-31.4'&&OCT31_MOTION_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-31.3'&&OCT31_LATER_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-31.1'&&OCT31_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-30.6'&&OCT30_A98_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-30.5'&&OCT30_A94_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-30.4'&&OCT30_A87_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-30.3'&&OCT30_LESSON_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-30.2'&&OCT30_QUALIFIED_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-30.1'&&OCT30_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-29.3'&&OCT29_EVENING_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-29.2'&&OCT29_LATER_SOURCE[p.id]===p.source)||(data.content_version>='2026-10-29.1'&&CURRENT_SOURCE[p.id]===p.source)||(p.id==='avatar-body'&&['2026-10-27.1','2026-10-28.1'].includes(data.content_version)&&p.source==='kira-world-avatar-builder.html#avatar-builder-a16-2026-10-27')||(p.id==='newbrain'&&data.content_version==='2026-10-27.1'&&p.source==='newbrain.html#newbrain-nb15-nb16-2026-10-27')||(p.id==='newbrain'&&['2026-10-26.5','2026-10-26.6'].includes(data.content_version)&&p.source==='newbrain.html#newbrain-value-weight-2026-10-26')||(p.id==='avatar-body'&&data.content_version==='2026-10-26.6'&&p.source==='kira-world-avatar-builder.html#avatar-builder-a15-blank-head-2026-10-26')||(p.id==='newbrain'&&/^2026-10-26\.[1-4]$/.test(data.content_version)&&p.source==='newbrain.html#newbrain-learning-2026-10-26')||(['2026-10-26.3','2026-10-26.4','2026-10-26.5'].includes(data.content_version)&&p.id==='avatar-body'&&p.source==='kira-world-avatar-builder.html#avatar-builder-original-eye-2026-10-26')||(data.content_version==='2026-10-26.2'&&p.id==='avatar-body'&&p.source==='kira-world-avatar-builder.html#avatar-builder-reference-anatomy-2026-10-26')||(data.content_version<'2026-10-26.1'&&p.source===PREVIOUS_SOURCE[p.id])||(data.content_version==='2026-10-26.1'&&p.id==='avatar-body'&&p.source==='kira-world-avatar-builder.html#avatar-builder-original-head-2026-10-26')||(p.id==='evelyn'&&data.content_version<'2026-10-24.3'&&p.source==='evelyn-hart.html#evelyn-library-working-catalog-2026-10-24')||(p.id==='temporary-creator'&&data.content_version<'2026-10-24.2'&&p.source==='kira-world.html#temporary-ai-creator')||(data.reviewed_on<'2026-10-22'&&p.source===LEGACY_SOURCE[p.id])||(p.id==='evelyn'&&data.content_version==='2026-10-22.1'&&p.source==='evelyn-hart.html#evelyn-library22-assembled-2026-10-22')||(data.content_version.startsWith('2026-10-22.')&&((p.id==='newbrain'&&p.source==='newbrain.html#newbrain-public-b-training-verified-2026-10-22')||(p.id==='evelyn'&&p.source==='evelyn-hart.html#evelyn-library30-assembled-2026-10-22')))||(['2026-10-23.1','2026-10-23.2'].includes(data.content_version)&&((p.id==='newbrain'&&p.source==='newbrain.html#newbrain-control-2026-10-23')||(p.id==='evelyn'&&p.source==='evelyn-hart.html#evelyn-source-review-2026-10-23')))||(data.content_version==='2026-10-23.3'&&((p.id==='newbrain'&&p.source==='newbrain.html#newbrain-synthetic-control-2026-10-23')||(p.id==='evelyn'&&p.source==='evelyn-hart.html#evelyn-capture-and-voice-review-2026-10-23')))||(data.content_version==='2026-10-23.4'&&((p.id==='newbrain'&&p.source==='newbrain.html#newbrain-numerical-diagnostic-run-2026-10-23')||(p.id==='evelyn'&&p.source==='evelyn-hart.html#evelyn-selective-censorship-source-2026-10-23'))),'invalid visitor source');
       for(const key of FACETS)assert(typeof p[key]==='string'&&p[key].trim()&&p[key].length<(data.content_version>='2026-11-02.1'?4000:3000),'missing '+key);
     }
+    if(data.content_version<'2026-11-03.2')assert(!seen.has('arcade'),'historical pack cannot claim Arcade');
     const e=data.founder_education;
     if(e!==undefined){
       assert(e&&e.id==='robert'&&e.title==='Robert McMurrer · Education'
@@ -216,6 +218,7 @@
     }
     const clauses=intentText.split(/\s+(?:and|also|plus)\s+/).map(s=>s.trim()).filter(c=>c&&!/^(?:compare )?it$/.test(c));
     const facets=unique(clauses.map(intent).filter(f=>f!=='overview'&&f!=='details'));
+    if(projects.length>1&&projects.some(p=>p.id==='arcade')&&projects.some(p=>p.id==='newbrain')&&/\b(?:does|is|are|uses|use|powered|run|runs|using)\b/.test(q)&&/\b(?:circuitbound|arcade)\b/.test(q))return reply(projects.find(p=>p.id==='arcade'),'limits',data);
     if(projects.length>1){
       const chosen=facet==='details'?'overview':facet;
       const correction=found.corrected?'I matched the project spelling to '+found.corrections.map(c=>projects.find(p=>p.id===c.id).title).join(' and ')+'.\n\n':'';
@@ -224,6 +227,7 @@
     const p=projects[0];let selected=facet;
     // Answer concrete questions from the appropriate reviewed evidence facet,
     // rather than rejecting a well-defined subject because of conversational wording.
+    if(p.id==='arcade'&&selected==='overview'&&/\b(?:where|how|play|start|access|find|open|try)\b/.test(q))selected='how';
     if(p.id==='newbrain'&&/\b(?:gradient|gradients|checker|arithmetic|30 30|numerical audit)\b/.test(q))selected='technical';
     // A108's measured one-reply outcome is explicitly reviewed in the status facet.
     // Compound phrasing such as 'what did NewBrain A108 establish, and did Original12 improve?'
