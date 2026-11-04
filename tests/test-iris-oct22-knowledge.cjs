@@ -33,7 +33,8 @@ for(const id of ['newbrain-checkpoint-memory-2026-11-04','avatar-v5-head-review-
 const priorNov32=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-03-2.json'),'utf8'));
 assert.equal(iris.validate(priorNov32),priorNov32,'Preserve Circuitbound November 3.2 knowledge');
 for(const [id,link] of [['newbrain','newbrain.html#newbrain-owned-record-prefix-2026-11-04'],['avatar-body','kira-world-avatar-builder.html#avatar-builder-regional-scheduler-2026-11-04']]){
-  assert.equal(data.projects.find(p=>p.id===id).source,link);
+  // Earlier links belong to the immutable Nov4.1 pack; the active Nov4.2 links are asserted above.
+  assert.equal(priorNov41.projects.find(p=>p.id===id).source,link);
   assert.ok(fs.readFileSync(path.join(docs,link.split('#')[0]),'utf8').includes('id="'+link.split('#')[1]+'"'));
 }
 assert.ok(priorNov41.projects.find(p=>p.id==='newbrain').status.includes('nine invented metadata'),'Preserve exact prior Nov4.1 reader source test count');
