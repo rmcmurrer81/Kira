@@ -43,7 +43,7 @@ for(const id of ['newbrain-v8v2-source-review-2026-11-04','avatar-builder-v6-v7-
 const priorNov41=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-04-1.json'),'utf8'));
 assert.equal(iris.validate(priorNov41),priorNov41,'Prior Nov4.1 knowledge still validates');
 for(const [id,pathAndAnchor] of [['newbrain','newbrain.html#newbrain-v8v2-admission-2026-11-04'],['avatar-body','kira-world-avatar-builder.html#avatar-builder-v6-v7-source-review-2026-11-04']]){
-  assert.equal(data.projects.find(p=>p.id===id).source,pathAndAnchor);
+  assert.equal(priorNov43.projects.find(p=>p.id===id).source,pathAndAnchor,'Archived Nov4.3 source must stay stable');
   const [page,anchor]=pathAndAnchor.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'New November 4 section missing '+id);
 }
