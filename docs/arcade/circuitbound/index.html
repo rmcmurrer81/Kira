@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+  <meta content="#101529" name="theme-color"/>
+  <title>
+   Circuitbound: The Lantern Siege · Kira Labs
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <main aria-label="Circuitbound adventure" id="game">
+   <header class="masthead">
+    <div class="brand">
+     <span aria-hidden="true" class="brand-mark">
+      ✦
+     </span>
+     <div>
+      <span class="eyebrow">
+       KIRA LABS · AN ORIGINAL ADVENTURE
+      </span>
+      <h1>
+       Circuitbound
+       <span>
+        The Lantern Siege
+       </span>
+      </h1>
+     </div>
+    </div>
+    <button class="quiet" id="restart" title="Start a new adventure">
+     Restart
+    </button>
+   </header>
+   <div aria-label="Adventure status" class="trail">
+    <span id="chapter">
+     The siege begins
+    </span>
+    <span id="supplies">
+    </span>
+    <span id="save-status">
+     Saves on this device
+    </span>
+   </div>
+   <div class="adventure">
+    <section aria-label="Animated adventure scene" class="stage">
+     <canvas aria-label="An original animated fantasy world. The story is also available as text." id="world">
+     </canvas>
+     <div class="stage-caption">
+      <span class="tiny">
+       YOUR EXPEDITION
+      </span>
+      <strong id="location">
+       Hearthmere
+      </strong>
+      <span id="world-note">
+       A living world of code and courage
+      </span>
+     </div>
+     <div class="intro" id="intro">
+      <span class="sigil">
+       ✧
+      </span>
+      <h2>
+       One lantern.
+       <br/>
+       A city to save.
+      </h2>
+      <p>
+       A storm reaches Hearthmere at dawn. Learn code. Repair its defenses. Decide who gets home.
+      </p>
+      <button class="primary" id="begin">
+       Begin the adventure
+      </button>
+      <p class="intro-foot">
+       No coding experience needed · Sound begins after you press Begin
+      </p>
+     </div>
+    </section>
+    <section aria-label="Story and puzzle" class="quest">
+     <div class="scene-copy">
+      <div class="scene-kicker">
+       <span class="tiny" id="scene-number">
+        THE FIRST SPARK
+       </span>
+       <span id="ending-badge">
+       </span>
+      </div>
+      <h2 id="scene-title" tabindex="-1">
+       Your first mission
+      </h2>
+      <p id="story">
+       You are Hearthmere’s newest circuit apprentice. With Pix, your lantern companion, find a way through the sealed gate before the city’s last beacon goes dark.
+      </p>
+      <p class="objective">
+       <span aria-hidden="true">
+        ◈
+       </span>
+       <span id="objective">
+        Press Begin to meet your game master and enter Lanternfall.
+       </span>
+      </p>
+     </div>
+     <div class="lesson" hidden="" id="lesson">
+     </div>
+     <form hidden="" id="puzzle">
+      <label for="code">
+       Apprentice’s code
+       <span>
+        Complete the missing values
+       </span>
+      </label>
+      <textarea aria-describedby="code-help" autocapitalize="off" autocomplete="off" id="code" spellcheck="false"></textarea>
+      <div class="puzzle-tools">
+       <button class="quiet" id="hint" type="button">
+        Give me a hint
+       </button>
+       <button class="primary" id="run" type="submit">
+        Run the code
+       </button>
+      </div>
+      <span class="sr-only" id="code-help">
+       This is a guided learning puzzle. Your code is checked as text; arbitrary JavaScript is not executed.
+      </span>
+     </form>
+     <div class="choices" id="choices">
+     </div>
+     <div aria-live="polite" hidden="" id="feedback" role="status">
+     </div>
+     <button class="primary continue" hidden="" id="continue">
+      Continue the adventure →
+     </button>
+    </section>
+   </div>
+   <footer>
+    <div class="voice-tools">
+     <button aria-pressed="false" class="quiet" id="mute">
+      Voice on
+     </button>
+     <button class="quiet" disabled="" id="replay">
+      Replay narration
+     </button>
+     <span id="voice-status" role="status">
+      Female game-master voice · device dependent
+     </span>
+    </div>
+    <button class="quiet" id="journal">
+     Journey log
+    </button>
+   </footer>
+   <dialog id="log-dialog">
+    <div class="dialog-head">
+     <h2>
+      Your journey
+     </h2>
+     <button class="quiet" id="close-log">
+      Close
+     </button>
+    </div>
+    <p>
+     Choices carry forward. Puzzle mistakes can be retried; deliberate story decisions can change the ending.
+    </p>
+    <ol id="log-list">
+    </ol>
+   </dialog>
+  </main>
+  <script src="story.js">
+  </script>
+  <script src="engine.js">
+  </script>
+  <script src="animation.js">
+  </script>
+  <script src="voice-manifest.js">
+  </script>
+  <script src="app.js">
+  </script>
+ </body>
+</html>

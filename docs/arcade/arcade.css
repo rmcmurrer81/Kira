@@ -67,6 +67,10 @@
 @media(max-width:600px){.ar-shell{width:min(100% - 28px,1160px)}.ar-hero-layout{padding-block:40px 55px}.ar-hero-copy h1{font-size:clamp(2.7rem,12vw,4rem)}.ar-hero-art{height:245px}.ar-games,.ar-learn{padding-block:50px}.ar-feature-card{grid-template-columns:1fr}.ar-card-icon{min-height:145px}.ar-card-body{padding:27px 23px}.ar-card-body h3{font-size:1.9rem}.ar-steps{grid-template-columns:1fr}.ar-actions{align-items:stretch}.ar-button{width:100%}.ar-card-actions .ar-button{width:auto}.ar-bottom{align-items:start}.ar-section-head>p{font-size:.95rem}}
 
 /* Arcade's expanded game shelf — November 2026. */
+.ar-circuitbound-feature{margin-top:22px;background:linear-gradient(120deg,#343046,#182d42)}
+.ar-circuitbound-art{position:relative;background:radial-gradient(circle at 50% 45%,#e6b86c66,transparent 58%),linear-gradient(140deg,#52415b,#193d4b)}
+.ar-circuitbound-art small{position:absolute;bottom:28px;font-size:.65rem;letter-spacing:.16em;color:#ffe7b3;font-weight:900}
+.ar-card-body>.ar-circuitbound-note{font-size:.8rem;color:#b9c9df;margin:18px 0 0}
 .ar-codequest-feature{background:linear-gradient(120deg,#193956,#142c46)}
 .ar-codequest-art{position:relative;background:radial-gradient(circle at 60% 45%,#9ecfda60,transparent 58%),linear-gradient(130deg,#233c70,#143d4b)}
 .ar-codequest-art span{font-size:6.2rem;text-shadow:0 0 42px #8ce2ff99}

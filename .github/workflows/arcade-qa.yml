@@ -9,6 +9,7 @@ on:
       - "docs/sitemap.xml"
       - "tests/test-arcade.cjs"
       - "tests/test-arcade-voice-animation.cjs"
+      - "tests/test-circuitbound.mjs"
       - ".github/workflows/arcade-qa.yml"
   workflow_dispatch:
 permissions:
@@ -25,4 +26,4 @@ jobs:
         with:
           node-version: "22"
       - name: Verify independent arcade edition and original tutorial
-        run: node tests/test-arcade.cjs && node tests/test-arcade-voice-animation.cjs
+        run: node tests/test-arcade.cjs && node tests/test-arcade-voice-animation.cjs && node tests/test-circuitbound.mjs
