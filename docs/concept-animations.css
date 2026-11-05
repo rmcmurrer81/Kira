@@ -27,3 +27,21 @@
 @media (prefers-reduced-motion: reduce) {
   .ks-animated-concept { display: none; }
 }
+
+
+/* The animation functions as a clickable project thumbnail, never a full-width insert. */
+.catalogue #newbrain .projectpicture { background:#060919; }
+.catalogue #newbrain .projectpicture > a { display:block;position:relative;overflow:hidden; }
+.catalogue #newbrain .projectpicture picture { display:block; }
+.catalogue #newbrain .projectpicture img { width:100%;height:240px;object-fit:contain;object-position:center;background:#060919; }
+.catalogue #newbrain .projectpicture > a:hover img { filter:brightness(1.12); }
+.catalogue #newbrain .projectpicture > a:focus-visible { outline:3px solid #79ebf3;outline-offset:-4px; }
+.catalogue #newbrain .ks-newbrain-image-cta {
+  position:absolute;top:14px;right:14px;z-index:1;pointer-events:none;
+  color:#09101c;background:#79ebf3;border:1px solid #d6fcff;
+  padding:7px 12px;border-radius:999px;font-size:12px;font-weight:800;
+  box-shadow:0 4px 15px rgba(0,0,0,.38);
+}
+@media(max-width:480px) {
+  .catalogue #newbrain .ks-newbrain-image-cta { top:10px;right:10px;font-size:11px;padding:6px 10px; }
+}
