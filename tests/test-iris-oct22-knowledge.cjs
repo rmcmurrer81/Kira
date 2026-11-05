@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-11-04-5.json';
+const filename='knowledge/iris-projects-2026-11-05-1.json';
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
 const loader=fs.readFileSync(path.join(docs,'iris.js'),'utf8');
@@ -13,17 +13,33 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-11-04.5'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-11-04.5'));
+assert.ok(irisPage.includes('iris.js?v=2026-11-05.1'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-11-05.1'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
-assert.equal(data.reviewed_on,'2026-11-04');
-assert.equal(data.content_version,'2026-11-04.5');
+assert.equal(data.reviewed_on,'2026-11-05');
+assert.equal(data.content_version,'2026-11-05.1');
+const priorNov45=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-04-5.json'),'utf8'));
+assert.equal(iris.validate(priorNov45),priorNov45,'Preserved immutable November 4.5 pack must validate');
+assert.equal(priorNov45.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v9-closed-2026-11-04');
+assert.equal(priorNov45.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v11-body-v7-2026-11-04');
+assert.match(data.projects.find(p=>p.id==='newbrain').status,/NOV05 V3 CLOSED\/FAILED/);
+assert.match(data.projects.find(p=>p.id==='newbrain').status,/1\/15/);
+assert.match(data.projects.find(p=>p.id==='newbrain').status,/0\/10/);
+assert.match(data.projects.find(p=>p.id==='newbrain').status,/Original12 accepted 2\/12/);
+assert.match(data.projects.find(p=>p.id==='avatar-body').status,/17 VIEWS AND REJECTED/);
+assert.match(data.projects.find(p=>p.id==='avatar-body').status,/BODY V9 ACTUAL RUN FAILED/);
+for(const [f,anchor] of [['newbrain.html','newbrain-v3-closed-2026-11-05'],['kira-world-avatar-builder.html','avatar-builder-v12-body-v9-2026-11-05'],['updates.html','newbrain-v3-closed-2026-11-05'],['updates.html','avatar-v12-body-v9-2026-11-05'],['reports/newbrain-avatar-continuation-2026-11-05.html','v3-learning-result'],['reports/newbrain-avatar-continuation-2026-11-05.html','avatar-v12-v9']]){
+ assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('id="'+anchor+'"'),'Missing Nov5 source '+f+'#'+anchor);
+}
+const datedProgress=JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8'));
+assert.equal(datedProgress.reviewed_on,'2026-11-05');
+for(const id of ['newbrain-pathway-v3-closed-2026-11-05','avatar-v12-v9-rejected-2026-11-05'])assert.ok(datedProgress.milestones.some(m=>m.id===id),'Missing Nov5 timeline '+id);
 const priorNov44=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-04-4.json'),'utf8'));
 assert.equal(iris.validate(priorNov44),priorNov44,'Preserve previous Nov4.4 reviewed knowledge and original source anchors');
 assert.equal(priorNov44.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v9-pathway-study-2026-11-04');
 assert.equal(priorNov44.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v8-v9-body-v5-2026-11-04');
-for(const [id,src] of [['newbrain','newbrain.html#newbrain-v9-closed-2026-11-04'],['avatar-body','kira-world-avatar-builder.html#avatar-builder-v11-body-v7-2026-11-04']]){
+for(const [id,src] of [['newbrain','newbrain.html#newbrain-v3-closed-2026-11-05'],['avatar-body','kira-world-avatar-builder.html#avatar-builder-v12-body-v9-2026-11-05']]){
   assert.equal(data.projects.find(p=>p.id===id).source,src,'latest November 4 source for '+id);
   const [page,anchor]=src.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Latest public research anchor missing '+id);
@@ -40,7 +56,7 @@ const priorNov43=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(priorNov43),priorNov43,'Preserve archived Nov4.3 resource and head results');
 assert.equal(priorNov43.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v8v2-admission-2026-11-04');
 assert.equal(priorNov43.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v6-v7-source-review-2026-11-04');
-for(const [id,src] of [['newbrain','newbrain.html#newbrain-v9-closed-2026-11-04'],['avatar-body','kira-world-avatar-builder.html#avatar-builder-v11-body-v7-2026-11-04']]){
+for(const [id,src] of [['newbrain','newbrain.html#newbrain-v3-closed-2026-11-05'],['avatar-body','kira-world-avatar-builder.html#avatar-builder-v12-body-v9-2026-11-05']]){
   assert.equal(data.projects.find(p=>p.id===id).source,src);
   const [page,fragment]=src.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+fragment+'"'),'Latest public source anchor missing '+id);
