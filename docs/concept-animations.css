@@ -1,0 +1,29 @@
+/* Kira Labs concept animations — illustrations, not research evidence */
+.ks-animated-concept {
+  display: flex;
+  justify-content: center;
+  padding: clamp(16px, 3vw, 36px) 16px;
+  background: linear-gradient(180deg, #080b19 0%, #101530 60%, #0c1122 100%);
+}
+.ks-animated-concept__figure {
+  width: min(100%, 780px);
+  margin: 0;
+}
+.ks-animated-concept__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid rgba(119, 143, 255, .30);
+  box-shadow: 0 14px 36px rgba(4, 6, 25, .40);
+}
+.ks-animated-concept__figure figcaption {
+  margin: 10px 6px 0;
+  text-align: center;
+  font-size: .84rem;
+  line-height: 1.5;
+  color: #b7c6dc;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ks-animated-concept { display: none; }
+}
