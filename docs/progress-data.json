@@ -1,8 +1,70 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-31",
+  "reviewed_on": "2026-11-05",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-pathway-v3-closed-2026-11-05",
+      "title": "NewBrain V3 closed; four conditions failed factual learning",
+      "date": "2026-11-05",
+      "date_basis": "Committed completed native four-condition study; aggregate status, private cases not independently rerun",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Four conditions of 15 responses each scored 1/15 (unsupported control only); correct evidence 0/10. Exact outputs/restart matches do not prove learning.",
+      "body": [
+        "The November 4 review described the separate V3 run as active and unscored; its later closed native outcome is negative.",
+        "All 80 responses reached EOS; all 24 restart pairs matched, including errors. Another contextual-practice experiment closed without a qualified public scored outcome.",
+        "Protected Original12 remains 2/12, not rerun. No private answer text, states or lessons are published."
+      ],
+      "boundary": "Execution and exact persistence are not factual learning or general conversation; no accepted Original12 gain.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved neural concept art, not a V3 test capture",
+        "caption": "Concept illustration. Four V3 conditions each scored 1/15."
+      },
+      "sources": [
+        {
+          "label": "Public Nov 5 research report",
+          "url": "reports/newbrain-avatar-continuation-2026-11-05.html#v3-learning-result"
+        },
+        {
+          "label": "NewBrain status",
+          "url": "newbrain.html#newbrain-v3-closed-2026-11-05"
+        }
+      ],
+      "evidence_kind": "four-condition-v3-each-one-of-fifteen-evidence-zero-of-ten-and-exact-restart-negative"
+    },
+    {
+      "id": "avatar-v12-v9-rejected-2026-11-05",
+      "title": "Evelyn head V12 and commissure V2 rejected; body V9 failed",
+      "date": "2026-11-05",
+      "date_basis": "Two actual head builds of 17 views each; original full-body V9 stopped at unchanged work guard",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "V12 and commissure V2 each rendered 17 views and were rejected; actual original V9 body failed after four coarse regions.",
+      "body": [
+        "Head candidates failed visual and native form review for cheek/mouth, jaw/skull/neck and ear issues; approved blue eyes preserved.",
+        "Actual full-body V9 stopped at unchanged work guard after four coarse regions. V10 source reviews are not a complete body.",
+        "A distinct October 31 partial original torso/arms result has bounded static geometry and pose tests; overall form/deformation remain unaccepted."
+      ],
+      "boundary": "No accepted original Evelyn face or separate fictional-character reconstruction; no functioning digestion, urinary/reproductive route, accepted rig, motion or complete anatomy.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Previously approved concept art, not a V12 rejected render",
+        "caption": "Concept image; rejected private renders excluded."
+      },
+      "sources": [
+        {
+          "label": "Public Nov 5 research report",
+          "url": "reports/newbrain-avatar-continuation-2026-11-05.html#avatar-v12-v9"
+        },
+        {
+          "label": "Avatar Builder status",
+          "url": "kira-world-avatar-builder.html#avatar-builder-v12-body-v9-2026-11-05"
+        }
+      ],
+      "evidence_kind": "two-seventeen-view-head-rejections-original-body-v9-four-regions-failed"
+    },
     {
       "id": "avatar-motion-software-2026-10-31",
       "title": "Reusable motion library passed 22/22 pure software checks",
