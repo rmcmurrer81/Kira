@@ -284,10 +284,11 @@ for(const [pagePath,anchor] of [['newbrain.html','newbrain-continuation-a94-2026
 for(const [pagePath,anchor] of [['newbrain.html','newbrain-continuing-lesson-a98-2026-10-30'],['updates.html','newbrain-continuing-lessons-a98-2026-10-30'],['reports/newbrain-continuing-lesson-a98-2026-10-30.html','software-results'],['reports/newbrain-continuing-lesson-a98-2026-10-30.html','later-entry']])assert.ok(fs.readFileSync(path.join(docs,pagePath),'utf8').includes('id="'+anchor+'"'),'Missing A98 public anchor '+pagePath+'#'+anchor);
 for(const [pagePath,fragment] of [['newbrain.html','newbrain-a116-practice-eligibility-2026-10-31'],['kira-world-avatar-builder.html','avatar-builder-camera-source112-2026-10-31'],['updates.html','newbrain-avatar-a116-source112-2026-10-31']])assert.ok(fs.readFileSync(path.join(docs,pagePath),'utf8').includes('id="'+fragment+'"'),'Missing dated A116/Source112 engineering update '+pagePath);
 const timelineText=fs.readFileSync(path.join(docs,'labs-data.js'),'utf8');
-assert.ok(timelineText.includes('"prepared_on": "2026-11-02"'),'Nov2 picture timeline review date missing');
+assert.ok(timelineText.includes('"prepared_on": "2026-11-04"'),'Current picture timeline review date missing');
 for(const id of ['newbrain-content-readout-boundary-2026-11-02','avatar-workspace-identity-2026-11-02'])assert.ok(timelineText.includes('"id": "'+id+'"'),'Nov2 picture timeline milestone missing: '+id);
 const timelineData=JSON.parse(timelineText.replace(/^[\s\S]*?window\.KIRA_LABS_TIMELINE\s*=\s*/,'').replace(/;\s*$/,''));
-assert.equal(timelineData.prepared_on,'2026-11-02');
+assert.equal(timelineData.prepared_on,'2026-11-04');
+for(const id of ['newbrain-v9-fixed-study-failed-2026-11-04','avatar-v11-rejected-body-v7-2026-11-04'])assert.equal(timelineData.milestones.find(m=>m.id===id)?.date,'2026-11-04','Missing Nov4 picture milestone '+id);
 for(const id of ['newbrain-content-mean-qualification-failed-2026-11-02','newbrain-content-readout-boundary-2026-11-02','avatar-workspace-identity-2026-11-02']){
  assert.equal(timelineData.milestones.find(m=>m.id===id)?.date,'2026-11-02','Missing dated milestone '+id);
 }
