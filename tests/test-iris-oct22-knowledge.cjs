@@ -54,8 +54,8 @@ assert.equal(iris.validate(priorNov42),priorNov42,'Prior Nov4.2 research pack pr
 assert.equal(priorNov42.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-checkpoint-memory-repair-2026-11-04');
 assert.equal(priorNov42.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-original-v5-review-2026-11-04');
 assert.match(data.projects.find(p=>p.id==='newbrain').status,/V8v2/);
-assert.match(data.projects.find(p=>p.id==='avatar-body').status,/V6\/V7/);
-assert.match(data.projects.find(p=>p.id==='avatar-body').status,/NOT EXECUTED/);
+assert.match(priorNov44.projects.find(p=>p.id==='avatar-body').status,/V6\/V7/);
+assert.match(priorNov44.projects.find(p=>p.id==='avatar-body').status,/NOT EXECUTED/);
 for(const id of ['newbrain-v8v2-source-review-2026-11-04','avatar-builder-v6-v7-2026-11-04'])assert.ok(fs.readFileSync(path.join(docs,'updates.html'),'utf8').includes('id="'+id+'"'));
 const priorNov41=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-04-1.json'),'utf8'));
 assert.equal(iris.validate(priorNov41),priorNov41,'Prior Nov4.1 knowledge still validates');
