@@ -45,3 +45,22 @@
 @media(max-width:480px) {
   .catalogue #newbrain .ks-newbrain-image-cta { top:10px;right:10px;font-size:11px;padding:6px 10px; }
 }
+
+
+/* Approved GIFs occupy existing project-card image slots; no extra page sections. */
+.hl-home .hl-program > picture {
+  display:block; order:0; flex:none; width:100%; line-height:0;
+}
+.hl-home .hl-program > picture img {
+  display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover;
+}
+.catalogue .projectpicture a > picture {display:block;width:100%;line-height:0}
+.catalogue .projectpicture a > picture img {
+  display:block;width:100%;height:240px;object-fit:cover;object-position:center 35%;
+}
+.catalogue #evelyn-hart .projectpicture a > picture img {
+  width:100%;height:330px;object-fit:contain;background:#0e1b2d;
+}
+.kw-hub .kw-card > picture {display:block;width:100%;line-height:0}
+.kw-hub .kw-card > picture img {display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+/* The static originals are automatically selected via <picture> for reduced motion. */
