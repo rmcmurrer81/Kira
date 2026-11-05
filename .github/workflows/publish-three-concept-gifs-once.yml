@@ -1,0 +1,50 @@
+name: Publish three Kira Labs animated concept illustrations (one time)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-three-concept-gifs-once.yml
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  install-approved-gifs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Sync main before site-only update
+        run: git pull --ff-only origin main
+      - name: Download and validate owner-approved animations
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --retry 3 --max-time 90 "https://at.adobe.com/XRWfCkL1Q6BGMfBy" -o /tmp/kiralabs_three_gifs.zip
+          unzip -tqq /tmp/kiralabs_three_gifs.zip
+          mkdir -p docs/assets/animations
+          for name in newbrain-concept.gif avatar-builder-concept.gif kira-world-concept.gif; do
+            unzip -p /tmp/kiralabs_three_gifs.zip "kiralabs_gif_collection/$name" > "docs/assets/animations/$name"
+          done
+          python3 scripts/install_kiralabs_animated_concepts.py
+          python3 scripts/check_rejected_public_media.py
+          node tests/test-public-google-voice-contact-20261027.cjs
+      - name: Commit only approved website changes and remove temporary action
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/publish-three-concept-gifs-once.yml
+          git add docs/newbrain.html docs/kira-world-avatar-builder.html docs/kira-world.html docs/concept-animations.css docs/assets/animations/
+          git commit -m "Display three approved concept GIFs on Kira Labs project pages"
+          git push origin HEAD:main
+      - name: Request GitHub Pages rebuild after bot commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
