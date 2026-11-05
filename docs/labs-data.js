@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-02",
+  "prepared_on": "2026-11-04",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,66 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-v9-fixed-study-failed-2026-11-04",
+      "title": "NewBrain V9 fixed study fails complete-answer learning",
+      "project": "NewBrain",
+      "track": "Completed native study; separate V3 still active",
+      "date": "2026-11-04",
+      "reviewed_on": "2026-11-04",
+      "status": "development",
+      "date_basis": "November 4 evening EDT reviewed closed result/rejected native build and separately tracked unrun proposals; private cases and media excluded",
+      "summary": "Facts 0/6, rules 0/2, paraphrases 0/6, composition 0/3 and unsupported abstention 1/3; repeated post-training outputs 20/20 but remained wrong.",
+      "body": "Actual completed V9 native study failed each fixed complete-answer category before/immediately after and on fresh-process restart. All 20/20 post-training full responses matched on restart; identical failures are not learned meaning. A separate controlled V3 experiment is active without a qualified final score. Protected Original12 remains 2/12, not rerun.",
+      "boundary": "Only safe aggregate outcomes; private cases and saved states withheld. No accepted new model, general learning or live deployment.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Previously approved conceptual neural research illustration, not a NewBrain test image",
+        "caption": "Concept illustration only; not evidence of learning.",
+        "label": "Approved concept art"
+      },
+      "sources": [
+        {
+          "label": "Published V9 result",
+          "url": "newbrain.html#newbrain-v9-closed-2026-11-04"
+        },
+        {
+          "label": "November 4 public report",
+          "url": "reports/newbrain-avatar-continuation-2026-11-04.html#v9-learning-result"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-v9-closed-2026-11-04"
+    },
+    {
+      "id": "avatar-v11-rejected-body-v7-2026-11-04",
+      "title": "Original V11 head rejected; full-body V7 blocked by memory",
+      "project": "Kira World",
+      "track": "Executed native geometry failure and source-only successors",
+      "date": "2026-11-04",
+      "reviewed_on": "2026-11-04",
+      "status": "development",
+      "date_basis": "November 4 evening EDT reviewed closed result/rejected native build and separately tracked unrun proposals; private cases and media excluded",
+      "summary": "V11 original head produced 13 static views, but failed visual/native-float review; V7 full body hit the unchanged 2 GiB guard after five regions.",
+      "body": "The original V11 head completed the numerical solve and 13 static views but was rejected for jaw, neck, ear, eyelid, nose and mouth geometry, and its strict native float audit failed. The real V7 full-body run stopped at the existing 2 GiB allocation guard after five coarse regions and delivered no usable body. V12 head and V8 body repairs are reviewed source only, not completed native builds.",
+      "boundary": "No approved Evelyn or separate fictional character, complete human body, functional digestive/urinary/reproductive system, or released personal reference media.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Previously approved Avatar Builder concept illustration, not an accepted native head/body render",
+        "caption": "Concept art only; no accepted human anatomy.",
+        "label": "Approved concept art"
+      },
+      "sources": [
+        {
+          "label": "Avatar Builder dated status",
+          "url": "kira-world-avatar-builder.html#avatar-builder-v11-body-v7-2026-11-04"
+        },
+        {
+          "label": "November 4 public report",
+          "url": "reports/newbrain-avatar-continuation-2026-11-04.html#avatar-v11-v7"
+        }
+      ],
+      "project_page": "kira-world-avatar-builder.html#avatar-builder-v11-body-v7-2026-11-04"
+    },
     {
       "id": "newbrain-content-mean-qualification-failed-2026-11-02",
       "title": "Measured native readout fails complete language-learning qualification",
