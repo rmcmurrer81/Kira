@@ -126,14 +126,14 @@ for(const [page,anchor] of [['newbrain.html','newbrain-readout-source-2026-11-02
 
 const priorNov1=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-01-1.json'),'utf8'));
 assert.equal(iris.validate(priorNov1),priorNov1,'Immutable Nov1.1 pack must remain valid');
-assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v11-body-v7-2026-11-04');
+assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v12-body-v9-2026-11-05');
 assert.match(data.projects.find(p=>p.id==='newbrain').status,/OPT-IN ADAM/);
 assert.match(data.projects.find(p=>p.id==='avatar-body').status,/round eyeballs.*EYELIDS/);
 for(const [page,id] of [['newbrain.html','newbrain-native-adam-candidate-2026-11-01'],['kira-world-avatar-builder.html','avatar-builder-profile-fields-2026-11-01']])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+id+'"'),'New status section missing '+id);
 const priorOct315=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-31-5.json'),'utf8'));
 assert.equal(iris.validate(priorOct315),priorOct315,'Prior immutable Oct31.5 reviewed pack remains valid');
 for(const x of ['LATEST NOV01 RETRIEVAL ONLY','800 calls','34/37','23/37','0/37','23/26','11/11','Original12 accepted 2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(x),'Missing Nov1 result '+x);
-assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v9-closed-2026-11-04');
+assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v3-closed-2026-11-05');
 for(const [page,anchor] of [['newbrain.html','newbrain-opt-in-context-selection-2026-11-01'],['updates.html','newbrain-historical-context-selection-2026-11-01'],['reports/newbrain-opt-in-historical-context-2026-11-01.html','historical-context-qualification']])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Missing Nov1 anchor '+page);
 assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-04.5'));
 const priorOct314=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-31-4.json'),'utf8'));
@@ -221,7 +221,7 @@ const nb=ask('What are the latest NewBrain test results?');
 assert.equal(nb.id,'newbrain');assert.equal(nb.facet,'status');
 for(const q of ['OCTOBER 29','Actual47','Actual49','Actual51','Actual52','0/10 factual','1/12','2/12','UNRUN','checkpoint NOT adopted'])assert.ok(priorOct293.projects.find(p=>p.id==='newbrain').status.includes(q),'Preserved Oct29 previous NewBrain review '+q);
 assert.ok(nb.sources.includes('iris-current-newbrain'));
-assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v9-closed-2026-11-04');assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v11-body-v7-2026-11-04');
+assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v3-closed-2026-11-05');assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v12-body-v9-2026-11-05');
 assert.equal(priorOct313.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-a116-practice-eligibility-2026-10-31');assert.equal(priorOct313.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-camera-source112-2026-10-31');
 assert.equal(priorOct312.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-single-reply-a108-2026-10-31');assert.equal(priorOct312.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-connected-head-torso-source109-2026-10-31');
 assert.equal(priorOct305.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-continuation-a94-2026-10-30');
