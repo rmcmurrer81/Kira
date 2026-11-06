@@ -30,7 +30,8 @@ def check_images(page):
     images = page.locator(".ab-visual img")
     assert images.count() >= 6, "Not enough different visuals on new page"
     for img in images.all():
-        img.scroll_into_view_if_needed()
+        # Decorative CSS movement is intentional: test image decoding without Playwright's stability wait.
+        img.evaluate("node => node.scrollIntoView({block: 'center', behavior: 'instant'})")
         img.evaluate("node => node.decode()")
         assert img.evaluate("node => node.naturalWidth > 100 && node.naturalHeight > 100"), (
             "Broken image " + (img.get_attribute("src") or "")

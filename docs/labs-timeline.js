@@ -123,7 +123,7 @@
     draw();if(selected)select(selected,announce);else if(announce)writeURL();
   }
   root.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;render();}));
-  root.querySelectorAll('[data-project]').forEach(b=>b.addEventListener('click',()=>{project=b.dataset.project;render();}));
+  root.querySelectorAll('[data-project]').forEach(b=>b.addEventListener('click',()=>{project=b.dataset.project;render();centerSelected(false);}));
   $('timeline-search').addEventListener('input',()=>{clearTimeout(debounce);debounce=setTimeout(()=>render(),130);});$('timeline-sort').addEventListener('change',()=>render());
   $('milestone-slider').addEventListener('input',e=>{const m=visible[Number(e.target.value)];if(m)select(m.id);});
   for(const [id,direction] of [['previous-milestone',-1],['next-milestone',1]])$(id).addEventListener('click',()=>{const i=visible.findIndex(m=>m.id===selected);if(visible[i+direction])select(visible[i+direction].id);});
