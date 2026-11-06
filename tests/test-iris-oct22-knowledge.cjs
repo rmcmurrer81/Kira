@@ -145,7 +145,7 @@ assert.equal(iris.validate(priorOct315),priorOct315,'Prior immutable Oct31.5 rev
 for(const x of ['LATEST NOV01 RETRIEVAL ONLY','800 calls','34/37','23/37','0/37','23/26','11/11','Original12 accepted 2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(x),'Missing Nov1 result '+x);
 assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v3-closed-2026-11-05');
 for(const [page,anchor] of [['newbrain.html','newbrain-opt-in-context-selection-2026-11-01'],['updates.html','newbrain-historical-context-selection-2026-11-01'],['reports/newbrain-opt-in-historical-context-2026-11-01.html','historical-context-qualification']])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Missing Nov1 anchor '+page);
-assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-05.1'));
+assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-05.2'));
 const priorOct314=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-31-4.json'),'utf8'));
 assert.equal(iris.validate(priorOct314),priorOct314,'Preserve prior Oct31.4 immutable public pack');
 for(const q of ['LATEST OCT31 EXECUTED MEMORY RETRIEVAL','25/30','0/30','24/30','Original12 accepted 2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(q),'Missing latest retrieval result '+q);
@@ -310,6 +310,10 @@ for(const [pagePath,anchor] of [['newbrain.html','newbrain-continuation-a94-2026
 for(const [pagePath,anchor] of [['newbrain.html','newbrain-continuing-lesson-a98-2026-10-30'],['updates.html','newbrain-continuing-lessons-a98-2026-10-30'],['reports/newbrain-continuing-lesson-a98-2026-10-30.html','software-results'],['reports/newbrain-continuing-lesson-a98-2026-10-30.html','later-entry']])assert.ok(fs.readFileSync(path.join(docs,pagePath),'utf8').includes('id="'+anchor+'"'),'Missing A98 public anchor '+pagePath+'#'+anchor);
 for(const [pagePath,fragment] of [['newbrain.html','newbrain-a116-practice-eligibility-2026-10-31'],['kira-world-avatar-builder.html','avatar-builder-camera-source112-2026-10-31'],['updates.html','newbrain-avatar-a116-source112-2026-10-31']])assert.ok(fs.readFileSync(path.join(docs,pagePath),'utf8').includes('id="'+fragment+'"'),'Missing dated A116/Source112 engineering update '+pagePath);
 const timelineText=fs.readFileSync(path.join(docs,'labs-data.js'),'utf8');
+for(const id of ['newbrain-six-group-rehearsal-2026-11-05','avatar-head-v7-clearance-2026-11-05']){
+ assert.ok(timelineText.includes('"id": "'+id+'"'),'Current picture timeline missing '+id);
+ assert.ok(datedProgress.milestones.some(m=>m.id===id),'Current progress timeline missing '+id);
+}
 assert.ok(timelineText.includes('"prepared_on": "2026-11-05"'),'Current picture timeline review date missing');
 for(const id of ['newbrain-content-readout-boundary-2026-11-02','avatar-workspace-identity-2026-11-02'])assert.ok(timelineText.includes('"id": "'+id+'"'),'Nov2 picture timeline milestone missing: '+id);
 const timelineData=JSON.parse(timelineText.replace(/^[\s\S]*?window\.KIRA_LABS_TIMELINE\s*=\s*/,'').replace(/;\s*$/,''));
