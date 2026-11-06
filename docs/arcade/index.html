@@ -13,8 +13,10 @@
   <meta property="og:image" content="https://kiralabs.org/assets/social-card.jpg">
   <link rel="icon" href="../assets/favicon.png">
   <link rel="stylesheet" href="../labs.css">
-  <link rel="stylesheet" href="arcade.css?v=20261104.1">
+  <link rel="stylesheet" href="arcade.css?v=20261106.2">
+  <link rel="stylesheet" href="arcade-home-redesign.css?v=20261106.2">
   <script src="../labs.js?v=20261101-iris-float4" defer></script>
+  <script src="arcade-home.js?v=20261106.2" defer></script>
 </head>
 <body class="arcade-home">
   <a class="skip" href="#main">Skip to the arcade</a>
@@ -29,68 +31,150 @@
   </header>
   <main id="main">
     <section class="ar-hero" aria-labelledby="ar-title">
+      <div class="ar-hero-ambient" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="ar-shell ar-hero-layout">
         <div class="ar-hero-copy">
-          <p class="ar-eyebrow"><span class="ar-pixel" aria-hidden="true">✦</span> KIRA LABS · THE ARCADE</p>
-          <h1 id="ar-title">Big curiosity.<br><em>Little games.</em></h1>
-          <p class="ar-intro">Play original adventures, write actual JavaScript to solve puzzles, and learn to build a complete browser game yourself.</p>
-          <div class="ar-actions"><a class="ar-button ar-button-primary" href="code-quest/">Play Code Quest <span aria-hidden="true">→</span></a><a class="ar-button ar-button-outline" href="code-quest/learn.html">Build your first game</a></div>
-          <p class="ar-fine">Free to play · No signup · Play on desktop or phone · Your code runs in your browser</p>
+          <p class="ar-eyebrow">✦ KIRA LABS / THE ARCADE</p>
+          <h1 id="ar-title">Big curiosity.<br><em>Little games. Big adventures.</em></h1>
+          <p class="ar-intro">Choose your world, meet memorable characters, and play your way through stories that teach real coding skills along the way.</p>
+          <div class="ar-actions">
+            <a class="ar-button ar-button-primary" href="code-quest/" data-arcade-visit="code-quest">▶ Play Code Quest <span aria-hidden="true">→</span></a>
+            <a class="ar-button ar-button-outline" href="#ar-games-title">Explore all four games <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="ar-hero-controls">
+            <button id="ar-sound-toggle" class="ar-sound-toggle" type="button" aria-pressed="false" aria-describedby="ar-sound-status">♫ Arcade sound: Off</button>
+            <span id="ar-sound-status" role="status">Sound previews only play when you turn them on.</span>
+          </div>
+          <p class="ar-fine">Four original games · Free to play · No signup · Voice and sound options inside supported games</p>
+          <div class="ar-hero-highlights" aria-label="Arcade highlights">
+            <span><strong>4</strong> Playable games</span>
+            <span><strong>14</strong> Code Quest encounters</span>
+            <span><strong>4</strong> Circuitbound endings</span>
+          </div>
         </div>
-        <div class="ar-hero-art" aria-hidden="true">
-          <div class="ar-art-stars"><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="ar-art-moon"></div><div class="ar-art-hill"></div><div class="ar-art-ground"></div>
-          <div class="ar-art-lamp"><span></span></div>
-          <div class="ar-art-person ar-art-person-one"><span></span></div><div class="ar-art-person ar-art-person-two"><span></span></div>
-          <div class="ar-art-caption">A small choice can tell a big story.</div>
+        <div class="ar-hero-showcase">
+          <div class="ar-hero-screen">
+            <img src="previews/code-quest-real-gameplay-20261106.webp" width="960" height="540" alt="An actual scene captured from Code Quest: The Stoneward Oath" fetchpriority="high">
+            <span class="ar-screen-label">ACTUAL GAME SCENE</span>
+            <div class="ar-screen-caption"><span>NOW FEATURED</span><strong>Code Quest: The Stoneward Oath</strong><small>Start with guided buttons or try JavaScript</small></div>
+          </div>
+          <div class="ar-mini-screen ar-mini-circuit">
+            <img src="previews/circuitbound-real-gameplay-20261106.webp" width="960" height="540" alt="" loading="lazy">
+            <span>Circuitbound</span>
+          </div>
+          <div class="ar-mini-screen ar-mini-firefly">
+            <img src="previews/firefly-trail-real-gameplay-20261106.webp" width="960" height="540" alt="" loading="lazy">
+            <span>Firefly Trail</span>
+          </div>
+          <div class="ar-showcase-sparks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <p class="ar-showcase-note">Screens captured from the playable games; glowing movement is decorative.</p>
         </div>
       </div>
     </section>
-    <section class="ar-games" aria-labelledby="ar-games-title">
+
+    <section class="ar-games" aria-labelledby="ar-games-title" id="ar-games">
       <div class="ar-shell">
-        <div class="ar-section-head"><div><p class="ar-eyebrow">NOW PLAYING · FOUR COMPLETE ADVENTURES</p><h2 id="ar-games-title">Pick a game. Make a discovery.</h2></div><p>Choose an interactive coding adventure, a short branching story, or a smaller fully copyable learning example. Every game has a complete ending.</p></div>
-        <article class="ar-feature-card ar-codequest-feature">
-          <div class="ar-card-icon ar-codequest-art" aria-hidden="true"><span>⌘</span><small>CODE / QUEST</small></div>
-          <div class="ar-card-body">
-            <p class="ar-overline">NEW · INTERACTIVE CODING ADVENTURE · GAME 002</p>
-            <h3>Code Quest: The Stoneward Oath</h3>
-            <p>A stormwraith is tearing through the town’s defenses. Choose dungeon passages, face creature encounters, and use beginner code to recover the ward parts. Play with guided edits or explained buttons. Fourteen missions lead to the restored storm defenses.</p>
-            <div class="ar-tags"><span>14 coding encounters</span><span>Iris as game master</span><span>Easy buttons · no typing</span><span>Optional JavaScript editor</span></div>
-            <div class="ar-actions ar-card-actions"><a class="ar-button ar-button-primary" href="code-quest/">Play Code Quest <span aria-hidden="true">→</span></a><a class="ar-text-link" href="code-quest/learn.html">Learn to build your own game <span aria-hidden="true">↗</span></a></div>
-          </div>
-        </article>
-        <article class="ar-feature-card ar-circuitbound-feature">
-          <div class="ar-card-icon ar-circuitbound-art" aria-hidden="true"><span>&#x2726;</span><small>THE LANTERN SIEGE</small></div>
-          <div class="ar-card-body">
-            <p class="ar-overline">NEW &middot; CODING &amp; ELECTRONICS ADVENTURE &middot; GAME 004</p>
-            <h3>Circuitbound: The Lantern Siege</h3>
-            <p>A storm reaches Hearthmere at dawn. With Pix, your lantern companion, write code to open ancient doors, choose the right sensors and power supply, and decide who gets home. Wrong turns reveal secrets, and your choices shape four hopeful or darker endings.</p>
-            <div class="ar-tags"><span>33 animated scenes</span><span>10 beginner puzzles</span><span>4 endings</span><span>Sarah game-master narration</span><span>One screen &middot; desktop &amp; phone</span></div>
-            <div class="ar-actions ar-card-actions"><a class="ar-button ar-button-primary" href="circuitbound/">Play Circuitbound <span aria-hidden="true">&rarr;</span></a><a class="ar-text-link" href="https://www.facebook.com/reel/1107715711870923">Watch the complete build tutorial</a></div>
-            <p class="ar-circuitbound-note">Original scripted adventure with locally generated synthetic Sarah narration. No signup or coding experience needed.</p>
-          </div>
-        </article>
-        <div class="ar-secondary-grid">
-          <article class="ar-small-card">
-            <div class="ar-small-art ar-small-signal" aria-hidden="true">✧</div>
-            <div class="ar-small-copy"><p class="ar-overline">BRANCHING STORY · GAME 001</p><h3>The Little Signal</h3><p>Mira and Sol find an old lantern. Choose a path, share its light and discover two different endings.</p><div class="ar-tags"><span>2 endings</span><span>Touch &amp; keyboard</span><span>Optional spoken dialogue</span></div><a class="ar-button ar-button-outline" href="little-signal/">Play The Little Signal →</a><a class="ar-text-link" href="../tutorials/story-game/">Original story tutorial</a></div>
+        <div class="ar-section-head">
+          <div><p class="ar-eyebrow">● CHOOSE YOUR WORLD</p><h2 id="ar-games-title">Pick an adventure. <em>Make a discovery.</em></h2></div>
+          <p>From fantasy quests to lantern puzzles, every game has a story to explore. No programming experience is required to start.</p>
+        </div>
+        <div class="ar-game-gallery">
+          <article class="ar-game-tile ar-game-codequest">
+            <a class="ar-game-cover" href="code-quest/" aria-label="Play Code Quest: The Stoneward Oath" data-arcade-visit="code-quest">
+              <img src="previews/code-quest-real-gameplay-20261106.webp" alt="Actual Code Quest game scene with its fantasy adventure environment" width="960" height="540" loading="lazy" decoding="async">
+              <span class="ar-cover-label">FANTASY + CODING</span><span class="ar-cover-hover" aria-hidden="true">▶ PLAY THE QUEST</span>
+            </a>
+            <div class="ar-game-copy">
+              <p class="ar-overline">GAME 002 · GUIDED CODING ADVENTURE</p>
+              <h3>Code Quest <span>The Stoneward Oath</span></h3>
+              <p>Restore a storm-battered town through dungeon routes, creature encounters, and code that actually solves the challenges.</p>
+              <div class="ar-tags"><span>14 coding encounters</span><span>Guided buttons</span><span>Optional JavaScript</span><span>Iris game master</span></div>
+              <div class="ar-card-actions"><a class="ar-button ar-button-primary" href="code-quest/" data-arcade-visit="code-quest">▶ Play Code Quest</a><a class="ar-text-link" href="code-quest/learn.html" data-arcade-learn="code-quest">Learn to build it ↗</a></div>
+            </div>
           </article>
-          <article class="ar-small-card">
-            <div class="ar-small-art ar-small-firefly" aria-hidden="true">🦊</div>
-            <div class="ar-small-copy"><p class="ar-overline">NEW · COMPLETE BEGINNER GAME · GAME 003</p><h3>The Firefly Trail</h3><p>Follow an animated fox through changing landscapes, catch glowing fireflies, hear the story read aloud, collect gifts and restore a mountain beacon. Then copy the complete game and make it your own.</p><div class="ar-tags"><span>Animated fox and scenery</span><span>Voice and sound</span><span>Different endings</span><span>Full source included</span></div><a class="ar-button ar-button-outline" href="code-quest/your-first-game.html">Play The Firefly Trail →</a><a class="ar-text-link" href="code-quest/learn.html">Build a complete game from scratch</a></div>
+
+          <article class="ar-game-tile ar-game-circuitbound">
+            <a class="ar-game-cover" href="circuitbound/" aria-label="Play Circuitbound: The Lantern Siege" data-arcade-visit="circuitbound">
+              <img src="previews/circuitbound-real-gameplay-20261106.webp" alt="Actual Circuitbound animated fantasy game stage from The Lantern Siege" width="960" height="540" loading="lazy" decoding="async">
+              <span class="ar-cover-label">ELECTRONICS + STORY</span><span class="ar-cover-hover" aria-hidden="true">▶ LIGHT THE BEACON</span>
+            </a>
+            <div class="ar-game-copy">
+              <p class="ar-overline">GAME 004 · BRANCHING ADVENTURE</p>
+              <h3>Circuitbound <span>The Lantern Siege</span></h3>
+              <p>Join Pix in Hearthmere, solve sensor and circuit puzzles, restore the lantern network, and shape four different endings.</p>
+              <div class="ar-tags"><span>10 coding puzzles</span><span>33 animated scenes</span><span>4 endings</span><span>Narration</span></div>
+              <div class="ar-card-actions"><a class="ar-button ar-button-primary" href="circuitbound/" data-arcade-visit="circuitbound">▶ Play Circuitbound</a><a class="ar-text-link" href="https://www.facebook.com/reel/1107715711870923" rel="noopener noreferrer" target="_blank">Watch the build tutorial ↗</a></div>
+            </div>
           </article>
+
+          <article class="ar-game-tile ar-game-signal">
+            <a class="ar-game-cover" href="little-signal/" aria-label="Play The Little Signal" data-arcade-visit="little-signal">
+              <img src="previews/little-signal-real-gameplay-20261106.webp" alt="Actual scene from The Little Signal, a branching lantern story" width="960" height="540" loading="lazy" decoding="async">
+              <span class="ar-cover-label">STORY + CHOICES</span><span class="ar-cover-hover" aria-hidden="true">▶ FOLLOW THE SIGNAL</span>
+            </a>
+            <div class="ar-game-copy">
+              <p class="ar-overline">GAME 001 · BEGINNER STORY</p>
+              <h3>The Little Signal</h3>
+              <p>Mira and Sol discover an old lantern. Make choices, share its light, and experience two possible endings.</p>
+              <div class="ar-tags"><span>2 endings</span><span>Short story</span><span>Optional spoken dialogue</span></div>
+              <div class="ar-card-actions"><a class="ar-button ar-button-outline" href="little-signal/" data-arcade-visit="little-signal">▶ Play The Little Signal</a><a class="ar-text-link" href="../tutorials/story-game/" data-arcade-learn="little-signal">See its source code ↗</a></div>
+            </div>
+          </article>
+
+          <article class="ar-game-tile ar-game-firefly">
+            <a class="ar-game-cover" href="code-quest/your-first-game.html" aria-label="Play The Firefly Trail" data-arcade-visit="firefly-trail">
+              <img src="previews/firefly-trail-real-gameplay-20261106.webp" alt="Actual scene from The Firefly Trail with its animated forest and beginner adventure stage" width="960" height="540" loading="lazy" decoding="async">
+              <span class="ar-cover-label">ANIMATED BEGINNER GAME</span><span class="ar-cover-hover" aria-hidden="true">▶ FOLLOW WISP</span>
+            </a>
+            <div class="ar-game-copy">
+              <p class="ar-overline">GAME 003 · STORY + LOGIC</p>
+              <h3>The Firefly Trail</h3>
+              <p>Follow Wisp the fox through changing scenery, rescue glowing fireflies, solve river puzzles, and restore a mountain beacon.</p>
+              <div class="ar-tags"><span>Moving scenery</span><span>Voice and sound</span><span>Multiple endings</span><span>Full source included</span></div>
+              <div class="ar-card-actions"><a class="ar-button ar-button-outline" href="code-quest/your-first-game.html" data-arcade-visit="firefly-trail">▶ Play The Firefly Trail</a><a class="ar-text-link" href="code-quest/learn.html" data-arcade-learn="firefly-trail">Build your own game ↗</a></div>
+            </div>
+          </article>
+        </div>
+        <p class="ar-gallery-note">These are screenshots of actual game stages—not looping gameplay videos. The cards use subtle decorative animation; the games themselves contain their own interactive scenes.</p>
+      </div>
+    </section>
+
+    <section class="ar-passport" id="ar-passport" aria-labelledby="ar-passport-title">
+      <div class="ar-shell ar-passport-layout">
+        <div class="ar-passport-copy">
+          <p class="ar-eyebrow">✦ YOUR ARCADE PASSPORT</p>
+          <h2 id="ar-passport-title">Every adventure <em>starts somewhere.</em></h2>
+          <p>Collect small explorer badges as you launch games and visit tutorials from this page. No account, leaderboard, or pretend completion scores.</p>
+          <p class="ar-privacy-note">Saved only in this browser. Visiting a game is not the same as completing it.</p>
+        </div>
+        <div class="ar-passport-panel">
+          <div class="ar-passport-top"><span>Worlds visited</span><strong id="ar-visit-count">0 / 4</strong></div>
+          <div class="ar-passport-track" role="progressbar" id="ar-visit-progress" aria-label="Games launched from this page" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span id="ar-visit-fill"></span></div>
+          <div class="ar-badges" aria-label="Explorer badges">
+            <div class="ar-badge" data-badge="starter"><span aria-hidden="true">✦</span><strong>First Step</strong><small>Open one game</small></div>
+            <div class="ar-badge" data-badge="pathfinder"><span aria-hidden="true">◇</span><strong>Pathfinder</strong><small>Visit three worlds</small></div>
+            <div class="ar-badge" data-badge="creator"><span aria-hidden="true">⌘</span><strong>Curious Creator</strong><small>Open a lesson</small></div>
+          </div>
+          <div class="ar-passport-foot"><span id="ar-passport-status" role="status">Explore a game to begin your passport.</span><button id="ar-passport-reset" type="button">Reset my passport</button></div>
         </div>
       </div>
     </section>
-    <section class="ar-learn" aria-labelledby="ar-learn-title">
+
+    <section class="ar-learn" aria-labelledby="ar-learn-title" id="ar-learn">
       <div class="ar-shell">
-        <div class="ar-section-head"><div><p class="ar-eyebrow">FROM PLAYER TO CREATOR</p><h2 id="ar-learn-title">Wonder how it works?</h2></div><p>Start with the fun parts: animated scenes, narrated stories, buttons and choices. Coding is optional while you play.</p></div>
-        <div class="ar-steps">
-          <div class="ar-step"><strong>01</strong><h3>Play</h3><p>Help PIX with easy buttons, catch glowing fireflies with Wisp or explore the original Little Signal adventure.</p></div>
-          <div class="ar-step"><strong>02</strong><h3>Look inside</h3><p>Read working HTML, CSS and JavaScript. Copy the entire Firefly Trail game with one button.</p></div>
-          <div class="ar-step"><strong>03</strong><h3>Make it yours</h3><p>Create a new scene, change a choice, test every ending and publish a finished adventure.</p></div>
+        <div class="ar-section-head"><div><p class="ar-eyebrow">● FROM PLAYER TO CREATOR</p><h2 id="ar-learn-title">Build the <em>magic.</em></h2></div><p>Curious about how the stories work? Learn to build real playable games with code you can copy, edit, and run yourself.</p></div>
+        <div class="ar-learning-grid">
+          <a class="ar-learning-card" href="code-quest/learn.html" data-arcade-learn="code-quest">
+            <span class="ar-learning-icon" aria-hidden="true">⌘</span><span class="ar-learning-level">START HERE · BEGINNER</span><h3>Build your first adventure</h3><p>Learn HTML, CSS and JavaScript while making a complete interactive game.</p><strong>Open the lessons →</strong>
+          </a>
+          <a class="ar-learning-card" href="../tutorials/story-game/" data-arcade-learn="little-signal">
+            <span class="ar-learning-icon" aria-hidden="true">✧</span><span class="ar-learning-level">MAKE STORIES INTERACTIVE</span><h3>Choose your own path</h3><p>Explore scene changes, dialogue, branching choices, and multiple endings.</p><strong>See the story tutorial →</strong>
+          </a>
+          <a class="ar-learning-card" href="code-quest/your-first-game.html" data-arcade-visit="firefly-trail">
+            <span class="ar-learning-icon" aria-hidden="true">✺</span><span class="ar-learning-level">PLAYABLE SOURCE INCLUDED</span><h3>Animate your game world</h3><p>Study Wisp's moving scenery and see how a little code creates a larger journey.</p><strong>Explore the source →</strong>
+          </a>
         </div>
-        <div class="ar-bottom"><p><strong>Made at Kira Labs.</strong> These are small, scripted games—not demonstrations of NewBrain or an autonomous AI.</p><a class="ar-text-link" href="code-quest/learn.html">Build a complete adventure game <span aria-hidden="true">→</span></a></div>
+        <div class="ar-bottom"><p><strong>Made at Kira Labs.</strong> These are original scripted games and educational projects—not a demonstration of NewBrain or an autonomous AI.</p><a class="ar-text-link" href="../tools-apps.html">More Kira Labs tools and apps →</a></div>
       </div>
     </section>
   </main>

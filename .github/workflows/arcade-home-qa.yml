@@ -1,0 +1,39 @@
+name: Kira Labs Arcade homepage browser QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/arcade/index.html'
+      - 'docs/arcade/arcade-home-redesign.css'
+      - 'docs/arcade/arcade-home.js'
+      - 'docs/arcade/previews/**'
+      - 'scripts/test_arcade_homepage_20261106.py'
+      - '.github/workflows/arcade-home-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-homepage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check homepage script syntax and existing arcade integrity
+        run: |
+          node --check docs/arcade/arcade-home.js
+          node tests/test-arcade.cjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Chromium
+        run: |
+          python -m pip install playwright
+          python -m playwright install chromium --with-deps
+      - name: Test actual Arcade layout and visitor interactions
+        run: |
+          python -m http.server 8765 --directory docs >/tmp/kira-arcade-server.log 2>&1 &
+          sleep 3
+          python scripts/test_arcade_homepage_20261106.py
