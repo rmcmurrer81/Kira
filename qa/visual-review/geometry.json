@@ -128,7 +128,7 @@
         "naturalHeight": 1536,
         "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
         "fit": "contain",
-        "position": "50% 50%"
+        "position": "50% 0%"
       },
       "kiraPortraitRoutes": []
     },
@@ -514,7 +514,7 @@
         "naturalHeight": 1536,
         "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
         "fit": "contain",
-        "position": "50% 50%"
+        "position": "50% 0%"
       },
       "kiraPortraitRoutes": []
     },
@@ -900,7 +900,7 @@
         "naturalHeight": 1536,
         "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
         "fit": "contain",
-        "position": "50% 50%"
+        "position": "50% 0%"
       },
       "kiraPortraitRoutes": []
     },
@@ -1286,7 +1286,7 @@
         "naturalHeight": 1536,
         "src": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
         "fit": "contain",
-        "position": "50% 50%"
+        "position": "50% 0%"
       },
       "kiraPortraitRoutes": []
     },
