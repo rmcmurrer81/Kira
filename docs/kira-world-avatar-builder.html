@@ -1,6 +1,150 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#081323"/><title>Avatar Builder — Kira World | Kira Labs</title><meta name="description" content="Avatar Builder investigates personalized appearance, bodies, skin weights, bone rigs and future natural movement. Existing adult-female work uses an adapte"/><link rel="canonical" href="https://kiralabs.org/kira-world-avatar-builder.html"/><meta property="og:title" content="Avatar Builder — Kira World"/><meta property="og:description" content="Avatar Builder investigates personalized appearance, bodies, skin weights, bone rigs and future natural movement. Existing adult-female work uses an adapte"/><meta property="og:type" content="website"/><meta property="og:image" content="https://kiralabs.org/assets/evelyn-hart-holographic-medlab-concept-20261021.jpg"/><link rel="icon" href="assets/favicon.png"/><link rel="stylesheet" href="labs.css"/><link rel="stylesheet" href="companion-robotics.css"/><link rel="stylesheet" href="creator-flow.css?v=20261022-people-twins"/><link rel="stylesheet" href="evelyn-body-evidence.css?v=20261021"/><link rel="stylesheet" href="visual-showcase.css?v=20261020c"/><link rel="stylesheet" href="fidelity-website-20261020.css?v=20261020-7"/><link rel="stylesheet" href="kira-world-sections.css?v=20261024-head-framing"/><link rel="stylesheet" href="concept-animations.css?v=20261104"/></head><body class="kw-detail kw-avatar-page"><a class="skip" href="#main">Skip to main content</a><header class="site-header"><div class="wrap navrow"><a aria-label="Kira Labs home" class="brand" href="index.html"><span class="brandmark"><img alt="" decoding="async" height="38" src="https://kiralabs.org/assets/kira-world-k-logo-192.png" width="38"/></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent AI research</small></span></a><button aria-controls="primary-nav" aria-expanded="false" class="menubtn menu-toggle" type="button">Menu</button><nav aria-label="Main navigation" class="nav" id="primary-nav"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="progress.html">Lab timeline</a><a href="about.html">About</a><a href="support.html">Support</a><a class="contact" href="contact.html">Contact</a></nav></div></header><nav class="kw-navline" aria-label="Kira World topic pages"><a href="kira-world.html">Overview</a><a href="kira-world-home.html">Home World</a><a href="kira-world-notebook.html">Notebook Worlds</a><a href="kira-world-avatar-builder.html" aria-current="page">Avatar Builder</a><a href="kira-world-person-creator.html">Person Creator</a><a href="kira-world-relationships.html">People</a><a href="kira-world-synthetic-robert.html">Synthetic Robert</a><a href="kira-world-embodiment.html">VR / Robotics</a></nav><main id="main">
-<section class="kw-hero" aria-labelledby="kw-heading"><div class="kw-shell"><div class="kw-hero-grid"><div><p class="kw-crumbs"><a href="index.html">Home</a> / <a href="kira-world.html">Kira World</a> / Avatar Builder</p><p class="kw-eyebrow">Body / appearance / rigging / motion</p><h1 id="kw-heading">Avatar Builder<em>Build the individual body.</em></h1><p class="kw-intro">Avatar Builder investigates personalized appearance, bodies, skin weights, bone rigs and future natural movement. Existing adult-female work uses an adapted licensed reference; fully authored anatomy remains unfinished.</p><div class="kw-action-row"><a class="button primary" href="#avatar-builder-sitting-2026-10-25">Watch sitting test →</a><a class="button" href="#current-status">See status →</a><a class="button" href="#evidence">Evidence and next steps →</a></div></div><figure class="kw-hero-art"><img src="assets/evelyn-hart-holographic-medlab-concept-20261021.jpg" alt="Evelyn character concept, carefully framed to show her complete head and research panels" width="1152" height="1536" fetchpriority="high" decoding="async"/><figcaption>Existing Kira Labs character concept, not a full anatomy or accepted movement test.</figcaption></figure></div></div></section>
-<section class="ks-animated-concept" aria-label="Avatar Builder illustrative animation"><figure class="ks-animated-concept__figure"><img src="assets/animations/avatar-builder-concept.gif" alt="Animated concept illustration of a digital humanoid bust assembling from glowing wireframe points, not an accepted body render." width="718" height="357" decoding="async" loading="lazy"/><figcaption>Animated concept illustration · Not a live demonstration or measured research result.</figcaption></figure></section><section class="kw-section" id="avatar-builder-v12-body-v9-2026-11-05" aria-labelledby="avatar-v12-v9-heading"><div class="kw-shell"><div class="kw-section-heading">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#081323"/><title>Avatar Builder — Kira World | Kira Labs</title><meta name="description" content="Avatar Builder investigates personalized appearance, bodies, skin weights, bone rigs and future natural movement. Existing adult-female work uses an adapte"/><link rel="canonical" href="https://kiralabs.org/kira-world-avatar-builder.html"/><meta property="og:title" content="Avatar Builder — Kira World"/><meta property="og:description" content="Avatar Builder investigates personalized appearance, bodies, skin weights, bone rigs and future natural movement. Existing adult-female work uses an adapte"/><meta property="og:type" content="website"/><meta property="og:image" content="https://kiralabs.org/assets/evelyn-hart-holographic-medlab-concept-20261021.jpg"/><link rel="icon" href="assets/favicon.png"/><link rel="stylesheet" href="labs.css"/><link rel="stylesheet" href="companion-robotics.css"/><link rel="stylesheet" href="creator-flow.css?v=20261022-people-twins"/><link rel="stylesheet" href="evelyn-body-evidence.css?v=20261021"/><link rel="stylesheet" href="visual-showcase.css?v=20261020c"/><link rel="stylesheet" href="fidelity-website-20261020.css?v=20261020-7"/><link rel="stylesheet" href="kira-world-sections.css?v=20261024-head-framing"/><link rel="stylesheet" href="concept-animations.css?v=20261104"/><link rel="stylesheet" href="avatar-builder-redesign-20261106.css?v=2026-11-06.1"/></head><body class="kw-detail kw-avatar-page"><a class="skip" href="#main">Skip to main content</a><header class="site-header"><div class="wrap navrow"><a aria-label="Kira Labs home" class="brand" href="index.html"><span class="brandmark"><img alt="" decoding="async" height="38" src="https://kiralabs.org/assets/kira-world-k-logo-192.png" width="38"/></span><span class="brandwords"><strong>Kira Labs</strong><small>Independent AI research</small></span></a><button aria-controls="primary-nav" aria-expanded="false" class="menubtn menu-toggle" type="button">Menu</button><nav aria-label="Main navigation" class="nav" id="primary-nav"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="progress.html">Lab timeline</a><a href="about.html">About</a><a href="support.html">Support</a><a class="contact" href="contact.html">Contact</a></nav></div></header><nav class="kw-navline" aria-label="Kira World topic pages"><a href="kira-world.html">Overview</a><a href="kira-world-home.html">Home World</a><a href="kira-world-notebook.html">Notebook Worlds</a><a href="kira-world-avatar-builder.html" aria-current="page">Avatar Builder</a><a href="kira-world-person-creator.html">Person Creator</a><a href="kira-world-relationships.html">People</a><a href="kira-world-synthetic-robert.html">Synthetic Robert</a><a href="kira-world-embodiment.html">VR / Robotics</a></nav><main id="main">
+<div class="ab-visual" id="avatar-builder-overview">
+  <section class="ab-hero" aria-labelledby="kw-heading">
+    <div class="ab-shell ab-hero-grid">
+      <div class="ab-hero-copy">
+        <p class="ab-crumbs"><a href="index.html">Home</a> <span>/</span> <a href="kira-world.html">Kira World</a> <span>/</span> Avatar Builder</p>
+        <p class="ab-eyebrow">Kira Labs / Avatar research / Active development</p>
+        <h1 id="kw-heading">Avatar Builder.<em>Build the individual body.</em></h1>
+        <p class="ab-hero-lead">Building more believable digital bodies means studying <strong>appearance, anatomy, physiology, rigging and natural movement</strong> together—while checking every piece independently.</p>
+        <p class="ab-hero-sub">The current original adult Evelyn head and complete body remain unfinished. Some components and small tests work; the integrated human form has not been accepted.</p>
+        <div class="ab-actions">
+          <a class="ab-btn ab-primary" href="#ab-research-focus">Explore the research <span aria-hidden="true">→</span></a>
+          <a class="ab-btn" href="#avatar-builder-sitting-2026-10-25">Watch a motion test <span aria-hidden="true">▷</span></a>
+          <a class="ab-btn" href="#avatar-builder-v12-body-v9-2026-11-05">Latest findings <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="ab-disclosure"><span aria-hidden="true">◉</span> Concept art is illustrative; approved, measured and rejected outcomes are labeled separately.</p>
+      </div>
+      <div class="ab-hero-showcase">
+        <span class="ab-hero-halo" aria-hidden="true"></span>
+        <figure class="ab-character-portrait">
+          <img src="assets/evelyn-hart-holographic-medlab-concept-20261021.jpg" width="1152" height="1536" alt="Approved Kira Labs illustrative character concept in a digital anatomy lab; not the accepted result of an Avatar Builder head or body test" fetchpriority="high" decoding="async">
+          <figcaption>Character concept illustration · Not an approved body build</figcaption>
+        </figure>
+        <div class="ab-floating-label ab-label-top"><span>01</span><strong>Identity &amp; form</strong><small>Appearance research</small></div>
+        <div class="ab-floating-label ab-label-bottom"><span>02</span><strong>Rigging &amp; motion</strong><small>Bounded software tests</small></div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="ab-section-nav" aria-label="Explore Avatar Builder research sections"><div class="ab-shell">
+    <a href="#ab-research-focus">Research areas</a>
+    <a href="#ab-anatomy-map">Anatomy &amp; physiology</a>
+    <a href="#ab-progress">Measured progress</a>
+    <a href="#ab-motion-demo">Motion preview</a>
+    <a href="#avatar-builder-v12-body-v9-2026-11-05">Lab notebook</a>
+  </div></nav>
+
+  <section class="ab-research-focus" id="ab-research-focus" aria-labelledby="ab-research-title">
+    <div class="ab-shell">
+      <div class="ab-heading-row">
+        <div><p class="ab-eyebrow">● Core research areas</p><h2 id="ab-research-title">More than a model. <em>A complete form.</em></h2></div>
+        <p class="ab-section-lead">Different engineering challenges need different tests. An attractive picture is not proof that facial structure, movement or physiology works.</p>
+      </div>
+      <div class="ab-focus-grid">
+        <a class="ab-focus-card" href="#avatar-builder-original-eye-2026-10-26">
+          <figure><img src="assets/evelyn-avatar-cinematic-concept-20261024.jpg" width="960" height="540" alt="Illustrative adult avatar appearance concept, not an approved procedural face" loading="lazy" decoding="async"><span class="ab-media-label">CONCEPT ART</span></figure>
+          <div><span class="ab-focus-index">01 / APPEARANCE</span><h3>Face &amp; expression</h3><p>Head proportions, eyes, mouth, ears, skin materials and identity-specific facial structure.</p><span class="ab-card-link">See the face research →</span></div>
+        </a>
+        <a class="ab-focus-card" href="#ab-anatomy-map">
+          <figure><img src="assets/kira-world-avatar-builder-visual-20261023.svg" width="1200" height="690" alt="Existing conceptual rigging studio illustration of a covered digital figure and research panels, not approved procedural anatomy" loading="lazy" decoding="async"><span class="ab-media-label">RESEARCH CONCEPT</span></figure>
+          <div><span class="ab-focus-index">02 / BODY SYSTEMS</span><h3>Anatomy &amp; physiology</h3><p>Skeletal and soft-tissue structure, internal-system planning and realistic physical constraints.</p><span class="ab-card-link">Explore the body roadmap →</span></div>
+        </a>
+        <a class="ab-focus-card" href="#avatar-builder-motion-library-2026-10-31">
+          <figure><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/kira-world-avatar-builder-visual-20261023.svg"><img src="assets/animations/avatar-builder-concept.gif" width="718" height="357" alt="Animated concept of a glowing wireframe figure assembling; no measured runtime action is shown" loading="lazy" decoding="async"></picture><span class="ab-media-label">ANIMATED CONCEPT</span></figure>
+          <div><span class="ab-focus-index">03 / MOVEMENT</span><h3>Rigging &amp; motion</h3><p>Bone relationships, skin weights, joint limits, animation reuse and independent movement checks.</p><span class="ab-card-link">See software and motion tests →</span></div>
+        </a>
+      </div>
+      <p class="ab-illustration-note">All three images are illustrative. The actual limited motion test and preserved research evidence appear separately.</p>
+    </div>
+  </section>
+
+  <section class="ab-body-roadmap" id="ab-anatomy-map" aria-labelledby="ab-body-roadmap-heading">
+    <div class="ab-shell ab-roadmap-grid">
+      <div class="ab-roadmap-copy">
+        <p class="ab-eyebrow">● Structure, beyond the surface</p>
+        <h2 id="ab-body-roadmap-heading">Anatomy and <em>physiology matter.</em></h2>
+        <p>The long-term aim is a body with consistent exterior form, a meaningful internal anatomical map, appropriate joints and mechanical responses, and physiological simulations where useful.</p>
+        <p><strong>Current boundary:</strong> the full original body is not yet built or approved, and internal organ systems are not validated as functioning physiology.</p>
+        <a class="ab-text-link" href="#evidence">Read the anatomy and movement requirements →</a>
+      </div>
+      <div class="ab-map-figure">
+        <img src="assets/avatar-builder-anatomy-research-map-20261106.svg" width="1080" height="680" alt="Abstract body-system diagram with skeletal frame, skin and tissue, future physiology and movement labels. It does not depict a finished anatomy model." loading="lazy" decoding="async">
+        <p>Concept-only system map · No completed body, functioning organs or clinical simulation implied.</p>
+      </div>
+    </div>
+    <div class="ab-shell">
+      <div class="ab-pipeline" aria-label="Proposed Avatar Builder engineering workflow">
+        <div class="ab-pipeline-step"><span>1</span><strong>References</strong><small>Source and identity controls</small></div>
+        <div class="ab-pipeline-step"><span>2</span><strong>Geometry</strong><small>Face and body form</small></div>
+        <div class="ab-pipeline-step"><span>3</span><strong>Rigging</strong><small>Joints and skin weights</small></div>
+        <div class="ab-pipeline-step"><span>4</span><strong>Motion</strong><small>Movements and contacts</small></div>
+        <div class="ab-pipeline-step"><span>5</span><strong>Review</strong><small>Test, reject or iterate</small></div>
+      </div>
+      <p class="ab-pipeline-caption">Proposed development workflow, not a demonstrated end-to-end automated person-creation pipeline.</p>
+    </div>
+  </section>
+
+  <section class="ab-evidence-summary" id="ab-progress" aria-labelledby="ab-progress-title">
+    <div class="ab-shell">
+      <div class="ab-heading-row">
+        <div><p class="ab-eyebrow">● Verified and bounded</p><h2 id="ab-progress-title">Progress, <em>without overstating it.</em></h2></div>
+        <p class="ab-section-lead">Measured engineering successes and unfinished human-form challenges are shown side by side.</p>
+      </div>
+      <div class="ab-results-grid">
+        <a class="ab-result-card" href="#avatar-builder-v12-body-v9-2026-11-05">
+          <span class="ab-result-label">RENDERED / REJECTED</span>
+          <strong>17 + 17</strong><h3>Head review views</h3>
+          <p>Two November 5 head variants generated 17 views each. Neither passed visual or native form review.</p>
+          <span class="ab-result-link">Read the outcome →</span>
+        </a>
+        <a class="ab-result-card" href="#avatar-builder-motion-library-2026-10-31">
+          <span class="ab-result-label">BOUNDED SOFTWARE CHECKS</span>
+          <strong>22 / 22</strong><h3>Motion library tests</h3>
+          <p>Separate software tests passed; these are not proof of fully natural body movement.</p>
+          <span class="ab-result-link">Inspect the scope →</span>
+        </a>
+        <a class="ab-result-card" href="#current-status">
+          <span class="ab-result-label">FULL BODY / NOT ACCEPTED</span>
+          <strong>In progress</strong><h3>Original anatomy &amp; body</h3>
+          <p>The original full-body construction still encounters resource and geometric constraints.</p>
+          <span class="ab-result-link">Review the limitations →</span>
+        </a>
+      </div>
+      <div class="ab-status-ribbon"><span class="ab-ribbon-dot" aria-hidden="true"></span><p>The approved blue-eye component is preserved. A separate original-head fitting run progressed through photo/form fit, then failed eye clearance. No finished, accepted original Evelyn head or body is claimed.</p><a href="updates.html#avatar-head-v7-clearance-2026-11-05">Read the latest note →</a></div>
+    </div>
+  </section>
+
+  <section class="ab-motion-demo" id="ab-motion-demo" aria-labelledby="ab-motion-title">
+    <div class="ab-shell ab-demo-grid">
+      <a class="ab-demo-image" href="#avatar-builder-sitting-2026-10-25" aria-label="Jump to the playable, privacy-censored five-second sitting motion test and its credits">
+        <img src="assets/evelyn-sitting-poster-20261025.jpg" width="768" height="576" alt="Poster for an existing privacy-censored five-second sitting animation using a licensed developmental rig" loading="lazy" decoding="async">
+        <span class="ab-demo-play" aria-hidden="true">▶</span>
+        <span class="ab-demo-tag">ACTUAL LIMITED TEST · PUBLIC-CENSORED</span>
+      </a>
+      <div class="ab-demo-copy">
+        <p class="ab-eyebrow">● Motion experiment</p><h2 id="ab-motion-title">Watch a real <em>sitting test.</em></h2>
+        <p>A short 120-frame animation demonstrates scripted motion in a licensed developmental body rig. It is not live AI movement and does not establish an accepted Evelyn body.</p>
+        <p class="ab-demo-disclaimer">5 seconds · 24 fps · Privacy-covered public render · Original licensed test rig</p>
+        <a class="ab-btn ab-primary" href="#avatar-builder-sitting-2026-10-25">See the video and attribution →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ab-journal-guide" aria-labelledby="ab-journal-heading">
+    <div class="ab-shell">
+      <p class="ab-eyebrow">● Development journal</p><h2 id="ab-journal-heading">The work behind <em>the progress.</em></h2>
+      <p class="ab-section-lead">Explore the measured studies below. They include failures, original geometry attempts, bounded source tests and future steps—not a claim that the entire avatar is ready.</p>
+      <div class="ab-journal-shortcuts">
+        <a href="#avatar-builder-v12-body-v9-2026-11-05"><span>Latest results</span><strong>Head and full-body review</strong><small>November 5, 2026 →</small></a>
+        <a href="#avatar-builder-motion-library-2026-10-31"><span>Engineering</span><strong>Motion-library tests</strong><small>October 31, 2026 →</small></a>
+        <a href="#avatar-builder-sitting-2026-10-25"><span>Video evidence</span><strong>Scripted sitting motion</strong><small>October 25, 2026 →</small></a>
+        <a href="#detailed-research-avatar-builder"><span>Research archive</span><strong>Original model notes</strong><small>All preserved records →</small></a>
+      </div>
+    </div>
+  </section>
+</div>
+<section class="kw-section" id="avatar-builder-v12-body-v9-2026-11-05" aria-labelledby="avatar-v12-v9-heading"><div class="kw-shell"><div class="kw-section-heading">
 <p class="kw-eyebrow">November 5, 2026 · Actual rejected head renders and failed body attempt</p>
 <h2 id="avatar-v12-v9-heading">Two head variants rendered.<br/><em>Neither head nor body was accepted.</em></h2></div>
 <p>Original Evelyn V12 and commissure V2 each generated <strong>17 actual review views</strong>. Both were rejected for major cheek/mouth folds, mismatched jaw/skull/neck and oval ears; strict native form also failed. The previously approved blue eye geometry/materials remain preserved as a component. The V9 full-body attempt <strong>failed its unchanged work guard after four coarse regions</strong>. Later V10 source/environment review and an early shared-cheek diagnostic are not successful complete body or head tests.</p>

@@ -1,0 +1,31 @@
+name: Kira Labs Avatar Builder page QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/kira-world-avatar-builder.html"
+      - "docs/avatar-builder-redesign-20261106.css"
+      - "docs/assets/avatar-builder-anatomy-research-map-20261106.svg"
+      - "scripts/test_avatar_builder_page_20261106.py"
+      - ".github/workflows/avatar-builder-page-qa.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-page:
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Set up Chromium
+        run: |
+          python -m pip install playwright
+          python -m playwright install chromium --with-deps
+      - name: Verify real page and interactive links
+        run: |
+          python -m http.server 8765 --directory docs >/tmp/kira-avatar-server.log 2>&1 &
+          sleep 3
+          python scripts/test_avatar_builder_page_20261106.py

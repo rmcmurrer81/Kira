@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="680" viewBox="0 0 1080 680" role="img" aria-labelledby="title desc">
+<title id="title">Avatar Builder anatomy and physiology research roadmap</title><desc id="desc">A stylized non-explicit virtual body outline with connections to skeletal structure, skin and tissue, and planned physiological systems. A conceptual roadmap, not a rendering of implemented anatomy.</desc>
+<defs>
+<radialGradient id="glow"><stop stop-color="#124fb0" stop-opacity=".65"/><stop offset=".63" stop-color="#172269" stop-opacity=".18"/><stop offset="1" stop-color="#07142b" stop-opacity="0"/></radialGradient>
+<linearGradient id="silhouette" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#12305e"/><stop offset=".5" stop-color="#193d76"/><stop offset="1" stop-color="#191c55"/></linearGradient>
+<linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6fe8fa"/><stop offset="1" stop-color="#ae84ff"/></linearGradient>
+<pattern id="grid" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M35 0H0V35" stroke="#6ca2e5" stroke-width=".7" opacity=".15" fill="none"/></pattern>
+<filter id="h"><feGaussianBlur stdDeviation="8"/></filter>
+<style>
+@keyframes pulse{0%,100%{opacity:.56}50%{opacity:1}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+#joint-points{animation:pulse 4.5s ease-in-out infinite}#body{animation:float 11s ease-in-out infinite;transform-origin:530px 380px}
+@media(prefers-reduced-motion:reduce){#joint-points,#body{animation:none}}
+</style>
+</defs>
+<rect width="1080" height="680" rx="22" fill="#08152c"/><rect width="1080" height="680" fill="url(#grid)"/><ellipse cx="530" cy="352" rx="330" ry="315" fill="url(#glow)"/>
+<g opacity=".67" stroke="#1fcbea" stroke-width="1.8" fill="none">
+<path d="M74 103h46M74 103v46M1006 103h-46M1006 103v46M74 577h46M74 577v-46M1006 577h-46M1006 577v-46" />
+<circle cx="530" cy="345" r="267" stroke="#4874dc" opacity=".4"/><circle cx="530" cy="345" r="218" stroke="#72cdeb" opacity=".27" stroke-dasharray="6 10"/>
+</g>
+<g id="body" stroke="url(#line)" stroke-width="3" fill="url(#silhouette)" fill-opacity=".72" stroke-linecap="round" stroke-linejoin="round">
+<!-- Non-explicit diagrammatic silhouette, fully clothed/neutral schematic anatomy -->
+<circle cx="530" cy="150" r="53"/>
+<path d="M505 197Q503 216 484 222L450 236Q429 246 423 268L388 389Q380 416 400 423Q420 426 428 402L457 313L454 435Q455 451 466 463L482 490L473 602Q471 624 490 628Q509 630 514 607L529 494L546 608Q553 630 573 626Q587 619 582 599L574 490L593 464Q604 449 602 432L603 314L630 402Q638 426 659 422Q681 412 671 387L636 268Q628 246 608 236L572 221Q555 214 556 197Z"/>
+<path d="M530 207L530 456M452 297Q530 322 605 296M453 424Q530 450 604 424" fill="none" stroke="#86e9ff" stroke-width="1.5" stroke-opacity=".38"/>
+</g>
+<g stroke="#6bebff" fill="#5cefff" fill-opacity=".22" stroke-width="2" opacity=".92">
+<circle cx="530" cy="150" r="9"/><circle cx="530" cy="242" r="8"/><circle cx="530" cy="317" r="8"/><circle cx="530" cy="414" r="8"/>
+<circle cx="462" cy="263" r="7"/><circle cx="598" cy="263" r="7"/><circle cx="415" cy="386" r="7"/><circle cx="645" cy="386" r="7"/><circle cx="484" cy="478" r="7"/><circle cx="570" cy="478" r="7"/><circle cx="488" cy="593" r="7"/><circle cx="562" cy="593" r="7"/>
+</g>
+<g id="joint-points" fill="#9dfbff"><circle cx="530" cy="150" r="3"/><circle cx="530" cy="242" r="3"/><circle cx="530" cy="317" r="3"/><circle cx="530" cy="414" r="3"/><circle cx="462" cy="263" r="3"/><circle cx="598" cy="263" r="3"/><circle cx="415" cy="386" r="3"/><circle cx="645" cy="386" r="3"/><circle cx="484" cy="478" r="3"/><circle cx="570" cy="478" r="3"/></g>
+<g stroke="#69eaff" stroke-width="2" fill="none" opacity=".8"><path d="M486 268H350L290 212H236"/><path d="M483 370H330L290 370H236"/><path d="M575 326H733L772 264H842"/><path d="M569 461H722L772 488H842"/></g>
+<g font-family="Arial,Helvetica,sans-serif">
+<rect x="65" y="170" width="248" height="83" rx="12" fill="#0d2947" stroke="#3d91b1"/><text x="85" y="202" fill="#90f8ff" font-size="15" font-weight="700" letter-spacing="1">SKELETAL FRAME</text><text x="85" y="226" fill="#d4eafa" font-size="13">Geometry + joint alignment</text>
+<rect x="65" y="326" width="248" height="83" rx="12" fill="#0d2947" stroke="#3d91b1"/><text x="85" y="358" fill="#90f8ff" font-size="15" font-weight="700" letter-spacing="1">SKIN + TISSUES</text><text x="85" y="383" fill="#d4eafa" font-size="13">Materials + deformation goals</text>
+<rect x="772" y="220" width="250" height="83" rx="12" fill="#22234c" stroke="#8d6ad6"/><text x="792" y="252" fill="#c6a9ff" font-size="15" font-weight="700" letter-spacing="1">PHYSIOLOGY</text><text x="792" y="277" fill="#d4eafa" font-size="13">Future functional simulations</text>
+<rect x="772" y="445" width="250" height="83" rx="12" fill="#22234c" stroke="#8d6ad6"/><text x="792" y="477" fill="#c6a9ff" font-size="15" font-weight="700" letter-spacing="1">MOVEMENT</text><text x="792" y="503" fill="#d4eafa" font-size="13">Rigging + tested motion</text>
+<rect x="353" y="44" width="356" height="40" rx="20" fill="#102d50" stroke="#497dcb"/><text x="531" y="70" fill="#d6faff" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="2">PROPOSED BODY SYSTEM MAP</text>
+<text x="530" y="654" text-anchor="middle" fill="#b6cce6" font-size="14">Illustrative architecture • Not functional or approved full-body anatomy</text>
+</g></svg>
