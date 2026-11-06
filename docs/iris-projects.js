@@ -33,7 +33,7 @@
   const NOV05_LINK_FIX_SOURCE={"world":"kira-world.html#kw-hub-title"};
   const NOV05_SOURCE={"newbrain":"newbrain.html#newbrain-v3-closed-2026-11-05","avatar-body":"kira-world-avatar-builder.html#avatar-builder-v12-body-v9-2026-11-05"};
   // Prior published packs remain valid and are preserved for regression checks.
-  const NOV06_SOURCE={"arcade":"reports/arcade-lobby-release-2026-11-06.html#what-changed"};
+  const NOV06_SOURCE={"arcade":"reports/arcade-lobby-release-2026-11-06.html#what-changed","newbrain":"newbrain.html#newbrain-supporting-systems-2026-11-06"};
   const PREVIOUS_SOURCE={"newbrain":"newbrain.html#newbrain-arithmetic-verified-2026-10-24","avatar-body":"kira-world.html#avatar-builder-first-body-reference-2026-10-21","evelyn":"evelyn-development.html#evelyn-original-voice-approved-2026-10-24"};
   // Older, explicitly dated notes are retained for regression and archive checks.
   const LEGACY_SOURCE={"newbrain":"newbrain.html#newbrain-original12-negative-transfer-2026-10-21","world":"research-status-2026-10-18.html#people","avatar-body":"research-status-2026-10-18.html#body","temporary-creator":"research-status-2026-10-18.html#people","evelyn":"evelyn-hart.html#evelyn-full-body-life-loop-camera-2026-10-21"};
