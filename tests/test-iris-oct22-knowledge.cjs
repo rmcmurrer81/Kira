@@ -368,4 +368,22 @@ assert.ok(irisPage.includes('iris-policy.js?v=2026-11-01.2'));
 assert.ok(irisPage.includes('href="contact.html#direct-contact"'));
 assert.ok(fs.readFileSync(path.join(docs,'contact.html'),'utf8').includes('id="direct-contact"'));
 
+/* NewBrain page visual-regression safety, November 6: real page, not mockup. */
+const newBrainVisualHtml=fs.readFileSync(path.join(docs,'newbrain.html'),'utf8');
+const newBrainVisualCss=fs.readFileSync(path.join(docs,'newbrain-redesign.css'),'utf8');
+assert.ok(newBrainVisualHtml.includes('newbrain-redesign.css?v=2026-11-06.1'),'Visual stylesheet missing');
+for(const anchor of ['nb-viz-features-heading','nb-viz-architecture-heading','nb-viz-timeline-heading','nb-viz-evidence-heading','newbrain-research-records','newbrain-v3-closed-2026-11-05','newbrain-v9-closed-2026-11-04','roadmap']){
+  assert.ok(newBrainVisualHtml.includes('id="'+anchor+'"'),'Missing NewBrain visual/historical section: '+anchor);
+}
+for(const asset of ['newbrain-wave-ribbons.svg','newbrain-learning-layers.svg','newbrain-multimodal-concept.svg','animations/newbrain-card.gif','animations/newbrain-concept.gif']){
+  assert.ok(fs.existsSync(path.join(docs,'assets',asset)),'Missing NewBrain visual asset '+asset);
+}
+assert.ok((newBrainVisualHtml.match(/<section/g)||[]).length>60,'Older detailed NewBrain research sections were lost');
+assert.ok(newBrainVisualHtml.includes('Original12'),'Original12 limitation missing');
+assert.ok(newBrainVisualHtml.includes('including wrong answers')||newBrainVisualHtml.includes('including incorrect replies'),'Restart failure boundary missing');
+assert.ok(newBrainVisualHtml.includes('not a fully operational integrated system'),'Diagram must not overclaim runtime');
+assert.ok(newBrainVisualHtml.includes('labs.js?v=20261101-iris-float4'),'Ask Iris launcher removed');
+assert.ok(newBrainVisualCss.includes('prefers-reduced-motion:reduce'),'Reduced-motion fallback missing');
+assert.ok(newBrainVisualCss.includes('max-width:540px'),'Narrow-screen fallback missing');
+
 console.log('Iris October 26 Person Creator checks passed: integrity, 12 project sources, 30-book and historical library titles, bubble chat markup, research boundaries, Creator, movie plans, and legacy notes');
