@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-supporting-systems-2026-11-06",
+      "title": "NewBrain support systems: 69 authored checks pass; defects exposed",
+      "date": "2026-11-06",
+      "date_basis": "November 6 NewBrain V66 scoped hearing and voice records, without a new native learning benchmark",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "69/69 authored component checks passed; independent voice controls only 3/8. Separate-process state matched; hearing causality and migration still need fixes.",
+      "body": [
+        "Seven synthetic word WAVs and four simulated scene-perception outputs were reproduced in bounded local tests; person/voice restart was exact in the checked scope.",
+        "Separate independent voice probes exposed false success status and signal-control failures. Hearing tests found auditory-nerve bypass, audio input and chunk limitations and supplied speaker/distance data.",
+        "Checkpoint migration may overwrite outputs or backups. No newly qualified current native factual learning, open conversation or physical microphones/speakers; Original12 remains 2/12 and was not rerun."
+      ],
+      "boundary": "Passing authored regression tests and reproducible local audio do not qualify a complete learning brain or embodied voice system.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved neural concept art, not NewBrain audio test evidence",
+        "caption": "Illustrative neural artwork, not a test capture."
+      },
+      "sources": [
+        {
+          "label": "November 6 reviewed update",
+          "url": "updates.html#newbrain-voice-hearing-restart-2026-11-06"
+        },
+        {
+          "label": "Project research",
+          "url": "newbrain.html#newbrain-supporting-systems-2026-11-06"
+        }
+      ],
+      "evidence_kind": "november6-scoped-author69-independent-voice3of8-causal-hearing-and-migration-defects"
+    },
+    {
       "id": "arcade-lobby-release-2026-11-06",
       "title": "Arcade visual lobby and visitor-local passport shipped",
       "date": "2026-11-06",
