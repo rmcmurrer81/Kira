@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-05",
+  "prepared_on": "2026-11-06",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,40 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "arcade-lobby-release-2026-11-06",
+      "title": "Arcade ships four illustrated original-game cards",
+      "project": "Lab & website",
+      "track": "Public web experience · Automated browser QA",
+      "date": "2026-11-06",
+      "reviewed_on": "2026-11-06",
+      "status": "released",
+      "date_basis": "Committable first-party Arcade source and passing GitHub Actions on November 6",
+      "summary": "Visual Arcade with optional audio and a browser-local visit passport shipped across four game routes.",
+      "body": "A redesigned four-adventure homepage uses original in-house game screenshots. The optional Web Audio interface cues start only with a visitor action. The explorer passport counts links launched from the lobby, not completed missions. Arcade browser QA and Pages deployment passed for commit 65e393f; independent complete playthroughs were not measured.",
+      "boundary": "Website software delivery, not independent NewBrain or functional human-anatomy progress.",
+      "image": {
+        "path": "arcade/previews/circuitbound-real-gameplay-20261106.webp",
+        "label": "Original game scene",
+        "alt": "First-party Circuitbound web game screenshot",
+        "caption": "Kira Labs scripted-game scene, not a synthetic-person simulation result."
+      },
+      "sources": [
+        {
+          "label": "November 6 release report",
+          "url": "reports/arcade-lobby-release-2026-11-06.html#what-changed"
+        },
+        {
+          "label": "Live Arcade",
+          "url": "arcade/index.html#ar-games-title"
+        },
+        {
+          "label": "Passing Arcade browser QA",
+          "url": "https://github.com/rmcmurrer81/Kira/actions/runs/42178552255"
+        }
+      ],
+      "project_page": "arcade/index.html#ar-games-title"
+    },
     {
       "id": "newbrain-six-group-rehearsal-2026-11-05",
       "title": "Small NewBrain decoder: trained recall and replay, with failed unseen transfer",

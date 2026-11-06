@@ -1,8 +1,43 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-05",
+  "reviewed_on": "2026-11-06",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "arcade-lobby-release-2026-11-06",
+      "title": "Arcade visual lobby and visitor-local passport shipped",
+      "date": "2026-11-06",
+      "date_basis": "GitHub release commit and automated browser QA/Pages success",
+      "status": "working",
+      "track": "Web and educational experiences",
+      "summary": "First-party game-scene cards, opt-in interface sound and a local visit passport on the Arcade page.",
+      "body": [
+        "Four original scripted games and tutorials are presented through responsive cards and original site-captured gameplay scenes.",
+        "Optional sound requires a visitor action. The browser-only passport records opened links, not completed challenges.",
+        "Browser QA and GitHub Pages deployment passed for the release commit; an independent full playthrough was not performed."
+      ],
+      "boundary": "A website UI update; no NewBrain learning gain, completed anatomy or verified user achievement. Accepted Original12 remains 2/12.",
+      "image": {
+        "path": "arcade/previews/code-quest-real-gameplay-20261106.webp",
+        "alt": "First-party Code Quest screenshot from an original Kira Labs browser game",
+        "caption": "Original scripted-game image, not a NewBrain runtime screenshot."
+      },
+      "sources": [
+        {
+          "label": "November 6 release report",
+          "url": "reports/arcade-lobby-release-2026-11-06.html#what-changed"
+        },
+        {
+          "label": "Live Arcade",
+          "url": "arcade/index.html#ar-games-title"
+        },
+        {
+          "label": "Passing Arcade browser QA",
+          "url": "https://github.com/rmcmurrer81/Kira/actions/runs/42178552255"
+        }
+      ],
+      "evidence_kind": "public-site-code-and-browser-QA-passed"
+    },
     {
       "id": "newbrain-six-group-rehearsal-2026-11-05",
       "title": "Separate small decoder shows taught recall and rehearsal gains, not native qualification",
