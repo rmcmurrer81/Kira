@@ -4,6 +4,68 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-six-group-rehearsal-2026-11-05",
+      "title": "Separate small decoder shows taught recall and rehearsal gains, not native qualification",
+      "date": "2026-11-05",
+      "date_basis": "Reviewed fresh small-decoder outputs and separate-process readbacks; no Original12 replay",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Taught recall 12/12, 24/24 and 48/48 after reload; rehearsal retained both 12/12 cohorts, but held-out unknowns 0/8 and unseen wording 0/16.",
+      "body": [
+        "These were tests of a separate six-group character decoder, not the actual ten-group native NewBrain learner.",
+        "Rehearsal retained first and second cohorts at 12/12 each; without replay earlier facts fell to 0/12. Final crossed outputs reproduced after new-process reload, including erroneous held-outs.",
+        "The evaluation JSON command was fixed. Original12 remains 2/12, not rerun; natural conversation and generalization are not demonstrated."
+      ],
+      "boundary": "Taught-prompt memorization, replay and exact serialization do not establish native NewBrain recovery or robust understanding.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved concept illustration, not six-group decoder screenshot",
+        "caption": "Concept image; narrow results with missing generalization."
+      },
+      "sources": [
+        {
+          "label": "Public November 5 update",
+          "url": "updates.html#newbrain-decoder-rehearsal-2026-11-05"
+        },
+        {
+          "label": "Current NewBrain status",
+          "url": "newbrain.html#newbrain-v3-closed-2026-11-05"
+        }
+      ],
+      "evidence_kind": "separate-six-group-taught-recall-and-replay-positive-unseen-generalization-negative"
+    },
+    {
+      "id": "avatar-head-v7-clearance-2026-11-05",
+      "title": "Separate original-head fitting reaches post-form stage; eye-clearance still fails",
+      "date": "2026-11-05",
+      "date_basis": "One actual separate original-head V7 fit completion followed by strict geometry failure",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "Joint photo/form fit completed, but strict eye-clearance failed before a new usable render. Original Evelyn and full body remain unaccepted.",
+      "body": [
+        "A separate V7 original head run saved post-form geometry; a later triangle-clearance gate failed without producing a usable render.",
+        "Approved blue-eye geometry and materials were preserved. Rejected V12 head renders remain rejected, not superseded by this branch.",
+        "A V15 full-body build and proposed boundary modifications remain insufficient; no accepted complete body or full anatomy was produced."
+      ],
+      "boundary": "Passing one fitting stage is not likeness, visual acceptance or full-body integration.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Previously approved avatar concept art, not new verified head render",
+        "caption": "Concept image; geometric clearance still fails."
+      },
+      "sources": [
+        {
+          "label": "Public November 5 update",
+          "url": "updates.html#avatar-head-v7-clearance-2026-11-05"
+        },
+        {
+          "label": "Current Avatar Builder status",
+          "url": "kira-world-avatar-builder.html#avatar-builder-v12-body-v9-2026-11-05"
+        }
+      ],
+      "evidence_kind": "head-v7-photo-form-complete-eyeball-clearance-failed-body-still-unaccepted"
+    },
+    {
       "id": "newbrain-pathway-v3-closed-2026-11-05",
       "title": "NewBrain V3 closed; four conditions failed factual learning",
       "date": "2026-11-05",

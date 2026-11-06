@@ -25,6 +25,66 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-six-group-rehearsal-2026-11-05",
+      "title": "Small NewBrain decoder: trained recall and replay, with failed unseen transfer",
+      "project": "NewBrain",
+      "track": "Separate six-group decoder · Limited measured learning",
+      "date": "2026-11-05",
+      "reviewed_on": "2026-11-05",
+      "status": "development",
+      "date_basis": "November 5 Eastern review of separately saved small-decoder test results; the main native learner was not rerun",
+      "summary": "Trained mappings survived reload at 12/12, 24/24 and 48/48; replay retained two taught cohorts at 12/12 each, while unseen unknowns and wording still failed.",
+      "body": "Separate six-group answer-free recall tests retained taught mappings after fresh-process reload. The fixed two-cohort comparison retained 12/12 earlier and 12/12 later mappings with rehearsal, versus 0/12 earlier without rehearsal. A crossed 48-reply test had known 16/16 and taught unknown 8/8, but held-out unknown 0/8 and unseen wording 0/16; outputs nonetheless reproduced exactly after reload. The evaluation command's JSON error was repaired. These are not ten-group native model outcomes, general conversation or adoption. Protected Original12 stays 2/12, not rerun.",
+      "boundary": "A separate bounded decoder experiment, not a NewBrain native breakthrough; failed held-outs and no proof of durable open-ended learning.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved neural research concept art, not six-group decoder runtime evidence",
+        "caption": "Concept illustration; bounded recall and failed held-outs.",
+        "label": "Approved concept art"
+      },
+      "sources": [
+        {
+          "label": "Dated public results",
+          "url": "updates.html#newbrain-decoder-rehearsal-2026-11-05"
+        },
+        {
+          "label": "NewBrain project status",
+          "url": "newbrain.html#newbrain-v3-closed-2026-11-05"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-v3-closed-2026-11-05"
+    },
+    {
+      "id": "avatar-head-v7-clearance-2026-11-05",
+      "title": "Original head V7 reaches photo/form fit, then fails eye-clearance check",
+      "project": "Kira World",
+      "track": "Original Avatar Builder · Partial engineering result",
+      "date": "2026-11-05",
+      "reviewed_on": "2026-11-05",
+      "status": "development",
+      "date_basis": "Actually executed separate original-head V7 fitting branch; failed unchanged eye-clearance check before render",
+      "summary": "Joint photo/form fitting completed and saved a post-form stage, but strict geometric eye clearance failed; no new approved head or complete body.",
+      "body": "A distinct original-head V7 solver run progressed beyond the photo/form fitting stage and preserved its post-form geometry, then failed the strict projected-triangle eye-clearance check. It did not produce a new usable render or override the rejected original V12 head images. The approved blue eyes remain unchanged. The original full-body V15 attempt and candidate boundary modifications did not establish accepted body geometry or anatomy.",
+      "boundary": "Engineering stage progress only: no visually approved Evelyn head, usable whole-person export, complete anatomy or embodied intelligence.",
+      "image": {
+        "path": "assets/evelyn-hart-holographic-medlab-concept-20261021.jpg",
+        "alt": "Approved avatar medical concept illustration, not a newly accepted Evelyn head",
+        "caption": "Concept image; photo/form progress followed by clearance failure.",
+        "label": "Approved concept art"
+      },
+      "sources": [
+        {
+          "label": "Dated Avatar Builder update",
+          "url": "updates.html#avatar-head-v7-clearance-2026-11-05"
+        },
+        {
+          "label": "Avatar Builder review",
+          "url": "kira-world-avatar-builder.html#avatar-builder-v12-body-v9-2026-11-05"
+        }
+      ],
+      "project_page": "kira-world-avatar-builder.html#avatar-builder-v12-body-v9-2026-11-05"
+    },
+    {
       "id": "newbrain-v3-closed-negative-2026-11-05",
       "title": "Controlled NewBrain V3 pathway study closed negative",
       "project": "NewBrain",
