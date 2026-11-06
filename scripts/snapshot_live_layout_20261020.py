@@ -30,7 +30,7 @@ with sync_playwright() as p:
               result.researchPillCircles=[...document.querySelectorAll('.hl-research-ribbon .hl-pillar-mark')].map(el=>{const b=el.getBoundingClientRect();return {x:Math.round(b.x*10)/10, y:Math.round(b.y*10)/10, w:Math.round(b.width*10)/10, h:Math.round(b.height*10)/10};});
               result.heroImgNaturalWidth=document.querySelector('.xf-hero-visual img')?.naturalWidth;
               result.heroImgNaturalHeight=document.querySelector('.xf-hero-visual img')?.naturalHeight;
-              const heroImg=document.querySelector('.kw-detail .kw-hero-art img');
+              const heroImg=document.querySelector('.kw-avatar-page .ab-character-portrait img, .kw-detail .kw-hero-art img');
               result.kiraTopicHero=heroImg ? {naturalWidth:heroImg.naturalWidth,naturalHeight:heroImg.naturalHeight,src:heroImg.getAttribute('src'),fit:getComputedStyle(heroImg).objectFit,position:getComputedStyle(heroImg).objectPosition} : null;
               result.kiraPortraitRoutes=[...document.querySelectorAll('.kw-detail .kw-route img[src*="evelyn-hart-holographic"]')].map(img=>({src:img.getAttribute('src'),fit:getComputedStyle(img).objectFit}));
               return result;

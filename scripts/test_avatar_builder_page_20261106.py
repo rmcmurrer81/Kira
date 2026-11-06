@@ -52,7 +52,7 @@ def check_structure(page):
     assert player.get_attribute("autoplay") is None, "Do not autoplay the silent sitting diagnostic"
     assert "public-censored.mp4" in player.locator("source").get_attribute("src")
     assert page.locator('.kw-navline a[aria-current="page"]').count() == 1
-    assert page.locator("body > #main").count() == 0
+    assert page.locator("body > main#main").count() == 1, "Main must remain a single direct child of body"
     assert page.locator("script[src*='labs.js']").count() >= 1, "Iris site script missing"
     assert page.locator("#kw-heading").inner_text().startswith("Avatar Builder")
 
