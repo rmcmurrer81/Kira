@@ -176,12 +176,19 @@
     });
   }
 
-  // Partner path: show it in existing navigation, without duplicating static links.
+  // Partner path: place Partners after Support on root AND nested pages.
+  // Resolve URLs relative to this shared script instead of comparing raw hrefs.
   const partnerNav=document.getElementById('primary-nav');
-  if(partnerNav&&!partnerNav.querySelector('a[href="partners.html"]')){
-    const supportLink=partnerNav.querySelector('a[href="support.html"]');
-    const item=document.createElement('a');item.href=new URL('partners.html',document.currentScript?.src||document.baseURI).href;item.textContent='Partners';
-    if(supportLink)supportLink.insertAdjacentElement('afterend',item);
-    else partnerNav.appendChild(item);
+  if(partnerNav){
+    const source=document.currentScript?.src||document.baseURI;
+    const partnerHref=new URL('partners.html',source).href;
+    const supportHref=new URL('support.html',source).href;
+    const existing=Array.from(partnerNav.querySelectorAll('a[href]')).some(a=>a.href===partnerHref);
+    if(!existing){
+      const supportLink=Array.from(partnerNav.querySelectorAll('a[href]')).find(a=>a.href===supportHref);
+      const item=document.createElement('a');item.href=partnerHref;item.textContent='Partners';
+      if(supportLink)supportLink.insertAdjacentElement('afterend',item);
+      else partnerNav.appendChild(item);
+    }
   }
 })();

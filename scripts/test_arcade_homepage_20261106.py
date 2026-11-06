@@ -27,6 +27,13 @@ def test():
         page.locator("#ar-title").wait_for()
         assert page.locator(".ar-game-tile").count() == 4
         assert page.locator("#ar-passport").count() == 1
+        # Arcade has the exact same primary navigation labels and order as the main site.
+        expected = ["Home", "Projects", "Research", "Lab timeline", "About",
+                    "Support", "Partners", "Arcade", "Shop", "Contact"]
+        titles = page.locator("#primary-nav a").all_inner_texts()
+        assert titles == expected, f"Arcade navigation differs from Kira Labs: {titles}"
+        assert page.locator('#primary-nav a[aria-current="page"]').inner_text() == "Arcade"
+        assert page.locator("#primary-nav a").count() == len(set(titles))
         check_images(page)
         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Desktop horizontal overflow"
         assert page.locator("#ar-sound-toggle").get_attribute("aria-pressed") == "false", "Sound must be off until requested"
