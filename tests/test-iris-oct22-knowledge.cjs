@@ -382,7 +382,7 @@ assert.ok(fs.readFileSync(path.join(docs,'contact.html'),'utf8').includes('id="d
 /* NewBrain page visual-regression safety, November 6: real page, not mockup. */
 const newBrainVisualHtml=fs.readFileSync(path.join(docs,'newbrain.html'),'utf8');
 const newBrainVisualCss=fs.readFileSync(path.join(docs,'newbrain-redesign.css'),'utf8');
-assert.ok(newBrainVisualHtml.includes('newbrain-redesign.css?v=2026-11-06.2'),'Visual stylesheet missing');
+assert.ok(newBrainVisualHtml.includes('newbrain-redesign.css?v=2026-11-06.1'),'Visual stylesheet missing');
 for(const anchor of ['nb-viz-features-heading','nb-viz-architecture-heading','nb-viz-timeline-heading','nb-viz-evidence-heading','newbrain-research-records','newbrain-v3-closed-2026-11-05','newbrain-v9-closed-2026-11-04','roadmap']){
   assert.ok(newBrainVisualHtml.includes('id="'+anchor+'"'),'Missing NewBrain visual/historical section: '+anchor);
 }
