@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-11-06-3.json';
+const filename='knowledge/iris-projects-2026-11-06-4.json';
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
 const loader=fs.readFileSync(path.join(docs,'iris.js'),'utf8');
@@ -13,12 +13,21 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-11-06.3'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-11-06.3'));
+assert.ok(irisPage.includes('iris.js?v=2026-11-06.4'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-11-06.4'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-11-06');
-assert.equal(data.content_version,'2026-11-06.3');
+assert.equal(data.content_version,'2026-11-06.4');
+const archivedNov63=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-06-3.json'),'utf8'));
+assert.equal(iris.validate(archivedNov63),archivedNov63,'Preserve previous November 6.3 research pack');
+assert.equal(archivedNov63.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-v68-recovery-2026-11-06');
+assert.match(data.projects.find(p=>p.id==='avatar-body').status,/five genuinely changing authored animation clips/);
+assert.match(data.projects.find(p=>p.id==='avatar-body').limits,/does not qualify full anatomy/);
+assert.ok(fs.readFileSync(path.join(docs,'kira-world-avatar-builder.html'),'utf8').includes('id="avatar-v77-animation-export-2026-11-06"'));
+assert.ok(fs.readFileSync(path.join(docs,'updates.html'),'utf8').includes('id="avatar-v77-animation-export-2026-11-06"'));
+assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(m=>m.id==='avatar-v77-animation-export-2026-11-06'));
+assert.ok(fs.readFileSync(path.join(docs,'labs-data.js'),'utf8').includes('"id": "avatar-v77-animation-export-2026-11-06"'));
 const archivedNov62=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-06-2.json'),'utf8'));
 assert.equal(iris.validate(archivedNov62),archivedNov62,'Previous Nov 6.2 Iris pack must remain available');
 assert.equal(archivedNov62.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-supporting-systems-2026-11-06');
@@ -72,7 +81,7 @@ const priorNov44=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(priorNov44),priorNov44,'Preserve previous Nov4.4 reviewed knowledge and original source anchors');
 assert.equal(priorNov44.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v9-pathway-study-2026-11-04');
 assert.equal(priorNov44.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v8-v9-body-v5-2026-11-04');
-for(const [id,src] of [['newbrain','newbrain.html#newbrain-v68-component-verification-2026-11-06'],['avatar-body','kira-world-avatar-builder.html#avatar-v68-recovery-2026-11-06']]){
+for(const [id,src] of [['newbrain','newbrain.html#newbrain-v68-component-verification-2026-11-06'],['avatar-body','kira-world-avatar-builder.html#avatar-v77-animation-export-2026-11-06']]){
   assert.equal(data.projects.find(p=>p.id===id).source,src,'latest reviewed source for '+id);
   const [page,anchor]=src.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Latest public research anchor missing '+id);
@@ -89,7 +98,7 @@ const priorNov43=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(priorNov43),priorNov43,'Preserve archived Nov4.3 resource and head results');
 assert.equal(priorNov43.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v8v2-admission-2026-11-04');
 assert.equal(priorNov43.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v6-v7-source-review-2026-11-04');
-for(const [id,src] of [['newbrain','newbrain.html#newbrain-v68-component-verification-2026-11-06'],['avatar-body','kira-world-avatar-builder.html#avatar-v68-recovery-2026-11-06']]){
+for(const [id,src] of [['newbrain','newbrain.html#newbrain-v68-component-verification-2026-11-06'],['avatar-body','kira-world-avatar-builder.html#avatar-v77-animation-export-2026-11-06']]){
   assert.equal(data.projects.find(p=>p.id===id).source,src);
   const [page,fragment]=src.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+fragment+'"'),'Latest public source anchor missing '+id);
@@ -159,7 +168,7 @@ for(const [page,anchor] of [['newbrain.html','newbrain-readout-source-2026-11-02
 
 const priorNov1=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-01-1.json'),'utf8'));
 assert.equal(iris.validate(priorNov1),priorNov1,'Immutable Nov1.1 pack must remain valid');
-assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-v68-recovery-2026-11-06');
+assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-v77-animation-export-2026-11-06');
 assert.match(data.projects.find(p=>p.id==='newbrain').status,/OPT-IN ADAM/);
 assert.match(data.projects.find(p=>p.id==='avatar-body').status,/round eyeballs.*EYELIDS/);
 for(const [page,id] of [['newbrain.html','newbrain-native-adam-candidate-2026-11-01'],['kira-world-avatar-builder.html','avatar-builder-profile-fields-2026-11-01']])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+id+'"'),'New status section missing '+id);
@@ -169,7 +178,7 @@ for(const x of ['LATEST NOV01 RETRIEVAL ONLY','800 calls','34/37','23/37','0/37'
 assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v68-component-verification-2026-11-06');
 for(const [page,anchor] of [['newbrain.html','newbrain-opt-in-context-selection-2026-11-01'],['updates.html','newbrain-historical-context-selection-2026-11-01'],['reports/newbrain-opt-in-historical-context-2026-11-01.html','historical-context-qualification']])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Missing Nov1 anchor '+page);
 // The picture timeline uses a new Nov 6.3 cache key for the two new V68 research milestones.
-assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-06.3'));
+assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-06.4'));
 const priorOct314=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-31-4.json'),'utf8'));
 assert.equal(iris.validate(priorOct314),priorOct314,'Preserve prior Oct31.4 immutable public pack');
 for(const q of ['LATEST OCT31 EXECUTED MEMORY RETRIEVAL','25/30','0/30','24/30','Original12 accepted 2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(q),'Missing latest retrieval result '+q);
@@ -255,7 +264,7 @@ const nb=ask('What are the latest NewBrain test results?');
 assert.equal(nb.id,'newbrain');assert.equal(nb.facet,'status');
 for(const q of ['OCTOBER 29','Actual47','Actual49','Actual51','Actual52','0/10 factual','1/12','2/12','UNRUN','checkpoint NOT adopted'])assert.ok(priorOct293.projects.find(p=>p.id==='newbrain').status.includes(q),'Preserved Oct29 previous NewBrain review '+q);
 assert.ok(nb.sources.includes('iris-current-newbrain'));
-assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v68-component-verification-2026-11-06');assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-v68-recovery-2026-11-06');
+assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v68-component-verification-2026-11-06');assert.equal(data.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-v77-animation-export-2026-11-06');
 assert.equal(priorOct313.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-a116-practice-eligibility-2026-10-31');assert.equal(priorOct313.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-camera-source112-2026-10-31');
 assert.equal(priorOct312.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-single-reply-a108-2026-10-31');assert.equal(priorOct312.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-connected-head-torso-source109-2026-10-31');
 assert.equal(priorOct305.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-continuation-a94-2026-10-30');

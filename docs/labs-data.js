@@ -25,6 +25,36 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "avatar-v77-animation-export-2026-11-06",
+      "title": "V77 original-body animated GLB export verified; anatomical failure remains",
+      "project": "Kira World",
+      "track": "Avatar Builder · Export and animation data, independent controls",
+      "date": "2026-11-06",
+      "reviewed_on": "2026-11-06",
+      "status": "development",
+      "date_basis": "Actual November 6 independent V77 export, author test and strict verification; no new accepted render",
+      "summary": "Five genuinely changing clips were exported from the original-body candidate; 129 tests passed and one skipped, but its anatomy remains unchanged and unacceptable.",
+      "body": "An independent V77 review verified the original-body GLB/Blender pipeline and five changing authored animation clips. The source geometry/rig/skinning/UV/material arrays match the earlier rejected body at 68,328 vertices and 136,224 triangles, using generic eyes. An estimated approved-eye replacement reaches 170,816 triangles—30,816 over budget. Of 29 additional strict control cases, 22 exposed unhandled validation. No accepted Evelyn likeness, realistic anatomy or actual natural deformation test; Native NewBrain unchanged.",
+      "boundary": "Exporting changing animation data is not a safe, realistic or accepted full-body system. No private body renders, reference photos or models published.",
+      "image": {
+        "path": "assets/kira-world-avatar-builder-visual-20261023.svg",
+        "alt": "Approved rigging research concept art, not the V77 body model",
+        "caption": "Concept image. Original body export progress, no visual acceptance.",
+        "label": "Concept art"
+      },
+      "sources": [
+        {
+          "label": "Nov 6 V77 public summary",
+          "url": "updates.html#avatar-v77-animation-export-2026-11-06"
+        },
+        {
+          "label": "Project record",
+          "url": "kira-world-avatar-builder.html#avatar-v77-animation-export-2026-11-06"
+        }
+      ],
+      "project_page": "kira-world-avatar-builder.html#avatar-v77-animation-export-2026-11-06"
+    },
+    {
       "id": "newbrain-v68-engineering-2026-11-06",
       "title": "V68 NewBrain audio controls pass bounded tests; no Native learning gain",
       "project": "NewBrain",

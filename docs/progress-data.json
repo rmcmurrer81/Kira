@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "avatar-v77-animation-export-2026-11-06",
+      "title": "Avatar Builder V77 exports five animated clips; original anatomy still rejected",
+      "date": "2026-11-06",
+      "date_basis": "November 6 private V77 independent export review, existing generated candidate and strict-control results",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "An original-body GLB/Blender export contains five genuinely changing animation clips, with 129 passing tests and one skipped. Geometry remains the same rejected body.",
+      "body": [
+        "Independent V77 review confirmed changing authored clips through the original-body export pipeline; this is an animation data advance, not evidence of realistic motion, skeletal contact or safe deformation.",
+        "The candidate remains 68,328 vertices/136,224 triangles with generic procedural eyes. Mesh, rig, skinning, UV and materials match the earlier rejected draft; no photographic or video reference shaped this body.",
+        "A proposed approved-eye replacement would be 170,816 triangles, 30,816 above the 140,000 limit. Twenty-two of 29 additional independent validation controls exposed unhandled cases, so neither anatomy nor production readiness is accepted."
+      ],
+      "boundary": "Working GLB animation export must not be confused with original Evelyn likeness, anatomical success, correct approved-eye integration, safe skin deformation or humanlike movement.",
+      "image": {
+        "path": "assets/kira-world-avatar-builder-visual-20261023.svg",
+        "alt": "Previously approved conceptual avatar rigging artwork, not a render of the unaccepted V77 body",
+        "caption": "Illustrative concept only; private rejected diagnostic renders are not published."
+      },
+      "sources": [
+        {
+          "label": "V77 Nov 6 public findings",
+          "url": "updates.html#avatar-v77-animation-export-2026-11-06"
+        },
+        {
+          "label": "Avatar Builder project evidence",
+          "url": "kira-world-avatar-builder.html#avatar-v77-animation-export-2026-11-06"
+        }
+      ],
+      "evidence_kind": "V77-original-export-five-changing-animated-clips-129pass-one-skip-anatomy-unchanged"
+    },
+    {
       "id": "newbrain-v68-engineering-2026-11-06",
       "title": "NewBrain V68: bounded audio tests improve; Native learning unchanged",
       "date": "2026-11-06",
