@@ -338,47 +338,17 @@
     "page": "newbrain.html",
     "device": "desktop",
     "geometry": {
-      ".xf-hero": {
-        "x": 0,
-        "y": 83,
-        "w": 1440,
-        "h": 446
-      },
-      ".xf-hero-copy": {
-        "x": 44,
-        "y": 107,
-        "w": 608,
-        "h": 397
-      },
-      ".xf-hero-visual": {
-        "x": 477,
-        "y": 83,
-        "w": 963,
-        "h": 445
-      },
-      ".xf-hero-visual>img": {
-        "x": 477,
-        "y": 83,
-        "w": 963,
-        "h": 445
-      },
-      ".xf-display": {
-        "x": 44,
-        "y": 161,
-        "w": 608,
-        "h": 129
-      },
       ".xf-section": {
         "x": 0,
-        "y": 35347,
+        "y": 40529,
         "w": 1440,
         "h": 921
       },
       "scrollWidth": 1440,
       "viewportWidth": 1440,
       "researchPillCircles": [],
-      "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941,
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
       "kiraTopicHero": null,
       "kiraPortraitRoutes": []
     },
@@ -754,47 +724,17 @@
     "page": "newbrain.html",
     "device": "wide",
     "geometry": {
-      ".xf-hero": {
-        "x": 0,
-        "y": 83,
-        "w": 1980,
-        "h": 446
-      },
-      ".xf-hero-copy": {
-        "x": 250,
-        "y": 96,
-        "w": 655,
-        "h": 418
-      },
-      ".xf-hero-visual": {
-        "x": 724,
-        "y": 83,
-        "w": 1256,
-        "h": 445
-      },
-      ".xf-hero-visual>img": {
-        "x": 724,
-        "y": 83,
-        "w": 1256,
-        "h": 445
-      },
-      ".xf-display": {
-        "x": 250,
-        "y": 151,
-        "w": 655,
-        "h": 150
-      },
       ".xf-section": {
         "x": 0,
-        "y": 36403,
+        "y": 42087,
         "w": 1980,
         "h": 942
       },
       "scrollWidth": 1980,
       "viewportWidth": 1980,
       "researchPillCircles": [],
-      "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941,
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
       "kiraTopicHero": null,
       "kiraPortraitRoutes": []
     },
@@ -1170,47 +1110,17 @@
     "page": "newbrain.html",
     "device": "tablet",
     "geometry": {
-      ".xf-hero": {
-        "x": 0,
-        "y": 74,
-        "w": 980,
-        "h": 463
-      },
-      ".xf-hero-copy": {
-        "x": 44,
-        "y": 74,
-        "w": 401,
-        "h": 462
-      },
-      ".xf-hero-visual": {
-        "x": 329,
-        "y": 74,
-        "w": 651,
-        "h": 462
-      },
-      ".xf-hero-visual>img": {
-        "x": 329,
-        "y": 74,
-        "w": 651,
-        "h": 462
-      },
-      ".xf-display": {
-        "x": 44,
-        "y": 129,
-        "w": 401,
-        "h": 95
-      },
       ".xf-section": {
         "x": 0,
-        "y": 35212,
+        "y": 36896,
         "w": 980,
         "h": 958
       },
       "scrollWidth": 980,
       "viewportWidth": 980,
       "researchPillCircles": [],
-      "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941,
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
       "kiraTopicHero": null,
       "kiraPortraitRoutes": []
     },
@@ -1586,47 +1496,17 @@
     "page": "newbrain.html",
     "device": "mobile",
     "geometry": {
-      ".xf-hero": {
-        "x": 0,
-        "y": 74,
-        "w": 390,
-        "h": 851
-      },
-      ".xf-hero-copy": {
-        "x": 17,
-        "y": 74,
-        "w": 356,
-        "h": 550
-      },
-      ".xf-hero-visual": {
-        "x": 0,
-        "y": 624,
-        "w": 390,
-        "h": 300
-      },
-      ".xf-hero-visual>img": {
-        "x": 0,
-        "y": 624,
-        "w": 390,
-        "h": 300
-      },
-      ".xf-display": {
-        "x": 17,
-        "y": 136,
-        "w": 356,
-        "h": 77
-      },
       ".xf-section": {
         "x": 0,
-        "y": 63489,
+        "y": 66077,
         "w": 390,
         "h": 1707
       },
       "scrollWidth": 390,
       "viewportWidth": 390,
       "researchPillCircles": [],
-      "heroImgNaturalWidth": 1672,
-      "heroImgNaturalHeight": 941,
+      "heroImgNaturalWidth": null,
+      "heroImgNaturalHeight": null,
       "kiraTopicHero": null,
       "kiraPortraitRoutes": []
     },
