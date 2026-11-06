@@ -16,6 +16,14 @@
   let selected='';try{selected=decodeURIComponent(initial.hash.slice(1));}catch{}
   if(!data.milestones.some(m=>m.id===selected))selected='shiftbrief-010';
   let visible=[],debounce;
+  // Autoplay is purely a visual tour of already reviewed records: no new research claims.
+  const STEP=228, OFFSET=118, SPEED_PX_PER_SECOND=68;
+  const rail=$('timeline-scroll'),tourButton=$('journey-autoplay'),tourRestart=$('journey-restart');
+  const motionStatus=$('journey-motion-status'),journeyFill=$('journey-progress-fill');
+  let tourActive=false,frameId=0,lastTick=0,autoSelected=-1;
+  let hasDeepLink=false;
+  try{hasDeepLink=Boolean(initial.hash&&data.milestones.some(m=>m.id===decodeURIComponent(initial.hash.slice(1))));}catch{hasDeepLink=false;}
+
   const safeURL=value=>{try{const u=new URL(value,'https://kiralabs.org/');return ['https:','http:'].includes(u.protocol)&&!u.username&&!u.password?u:null;}catch{return null;}};
   const imageURL=m=>/^assets\/[a-z0-9._-]+$/i.test(m.image?.path||'')?'https://kiralabs.org/'+m.image.path:'';
   const label=m=>m.date?new Date(m.date+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}):m.status==='future'?'Next':'Now';
@@ -28,7 +36,7 @@
   }
   function centerSelected(smooth=true){
     const i=visible.findIndex(m=>m.id===selected);if(i<0)return;
-    const scroll=$('timeline-scroll');const x=105+i*190;
+    const scroll=rail;const x=OFFSET+i*STEP;
     scroll.scrollTo({left:Math.max(0,x-scroll.clientWidth/2),behavior:smooth&&!reduced()?'smooth':'auto'});
   }
   function showVideo(m){
@@ -60,12 +68,13 @@
   }
   $('detail-image').addEventListener('load',()=>{$('detail-image').hidden=false;$('timeline-image-error').hidden=true;});
   $('detail-image').addEventListener('error',()=>{$('detail-image').hidden=true;$('timeline-image-error').hidden=false;});
-  function select(id,announce=true,center=true){
+  function select(id,announce=true,center=true,automatic=false){
     const m=visible.find(x=>x.id===id);if(!m)return;selected=id;
     const i=visible.indexOf(m);
     root.querySelectorAll('.milestone-point').forEach(b=>{const on=b.dataset.id===id;b.setAttribute('aria-pressed',String(on));b.tabIndex=on?0:-1;});
     $('milestone-slider').value=String(i);$('milestone-slider').setAttribute('aria-valuetext',`${i+1} of ${visible.length}: ${m.title}`);$('milestone-slider').style.setProperty('--progress',`${visible.length>1?i/(visible.length-1)*100:0}%`);
     $('selected-position').textContent=`${i+1} / ${visible.length}`;
+    $('journey-current-title').textContent=label(m)+' · '+m.title;
     $('previous-milestone').disabled=i===0;$('next-milestone').disabled=i===visible.length-1;
     const badge=$('detail-status');badge.textContent=data.statuses[m.status];badge.className='pill '+m.status;
     $('detail-date').textContent=m.date?label(m):m.status==='future'?'No date set':'Snapshot reviewed '+m.reviewed_on;
@@ -77,13 +86,13 @@
     $('detail-image-link').href=imageURL(m);$('image-label').textContent=m.image.label;$('image-caption').textContent=m.image.caption;
     $('detail-sources').replaceChildren(...m.sources.map(s=>link(s.label+(s.url.startsWith('http')?' ↗':' →'),s.url)),link(m.project==='Lab & website'?'Meet the founder →':'Explore '+m.project+' →',m.project_page));
     showVideo(m);$('milestone-detail').hidden=false;
-    $('load-status').textContent='Selected: '+m.title+'. Full details below the timeline.';
+    if(!automatic)$('load-status').textContent='Selected: '+m.title+'. Full details below the timeline.';
     if(announce)writeURL();if(center)centerSelected(announce);
   }
   function draw(){
     const list=$('milestones'),svg=$('connections');list.replaceChildren();svg.replaceChildren();
-    const width=Math.max($('timeline-scroll').clientWidth,visible.length*190+28);$('constellation').style.width=width+'px';svg.setAttribute('viewBox',`0 0 ${width} 356`);
-    const points=visible.map((m,i)=>({x:105+i*190,y:[138,224,119,215,148,236][i%6]}));
+    const width=Math.max(rail.clientWidth,visible.length*STEP+40);$('constellation').style.width=width+'px';svg.setAttribute('viewBox',`0 0 ${width} 445`);
+    const points=visible.map((m,i)=>({x:OFFSET+i*STEP,y:[164,258,142,252,174,267][i%6]}));
     if(points.length>1){const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',points.map((p,i)=>(i?'L':'M')+p.x+','+p.y).join(' '));path.setAttribute('class','connection-path');svg.append(path);}
     visible.forEach((m,i)=>{
       const li=make('li');li.style.setProperty('--x',points[i].x+'px');li.style.setProperty('--y',points[i].y+'px');
@@ -100,7 +109,7 @@
     $('milestone-slider').max=String(Math.max(0,visible.length-1));$('milestone-slider').disabled=visible.length<2;
     $('range-start').textContent=visible[0]?label(visible[0]):'';$('range-end').textContent=visible.length?label(visible.at(-1)):'';
     const empty=!visible.length;$('timeline-scroll').hidden=empty;$('empty-timeline').hidden=!empty;
-    if(empty){if(window.KiraVideo)window.KiraVideo.clear($('video-area'));$('milestone-detail').hidden=true;$('previous-milestone').disabled=true;$('next-milestone').disabled=true;$('selected-position').textContent='0 / 0';$('load-status').textContent='No results. Your other milestones have not been removed.';}
+    if(empty){if(window.KiraVideo)window.KiraVideo.clear($('video-area'));$('milestone-detail').hidden=true;$('previous-milestone').disabled=true;$('next-milestone').disabled=true;$('selected-position').textContent='0 / 0';$('journey-current-title').textContent='No matching milestones';$('load-status').textContent='No results. Your other milestones have not been removed.';}
   }
   function render(announce=true){
     const tokens=$('timeline-search').value.toLowerCase().trim().split(/\s+/).filter(Boolean);
@@ -118,9 +127,117 @@
   $('timeline-search').addEventListener('input',()=>{clearTimeout(debounce);debounce=setTimeout(()=>render(),130);});$('timeline-sort').addEventListener('change',()=>render());
   $('milestone-slider').addEventListener('input',e=>{const m=visible[Number(e.target.value)];if(m)select(m.id);});
   for(const [id,direction] of [['previous-milestone',-1],['next-milestone',1]])$(id).addEventListener('click',()=>{const i=visible.findIndex(m=>m.id===selected);if(visible[i+direction])select(visible[i+direction].id);});
-  window.addEventListener('hashchange',()=>{let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}const m=data.milestones.find(m=>m.id===id);if(!m)return;selected=id;if(!visible.some(m=>m.id===id)){project='all';filter='all';$('timeline-search').value='';}render(false);});
+  window.addEventListener('hashchange',()=>{stopTour('Paused for navigation');let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}const m=data.milestones.find(m=>m.id===id);if(!m)return;selected=id;if(!visible.some(m=>m.id===id)){project='all';filter='all';$('timeline-search').value='';}render(false);});
   // Re-centering affects the picture rail, never the visitor's vertical reading position.
-  if(window.ResizeObserver){let first=true;new ResizeObserver(()=>{if(first){first=false;return;}centerSelected(false);}).observe($('timeline-scroll'));}
-  window.addEventListener('pagehide',()=>{if(window.KiraVideo)window.KiraVideo.clear($('video-area'));});
-  try{render(false);root.dataset.ready='true';}catch(e){$('load-status').textContent='The picture controls could not load. Read the development updates below instead.';console.error('Timeline:',e);}
+  if(window.ResizeObserver){let first=true;new ResizeObserver(()=>{if(first){first=false;return;}if(!tourActive)centerSelected(false);}).observe(rail);}
+  function maxJourneyScroll(){return Math.max(0,rail.scrollWidth-rail.clientWidth);}
+  function paintJourneyProgress(){
+    const max=maxJourneyScroll();
+    const ratio=max?Math.min(1,Math.max(0,rail.scrollLeft/max)):0;
+    journeyFill.style.transform='scaleX('+ratio.toFixed(5)+')';
+  }
+  function displayTourState(message){
+    root.closest('main')?.querySelector('.constellation-shell')?.setAttribute('data-playing',String(tourActive));
+    tourButton.setAttribute('aria-pressed',String(tourActive));
+    tourButton.textContent=tourActive?'Ⅱ Pause journey':'▶ Play journey';
+    tourButton.setAttribute('aria-label',tourActive?'Pause automatic timeline':'Play automatic timeline from the current position');
+    motionStatus.textContent=message||(tourActive?'Auto journey playing':'Journey paused');
+    tourButton.disabled=reduced()||visible.length<2;
+    tourButton.title=reduced()?'Automatic motion is disabled by your reduced-motion preference':'';
+    paintJourneyProgress();
+  }
+  function stopTour(reason='Journey paused'){
+    if(frameId)cancelAnimationFrame(frameId);
+    frameId=0;lastTick=0;tourActive=false;
+    displayTourState(reason);
+  }
+  function onJourneyFrame(time){
+    if(!tourActive)return;
+    if(reduced()){stopTour('Motion disabled by your accessibility setting');return;}
+    if(!lastTick)lastTick=time;
+    const dt=Math.min(Math.max(0,time-lastTick),100)/1000;
+    lastTick=time;
+    const max=maxJourneyScroll();
+    if(max<=0){stopTour('Journey fits in the visible area');return;}
+    rail.scrollLeft=Math.min(max,rail.scrollLeft+SPEED_PX_PER_SECOND*dt);
+    // Follow the leading visible card, not the middle of the viewport.
+    const cursor=rail.scrollLeft+Math.min(OFFSET,rail.clientWidth*.23);
+    const index=Math.max(0,Math.min(visible.length-1,Math.round((cursor-OFFSET)/STEP)));
+    if(index!==autoSelected&&visible[index]){
+      autoSelected=index;
+      select(visible[index].id,false,false,true);
+    }
+    paintJourneyProgress();
+    if(rail.scrollLeft>=max-.6){
+      if(visible.at(-1))select(visible.at(-1).id,false,false,true);
+      stopTour('Journey complete · choose Play to start again');
+      return;
+    }
+    frameId=requestAnimationFrame(onJourneyFrame);
+  }
+  function startTour(fromBeginning=false){
+    if(reduced()){stopTour('Automatic movement is off for reduced motion');return;}
+    if(visible.length<2){stopTour('Select more than one milestone to play');return;}
+    if(frameId)cancelAnimationFrame(frameId);
+    const max=maxJourneyScroll();
+    if(fromBeginning||rail.scrollLeft>=max-1){
+      rail.scrollTo({left:0,behavior:'instant'});
+      if(visible[0])select(visible[0].id,false,false,true);
+    }
+    tourActive=true;lastTick=0;autoSelected=visible.findIndex(m=>m.id===selected);
+    displayTourState('Auto journey playing · click to pause');
+    frameId=requestAnimationFrame(onJourneyFrame);
+  }
+  // Every deliberate visitor interaction ends automatic motion. The play control is
+  // intentionally exempt so the visitor can pause and resume with the same button.
+  document.addEventListener('pointerdown',event=>{
+    if(!tourActive||event.target.closest('#journey-autoplay'))return;
+    stopTour('Paused for your selection');
+  },{capture:true,passive:true});
+  document.addEventListener('keydown',event=>{
+    if(!tourActive||event.target?.id==='journey-autoplay'&&['Enter',' '].includes(event.key))return;
+    stopTour('Paused for keyboard navigation');
+  },{capture:true});
+  document.addEventListener('wheel',()=>{if(tourActive)stopTour('Paused for scrolling');},{capture:true,passive:true});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden&&tourActive)stopTour('Paused while the tab is hidden');});
+  root.addEventListener('focusin',event=>{if(tourActive&&event.target!==tourButton)stopTour('Paused for keyboard focus');});
+  rail.addEventListener('scroll',()=>{if(!tourActive)paintJourneyProgress();},{passive:true});
+  tourButton.addEventListener('click',()=>{
+    if(tourActive)stopTour('Paused by you');
+    else startTour();
+  });
+  tourRestart.addEventListener('click',()=>{
+    stopTour('Restarted at the beginning · press Play to continue');
+    if(visible[0]){
+      select(visible[0].id,true,false);
+      rail.scrollTo({left:0,behavior:'instant'});
+      paintJourneyProgress();
+    }
+  });
+  const accessibilityMotion=matchMedia('(prefers-reduced-motion: reduce)');
+  accessibilityMotion.addEventListener?.('change',()=>{
+    if(accessibilityMotion.matches)stopTour('Motion disabled by your accessibility setting');
+    else displayTourState('Journey paused · press Play when ready');
+  });
+  window.addEventListener('pagehide',()=>{
+    stopTour('Journey paused');
+    if(window.KiraVideo)window.KiraVideo.clear($('video-area'));
+  });
+  try{
+    $('journey-total').textContent=String(data.milestones.length);
+    $('journey-projects').textContent=String(data.projects.length);
+    render(false);
+    root.dataset.ready='true';
+    const initiallyLinked=hasDeepLink;
+    if(!initiallyLinked&&visible.length){
+      select(visible[0].id,false,false,true);
+      rail.scrollTo({left:0,behavior:'instant'});
+    }
+    displayTourState(reduced()?'Manual journey · reduced motion enabled':'Journey ready');
+    if(!initiallyLinked&&!reduced())startTour(true);
+  }catch(e){
+    stopTour('Journey unavailable · use the milestone controls');
+    $('load-status').textContent='The picture controls could not load. Read the development updates below instead.';
+    console.error('Timeline:',e);
+  }
 })();
