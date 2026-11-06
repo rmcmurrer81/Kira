@@ -25,6 +25,36 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-supporting-systems-2026-11-06",
+      "title": "NewBrain voice, hearing and restart verification identifies remaining defects",
+      "project": "NewBrain",
+      "track": "Bounded voice and perception systems · Engineering review",
+      "date": "2026-11-06",
+      "reviewed_on": "2026-11-06",
+      "status": "development",
+      "date_basis": "November 6 NewBrain V66 scoped source/test record and independent control review; no native learning rerun",
+      "summary": "69/69 authored checks passed and bounded person/voice restart matched; independent voice controls passed 3/8 while hearing and migration defects remain.",
+      "body": "Local synthetic word WAVs (7) and simulated scene perceptions (4) were reproduced, with exact person/voice state across a separate-process restart. Independent review reproduced false speech-success status, incorrect reliance on supplied scene metadata, auditory-nerve bypass, audio input handling defects and destructive migration risks. These are engineering-validation findings, not new native NewBrain learning, full conversation, microphone/speaker or embodiment capability. Original12 stays 2/12, not rerun.",
+      "boundary": "69 author-written passes are scoped regression tests; independent controls 3/8. Current native learning remains unqualified, no completion percentage. Private inputs and artifacts not published.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Previously approved conceptual neural artwork; not a recording of a hearing or speech test",
+        "caption": "Concept illustration only; November 6 supporting-component verification.",
+        "label": "Approved concept art"
+      },
+      "sources": [
+        {
+          "label": "November 6 public research note",
+          "url": "updates.html#newbrain-voice-hearing-restart-2026-11-06"
+        },
+        {
+          "label": "NewBrain detailed status",
+          "url": "newbrain.html#newbrain-supporting-systems-2026-11-06"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-supporting-systems-2026-11-06"
+    },
+    {
       "id": "arcade-lobby-release-2026-11-06",
       "title": "Arcade ships four illustrated original-game cards",
       "project": "Lab & website",
