@@ -25,6 +25,66 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-v68-engineering-2026-11-06",
+      "title": "V68 NewBrain audio controls pass bounded tests; no Native learning gain",
+      "project": "NewBrain",
+      "track": "Speech, hearing and source reproducibility · Component scope only",
+      "date": "2026-11-06",
+      "reviewed_on": "2026-11-06",
+      "status": "development",
+      "date_basis": "Later November 6 V67 and V68 source/test records; no protected-case replay or Native adoption",
+      "summary": "V67 authored 79 checks passed and 2/4 independent voice probes passed; later V68 audio repairs passed 84 scoped checks plus 5 independent controls.",
+      "body": "A later V68 separate audio review corrected short-input/stereo behavior and passed 84 authored scoped checks plus 5 independent controls, after an 82-check baseline. V67 earlier found audio truncation and silence, with 2/4 independent voice controls passing. A Native four-fact author probe used fresh SGD and answer-bearing prompts and did not isolate a continuing learning improvement. Limited source recovery readbacks passed. Protected Original12 unchanged at 2/12; no conversational model/physical sense qualification.",
+      "boundary": "Tests belong to separate components, not a repaired ten-group Native learner or full application recovery. No usable coherent conversation or full embodiment proof.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved neural concept illustration, not new audio test screenshot",
+        "caption": "Concept artwork; bounded speech/perception verification, Native still unqualified.",
+        "label": "Approved concept art"
+      },
+      "sources": [
+        {
+          "label": "Nov 6 audio and recovery review",
+          "url": "updates.html#newbrain-v68-engineering-2026-11-06"
+        },
+        {
+          "label": "NewBrain status",
+          "url": "newbrain.html#newbrain-v68-component-verification-2026-11-06"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-v68-component-verification-2026-11-06"
+    },
+    {
+      "id": "avatar-v68-engineering-2026-11-06",
+      "title": "Avatar Builder source protections repaired; full body unaccepted",
+      "project": "Kira World",
+      "track": "Avatar Builder · Memory safety, tissue topology, source recovery",
+      "date": "2026-11-06",
+      "reviewed_on": "2026-11-06",
+      "status": "development",
+      "date_basis": "V67 unapproved mixed source and V68 repairs/limited checks dated Nov 6; no complete body render or visual acceptance",
+      "summary": "Write locks restored; tissue classifier repaired; 5 build-mock, 6 tissue, 14 voice-profile and 11 curriculum checks pass.",
+      "body": "An unapproved V67 source candidate weakened memory write protection. The reviewed V68 work restored locks and repaired tissue classification. A separate existing teaching/reference GLB measured 68,328 vertices and 136,224 triangles, but retains generic eyes; an anticipated 170,816-triangle eye variant is unbuilt and unqualified. Private selected recovery was checked; no accepted Evelyn original head, final body, functional anatomy or reliable deformation.",
+      "boundary": "A source-safety and test-harness improvement, not full production readiness, live user-facing Avatar Builder behavior or independent human-form approval.",
+      "image": {
+        "path": "assets/kira-world-avatar-builder-visual-20261023.svg",
+        "alt": "Concept studio illustration, not measured accepted avatar",
+        "caption": "Illustrative concept; V68 source control work, incomplete anatomy.",
+        "label": "Approved concept art"
+      },
+      "sources": [
+        {
+          "label": "Dated Nov 6 avatar report",
+          "url": "updates.html#avatar-v68-engineering-2026-11-06"
+        },
+        {
+          "label": "Current Avatar Builder research",
+          "url": "kira-world-avatar-builder.html#avatar-v68-recovery-2026-11-06"
+        }
+      ],
+      "project_page": "kira-world-avatar-builder.html#avatar-v68-recovery-2026-11-06"
+    },
+    {
       "id": "newbrain-supporting-systems-2026-11-06",
       "title": "NewBrain voice, hearing and restart verification identifies remaining defects",
       "project": "NewBrain",

@@ -4,6 +4,68 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-v68-engineering-2026-11-06",
+      "title": "NewBrain V68: bounded audio tests improve; Native learning unchanged",
+      "date": "2026-11-06",
+      "date_basis": "November 6 V67/V68 scoped component verification; not a continuing native benchmark",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "After short/stereo audio corrections, 84 authored component checks plus 5 independent controls passed; the existing Native learning model remains unqualified.",
+      "body": [
+        "V67 recorded 79 passing authored checks and only 2 of 4 independent voice controls passing, including exposed truncation and post-filter silence.",
+        "V68 initially passed 82 supplied checks; after short-audio and stereo fixes, 84 scoped authored tests and 5 independent controls passed. These are not question-answer learning or conversational outcomes.",
+        "An author four-fact Native probe used fresh SGD and answer-bearing prompts, so it is not evidence that the continuing learner improved. Selected source archives verified through fresh reads and hash checks; Original12 remains 2/12, not rerun."
+      ],
+      "boundary": "Component audio/recovery advances only; not reliable Native learning, open conversation, full physical hearing, or verified whole-application recovery.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved concept neural illustration, not runtime audio test evidence",
+        "caption": "Concept image. Scoped Nov 6 component verification."
+      },
+      "sources": [
+        {
+          "label": "Detailed November 6 results",
+          "url": "updates.html#newbrain-v68-engineering-2026-11-06"
+        },
+        {
+          "label": "NewBrain project details",
+          "url": "newbrain.html#newbrain-v68-component-verification-2026-11-06"
+        }
+      ],
+      "evidence_kind": "V68-component84-independent5-native-unchanged"
+    },
+    {
+      "id": "avatar-v68-engineering-2026-11-06",
+      "title": "Avatar Builder V68: write protections and tissue tests restored",
+      "date": "2026-11-06",
+      "date_basis": "November 6 V67/V68 scoped Avatar Builder code, build mocks, geometry counts and private recovery receipts",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "Memory-write locks and a tissue classifier were repaired; 5 build-mock, 6 tissue, 14 voice-profile and 11 curriculum tests passed. Original anatomy still unapproved.",
+      "body": [
+        "The V67 source candidate included new validation code alongside weakened write protections and was not promoted to the working build.",
+        "V68 restored memory-write locks and repaired a tissue-topology classifier; small software suites passed in four groups. A teaching/reference GLB contains 68,328 vertices and 136,224 triangles but retains generic eyes.",
+        "An estimated eye-geometry substitution would reach 170,816 triangles; it is not a built or tested approved-Evelyn body. Private backup verification is not anatomy, likeness, deformation or UI qualification."
+      ],
+      "boundary": "No accepted original Evelyn likeness, full-body anatomical build, validated physiology, live photo/video person creation or natural deformation.",
+      "image": {
+        "path": "assets/kira-world-avatar-builder-visual-20261023.svg",
+        "alt": "Illustrative covered avatar rigging concept, not the newly measured GLB",
+        "caption": "Concept illustration. V68 source validation only."
+      },
+      "sources": [
+        {
+          "label": "Dated Avatar Builder update",
+          "url": "updates.html#avatar-v68-engineering-2026-11-06"
+        },
+        {
+          "label": "Avatar Builder engineering detail",
+          "url": "kira-world-avatar-builder.html#avatar-v68-recovery-2026-11-06"
+        }
+      ],
+      "evidence_kind": "V68-body-write-protect-tissue-classifier-tests-no-accepted-anatomy"
+    },
+    {
       "id": "newbrain-supporting-systems-2026-11-06",
       "title": "NewBrain support systems: 69 authored checks pass; defects exposed",
       "date": "2026-11-06",
