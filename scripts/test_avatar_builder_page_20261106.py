@@ -89,9 +89,9 @@ def main():
         context = browser.new_context(viewport={"width": 1280, "height": 900})
         page = context.new_page()
         page.goto(BASE)
-        page.locator('.ab-journal-shortcuts a[href="#avatar-builder-v12-body-v9-2026-11-05"]').click()
-        assert page.evaluate("location.hash") == "#avatar-builder-v12-body-v9-2026-11-05"
-        assert page.locator("#avatar-builder-v12-body-v9-2026-11-05").is_visible()
+        page.locator('.ab-journal-shortcuts a[href="#avatar-v68-recovery-2026-11-06"]').click()
+        assert page.evaluate("location.hash") == "#avatar-v68-recovery-2026-11-06"
+        assert page.locator("#avatar-v68-recovery-2026-11-06").is_visible()
         context.close()
         browser.close()
         assert not errors, "Browser JavaScript errors: " + " | ".join(errors)
