@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-11-06-1.json';
+const filename='knowledge/iris-projects-2026-11-06-2.json';
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
 const loader=fs.readFileSync(path.join(docs,'iris.js'),'utf8');
@@ -13,14 +13,18 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-11-06.1'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-11-06.1'));
+assert.ok(irisPage.includes('iris.js?v=2026-11-06.2'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-11-06.2'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-11-06');
-assert.equal(data.content_version,'2026-11-06.1');
+assert.equal(data.content_version,'2026-11-06.2');
 assert.ok(raw.length<110000,'Iris current pack must fit loader cap');
 assert.match(data.projects.find(p=>p.id==='newbrain').status,/SEPARATE SMALL-DECODER EVIDENCE/);
+assert.match(data.projects.find(p=>p.id==='newbrain').status,/69\/69 authored/);
+assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-supporting-systems-2026-11-06');
+assert.ok(fs.readFileSync(path.join(docs,'newbrain.html'),'utf8').includes('id="newbrain-supporting-systems-2026-11-06"'));
+assert.ok(fs.readFileSync(path.join(docs,'updates.html'),'utf8').includes('id="newbrain-voice-hearing-restart-2026-11-06"'));
 assert.match(data.projects.find(p=>p.id==='avatar-body').status,/FIT-STAGE ONLY/);
 assert.ok(fs.readFileSync(path.join(docs,'updates.html'),'utf8').includes('id="newbrain-decoder-rehearsal-2026-11-05"'));
 assert.ok(fs.readFileSync(path.join(docs,'updates.html'),'utf8').includes('id="avatar-head-v7-clearance-2026-11-05"'));
@@ -151,7 +155,7 @@ assert.equal(iris.validate(priorOct315),priorOct315,'Prior immutable Oct31.5 rev
 for(const x of ['LATEST NOV01 RETRIEVAL ONLY','800 calls','34/37','23/37','0/37','23/26','11/11','Original12 accepted 2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(x),'Missing Nov1 result '+x);
 assert.equal(data.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v3-closed-2026-11-05');
 for(const [page,anchor] of [['newbrain.html','newbrain-opt-in-context-selection-2026-11-01'],['updates.html','newbrain-historical-context-selection-2026-11-01'],['reports/newbrain-opt-in-historical-context-2026-11-01.html','historical-context-qualification']])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Missing Nov1 anchor '+page);
-assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-06.1'));
+assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-06.2'));
 const priorOct314=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-31-4.json'),'utf8'));
 assert.equal(iris.validate(priorOct314),priorOct314,'Preserve prior Oct31.4 immutable public pack');
 for(const q of ['LATEST OCT31 EXECUTED MEMORY RETRIEVAL','25/30','0/30','24/30','Original12 accepted 2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(q),'Missing latest retrieval result '+q);
@@ -377,7 +381,7 @@ assert.ok(fs.readFileSync(path.join(docs,'contact.html'),'utf8').includes('id="d
 /* NewBrain page visual-regression safety, November 6: real page, not mockup. */
 const newBrainVisualHtml=fs.readFileSync(path.join(docs,'newbrain.html'),'utf8');
 const newBrainVisualCss=fs.readFileSync(path.join(docs,'newbrain-redesign.css'),'utf8');
-assert.ok(newBrainVisualHtml.includes('newbrain-redesign.css?v=2026-11-06.1'),'Visual stylesheet missing');
+assert.ok(newBrainVisualHtml.includes('newbrain-redesign.css?v=2026-11-06.2'),'Visual stylesheet missing');
 for(const anchor of ['nb-viz-features-heading','nb-viz-architecture-heading','nb-viz-timeline-heading','nb-viz-evidence-heading','newbrain-research-records','newbrain-v3-closed-2026-11-05','newbrain-v9-closed-2026-11-04','roadmap']){
   assert.ok(newBrainVisualHtml.includes('id="'+anchor+'"'),'Missing NewBrain visual/historical section: '+anchor);
 }
