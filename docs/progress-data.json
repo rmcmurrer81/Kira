@@ -4,6 +4,41 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "byte-bolt-learning-town-2026-11-06",
+      "title": "Byte & Bolt expands Arcade to five original games and 22 lessons",
+      "date": "2026-11-06",
+      "date_basis": "November 6 Eastern / November 7 UTC source, 59-group Node QA and passing browser workflow",
+      "status": "working",
+      "track": "Web and educational experiences",
+      "summary": "Playable fifth original browser game with 22 authored coding/electronics projects and local saves.",
+      "body": [
+        "14 fictional paid service jobs and eight unpaid lab upgrades use stylized town travel and resident dialogue.",
+        "Committed release QA documents 59 passing Node groups, managed-browser save continuation, passing homepage QA and Pages deployment.",
+        "Mobile phone hardware, offline file use, pronunciation on all devices and measured player hours are unverified."
+      ],
+      "boundary": "Scripted educational game, not a native NewBrain learning improvement (Original12 remains 2/12), accepted Evelyn likeness or functioning anatomy.",
+      "image": {
+        "path": "arcade/previews/byte-bolt-real-gameplay-20261107.webp",
+        "alt": "First-party Byte & Bolt gameplay preview captured in the compatibility renderer",
+        "caption": "Original educational game scene, not a robot or autonomous AI."
+      },
+      "sources": [
+        {
+          "label": "Public release scope",
+          "url": "reports/byte-bolt-learning-town-2026-11-06.html#verified-scope"
+        },
+        {
+          "label": "Arcade",
+          "url": "arcade/index.html#byte-bolt-preview"
+        },
+        {
+          "label": "Browser QA",
+          "url": "https://github.com/rmcmurrer81/Kira/actions/runs/42331266760"
+        }
+      ],
+      "evidence_kind": "fifth-game-22-projects-59-node-checks-release"
+    },
+    {
       "id": "avatar-v77-animation-export-2026-11-06",
       "title": "Avatar Builder V77 exports five animated clips; original anatomy still rejected",
       "date": "2026-11-06",

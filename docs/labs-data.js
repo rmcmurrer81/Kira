@@ -25,6 +25,36 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "byte-bolt-learning-town-2026-11-06",
+      "title": "Byte & Bolt learning town: 22 authored projects become fifth Arcade game",
+      "project": "Lab & website",
+      "track": "Educational website experience · Released game",
+      "date": "2026-11-06",
+      "reviewed_on": "2026-11-06",
+      "status": "released",
+      "date_basis": "November 6 Eastern / November 7 UTC committed public game and tested Arcade homepage",
+      "summary": "A browser-based learning campaign with 22 programming/electronics projects, scripted conversation and saved progress.",
+      "body": "Fourteen fictional paid town jobs and eight unpaid lab upgrades are playable alongside mixed repeat practice and town navigation. Source release QA records 59 passing Node groups and managed-browser old-save continuation. Final Arcade homepage browser QA and Pages deployment passed on commit 4e26bea. No mobile-hardware universal tests, independent pronunciation, measured hours or qualified offline ZIP use.",
+      "boundary": "Educational game, not native NewBrain learning, autonomous robotics, or accepted anatomy; Original12 stays 2/12.",
+      "image": {
+        "path": "arcade/previews/byte-bolt-real-gameplay-20261107.webp",
+        "alt": "First-party Byte & Bolt gameplay preview captured in the compatibility renderer",
+        "caption": "Original educational game scene, not a robot or autonomous AI.",
+        "label": "Original browser game screenshot"
+      },
+      "sources": [
+        {
+          "label": "Dated public release",
+          "url": "reports/byte-bolt-learning-town-2026-11-06.html#verified-scope"
+        },
+        {
+          "label": "Arcade learning town",
+          "url": "arcade/index.html#byte-bolt-preview"
+        }
+      ],
+      "project_page": "arcade/index.html#byte-bolt-preview"
+    },
+    {
       "id": "avatar-v77-animation-export-2026-11-06",
       "title": "V77 original-body animated GLB export verified; anatomical failure remains",
       "project": "Kira World",
