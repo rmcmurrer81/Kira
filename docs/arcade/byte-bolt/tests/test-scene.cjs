@@ -87,8 +87,8 @@ test('all eight keyboard directions face actual displacement and retain heading 
 test('touch directions and diagonals share heading logic; cancelling touch stops motion',()=>{
  const h=harness(),s=h.scene;
  for(const keys of [['ArrowUp'],['ArrowDown'],['ArrowLeft'],['ArrowRight'],['ArrowUp','ArrowRight']]){
-  s.player.x=0;s.player.z=5;for(const key of keys)h.touch[key].listeners.pointerdown({pointerId:1});h.tick();facingMovement(h,0,5);
-  for(const key of keys)h.touch[key].listeners.pointercancel();const {x,z}=s.player,heading=s.facing;h.tick();close(s.player.x,x);close(s.player.z,z);close(s.facing,heading);
+  s.player.x=0;s.player.z=5;for(const [i,key] of keys.entries())h.touch[key].listeners.pointerdown({pointerId:i+1});h.tick();facingMovement(h,0,5);
+  for(const [i,key] of keys.entries())h.touch[key].listeners.pointercancel({pointerId:i+1});const {x,z}=s.player,heading=s.facing;h.tick();close(s.player.x,x);close(s.player.z,z);close(s.facing,heading);
  }
 });
 test('collision sliding faces the surviving axis and fully blocked or paused movement retains heading',()=>{
@@ -157,4 +157,48 @@ test('outer residents show genuine assigned missions, then return to plain conve
   complete(h,job.id);
  }
  assert.deepEqual([...seen].sort(),['gardener','neighbor','walker']);for(const id of seen){s.go(id);h.tick();assert(h.markers[id].hidden);assert(!h.talkMarkers[id].hidden);}
+});
+
+test('store distinguishes missing parts from its own available and active missions',()=>{
+ const h=harness();
+ for(const job of C.jobs){
+  h.scene.go('store');h.tick();
+  if(!h.state.inventory.includes(job.part))assert.equal(h.markers.store.querySelector('span').textContent,'PARTS NEEDED');
+  if(job.place==='store'){
+   if(!h.state.inventory.includes(job.part))C.buy(h.state,job.part);h.tick();
+   assert.equal(h.markers.store.querySelector('span').textContent,'NEW JOB');assert.equal(h.markers.store.querySelector('b').textContent,'!');
+   C.accept(h.state,job.id);h.tick();assert.equal(h.markers.store.querySelector('span').textContent,'JOB ACTIVE');assert.equal(h.markers.store.querySelector('b').textContent,'…');
+  }
+  complete(h,job.id);
+ }
+});
+test('keyboard and touch releases do not cancel another held input',()=>{
+ for(const releaseTouchFirst of [true,false]){
+  const h=harness(),button=h.touch.ArrowUp;press(h,['ArrowUp']);button.listeners.pointerdown({pointerId:1});
+  if(releaseTouchFirst)button.listeners.pointerup({pointerId:1});else release(h,['ArrowUp']);
+  const before={...h.scene.player};h.tick();assert.notDeepEqual({...h.scene.player},before);
+  if(releaseTouchFirst)release(h,['ArrowUp']);else button.listeners.pointerup({pointerId:1});
+  const stopped={...h.scene.player};h.tick();assert.deepEqual({...h.scene.player},stopped);
+ }
+});
+test('each pointer owns its direction until its own release or cancellation',()=>{
+ for(const event of ['pointerup','pointercancel','lostpointercapture']){
+  const h=harness(),button=h.touch.ArrowUp;button.listeners.pointerdown({pointerId:1});button.listeners.pointerdown({pointerId:2});
+  button.listeners[event]({pointerId:1});button.listeners.lostpointercapture({pointerId:1});
+  const before={...h.scene.player};h.tick();assert.notDeepEqual({...h.scene.player},before);
+  button.listeners[event]({pointerId:2});const stopped={...h.scene.player};h.tick();assert.deepEqual({...h.scene.player},stopped);
+ }
+});
+test('keyboard aliases remain independent and repeated keydown does not latch movement',()=>{
+ const h=harness();press(h,['w','ArrowUp','w']);release(h,['w']);const before={...h.scene.player};h.tick();assert.notDeepEqual({...h.scene.player},before);release(h,['ArrowUp']);const stopped={...h.scene.player};h.tick();assert.deepEqual({...h.scene.player},stopped);
+});
+test('blur, visibility, pause, map and explicit clear discard all input sources',()=>{
+ for(const clear of [h=>h.listeners.blur(),h=>h.window.document.listeners.visibilitychange(),h=>{h.window.townPaused=true;h.tick();h.window.townPaused=false;},h=>{press(h,['m']);press(h,['Escape']);},h=>h.scene.clear()]){
+  const h=harness();press(h,['ArrowUp']);h.touch.ArrowUp.listeners.pointerdown({pointerId:1});h.touch.ArrowRight.listeners.pointerdown({pointerId:2});clear(h);
+  const stopped={...h.scene.player};h.tick();assert.deepEqual({...h.scene.player},stopped);
+  h.touch.ArrowUp.listeners.pointerup({pointerId:1});h.touch.ArrowRight.listeners.pointercancel({pointerId:2});release(h,['ArrowUp']);
+ }
+});
+test('campaign description uses the correct article',()=>{
+ const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');assert.match(html,/content="A 22-project/);
 });

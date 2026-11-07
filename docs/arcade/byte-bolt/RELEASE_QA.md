@@ -16,3 +16,8 @@
 - The ZIP is self-contained, but disconnected local-file play remains unverified for this revision. Export save backups.
 - The original eight project rules have regression coverage and prior browser checks; this integration's browser walkthrough focused on all 14 additions, conversations, map travel and mixed practice.
 - This remains an expanding game, not the entire long-term vision or a full JavaScript runtime. The tutorial video is a separate deliverable.
+
+## Maintenance verification
+- 65 Node regression groups pass (46 campaign and 19 scene). Reproduced clerk job mislabeled as parts needed, overlapping keyboard/touch release, multiple pointer ownership, and stale input after pause before fixing.
+- Actual public UI reproduced the clerk label at the Cost accounting project with the required part already owned. The metadata article typo was also confirmed on the public page.
+- Keyboard and pointer-source combinations are covered by deterministic scene tests; physical multitouch hardware remains untested.
