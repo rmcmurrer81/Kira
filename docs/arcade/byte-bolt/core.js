@@ -32,8 +32,8 @@ function questStatus(s){const next=jobs[s.completed.length],currentJob=next?.id|
 function buy(s,id){if(!known(id))throw Error('Unknown part');if(items[id].after>s.completed.length)throw Error('Finish the earlier projects to unlock this shelf.');if(s.inventory.includes(id))throw Error('You already own this part.');if(s.coins<items[id].price)throw Error('Not enough game credits.');s.coins-=items[id].price;s.inventory.push(id);return s;}
 function compile(source,allowed=['distanceCm']){
  if(typeof source!=='string'||source.length>1000)throw Error('Keep the function body under 1,000 characters.');
- let clean=source.trim().replace(/;\s*$/,'');if(!/^return\s+/.test(clean))throw Error('Start with return, followed by one expression.');clean=clean.replace(/^return\s+/,'');
- const tokens=clean.match(/[A-Za-z_$][\w$]*|===|!==|<=|>=|&&|\|\||\d+(?:\.\d+)?|[()+*/%<>!−-]/g)||[];
+ let clean=source.trim().replace(/−/g,'-').replace(/;\s*$/,'');if(!/^return\s+/.test(clean))throw Error('Start with return, followed by one expression.');clean=clean.replace(/^return\s+/,'');
+ const tokens=clean.match(/[A-Za-z_$][\w$]*|===|!==|<=|>=|&&|\|\||\d+(?:\.\d+)?|[()+*/%<>!-]/g)||[];
  if(tokens.join('')!==clean.replace(/\s/g,'')||tokens.length>240)throw Error('Use only the listed inputs, numbers, comparisons, arithmetic, !, &&, || and parentheses.');
  let p=0,depth=0;const enter=()=>{if(++depth>32)throw Error('Simplify deeply nested expressions.');};
  function atom(){enter();let t=tokens[p++],out;if(t==='('){out=or();if(tokens[p++]!==')')throw Error('Close the parenthesis.');}else if(allowed.includes(t))out=env=>env[t];else if(t==='undefined')out=()=>undefined;else if(t==='true'||t==='false')out=()=>t==='true';else if(t&&/^\d/.test(t))out=()=>Number(t);else throw Error('Expected a number, boolean, or one of these inputs: '+allowed.join(', ')+'.');depth--;return out;}
