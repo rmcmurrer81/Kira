@@ -4,6 +4,68 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-v89-bounded-evaluation-2026-11-06",
+      "title": "NewBrain V89: bounded taught facts and rehearsal, not independent generalization",
+      "date": "2026-11-06",
+      "date_basis": "November 6 Eastern / November 7 UTC saved four-fact synthetic development evidence",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Eight of eight supported wordings correct after teaching and rehearsal on reused cases; Original12 remains 2/12.",
+      "body": [
+        "Four underlying facts: 8/8 supported, 8/8 after rehearsal, 4/4 later facts and 5/5 unsupported. Combination and conversation tasks included their answers in prompts.",
+        "Trained model-core restart matched 25/25 stored rows. 85 engineering plus 11 guard tests passed, but 3/8 further independent controls failed.",
+        "Reused test questions, incomplete protocol locking and no qualified full-session restart prevent claims of fresh independent or accepted Native learning."
+      ],
+      "boundary": "Development-only synthetic rehearsal; Original12 2/12 not retested.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved neural concept art, not a V89 test screenshot",
+        "caption": "Concept illustration; private states are not public"
+      },
+      "sources": [
+        {
+          "label": "Public V89 evidence report",
+          "url": "reports/newbrain-avatar-v89-reviewed-2026-11-06.html#newbrain-v89"
+        },
+        {
+          "label": "NewBrain latest journal",
+          "url": "newbrain.html#newbrain-v89-development-2026-11-06"
+        }
+      ],
+      "evidence_kind": "V89-synthetic-reused-case-development"
+    },
+    {
+      "id": "avatar-v89-staged-review-2026-11-06",
+      "title": "Avatar Builder V89 staged geometry fits cap, but animation channels regress",
+      "date": "2026-11-06",
+      "date_basis": "November 6 Eastern / November 7 UTC actual staged original-body/eye export and strict checks",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "139,059 triangles with 941 of headroom; material and original animation regression, unaccepted body.",
+      "body": [
+        "Staged V89 has 69,997 vertices, 139,059 triangles, zero picture/video reference inputs, and neutral eye alignment with a measured material change.",
+        "Original five clips drop from 4/7/7/3/7 to 0/1/1/0/1 varying channels after assembly; new clips do not restore old ones.",
+        "141 passing suite checks, two product errors, one skip and 14/16 additional strict failures; no original likeness, approved anatomy or physiology."
+      ],
+      "boundary": "Procedural assembly only: original Evelyn and fictional-character bodies remain unaccepted; no functional digestive/urinary/reproductive route.",
+      "image": {
+        "path": "assets/kira-world-avatar-builder-visual-20261023.svg",
+        "alt": "Approved Avatar Builder concept graphic, not an unaccepted V89 render",
+        "caption": "Concept artwork; private body/likeness media withheld"
+      },
+      "sources": [
+        {
+          "label": "Public V89 evidence report",
+          "url": "reports/newbrain-avatar-v89-reviewed-2026-11-06.html#avatar-v89"
+        },
+        {
+          "label": "Avatar Builder latest journal",
+          "url": "kira-world-avatar-builder.html#avatar-v89-staged-2026-11-06"
+        }
+      ],
+      "evidence_kind": "V89-staged-eye-body-regression"
+    },
+    {
       "id": "byte-bolt-learning-town-2026-11-06",
       "title": "Byte & Bolt expands Arcade to five original games and 22 lessons",
       "date": "2026-11-06",

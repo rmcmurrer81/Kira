@@ -25,6 +25,66 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-v89-bounded-evaluation-2026-11-06",
+      "title": "NewBrain V89 bounded synthetic teaching and core restart",
+      "project": "NewBrain",
+      "track": "Synthetic development · Not Original12",
+      "date": "2026-11-06",
+      "reviewed_on": "2026-11-06",
+      "status": "development",
+      "date_basis": "November 6 Eastern / November 7 UTC reuse-limited study",
+      "summary": "Four-fact rehearsed questions scored 8/8 on reused cases; independent learning unqualified.",
+      "body": "4 synthetic facts; supported 8/8 after teaching and after rehearsal; later facts 4/4, unsupported 5/5, trained core restart 25/25 rows; 3/8 new controls failed. Original12 2/12 unchanged.",
+      "boundary": "No fresh held-out Native qualification, full-session restart or general conversation.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved neural concept art, not a V89 test screenshot",
+        "caption": "Concept illustration; private states are not public",
+        "label": "Development study"
+      },
+      "sources": [
+        {
+          "label": "Public V89 evidence report",
+          "url": "reports/newbrain-avatar-v89-reviewed-2026-11-06.html#newbrain-v89"
+        },
+        {
+          "label": "NewBrain latest journal",
+          "url": "newbrain.html#newbrain-v89-development-2026-11-06"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-v89-development-2026-11-06"
+    },
+    {
+      "id": "avatar-v89-staged-review-2026-11-06",
+      "title": "V89 original body/eye staged export under cap, motion still regresses",
+      "project": "Kira World",
+      "track": "Avatar Builder · Staged not accepted",
+      "date": "2026-11-06",
+      "reviewed_on": "2026-11-06",
+      "status": "development",
+      "date_basis": "November 6 Eastern / November 7 UTC staged export review",
+      "summary": "139,059-triangle body/eyes fit budget; old animated channels lost and errors remain.",
+      "body": "69,997 vertices, 139,059 triangles and 941 headroom; 0 photo/video references. Older clips regress after assembly; 141 pass, two errors, one skip, 14/16 new strict controls fail. No accepted likeness, motion or physiology.",
+      "boundary": "Not an approved Evelyn or fictional person, body, full anatomical organs or functioning physical movement.",
+      "image": {
+        "path": "assets/kira-world-avatar-builder-visual-20261023.svg",
+        "alt": "Approved Avatar Builder concept graphic, not an unaccepted V89 render",
+        "caption": "Concept artwork; private body/likeness media withheld",
+        "label": "Staged export study"
+      },
+      "sources": [
+        {
+          "label": "Public V89 evidence report",
+          "url": "reports/newbrain-avatar-v89-reviewed-2026-11-06.html#avatar-v89"
+        },
+        {
+          "label": "Avatar Builder latest journal",
+          "url": "kira-world-avatar-builder.html#avatar-v89-staged-2026-11-06"
+        }
+      ],
+      "project_page": "kira-world-avatar-builder.html#avatar-v89-staged-2026-11-06"
+    },
+    {
       "id": "byte-bolt-learning-town-2026-11-06",
       "title": "Byte & Bolt learning town: 22 authored projects become fifth Arcade game",
       "project": "Lab & website",
