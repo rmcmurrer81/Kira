@@ -1,0 +1,57 @@
+name: Portable mind public boundary
+
+on:
+  pull_request:
+    paths:
+      - ".gitattributes"
+      - "integrations/portable_mind_runtime/**"
+      - ".github/workflows/portable-mind-public.yml"
+  push:
+    paths:
+      - ".gitattributes"
+      - "integrations/portable_mind_runtime/**"
+      - ".github/workflows/portable-mind-public.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONWARNINGS: "error"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Unit tests
+        working-directory: integrations/portable_mind_runtime
+        run: python -B -m unittest discover -s tests -v
+      - name: Strict public release validation
+        working-directory: integrations/portable_mind_runtime
+        run: python -B tools/validate_public_release.py
+      - name: Kira offline stub smoke test
+        working-directory: integrations/portable_mind_runtime
+        env:
+          PORTABLE_MIND_HOME: ${{ runner.temp }}/portable-mind-regression/kira
+        run: python -B -m portable_mind --profile kira --once "What are you in this repository?"
+      - name: Synthetic Robert branch smoke test
+        working-directory: integrations/portable_mind_runtime
+        env:
+          PORTABLE_MIND_HOME: ${{ runner.temp }}/portable-mind-regression/synthetic-robert
+        run: python -B -m portable_mind --profile synthetic_robert --branch ci_variant --once "How do separate installations diverge?"
+      - name: Prove workflow order leaves a clean release
+        working-directory: integrations/portable_mind_runtime
+        run: |
+          if find . -type d -name __pycache__ -print -quit | grep -q .; then
+            echo "Python cache directory found after tests and smokes"
+            exit 1
+          fi
+          if find . -type f -name '*.pyc' -print -quit | grep -q .; then
+            echo "Python bytecode file found after tests and smokes"
+            exit 1
+          fi
+          python -B tools/validate_public_release.py
