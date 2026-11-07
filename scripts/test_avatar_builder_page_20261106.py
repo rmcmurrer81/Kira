@@ -89,9 +89,13 @@ def main():
         context = browser.new_context(viewport={"width": 1280, "height": 900})
         page = context.new_page()
         page.goto(BASE)
-        page.locator('.ab-journal-shortcuts a[href="#avatar-v77-animation-export-2026-11-06"]').click()
-        assert page.evaluate("location.hash") == "#avatar-v77-animation-export-2026-11-06"
-        assert page.locator("#avatar-v77-animation-export-2026-11-06").is_visible()
+        # The latest-results shortcut follows the current reviewed V89 entry.
+        # Keep the V77 historical research anchor independently discoverable.
+        for anchor in ("avatar-v89-staged-2026-11-06", "avatar-v77-animation-export-2026-11-06"):
+            assert page.locator("#" + anchor).count() == 1, "Missing dated Avatar research " + anchor
+        page.locator('.ab-journal-shortcuts a[href="#avatar-v89-staged-2026-11-06"]').click()
+        assert page.evaluate("location.hash") == "#avatar-v89-staged-2026-11-06"
+        assert page.locator("#avatar-v89-staged-2026-11-06").is_visible()
         context.close()
         browser.close()
         assert not errors, "Browser JavaScript errors: " + " | ".join(errors)
