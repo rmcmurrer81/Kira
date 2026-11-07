@@ -1,65 +1,90 @@
-# Build the first playable town: source walkthrough
+# How the Byte & Bolt campaign is built
 
-This guide explains the complete supplied prototype. It is preparation for a future narrated tutorial, not a claim that the video is finished. You can inspect, copy and modify every source file in the package. No framework, dependency installation, API key, voice subscription or build step is required.
+This guide explains the actual included eight-project source. It is not a promise that the full eventual game, Jetson projects, or hardware simulations are implemented.
 
-## 1. Start the page
-Open `index.html`. It loads `style.css`, then `core.js`, `scene.js`, `audio-map.js` and `app.js` in that order. The core knows game rules, the scene knows geometry, and the app connects the rules to controls. Keeping those jobs separate lets you test logic without a graphics card or browser.
+## 1. Keep the first version small and runnable
 
-The HTML gives the canvas a text description, labels all buttons, and includes a dialog container. CSS fixes the canvas and controls to the viewport. `100dvh` uses the available dynamic browser height on phones. Small-screen rules shrink the objective and controls. The dialog has its own scroll region, so the webpage itself stays still.
+The game uses ordinary HTML, CSS and JavaScript. There are no remote scripts, build step, engine installation or package dependencies for players. Keep `index.html`, `style.css`, `core.js`, `scene.js`, `app.js`, `audio-map.js` and `audio/` together. Serve the folder as static files for predictable browser storage. File-mode behavior depends on the browser.
 
-## 2. Draw an actual 3D scene
-In `scene.js`, every part has x, y and z coordinates. x/z lie on the ground; y is height. `box()` builds each cuboid from faces. The WebGL vertex shader projects these 3D points onto an angled, orthographic view. A depth buffer hides surfaces behind nearer ones. Different face brightnesses give the town readable form.
+`index.html` loads the rules first, then the scene, sound map and user interface. It contains the world canvas, navigation buttons, job objective, dialog container and save controls.
 
-If WebGL cannot be created, the same world coordinates are projected into a 2D canvas and drawn as sorted polygons. That is a compatibility renderer of the 3D geometry, not a set of animated pictures. It is approximate: complex overlapping geometry can reveal painter-order artifacts. This first town deliberately uses simple cuboids.
+## 2. Separate rules from presentation
 
-`requestAnimationFrame(frame)` drives motion. The elapsed time is capped to prevent a huge movement jump after a tab pauses. The movement vector is normalized so diagonal movement is not faster. `allowed()` rejects positions inside the building footprints and outside the map. Character legs and arms change with a sine wave while walking.
+`core.js` is pure game logic. It can run in the browser or Node tests. `fresh()` creates the save. `buy()` checks a shelf, ownership and credit balance. `complete()` checks the required job and part, evaluates the learner’s answer, then records completion. Paid town jobs receive a one-time service payment; personal lab upgrades never pay credits.
 
-Try changing a building's `c` or `roof` color. Then change its width and confirm that the collision footprint changes with it. Keep doors and NPCs outside their building collision rectangles.
+The main job data lives in `jobs`. Each entry declares an ID, title, learning topic, character, place, required part, category, service payment and exercise kind. The category is service or personal. The LED, solar-monitor divider and lab fan are personal upgrades with zero cash reward; the robot, rangefinder, community greenhouse, delivery-route and gate projects are paid town services. Seven jobs use code expressions. The LED job uses three numeric/circuit inputs instead of a choice-only quiz.
 
-## 3. Add jobs with state, not a maze of pages
-`core.js` creates a new state with 20 credits and no parts. `app.js` chooses the current objective from that state. The yard offers a job, the store sells its required part, and the lab unlocks only after the repair. Each scene interaction opens a panel inside the game.
+`questStatus()` derives the next available/active job and each mentor/store marker from saved progression. `accept()` records the active campaign job. The marker disappears when a mentor’s current project ends and reappears if that mentor offers a different project later. For example, Iris offers robot repair, Evelyn helps with your LED upgrade, then Iris returns with echo calibration. Optional practice does not advertise a new quest. A mentor without current work gives a brief explanation and points to the next project rather than silently opening a generic board. The interface exposes `window.townQuestState` plus a non-enumerable `townState.npcJobs` getter for the scene.
 
-A boolean such as `repair` records permanent completion. The award function checks that flag before adding credits. This prevents a repeated click or repeated visit from creating endless money. Inventory also rejects duplicate purchases. The game contains no real payment integration.
+Unlocks follow the ordered completed-project list. Town-service income is sufficient for every required part without practice grinding. Shopping always costs credits; improving your own lab is an expense, not paid work.
 
-## 4. Teach a real JavaScript function
-The player writes a function body:
+The fresh-game balance after each action is: start 20 → buy sensor 5 → robot payment 50 → buy LED 40 → LED upgrade 40 → echo payment 70 → buy pump 45 → greenhouse payment 85 → buy divider 65 → divider upgrade 65 → buy fan 40 → fan upgrade 40 → buy battery monitor 20 → battery-service payment 65 → buy gate kit 30 → gate payment 95. Every step is covered by an exact cash-flow test.
 
-    return distanceCm === undefined || distanceCm < 20;
+## 3. Evaluate a safe expression, not arbitrary JavaScript
 
-`undefined` means no usable echo in this exercise. `===` is a strict comparison; `||` is logical OR; `<` is strictly less than. The five cases check undefined, 0, 19, 20 and 45 centimetres. Exactly 20 is an important boundary: it must return false, while 19 returns true.
+The editor accepts a function body such as:
 
-Do not call `eval()` on learner input. The prototype's `compile()` tokenizes a small expression grammar and builds evaluators for values, parentheses, comparisons, AND and OR. It rejects function calls, assignments, strings, extra statements and unknown identifiers. It models these supported JavaScript expressions, not the whole language. `testCode()` requires a boolean result, so a truthy number cannot pass as true.
+```javascript
+return distanceCm === undefined || distanceCm < 20;
+```
 
-The initial incorrect rule omits the undefined check. Press Run to see why its missing-echo test fails, inspect the hint or tablet, then repair the expression. For additional lessons, define expected cases before writing the UI. Include boundaries, invalid input and failure feedback.
+`compile()` first requires `return`, then tokenizes a bounded input. Its recursive-descent parser implements parentheses, unary operators, multiplication/division, addition/subtraction, comparisons, equality, AND and OR in their normal precedence order. Only the job’s listed variable names are allowed.
 
-## 5. Connect the electronics lesson carefully
-The HC-SR04 uses the time between a trigger and an echo. At approximately room temperature:
+The parser builds small trusted functions over supplied inputs; it does not execute learner text through `eval` or `Function`. Source length, token count and nesting are limited. A result must match the expected type: numeric 1 is not boolean true. Non-finite numeric outputs cannot pass numeric lessons.
 
-    distanceCm = durationMicroseconds * 0.0343 / 2;
+This is an expression-learning subset. Do not label it a complete JavaScript interpreter. To add another construct, design its parser, evaluator, bounds and adversarial tests first.
 
-The division by two accounts for the outgoing and returning sound. Temperature and surfaces affect results. A timeout is invalid data; it must not be interpreted as a clear path. The tablet's Arduino snippet assumes a classic 5 V Uno, requires pin modes in setup, and is deliberately labeled incomplete. A 3.3 V board needs proper echo-voltage conversion. The game does not claim to drive real motors safely.
+## 4. Teach through tests and changing contracts
 
-For the LED job, the example assumes a 5 V supply, a 2 V red-LED drop and a 15 mA target. Ohm's law gives `(5 - 2) / .015 = 200` ohms. A 220-ohm series resistor gives about 13.6 mA and dissipates about .041 W. A 1000-ohm resistor is safe but dimmer; the game distinguishes this from the too-small 100-ohm choice. Always use the real device's ratings in a physical build.
+`challenge(jobId, round)` builds an explicit contract. Round zero is the campaign job. Positive rounds are practice. The user sees the thresholds and assumptions before entering an answer.
 
-## 6. Preserve progress
-The app serializes state as JSON to localStorage. It also exports the same JSON to a downloaded file. Import validates type, version, bounds, item IDs, duplicates and basic progression consistency, then asks before replacing the current state. It copies only known fields; unrelated keys are not imported into the application.
+For conditions, include missing inputs, both boolean states, values just below and above a threshold, and the threshold itself. The gate exercises the combinations of four inputs. The fan also runs a temperature sequence, feeding the learner’s previous output into the next step so remembered-state bugs become visible.
 
-No browser storage is guaranteed permanent. Private browsing, local-file rules, user clearing, quotas and browser changes can affect it. Test export and import, not just autosave. A cloud-save feature would require a separate design and privacy decision.
+For numerical exercises, vary the inputs instead of accepting one memorized number. The LED lesson requires the minimum resistance, the smallest offered resistor meeting the target, and the calculated resulting current. Its tolerance supports rounded answers to two decimal places.
 
-## 7. Add authorized voices locally
-Main dialogue uses three new original voices generated with a locally installed voice-design model, not recovered Robert, Iris or Evelyn identity recordings. Only finished game dialogue is bundled, never training material or model weights. See the bundled audio provenance for generation and license details.
+The first three successful practice completions for each project award a mastery star. Personal-upgrade practice awards no money. For the five paid town jobs, the first three repeat service contracts also pay eight credits each; later service practice is unpaid. The UI names these differently so an unpaid exercise is not advertised as paid work. `complete()` checks the exact next round, so double clicks or submitting a stale contract cannot pay twice. Variants repeat eventually; they are not AI-generated missions. The bounded history stores up to 100,000 practice completions per job. `nextPracticeRound()` returns null at that limit, disabling new-contract buttons while leaving the bench available.
 
-`audio-map.js` matches each character and dialogue prefix to a local WAV file. `app.js` plays that file after a user enables read-aloud. Changing panels, closing a panel, muting, hiding the page or leaving it stops playback. Unmatched text falls back only to a browser voice marked `localService`; captions work without speech support. No external voice API is used.
+## 5. Make progress visible in the town
 
-To add a line, generate an authorized recording locally, add a mapping with a unique text prefix, and include the file in the offline ZIP. Check each file's format, duration and level, and listen for pronunciation and continuity before a polished release. Synthetic voice identity continuity is best effort in this prototype.
+`scene.js` draws faceted buildings, pitched roofs, rounded vegetation and articulated characters as real 3D triangles. A larger 40×40 town uses a following camera and adjustable zoom. A WebGL depth buffer handles overlapping geometry. A fallback projects the same scene onto a 2D canvas. The town uses accessible destination buttons as an alternative to walking. The expanded save bounds allow positions up to ±20 on both ground axes.
 
-## 8. Test and expand
-With Node installed, run from the extracted folder:
+The scene reads the completed-job IDs:
 
-    node --test tests/test-byte-bolt-core.cjs
-    node --check app.js
-    node --check scene.js
+- Robot repair starts the delivery robot moving.
+- The LED lights the lab windows and bench.
+- Echo calibration adds a probe terminal and rangefinder markers.
+- Greenhouse logic restores crops and the drip line.
+- Voltage division powers the solar-roof appearance and monitor.
+- Hysteresis adds a moving cooling-fan illustration.
+- Battery planning adds charge markers beside the delivery lane.
+- The final gate opens and a town-engineer marker appears.
 
-Play through a wrong answer, correct answer, repeated submission, purchase, duplicate purchase, second job, reload, export, reset/cancel and restore. Test keyboard and touch-sized layouts. Check that dialogs close and restore focus, and that no overlay is hidden behind the town HUD.
+These effects communicate accomplishment. They are not mechanical or electrical simulations.
 
-To expand without breaking saves, add explicit save migrations rather than silently treating old data as new. New items should have verified compatibility and actual purposes in playable jobs. Add new lessons one complete job at a time, with tests and a reproducible code walkthrough before recording the video.
+## 6. Keep the UI reversible
+
+`app.js` owns modal panels, captions, input drafts, test results and navigation. Test runs do not award progress; submission does. A passed submission disables itself and provides a next-step button. Closing a panel clears movement and stops sound. Escape dismisses the panel; Tab is trapped inside it. The project board works on desktop or mobile without precision walking.
+
+The earned input probe lets the learner provide a number, boolean or undefined to investigate an expression. Probe outputs do not replace the full test suite.
+
+Use text escaping for dynamic values placed into markup. Do not insert learner expressions or imported text as HTML.
+
+## 7. Preserve old saves
+
+Keep the original storage key `kira-town-prototype-v1` even though the schema is now version 2. `validate()` checks old and new inputs. A valid old save becomes an ordered completed-job list with empty practice counters while retaining credits, parts, position and accepted status. Do not recalculate balances or claw back money earned under an older reward model. An old two-job save with 65 credits keeps all 65; its remaining revised path ends at 120. A fresh path ends at 95. Version-2 balances and already-earned mastery history are preserved too.
+
+Validation rejects unknown item IDs, duplicate inventory, impossible completion ordering, missing required parts, malformed counters, unsafe credit balances and invalid positions. The returned data is cloned. A failed load protects the original stored text from automatic overwriting. Export, import confirmation, reset confirmation and reload should all be tested.
+
+## 8. Be honest about voices and hardware
+
+The sound map contains the original prototype recordings. Use only the matching original captions with them; do not attach an old recording to new dialogue. Expanded dialogue uses full text captions with an optional installed local system voice. The earlier two-job ending is no longer triggered. Stop speech on panel changes, close, hidden document and page exit.
+
+All hardware lessons are low-voltage educational models. Explain supply/input compatibility, external drivers, tolerances, invalid readings and reserve margins. Never present a small exercise as a certified robot, pump, gate, battery or cooling controller.
+
+## 9. Test before publishing
+
+Run the Node suites for all jobs, wrong solutions, altered practice parameters, duplicate submissions, parser attacks, legacy migration, malformed saves and overflow atomicity. The campaign suite checks 48 practice rounds per project, exact fresh/migrated cash flow at every step, mastery-only personal practice, preserved old balances, and an NPC marker disappearing and returning with a distinct later job.
+
+The browser suite in `tests/test-browser.cjs` covers the eight-job UI journey, desktop/mobile layouts, no-WebGL fallback, interrupted drafts, earned probes, repeated submission, migration/import confirmation, reset cancellation and unreadable-save protection. It takes screenshots when a supported local Chromium test environment is available. A browser startup restriction is a blocker, not a passed UI test.
+
+Before publishing, also check source-download contents, links, sound interruption, the deployed asset versions and a fresh browser origin. Do not claim a live deployment from a successful local test alone.
