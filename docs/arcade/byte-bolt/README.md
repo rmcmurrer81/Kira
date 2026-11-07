@@ -1,61 +1,54 @@
 # Byte & Bolt: learning-town campaign
 
-A dependency-free browser game with eight connected beginner programming/electronics projects: five paid town jobs and three personal lab upgrades, an explorable 3D town, local saves and changing practice contracts. This is an eight-project campaign, not the whole eventual game or an unlimited open world.
+A dependency-free browser game with 22 distinct beginner programming and electronics projects, 14 paid town jobs, 8 unpaid personal lab upgrades, an explorable 3D town and local saves. This is an expanding campaign, not an unlimited world. The repeat parameter combinations are finite. No measured-hours or guaranteed-playtime claim is made.
 
 ## Play
 
-Open `index.html` in a modern browser or serve this directory with a local static server. The hosted website is the simplest option when available. Use WASD/arrows and E, touch controls, destination buttons, or the project board. All jobs can be reached without walking.
+Open index.html in a modern browser, preferably through a local static server. Keep the source files and audio folder together. Use WASD/arrows and E, touch controls, destination buttons, or the project board. All projects can be opened without precision walking.
 
-1. Paid town job: repair the delivery robot with a missing-reading safety rule.
-2. Personal lab upgrade: calculate a minimum LED resistor, select an E12 resistor, and calculate current.
-3. Paid town job: convert ultrasonic round-trip time into distance.
-4. Paid town job: protect a community-greenhouse pump with three-condition logic.
-5. Personal lab upgrade: calculate a solar-monitor voltage-divider output, including a case above 3.3 V.
-6. Personal lab upgrade: control your lab’s cooling fan using remembered state and hysteresis.
-7. Paid town job: estimate ideal battery runtime from watt-hours, volts and amps.
-8. Paid town job: commission a delivery gate with multi-signal interlocks.
+Talk to Iris, Evelyn and the shop clerk even when they have no new job. Nora, Arthur and Sam also have friendly conversation. Repeated chats rotate lines, and mentors mention relevant progress. Conversations offer direct project, board and shop buttons. Idle conversation never creates a new-job marker.
 
-Paid town jobs fund every required part without grinding: start with 20 credits and finish with 95. Purchases deduct credits. Your own LED, solar-monitor and cooling upgrades do not pay you for improving your lab. Completed projects visibly restore the town. Mentor quest markers follow the next available or active project. A mentor’s marker disappears when their current project ends, then returns if they have a different project later. For example, Iris’s robot job is followed by Evelyn’s LED upgrade; Iris then returns with echo calibration. Practice does not generate a new-job marker. Visiting a mentor without current work points you to the next mentor and keeps the project board available. Milestones earn a workbench, custom input probe, solar roof, cooling station and town-engineer badge.
+The mixed contract board prioritizes unseen campaign projects. After the campaign it selects spaced repeat topics, avoiding recent projects and the previous topic family where alternatives exist. The first three repeat rounds per project earn mastery stars (66 total); paid service projects also pay 8 credits on those rounds. Personal upgrades never pay credits. Further repeats are unpaid. Direct completed-bench revisits are clearly unpaid and do not advance mastery. Purchases use game credits only.
 
-Completed projects offer repeatable practice with varied parameters or inputs. The first three completions per project earn one mastery star each (24 stars total). Personal-upgrade practice never awards credits. For each of the five paid town jobs, the first three repeat service contracts also pay eight credits each; later service practice is unpaid. Practice continues up to 100,000 stored completions per project. At that history limit the normal bench remains available. Parameter combinations are finite and will eventually repeat. Fixed boundary and fault cases stay in every relevant test set.
+## The 22 projects
+
+1. Robot safety: Comparisons · missing readings (paid town work).
+2. LED circuit: Ohm’s law · current limiting (personal upgrade).
+3. Echo calibration: Units · arithmetic · round-trip time (paid town work).
+4. Greenhouse pump: Boolean logic · dry-run protection (paid town work).
+5. Voltage divider: Resistor ratios · input limits (personal upgrade).
+6. Lab cooling: State · hysteresis · boundaries (personal upgrade).
+7. Battery runtime: Watts · watt-hours · ideal models (paid town work).
+8. Town gate: Integration · interlocks · fault tests (paid town work).
+9. Tare calibration: Tare calibration (paid town work).
+10. PWM duty cycle: PWM duty cycle (personal upgrade).
+11. Inventory shortfall: Inventory shortfall (paid town work).
+12. Encoder kinematics: Encoder kinematics (paid town work).
+13. Parallel resistance: Parallel resistance (personal upgrade).
+14. Packet integrity: Packet integrity (paid town work).
+15. Kinetic stopping model: Kinetic stopping model (paid town work).
+16. Weighted filtering: Weighted filtering (personal upgrade).
+17. Cost accounting: Cost accounting (paid town work).
+18. Modular elapsed time: Modular elapsed time (paid town work).
+19. ADC quantization: ADC quantization (personal upgrade).
+20. Time intervals: Time intervals (paid town work).
+21. Resistive power loss: Resistive power loss (paid town work).
+22. Majority voting: Majority voting (personal upgrade).
 
 ## Saves and audio
 
-The browser storage key remains `kira-town-prototype-v1`. Valid old version-1 saves migrate to version 2 and preserve credits, parts, acceptance, position and both original jobs. No earlier campaign rewards are paid twice, and no previously earned credits are clawed back. An old two-job save with 65 credits retains all 65 and can finish the revised campaign with 120; a fresh playthrough finishes with 95. Export/import JSON backups in Save & sound. Unreadable saved data is not automatically overwritten; explicit import or reset permits replacement. Saves are local to the browser/origin, not synchronized between devices. The active job is saved; valid positions now extend to ±20 on both ground axes.
+The original storage key kira-town-prototype-v1 is retained. Valid earlier two-job and eight-project saves migrate without clawing back earned credits, completed work or mastery. Export/import JSON backups in Save & sound. Unreadable data is protected from automatic overwrite until explicit import or reset. Saves are local to the browser/origin, not synchronized between devices.
 
-The original 12 recorded clips remain in `audio/` with their notices. They are newly designed prototype voices, not recovered identities for Robert, Iris or Evelyn. Only matching original dialogue uses those recordings. New campaign dialogue uses captions and, optionally, installed local English system voices. No new prerecorded campaign voices or cloud voice requests are included. The obsolete two-job ending is not used.
+The original audio recordings remain; they are designed prototype voices, not recovered Robert, Iris or Evelyn identities. New text has complete captions and optional installed local English speech. There are no new voice uploads or cloud voice requests. Audio is optional and stops when the panel changes or the document is hidden.
 
-## Honest boundaries
+## Boundaries
 
-The editor interprets one bounded expression beginning with `return`. It supports listed input variables, numbers, booleans, undefined, arithmetic, comparison, logical operators and parentheses. It never calls eval, Function, arbitrary user code or the network. It does not support loops, assignments, function calls, arrays, objects or full JavaScript programs.
+The editor supports one bounded expression beginning with return: listed variables, numeric/boolean values, undefined, arithmetic, comparisons, logical operators and parentheses. It does not support loops, assignments, arrays, objects, function calls or full JavaScript. The parser also normalizes displayed Unicode minus to ASCII subtraction. Code examples use ASCII operator characters.
 
-The 3D effects illustrate progress, not physical electronics. Circuit and controller exercises are simplified low-voltage lessons, not real hardware safety guarantees. There is no Jetson project, motor-physics simulation, real purchase, account, multiplayer or cloud save.
+Town effects illustrate progress, not physical electronics. All hardware lessons are simplified low-voltage educational models, not safety-certified controllers. There is no motor-physics simulation, Jetson project, account, real purchase, multiplayer or cloud save.
 
-## Source and checks
+## Files and checks
 
-- `core.js`: safe expression interpreter, eight jobs, varied contracts, economy, save validation/migration.
-- `app.js`: project board, test benches, lessons, sound and save controls.
-- `scene.js`: small WebGL town with a 2D projection fallback and visible upgrades.
-- `index.html`, `style.css`: responsive shell and accessible panels.
-- `BUILD_GUIDE.md`, `learn.html`: beginner-oriented source guide.
-- `tests/test-original.cjs`: original regression coverage updated for the new save version and the unpaid personal LED upgrade.
-- `tests/test-campaign.cjs`: campaign, migration, reward and parser tests.
-- `tests/test-browser.cjs`: local Chromium UI suite; requires Playwright and Chromium in the test environment.
+core.js holds lessons, challenge cases, progression, economy, mixed contracts and save validation. app.js handles dialogue, boards, benches, the learning tablet and save controls. scene.js handles movement, rendering and resident interactions. BUILD_GUIDE.md and learn.html explain the source.
 
-Run logic checks with Node:
-
-```
-node --test tests/test-original.cjs tests/test-campaign.cjs
-```
-
-Browser QA command:
-
-```
-node --test tests/test-browser.cjs
-```
-
-The isolated development run passed all 37 logic checks, including correct solutions for 48 practice rounds per project, exact cash flow after every purchase/completion in fresh and migrated saves, and recurring NPC markers. The browser suite was initially blocked before launch by the environment’s Chromium socket restriction; see the integration QA result for subsequent browser verification. A blocked browser run is not a UI pass.
-
-The town now includes a 40×40 explorable map with camera follow, zoom, detailed stylized buildings, a pond, gardens and residential scenery. These districts do not add hidden jobs or interiors. See RELEASE_QA.md for current checks.
-
-The original two-job source is preserved separately as Byte-and-Bolt-Part1-Source.zip for tutorial reproducibility.
+Run the Node logic and scene suites from this folder using node --test tests/test-original.cjs tests/test-campaign.cjs tests/test-scene.cjs. Browser test scripts require a permitted browser environment; do not treat their presence as a passing test. See RELEASE_QA.md for release limits. Actual disconnected local-file play and long-duration playtime are not verified for this revision.
