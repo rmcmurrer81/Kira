@@ -1,14 +1,1 @@
-const test=require('node:test'),assert=require('node:assert/strict'),C=require('../docs/arcade/byte-bolt/core.js');
-const correct='return distanceCm === undefined || distanceCm < 20;';
-test('new game, purchase, repair and LED progression',()=>{let s=C.fresh();assert.throws(()=>C.buy(s,'led'));s.accepted=true;C.buy(s,'sensor');assert.equal(s.coins,5);assert.throws(()=>C.buy(s,'sensor'));C.repair(s,correct);assert.equal(s.coins,50);C.repair(s,correct);assert.equal(s.coins,50);C.buy(s,'led');assert.equal(s.coins,40);assert.throws(()=>C.light(s,100));C.light(s,220);assert.equal(s.coins,65);C.light(s,220);assert.equal(s.coins,65);assert.deepEqual(C.validate(JSON.parse(JSON.stringify(s))),s);});
-test('boundary and invalid readings',()=>{assert(C.testCode(correct).every(c=>c.pass));assert(!C.testCode('return distanceCm < 20;').every(c=>c.pass));assert(!C.testCode('return distanceCm === undefined || distanceCm <= 20;').every(c=>c.pass));assert(C.testCode('return (distanceCm === undefined) || (distanceCm < 20);').every(c=>c.pass));});
-test('safe grammar rejects execution and malformed expressions',()=>{for(const code of ['alert(1)','return fetch(1);','return distanceCm < 20; alert(1)','return constructor','return (distanceCm < 20','return distanceCm <','return distanceCm = 20','return true || process.exit(0)'])assert.throws(()=>C.compile(code));});
-test('strict result must be a boolean',()=>{assert(!C.testCode('return 1;').every(c=>c.pass));});
-test('save rejects malformed or inconsistent progress',()=>{for(const edit of [{coins:-1},{coins:Infinity},{inventory:['bad']},{inventory:['sensor','sensor']},{repair:true},{x:99},{version:2},{light:true},{accepted:'true'}])assert.throws(()=>C.validate({...C.fresh(),...edit}));});
-test('logical precedence matches JavaScript',()=>{assert.equal(C.compile('return false || true && false;')(5),false);assert.equal(C.compile('return (false || true) && true;')(5),true);assert.equal(C.compile('return distanceCm !== undefined && distanceCm >= 20;')(20),true);});
-test('unaccepted or unequipped repair cannot earn credits',()=>{let s=C.fresh();assert.throws(()=>C.repair(s,correct));s.accepted=true;assert.throws(()=>C.repair(s,correct));});
-
-test('import IDs are own keys and rewards remain reloadable',()=>{for(const id of ['constructor','toString','__proto__',123])assert.throws(()=>C.validate({...C.fresh(),inventory:[id]}));let s={...C.fresh(),coins:1000,accepted:true,inventory:['sensor']};C.repair(s,correct);assert.equal(C.validate(s).coins,1045);let max={...C.fresh(),coins:Number.MAX_SAFE_INTEGER,accepted:true,inventory:['sensor']};assert.throws(()=>C.repair(max,correct));assert.equal(max.repair,false);assert.deepEqual(C.validate(max),max);});
-test('learner input is bounded',()=>{assert.throws(()=>C.compile(' '.repeat(1001)));});
-
-test('repaired saves require an accepted job',()=>{assert.throws(()=>C.validate({...C.fresh(),repair:true,inventory:['sensor']}));});
+require('../docs/arcade/byte-bolt/tests/test-original.cjs');
