@@ -17,7 +17,7 @@ assert.ok(irisPage.includes('iris.js?v=2026-11-07.1'));
 assert.ok(irisPage.includes('iris-projects.js?v=2026-11-07.1'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
-assert.equal(data.reviewed_on,'2026-11-06');
+assert.equal(data.reviewed_on,'2026-11-07');
 assert.equal(data.content_version,'2026-11-07.1');
 const priorV89=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-06-6.json'),'utf8'));
 assert.equal(iris.validate(priorV89),priorV89,'Previous V89 public knowledge must remain readable');
@@ -110,7 +110,7 @@ for(const [f,anchor] of [['newbrain.html','newbrain-v3-closed-2026-11-05'],['kir
  assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('id="'+anchor+'"'),'Missing Nov5 source '+f+'#'+anchor);
 }
 const datedProgress=JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8'));
-assert.equal(datedProgress.reviewed_on,'2026-11-06');
+assert.equal(datedProgress.reviewed_on,'2026-11-07');
 for(const id of ['newbrain-pathway-v3-closed-2026-11-05','avatar-v12-v9-rejected-2026-11-05'])assert.ok(datedProgress.milestones.some(m=>m.id===id),'Missing Nov5 timeline '+id);
 const priorNov44=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-04-4.json'),'utf8'));
 assert.equal(iris.validate(priorNov44),priorNov44,'Preserve previous Nov4.4 reviewed knowledge and original source anchors');
@@ -396,7 +396,7 @@ assert.match(timelineData.milestones.find(m=>m.id==='avatar-workspace-identity-2
 assert.match(timelineData.milestones.find(m=>m.id==='newbrain-content-mean-qualification-failed-2026-11-02').body,/216 genuine teaching updates/);
 
 const progress=JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8'));
-assert.equal(progress.reviewed_on,'2026-11-06');
+assert.equal(progress.reviewed_on,'2026-11-07');
 for(const milestone of ['avatar-motion-software-2026-10-31','newbrain-native-api-agreement-2026-10-31','newbrain-a108-native-reply-diagnostic-2026-10-31','avatar-source109-connection-2026-10-31'])assert.ok(progress.milestones.some(m=>m.id===milestone),'Missing Oct31 milestone '+milestone);
 assert.ok(progress.milestones.some(m=>m.id==='newbrain-continuing-lesson-a98-persistence-2026-10-30'),'A98 timeline entry missing');
 assert.ok(progress.milestones.some(m=>m.id==='newbrain-word-study-a87-a92-2026-10-30'),'A87/A92 dated milestone missing');
