@@ -1,19 +1,18 @@
-# Town campaign release checks — 7 November 2026
+# 22-project town release checks — 7 November 2026
 
 ## Verified
-- 41 regression groups pass (37 core and four scene checks): eight-project progression, paid-work/personal-upgrade cash flow, old-save migration, safe expression parsing, invalid saves, reward limits, and NPC assignment transitions.
-- A browser save from the original two-job release continued through all six additional projects and survived reload. Later economy adjustments preserve previously earned balances.
-- A fresh browser game earned 45 credits for the robot repair. Buying its sensor reduced 20 to 5; completing the repair raised it to 50. Buying the LED kit reduced 50 to 40; installing the personal LED upgrade left it at 40.
-- Iris's new-job marker became active after acceptance, disappeared after the repair, then returned for a different calibration job after the workshop project. Completed campaign saves show no required-job markers.
-- A changing robot practice contract advanced to its next threshold and awarded one mastery star. Personal-upgrade practice is separately tested to award stars without cash.
-- The larger town renders in the compatibility renderer. Keyboard walking, camera follow, zoom, clickable job markers, completed-world effects, and 390 × 700 layout were inspected.
-- Scene recovery checks cover boundary, building, pond and malformed coordinates, including imports while dialogs are open.
-- Site checks protect approved imagery and existing contact information. The original four arcade entries and their passport are preserved.
+- 59 Node regression groups pass: 46 campaign/original and 13 scene checks. Includes all 22 distinct project solutions, misconception cases, fresh and migrated cash flow, 300 mixed contracts, no consecutive topic families, old-save migration, strict expression parsing, scene recovery, player facing, NPC markers and map travel.
+- Managed browser continued an existing eight-project save with 208 credits through all 14 new projects. Final balance was 523 credits; reload retained 22 completed projects. Existing mastery was retained.
+- The first new service project paid 35 credits. The next personal PWM project paid nothing. A later personal LED mastery contract earned one star and no credits, then offered a different echo topic.
+- Sam's assigned-job marker appeared in East Village, disappeared after completion, and ordinary conversation remained available. His dialogue pointed to the next mentor. Nora's idle conversation was also tested.
+- The expanded town spans 120 by 120 world units, nine times the previous 40 by 40 area. Five map travel destinations connect the town center and outer neighborhoods. Map travel, keyboard walking and character facing were inspected in the compatibility renderer.
+- The map and conversation panels fit a 390 by 700 mobile-sized frame. Map text contrast was corrected after visual review. A real touch device has not been tested.
+- Approved-image protection and public-contact regression checks pass. The original four arcade cards and original Part 1 archive are preserved.
 
 ## Limits
-- The graphics are more detailed stylized 3D, not photorealistic.
-- New neighborhoods are explorable scenery, not additional hidden missions or building interiors.
-- Hardware WebGL rendering still needs device testing. The fallback renderer was visually checked.
-- Recorded dialogue remains the original set; new project text uses optional installed local speech when available, otherwise complete captions. Pronunciation/listening review is still outstanding.
-- The ZIP is self-contained. Actual disconnected local-file play remains unverified; browser storage behavior can vary. Export save backups.
-- Eight projects and their practice variants are implemented. This is an expanding game, not the complete long-term vision. The full tutorial video is a separate deliverable.
+- Play duration has not been measured with learners. There are 22 distinct authored projects; repeat parameters are finite, not unlimited new missions.
+- Hardware WebGL rendering and performance on mobile devices still need device testing. The compatibility renderer was visually inspected.
+- New dialogue uses captions and optional installed local speech. No new voice recordings or human pronunciation review are claimed.
+- The ZIP is self-contained, but disconnected local-file play remains unverified for this revision. Export save backups.
+- The original eight project rules have regression coverage and prior browser checks; this integration's browser walkthrough focused on all 14 additions, conversations, map travel and mixed practice.
+- This remains an expanding game, not the entire long-term vision or a full JavaScript runtime. The tutorial video is a separate deliverable.

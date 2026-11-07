@@ -20,6 +20,7 @@ function harness(geometry=false){
   querySelectorAll(s){return s==='button'?this.parts?.buttons||[]:[];}
   addEventListener(name,fn){(this.listeners||(this.listeners={}))[name]=fn;}
   setPointerCapture(){}
+  focus(){document.activeElement=this;}
   getContext(k){return k==='webgl'?null:{setTransform(){},fillRect(){},beginPath(){},moveTo(x,y){assert(Number.isFinite(x)&&Number.isFinite(y));},lineTo(x,y){assert(Number.isFinite(x)&&Number.isFinite(y));},closePath(){},fill(){draws++;}};}
  }
  for(const id of ['world','fallback','interact'])elements[id]=new Element(id==='world'?'canvas':'div');
@@ -34,7 +35,9 @@ function harness(geometry=false){
  vm.runInNewContext(code,window);
  const tick=()=>nextFrame(clock+=40);tick();
  const markers=Object.fromEntries(bodyChildren.filter(e=>e.className==='town-job-marker').map(e=>[e.dataset.npc,e]));
- return {window,state,scene:window.TownScene,markers,listeners,touch,tick,get draws(){return draws;}};
+ const talkMarkers=Object.fromEntries(bodyChildren.filter(e=>e.className==='town-talk-marker').map(e=>[e.dataset.npc,e]));
+ const map={toggle:bodyChildren.find(e=>e.className==='town-map-toggle'),panel:bodyChildren.find(e=>e.className==='town-map-panel'),close:bodyChildren.find(e=>e.className==='town-map-close'),destinations:Object.fromEntries(bodyChildren.filter(e=>e.className==='town-map-destination').map(e=>[e.dataset.district,e]))};
+ return {window,state,scene:window.TownScene,markers,talkMarkers,elements,map,listeners,touch,tick,get draws(){return draws;}};
 }
 function complete(h,id){
  const j=C.jobs.find(j=>j.id===id);C.accept(h.state,id);if(!h.state.inventory.includes(j.part))C.buy(h.state,j.part);
@@ -44,16 +47,16 @@ function complete(h,id){
 
 test('scene builds detailed shared 3D polygons and projects finite coordinates without WebGL',()=>{
  const h=harness(),info=h.scene.getMapInfo();assert.equal(info.renderer,'canvas3d');assert(info.staticFaces>2000);assert(h.draws>1000);
- assert.equal(info.buildings.length,10);assert.equal(info.districts.length,4);
+ assert.equal(info.buildings.length,25);assert.equal(info.districts.length,8);assert(info.staticFaces<30000,'Expanded town keeps a bounded geometry budget');
  for(const stop of Object.values(h.scene.stops)){const p=h.scene.project(stop.x,2,stop.z);assert(Number.isFinite(p.x)&&Number.isFinite(p.y));}
 });
 test('map recovers imported positions inside buildings, pond, old bounds, and invalid coordinates',()=>{
  const h=harness(),s=h.scene;
- for(const [x,z] of [[20,20],[-20,-20],[9.5,0],[-5,0],[15,-12],[-14,-1.2],[Infinity,NaN],[300,300]]){
+ for(const [x,z] of [[20,20],[-20,-20],[60,60],[-60,-60],[9.5,0],[-5,0],[15,-12],[-14,-1.2],[-44,-36],[39,-39],[Infinity,NaN],[300,300]]){
   s.player.x=x;s.player.z=z;h.tick();assert(s.isWalkable(s.player.x,s.player.z),`Could not recover ${x}, ${z}`);
  }
  h.window.townPaused=true;s.player.x=-5;s.player.z=0;h.tick();assert(s.isWalkable(s.player.x,s.player.z),'Import also recovers while its dialog is open');
- assert(s.isWalkable(20,20));assert(!s.isWalkable(20.01,20));
+ assert(s.isWalkable(20,20));assert(s.isWalkable(20.01,20));assert(s.isWalkable(60,60));assert(!s.isWalkable(60.01,20));
 });
 test('camera controls and keyboard movement preserve all three arrival destinations',()=>{
  const h=harness(),s=h.scene;h.listeners.keydown({key:'D',preventDefault(){}});const before=s.player.x;h.tick();h.listeners.keyup({key:'D'});assert(s.player.x>before,'Uppercase WASD is supported');
@@ -90,15 +93,38 @@ test('touch directions and diagonals share heading logic; cancelling touch stops
 });
 test('collision sliding faces the surviving axis and fully blocked or paused movement retains heading',()=>{
  const h=harness(),s=h.scene;
- for(const [x,z,key] of [[20,4,'ArrowRight'],[0,20,'ArrowDown'],[-3.27,0,'ArrowLeft']]){
+ for(const [x,z,key] of [[60,4,'ArrowRight'],[0,60,'ArrowDown'],[-3.27,0,'ArrowLeft']]){
   assert(s.isWalkable(x,z));s.player.x=x;s.player.z=z;press(h,[key]);h.tick();facingMovement(h,x,z);release(h,[key]);
  }
- s.player.x=20;s.player.z=20;const heading=s.facing;press(h,['ArrowDown']);h.tick();close(s.player.x,20);close(s.player.z,20);close(s.facing,heading);release(h,['ArrowDown']);
+ s.player.x=60;s.player.z=60;const heading=s.facing;press(h,['ArrowDown']);h.tick();close(s.player.x,60);close(s.player.z,60);close(s.facing,heading);release(h,['ArrowDown']);
  h.window.townPaused=true;press(h,['w']);h.tick();close(s.facing,heading);
 });
 test('visiting each destination turns toward its NPC and keeps that heading while stopped',()=>{
  const h=harness(),s=h.scene;
- for(const id of ['yard','store','lab']){s.go(id);const stop=s.stops[id],p=s.player,a=Math.atan2(stop.x-p.x,stop.z-p.z);close(s.facing,a);h.tick();close(s.facing,a);}
+ for(const [id,stop] of Object.entries({...s.stops,...s.residents})){s.go(id);const p=s.player,a=Math.atan2(stop.x-p.x,stop.z-p.z);close(s.facing,a);h.tick();close(s.facing,a);assert(s.isWalkable(p.x,p.z));}
+});
+test('all six residents can be approached and spoken to with E or the nearby touch button',()=>{
+ const h=harness(),s=h.scene;
+ for(const [id,stop] of Object.entries({...s.stops,...s.residents})){
+  s.player.x=stop.x+.5;s.player.z=stop.z+.7;h.tick();assert(!h.elements.interact.hidden);
+  if(s.residents[id])assert.equal(h.elements.interact.textContent,'Talk to '+stop.name+' · E');
+  h.window.event=null;press(h,['E']);assert.equal(h.window.event.detail,id);close(s.facing,Math.atan2(stop.x-s.player.x,stop.z-s.player.z));
+  h.window.event=null;h.elements.interact.onclick();assert.equal(h.window.event.detail,id);
+ }
+ // Recheck proximity at activation, even if the last displayed prompt is stale.
+ s.player.x=0;s.player.z=20;h.window.event=null;press(h,['e']);h.elements.interact.onclick();assert.equal(h.window.event,null);h.tick();assert(h.elements.interact.hidden);
+ s.go('gardener');h.tick();h.window.event=null;h.listeners.keydown({key:'e',repeat:true,preventDefault(){}});assert.equal(h.window.event,null);
+ h.window.townPaused=true;h.tick();press(h,['e']);h.elements.interact.onclick();assert.equal(h.window.event,null);assert(h.elements.interact.hidden);
+});
+test('scenic conversation buttons are accessible and never masquerade as job markers',()=>{
+ const h=harness(),s=h.scene;assert.deepEqual(Object.keys(h.markers).sort(),['gardener','lab','neighbor','store','walker','yard']);assert.deepEqual(Object.keys(h.talkMarkers).sort(),['gardener','neighbor','walker']);
+ for(const [id,el] of Object.entries(h.talkMarkers)){
+  assert.equal(el.tagName,'button');assert.equal(el.type,'button');assert.equal(el.textContent,'Talk to '+s.residents[id].name);assert.match(el.getAttribute('aria-label'),/Visit and talk to /);assert.equal(el.querySelector('b'),null);
+  el.onclick();assert.equal(h.window.event.detail,id);h.tick();assert(!el.hidden);assert(h.markers[id].hidden,'No false job icon when no job is assigned');assert(s.isWalkable(s.player.x,s.player.z));
+ }
+ h.window.townPaused=true;h.tick();assert(Object.values(h.talkMarkers).every(e=>e.hidden));h.window.event=null;h.talkMarkers.gardener.onclick();assert.equal(h.window.event,null);
+ h.window.townPaused=false;for(const j of C.jobs)complete(h,j.id);s.go('neighbor');h.tick();assert(Object.values(h.markers).every(e=>e.hidden));assert(!h.talkMarkers.neighbor.hidden);
+ assert.deepEqual(Object.keys(s.player).sort(),['x','z']);assert.deepEqual(Object.keys(s.stops).sort(),['lab','store','yard']);
 });
 test('every player body polygon rotates around the feet while shadows and NPC geometry stay unchanged',()=>{
  const h=harness(true),body=h.window.testHuman(0),npc=JSON.stringify(h.window.testHuman(0,false));assert(body.length>100);
@@ -109,4 +135,26 @@ test('every player body polygon rotates around the feet while shadows and NPC ge
   }));
   assert.equal(JSON.stringify(h.window.testHuman(a,false)),npc,'NPC remains in its original orientation after rendering player');
  }
+});
+test('district map supports keyboard, touch travel, focus containment and safe outer destinations',()=>{
+ const h=harness(),s=h.scene,m=h.map;
+ assert.equal(s.bounds.maxX-s.bounds.minX,120);assert.equal(s.bounds.maxZ-s.bounds.minZ,120);assert.equal(Object.keys(m.destinations).length,5);
+ assert.equal(m.panel.getAttribute('role'),'dialog');assert.equal(m.panel.getAttribute('aria-modal'),'true');assert(m.panel.hidden);
+ press(h,['m']);assert(!m.panel.hidden);assert.equal(h.window.document.activeElement,m.close);assert.equal(m.toggle.getAttribute('aria-expanded'),'true');
+ const start={...s.player};press(h,['d']);h.touch.ArrowUp.listeners.pointerdown({pointerId:2});h.tick();assert.deepEqual({...s.player},start);
+ h.listeners.keydown({key:'Tab',preventDefault(){}});assert.equal(h.window.document.activeElement,m.destinations.center);
+ h.listeners.keydown({key:'Tab',shiftKey:true,preventDefault(){}});assert.equal(h.window.document.activeElement,m.close);
+ h.listeners.keydown({key:'Tab',shiftKey:true,preventDefault(){}});assert.equal(h.window.document.activeElement,m.destinations.village);
+ press(h,['Escape']);assert(m.panel.hidden);assert.equal(h.window.document.activeElement,m.toggle);
+ for(const [id,button] of Object.entries(m.destinations)){m.toggle.onclick();button.onclick();h.tick();assert(m.panel.hidden);assert(s.isWalkable(s.player.x,s.player.z));close(s.player.x,s.travelPoints[id].x);close(s.player.z,s.travelPoints[id].z);}
+ for(const id of ['gardener','walker','neighbor'])assert(Math.hypot(s.residents[id].x,s.residents[id].z)>35);
+ assert.equal(s.travel('missing'),false);h.window.townPaused=true;const before={...s.player};assert.equal(s.travel('center'),false);m.toggle.onclick();assert(m.panel.hidden);assert.deepEqual({...s.player},before);
+});
+test('outer residents show genuine assigned missions, then return to plain conversation',()=>{
+ const h=harness(),s=h.scene,seen=new Set();
+ for(const job of C.jobs){
+  if(s.residents[job.place]){const id=job.place;seen.add(id);s.go(id);h.tick();assert(!h.markers[id].hidden);assert(h.talkMarkers[id].hidden);assert.equal(h.markers[id].querySelector('span').textContent,'NEW JOB');C.accept(h.state,job.id);h.tick();assert.equal(h.markers[id].querySelector('span').textContent,'JOB ACTIVE');}
+  complete(h,job.id);
+ }
+ assert.deepEqual([...seen].sort(),['gardener','neighbor','walker']);for(const id of seen){s.go(id);h.tick();assert(h.markers[id].hidden);assert(!h.talkMarkers[id].hidden);}
 });
