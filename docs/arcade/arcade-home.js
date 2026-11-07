@@ -7,8 +7,8 @@
   if (!document.body.classList.contains('arcade-home')) return;
 
   const KEY = 'kira.arcade.passport.v1';
-  const GAMES = Object.freeze(['code-quest', 'circuitbound', 'little-signal', 'firefly-trail']);
-  const LESSONS = Object.freeze(['code-quest', 'little-signal', 'firefly-trail']);
+  const GAMES = Object.freeze(['byte-bolt', 'code-quest', 'circuitbound', 'little-signal', 'firefly-trail']);
+  const LESSONS = Object.freeze(['byte-bolt', 'code-quest', 'little-signal', 'firefly-trail']);
   const get = id => document.getElementById(id);
   const isReduced = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
   let audioOn = false;
@@ -58,7 +58,7 @@
     });
     if (!message) {
       message = count
-        ? 'You have launched ' + count + ' of the 4 games from this page.'
+        ? 'You have launched ' + count + ' of the ' + GAMES.length + ' games from this page.'
         : 'Choose a game to earn your First Step badge.';
     }
     get('ar-passport-status').textContent = message + (persistenceAvailable ? '' : ' This session only; local saving is unavailable.');

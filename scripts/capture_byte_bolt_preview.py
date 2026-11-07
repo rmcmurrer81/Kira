@@ -32,6 +32,7 @@ with sync_playwright() as p:
     page.locator("#world").wait_for(state="visible", timeout=12000)
     page.wait_for_timeout(2100)
     assert page.locator("#objective").inner_text().strip(), "Missing live mission objective"
+    assert page.evaluate("window.TownCore && window.TownCore.jobs.length") == 22, "Preview is not the current 22-project game"
     assert page.locator("#jobs").is_visible(), "Game job board unavailable"
     assert page.locator("#fallback").is_hidden(), "The compatibility town should load"
     assert not errors, "Game JavaScript errors: " + " | ".join(errors)

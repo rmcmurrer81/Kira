@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#081222">
   <title>Kira Labs Arcade — Play, Explore & Learn</title>
-  <meta name="description" content="Play original Kira Labs browser games: Circuitbound teaches coding and electronics through a branching fantasy adventure, alongside Code Quest, The Little Signal and Firefly Trail.">
+  <meta name="description" content="Play five Kira Labs browser adventures: Byte &amp; Bolt learning town, Code Quest, Circuitbound, The Little Signal and Firefly Trail.">
   <link rel="canonical" href="https://kiralabs.org/arcade/">
   <meta property="og:title" content="Kira Labs Arcade — Play, Explore & Learn">
-  <meta property="og:description" content="Play animated adventures with narrated stories or learn to build a complete browser game from the beginning to the ending.">
+  <meta property="og:description" content="Explore five playable adventures, including Byte &amp; Bolt: a 22-project 3D town teaching beginner programming and electronics.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://kiralabs.org/assets/social-card.jpg">
   <link rel="icon" href="../assets/favicon.png">
   <link rel="stylesheet" href="../labs.css">
   <link rel="stylesheet" href="arcade.css?v=20261106.2">
-  <link rel="stylesheet" href="arcade-home-redesign.css?v=20261106.2">
+  <link rel="stylesheet" href="arcade-home-redesign.css?v=20261107.1">
   <script src="../labs.js?v=20261101-iris-float4" defer></script>
-  <script src="arcade-home.js?v=20261106.2" defer></script>
+  <script src="arcade-home.js?v=20261107.1" defer></script>
 </head>
 <body class="arcade-home">
   <a class="skip" href="#main">Skip to the arcade</a>
@@ -36,18 +36,18 @@
         <div class="ar-hero-copy">
           <p class="ar-eyebrow">✦ KIRA LABS / THE ARCADE</p>
           <h1 id="ar-title">Big curiosity.<br><em>Little games. Big adventures.</em></h1>
-          <p class="ar-intro">Choose your world, meet memorable characters, and play your way through stories that teach real coding skills along the way.</p>
+          <p class="ar-intro">Choose your world, meet memorable characters, and play your way through stories that teach coding, electronics, and problem-solving.</p>
           <div class="ar-actions">
             <a class="ar-button ar-button-primary" href="code-quest/" data-arcade-visit="code-quest">▶ Play Code Quest <span aria-hidden="true">→</span></a>
-            <a class="ar-button ar-button-outline" href="#ar-games-title">Explore all four games <span aria-hidden="true">↓</span></a>
+            <a class="ar-button ar-button-outline" href="#ar-games-title">Explore all five games <span aria-hidden="true">↓</span></a>
           </div>
           <div class="ar-hero-controls">
             <button id="ar-sound-toggle" class="ar-sound-toggle" type="button" aria-pressed="false" aria-describedby="ar-sound-status">♫ Arcade sound: Off</button>
             <span id="ar-sound-status" role="status">Sound previews only play when you turn them on.</span>
           </div>
-          <p class="ar-fine">Four original games · Free to play · No signup · Voice and sound options inside supported games</p>
+          <p class="ar-fine">Five original games · Free to play · No signup · Voice and sound options inside supported games</p>
           <div class="ar-hero-highlights" aria-label="Arcade highlights">
-            <span><strong>4</strong> Playable games</span>
+            <span><strong>5</strong> Playable games</span>
             <span><strong>14</strong> Code Quest encounters</span>
             <span><strong>4</strong> Circuitbound endings</span>
           </div>
@@ -76,9 +76,23 @@
       <div class="ar-shell">
         <div class="ar-section-head">
           <div><p class="ar-eyebrow">● CHOOSE YOUR WORLD</p><h2 id="ar-games-title">Pick an adventure. <em>Make a discovery.</em></h2></div>
-          <p>From fantasy quests to lantern puzzles, every game has a story to explore. No programming experience is required to start.</p>
+          <p>From a 3D learning town to fantasy quests and lantern puzzles, every game offers a different adventure. No programming experience is required to start.</p>
         </div>
         <div class="ar-game-gallery">
+          <article class="ar-game-tile ar-game-bytebolt">
+            <a class="ar-game-cover" href="byte-bolt/" aria-label="Play Byte and Bolt: The Learning Town" data-arcade-visit="byte-bolt">
+              <img src="previews/byte-bolt-real-gameplay-20261107.webp" alt="Actual Byte and Bolt gameplay showing the learning town and objective interface in its compatibility renderer" width="960" height="540" loading="lazy" decoding="async">
+              <span class="ar-cover-label">NEW · EXPANDED 3D TOWN</span><span class="ar-cover-hover" aria-hidden="true">▶ EXPLORE THE TOWN</span>
+            </a>
+            <div class="ar-game-copy">
+              <p class="ar-overline">NEW ADVENTURE · 22 DISTINCT PROJECTS</p>
+              <h3>Byte &amp; Bolt <span>The Learning Town</span></h3>
+              <p>Explore a larger stylized 3D town, meet residents, and solve 22 programming and electronics projects: 14 paid town jobs and 8 upgrades for your own lab. Return for mixed practice contracts and save your progress locally.</p>
+              <div class="ar-tags"><span>22 distinct projects</span><span>Explorable 3D town</span><span>Repeatable practice</span><span>Local saves</span><span>Optional speech</span></div>
+              <div class="ar-card-actions"><a class="ar-button ar-button-primary" href="byte-bolt/" data-arcade-visit="byte-bolt">▶ Play Byte &amp; Bolt</a><a class="ar-text-link" href="byte-bolt/learn.html" data-arcade-learn="byte-bolt">Learn how it's built ↗</a></div>
+            </div>
+          </article>
+
           <article class="ar-game-tile ar-game-codequest">
             <a class="ar-game-cover" href="code-quest/" aria-label="Play Code Quest: The Stoneward Oath" data-arcade-visit="code-quest">
               <img src="previews/code-quest-real-gameplay-20261106.webp" alt="Actual Code Quest game scene with its fantasy adventure environment" width="960" height="540" loading="lazy" decoding="async">
@@ -141,11 +155,11 @@
 
     <section class="ar-learn" id="byte-bolt-preview" aria-labelledby="byte-bolt-title">
       <div class="ar-shell">
-        <p class="ar-eyebrow">NEW · EARLY PLAYABLE PROTOTYPE</p>
-        <h2 id="byte-bolt-title">Byte &amp; Bolt <em>Build your first lab.</em></h2>
+        <p class="ar-eyebrow">EXPANDED WORLD · DOWNLOAD & DETAILS</p>
+        <h2 id="byte-bolt-title">More to explore in <em>Byte &amp; Bolt.</em></h2>
         <p>Explore the 3D town and complete 22 distinct programming and electronics projects. Talk with residents even when they have no job, earn credits for town work, buy parts, and improve your own lab without a cash payout. After new projects, mixed contracts space out familiar topics; unpaid bench revisits remain available.</p>
         <div class="ar-actions"><a class="ar-button ar-button-primary" href="byte-bolt/">▶ Try the town prototype</a><a class="ar-button ar-button-outline" href="byte-bolt/Byte-and-Bolt-Prototype.zip?v=20261107-town22" download>Download offline/source ZIP</a><a class="ar-text-link" href="byte-bolt/learn.html">Read the build guide ↗</a></div>
-        <p class="ar-fine">Working title. Separate from Circuitbound. An expanding 22-project learning campaign with finite repeat variations and no guaranteed playtime, not the whole planned game. More detailed stylized scenery, optional speech and complete captions; the full beginner tutorial video is still in development. The four existing arcade entries and their passport remain unchanged.</p>
+        <p class="ar-fine">Working title. Separate from Circuitbound. An expanding 22-project learning campaign with finite repeat variations and no guaranteed playtime, not the whole planned game. More detailed stylized scenery, optional speech and complete captions; the full beginner tutorial video is still in development. The original four games remain playable, and the Arcade Passport now includes Byte &amp; Bolt.</p>
       </div>
     </section>
 
@@ -154,12 +168,12 @@
         <div class="ar-passport-copy">
           <p class="ar-eyebrow">✦ YOUR ARCADE PASSPORT</p>
           <h2 id="ar-passport-title">Every adventure <em>starts somewhere.</em></h2>
-          <p>Collect small explorer badges as you launch games and visit tutorials from this page. No account, leaderboard, or pretend completion scores.</p>
+          <p>Collect small explorer badges as you launch games and visit tutorials from this page. All five games count—no account, leaderboard, or pretend completion scores.</p>
           <p class="ar-privacy-note">Saved only in this browser. Visiting a game is not the same as completing it.</p>
         </div>
         <div class="ar-passport-panel">
-          <div class="ar-passport-top"><span>Worlds visited</span><strong id="ar-visit-count">0 / 4</strong></div>
-          <div class="ar-passport-track" role="progressbar" id="ar-visit-progress" aria-label="Games launched from this page" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span id="ar-visit-fill"></span></div>
+          <div class="ar-passport-top"><span>Worlds visited</span><strong id="ar-visit-count">0 / 5</strong></div>
+          <div class="ar-passport-track" role="progressbar" id="ar-visit-progress" aria-label="Games launched from this page" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><span id="ar-visit-fill"></span></div>
           <div class="ar-badges" aria-label="Explorer badges">
             <div class="ar-badge" data-badge="starter"><span aria-hidden="true">✦</span><strong>First Step</strong><small>Open one game</small></div>
             <div class="ar-badge" data-badge="pathfinder"><span aria-hidden="true">◇</span><strong>Pathfinder</strong><small>Visit three worlds</small></div>
@@ -174,6 +188,9 @@
       <div class="ar-shell">
         <div class="ar-section-head"><div><p class="ar-eyebrow">● FROM PLAYER TO CREATOR</p><h2 id="ar-learn-title">Build the <em>magic.</em></h2></div><p>Curious about how the stories work? Learn to build real playable games with code you can copy, edit, and run yourself.</p></div>
         <div class="ar-learning-grid">
+          <a class="ar-learning-card" href="byte-bolt/learn.html" data-arcade-learn="byte-bolt">
+            <span class="ar-learning-icon" aria-hidden="true">ϟ</span><span class="ar-learning-level">BUILD AN INTERACTIVE TOWN</span><h3>Code your own learning town</h3><p>Explore the real 22-project source, branching jobs, saved progress, and stylized 3D world.</p><strong>Read the Byte &amp; Bolt guide →</strong>
+          </a>
           <a class="ar-learning-card" href="code-quest/learn.html" data-arcade-learn="code-quest">
             <span class="ar-learning-icon" aria-hidden="true">⌘</span><span class="ar-learning-level">START HERE · BEGINNER</span><h3>Build your first adventure</h3><p>Learn HTML, CSS and JavaScript while making a complete interactive game.</p><strong>Open the lessons →</strong>
           </a>

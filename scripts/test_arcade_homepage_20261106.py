@@ -66,6 +66,13 @@ def test():
         page.locator("#ar-passport-reset").click()
         assert page.locator("#ar-visit-count").inner_text() == "0 / 4"
         assert page.locator('[data-badge="starter"]').get_attribute("data-unlocked") == "false"
+        # Older four-game passport saves must survive expanding to five games.
+        page.evaluate("""() => localStorage.setItem('kira.arcade.passport.v1',
+            JSON.stringify({games: ['code-quest','circuitbound'], lessons: ['code-quest']}))""")
+        page.reload(wait_until="domcontentloaded")
+        assert page.locator("#ar-visit-count").inner_text() == "2 / 5"
+        assert page.locator('[data-badge="creator"]').get_attribute("data-unlocked") == "true"
+        assert page.locator("#ar-visit-progress").get_attribute("aria-valuemax") == "5"
 
         # The cards remain single-column and easy to tap on a phone.
         mobile = browser.new_context(viewport={"width": 390, "height": 844}, reduced_motion="reduce")
