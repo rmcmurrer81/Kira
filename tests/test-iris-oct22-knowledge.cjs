@@ -23,7 +23,8 @@ const archivedNov64=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-pr
 assert.equal(iris.validate(archivedNov64),archivedNov64,'Previous immutable knowledge preserved');
 assert.equal(archivedNov64.projects.find(p=>p.id==='arcade').source,'reports/arcade-lobby-release-2026-11-06.html#what-changed');
 assert.equal(data.projects.find(p=>p.id==='arcade').source,'reports/byte-bolt-learning-town-2026-11-06.html#verified-scope');
-assert.match(data.projects.find(p=>p.id==='arcade').status,/22 authored projects.*59 passing Node/);
+assert.match(data.projects.find(p=>p.id==='arcade').status,/59 passing Node regression groups/);
+assert.match(data.projects.find(p=>p.id==='arcade').status,/22 authored projects/);
 assert.ok(fs.readFileSync(path.join(docs,'reports/byte-bolt-learning-town-2026-11-06.html'),'utf8').includes('id="verified-scope"'));
 assert.ok(fs.readFileSync(path.join(docs,'updates.html'),'utf8').includes('id="byte-bolt-learning-town-2026-11-06"'));
 assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(m=>m.id==='byte-bolt-learning-town-2026-11-06'));
