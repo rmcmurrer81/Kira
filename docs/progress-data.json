@@ -1,8 +1,70 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-06",
+  "reviewed_on": "2026-11-07",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-fresh-protocols-2026-11-07",
+      "title": "NewBrain fresh Native trials: different tasks pass, full qualification fails",
+      "date": "2026-11-07",
+      "date_basis": "November 7 locked protocol V11/V14 research variants with fresh facts and held-out questions",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "V11 answered 8/8 supported and 4/4 combinations but 1/5 unknowns; V14 got 5/5 unknowns but lost other accuracy.",
+      "body": [
+        "The 96-hidden experimental branch uses 49,612 parameters; fresh locked protocols prevent exact prompt overlap. V11 passed 8/8 supported and 4/4 combinations; abstention failed at 1/5.",
+        "V14 reversed the trade-off: 5/5 abstention, but 7/8 supported and 2/4 combinations, with retention 5/8. Exact restart passed; neither run met the complete criteria.",
+        "This is a controlled experimental variant, not a new accepted Original12 result, coherent conversation or production deployment. Original12 remains 2/12 and was not rerun."
+      ],
+      "boundary": "No single fresh run demonstrates reliable learning, abstention, combination and retention together; research models are not production Native qualification.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Illustrative glowing neural artwork, not a screenshot of experimental NewBrain responses",
+        "caption": "Concept art only; the November 7 locked research trials did not pass all criteria."
+      },
+      "sources": [
+        {
+          "label": "November 7 learning trials",
+          "url": "updates.html#newbrain-fresh-protocols-2026-11-07"
+        },
+        {
+          "label": "NewBrain details",
+          "url": "newbrain.html#newbrain-fresh-v14-2026-11-07"
+        }
+      ],
+      "evidence_kind": "V11-supported8-combo4-abstain1-V14-abstain5-supported7-not-fully-passing"
+    },
+    {
+      "id": "avatar-reference-fit-2026-11-07",
+      "title": "Avatar Builder V95: references begin controlling proportions, anatomy not accepted",
+      "date": "2026-11-07",
+      "date_basis": "November 7 staged original-body V90–V95 build records and independent interface/unit checks",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "Front/side silhouette ratios affect authored width controls, but the photo-to-body workflow is unqualified and the original body remains unaccepted.",
+      "body": [
+        "The V95 candidate produced export files, with measured front/side reference silhouette ratios and proportion controls. Independent tests showed shoulder/hip control directions track adjusted measurements.",
+        "The reference fit is only projected silhouette geometry, not metric scan or Evelyn likeness; the source reference images were not directly consumed by the production build. Stale reference-file source pins remain in interface checks.",
+        "150 Avatar tests ran with two errors and one skipped; 13 schema tests passed. No owner-approved anatomy, correct deformation, or complete user-facing photo/video workflow."
+      ],
+      "boundary": "Private references and rejected visual candidates remain unpublished; engineering proportion controls are not qualified anatomy, likeness or functioning model acceptance.",
+      "image": {
+        "path": "assets/kira-world-avatar-builder-visual-20261023.svg",
+        "alt": "Illustrative Avatar Builder concept, not an approved V95 model",
+        "caption": "Existing concept illustration; V95 engineering research is not an approved human body."
+      },
+      "sources": [
+        {
+          "label": "November 7 Avatar findings",
+          "url": "updates.html#avatar-reference-fit-2026-11-07"
+        },
+        {
+          "label": "Avatar Builder details",
+          "url": "kira-world-avatar-builder.html#avatar-reference-v95-2026-11-07"
+        }
+      ],
+      "evidence_kind": "V95-reference-proportion-controls-unqualified-two-test-errors"
+    },
     {
       "id": "newbrain-v89-bounded-evaluation-2026-11-06",
       "title": "NewBrain V89: bounded taught facts and rehearsal, not independent generalization",

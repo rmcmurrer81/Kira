@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-06",
+  "prepared_on": "2026-11-07",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,66 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-fresh-protocols-2026-11-07",
+      "title": "V11/V14 fresh Native experiments: complementary partial passes",
+      "project": "NewBrain",
+      "track": "Fresh facts · Frozen held-outs · Gen/abstention/retention",
+      "date": "2026-11-07",
+      "reviewed_on": "2026-11-07",
+      "status": "development",
+      "date_basis": "Locked independently held-out synthetic research experiments on Nov 7, not Original12",
+      "summary": "V11 passed supported 8/8 and combinations 4/4, abstention 1/5. V14 reached 5/5 abstention but missed supported/combination/retention thresholds.",
+      "body": "A separately grown 96-hidden Native research core (49,612 params) was trained on new locked facts. V11 correctly answered 8/8 supported and 4/4 combinations while failing 4/5 unknown-answer cases and post-teaching retention. V14 reached 5/5 unknown-answer controls but got 7/8 supported, 2/4 combinations and 5/8 retained supported. Exact restart checks passed. Neither run fully qualifies and protected Original12 is unchanged at 2/12.",
+      "boundary": "Partial gains across separate attempts cannot be combined into one successful run; no independent full learning, generalization, conversation or deployment qualification.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Concept neural artwork, not actual NewBrain training run",
+        "caption": "Illustration; fresh experiments remain overall negative.",
+        "label": "Concept artwork"
+      },
+      "sources": [
+        {
+          "label": "Nov 7 experimental findings",
+          "url": "updates.html#newbrain-fresh-protocols-2026-11-07"
+        },
+        {
+          "label": "NewBrain results",
+          "url": "newbrain.html#newbrain-fresh-v14-2026-11-07"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-fresh-v14-2026-11-07"
+    },
+    {
+      "id": "avatar-reference-fit-2026-11-07",
+      "title": "V95 original-avatar reference proportions respond, anatomy still unaccepted",
+      "project": "Kira World",
+      "track": "Avatar Builder · Front/side silhouette and source-to-build controls",
+      "date": "2026-11-07",
+      "reviewed_on": "2026-11-07",
+      "status": "development",
+      "date_basis": "November 7 V90–V95 candidate records, independent interface audit and bounded unit checks",
+      "summary": "Reference silhouette ratios map to shoulder and hip width controls, but V95 is not an accepted or qualified visual body.",
+      "body": "Front/side silhouettes provided limited ratio measurements and controlled authored width parameters. The V95 candidate exports, while source metadata explicitly says the reference photos were for proportions only, not metric scan, and production consumed no reference image bytes. Separate interface audit showed two errors in 150 Avatar unit tests (one skipped), 13 schema cases passing and stale photo source pins. This is not original Evelyn likeness, trusted anatomy, natural deformation or completed photo/video import.",
+      "boundary": "Owner acceptance, anatomy, natural movement, complete user workflow and secured source image consumption remain unresolved.",
+      "image": {
+        "path": "assets/kira-world-avatar-builder-visual-20261023.svg",
+        "alt": "Illustrative avatar research artwork, not V95 accepted geometry",
+        "caption": "Illustrative concept; original body not accepted.",
+        "label": "Concept artwork"
+      },
+      "sources": [
+        {
+          "label": "November 7 engineering",
+          "url": "updates.html#avatar-reference-fit-2026-11-07"
+        },
+        {
+          "label": "Avatar Builder status",
+          "url": "kira-world-avatar-builder.html#avatar-reference-v95-2026-11-07"
+        }
+      ],
+      "project_page": "kira-world-avatar-builder.html#avatar-reference-v95-2026-11-07"
+    },
     {
       "id": "newbrain-v89-bounded-evaluation-2026-11-06",
       "title": "NewBrain V89 bounded synthetic teaching and core restart",
