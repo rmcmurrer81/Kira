@@ -1,0 +1,15 @@
+Kira Labs Voice Designer - third-party notices
+
+Application source: Kira Labs; no paid services are used.
+Local backend: Qwen3-TTS-12Hz-1.7B-VoiceDesign, Qwen team, Apache License 2.0.
+Model fixed revision: 5ecdb67327fd37bb2e042aab12ff7391903235d3.
+https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign
+https://github.com/QwenLM/Qwen3-TTS
+Python: Python Software Foundation License. https://docs.python.org/3.14/license.html
+PyTorch: BSD-style license and third-party notices supplied in its installed wheel. https://github.com/pytorch/pytorch/blob/main/LICENSE
+NumPy, SciPy, Transformers, Accelerate, librosa and other dependencies retain their own licenses inside runtime/Lib/site-packages/*.dist-info.
+The CUDA PyTorch download includes NVIDIA components and applicable license terms; those notices remain in the installed distribution.
+No independent legal licensing audit, code-signing certificate, clean Windows VM validation, CPU-mode validation or low-memory compatibility result is claimed.
+Qwen-TTS declared accelerate==1.12.0 is overridden by the actual-proven composition accelerate1.14.0. Torch2.12.1+cu130 and torchaudio2.11.0+cu130 match the successful existing-host route; ordinary isolated clean installation still requires validation.
+
+SoX Python wrapper1.5.0: BSD-3-Clause, Rachel Bittner/contributors. Bundled local wheel repackages seven unchanged Python package files and upstream metadata/license from verified official PyPI source; it is not an upstream-provided binary wheel. No setup.py execution or tar filesystem extraction was used. See SoX-Python-LICENSE.txt and sox-wheel-provenance.json in release source.
