@@ -1,0 +1,1602 @@
+{
+  "engine": "Kokoro v1.0 via kokoro-onnx 0.6.1; CPU build-time rendering",
+  "voice": "af_sarah (stock licensed voice, not a clone or recreation of a game character)",
+  "model_sha256": "6e742170d309016e5891a994e1ce1559c702a2ccd0075e67ef7157974f6406cb",
+  "voices_sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+  "generated_locally": true,
+  "runtime_synthesis": false,
+  "private_voice_data": false,
+  "format": "mono MP3, 24 kHz, 64 kbps",
+  "segments": [
+    {
+      "caption": "A clear bench makes a tricky problem feel smaller.",
+      "spoken_text": "A clear bench makes a tricky problem feel smaller.",
+      "src": "audio/narrator/b028ef749ad5fffdb4c3.mp3"
+    },
+    {
+      "caption": "A dry tank or rain must always turn it OFF.",
+      "spoken_text": "A dry tank or rain must always turn it OFF.",
+      "src": "audio/narrator/0677884ebfcecac9c91d.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 30°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 30 degrees Celsius or hotter.",
+      "src": "audio/narrator/0983eb0130f2ce2ca9b6.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 31°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 31 degrees Celsius or hotter.",
+      "src": "audio/narrator/0aa9e257225393c32e57.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 32°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 32 degrees Celsius or hotter.",
+      "src": "audio/narrator/e4739a148e3750d74c28.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 33°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 33 degrees Celsius or hotter.",
+      "src": "audio/narrator/8e36946b9556440c557f.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 34°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 34 degrees Celsius or hotter.",
+      "src": "audio/narrator/1aab5edb982b90cbd2aa.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 35°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 35 degrees Celsius or hotter.",
+      "src": "audio/narrator/9135b9154b9a32fee3c0.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 36°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 36 degrees Celsius or hotter.",
+      "src": "audio/narrator/58db8ef2c4e380fff656.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 37°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 37 degrees Celsius or hotter.",
+      "src": "audio/narrator/578a15df4b8aeec38b0b.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 38°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 38 degrees Celsius or hotter.",
+      "src": "audio/narrator/9cdd897bb4e8b697afc4.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 39°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 39 degrees Celsius or hotter.",
+      "src": "audio/narrator/7bd2ebb187805bb881a3.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 40°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 40 degrees Celsius or hotter.",
+      "src": "audio/narrator/2d2a8b48494b1a94e06c.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 41°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 41 degrees Celsius or hotter.",
+      "src": "audio/narrator/b0f5c4e464947bac185d.mp3"
+    },
+    {
+      "caption": "A fan that was OFF starts at 42°C or hotter.",
+      "spoken_text": "A fan that was OFF starts at 42 degrees Celsius or hotter.",
+      "src": "audio/narrator/6b62e453042b11ddb30b.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 26°C, but stops at 26°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 26 degrees Celsius, but stops at 26 degrees Celsius or colder.",
+      "src": "audio/narrator/d61a24094565f5c2733f.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 27°C, but stops at 27°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 27 degrees Celsius, but stops at 27 degrees Celsius or colder.",
+      "src": "audio/narrator/7807cb66225d38d542b5.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 28°C, but stops at 28°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 28 degrees Celsius, but stops at 28 degrees Celsius or colder.",
+      "src": "audio/narrator/970db4ecd42213f01855.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 29°C, but stops at 29°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 29 degrees Celsius, but stops at 29 degrees Celsius or colder.",
+      "src": "audio/narrator/23a3560dbab7e48ddb1e.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 30°C, but stops at 30°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 30 degrees Celsius, but stops at 30 degrees Celsius or colder.",
+      "src": "audio/narrator/c6f32fd6580109494e6a.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 31°C, but stops at 31°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 31 degrees Celsius, but stops at 31 degrees Celsius or colder.",
+      "src": "audio/narrator/f4889ba7dec49a7e5a73.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 32°C, but stops at 32°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 32 degrees Celsius, but stops at 32 degrees Celsius or colder.",
+      "src": "audio/narrator/af2f2154d3f371cf567e.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 33°C, but stops at 33°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 33 degrees Celsius, but stops at 33 degrees Celsius or colder.",
+      "src": "audio/narrator/5a8a1ca3cf196e0aeaba.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 34°C, but stops at 34°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 34 degrees Celsius, but stops at 34 degrees Celsius or colder.",
+      "src": "audio/narrator/c5991b7dbce28884d20d.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 35°C, but stops at 35°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 35 degrees Celsius, but stops at 35 degrees Celsius or colder.",
+      "src": "audio/narrator/e06a7c442ccd6232730f.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 36°C, but stops at 36°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 36 degrees Celsius, but stops at 36 degrees Celsius or colder.",
+      "src": "audio/narrator/b4cf5d5100a8ff388126.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 37°C, but stops at 37°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 37 degrees Celsius, but stops at 37 degrees Celsius or colder.",
+      "src": "audio/narrator/cc96c14bc9a9b4b2df2f.mp3"
+    },
+    {
+      "caption": "A fan that was ON keeps running above 38°C, but stops at 38°C or colder.",
+      "spoken_text": "A fan that was ON keeps running above 38 degrees Celsius, but stops at 38 degrees Celsius or colder.",
+      "src": "audio/narrator/85be7c9729bc87d4d0e1.mp3"
+    },
+    {
+      "caption": "A little walk often helps me untangle a problem.",
+      "spoken_text": "A little walk often helps me untangle a problem.",
+      "src": "audio/narrator/54b8f88e61a48ff5166c.mp3"
+    },
+    {
+      "caption": "All inputs here are valid numeric readings.",
+      "spoken_text": "All inputs here are valid numeric readings.",
+      "src": "audio/narrator/15d6edb65697b7f7c337.mp3"
+    },
+    {
+      "caption": "All town projects are complete.",
+      "spoken_text": "All town projects are complete.",
+      "src": "audio/narrator/0d514c778048d4bd6c06.mp3"
+    },
+    {
+      "caption": "Arthur has the next project: Encoder kinematics, a paid town job.",
+      "spoken_text": "Arthur has the next project: Encoder kinematics, a paid town job.",
+      "src": "audio/narrator/3f721b88826ce0a6bc19.mp3"
+    },
+    {
+      "caption": "Arthur has the next project: Kinetic stopping model, a paid town job.",
+      "spoken_text": "Arthur has the next project: Kinetic stopping model, a paid town job.",
+      "src": "audio/narrator/dd9b5f04c79d109a1a8f.mp3"
+    },
+    {
+      "caption": "Arthur has the next project: Modular elapsed time, a paid town job.",
+      "spoken_text": "Arthur has the next project: Modular elapsed time, a paid town job.",
+      "src": "audio/narrator/75977690946bc93c0d05.mp3"
+    },
+    {
+      "caption": "Arthur · Lakeside Walk · northeast is where to find Encoder kinematics.",
+      "spoken_text": "Arthur, Lakeside Walk, northeast is where to find Encoder kinematics.",
+      "src": "audio/narrator/88c02883a069cd1db81b.mp3"
+    },
+    {
+      "caption": "Arthur · Lakeside Walk · northeast is where to find Kinetic stopping model.",
+      "spoken_text": "Arthur, Lakeside Walk, northeast is where to find Kinetic stopping model.",
+      "src": "audio/narrator/862a651288c7dd22f015.mp3"
+    },
+    {
+      "caption": "Arthur · Lakeside Walk · northeast is where to find Modular elapsed time.",
+      "spoken_text": "Arthur, Lakeside Walk, northeast is where to find Modular elapsed time.",
+      "src": "audio/narrator/4cf5a906de7810175750.mp3"
+    },
+    {
+      "caption": "Assume no slipping.",
+      "spoken_text": "Assume no slipping.",
+      "src": "audio/narrator/8408161d876ad8b6c21b.mp3"
+    },
+    {
+      "caption": "Both exact thresholds are allowed.",
+      "spoken_text": "Both exact thresholds are allowed.",
+      "src": "audio/narrator/c60181936b545bd0a12c.mp3"
+    },
+    {
+      "caption": "Browsing is welcome.",
+      "spoken_text": "Browsing is welcome.",
+      "src": "audio/narrator/b320820971f704b04d3f.mp3"
+    },
+    {
+      "caption": "Byte and Bolt voices are ready.",
+      "spoken_text": "Byte and Bolt voices are ready.",
+      "src": "audio/narrator/09939d8724931aaafe0e.mp3"
+    },
+    {
+      "caption": "Calculate the actual current through that resistor.",
+      "spoken_text": "Calculate the actual current through that resistor.",
+      "src": "audio/narrator/dc3fa50fc268b5169be8.mp3"
+    },
+    {
+      "caption": "Calculate the minimum resistor, then choose the smallest available E12 value that keeps current at or below the target.",
+      "spoken_text": "Calculate the minimum resistor, then choose the smallest available E twelve value that keeps current at or below the target.",
+      "src": "audio/narrator/c5b4dc0cfc92c08e4390.mp3"
+    },
+    {
+      "caption": "Can you replace it and program a safe stopping rule?",
+      "spoken_text": "Can you replace it and program a safe stopping rule?",
+      "src": "audio/narrator/2dce894c1f6518f71d08.mp3"
+    },
+    {
+      "caption": "Clerk has the next project: Cost accounting, a paid town job.",
+      "spoken_text": "Clerk has the next project: Cost accounting, a paid town job.",
+      "src": "audio/narrator/b49dbcca3f997779e3e8.mp3"
+    },
+    {
+      "caption": "Clerk has the next project: Time intervals, a paid town job.",
+      "spoken_text": "Clerk has the next project: Time intervals, a paid town job.",
+      "src": "audio/narrator/3b84d22bdd7b5a58eed9.mp3"
+    },
+    {
+      "caption": "Clerk · Parts & Pieces · Town center is where to find Cost accounting.",
+      "spoken_text": "Clerk, Parts & Pieces, Town center is where to find Cost accounting.",
+      "src": "audio/narrator/174a3a81aa20093590fe.mp3"
+    },
+    {
+      "caption": "Clerk · Parts & Pieces · Town center is where to find Time intervals.",
+      "spoken_text": "Clerk, Parts & Pieces, Town center is where to find Time intervals.",
+      "src": "audio/narrator/97a4e417e60feeeb6e35.mp3"
+    },
+    {
+      "caption": "Come back for a chat anytime, or try the mixed board.",
+      "spoken_text": "Come back for a chat anytime, or try the mixed board.",
+      "src": "audio/narrator/7ef6197cf3500ccb9c99.mp3"
+    },
+    {
+      "caption": "Come back for a chat whenever you like.",
+      "spoken_text": "Come back for a chat whenever you like.",
+      "src": "audio/narrator/e0f21ba19e3926346fa3.mp3"
+    },
+    {
+      "caption": "Divide counted pulses by pulses per revolution, multiply by wheel circumference, then divide by positive elapsed seconds.",
+      "spoken_text": "Divide counted pulses by pulses per revolution, multiply by wheel circumference, then divide by positive elapsed seconds.",
+      "src": "audio/narrator/b4ce9abfb2dd7c4147c7.mp3"
+    },
+    {
+      "caption": "Each finished project opens a new shelf.",
+      "spoken_text": "Each finished project opens a new shelf.",
+      "src": "audio/narrator/4c63ccb787bd9ba8b4a5.mp3"
+    },
+    {
+      "caption": "Estimate ideal run time in HOURS. energyWh is usable energy, voltageV is constant supply voltage, and currentA is constant current in AMPS.",
+      "spoken_text": "Estimate ideal run time in HOURS. energy in watt hours is usable energy, voltage in volts is constant supply voltage, and current in amps is constant current in AMPS.",
+      "src": "audio/narrator/401831acd08d5514ca71.mp3"
+    },
+    {
+      "caption": "Evelyn has the next project: ADC quantization, a personal lab upgrade.",
+      "spoken_text": "Evelyn has the next project: A D C quantization, a personal lab upgrade.",
+      "src": "audio/narrator/012f94ee6301bc9bfb99.mp3"
+    },
+    {
+      "caption": "Evelyn has the next project: Greenhouse pump, a paid town job.",
+      "spoken_text": "Evelyn has the next project: Greenhouse pump, a paid town job.",
+      "src": "audio/narrator/fd3fed8a0eb772712d13.mp3"
+    },
+    {
+      "caption": "Evelyn has the next project: LED circuit, a personal lab upgrade.",
+      "spoken_text": "Evelyn has the next project: L E D circuit, a personal lab upgrade.",
+      "src": "audio/narrator/c0e392bc2f9f02a41866.mp3"
+    },
+    {
+      "caption": "Evelyn has the next project: Lab cooling, a personal lab upgrade.",
+      "spoken_text": "Evelyn has the next project: Lab cooling, a personal lab upgrade.",
+      "src": "audio/narrator/856d0419b43516b06a0d.mp3"
+    },
+    {
+      "caption": "Evelyn has the next project: Majority voting, a personal lab upgrade.",
+      "spoken_text": "Evelyn has the next project: Majority voting, a personal lab upgrade.",
+      "src": "audio/narrator/d7f2b433d19ce9af4240.mp3"
+    },
+    {
+      "caption": "Evelyn has the next project: PWM duty cycle, a personal lab upgrade.",
+      "spoken_text": "Evelyn has the next project: P W M duty cycle, a personal lab upgrade.",
+      "src": "audio/narrator/b82afdc63265c65c594c.mp3"
+    },
+    {
+      "caption": "Evelyn has the next project: Parallel resistance, a personal lab upgrade.",
+      "spoken_text": "Evelyn has the next project: Parallel resistance, a personal lab upgrade.",
+      "src": "audio/narrator/ef50e3c90a8f914a6b03.mp3"
+    },
+    {
+      "caption": "Evelyn has the next project: Voltage divider, a personal lab upgrade.",
+      "spoken_text": "Evelyn has the next project: Voltage divider, a personal lab upgrade.",
+      "src": "audio/narrator/1f9ef7932586d63b83a8.mp3"
+    },
+    {
+      "caption": "Evelyn has the next project: Weighted filtering, a personal lab upgrade.",
+      "spoken_text": "Evelyn has the next project: Weighted filtering, a personal lab upgrade.",
+      "src": "audio/narrator/85bbac380f8b1d41599c.mp3"
+    },
+    {
+      "caption": "Evelyn · Your lab · Town center is where to find ADC quantization.",
+      "spoken_text": "Evelyn, Your lab, Town center is where to find A D C quantization.",
+      "src": "audio/narrator/34b1d91cc5662ebbff16.mp3"
+    },
+    {
+      "caption": "Evelyn · Your lab · Town center is where to find Greenhouse pump.",
+      "spoken_text": "Evelyn, Your lab, Town center is where to find Greenhouse pump.",
+      "src": "audio/narrator/404eeea60bbfc0a22197.mp3"
+    },
+    {
+      "caption": "Evelyn · Your lab · Town center is where to find LED circuit.",
+      "spoken_text": "Evelyn, Your lab, Town center is where to find L E D circuit.",
+      "src": "audio/narrator/17f78a6acb5971d8ec2d.mp3"
+    },
+    {
+      "caption": "Evelyn · Your lab · Town center is where to find Lab cooling.",
+      "spoken_text": "Evelyn, Your lab, Town center is where to find Lab cooling.",
+      "src": "audio/narrator/5afb914f7e9fb691ef3a.mp3"
+    },
+    {
+      "caption": "Evelyn · Your lab · Town center is where to find Majority voting.",
+      "spoken_text": "Evelyn, Your lab, Town center is where to find Majority voting.",
+      "src": "audio/narrator/28a61ce272c616c19f17.mp3"
+    },
+    {
+      "caption": "Evelyn · Your lab · Town center is where to find PWM duty cycle.",
+      "spoken_text": "Evelyn, Your lab, Town center is where to find P W M duty cycle.",
+      "src": "audio/narrator/b71fc6b84e32ecdae00e.mp3"
+    },
+    {
+      "caption": "Evelyn · Your lab · Town center is where to find Parallel resistance.",
+      "spoken_text": "Evelyn, Your lab, Town center is where to find Parallel resistance.",
+      "src": "audio/narrator/051bfdc06b106e5ff3d0.mp3"
+    },
+    {
+      "caption": "Evelyn · Your lab · Town center is where to find Voltage divider.",
+      "spoken_text": "Evelyn, Your lab, Town center is where to find Voltage divider.",
+      "src": "audio/narrator/744529595a5073dda69b.mp3"
+    },
+    {
+      "caption": "Evelyn · Your lab · Town center is where to find Weighted filtering.",
+      "spoken_text": "Evelyn, Your lab, Town center is where to find Weighted filtering.",
+      "src": "audio/narrator/88f8959a451e98146e26.mp3"
+    },
+    {
+      "caption": "Even engineers need a breather.",
+      "spoken_text": "Even engineers need a breather.",
+      "src": "audio/narrator/9b79e9e22902c8457de2.mp3"
+    },
+    {
+      "caption": "Every condition matters.",
+      "spoken_text": "Every condition matters.",
+      "src": "audio/narrator/c56bb73719b86896cef0.mp3"
+    },
+    {
+      "caption": "Exactly 20 cm and above is clear.",
+      "spoken_text": "Exactly 20 cm and above is clear.",
+      "src": "audio/narrator/2b89cc4883868e6fbab8.mp3"
+    },
+    {
+      "caption": "Exactly 23 cm and above is clear.",
+      "spoken_text": "Exactly 23 cm and above is clear.",
+      "src": "audio/narrator/2fc790b6fe2400b13710.mp3"
+    },
+    {
+      "caption": "Exactly 26 cm and above is clear.",
+      "spoken_text": "Exactly 26 cm and above is clear.",
+      "src": "audio/narrator/d6dc47c176bf843fb7b4.mp3"
+    },
+    {
+      "caption": "Exactly 29 cm and above is clear.",
+      "spoken_text": "Exactly 29 cm and above is clear.",
+      "src": "audio/narrator/b0c59d0b5b8a06524d92.mp3"
+    },
+    {
+      "caption": "Exactly 32 cm and above is clear.",
+      "spoken_text": "Exactly 32 cm and above is clear.",
+      "src": "audio/narrator/b3ee0a53d5953e94a173.mp3"
+    },
+    {
+      "caption": "Exactly 35 cm and above is clear.",
+      "spoken_text": "Exactly 35 cm and above is clear.",
+      "src": "audio/narrator/a8d79e1f3b2c67dd8602.mp3"
+    },
+    {
+      "caption": "Exactly 35% is wet enough.",
+      "spoken_text": "Exactly 35 percent is wet enough.",
+      "src": "audio/narrator/fab6d76ac94dc3671b20.mp3"
+    },
+    {
+      "caption": "Exactly 37% is wet enough.",
+      "spoken_text": "Exactly 37 percent is wet enough.",
+      "src": "audio/narrator/89f88c1e9438ad32f25a.mp3"
+    },
+    {
+      "caption": "Exactly 38 cm and above is clear.",
+      "spoken_text": "Exactly 38 cm and above is clear.",
+      "src": "audio/narrator/f9dc3e6e5d5718e7189b.mp3"
+    },
+    {
+      "caption": "Exactly 39% is wet enough.",
+      "spoken_text": "Exactly 39 percent is wet enough.",
+      "src": "audio/narrator/75bfc00853247e73491f.mp3"
+    },
+    {
+      "caption": "Exactly 41 cm and above is clear.",
+      "spoken_text": "Exactly 41 cm and above is clear.",
+      "src": "audio/narrator/6a8ff2b7bdf543f1c6ee.mp3"
+    },
+    {
+      "caption": "Exactly 41% is wet enough.",
+      "spoken_text": "Exactly 41 percent is wet enough.",
+      "src": "audio/narrator/4cae60621ccaf7543d95.mp3"
+    },
+    {
+      "caption": "Exactly 43% is wet enough.",
+      "spoken_text": "Exactly 43 percent is wet enough.",
+      "src": "audio/narrator/dd30dcb57239d9dc569d.mp3"
+    },
+    {
+      "caption": "Exactly 44 cm and above is clear.",
+      "spoken_text": "Exactly 44 cm and above is clear.",
+      "src": "audio/narrator/795cdfd732490ab2626d.mp3"
+    },
+    {
+      "caption": "Exactly 45% is wet enough.",
+      "spoken_text": "Exactly 45 percent is wet enough.",
+      "src": "audio/narrator/0c22970506042a6de23e.mp3"
+    },
+    {
+      "caption": "Exactly 47 cm and above is clear.",
+      "spoken_text": "Exactly 47 cm and above is clear.",
+      "src": "audio/narrator/12393b531fb512137950.mp3"
+    },
+    {
+      "caption": "Exactly 47% is wet enough.",
+      "spoken_text": "Exactly 47 percent is wet enough.",
+      "src": "audio/narrator/cb1b2aaad8d4470f1c59.mp3"
+    },
+    {
+      "caption": "Exactly 49% is wet enough.",
+      "spoken_text": "Exactly 49 percent is wet enough.",
+      "src": "audio/narrator/4fcd385a98419e947427.mp3"
+    },
+    {
+      "caption": "Exactly 50 cm and above is clear.",
+      "spoken_text": "Exactly 50 cm and above is clear.",
+      "src": "audio/narrator/39f7b58014c4b85f2bb2.mp3"
+    },
+    {
+      "caption": "Exactly 51% is wet enough.",
+      "spoken_text": "Exactly 51 percent is wet enough.",
+      "src": "audio/narrator/1af60b72f02424eca528.mp3"
+    },
+    {
+      "caption": "Exactly 53 cm and above is clear.",
+      "spoken_text": "Exactly 53 cm and above is clear.",
+      "src": "audio/narrator/1167556e5839292d5b83.mp3"
+    },
+    {
+      "caption": "Exactly 53% is wet enough.",
+      "spoken_text": "Exactly 53 percent is wet enough.",
+      "src": "audio/narrator/2e110bb8c92057fe7ab6.mp3"
+    },
+    {
+      "caption": "Exactly 55% is wet enough.",
+      "spoken_text": "Exactly 55 percent is wet enough.",
+      "src": "audio/narrator/ca90afebfdce0519479d.mp3"
+    },
+    {
+      "caption": "Exactly 56 cm and above is clear.",
+      "spoken_text": "Exactly 56 cm and above is clear.",
+      "src": "audio/narrator/2729e96a7b9f58ebd4b3.mp3"
+    },
+    {
+      "caption": "Exactly 57% is wet enough.",
+      "spoken_text": "Exactly 57 percent is wet enough.",
+      "src": "audio/narrator/758322a5cff8e1add8fe.mp3"
+    },
+    {
+      "caption": "Exactly 59% is wet enough.",
+      "spoken_text": "Exactly 59 percent is wet enough.",
+      "src": "audio/narrator/4eff99594748230ef2e1.mp3"
+    },
+    {
+      "caption": "For this simplified exercise, no other reading types are supplied.",
+      "spoken_text": "For this simplified exercise, no other reading types are supplied.",
+      "src": "audio/narrator/0c0a530d6c6af51a117d.mp3"
+    },
+    {
+      "caption": "Good to see you!",
+      "spoken_text": "Good to see you!",
+      "src": "audio/narrator/50d2a7e9e4b1dd2578c9.mp3"
+    },
+    {
+      "caption": "Hello again!",
+      "spoken_text": "Hello again!",
+      "src": "audio/narrator/bf843b818d54fde8061f.mp3"
+    },
+    {
+      "caption": "Hello!",
+      "spoken_text": "Hello!",
+      "src": "audio/narrator/bdc5c3dac75a9e675c4f.mp3"
+    },
+    {
+      "caption": "Hello, neighbor!",
+      "spoken_text": "Hello, neighbor!",
+      "src": "audio/narrator/62786e9e08f3e038ff61.mp3"
+    },
+    {
+      "caption": "Hi there!",
+      "spoken_text": "Hi there!",
+      "src": "audio/narrator/061dff091ae7dedb1c68.mp3"
+    },
+    {
+      "caption": "How is the workshop treating you?",
+      "spoken_text": "How is the workshop treating you?",
+      "src": "audio/narrator/7874fff6c93ef791cc76.mp3"
+    },
+    {
+      "caption": "How is your workshop coming along?",
+      "spoken_text": "How is your workshop coming along?",
+      "src": "audio/narrator/d3da32b8340ccc423753.mp3"
+    },
+    {
+      "caption": "I don’t have a new campaign job today.",
+      "spoken_text": "I don't have a new campaign job today.",
+      "src": "audio/narrator/b85fa3618901f376bf16.mp3"
+    },
+    {
+      "caption": "I don’t have a new job for you at the moment.",
+      "spoken_text": "I don't have a new job for you at the moment.",
+      "src": "audio/narrator/0a4af844404edd2930c0.mp3"
+    },
+    {
+      "caption": "I don’t have a new project for you right now.",
+      "spoken_text": "I don't have a new project for you right now.",
+      "src": "audio/narrator/7c0e3a4070eca4ae8c94.mp3"
+    },
+    {
+      "caption": "I like watching the town change one small improvement at a time.",
+      "spoken_text": "I like watching the town change one small improvement at a time.",
+      "src": "audio/narrator/cbb2b093674e77d91a53.mp3"
+    },
+    {
+      "caption": "I put the kettle on while the instruments warmed up.",
+      "spoken_text": "I put the kettle on while the instruments warmed up.",
+      "src": "audio/narrator/8752168d31b1fcb65d71.mp3"
+    },
+    {
+      "caption": "Ignore reaction time and slope in this simulation.",
+      "spoken_text": "Ignore reaction time and slope in this simulation.",
+      "src": "audio/narrator/15156ac61bc7abc742d7.mp3"
+    },
+    {
+      "caption": "Ignore real-world losses in this exercise.",
+      "spoken_text": "Ignore real-world losses in this exercise.",
+      "src": "audio/narrator/5e6aba42ede61560ec5d.mp3"
+    },
+    {
+      "caption": "Inputs are integers.",
+      "spoken_text": "Inputs are integers.",
+      "src": "audio/narrator/83eb97c7551d7c306850.mp3"
+    },
+    {
+      "caption": "Iris has the next project: Battery runtime, a paid town job.",
+      "spoken_text": "Iris has the next project: Battery runtime, a paid town job.",
+      "src": "audio/narrator/b37e09f7924ad24c11ee.mp3"
+    },
+    {
+      "caption": "Iris has the next project: Echo calibration, a paid town job.",
+      "spoken_text": "Iris has the next project: Echo calibration, a paid town job.",
+      "src": "audio/narrator/347a5da64810fe2e19eb.mp3"
+    },
+    {
+      "caption": "Iris has the next project: Robot safety, a paid town job.",
+      "spoken_text": "Iris has the next project: Robot safety, a paid town job.",
+      "src": "audio/narrator/913e939a9fc0c027ffd2.mp3"
+    },
+    {
+      "caption": "Iris has the next project: Town gate, a paid town job.",
+      "spoken_text": "Iris has the next project: Town gate, a paid town job.",
+      "src": "audio/narrator/09a6d787066b2e4c6875.mp3"
+    },
+    {
+      "caption": "Iris · Repair yard · Town center is where to find Battery runtime.",
+      "spoken_text": "Iris, Repair yard, Town center is where to find Battery runtime.",
+      "src": "audio/narrator/e5723c2f18a2d7949ef6.mp3"
+    },
+    {
+      "caption": "Iris · Repair yard · Town center is where to find Echo calibration.",
+      "spoken_text": "Iris, Repair yard, Town center is where to find Echo calibration.",
+      "src": "audio/narrator/5f158c1b2c9230bb7db6.mp3"
+    },
+    {
+      "caption": "Iris · Repair yard · Town center is where to find Robot safety.",
+      "spoken_text": "Iris, Repair yard, Town center is where to find Robot safety.",
+      "src": "audio/narrator/c20c7821c8b9e05766cb.mp3"
+    },
+    {
+      "caption": "Iris · Repair yard · Town center is where to find Town gate.",
+      "spoken_text": "Iris, Repair yard, Town center is where to find Town gate.",
+      "src": "audio/narrator/1ad2c48cbad6b4f502ea.mp3"
+    },
+    {
+      "caption": "Its distance sensor is broken.",
+      "spoken_text": "Its distance sensor is broken.",
+      "src": "audio/narrator/34adbf1fadafbc058d14.mp3"
+    },
+    {
+      "caption": "It’s fine to test one idea at a time.",
+      "spoken_text": "It's fine to test one idea at a time.",
+      "src": "audio/narrator/618b363de7b179cdb679.mp3"
+    },
+    {
+      "caption": "I’m checking the seedlings.",
+      "spoken_text": "I'm checking the seedlings.",
+      "src": "audio/narrator/3f2b084f2db141cadb5e.mp3"
+    },
+    {
+      "caption": "I’m happy to have some company.",
+      "spoken_text": "I'm happy to have some company.",
+      "src": "audio/narrator/9d270406f2ec54fbdd4f.mp3"
+    },
+    {
+      "caption": "I’m taking the long way around town today.",
+      "spoken_text": "I'm taking the long way around town today.",
+      "src": "audio/narrator/c53ce0856c99a96c1a79.mp3"
+    },
+    {
+      "caption": "I’ve been sorting the resistor drawers.",
+      "spoken_text": "I've been sorting the resistor drawers.",
+      "src": "audio/narrator/fe7543edbf1aae4621f9.mp3"
+    },
+    {
+      "caption": "I’ve been tidying the repair yard.",
+      "spoken_text": "I've been tidying the repair yard.",
+      "src": "audio/narrator/8c161ac3dea543958c03.mp3"
+    },
+    {
+      "caption": "Later, the mixed board spaces out familiar topics.",
+      "spoken_text": "Later, the mixed board spaces out familiar topics.",
+      "src": "audio/narrator/129644aecb1e43c42af2.mp3"
+    },
+    {
+      "caption": "Learn the ratio before checking the 3.3 V input limit.",
+      "spoken_text": "Learn the ratio before checking the 3.3 V input limit.",
+      "src": "audio/narrator/c3efabcfbdbe960f1587.mp3"
+    },
+    {
+      "caption": "Less than 256 ticks have elapsed, with at most one rollover.",
+      "spoken_text": "Less than 256 ticks have elapsed, with at most one rollover.",
+      "src": "audio/narrator/36047464d8db88f78851.mp3"
+    },
+    {
+      "caption": "My favorite moment is when a failed test suddenly explains the whole problem.",
+      "spoken_text": "My favorite moment is when a failed test suddenly explains the whole problem.",
+      "src": "audio/narrator/9b47a02860af3271f2d1.mp3"
+    },
+    {
+      "caption": "New campaign projects come first.",
+      "spoken_text": "New campaign projects come first.",
+      "src": "audio/narrator/8a7ffd269a3528c1bfc2.mp3"
+    },
+    {
+      "caption": "Nice to see you.",
+      "spoken_text": "Nice to see you.",
+      "src": "audio/narrator/42f8d57fe7fb67472036.mp3"
+    },
+    {
+      "caption": "Nonnegative inputs are supplied.",
+      "spoken_text": "Nonnegative inputs are supplied.",
+      "src": "audio/narrator/8b9843e8b0634f99368a.mp3"
+    },
+    {
+      "caption": "Nora has the next project: Packet integrity, a paid town job.",
+      "spoken_text": "Nora has the next project: Packet integrity, a paid town job.",
+      "src": "audio/narrator/f7993a1bc4c825292a88.mp3"
+    },
+    {
+      "caption": "Nora has the next project: Resistive power loss, a paid town job.",
+      "spoken_text": "Nora has the next project: Resistive power loss, a paid town job.",
+      "src": "audio/narrator/73a7143d08b83d076e3f.mp3"
+    },
+    {
+      "caption": "Nora · Orchard Common · southwest is where to find Packet integrity.",
+      "spoken_text": "Nora, Orchard Common, southwest is where to find Packet integrity.",
+      "src": "audio/narrator/b182e24b7b7ef8fb73d3.mp3"
+    },
+    {
+      "caption": "Nora · Orchard Common · southwest is where to find Resistive power loss.",
+      "spoken_text": "Nora, Orchard Common, southwest is where to find Resistive power loss.",
+      "src": "audio/narrator/7f3ff944da1eacf3a6d1.mp3"
+    },
+    {
+      "caption": "Opening time is included; closing time is excluded.",
+      "spoken_text": "Opening time is included; closing time is excluded.",
+      "src": "audio/narrator/9b6be24f01412afbe32c.mp3"
+    },
+    {
+      "caption": "Our delivery robot bumps into boxes.",
+      "spoken_text": "Our delivery robot bumps into boxes.",
+      "src": "audio/narrator/ed6c63700cf07610096e.mp3"
+    },
+    {
+      "caption": "Paid town jobs fund your supplies and personal lab upgrades; you do not get paid for upgrading your own lab.",
+      "spoken_text": "Paid town jobs fund your supplies and personal lab upgrades; you do not get paid for upgrading your own lab.",
+      "src": "audio/narrator/f0b454ef7a8e8f4dd983.mp3"
+    },
+    {
+      "caption": "Parts cost credits.",
+      "spoken_text": "Parts cost credits.",
+      "src": "audio/narrator/dce9a76af711ddfa8c35.mp3"
+    },
+    {
+      "caption": "Plants have their own timetable.",
+      "spoken_text": "Plants have their own timetable.",
+      "src": "audio/narrator/34b1589be6a192b1898e.mp3"
+    },
+    {
+      "caption": "Please come back and see me later.",
+      "spoken_text": "Please come back and see me later.",
+      "src": "audio/narrator/6faa935e946386204358.mp3"
+    },
+    {
+      "caption": "Power in watts = voltage × current.",
+      "spoken_text": "Power in watts = voltage  times  current.",
+      "src": "audio/narrator/99bbc69c08afba5fca7d.mp3"
+    },
+    {
+      "caption": "Readings are at least the tare.",
+      "spoken_text": "Readings are at least the tare.",
+      "src": "audio/narrator/71d89d78eb87e5c60c82.mp3"
+    },
+    {
+      "caption": "Return PWM duty as a percentage: on-time divided by the whole positive period, times 100.",
+      "spoken_text": "Return P W M duty as a percentage: on-time divided by the whole positive period, times 100.",
+      "src": "audio/narrator/b745a85617f9fb94dfe8.mp3"
+    },
+    {
+      "caption": "Return an exponentially smoothed reading. alpha weights the new reading; 1 - alpha weights the previous filtered value. alpha is between 0 and 1.",
+      "spoken_text": "Return an exponentially smoothed reading. alpha weights the new reading; 1 - alpha weights the previous filtered value. alpha is between 0 and 1.",
+      "src": "audio/narrator/a307de0964ffa8ddcaa5.mp3"
+    },
+    {
+      "caption": "Return elapsed ticks on an 8-bit timer that wraps from 255 to 0.",
+      "spoken_text": "Return elapsed ticks on an 8-bit timer that wraps from 255 to 0.",
+      "src": "audio/narrator/708d48e265aac8dcc697.mp3"
+    },
+    {
+      "caption": "Return estimated input voltage from an ADC reading, using the exercise model count / maxCount × referenceV. maxCount is positive.",
+      "spoken_text": "Return estimated input voltage from an A D C reading, using the exercise model count / max Count  times  reference V. max Count is positive.",
+      "src": "audio/narrator/c87921dc8b3bea753b40.mp3"
+    },
+    {
+      "caption": "Return ideal power dissipated as heat in watts: current squared times resistance.",
+      "spoken_text": "Return ideal power dissipated as heat in watts: current squared times resistance.",
+      "src": "audio/narrator/f7ed8048335e8f9bc640.mp3"
+    },
+    {
+      "caption": "Return ideal stopping distance in metres: speed squared divided by twice the positive deceleration.",
+      "spoken_text": "Return ideal stopping distance in metres: speed squared divided by twice the positive deceleration.",
+      "src": "audio/narrator/b238bc54799348636931.mp3"
+    },
+    {
+      "caption": "Return its NEXT on/off state.",
+      "spoken_text": "Return its NEXT on/off state.",
+      "src": "audio/narrator/1a6554c7208222809a12.mp3"
+    },
+    {
+      "caption": "Return net grams.",
+      "spoken_text": "Return net grams.",
+      "src": "audio/narrator/d3677ef16ff22cbee7f4.mp3"
+    },
+    {
+      "caption": "Return numeric 0 if stock already meets or exceeds target.",
+      "spoken_text": "Return numeric 0 if stock already meets or exceeds target.",
+      "src": "audio/narrator/f5f80d04ced919908710.mp3"
+    },
+    {
+      "caption": "Return one-way distance in centimetres from durationUs and speedCmPerUs.",
+      "spoken_text": "Return one-way distance in centimetres from duration in microseconds and speed in centimeters per microsecond.",
+      "src": "audio/narrator/62f400124e3c48a6828f.mp3"
+    },
+    {
+      "caption": "Return speed in metres per second.",
+      "spoken_text": "Return speed in metres per second.",
+      "src": "audio/narrator/207178fb73f7a4a0c976.mp3"
+    },
+    {
+      "caption": "Return the equivalent resistance of TWO positive resistors in parallel.",
+      "spoken_text": "Return the equivalent resistance of TWO positive resistors in parallel.",
+      "src": "audio/narrator/c6306fc361b5611cbc60.mp3"
+    },
+    {
+      "caption": "Return the missing quantity needed to reach target after incoming stock arrives.",
+      "spoken_text": "Return the missing quantity needed to reach target after incoming stock arrives.",
+      "src": "audio/narrator/2c003272bffcebcc4ff9.mp3"
+    },
+    {
+      "caption": "Return the total quoted cost: every unit costs unitCost, and setupCost is charged once for the whole batch.",
+      "spoken_text": "Return the total quoted cost: every unit costs unit Cost, and setup Cost is charged once for the whole batch.",
+      "src": "audio/narrator/fb312ca889be04e3432d.mp3"
+    },
+    {
+      "caption": "Return the voltage at the midpoint of two series resistors: supplyV → topOhms → midpoint → bottomOhms → ground.",
+      "spoken_text": "Return the voltage at the midpoint of two series resistors: supply voltage to top resistance in ohms to midpoint to bottom resistance in ohms to ground.",
+      "src": "audio/narrator/c17852a040fccf945d08.mp3"
+    },
+    {
+      "caption": "Return true only if the received checksum equals the sum of two bytes modulo 256.",
+      "spoken_text": "Return true only if the received checksum equals the sum of two bytes modulo 256.",
+      "src": "audio/narrator/7ca6d6ce25ccc1c53473.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 20 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 20 cm.",
+      "src": "audio/narrator/dda0ce5e91f6f67e999f.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 23 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 23 cm.",
+      "src": "audio/narrator/8fb63bbb9a3d56452044.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 26 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 26 cm.",
+      "src": "audio/narrator/2c5c7920d77430b57ddd.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 29 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 29 cm.",
+      "src": "audio/narrator/18580013023870f47880.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 32 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 32 cm.",
+      "src": "audio/narrator/8c6c085be5a4bcf24aee.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 35 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 35 cm.",
+      "src": "audio/narrator/58ddb8ce1cd84c44002f.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 38 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 38 cm.",
+      "src": "audio/narrator/c3e8c47449c6fcb43692.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 41 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 41 cm.",
+      "src": "audio/narrator/60c53865c38e115aa12f.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 44 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 44 cm.",
+      "src": "audio/narrator/2a834faacd0a38e25855.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 47 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 47 cm.",
+      "src": "audio/narrator/5091d8ebadd709549fb5.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 50 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 50 cm.",
+      "src": "audio/narrator/662332e0432ea4d0d8c5.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 53 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 53 cm.",
+      "src": "audio/narrator/8ad4994fd02b3c77b04c.mp3"
+    },
+    {
+      "caption": "Return true to STOP if distanceCm is undefined or below 56 cm.",
+      "spoken_text": "Return true to STOP if distance in centimeters is undefined or below 56 cm.",
+      "src": "audio/narrator/04562c66456dea0bcc9a.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 25 cm, and batteryPct is at least 20%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 25 cm, and battery percentage is at least 20 percent.",
+      "src": "audio/narrator/b08408309b8773cdf8c9.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 27 cm, and batteryPct is at least 21%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 27 cm, and battery percentage is at least 21 percent.",
+      "src": "audio/narrator/e6522175b03741962045.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 29 cm, and batteryPct is at least 22%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 29 cm, and battery percentage is at least 22 percent.",
+      "src": "audio/narrator/7078faa70e012e19fc3f.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 31 cm, and batteryPct is at least 23%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 31 cm, and battery percentage is at least 23 percent.",
+      "src": "audio/narrator/881bb1ce329131c83428.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 33 cm, and batteryPct is at least 24%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 33 cm, and battery percentage is at least 24 percent.",
+      "src": "audio/narrator/93c0c1304950f9c2aa04.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 35 cm, and batteryPct is at least 25%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 35 cm, and battery percentage is at least 25 percent.",
+      "src": "audio/narrator/118b07b74e96967e0059.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 37 cm, and batteryPct is at least 26%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 37 cm, and battery percentage is at least 26 percent.",
+      "src": "audio/narrator/470449e6ec41c72fc80f.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 39 cm, and batteryPct is at least 27%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 39 cm, and battery percentage is at least 27 percent.",
+      "src": "audio/narrator/ae66224ae7696265dd27.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 41 cm, and batteryPct is at least 28%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 41 cm, and battery percentage is at least 28 percent.",
+      "src": "audio/narrator/f7df7d089ccc6788a607.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 43 cm, and batteryPct is at least 29%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 43 cm, and battery percentage is at least 29 percent.",
+      "src": "audio/narrator/b0f0676cb640646f68d9.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 45 cm, and batteryPct is at least 30%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 45 cm, and battery percentage is at least 30 percent.",
+      "src": "audio/narrator/86ef13d2ac37d27d307e.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 47 cm, and batteryPct is at least 31%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 47 cm, and battery percentage is at least 31 percent.",
+      "src": "audio/narrator/1ec1435a87b75025fda2.mp3"
+    },
+    {
+      "caption": "Return true to permit passage ONLY if sensorReady is true, emergencyStop is false, distanceCm is defined and at least 49 cm, and batteryPct is at least 32%.",
+      "spoken_text": "Return true to permit passage ONLY if sensor Ready is true, emergency Stop is false, distance in centimeters is defined and at least 49 cm, and battery percentage is at least 32 percent.",
+      "src": "audio/narrator/80c4fcbd53b3f5b8e7df.mp3"
+    },
+    {
+      "caption": "Return true when at least TWO of the three boolean sensors report an alarm.",
+      "spoken_text": "Return true when at least TWO of the three boolean sensors report an alarm.",
+      "src": "audio/narrator/c700ed774b1b029c8e76.mp3"
+    },
+    {
+      "caption": "Return true when the shop is open.",
+      "spoken_text": "Return true when the shop is open.",
+      "src": "audio/narrator/2fff263043b262f7a08f.mp3"
+    },
+    {
+      "caption": "Sam has the next project: Inventory shortfall, a paid town job.",
+      "spoken_text": "Sam has the next project: Inventory shortfall, a paid town job.",
+      "src": "audio/narrator/6ed57dde5885732d9cda.mp3"
+    },
+    {
+      "caption": "Sam has the next project: Tare calibration, a paid town job.",
+      "spoken_text": "Sam has the next project: Tare calibration, a paid town job.",
+      "src": "audio/narrator/853e37e70bd8b834b769.mp3"
+    },
+    {
+      "caption": "Sam · East Village · southeast is where to find Inventory shortfall.",
+      "spoken_text": "Sam, East Village, southeast is where to find Inventory shortfall.",
+      "src": "audio/narrator/88e0600f0f5e66761886.mp3"
+    },
+    {
+      "caption": "Sam · East Village · southeast is where to find Tare calibration.",
+      "spoken_text": "Sam, East Village, southeast is where to find Tare calibration.",
+      "src": "audio/narrator/695f6acc9f7aa4246126.mp3"
+    },
+    {
+      "caption": "Small parts love to wander off.",
+      "spoken_text": "Small parts love to wander off.",
+      "src": "audio/narrator/8e61c8018f56047fa37d.mp3"
+    },
+    {
+      "caption": "Sound check.",
+      "spoken_text": "Sound check.",
+      "src": "audio/narrator/f2049d38c8d67965db1d.mp3"
+    },
+    {
+      "caption": "Speed is supplied because temperature changes it.",
+      "spoken_text": "Speed is supplied because temperature changes it.",
+      "src": "audio/narrator/46c481b9e29a34e7746a.mp3"
+    },
+    {
+      "caption": "Subtract the empty-container mass from the scale reading.",
+      "spoken_text": "Subtract the empty-container mass from the scale reading.",
+      "src": "audio/narrator/fbda3bf85e9065aabaa4.mp3"
+    },
+    {
+      "caption": "Thanks for stopping by.",
+      "spoken_text": "Thanks for stopping by.",
+      "src": "audio/narrator/c793223e18ddb3f75591.mp3"
+    },
+    {
+      "caption": "Thanks for stopping to chat.",
+      "spoken_text": "Thanks for stopping to chat.",
+      "src": "audio/narrator/350f76e3a91092e671b4.mp3"
+    },
+    {
+      "caption": "The delivery robot has become quite the local celebrity.",
+      "spoken_text": "The delivery robot has become quite the local celebrity.",
+      "src": "audio/narrator/e52b370a06f84dfad6b8.mp3"
+    },
+    {
+      "caption": "The garden is a lovely place to take a break between projects.",
+      "spoken_text": "The garden is a lovely place to take a break between projects.",
+      "src": "audio/narrator/cc93fb0f1b7fc2c9f6ff.mp3"
+    },
+    {
+      "caption": "The main path funds every required part without grinding.",
+      "spoken_text": "The main path funds every required part without grinding.",
+      "src": "audio/narrator/2fe36703c3ab7af54985.mp3"
+    },
+    {
+      "caption": "The project board still has mastery practice and repeat service contracts.",
+      "spoken_text": "The project board still has mastery practice and repeat service contracts.",
+      "src": "audio/narrator/f1c23853413d8ef08211.mp3"
+    },
+    {
+      "caption": "The pulse travels to the obstacle AND back.",
+      "spoken_text": "The pulse travels to the obstacle AND back.",
+      "src": "audio/narrator/185b88c95f6e5b57fabc.mp3"
+    },
+    {
+      "caption": "The simulated meter draws negligible current.",
+      "spoken_text": "The simulated meter draws negligible current.",
+      "src": "audio/narrator/44b3b4f95f70fd3f39b5.mp3"
+    },
+    {
+      "caption": "The unlocked store shelf has it for 10 credits.",
+      "spoken_text": "The unlocked store shelf has it for 10 credits.",
+      "src": "audio/narrator/a7f6e76c26b7d3279926.mp3"
+    },
+    {
+      "caption": "The unlocked store shelf has it for 15 credits.",
+      "spoken_text": "The unlocked store shelf has it for 15 credits.",
+      "src": "audio/narrator/f2141831fcb5c95f8d69.mp3"
+    },
+    {
+      "caption": "The unlocked store shelf has it for 20 credits.",
+      "spoken_text": "The unlocked store shelf has it for 20 credits.",
+      "src": "audio/narrator/06f2b28bcdd4110c0fad.mp3"
+    },
+    {
+      "caption": "The unlocked store shelf has it for 25 credits.",
+      "spoken_text": "The unlocked store shelf has it for 25 credits.",
+      "src": "audio/narrator/33a1e04d31ed242d94ec.mp3"
+    },
+    {
+      "caption": "The unlocked store shelf has it for 35 credits.",
+      "spoken_text": "The unlocked store shelf has it for 35 credits.",
+      "src": "audio/narrator/1c2613cb1dd76b19a44c.mp3"
+    },
+    {
+      "caption": "There is no new campaign work here right now.",
+      "spoken_text": "There is no new campaign work here right now.",
+      "src": "audio/narrator/998290d23e096c285101.mp3"
+    },
+    {
+      "caption": "There’s always something new to notice here.",
+      "spoken_text": "There's always something new to notice here.",
+      "src": "audio/narrator/e7749962067b250e3a42.mp3"
+    },
+    {
+      "caption": "These are virtual purchases only.",
+      "spoken_text": "These are virtual purchases only.",
+      "src": "audio/narrator/03535ec4a20e286442e9.mp3"
+    },
+    {
+      "caption": "This gap (hysteresis) avoids rapid switching.",
+      "spoken_text": "This gap (hysteresis) avoids rapid switching.",
+      "src": "audio/narrator/afede2da90fdbbce75de.mp3"
+    },
+    {
+      "caption": "This project needs the Battery energy monitor.",
+      "spoken_text": "This project needs the Battery energy monitor.",
+      "src": "audio/narrator/51887f210f2e57c784e1.mp3"
+    },
+    {
+      "caption": "This project needs the Gate interlock kit.",
+      "spoken_text": "This project needs the Gate interlock kit.",
+      "src": "audio/narrator/f3b61dc356db4f1cbc5e.mp3"
+    },
+    {
+      "caption": "This project needs the HC-SR04 distance sensor.",
+      "spoken_text": "This project needs the HC-SR04 distance sensor.",
+      "src": "audio/narrator/c9d41cf10dee97aedac8.mp3"
+    },
+    {
+      "caption": "This project needs the LED + resistor kit.",
+      "spoken_text": "This project needs the L E D + resistor kit.",
+      "src": "audio/narrator/6d22bc5b3e99d8cdd80b.mp3"
+    },
+    {
+      "caption": "This project needs the Protected pump module.",
+      "spoken_text": "This project needs the Protected pump module.",
+      "src": "audio/narrator/58d35ee56dde260383ae.mp3"
+    },
+    {
+      "caption": "This project needs the Temperature + fan driver kit.",
+      "spoken_text": "This project needs the Temperature + fan driver kit.",
+      "src": "audio/narrator/4f097e7529cea4c5556d.mp3"
+    },
+    {
+      "caption": "This project needs the Voltage divider bench.",
+      "spoken_text": "This project needs the Voltage divider bench.",
+      "src": "audio/narrator/16c40ec7cef6e0b40a1b.mp3"
+    },
+    {
+      "caption": "This quote exercise does not buy or sell anything.",
+      "spoken_text": "This quote exercise does not buy or sell anything.",
+      "src": "audio/narrator/63bab6878a30360b5d21.mp3"
+    },
+    {
+      "caption": "Those workshop lights make the room feel welcoming.",
+      "spoken_text": "Those workshop lights make the room feel welcoming.",
+      "src": "audio/narrator/8c6dfb498657b5745e52.mp3"
+    },
+    {
+      "caption": "Times use the same day, with opens < closes.",
+      "spoken_text": "Times use the same day, with opens < closes.",
+      "src": "audio/narrator/ea11207d39648ad69f6b.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 35%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 35 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/c563a449daf259095196.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 37%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 37 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/80d3554a936690517089.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 39%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 39 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/8e007ed6e6c21d5e8388.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 41%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 41 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/4514334247a8ad842d43.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 43%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 43 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/c96f6661fcf229765eae.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 45%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 45 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/a8454d2b8368dc9867ac.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 47%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 47 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/21c1722d81bd725e4953.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 49%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 49 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/93e873c9fac1c5829d60.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 51%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 51 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/17ecf004d960c41d4c6a.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 53%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 53 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/9386169d33ecc2572b56.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 55%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 55 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/b3a9d93e48f1dc670e59.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 57%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 57 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/a67d9b050a9664fe82fb.mp3"
+    },
+    {
+      "caption": "Turn the pump ON (true) only when moisture is below 59%, tankReady is true, and raining is false.",
+      "spoken_text": "Turn the pump ON (true) only when moisture is below 59 percent, tank Ready is true, and raining is false.",
+      "src": "audio/narrator/0eea498f73b2b96f6095.mp3"
+    },
+    {
+      "caption": "Use a 12 V supply, assumed 1.8 V LED drop and 10 mA maximum target.",
+      "spoken_text": "Use a 12 V supply, assumed 1.8 V L E D drop and 10 milliamps maximum target.",
+      "src": "audio/narrator/f92f2ed3f5e4da235cda.mp3"
+    },
+    {
+      "caption": "Use a 12 V supply, assumed 1.8 V LED drop and 12 mA maximum target.",
+      "spoken_text": "Use a 12 V supply, assumed 1.8 V L E D drop and 12 milliamps maximum target.",
+      "src": "audio/narrator/adcfdbde095c343bb755.mp3"
+    },
+    {
+      "caption": "Use a 12 V supply, assumed 1.8 V LED drop and 15 mA maximum target.",
+      "spoken_text": "Use a 12 V supply, assumed 1.8 V L E D drop and 15 milliamps maximum target.",
+      "src": "audio/narrator/62f8bd47b678cf0a92dc.mp3"
+    },
+    {
+      "caption": "Use a 12 V supply, assumed 1.8 V LED drop and 8 mA maximum target.",
+      "spoken_text": "Use a 12 V supply, assumed 1.8 V L E D drop and 8 milliamps maximum target.",
+      "src": "audio/narrator/aec967a9e29b056e1c54.mp3"
+    },
+    {
+      "caption": "Use a 12 V supply, assumed 2 V LED drop and 10 mA maximum target.",
+      "spoken_text": "Use a 12 V supply, assumed 2 V L E D drop and 10 milliamps maximum target.",
+      "src": "audio/narrator/1c80a8eef5b42f18072a.mp3"
+    },
+    {
+      "caption": "Use a 12 V supply, assumed 2 V LED drop and 12 mA maximum target.",
+      "spoken_text": "Use a 12 V supply, assumed 2 V L E D drop and 12 milliamps maximum target.",
+      "src": "audio/narrator/d1e1d0b3f6f34c895025.mp3"
+    },
+    {
+      "caption": "Use a 12 V supply, assumed 2 V LED drop and 15 mA maximum target.",
+      "spoken_text": "Use a 12 V supply, assumed 2 V L E D drop and 15 milliamps maximum target.",
+      "src": "audio/narrator/0895ac92eaa49dccf81a.mp3"
+    },
+    {
+      "caption": "Use a 12 V supply, assumed 2 V LED drop and 8 mA maximum target.",
+      "spoken_text": "Use a 12 V supply, assumed 2 V L E D drop and 8 milliamps maximum target.",
+      "src": "audio/narrator/b2b9e4065447152e0609.mp3"
+    },
+    {
+      "caption": "Use a 12 V supply, assumed 2.2 V LED drop and 10 mA maximum target.",
+      "spoken_text": "Use a 12 V supply, assumed 2.2 V L E D drop and 10 milliamps maximum target.",
+      "src": "audio/narrator/8dd7dbfd256ba3e132a8.mp3"
+    },
+    {
+      "caption": "Use a 12 V supply, assumed 2.2 V LED drop and 12 mA maximum target.",
+      "spoken_text": "Use a 12 V supply, assumed 2.2 V L E D drop and 12 milliamps maximum target.",
+      "src": "audio/narrator/d986a61e542dfa4b4e3d.mp3"
+    },
+    {
+      "caption": "Use a 12 V supply, assumed 2.2 V LED drop and 15 mA maximum target.",
+      "spoken_text": "Use a 12 V supply, assumed 2.2 V L E D drop and 15 milliamps maximum target.",
+      "src": "audio/narrator/6db417400f92c781975f.mp3"
+    },
+    {
+      "caption": "Use a 12 V supply, assumed 2.2 V LED drop and 8 mA maximum target.",
+      "spoken_text": "Use a 12 V supply, assumed 2.2 V L E D drop and 8 milliamps maximum target.",
+      "src": "audio/narrator/fda0bad96d6c89b97412.mp3"
+    },
+    {
+      "caption": "Use a 3.3 V supply, assumed 1.8 V LED drop and 10 mA maximum target.",
+      "spoken_text": "Use a 3.3 V supply, assumed 1.8 V L E D drop and 10 milliamps maximum target.",
+      "src": "audio/narrator/f1e50028c6c4d7f47e7d.mp3"
+    },
+    {
+      "caption": "Use a 3.3 V supply, assumed 1.8 V LED drop and 12 mA maximum target.",
+      "spoken_text": "Use a 3.3 V supply, assumed 1.8 V L E D drop and 12 milliamps maximum target.",
+      "src": "audio/narrator/d4b4b2ad44d263754877.mp3"
+    },
+    {
+      "caption": "Use a 3.3 V supply, assumed 1.8 V LED drop and 15 mA maximum target.",
+      "spoken_text": "Use a 3.3 V supply, assumed 1.8 V L E D drop and 15 milliamps maximum target.",
+      "src": "audio/narrator/c86f800c1faefe97058c.mp3"
+    },
+    {
+      "caption": "Use a 3.3 V supply, assumed 1.8 V LED drop and 8 mA maximum target.",
+      "spoken_text": "Use a 3.3 V supply, assumed 1.8 V L E D drop and 8 milliamps maximum target.",
+      "src": "audio/narrator/047b10c572e5ad904c53.mp3"
+    },
+    {
+      "caption": "Use a 3.3 V supply, assumed 2 V LED drop and 10 mA maximum target.",
+      "spoken_text": "Use a 3.3 V supply, assumed 2 V L E D drop and 10 milliamps maximum target.",
+      "src": "audio/narrator/266bbae283b998d598f3.mp3"
+    },
+    {
+      "caption": "Use a 3.3 V supply, assumed 2 V LED drop and 12 mA maximum target.",
+      "spoken_text": "Use a 3.3 V supply, assumed 2 V L E D drop and 12 milliamps maximum target.",
+      "src": "audio/narrator/83d1fd3d37b0326a92ea.mp3"
+    },
+    {
+      "caption": "Use a 3.3 V supply, assumed 2 V LED drop and 15 mA maximum target.",
+      "spoken_text": "Use a 3.3 V supply, assumed 2 V L E D drop and 15 milliamps maximum target.",
+      "src": "audio/narrator/d93ac32575a5eebde7b4.mp3"
+    },
+    {
+      "caption": "Use a 3.3 V supply, assumed 2 V LED drop and 8 mA maximum target.",
+      "spoken_text": "Use a 3.3 V supply, assumed 2 V L E D drop and 8 milliamps maximum target.",
+      "src": "audio/narrator/4baa1264ddc777879768.mp3"
+    },
+    {
+      "caption": "Use a 3.3 V supply, assumed 2.2 V LED drop and 10 mA maximum target.",
+      "spoken_text": "Use a 3.3 V supply, assumed 2.2 V L E D drop and 10 milliamps maximum target.",
+      "src": "audio/narrator/b42f60c01a1c14625338.mp3"
+    },
+    {
+      "caption": "Use a 3.3 V supply, assumed 2.2 V LED drop and 12 mA maximum target.",
+      "spoken_text": "Use a 3.3 V supply, assumed 2.2 V L E D drop and 12 milliamps maximum target.",
+      "src": "audio/narrator/c209174119fbfd48070d.mp3"
+    },
+    {
+      "caption": "Use a 3.3 V supply, assumed 2.2 V LED drop and 15 mA maximum target.",
+      "spoken_text": "Use a 3.3 V supply, assumed 2.2 V L E D drop and 15 milliamps maximum target.",
+      "src": "audio/narrator/d7ccce3244b10c5d669b.mp3"
+    },
+    {
+      "caption": "Use a 3.3 V supply, assumed 2.2 V LED drop and 8 mA maximum target.",
+      "spoken_text": "Use a 3.3 V supply, assumed 2.2 V L E D drop and 8 milliamps maximum target.",
+      "src": "audio/narrator/c562c682361064e49e60.mp3"
+    },
+    {
+      "caption": "Use a 5 V supply, assumed 1.8 V LED drop and 10 mA maximum target.",
+      "spoken_text": "Use a 5 V supply, assumed 1.8 V L E D drop and 10 milliamps maximum target.",
+      "src": "audio/narrator/47ea60b93af89e8097d6.mp3"
+    },
+    {
+      "caption": "Use a 5 V supply, assumed 1.8 V LED drop and 12 mA maximum target.",
+      "spoken_text": "Use a 5 V supply, assumed 1.8 V L E D drop and 12 milliamps maximum target.",
+      "src": "audio/narrator/f5348be93bac8614811d.mp3"
+    },
+    {
+      "caption": "Use a 5 V supply, assumed 1.8 V LED drop and 15 mA maximum target.",
+      "spoken_text": "Use a 5 V supply, assumed 1.8 V L E D drop and 15 milliamps maximum target.",
+      "src": "audio/narrator/42e59bdda7abb2bce576.mp3"
+    },
+    {
+      "caption": "Use a 5 V supply, assumed 1.8 V LED drop and 8 mA maximum target.",
+      "spoken_text": "Use a 5 V supply, assumed 1.8 V L E D drop and 8 milliamps maximum target.",
+      "src": "audio/narrator/68350651511cc54c867f.mp3"
+    },
+    {
+      "caption": "Use a 5 V supply, assumed 2 V LED drop and 10 mA maximum target.",
+      "spoken_text": "Use a 5 V supply, assumed 2 V L E D drop and 10 milliamps maximum target.",
+      "src": "audio/narrator/002584e4ac196429d87c.mp3"
+    },
+    {
+      "caption": "Use a 5 V supply, assumed 2 V LED drop and 12 mA maximum target.",
+      "spoken_text": "Use a 5 V supply, assumed 2 V L E D drop and 12 milliamps maximum target.",
+      "src": "audio/narrator/90ed79cc3ea9953436d1.mp3"
+    },
+    {
+      "caption": "Use a 5 V supply, assumed 2 V LED drop and 15 mA maximum target.",
+      "spoken_text": "Use a 5 V supply, assumed 2 V L E D drop and 15 milliamps maximum target.",
+      "src": "audio/narrator/08bfd32a8333f86c63e4.mp3"
+    },
+    {
+      "caption": "Use a 5 V supply, assumed 2 V LED drop and 8 mA maximum target.",
+      "spoken_text": "Use a 5 V supply, assumed 2 V L E D drop and 8 milliamps maximum target.",
+      "src": "audio/narrator/19ac62649436103892c4.mp3"
+    },
+    {
+      "caption": "Use a 5 V supply, assumed 2.2 V LED drop and 10 mA maximum target.",
+      "spoken_text": "Use a 5 V supply, assumed 2.2 V L E D drop and 10 milliamps maximum target.",
+      "src": "audio/narrator/5d31881885d25a65543d.mp3"
+    },
+    {
+      "caption": "Use a 5 V supply, assumed 2.2 V LED drop and 12 mA maximum target.",
+      "spoken_text": "Use a 5 V supply, assumed 2.2 V L E D drop and 12 milliamps maximum target.",
+      "src": "audio/narrator/85e793f75bd2cc080c3b.mp3"
+    },
+    {
+      "caption": "Use a 5 V supply, assumed 2.2 V LED drop and 15 mA maximum target.",
+      "spoken_text": "Use a 5 V supply, assumed 2.2 V L E D drop and 15 milliamps maximum target.",
+      "src": "audio/narrator/9114d5596c692178c07e.mp3"
+    },
+    {
+      "caption": "Use a 5 V supply, assumed 2.2 V LED drop and 8 mA maximum target.",
+      "spoken_text": "Use a 5 V supply, assumed 2.2 V L E D drop and 8 milliamps maximum target.",
+      "src": "audio/narrator/0e546f245f19cc257e59.mp3"
+    },
+    {
+      "caption": "Use a 9 V supply, assumed 1.8 V LED drop and 10 mA maximum target.",
+      "spoken_text": "Use a 9 V supply, assumed 1.8 V L E D drop and 10 milliamps maximum target.",
+      "src": "audio/narrator/54a360a5516caea2f23e.mp3"
+    },
+    {
+      "caption": "Use a 9 V supply, assumed 1.8 V LED drop and 12 mA maximum target.",
+      "spoken_text": "Use a 9 V supply, assumed 1.8 V L E D drop and 12 milliamps maximum target.",
+      "src": "audio/narrator/12af97a19de80ede6cbd.mp3"
+    },
+    {
+      "caption": "Use a 9 V supply, assumed 1.8 V LED drop and 15 mA maximum target.",
+      "spoken_text": "Use a 9 V supply, assumed 1.8 V L E D drop and 15 milliamps maximum target.",
+      "src": "audio/narrator/6d5980da17be290c5f5d.mp3"
+    },
+    {
+      "caption": "Use a 9 V supply, assumed 1.8 V LED drop and 8 mA maximum target.",
+      "spoken_text": "Use a 9 V supply, assumed 1.8 V L E D drop and 8 milliamps maximum target.",
+      "src": "audio/narrator/96008320a35c9348ef25.mp3"
+    },
+    {
+      "caption": "Use a 9 V supply, assumed 2 V LED drop and 10 mA maximum target.",
+      "spoken_text": "Use a 9 V supply, assumed 2 V L E D drop and 10 milliamps maximum target.",
+      "src": "audio/narrator/5e1f1439573f7f2fe210.mp3"
+    },
+    {
+      "caption": "Use a 9 V supply, assumed 2 V LED drop and 12 mA maximum target.",
+      "spoken_text": "Use a 9 V supply, assumed 2 V L E D drop and 12 milliamps maximum target.",
+      "src": "audio/narrator/d5929d326c91f5a0b3f6.mp3"
+    },
+    {
+      "caption": "Use a 9 V supply, assumed 2 V LED drop and 15 mA maximum target.",
+      "spoken_text": "Use a 9 V supply, assumed 2 V L E D drop and 15 milliamps maximum target.",
+      "src": "audio/narrator/392584af1a8323ba82b1.mp3"
+    },
+    {
+      "caption": "Use a 9 V supply, assumed 2 V LED drop and 8 mA maximum target.",
+      "spoken_text": "Use a 9 V supply, assumed 2 V L E D drop and 8 milliamps maximum target.",
+      "src": "audio/narrator/254c942f0c62bf30da70.mp3"
+    },
+    {
+      "caption": "Use a 9 V supply, assumed 2.2 V LED drop and 10 mA maximum target.",
+      "spoken_text": "Use a 9 V supply, assumed 2.2 V L E D drop and 10 milliamps maximum target.",
+      "src": "audio/narrator/18d6039db502c200ab74.mp3"
+    },
+    {
+      "caption": "Use a 9 V supply, assumed 2.2 V LED drop and 12 mA maximum target.",
+      "spoken_text": "Use a 9 V supply, assumed 2.2 V L E D drop and 12 milliamps maximum target.",
+      "src": "audio/narrator/bc1df156c04dfa03dba5.mp3"
+    },
+    {
+      "caption": "Use a 9 V supply, assumed 2.2 V LED drop and 15 mA maximum target.",
+      "spoken_text": "Use a 9 V supply, assumed 2.2 V L E D drop and 15 milliamps maximum target.",
+      "src": "audio/narrator/50a57bdb5edf26f1c29d.mp3"
+    },
+    {
+      "caption": "Use a 9 V supply, assumed 2.2 V LED drop and 8 mA maximum target.",
+      "spoken_text": "Use a 9 V supply, assumed 2.2 V L E D drop and 8 milliamps maximum target.",
+      "src": "audio/narrator/a80f4a40640650fdf4ab.mp3"
+    },
+    {
+      "caption": "Welcome back!",
+      "spoken_text": "Welcome back!",
+      "src": "audio/narrator/e773b17e7334fdcbe2f1.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on ADC quantization.",
+      "spoken_text": "When you're ready, we can work on A D C quantization.",
+      "src": "audio/narrator/9bfec36f4ed2e7457262.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Battery runtime.",
+      "spoken_text": "When you're ready, we can work on Battery runtime.",
+      "src": "audio/narrator/f2154d082319e4b51f4a.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Cost accounting.",
+      "spoken_text": "When you're ready, we can work on Cost accounting.",
+      "src": "audio/narrator/fa712e33e109652c6724.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Echo calibration.",
+      "spoken_text": "When you're ready, we can work on Echo calibration.",
+      "src": "audio/narrator/3903cc7cff3f14c32148.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Encoder kinematics.",
+      "spoken_text": "When you're ready, we can work on Encoder kinematics.",
+      "src": "audio/narrator/d97fc59bd945601432f5.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Greenhouse pump.",
+      "spoken_text": "When you're ready, we can work on Greenhouse pump.",
+      "src": "audio/narrator/fd8baefc863638d810bc.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Inventory shortfall.",
+      "spoken_text": "When you're ready, we can work on Inventory shortfall.",
+      "src": "audio/narrator/328dd2243632079a4f86.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Kinetic stopping model.",
+      "spoken_text": "When you're ready, we can work on Kinetic stopping model.",
+      "src": "audio/narrator/874e9c8f8c288c0379cc.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on LED circuit.",
+      "spoken_text": "When you're ready, we can work on L E D circuit.",
+      "src": "audio/narrator/612264785889ee11ae2c.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Lab cooling.",
+      "spoken_text": "When you're ready, we can work on Lab cooling.",
+      "src": "audio/narrator/bc8364458e4119eea840.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Majority voting.",
+      "spoken_text": "When you're ready, we can work on Majority voting.",
+      "src": "audio/narrator/1950ca69034fc5c61a9f.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Modular elapsed time.",
+      "spoken_text": "When you're ready, we can work on Modular elapsed time.",
+      "src": "audio/narrator/1880b8f80a27375c0ec8.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on PWM duty cycle.",
+      "spoken_text": "When you're ready, we can work on P W M duty cycle.",
+      "src": "audio/narrator/6d23fa87a1cdd59db475.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Packet integrity.",
+      "spoken_text": "When you're ready, we can work on Packet integrity.",
+      "src": "audio/narrator/60b6961c16132a06cbe6.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Parallel resistance.",
+      "spoken_text": "When you're ready, we can work on Parallel resistance.",
+      "src": "audio/narrator/20de32e66c68b409b806.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Resistive power loss.",
+      "spoken_text": "When you're ready, we can work on Resistive power loss.",
+      "src": "audio/narrator/d663b34283bee389a8c9.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Robot safety.",
+      "spoken_text": "When you're ready, we can work on Robot safety.",
+      "src": "audio/narrator/ddc0748901654388b897.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Tare calibration.",
+      "spoken_text": "When you're ready, we can work on Tare calibration.",
+      "src": "audio/narrator/62d70ae39e199068ae06.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Time intervals.",
+      "spoken_text": "When you're ready, we can work on Time intervals.",
+      "src": "audio/narrator/53652c448d916f4ceb80.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Town gate.",
+      "spoken_text": "When you're ready, we can work on Town gate.",
+      "src": "audio/narrator/7b932736765d04bd9252.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Voltage divider.",
+      "spoken_text": "When you're ready, we can work on Voltage divider.",
+      "src": "audio/narrator/893ecc50d061dfebd470.mp3"
+    },
+    {
+      "caption": "When you’re ready, we can work on Weighted filtering.",
+      "spoken_text": "When you're ready, we can work on Weighted filtering.",
+      "src": "audio/narrator/144b0b608e1c02e27806.mp3"
+    },
+    {
+      "caption": "You can always revisit a completed bench for unpaid practice.",
+      "spoken_text": "You can always revisit a completed bench for unpaid practice.",
+      "src": "audio/narrator/92adb9880ddcc79114b6.mp3"
+    },
+    {
+      "caption": "You can still revisit completed work on the project board.",
+      "spoken_text": "You can still revisit completed work on the project board.",
+      "src": "audio/narrator/03880adc351eaf8eeb2e.mp3"
+    },
+    {
+      "caption": "You don’t need a project to stop in and say hello.",
+      "spoken_text": "You don't need a project to stop in and say hello.",
+      "src": "audio/narrator/484acf827ace1f9373e0.mp3"
+    },
+    {
+      "caption": "You don’t need to buy anything today.",
+      "spoken_text": "You don't need to buy anything today.",
+      "src": "audio/narrator/17e26779b1bac520ac48.mp3"
+    },
+    {
+      "caption": "Your credits stay in your pocket until you choose a part.",
+      "spoken_text": "Your credits stay in your pocket until you choose a part.",
+      "src": "audio/narrator/c04ac33dbe609b370090.mp3"
+    },
+    {
+      "caption": "Your repair is keeping the delivery robot busy.",
+      "spoken_text": "Your repair is keeping the delivery robot busy.",
+      "src": "audio/narrator/fa474aff8e650eaf6615.mp3"
+    }
+  ]
+}

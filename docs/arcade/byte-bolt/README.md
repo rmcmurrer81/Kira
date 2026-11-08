@@ -39,7 +39,7 @@ The mixed contract board prioritizes unseen campaign projects. After the campaig
 
 The original storage key kira-town-prototype-v1 is retained. Valid earlier two-job and eight-project saves migrate without clawing back earned credits, completed work or mastery. Export/import JSON backups in Save & sound. Unreadable data is protected from automatic overwrite until explicit import or reset. Saves are local to the browser/origin, not synchronized between devices.
 
-The original audio recordings remain; they are designed prototype voices, not recovered Robert, Iris or Evelyn identities. New text has complete captions and optional installed local English speech. There are no new voice uploads or cloud voice requests. Audio is optional and stops when the panel changes or the document is hidden.
+The original audio recordings remain; they are designed prototype voices, not recovered Robert, Iris or Evelyn identities. New dialogue has complete captions and prerecorded Kokoro Sarah narration. This stock synthetic voice is not a clone or reconstruction of the original game characters. Audio files are built ahead of time, so playback needs no GPU, speech model, installed system voice or cloud voice request. Read-aloud is opt-in, its setting survives reload, and Save & sound includes a Test voice button. Audio stops when the panel changes or the document is hidden. Scene rendering also pauses behind a dialogue or map to reduce laptop work.
 
 ## Boundaries
 
@@ -51,4 +51,4 @@ Town effects illustrate progress, not physical electronics. All hardware lessons
 
 core.js holds lessons, challenge cases, progression, economy, mixed contracts and save validation. app.js handles dialogue, boards, benches, the learning tablet and save controls. scene.js handles movement, rendering and resident interactions. BUILD_GUIDE.md and learn.html explain the source.
 
-Run the Node logic and scene suites from this folder using node --test tests/test-original.cjs tests/test-campaign.cjs tests/test-scene.cjs. Browser test scripts require a permitted browser environment; do not treat their presence as a passing test. See RELEASE_QA.md for release limits. Actual disconnected local-file play and long-duration playtime are not verified for this revision.
+Run the Node logic and scene suites from this folder using node --test tests/test-original.cjs tests/test-campaign.cjs tests/test-scene.cjs tests/test-audio.cjs. Browser test scripts require a permitted browser environment; do not treat their presence as a passing test. See RELEASE_QA.md for release limits. Actual disconnected local-file play and long-duration playtime are not verified for this revision.

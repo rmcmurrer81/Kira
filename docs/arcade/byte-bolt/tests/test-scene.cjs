@@ -158,3 +158,11 @@ test('outer residents show genuine assigned missions, then return to plain conve
  }
  assert.deepEqual([...seen].sort(),['gardener','neighbor','walker']);for(const id of seen){s.go(id);h.tick();assert(h.markers[id].hidden);assert(!h.talkMarkers[id].hidden);}
 });
+
+test('dialogue and map stop expensive scene redraws, then resume on dismissal',()=>{
+ const h=harness();const before=h.scene.getMapInfo().frameCount;
+ h.window.townPaused=true;for(let i=0;i<30;i++)h.tick();assert.equal(h.scene.getMapInfo().frameCount,before);assert(Object.values(h.markers).every(e=>e.hidden));
+ h.window.townPaused=false;h.tick();assert(h.scene.getMapInfo().frameCount>before);
+ h.map.toggle.onclick();const mapBefore=h.scene.getMapInfo().frameCount;for(let i=0;i<30;i++)h.tick();assert.equal(h.scene.getMapInfo().frameCount,mapBefore);
+ h.map.close.onclick();h.tick();assert(h.scene.getMapInfo().frameCount>mapBefore);
+});

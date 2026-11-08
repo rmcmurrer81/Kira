@@ -2,7 +2,7 @@
 
 ## Architecture
 
-Keep index.html, style.css, core.js, scene.js, app.js, audio-map.js and audio/ together. The game has no remote player dependencies or build step. A static server is preferred for predictable storage; local-file behavior varies by browser.
+Keep index.html, style.css, core.js, scene.js, app.js, dialogue.js, audio-player.js, audio-map.js, audio-bundled-map.js and audio/ together. The game has no remote player dependencies or build step. A static server is preferred for predictable storage; local-file behavior varies by browser.
 
 core.js is pure logic usable in Node and the browser. jobs contains 22 distinct ordered projects. Each declares its learning topic, mentor, location, category, required part and reward. Personal lab upgrades have zero payment. challenge(id, round) supplies instructions, worked examples and explicit test cases; round zero is the campaign. New project lesson.text and lesson.note feed the learning tablet and safety guidance.
 
@@ -22,7 +22,7 @@ Contracts have finite authored parameter variations, not generated missions or a
 
 ## Conversation and access
 
-Every arrival opens friendly conversation first. Mentors explain a current project or say they have no new work, while keeping the board accessible. The clerk always offers Browse parts & prices. Nora, Arthur and Sam rotate informal dialogue. Captions are complete; installed local speech is optional. No recording uploads are needed.
+Every arrival opens friendly conversation first. Mentors explain a current project or say they have no new work, while keeping the board accessible. The clerk always offers Browse parts & prices. Nora, Arthur and Sam rotate informal dialogue. Captions are complete; bundled audio playback is optional and uses no live speech synthesis. The original recordings remain, with stock Sarah narration for newer lines. No private recording uploads are needed.
 
 The scene dispatches town-arrive using yard, lab, store, gardener, walker or neighbor. app.js also exposes townTalk(id). Quest markers derive only from actual available/active work, not idle chats or optional repeats. Normal destination buttons keep jobs accessible without precise walking.
 
@@ -34,6 +34,6 @@ Escape closes panels, focus stays in the modal, input drafts survive visiting le
 
 ## Release checks
 
-Run the complete Node logic suites, migration and economy tests, queue spacing tests, parser regression tests and scene checks. Then, in a permitted browser environment, verify all 22 projects, the final learning-tablet page, idle and active conversation, shop access, captions and local speech interruption, desktop/mobile layouts, reload/import and the no-WebGL path.
+Run the complete Node logic suites, migration and economy tests, queue spacing tests, parser regression tests and scene checks. Then, in a permitted browser environment, verify all 22 projects, the final learning-tablet page, idle and active conversation, shop access, captions and bundled audio interruption, desktop/mobile layouts, reload/import and the no-WebGL path.
 
 Rebuild source ZIPs only after integration and compare their contents with source. Verify actual disconnected local-file play separately. Neither static code inspection nor a passing Node suite proves browser appearance, offline behavior, measured playtime or deployment. Publication remains a separate approved step.

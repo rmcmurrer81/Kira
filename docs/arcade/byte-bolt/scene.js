@@ -276,7 +276,7 @@ function frame(ms){
   near=nearbyTarget();const e=document.getElementById('interact');e.hidden=!near;if(near)e.textContent=(residents[near]?'Talk to '+residents[near].name:near==='yard'?'Talk to Iris':near==='store'?'Visit parts store':'Talk to Evelyn')+' · E';
  }else{const e=document.getElementById('interact');if(e)e.hidden=true;}
  const follow=reducedMotion?1:1-Math.exp(-dt*7);camera.x+=(player.x-camera.x)*follow;camera.z+=(player.z-camera.z)*follow;
- if(!document.hidden&&(gl||ms-lastDraw>=1000/30)){render();lastDraw=ms;}requestAnimationFrame(frame);
+ if(!document.hidden){if(window.townPaused||mapOpen)updateUI();else if(gl||ms-lastDraw>=1000/30){render();lastDraw=ms;}}requestAnimationFrame(frame);
 }
 addEventListener('keydown',e=>{if(window.townPaused||e.ctrlKey||e.metaKey||e.altKey)return;const key=e.key.length===1?e.key.toLowerCase():e.key;if(key==='m'||mapOpen&&key==='Escape'){e.preventDefault();if(!e.repeat)setMap(!mapOpen);return;}if(mapOpen){if(key==='Tab'){const buttons=[mapClose,...Object.values(mapButtons)],i=buttons.indexOf(document.activeElement);e.preventDefault();buttons[(i+(e.shiftKey?-1:1)+buttons.length)%buttons.length].focus?.();}return;}if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d','e'].includes(key)){e.preventDefault();if(key==='e'){if(!e.repeat)interact();}else keys.add(key);}});
 addEventListener('keyup',e=>keys.delete(e.key.length===1?e.key.toLowerCase():e.key));addEventListener('blur',()=>keys.clear());document.addEventListener('visibilitychange',()=>keys.clear());

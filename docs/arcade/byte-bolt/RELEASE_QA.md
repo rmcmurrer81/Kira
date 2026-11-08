@@ -1,3 +1,14 @@
+# Voice compatibility repair — 8 November 2026
+
+- Reproduced the live Iris conversation failure in a managed Chrome browser: pressing Read aloud displayed “No local English voice found. Complete captions stay on.” This reproduces the missing-voice path, not the user's exact laptop or fan behavior.
+- 69 Node checks pass, including 9 new audio groups and a render-pause check. All 505 current full-dialogue combinations and authored practice variants resolve to bundled clips. Existing campaign, migration, economy, parser and scene checks remain covered.
+- Generated 318 short MP3 segments with stock Kokoro af_sarah, locally at build time. No private reference voice was used. The original twelve WAV recordings are preserved and selected only on an exact transcript match. The player never calls browser TTS or runs a model.
+- Read-aloud remains opt-in, with a saved setting, Test voice, truthful loading/playback/error statuses, cancellation on panel changes/hide and bounded load timeouts. Scene drawing pauses under dialogue/map panels; normal graphics and active rendering frame rates are unchanged.
+- Real-media browser checks are run by Byte and Bolt voice compatibility QA. Check the exact commit's workflow outcome. Node mocks and clip existence alone do not prove audible output, laptop performance, human pronunciation quality, or device compatibility.
+- No new human listening review, real-laptop test, measured fan/noise result, or disconnected local-file play is claimed.
+
+## Previous campaign QA (retained historical record)
+
 # 22-project town release checks — 7 November 2026
 
 ## Verified
