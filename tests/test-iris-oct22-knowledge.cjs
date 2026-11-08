@@ -127,7 +127,7 @@ for(const [f,anchor] of [['newbrain.html','newbrain-v3-closed-2026-11-05'],['kir
  assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('id="'+anchor+'"'),'Missing Nov5 source '+f+'#'+anchor);
 }
 const datedProgress=JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8'));
-assert.equal(datedProgress.reviewed_on,'2026-11-07');
+assert.equal(datedProgress.reviewed_on,'2026-11-08');
 for(const id of ['newbrain-pathway-v3-closed-2026-11-05','avatar-v12-v9-rejected-2026-11-05'])assert.ok(datedProgress.milestones.some(m=>m.id===id),'Missing Nov5 timeline '+id);
 const priorNov44=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-04-4.json'),'utf8'));
 assert.equal(iris.validate(priorNov44),priorNov44,'Preserve previous Nov4.4 reviewed knowledge and original source anchors');
@@ -399,10 +399,10 @@ for(const id of ['newbrain-six-group-rehearsal-2026-11-05','avatar-head-v7-clear
  assert.ok(timelineText.includes('"id": "'+id+'"'),'Current picture timeline missing '+id);
  assert.ok(datedProgress.milestones.some(m=>m.id===id),'Current progress timeline missing '+id);
 }
-assert.ok(timelineText.includes('"prepared_on": "2026-11-07"'),'Current picture timeline review date missing');
+assert.ok(timelineText.includes('"prepared_on": "2026-11-08"'),'Current picture timeline review date missing');
 for(const id of ['newbrain-content-readout-boundary-2026-11-02','avatar-workspace-identity-2026-11-02'])assert.ok(timelineText.includes('"id": "'+id+'"'),'Nov2 picture timeline milestone missing: '+id);
 const timelineData=JSON.parse(timelineText.replace(/^[\s\S]*?window\.KIRA_LABS_TIMELINE\s*=\s*/,'').replace(/;\s*$/,''));
-assert.equal(timelineData.prepared_on,'2026-11-07');
+assert.equal(timelineData.prepared_on,'2026-11-08');
 for(const id of ['newbrain-v3-closed-negative-2026-11-05','avatar-v12-head-v9-body-failed-2026-11-05'])assert.equal(timelineData.milestones.find(m=>m.id===id)?.date,'2026-11-05','Missing Nov5 picture milestone '+id);
 for(const id of ['newbrain-v9-fixed-study-failed-2026-11-04','avatar-v11-rejected-body-v7-2026-11-04'])assert.equal(timelineData.milestones.find(m=>m.id===id)?.date,'2026-11-04','Missing Nov4 picture milestone '+id);
 for(const id of ['newbrain-content-mean-qualification-failed-2026-11-02','newbrain-content-readout-boundary-2026-11-02','avatar-workspace-identity-2026-11-02']){
@@ -413,7 +413,7 @@ assert.match(timelineData.milestones.find(m=>m.id==='avatar-workspace-identity-2
 assert.match(timelineData.milestones.find(m=>m.id==='newbrain-content-mean-qualification-failed-2026-11-02').body,/216 genuine teaching updates/);
 
 const progress=JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8'));
-assert.equal(progress.reviewed_on,'2026-11-07');
+assert.equal(progress.reviewed_on,'2026-11-08');
 for(const milestone of ['avatar-motion-software-2026-10-31','newbrain-native-api-agreement-2026-10-31','newbrain-a108-native-reply-diagnostic-2026-10-31','avatar-source109-connection-2026-10-31'])assert.ok(progress.milestones.some(m=>m.id===milestone),'Missing Oct31 milestone '+milestone);
 assert.ok(progress.milestones.some(m=>m.id==='newbrain-continuing-lesson-a98-persistence-2026-10-30'),'A98 timeline entry missing');
 assert.ok(progress.milestones.some(m=>m.id==='newbrain-word-study-a87-a92-2026-10-30'),'A87/A92 dated milestone missing');
