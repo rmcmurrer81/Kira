@@ -40,9 +40,9 @@ with sync_playwright() as p:
     # End-to-end full sentence queue completes, not merely first clip play().
     page.wait_for_function('document.querySelector("#voice-status").textContent === "Finished reading."',timeout=15000)
     # Network errors remain visible and can be retried.
-    page.route('**/audio/bundled/*.mp3',lambda route:route.abort())
+    page.route('**/audio/narrator/*.mp3',lambda route:route.abort())
     page.locator('#test-voice').click();page.wait_for_function('document.querySelector("#voice-status").textContent.includes("could not play")')
-    page.unroute('**/audio/bundled/*.mp3');page.locator('#test-voice').click();page.wait_for_function('testAudio[0].currentTime > .2');report['failed_audio_retry_works']=True
+    page.unroute('**/audio/narrator/*.mp3');page.locator('#test-voice').click();page.wait_for_function('testAudio[0].currentTime > .2');report['failed_audio_retry_works']=True
     assert page.evaluate('speechCalls')==0
     page.screenshot(path='/tmp/byte-bolt-sound-check.png')
     # Turning off again makes the full campaign regression silent.
