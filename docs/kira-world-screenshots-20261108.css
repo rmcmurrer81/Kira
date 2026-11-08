@@ -1,0 +1,22 @@
+/* November 8, 2026 — actual Kira World development screenshots; preserves legacy layouts. */
+.kw-shot-section{padding:clamp(38px,5vw,72px) 0;background:linear-gradient(135deg,#081724 0%,#0d2033 56%,#0b182a 100%);border-top:1px solid rgba(108,229,247,.24);border-bottom:1px solid rgba(108,229,247,.18);color:#edf7ff}
+.kw-shot-section.kw-shot-section--alt{background:linear-gradient(145deg,#0c1f2d 0%,#0e1830 100%)}
+.kw-shot-inner{width:min(1190px,calc(100% - 48px));margin-inline:auto}
+.kw-shot-head{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);align-items:end;gap:20px 44px;margin:0 0 25px}
+.kw-shot-kicker{font:700 .72rem/1.45 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.13em;text-transform:uppercase;color:#72e1f1;margin:0 0 12px}
+.kw-shot-head h2{font:750 clamp(1.9rem,3.15vw,2.9rem)/1.11 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.045em;color:#f0f9ff;margin:0}
+.kw-shot-head h2 em{font:italic 400 .93em/1.16 Georgia,serif;color:#79e6f4}
+.kw-shot-summary{line-height:1.7;color:#d2e2ef;max-width:630px;font-size:.95rem;margin:0}
+.kw-shot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px;align-items:start}
+.kw-shot-card{min-width:0;margin:0;overflow:hidden;border-radius:14px;border:1px solid rgba(130,220,242,.26);background:#13263a;box-shadow:0 12px 29px rgba(0,0,0,.22)}
+.kw-shot-card a.kw-shot-image-link{display:block;position:relative;overflow:hidden;line-height:0;background:#0c1520}
+.kw-shot-card img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
+.kw-shot-caption{padding:15px 17px 16px;line-height:1.52;color:#d1e2ee;font-size:.85rem}
+.kw-shot-caption strong{display:block;font-size:1rem;line-height:1.35;color:#f7fbff;margin-bottom:6px}
+.kw-shot-caption span{display:block}
+.kw-shot-gallery--three .kw-shot-card:first-child{grid-column:1 / -1}
+.kw-shot-gallery--three .kw-shot-card:first-child img{max-height:560px}
+.kw-shot-followup{display:flex;flex-wrap:wrap;gap:12px 24px;margin:20px 0 0;align-items:center;line-height:1.6}
+.kw-shot-followup a{color:#80e9fa;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.kw-shot-disclosure{font-size:.78rem;color:#aec8dc;line-height:1.7;margin:17px 0 0}
+@media(max-width:750px){.kw-shot-head{grid-template-columns:1fr;gap:10px}.kw-shot-grid{grid-template-columns:1fr}.kw-shot-gallery--three .kw-shot-card:first-child{grid-column:auto}.kw-shot-inner{width:calc(100% - 34px)}.kw-shot-caption{padding:13px 14px}.kw-shot-head h2{font-size:clamp(1.75rem,7vw,2.25rem)}}
