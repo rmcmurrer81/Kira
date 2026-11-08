@@ -25,10 +25,21 @@ jobs:
         env:
           ORT_DISABLE_TELEMETRY: '1'
         run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
           python -m pip install kokoro-onnx==0.6.1
           curl --fail --location --retry 2 -o /tmp/kokoro.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.int8.onnx
           curl --fail --location --retry 2 -o /tmp/voices.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
           python scripts/build_byte_bolt_audio.py --model /tmp/kokoro.onnx --voices /tmp/voices.bin --workers 2
+      - name: Preserve generated speech on the isolated QA branch
+        if: startsWith(github.ref, 'refs/heads/fix/byte-bolt-')
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/arcade/byte-bolt/audio/narrator docs/arcade/byte-bolt/audio-bundled-map.js
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Render bundled Sarah dialogue for voice compatibility checks'
+          git push origin HEAD:${{ github.ref_name }}
       - name: Verify all game logic, clip coverage, interruptions and render pause
         run: node --test docs/arcade/byte-bolt/tests/test-original.cjs docs/arcade/byte-bolt/tests/test-campaign.cjs docs/arcade/byte-bolt/tests/test-scene.cjs docs/arcade/byte-bolt/tests/test-audio.cjs
       - name: Prepare isolated Chromium
