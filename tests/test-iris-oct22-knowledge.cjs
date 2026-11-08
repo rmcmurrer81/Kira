@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-11-08-1.json';
+const filename='knowledge/iris-projects-2026-11-08-2.json';
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
 const loader=fs.readFileSync(path.join(docs,'iris.js'),'utf8');
@@ -13,12 +13,24 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-11-08.1'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-11-08.1'));
+assert.ok(irisPage.includes('iris.js?v=2026-11-08.2'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-11-08.2'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-11-08');
-assert.equal(data.content_version,'2026-11-08.1');
+assert.equal(data.content_version,'2026-11-08.2');
+const priorNov81=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-08-1.json'),'utf8'));
+assert.equal(iris.validate(priorNov81),priorNov81,'November 8.1 public pack must remain intact');
+assert.equal(priorNov81.projects.find(p=>p.id==='world').source,'updates.html#kira-world-hardware-and-worldbuilding-2026-11-08');
+assert.equal(priorNov81.projects.find(p=>p.id==='arcade').source,'reports/byte-bolt-learning-town-2026-11-06.html#verified-scope');
+assert.match(data.projects.find(p=>p.id==='arcade').status,/69 Node checks passed/);
+assert.match(data.projects.find(p=>p.id==='world').overview,/First-party Home World neighborhood/);
+for(const [file,anchor] of [['updates.html','kira-world-prototype-screenshots-2026-11-08'],['updates.html','byte-bolt-audio-compatibility-2026-11-08'],['reports/byte-bolt-audio-compatibility-2026-11-08.html','verified-audio-scope'],['kira-world.html','development-screenshots-2026-11-08']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Missing November 8.2 public source '+file+'#'+anchor);
+for(const id of ['kira-world-prototype-screenshots-2026-11-08','byte-bolt-audio-compatibility-2026-11-08']){
+ assert.ok(fs.readFileSync(path.join(docs,'labs-data.js'),'utf8').includes('"id": "'+id+'"'),'Picture timeline missing '+id);
+ assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(m=>m.id===id),'Milestone data missing '+id);
+}
+
 const archivedNov71=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-07-1.json'),'utf8'));
 assert.equal(iris.validate(archivedNov71),archivedNov71,'November 7 pack must stay valid and immutable');
 assert.match(data.projects.find(p=>p.id==='newbrain').status,/27M proxy scored 8\/25/);
@@ -52,7 +64,7 @@ assert.ok(fs.readFileSync(path.join(docs,'labs-data.js'),'utf8').includes('"id":
 const archivedNov64=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-06-4.json'),'utf8'));
 assert.equal(iris.validate(archivedNov64),archivedNov64,'Previous immutable knowledge preserved');
 assert.equal(archivedNov64.projects.find(p=>p.id==='arcade').source,'reports/arcade-lobby-release-2026-11-06.html#what-changed');
-assert.equal(data.projects.find(p=>p.id==='arcade').source,'reports/byte-bolt-learning-town-2026-11-06.html#verified-scope');
+assert.equal(data.projects.find(p=>p.id==='arcade').source,'reports/byte-bolt-audio-compatibility-2026-11-08.html#verified-audio-scope');
 assert.match(data.projects.find(p=>p.id==='arcade').status,/59 passing Node regression groups/);
 assert.match(data.projects.find(p=>p.id==='arcade').status,/22 authored projects/);
 assert.ok(fs.readFileSync(path.join(docs,'reports/byte-bolt-learning-town-2026-11-06.html'),'utf8').includes('id="verified-scope"'));
@@ -99,7 +111,7 @@ assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8'
 const priorNov51=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-05-1.json'),'utf8'));
 assert.equal(iris.validate(priorNov51),priorNov51,'November 5.1 historical pack remains valid');
 assert.equal(priorNov51.projects.find(p=>p.id==='world').source,'kira-world.html#temporary-ai-creator');
-assert.equal(data.projects.find(p=>p.id==='world').source,'updates.html#kira-world-hardware-and-worldbuilding-2026-11-08');
+assert.equal(data.projects.find(p=>p.id==='world').source,'updates.html#kira-world-prototype-screenshots-2026-11-08');
 assert.ok(fs.readFileSync(path.join(docs,'kira-world.html'),'utf8').includes('id="kw-hub-title"'),'Current Kira World source anchor missing');
 const priorNov45=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-04-5.json'),'utf8'));
 assert.equal(iris.validate(priorNov45),priorNov45,'Preserved immutable November 4.5 pack must validate');
@@ -182,7 +194,7 @@ const priorNov31=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(priorNov31),priorNov31,'Preserve prior 12-project research pack');
 assert.equal(priorNov31.projects.length,12);
 assert.equal(data.projects.length,13);
-assert.equal(data.projects.find(p=>p.id==='arcade').source,'reports/byte-bolt-learning-town-2026-11-06.html#verified-scope');
+assert.equal(data.projects.find(p=>p.id==='arcade').source,'reports/byte-bolt-audio-compatibility-2026-11-08.html#verified-audio-scope');
 for(const term of ['Circuitbound','33 animated scenes','10 beginner coding/electronics puzzles','four distinct endings'])assert.ok(data.projects.find(p=>p.id==='arcade').overview.includes(term));
 assert.ok(fs.readFileSync(path.join(docs,'arcade/index.html'),'utf8').includes('id="ar-games-title"'));
 assert.ok(fs.readFileSync(path.join(docs,'arcade/index.html'),'utf8').includes('href="circuitbound/"'));
@@ -218,7 +230,7 @@ for(const x of ['LATEST NOV01 RETRIEVAL ONLY','800 calls','34/37','23/37','0/37'
 assert.equal(data.projects.find(p=>p.id==='newbrain').source,'updates.html#kira-world-hardware-and-worldbuilding-2026-11-08');
 for(const [page,anchor] of [['newbrain.html','newbrain-opt-in-context-selection-2026-11-01'],['updates.html','newbrain-historical-context-selection-2026-11-01'],['reports/newbrain-opt-in-historical-context-2026-11-01.html','historical-context-qualification']])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Missing Nov1 anchor '+page);
 // The picture timeline uses a new Nov 6.3 cache key for the two new V68 research milestones.
-assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-07.1'));
+assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-08.2'));
 const priorOct314=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-31-4.json'),'utf8'));
 assert.equal(iris.validate(priorOct314),priorOct314,'Preserve prior Oct31.4 immutable public pack');
 for(const q of ['LATEST OCT31 EXECUTED MEMORY RETRIEVAL','25/30','0/30','24/30','Original12 accepted 2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(q),'Missing latest retrieval result '+q);

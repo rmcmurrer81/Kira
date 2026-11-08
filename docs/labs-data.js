@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-07",
+  "prepared_on": "2026-11-08",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,66 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "byte-bolt-audio-compatibility-2026-11-08",
+      "title": "Byte & Bolt voice playback bundled for browsers without installed speech",
+      "project": "Lab & website",
+      "track": "Educational Arcade · Opt-in synthetic narration",
+      "date": "2026-11-08",
+      "reviewed_on": "2026-11-08",
+      "status": "released",
+      "date_basis": "November 8 public Kira commit 8c880ee and passing GitHub Node/Chromium/Pages workflows",
+      "summary": "318 bundled synthetic MP3 clips cover 505 dialogue variants; 69 Node groups and isolated Chromium audio QA passed.",
+      "body": "The earlier browser speech route failed in a controlled browser without a local English voice. Byte & Bolt now plays prerecorded stock Kokoro Sarah speech, retains twelve original exact-match WAVs, keeps captions and opt-in controls, and pauses background drawing under dialogue. GitHub Byte & Bolt voice compatibility QA 42501308879 and Pages deployment 42501323882 succeeded for 8c880ee.",
+      "boundary": "No human pronunciation audit, physical laptop/phone testing, measured fan-noise impact, universal audio guarantee, or proven offline file:// execution. Not an AI learning result; NewBrain Original12 remains 2/12.",
+      "image": {
+        "path": "arcade/previews/byte-bolt-real-gameplay-20261107.webp",
+        "alt": "Public first-party screenshot of Byte & Bolt gameplay, not a picture of sound playback",
+        "caption": "Actual game screenshot; audio compatibility is verified only in named automated checks.",
+        "label": "Published game screenshot"
+      },
+      "sources": [
+        {
+          "label": "November 8 public audio report",
+          "url": "reports/byte-bolt-audio-compatibility-2026-11-08.html#verified-audio-scope"
+        },
+        {
+          "label": "November 8 game compatibility update",
+          "url": "updates.html#byte-bolt-audio-compatibility-2026-11-08"
+        }
+      ],
+      "project_page": "arcade/byte-bolt/"
+    },
+    {
+      "id": "kira-world-prototype-screenshots-2026-11-08",
+      "title": "First-party Home World and Louvre-inspired prototype screenshots published",
+      "project": "Kira World",
+      "track": "Environments · Actual development images",
+      "date": "2026-11-08",
+      "reviewed_on": "2026-11-08",
+      "status": "demo",
+      "date_basis": "November 8 public first-party Kira screenshot gallery committed in d8cf677",
+      "summary": "Public gallery shows local Home World neighborhood scenery and a distinct procedural Louvre-inspired walkthrough.",
+      "body": "The November 8 website now shows actual first-party Home World neighborhood captures and a separate stylized Louvre-inspired gallery/courtyard preview. Source project work remains in owner review. Screenshots show what was rendered, not an approved complete world or a public travel destination.",
+      "boundary": "Not a measured Louvre replica, autonomous residents, active travel/voice/VR, a complete body or verified functional anatomy.",
+      "image": {
+        "path": "assets/kira-world-home-neighborhood-20261108.jpg",
+        "alt": "Actual low-poly Home World prototype screenshot with houses, trees, paths and fountain",
+        "caption": "Real development screenshot of a local prototype, not a released virtual world.",
+        "label": "Development screenshot"
+      },
+      "sources": [
+        {
+          "label": "Published screenshot gallery",
+          "url": "kira-world.html#development-screenshots-2026-11-08"
+        },
+        {
+          "label": "November 8 source and release boundaries",
+          "url": "updates.html#kira-world-prototype-screenshots-2026-11-08"
+        }
+      ],
+      "project_page": "kira-world.html#development-screenshots-2026-11-08"
+    },
     {
       "id": "newbrain-fresh-protocols-2026-11-07",
       "title": "V11/V14 fresh Native experiments: complementary partial passes",
