@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-08",
+  "prepared_on": "2026-11-09",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,66 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "kira-world-home-louvre-prototype-review-2026-11-09",
+      "title": "Home World district and Louvre: later owner-review prototype",
+      "project": "Kira World",
+      "track": "Environments · Source plus bounded tests",
+      "date": "2026-11-09",
+      "reviewed_on": "2026-11-09",
+      "status": "development",
+      "date_basis": "Public November 9 review of saved local-only source/build, not public runtime acceptance",
+      "summary": "Separate Home World district and Louvre-inspired studies show limited interactivity and reviewed geometry, not full destinations.",
+      "body": "The local district adds doors, object interactions and a catalog designed to exclude private files. A later Louvre review has 5 rooms, 6 routes and 9 cameras and catalogued public-domain painting material. Earlier images do not demonstrate every later change.",
+      "boundary": "No measured Louvre replica, resident autonomy, complete world-generation pipeline or public interactive release.",
+      "image": {
+        "path": "assets/kira-world-home-neighborhood-20261108.jpg",
+        "alt": "Earlier November 8 prototype capture, not a November 9 final world",
+        "caption": "Earlier first-party screenshot; not the latest build.",
+        "label": "Development screenshot"
+      },
+      "sources": [
+        {
+          "label": "November 9 public review",
+          "url": "updates.html#kira-world-louvre-home-avatar-review-2026-11-09"
+        },
+        {
+          "label": "Home World details",
+          "url": "kira-world-home.html#home-world-development-review-2026-11-09"
+        }
+      ],
+      "project_page": "kira-world.html#development-screenshots-2026-11-08"
+    },
+    {
+      "id": "avatar-original-v2-review-2026-11-09",
+      "title": "Original body v2 and Person Creator policy checks remain unapproved",
+      "project": "Kira World",
+      "track": "Avatar Builder · Original body studies",
+      "date": "2026-11-09",
+      "reviewed_on": "2026-11-09",
+      "status": "development",
+      "date_basis": "November 9 public description of private candidate/export and draft policy evidence",
+      "summary": "Procedural male/female variant exports and draft consent checks; no finished person or functional anatomy.",
+      "body": "Original adult body variants can be prepared for private export review; clearer age/body-policy and consent boundaries are documented for Person Creator draft profiles.",
+      "boundary": "Neither full-body anatomy, Evelyn likeness, fictional-character reconstruction, natural movement, organ physiology nor permanent resident activation has been accepted.",
+      "image": {
+        "path": "assets/kira-world-avatar-builder-visual-20261023.svg",
+        "alt": "Avatar Builder concept graphic only",
+        "caption": "Concept artwork; rejected/private models remain unpublished.",
+        "label": "Concept artwork"
+      },
+      "sources": [
+        {
+          "label": "November 9 public review",
+          "url": "updates.html#kira-world-louvre-home-avatar-review-2026-11-09"
+        },
+        {
+          "label": "Body research",
+          "url": "kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09"
+        }
+      ],
+      "project_page": "kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09"
+    },
     {
       "id": "byte-bolt-audio-compatibility-2026-11-08",
       "title": "Byte & Bolt voice playback bundled for browsers without installed speech",

@@ -1,8 +1,74 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-08",
+  "reviewed_on": "2026-11-09",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "kira-world-home-louvre-prototype-review-2026-11-09",
+      "title": "Home World district and Louvre-inspired walkthrough: expanded private review",
+      "date": "2026-11-09",
+      "date_basis": "November 9 published owner-review source, build and limited-check status; newer than November 8 screenshots",
+      "status": "working",
+      "track": "World environments",
+      "summary": "A separate local district has door/object interactions; later Louvre study records 5 rooms, 6 routes and 9 review cameras, still unapproved.",
+      "body": [
+        "Local-only Home World research adds walkable district geometry, furnished rooms, door and object interactions and a read-only catalog excluding private folders by default. World Generator accepts source-review requests, not automatic finished worlds.",
+        "The separate Louvre-inspired review includes reflecting pools, courtyard and gallery studies and four source-catalogued public-domain paintings; it remains approximate, not a measured museum replica. November 8 screenshots predate the latest study."
+      ],
+      "boundary": "Development-only source and bounded checks; no live public destination, accepted physical museum reconstruction, autonomous residents, voice visitors or completed user testing.",
+      "image": {
+        "path": "assets/kira-world-home-neighborhood-20261108.jpg",
+        "alt": "Earlier November 8 first-party low-poly neighborhood screenshot, not the new November 9 district",
+        "caption": "Earlier development screenshot; does not depict every November 9 feature.",
+        "label": "Earlier prototype image"
+      },
+      "sources": [
+        {
+          "label": "November 9 public review",
+          "url": "updates.html#kira-world-louvre-home-avatar-review-2026-11-09"
+        },
+        {
+          "label": "Louvre caveats",
+          "url": "kira-world-notebook.html#louvre-development-review-2026-11-09"
+        },
+        {
+          "label": "Home World caveats",
+          "url": "kira-world-home.html#home-world-development-review-2026-11-09"
+        }
+      ],
+      "evidence_kind": "nov09-local-prototype-source-and-limited-review"
+    },
+    {
+      "id": "avatar-original-v2-review-2026-11-09",
+      "title": "Original-procedural adult body variants: export pathway, no acceptance",
+      "date": "2026-11-09",
+      "date_basis": "November 9 private original-procedural candidate records summarized in approved public research review",
+      "status": "working",
+      "track": "Avatars and bodies",
+      "summary": "Separate original adult male/female draft candidates can be prepared and exported for review; no realistic, anatomical or movement acceptance.",
+      "body": [
+        "New authored procedural candidate/export lane advances original-body engineering; output records do not establish realistic faces, hands, feet, clothing behaviour, deformation, a complete desktop builder or activated people.",
+        "Person Creator draft age/body safeguards and consent requirements remain source/limited-test controls, not actual residency. Full digestive, urinary and reproductive anatomy/physiology remain unverified."
+      ],
+      "boundary": "No approved Evelyn or separate fictional-character head, accepted original full-body likeness, natural motion, functioning organ route or public-release authorization.",
+      "image": {
+        "path": "assets/kira-world-avatar-builder-visual-20261023.svg",
+        "alt": "Existing approved Avatar Builder concept illustration, not an accepted November 9 body",
+        "caption": "Concept image only. No private body renders, likeness references or anatomy images are released.",
+        "label": "Concept artwork"
+      },
+      "sources": [
+        {
+          "label": "November 9 Avatar Builder review",
+          "url": "kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09"
+        },
+        {
+          "label": "Public review and limits",
+          "url": "updates.html#kira-world-louvre-home-avatar-review-2026-11-09"
+        }
+      ],
+      "evidence_kind": "nov09-original-procedural-variant-export-only"
+    },
     {
       "id": "kira-world-prototype-screenshots-2026-11-08",
       "title": "First-party Home World and Louvre-inspired prototype screenshots published",
