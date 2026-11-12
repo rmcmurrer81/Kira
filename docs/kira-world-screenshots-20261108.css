@@ -20,3 +20,16 @@
 .kw-shot-followup a{color:#80e9fa;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .kw-shot-disclosure{font-size:.78rem;color:#aec8dc;line-height:1.7;margin:17px 0 0}
 @media(max-width:750px){.kw-shot-head{grid-template-columns:1fr;gap:10px}.kw-shot-grid{grid-template-columns:1fr}.kw-shot-gallery--three .kw-shot-card:first-child{grid-column:auto}.kw-shot-inner{width:calc(100% - 34px)}.kw-shot-caption{padding:13px 14px}.kw-shot-head h2{font-size:clamp(1.75rem,7vw,2.25rem)}}
+
+/* Recorded Louvre V66 walkthrough, grouped with the existing actual screenshot gallery. */
+.kw-louvre-video{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(250px,.85fr);gap:clamp(18px,3vw,30px);align-items:center;margin:0 0 27px;border:1px solid rgba(128,230,245,.3);border-radius:18px;background:linear-gradient(140deg,#112b42,#102036);box-shadow:0 18px 38px rgba(0,0,0,.22);padding:clamp(14px,2.2vw,22px)}
+.kw-louvre-video-player{min-width:0;line-height:0;overflow:hidden;border-radius:12px;background:#030910;box-shadow:0 12px 28px rgba(0,0,0,.3)}
+.kw-louvre-video-player video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#030910}
+.kw-louvre-video-copy{min-width:0;color:#d9e8f3;line-height:1.65}
+.kw-louvre-video-copy h3{font:750 clamp(1.45rem,2.4vw,2.25rem)/1.13 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.035em;color:#f2fbff;margin:0 0 14px}
+.kw-louvre-video-copy h3 em{font:italic 400 .96em/1.15 Georgia,serif;color:#79e6f4}
+.kw-louvre-video-copy p{margin:0 0 13px;font-size:.94rem}
+.kw-louvre-video-copy .kw-shot-kicker{font-size:.7rem;color:#7fe5f2}
+.kw-louvre-video-copy .kw-louvre-video-disclosure{font-size:.8rem;color:#bdd2e1}
+.kw-louvre-video-link{color:#86ebf8;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:820px){.kw-louvre-video{grid-template-columns:1fr}.kw-louvre-video-copy{padding:3px 4px 0}}
