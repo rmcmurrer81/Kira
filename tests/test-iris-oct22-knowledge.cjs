@@ -297,6 +297,17 @@ assert.equal(arcadeLimits.id,'arcade');
 assert.match(arcadeLimits.answer,/not an autonomous NewBrain/i);
 const ask=(q)=>{const response=iris.answer(knowledge,q,'',[],null);assert.ok(response&&response.answer,'No reviewed answer: '+q);return response;};
 
+const v66Direct=ask('Where can I watch the Louvre V66 walkthrough, and is it a real museum reconstruction?');
+assert.equal(v66Direct.id,'world');
+assert.equal(v66Direct.facet,'public-video');
+assert.match(v66Direct.answer,/kira-world-notebook\.html#louvre-walk-v66/);
+assert.match(v66Direct.answer,/not footage from the real Louvre/);
+assert.deepEqual(v66Direct.sources,['iris-current-world']);
+const v66Overview=ask('What is the Louvre V66 walkthrough?');
+assert.equal(v66Overview.facet,'public-video');
+assert.match(v66Overview.answer,/not a publicly playable world/);
+
+
 const currentReadout=ask('What did the November 2 NewBrain content-state readout prove, and did Original12 improve?');
 assert.equal(currentReadout.id,'newbrain');
 assert.ok(['status','compound'].includes(currentReadout.facet));

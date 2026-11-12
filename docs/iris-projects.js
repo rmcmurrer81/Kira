@@ -275,6 +275,21 @@
     if(p.id==='world'&&/\b(?:lisa|unnamed friend|kira and friend|friend prototype)\b/.test(q)&&/\b(?:who|what|where|origin|history|come from|came from|before|started|begin|began|prototype|tell me about)\b/.test(q)){
       const r=reply(p,'overview',data);r.title='Kira World · Kira, Friend and Lisa';return r;
     }
+    // The published V66 recording has a precise, approved public answer.
+    // Keep this narrowly scoped to the reviewed Louvre video, not other
+    // Notebook Worlds, private clips, live tours or unsupported subjects.
+    if(p.id==='world'&&data.content_version>='2026-11-11.1'
+      &&/\blouvre\b/.test(q)&&/\bv66\b/.test(q)
+      &&/\b(?:walkthrough|video|recording|preview)\b/.test(q)
+      &&/\b(?:where|watch|view|see|what|real|museum|reconstruction|accurate|play|visit|available)\b/.test(q)
+      &&['overview','status','how','limits'].includes(facet)){
+      const r=reply(p,'how',data);
+      r.title='Kira World · Louvre V66 recorded walkthrough';
+      r.facet='public-video';
+      r.retrieval.intent='public-video';
+      r.answer='Watch the approximately five-minute Louvre-inspired V66 recording beside the earlier screenshots at https://kiralabs.org/kira-world-notebook.html#louvre-walk-v66. It is a compressed 640 × 360, 12 fps preview of a procedural virtual environment, not footage from the real Louvre, not a measured architectural reconstruction, and not a publicly playable world. The earlier screenshots may show a different stage from this recording.';
+      return r;
+    }
     // Answer each documented facet of a compound question using the same
     // project's reviewed text. Unknown clauses are acknowledged, not guessed.
     if(clauses.length>1&&facets.length&&(facets.length>1||clauses.some(c=>intent(c)==='overview'))){
