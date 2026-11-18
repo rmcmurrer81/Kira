@@ -25,6 +25,35 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-focal-objective-review-2026-11-18",
+      "title": "NewBrain focal objective: small paired gain but two of seven gates passed",
+      "project": "NewBrain",
+      "track": "Learning · focal value selection",
+      "date": "2026-11-18",
+      "reviewed_on": "2026-11-18",
+      "status": "development",
+      "date_basis": "Completed paired local-GPU trial on frozen synthetic cases, November 18",
+      "summary": "Supported 78/128 focal vs 73/128 CE; retention and new wording worsened.",
+      "body": "Matched 2,048-update-per-arm study from common step 16,656: baseline 54/128 supported, CE 73/128 and focal 78/128. Retained supported 20/32 vs 22/32 and new supported wording 9/24 vs 11/24. Two of seven qualification gates passed. Synthetic cold 320-case repeats and separate saved-artifact audits do not validate independent general learning. Original12 remains 2/12, not rerun.",
+      "boundary": "Experimental paired comparison, not a trained 9B or adopted model.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved conceptual neural illustration, not experimental output",
+        "caption": "Concept artwork; the paired language qualification failed."
+      },
+      "sources": [
+        {
+          "label": "Reviewed paired study",
+          "url": "reports/newbrain-paired-focal-study-2026-11-18.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain project page",
+          "url": "newbrain.html#newbrain-focal-objective-review-2026-11-18"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-focal-objective-review-2026-11-18"
+    },
+    {
       "id": "newbrain-fact-order-diagnostic-2026-11-18",
       "title": "NewBrain fact-order test and read-only context diagnosis",
       "project": "NewBrain",

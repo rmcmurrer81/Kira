@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-focal-objective-review-2026-11-18",
+      "title": "NewBrain paired first-answer objective: modest gain, qualification failed",
+      "date": "2026-11-18",
+      "date_basis": "Two actual 2,048-update local-GPU matched synthetic arms completed November 18",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Focal 78/128 supported vs CE 73/128; only two of seven gate families passed.",
+      "body": [
+        "Two branches shared the same checkpoint, data, sampled batches and hyperparameters; each ran 2,048 updates. Baseline supported was 54/128.",
+        "Focal retained supported facts 20/32 vs CE 22/32, and new supported wording 9/24 vs CE 11/24; 32/32 unknown responses were correct.",
+        "320-case cold recordings repeated byte-for-byte; private saved-state audit had 619,283 checks. No Qwen switch, 9B training or accepted Original12 change (2/12, not rerun)."
+      ],
+      "boundary": "Executed synthetic paired comparison with narrow descriptive difference; failed qualification, no deployment or human-independent general learning.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved conceptual neural illustration, not experimental output",
+        "caption": "Concept artwork; the paired language qualification failed."
+      },
+      "sources": [
+        {
+          "label": "Reviewed paired study",
+          "url": "reports/newbrain-paired-focal-study-2026-11-18.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain project page",
+          "url": "newbrain.html#newbrain-focal-objective-review-2026-11-18"
+        }
+      ],
+      "evidence_kind": "local-gpu-paired-focal-2048x2-unqualified"
+    },
+    {
       "id": "newbrain-fact-order-diagnostic-2026-11-18",
       "title": "NewBrain fact-order training exposes unsupported-answer failures",
       "date": "2026-11-18",
