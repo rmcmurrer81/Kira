@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-fact-order-diagnostic-2026-11-18",
+      "title": "NewBrain fact-order training exposes unsupported-answer failures",
+      "date": "2026-11-18",
+      "date_basis": "November 18 completed CUDA study and read-only diagnosis, plus separate metadata validation",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "2,048 updates; seen-order answers 32/48→22/48, held-out 15/48→21/48; seven of eight gates failed.",
+      "body": [
+        "Held-out positive copying stayed 6/32 and exact old binding prompts regressed 45/64→39/64.",
+        "Zero-update frozen diagnosis supported 39/128, unknown 30/32, cold 288 answers repeated including mistakes.",
+        "Separate bounded provenance history: 147 tests, 112 passed, 35 skipped; 2,415 old records and 96 bindings preserved. Original12 accepted 2/12, not rerun."
+      ],
+      "boundary": "Negative synthetic learning result and source-metadata checks; no new qualified neural memory.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved neural research concept image, not an actual inference result",
+        "caption": "Concept image, not a verified language-learning success."
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-fact-order-provenance-review-2026-11-18.html#reviewed-scope"
+        },
+        {
+          "label": "Project detail",
+          "url": "newbrain.html#newbrain-fact-order-diagnostic-2026-11-18"
+        }
+      ],
+      "evidence_kind": "fact-order-cuda-unqualified-and-readonly-provenance"
+    },
+    {
       "id": "newbrain-mixed-rehearsal-review-2026-11-18",
       "title": "NewBrain rehearsal recovers old controls but misses four of five gates",
       "date": "2026-11-18",

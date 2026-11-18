@@ -25,6 +25,35 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-fact-order-diagnostic-2026-11-18",
+      "title": "NewBrain fact-order test and read-only context diagnosis",
+      "project": "NewBrain",
+      "track": "Learning · context binding",
+      "date": "2026-11-18",
+      "reviewed_on": "2026-11-18",
+      "status": "development",
+      "date_basis": "Actual November 18 synthetic CUDA training and separate zero-update/metadata validation",
+      "summary": "Seven of eight gates failed; exact supported answers 39/128 in diagnostic.",
+      "body": "The 2,048-update trial changed seen-order 32/48→22/48 and held-out 15/48→21/48 while held-out positive binding remained 6/32. Original old bindings fell 45/64→39/64. Frozen zero-update diagnosis supported 39/128, unknown 30/32; cold 288 repeated mistakes. Independently, provenance metadata tests 112 passed, 35 skipped of 147. Original12 2/12 not rerun.",
+      "boundary": "Unqualified synthetic result; metadata tests do not demonstrate semantic memory or humanlike mind.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Illustrative neural system artwork, not actual model output",
+        "caption": "Conceptual neural research imagery."
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-fact-order-provenance-review-2026-11-18.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain status",
+          "url": "newbrain.html#newbrain-fact-order-diagnostic-2026-11-18"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-fact-order-diagnostic-2026-11-18"
+    },
+    {
       "id": "newbrain-mixed-rehearsal-review-2026-11-18",
       "title": "NewBrain mixed rehearsal: old answers restored, new binding unqualified",
       "project": "NewBrain",
