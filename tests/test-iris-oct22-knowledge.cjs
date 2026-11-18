@@ -26,7 +26,7 @@ assert.equal(iris.validate(priorNov182),priorNov182);
 assert.equal(priorNov182.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-native-copy-continuation-2026-11-18');
 const rehearsal=data.projects.find(p=>p.id==='newbrain');
 assert.equal(rehearsal.source,'newbrain.html#newbrain-mixed-rehearsal-review-2026-11-18');
-for(const term of ['2,048','1/16','16/16','26/48','30/48','10/48','11/48','1/32','3/32','5/32','1/24','41/64','45/64','four of five','Original12','2/12'])assert.ok(rehearsal.status.includes(term),'Latest rehearsal evidence absent: '+term);
+for(const term of ['2,048','1/16','16/16','26/48','30/48','10/48','11/48','1/32','3/32','5/32','1/24','41/64','45/64','Four of five','Original12','2/12'])assert.ok(rehearsal.status.includes(term),'Latest rehearsal evidence absent: '+term);
 assert.match(rehearsal.limits,/no matched no-replay causal control/);
 for(const [file,anchor] of [['newbrain.html','newbrain-mixed-rehearsal-review-2026-11-18'],['updates.html','newbrain-mixed-rehearsal-review-2026-11-18'],['reports/newbrain-mixed-rehearsal-review-2026-11-18.html','reviewed-scope'],['reports/newbrain-mixed-rehearsal-review-2026-11-18.html','measured-results'],['reports/newbrain-mixed-rehearsal-review-2026-11-18.html','limitations']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Missing November 18.3 anchor '+file+'#'+anchor);
 assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(x=>x.id==='newbrain-mixed-rehearsal-review-2026-11-18'));
