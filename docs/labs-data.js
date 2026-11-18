@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-17",
+  "prepared_on": "2026-11-18",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,32 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-native-copy-study-2026-11-18",
+      "title": "NewBrain: continued copying attempts fail exact-answer tests",
+      "project": "NewBrain",
+      "track": "Learning · Context copying",
+      "date": "2026-11-18",
+      "reviewed_on": "2026-11-18",
+      "status": "development",
+      "date_basis": "November 17–18 Eastern / November 18 UTC; completed experimental runs",
+      "summary": "Both fixed 960-update curricula returned 0/96 primary exact matches.",
+      "body": "Resumed the same failed 640-update parent for 960 CPU updates per arm. Both scored 0/96 primary, 0/64 supported, 0/32 unsupported, 0/32 separate wording; retention 9/16→4/16. Paired consumed 10/96 was only correct unknown abstentions, not positive fact copying. Original12 unchanged 2/12.",
+      "boundary": "AI-reviewed negative learning result; no independent person, model or live-deployment qualification.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved neural concept art, not study output",
+        "label": "Concept artwork",
+        "caption": "A negative study, not product readiness."
+      },
+      "sources": [
+        {
+          "label": "Read measured results",
+          "url": "reports/newbrain-context-copy-study-2026-11-18.html#reviewed-scope"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-copy-study-2026-11-18"
+    },
     {
       "id": "newbrain-native-context-review-2026-11-17",
       "title": "Native CUDA continuation: training ran, answer targets failed",
