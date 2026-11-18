@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-mixed-rehearsal-review-2026-11-18",
+      "title": "NewBrain rehearsal recovers old controls but misses four of five gates",
+      "date": "2026-11-18",
+      "date_basis": "November 18 completed, reviewed local CUDA mixed rehearsal",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "2,048 CUDA updates; replayed old controls 1/16→16/16 but four of five qualification gate families failed.",
+      "body": [
+        "Known-order complete contexts 26/48→30/48, unseen order 10/48→11/48, new wording on old facts 1/32→3/32 and consumed controls 41/64→45/64.",
+        "Positive unseen-order copying stayed 5/32 and positive new wording stayed 1/24. Cold restore repeated all 208 outputs, including incorrect replies.",
+        "Assistant-authored synthetic one-arm comparison; no causal no-replay control, human-independent qualification or adoption. Accepted Original12 stays 2/12, not rerun."
+      ],
+      "boundary": "Executed training and exact restoration but did not qualify new fact learning or general conversation.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved neural concept illustration, not experiment output",
+        "caption": "Illustrative artwork; frozen new-learning gates failed."
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-mixed-rehearsal-review-2026-11-18.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain page",
+          "url": "newbrain.html#newbrain-mixed-rehearsal-review-2026-11-18"
+        }
+      ],
+      "evidence_kind": "native-synthetic-rehearsal-cuda-2048-unqualified"
+    },
+    {
       "id": "newbrain-native-copy-continuation-2026-11-18",
       "title": "NewBrain fixed two-arm copy-learning continuation fails factual copying",
       "date": "2026-11-18",

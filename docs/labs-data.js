@@ -25,6 +25,32 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-mixed-rehearsal-review-2026-11-18",
+      "title": "NewBrain mixed rehearsal: old answers restored, new binding unqualified",
+      "project": "NewBrain",
+      "track": "Learning · Native rehearsal",
+      "date": "2026-11-18",
+      "reviewed_on": "2026-11-18",
+      "status": "development",
+      "date_basis": "Completed November 18 local CUDA fixed experiment",
+      "summary": "Old controls 1/16→16/16, but four of five frozen gate families failed.",
+      "body": "2,048 CUDA updates continued from step 12,560→14,608. Familiar-order 26/48→30/48, unseen-order 10/48→11/48 and new wording 1/32→3/32, while positive unseen copying remained 5/32 and positive new wording 1/24. Replayed controls 1/16→16/16 are reacquisition of consumed synthetic examples. No matched no-replay comparison, human-independent qualification or adoption; Original12 2/12 not rerun.",
+      "boundary": "Negative frozen generalization gates; software repeatability is not semantic memory qualification.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Concept neural illustration, not recorded model output",
+        "caption": "Concept artwork; no qualified learning breakthrough.",
+        "label": "Concept artwork"
+      },
+      "sources": [
+        {
+          "label": "Read completed study",
+          "url": "reports/newbrain-mixed-rehearsal-review-2026-11-18.html#reviewed-scope"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-mixed-rehearsal-review-2026-11-18"
+    },
+    {
       "id": "newbrain-native-copy-continuation-2026-11-18",
       "title": "NewBrain: 3,072-step copying study closes negative",
       "project": "NewBrain",
