@@ -1,8 +1,39 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-09",
+  "reviewed_on": "2026-11-17",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-native-context-review-2026-11-17",
+      "title": "NewBrain Native GPU context study: execution verified, learning targets failed",
+      "date": "2026-11-17",
+      "date_basis": "November 17 ET / November 18 UTC saved closed experiment and read-only diagnostic",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "2,000 updates with real CUDA activity; 18/80 acquired answers, 0/16 fresh-context answers and declining retention.",
+      "body": [
+        "The fixed Native continuation failed predeclared learning targets: transfer 0/32 to 1/32, fresh context 0/16 to 0/16, retained controls 16/16 to 12/16.",
+        "A no-update CPU diagnostic observed changed states across 48 matched-context pairs but identical outputs in 36/48 pairs. The proposed decoder route bridge is unrun design.",
+        "Original12 accepted 2/12 remains unchanged, not retested. The 76-case evaluation was domain-aware AI-authored, not human-independent."
+      ],
+      "boundary": "Closed negative result; no qualified generalized learning, autonomous person, safe checkpoint migration, Qwen replacement or implemented bridge.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved neural concept illustration, not actual study outputs",
+        "caption": "Illustrative research art; no accepted learning breakthrough."
+      },
+      "sources": [
+        {
+          "label": "Full public research report",
+          "url": "reports/newbrain-native-context-review-2026-11-17.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain dated note",
+          "url": "newbrain.html#newbrain-native-context-continuation-2026-11-17"
+        }
+      ],
+      "evidence_kind": "closed-native-gpu-s2s3-2000-and-readonly-diagnostic"
+    },
     {
       "id": "kira-world-home-louvre-prototype-review-2026-11-09",
       "title": "Home World district and Louvre-inspired walkthrough: expanded private review",
