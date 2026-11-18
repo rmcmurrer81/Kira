@@ -13,10 +13,10 @@
       "summary": "2,000 updates with real CUDA activity; 18/80 acquired answers, 0/16 fresh-context answers and declining retention.",
       "body": [
         "The fixed Native continuation failed predeclared learning targets: transfer 0/32 to 1/32, fresh context 0/16 to 0/16, retained controls 16/16 to 12/16.",
-        "A no-update CPU diagnostic observed changed states across 48 matched-context pairs but identical outputs in 36/48 pairs. The proposed decoder route bridge is unrun design.",
+        "A zero-update CPU diagnostic observed changed internal states for 48 matched-context pairs but identical replies in 36/48. A later untrained per-step bridge implementation passed 20 scoped numerical and 24 finite-difference checks without learning.",
         "Original12 accepted 2/12 remains unchanged, not retested. The 76-case evaluation was domain-aware AI-authored, not human-independent."
       ],
-      "boundary": "Closed negative result; no qualified generalized learning, autonomous person, safe checkpoint migration, Qwen replacement or implemented bridge.",
+      "boundary": "Closed negative learning result; later bridge passes scoped code/math checks only. No qualified generalized learning, autonomous person, safe checkpoint migration, Qwen replacement or live bridge.",
       "image": {
         "path": "assets/home-neural-highres-20261020.webp",
         "alt": "Approved neural concept illustration, not actual study outputs",
@@ -32,7 +32,7 @@
           "url": "newbrain.html#newbrain-native-context-continuation-2026-11-17"
         }
       ],
-      "evidence_kind": "closed-native-gpu-s2s3-2000-and-readonly-diagnostic"
+      "evidence_kind": "closed-native-gpu-s2s3-2000-readonly-diagnostic-and-untrained-bridge-numerical"
     },
     {
       "id": "kira-world-home-louvre-prototype-review-2026-11-09",

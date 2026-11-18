@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-11-17-1.json';
+const filename='knowledge/iris-projects-2026-11-17-2.json';
 const priorNov111=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-11-1.json'),'utf8'));
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
@@ -14,17 +14,24 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-11-17.1'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-11-17.1'));
+assert.ok(irisPage.includes('iris.js?v=2026-11-17.2'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-11-17.2'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-11-17');
-assert.equal(data.content_version,'2026-11-17.1');
-// Nov 17 ET / Nov 18 UTC: closed CUDA training failure and frozen-S3 diagnostic.
+assert.equal(data.content_version,'2026-11-17.2');
+// Nov 17 ET / Nov 18 UTC: closed CUDA learning failure, frozen-S3 diagnostic and later untrained bridge gates.
+const priorNov171=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-17-1.json'),'utf8'));
+assert.equal(iris.validate(priorNov171),priorNov171,'Keep the previous November 17.1 pack immutable and valid');
+assert.match(priorNov171.projects.find(p=>p.id==='newbrain').limits,/bridge remains unimplemented/);
 assert.equal(iris.validate(priorNov111),priorNov111,'November 11 immutable knowledge remains valid');
 const currentNative=data.projects.find(p=>p.id==='newbrain');
 assert.equal(currentNative.source,'newbrain.html#newbrain-native-context-continuation-2026-11-17');
-for(const q of ['2,000','18/80','0/16','36/48','Original12','2/12'])assert.ok(currentNative.status.includes(q),'Native status missing '+q);
+for(const q of ['2,000','18/80','0/16','36/48','Original12','2/12','20 numerical','24 fixed finite-difference','untrained'])assert.ok(currentNative.status.includes(q),'Native status missing '+q);
+assert.ok(fs.readFileSync(path.join(docs,'reports/newbrain-native-context-review-2026-11-17.html'),'utf8').includes('id="bridge-qualification-2026-11-17"'));
+assert.match(currentNative.limits,/no optimizer training/);
+assert.match(currentNative.evidence,/34\/34 rerun/);
+assert.match(currentNative.technical,/fresh-process cold restore/i);
 for(const [file,anchor] of [['newbrain.html','newbrain-native-context-continuation-2026-11-17'],['updates.html','newbrain-native-context-review-2026-11-17'],['reports/newbrain-native-context-review-2026-11-17.html','reviewed-scope']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Missing new public anchor '+file+'#'+anchor);
 assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(m=>m.id==='newbrain-native-context-review-2026-11-17'));
 assert.ok(fs.readFileSync(path.join(docs,'labs-data.js'),'utf8').includes('"id": "newbrain-native-context-review-2026-11-17"'));

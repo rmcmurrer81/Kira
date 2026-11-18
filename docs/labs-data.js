@@ -34,7 +34,7 @@ window.KIRA_LABS_TIMELINE = {
       "status": "development",
       "date_basis": "November 17 Eastern / November 18 UTC closed owner-reviewed study",
       "summary": "2,000 GPU-assisted updates, 18/80 acquisition, 0/16 fresh-context answers; retained answers declined.",
-      "body": "CUDA use was supported by execution receipts, not inferred from code. Transfer 0/32→1/32 and retention 16/16→12/16 fell short. Zero-update diagnosis found 36/48 identical outputs across distinct context pairs. A per-step bridge is unrun design. Original12 2/12 unchanged.",
+      "body": "CUDA use was supported by execution receipts, not inferred from code. Transfer 0/32→1/32 and retention 16/16→12/16 fell short. Zero-update diagnosis found 36/48 identical outputs across distinct context pairs. A later untrained per-step bridge passed 20 scoped numerical and 24 finite-difference checks, but has not demonstrated learning. Original12 2/12 unchanged.",
       "boundary": "No accepted general learning, human-independent evaluation, released person/model or embodied system.",
       "image": {
         "path": "assets/home-neural-highres-20261020.webp",
