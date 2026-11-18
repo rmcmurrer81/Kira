@@ -436,7 +436,7 @@ for(const id of ['newbrain-six-group-rehearsal-2026-11-05','avatar-head-v7-clear
  assert.ok(timelineText.includes('"id": "'+id+'"'),'Current picture timeline missing '+id);
  assert.ok(datedProgress.milestones.some(m=>m.id===id),'Current progress timeline missing '+id);
 }
-assert.ok(timelineText.includes('"prepared_on": "2026-11-09"'),'Current picture timeline review date missing');
+assert.ok(timelineText.includes('"prepared_on": "2026-11-17"'),'Current picture timeline review date missing');
 for(const id of ['newbrain-content-readout-boundary-2026-11-02','avatar-workspace-identity-2026-11-02'])assert.ok(timelineText.includes('"id": "'+id+'"'),'Nov2 picture timeline milestone missing: '+id);
 const timelineData=JSON.parse(timelineText.replace(/^[\s\S]*?window\.KIRA_LABS_TIMELINE\s*=\s*/,'').replace(/;\s*$/,''));
 assert.equal(timelineData.prepared_on,'2026-11-17');
