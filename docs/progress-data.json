@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-native-copy-continuation-2026-11-18",
+      "title": "NewBrain fixed two-arm copy-learning continuation fails factual copying",
+      "date": "2026-11-18",
+      "date_basis": "Completed and reviewed local November 18, 2026 fixed CPU trials",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "3,072 neural updates in each arm; exact 3/96 and 2/96; both supported copying 0/64.",
+      "body": [
+        "Primary baseline 3/96, final A/w 3/96 and wording-only 2/96; supported copying 0/64 each, acquisition 3/192 and 2/192.",
+        "Consumed retention 4/16→6/16 in both is not evidence of reliable memory. Initial admission attempt stopped with no updates; corrected successor completed fixed steps and fresh-process evaluation replay.",
+        "Cases were previously program-exposed, not virgin human-independent. No deployment/adoption, trained 9B model or Original12 rerun. Accepted Original12 2/12."
+      ],
+      "boundary": "Executed negative model-learning result with separate engineering checks; no qualified copying, companion or generalization.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved neural concept illustration, not research output",
+        "caption": "Illustration only; tested copying failed."
+      },
+      "sources": [
+        {
+          "label": "Reviewed research report",
+          "url": "reports/newbrain-native-copy-continuation-2026-11-18.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain current research",
+          "url": "newbrain.html#newbrain-native-copy-continuation-2026-11-18"
+        }
+      ],
+      "evidence_kind": "native-3072-twoarm-execution-negative-copying-nov18"
+    },
+    {
       "id": "newbrain-native-copy-study-2026-11-18",
       "title": "NewBrain copying trial: repeated training did not produce reliable answers",
       "date": "2026-11-18",

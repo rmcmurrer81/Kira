@@ -25,6 +25,32 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-copy-continuation-2026-11-18",
+      "title": "NewBrain: 3,072-step copying study closes negative",
+      "project": "NewBrain",
+      "track": "Learning · Fixed Native copying",
+      "date": "2026-11-18",
+      "reviewed_on": "2026-11-18",
+      "status": "development",
+      "date_basis": "November 18 verified local CPU research",
+      "summary": "Two fixed CPU arms scored 3/96 and 2/96 primary; both supported value copying 0/64.",
+      "body": "Two 3,072-update arms inherited the same initial state; primary 3/96 baseline, A/w 3/96, wording-only 2/96; supported copying 0/64 each, acquisition 3/192 and 2/192. Consumed retention 4/16→6/16 is narrow and not a qualified learning result. Original token-guard attempt stopped at zero updates; successor completed. Cases reused from previously exposed baseline, not independent virgin testing. Accepted Original12 2/12 not rerun.",
+      "boundary": "Failed strict copying and generalized learning; software checks/repeated replies do not imply ready model, companion or person.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved neural concept illustration, not research output",
+        "caption": "Illustration only; tested copying failed.",
+        "label": "Concept artwork"
+      },
+      "sources": [
+        {
+          "label": "Read measured results",
+          "url": "reports/newbrain-native-copy-continuation-2026-11-18.html#reviewed-scope"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-copy-continuation-2026-11-18"
+    },
+    {
       "id": "newbrain-native-copy-study-2026-11-18",
       "title": "NewBrain: continued copying attempts fail exact-answer tests",
       "project": "NewBrain",

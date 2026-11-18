@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-11-18-1.json';
+const filename='knowledge/iris-projects-2026-11-18-2.json';
 const priorNov111=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-11-1.json'),'utf8'));
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
@@ -14,12 +14,23 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-11-18.1'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-11-18.1'));
+assert.ok(irisPage.includes('iris.js?v=2026-11-18.2'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-11-18.2'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-11-18');
-assert.equal(data.content_version,'2026-11-18.1');
+assert.equal(data.content_version,'2026-11-18.2');
+// November 18.2 closed study; November 18.1 remains immutable.
+const priorNov181=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-18-1.json'),'utf8'));
+assert.equal(iris.validate(priorNov181),priorNov181);
+assert.equal(priorNov181.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-native-copy-study-2026-11-18');
+const newestCopy=data.projects.find(p=>p.id==='newbrain');
+for(const q of ['3,072','3/96','2/96','0/64','3/192','2/192','4/16','6/16','Original12','2/12'])assert.ok(newestCopy.status.includes(q),'November 18.2 missing '+q);
+assert.match(newestCopy.limits,/not virgin independent testing/);
+for(const [f,id] of [['newbrain.html','newbrain-native-copy-continuation-2026-11-18'],['updates.html','newbrain-native-copy-continuation-2026-11-18'],['reports/newbrain-native-copy-continuation-2026-11-18.html','reviewed-scope'],['reports/newbrain-native-copy-continuation-2026-11-18.html','outcomes'],['reports/newbrain-native-copy-continuation-2026-11-18.html','limitations']])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('id="'+id+'"'),'Missing new report anchor '+f+'#'+id);
+assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(m=>m.id==='newbrain-native-copy-continuation-2026-11-18'));
+assert.ok(fs.readFileSync(path.join(docs,'labs-data.js'),'utf8').includes('"id": "newbrain-native-copy-continuation-2026-11-18"'));
+assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain training result?','',[],null).answer.includes('3,072'));
 // Nov 18: failed Native copying studies; preserve all prior immutable packs and baseline checks.
 const priorNov172=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-17-2.json'),'utf8'));
 assert.equal(iris.validate(priorNov172),priorNov172);
@@ -34,7 +45,7 @@ assert.equal(iris.validate(priorNov171),priorNov171,'Keep the previous November 
 assert.match(priorNov171.projects.find(p=>p.id==='newbrain').limits,/bridge remains unimplemented/);
 assert.equal(iris.validate(priorNov111),priorNov111,'November 11 immutable knowledge remains valid');
 const currentNative=data.projects.find(p=>p.id==='newbrain');
-assert.equal(currentNative.source,'newbrain.html#newbrain-native-copy-study-2026-11-18');
+assert.equal(currentNative.source,'newbrain.html#newbrain-native-copy-continuation-2026-11-18');
 for(const q of ['2,000','18/80','0/16','36/48','Original12','2/12','20 numerical','24 fixed finite-difference','untrained'])assert.ok(currentNative.status.includes(q),'Native status missing '+q);
 assert.ok(fs.readFileSync(path.join(docs,'reports/newbrain-native-context-review-2026-11-17.html'),'utf8').includes('id="bridge-qualification-2026-11-17"'));
 assert.match(currentNative.limits,/no optimizer training/);
@@ -174,7 +185,7 @@ const priorNov44=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(priorNov44),priorNov44,'Preserve previous Nov4.4 reviewed knowledge and original source anchors');
 assert.equal(priorNov44.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v9-pathway-study-2026-11-04');
 assert.equal(priorNov44.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v8-v9-body-v5-2026-11-04');
-for(const [id,src] of [['newbrain','newbrain.html#newbrain-native-copy-study-2026-11-18'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
+for(const [id,src] of [['newbrain','newbrain.html#newbrain-native-copy-continuation-2026-11-18'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
   assert.equal(data.projects.find(p=>p.id===id).source,src,'latest reviewed source for '+id);
   const [page,anchor]=src.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Latest public research anchor missing '+id);
@@ -191,7 +202,7 @@ const priorNov43=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(priorNov43),priorNov43,'Preserve archived Nov4.3 resource and head results');
 assert.equal(priorNov43.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v8v2-admission-2026-11-04');
 assert.equal(priorNov43.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v6-v7-source-review-2026-11-04');
-for(const [id,src] of [['newbrain','newbrain.html#newbrain-native-copy-study-2026-11-18'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
+for(const [id,src] of [['newbrain','newbrain.html#newbrain-native-copy-continuation-2026-11-18'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
   assert.equal(data.projects.find(p=>p.id===id).source,src);
   const [page,fragment]=src.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+fragment+'"'),'Latest public source anchor missing '+id);
