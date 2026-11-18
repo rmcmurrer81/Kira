@@ -319,7 +319,11 @@ assert.equal(v66Overview.facet,'public-video');
 assert.match(v66Overview.answer,/not a publicly playable world/);
 
 
-const currentReadout=ask('What did the November 2 NewBrain content-state readout prove, and did Original12 improve?');
+// Historical behavior is checked against its immutable November 11 context; the new pack answers latest results.
+const historicalKnowledge={topics:[],sources:{},public_packs:null};
+iris.prepare(historicalKnowledge,priorNov111);
+const historicalAsk=q=>{const r=iris.answer(historicalKnowledge,q,'',[],null);assert.ok(r?.answer,'No archived answer: '+q);return r;};
+const currentReadout=historicalAsk('What did the November 2 NewBrain content-state readout prove, and did Original12 improve?');
 assert.equal(currentReadout.id,'newbrain');
 assert.ok(['status','compound'].includes(currentReadout.facet));
 assert.match(currentReadout.answer,/LATEST NOV02 SOURCE/);
@@ -328,7 +332,7 @@ const currentBody=ask('Was a full Evelyn body accepted on November 2, or just th
 assert.match(currentBody.answer,/LATEST NOV02 WORKSPACE/);
 assert.match(currentBody.answer,/No new original body/);
 
-const directA108=ask('What did NewBrain A108 establish, and did Original12 improve?');
+const directA108=historicalAsk('What did NewBrain A108 establish, and did Original12 improve?');
 assert.equal(directA108.id,'newbrain');assert.equal(directA108.facet,'status');assert.match(directA108.answer,/rank 77/);assert.match(directA108.answer,/Original12(?: accepted)? 2\/12/);
 const directSource109=ask('Is the Source109 head torso connected body finished?');
 assert.equal(directSource109.id,'avatar-body');assert.equal(directSource109.facet,'status');assert.match(directSource109.answer,/UNRUN/);
