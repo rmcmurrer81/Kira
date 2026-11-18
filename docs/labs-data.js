@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-09",
+  "prepared_on": "2026-11-17",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,32 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-native-context-review-2026-11-17",
+      "title": "Native CUDA continuation: training ran, answer targets failed",
+      "project": "NewBrain",
+      "track": "GPU · Context · Retention",
+      "date": "2026-11-17",
+      "reviewed_on": "2026-11-17",
+      "status": "development",
+      "date_basis": "November 17 Eastern / November 18 UTC closed owner-reviewed study",
+      "summary": "2,000 GPU-assisted updates, 18/80 acquisition, 0/16 fresh-context answers; retained answers declined.",
+      "body": "CUDA use was supported by execution receipts, not inferred from code. Transfer 0/32→1/32 and retention 16/16→12/16 fell short. Zero-update diagnosis found 36/48 identical outputs across distinct context pairs. A per-step bridge is unrun design. Original12 2/12 unchanged.",
+      "boundary": "No accepted general learning, human-independent evaluation, released person/model or embodied system.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Illustrative approved neural artwork, not an actual training screenshot",
+        "label": "Concept artwork",
+        "caption": "A closed negative study, not a product."
+      },
+      "sources": [
+        {
+          "label": "Public reviewed results",
+          "url": "reports/newbrain-native-context-review-2026-11-17.html#reviewed-scope"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-context-continuation-2026-11-17"
+    },
     {
       "id": "kira-world-home-louvre-prototype-review-2026-11-09",
       "title": "Home World district and Louvre: later owner-review prototype",
