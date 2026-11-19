@@ -26,13 +26,13 @@ assert.equal(iris.validate(priorNov185),priorNov185);
 assert.equal(priorNov185.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-focal-objective-review-2026-11-18');
 const latestQuery=data.projects.find(p=>p.id==='newbrain');
 assert.equal(latestQuery.source,'newbrain.html#newbrain-query-context-review-2026-11-18');
-for(const z of ['18,704','20,752','2,048','19/32','13/32','14/16','8/16','8/32','29/32','5/16','one of eight','112','35','147','Original12','2/12'])assert.ok(latestQuery.status.includes(z),'Missing latest query result '+z);
+for(const z of ['18,704','20,752','2,048','19/32','13/32','14/16','8/16','8/32','29/32','5/16','seven of eight','112','35','147','Original12','2/12'])assert.ok(latestQuery.status.includes(z),'Missing latest query result '+z);
 assert.match(latestQuery.limits,/seven of eight strict families failed/i);
 for(const [f,a] of [['newbrain.html','newbrain-query-context-review-2026-11-18'],['updates.html','newbrain-query-context-review-2026-11-18'],['reports/newbrain-query-context-review-2026-11-18.html','reviewed-scope'],['reports/newbrain-query-context-review-2026-11-18.html','paired-results'],['reports/newbrain-query-context-review-2026-11-18.html','qualification'],['reports/newbrain-query-context-review-2026-11-18.html','source-access']])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('id="'+a+'"'),'Missing Nov18.6 anchor '+f+'#'+a);
 assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(m=>m.id==='newbrain-query-context-review-2026-11-18'));
 assert.ok(fs.readFileSync(path.join(docs,'labs-data.js'),'utf8').includes('"id": "newbrain-query-context-review-2026-11-18"'));
 const newestResponse=iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain training result?','',[],null);
-assert.ok(newestResponse?.answer.includes('19/32')&&newestResponse.answer.includes('one of eight'),'Iris latest query evidence unavailable');
+assert.ok(newestResponse?.answer.includes('19/32')&&newestResponse.answer.includes('seven of eight'),'Iris latest query evidence unavailable');
 // November 18.5 completed matched small-model focal trial, with failed qualification.
 const priorNov184=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-18-4.json'),'utf8'));
 assert.equal(iris.validate(priorNov184),priorNov184,'Keep Nov 18.4 JSON immutable and valid');
@@ -45,7 +45,7 @@ for(const [file,anchor] of [['newbrain.html','newbrain-focal-objective-review-20
 assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(m=>m.id==='newbrain-focal-objective-review-2026-11-18'));
 assert.ok(fs.readFileSync(path.join(docs,'labs-data.js'),'utf8').includes('"id": "newbrain-focal-objective-review-2026-11-18"'));
 const focalReply=iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain training result?','',[],null);
-assert.ok(focalReply&&focalReply.answer.includes('19/32')&&focalReply.answer.includes('one of eight'),'Iris failed to surface newest focal evidence');
+assert.ok(focalReply&&focalReply.answer.includes('19/32')&&focalReply.answer.includes('seven of eight'),'Iris failed to surface newest focal evidence');
 // Older reviewed experiments and all preceding immutable packs remain in the loaded knowledge.
 // November 18.4 fact-order result, zero-update diagnostic and metadata QA.
 const priorNov183=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-18-3.json'),'utf8'));
