@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-18",
+  "prepared_on": "2026-11-19",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,35 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-position-diversity-review-2026-11-19",
+      "title": "NewBrain position comparison failed its supported fact-gain criterion",
+      "project": "NewBrain",
+      "track": "Learning · fact position",
+      "date": "2026-11-19",
+      "reviewed_on": "2026-11-19",
+      "status": "development",
+      "date_basis": "Executed November 19 paired 2,048-update local-GPU synthetic study",
+      "summary": "Position primary 26/48 supported pairs vs 29/48 matched fixed-front control.",
+      "body": "Both arms completed 2,048 updates each from identical full step 20,752 to 22,800. Parent/control/primary supported pairs 26/48,29/48,26/48; canonical supported 68/128,78/128,69/128; old bindings 54/64,51/64,49/64. Synthetic cases 368 consumed with repeats including errors. Primary failed frozen improvement; no model adopted. Inverse-render source/data prepared only, no new neural training. Original12 2/12 not rerun.",
+      "boundary": "Negative synthetic controlled result, not reliable new learning, Qwen replacement or accepted Original12 improvement.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved conceptual neural art",
+        "caption": "Conceptual artwork; qualification remains unpassed."
+      },
+      "sources": [
+        {
+          "label": "Reviewed research report",
+          "url": "reports/newbrain-position-diversity-review-2026-11-19.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain project",
+          "url": "newbrain.html#newbrain-position-diversity-review-2026-11-19"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-position-diversity-review-2026-11-19"
+    },
     {
       "id": "newbrain-query-context-review-2026-11-18",
       "title": "NewBrain familiar question gains without qualified general learning",

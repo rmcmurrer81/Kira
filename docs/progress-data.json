@@ -1,8 +1,39 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-18",
+  "reviewed_on": "2026-11-19",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-position-diversity-review-2026-11-19",
+      "title": "NewBrain position-diversity trial failed",
+      "date": "2026-11-19",
+      "date_basis": "Completed November 19 matched local-GPU synthetic experiment; inverse follow-up only prepared",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Supported insertion pairs 26/48 primary vs 29/48 control, without qualified learning gain.",
+      "body": [
+        "Two matched 2,048-update GPU continuations started from the same saved step-20,752 model. The primary missed its frozen ≥4-pair gain over both control and parent.",
+        "Canonical supported results were 69/128 primary vs 78/128 control; old bindings 49/64 primary vs 51/64 control and 54/64 original parent. All 368 synthetic cases are consumed and outputs cold-repeated.",
+        "Separate inverse-render data are prepared, but no new neural training has run. Neither model adopted. Accepted Original12 stays 2/12, not rerun."
+      ],
+      "boundary": "Completed negative controlled synthetic result; custody/restart verification is not evidence of general learning. Future preparation is not execution.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved conceptual neural research art",
+        "caption": "Conceptual artwork, not actual NewBrain outputs."
+      },
+      "sources": [
+        {
+          "label": "Reviewed position trial",
+          "url": "reports/newbrain-position-diversity-review-2026-11-19.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain page",
+          "url": "newbrain.html#newbrain-position-diversity-review-2026-11-19"
+        }
+      ],
+      "evidence_kind": "paired-position-diversity-2048-per-arm-failed"
+    },
     {
       "id": "newbrain-query-context-review-2026-11-18",
       "title": "NewBrain familiar-query improvement, seven of eight full gates failed",
