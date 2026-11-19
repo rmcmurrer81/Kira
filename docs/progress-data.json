@@ -4,6 +4,37 @@
   "default_id": "home-now",
   "milestones": [
     {
+      "id": "newbrain-query-context-review-2026-11-18",
+      "title": "NewBrain familiar-query improvement, seven of eight full gates failed",
+      "date": "2026-11-18",
+      "date_basis": "Completed November 18 Eastern / November 19 UTC paired synthetic GPU study",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Known-template 19/32 versus 13/32 control; only one of eight qualification families passed.",
+      "body": [
+        "Each matched local GPU experimental arm performed 2,048 neural optimizer updates from step 18,704 to 20,752. Known-template supported 19/32 vs control 13/32; known-template unknown 14/16 vs 8/16.",
+        "Novel query composition 8/32 still fell below parent 10/32; canonical unsupported primary 29/32 vs control 30/32; complete groups 5/16 vs 7/16. Seven of eight strict gates failed.",
+        "Separate B0 Windows source-access software tests: 112 passed and 35 skipped out of 147; later B1 metadata untested. No deployment or Original12 retest; accepted Original12 2/12."
+      ],
+      "boundary": "Narrow exploratory synthetic learning difference is not generalization or production acceptance; unrelated software checks do not qualify semantic memory.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved conceptual neural illustration, not measured model output",
+        "caption": "Concept illustration; full language qualification failed."
+      },
+      "sources": [
+        {
+          "label": "Reviewed paired report",
+          "url": "reports/newbrain-query-context-review-2026-11-18.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain project",
+          "url": "newbrain.html#newbrain-query-context-review-2026-11-18"
+        }
+      ],
+      "evidence_kind": "paired-query-curriculum-2048-per-arm-unqualified-and-source-access-b0"
+    },
+    {
       "id": "newbrain-focal-objective-review-2026-11-18",
       "title": "NewBrain paired first-answer objective: modest gain, qualification failed",
       "date": "2026-11-18",

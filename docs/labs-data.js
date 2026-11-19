@@ -25,6 +25,35 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-query-context-review-2026-11-18",
+      "title": "NewBrain familiar question gains without qualified general learning",
+      "project": "NewBrain",
+      "track": "Learning · query context",
+      "date": "2026-11-18",
+      "reviewed_on": "2026-11-18",
+      "status": "development",
+      "date_basis": "November 18 ET / November 19 UTC completed paired synthetic GPU study",
+      "summary": "Template-supported answers 19/32 vs control 13/32; seven of eight full gates failed.",
+      "body": "Each experimental GPU arm ran 2,048 updates 18,704→20,752. Known-template supported 19/32 vs 13/32 and known-template unknown 14/16 vs 8/16 control; fresh compositions 8/32 below 10/32 parent. Canonical unsupported 29/32 vs 30/32 control; complete groups 5/16 vs 7/16. Full qualification 1/8 families passed (consumed old teaching). Separate Windows source B0 test 112 pass/35 skip out of 147, but subsequent B1 metadata not tested. No model adoption, Original12 2/12 not rerun.",
+      "boundary": "Completed limited exploratory result, not qualified general learning, humanlike mind or Qwen replacement.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved conceptual neural art, not actual test output",
+        "caption": "Conceptual artwork; qualification remains unpassed."
+      },
+      "sources": [
+        {
+          "label": "Reviewed study",
+          "url": "reports/newbrain-query-context-review-2026-11-18.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain public page",
+          "url": "newbrain.html#newbrain-query-context-review-2026-11-18"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-query-context-review-2026-11-18"
+    },
+    {
       "id": "newbrain-focal-objective-review-2026-11-18",
       "title": "NewBrain focal objective: small paired gain but two of seven gates passed",
       "project": "NewBrain",
