@@ -25,6 +25,35 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-binding-diagnostics-2026-11-21",
+      "title": "NewBrain reverse-ownership diagnostic remained weak",
+      "project": "NewBrain",
+      "track": "Learning · synthetic fact binding diagnostic",
+      "date": "2026-11-21",
+      "reviewed_on": "2026-11-21",
+      "status": "development",
+      "date_basis": "November 21 local-GPU inference-only comparison, no training",
+      "summary": "Supported object-to-name 5/48 baseline vs 4/48 rejected checkpoint; both-correct swaps 2/128 vs 4/128; no adoption.",
+      "body": "Four local GPU inference-only suites compared unchanged step-22,800 baseline with rejected step-23,312 checkpoint using the same greedy FP32 decoder and zero optimizer updates or replay. Wording name-to-object 23/48 vs 20/48, reverse object-to-name 5/48 vs 4/48, both-correct ownership swaps 2/128 vs 4/128, prior exact 65/80 vs 62/80. All 80 earlier raw outputs were reproduced per checkpoint, including mistakes. No accepted improvement or model adoption; Original12 remains 2/12, not rerun.",
+      "boundary": "Narrow related synthetic diagnostic cases; no new learning, qualified memory, general-language validity or trained model adoption.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research illustration",
+        "caption": "Concept art, not diagnostic output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed binding diagnostic",
+          "url": "reports/newbrain-binding-diagnostics-review-2026-11-21.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain project note",
+          "url": "newbrain.html#newbrain-binding-diagnostics-2026-11-21"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-binding-diagnostics-2026-11-21"
+    },
+    {
       "id": "newbrain-inverse-render-review-2026-11-21",
       "title": "NewBrain inverse-render curriculum failed all ten gates",
       "project": "NewBrain",

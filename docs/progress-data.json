@@ -1,8 +1,39 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-21",
-  "default_id": "home-now",
+  "default_id": "newbrain-binding-diagnostics-2026-11-21",
   "milestones": [
+    {
+      "id": "newbrain-binding-diagnostics-2026-11-21",
+      "title": "NewBrain binding diagnostics: weak reverse lookup",
+      "date": "2026-11-21",
+      "date_basis": "November 21 inference-only synthetic GPU diagnostics, reviewed same date",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Reverse wording 5/48 baseline versus 4/48 rejected checkpoint; ownership swaps both correct 2/128 vs 4/128; no training.",
+      "body": [
+        "Four local GPU suites compared the unchanged baseline step 22,800 and previously failed step 23,312 using the same FP32 greedy decoder with zero training and zero replay.",
+        "Supported name-to-object 23/48 vs 20/48; supported object-to-name 5/48 vs 4/48; both-correct swap 2/128 vs 4/128; exact old prompts 65/80 vs 62/80.",
+        "Higher isolated swap counts do not qualify the failed checkpoint. No model adopted; protected Original12 remains 2/12, not rerun."
+      ],
+      "boundary": "Related synthetic diagnostic cases and exact replay do not establish new learning or accepted skill.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research art",
+        "caption": "Concept illustration, not private experimental output"
+      },
+      "sources": [
+        {
+          "label": "Public diagnostic report",
+          "url": "reports/newbrain-binding-diagnostics-review-2026-11-21.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain research notes",
+          "url": "newbrain.html#newbrain-binding-diagnostics-2026-11-21"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-binding-diagnostics-2026-11-21"
+    },
     {
       "id": "newbrain-inverse-render-review-2026-11-21",
       "title": "NewBrain inverse-render training failed",
