@@ -1,8 +1,39 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-19",
+  "reviewed_on": "2026-11-21",
   "default_id": "home-now",
   "milestones": [
+    {
+      "id": "newbrain-inverse-render-review-2026-11-21",
+      "title": "NewBrain inverse-render training failed",
+      "date": "2026-11-19",
+      "date_basis": "Completed November 19; reviewed November 21",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Object-first supported reverse 14/64 vs control 24/64; all ten strict gates failed.",
+      "body": [
+        "From the same full step-22,800 state, two arms completed 2,048 GPU updates each to step 24,848.",
+        "Forward supported 36/64 primary vs 64/64 control, reverse 14/64 vs 24/64, both-correct insertion 16/48 vs 28/48. Earlier-memory 65/80 hides eight lost individual answers.",
+        "Six jobs, 2,304-record audit and 384 cold-repeated raw outputs verified reproducibility including incorrect responses. No adoption. Original12 remains 2/12, not rerun."
+      ],
+      "boundary": "Completed narrow negative synthetic result, not qualified learning.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research illustration",
+        "caption": "Concept artwork, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Public reviewed report",
+          "url": "reports/newbrain-inverse-render-review-2026-11-21.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain project note",
+          "url": "newbrain.html#newbrain-inverse-render-review-2026-11-21"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-inverse-render-review-2026-11-21"
+    },
     {
       "id": "newbrain-position-diversity-review-2026-11-19",
       "title": "NewBrain position-diversity trial failed",

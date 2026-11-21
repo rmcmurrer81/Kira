@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-19",
+  "prepared_on": "2026-11-21",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,35 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-inverse-render-review-2026-11-21",
+      "title": "NewBrain inverse-render curriculum failed all ten gates",
+      "project": "NewBrain",
+      "track": "Learning · reverse fact binding",
+      "date": "2026-11-19",
+      "reviewed_on": "2026-11-21",
+      "status": "development",
+      "date_basis": "November 19 actual paired GPU execution, public-safe November 21 review",
+      "summary": "Supported inverse answers 14/64 primary vs 24/64 control; all ten gates failed.",
+      "body": "Two matched arms independently ran 2,048 updates each from full step 22,800 to 24,848. Forward supported 36/64 primary vs 64/64 control; inverse supported 14/64 vs 24/64 control; both-correct insertion 16/48 vs 28/48 control. Earlier-memory 65/80 primary concealed eight lost individually correct prior answers. Six jobs completed; 2,304 saved records audited; 384 cold replayed answers reproduced failures. No model adopted; Original12 2/12 not rerun.",
+      "boundary": "Completed negative synthetic study; not general learning or safe person/adoption qualification.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research illustration",
+        "caption": "Concept artwork, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Public reviewed report",
+          "url": "reports/newbrain-inverse-render-review-2026-11-21.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain project note",
+          "url": "newbrain.html#newbrain-inverse-render-review-2026-11-21"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-inverse-render-review-2026-11-21"
+    },
     {
       "id": "newbrain-position-diversity-review-2026-11-19",
       "title": "NewBrain position comparison failed its supported fact-gain criterion",

@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-11-19-1.json';
+const filename='knowledge/iris-projects-2026-11-21-1.json';
 const priorNov111=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-11-1.json'),'utf8'));
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
@@ -14,17 +14,29 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-11-19.1'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-11-19.1'));
+assert.ok(irisPage.includes('iris.js?v=2026-11-21.1'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-11-21.1'));
 const iris=require('../docs/iris-projects.js');
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
-assert.equal(data.reviewed_on,'2026-11-19');
-assert.equal(data.content_version,'2026-11-19.1');
+assert.equal(data.reviewed_on,'2026-11-21');
+assert.equal(data.content_version,'2026-11-21.1');
+// New completed negative inverse review; earlier public pack is immutable.
+const priorNov191=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-19-1.json'),'utf8'));
+assert.equal(iris.validate(priorNov191),priorNov191);
+assert.equal(priorNov191.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-position-diversity-review-2026-11-19');
+const inverse=data.projects.find(p=>p.id==='newbrain');
+assert.equal(inverse.source,'newbrain.html#newbrain-inverse-render-review-2026-11-21');
+for(const v of ['22,800','24,848','2,048','4,096','63/64','64/64','36/64','9/64','24/64','14/64','16/48','28/48','65/80','2,304','384','Original12','2/12'])assert.ok(inverse.status.includes(v),'Latest result missing '+v);
+assert.ok(inverse.limits.includes('all ten strict gates'));
+for(const [page,fragment] of [['newbrain.html','newbrain-inverse-render-review-2026-11-21'],['updates.html','newbrain-inverse-render-review-2026-11-21'],['reports/newbrain-inverse-render-review-2026-11-21.html','reviewed-scope'],['reports/newbrain-inverse-render-review-2026-11-21.html','paired-results'],['reports/newbrain-inverse-render-review-2026-11-21.html','qualification'],['reports/newbrain-inverse-render-review-2026-11-21.html','boundaries']])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+fragment+'"'),'Source anchor '+page+'#'+fragment);
+for(const page of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('newbrain-inverse-render-review-2026-11-21'));
+const inverseAnswer=iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain training result?','',[],null);
+assert.ok(inverseAnswer?.answer.includes('14/64')&&inverseAnswer.answer.includes('24/64')&&inverseAnswer.answer.includes('2/12'),'Iris latest failed experiment answer');
 // Nov 19 negative position trial and separate unrun inverse-render preparation.
 const previousPack186=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-18-6.json'),'utf8'));
 assert.equal(iris.validate(previousPack186),previousPack186);
 assert.equal(previousPack186.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-query-context-review-2026-11-18');
-const latestPosition=data.projects.find(p=>p.id==='newbrain');
+const latestPosition=priorNov191.projects.find(p=>p.id==='newbrain');
 assert.equal(latestPosition.source,'newbrain.html#newbrain-position-diversity-review-2026-11-19');
 for(const val of ['20,752','22,800','2,048','26/48','29/48','69/128','78/128','49/64','54/64','368','12,288','384','UNRUN','Original12','2/12'])assert.ok(latestPosition.status.includes(val),'Nov19 evidence missing '+val);
 assert.match(latestPosition.limits,/failed its ≥4-pair gain/);
@@ -38,7 +50,7 @@ const priorNov185=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proj
 assert.equal(iris.validate(priorNov185),priorNov185);
 assert.equal(priorNov185.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-focal-objective-review-2026-11-18');
 const latestQuery=data.projects.find(p=>p.id==='newbrain');
-assert.equal(latestQuery.source,'newbrain.html#newbrain-position-diversity-review-2026-11-19');
+assert.equal(latestQuery.source,'newbrain.html#newbrain-inverse-render-review-2026-11-21');
 for(const z of ['18,704','20,752','2,048','19/32','13/32','14/16','8/16','8/32','29/32','5/16','seven of eight','112','35','147','Original12','2/12'])assert.ok(latestQuery.status.includes(z),'Missing latest query result '+z);
 assert.match(latestQuery.limits,/seven of eight strict families failed/i);
 for(const [f,a] of [['newbrain.html','newbrain-query-context-review-2026-11-18'],['updates.html','newbrain-query-context-review-2026-11-18'],['reports/newbrain-query-context-review-2026-11-18.html','reviewed-scope'],['reports/newbrain-query-context-review-2026-11-18.html','paired-results'],['reports/newbrain-query-context-review-2026-11-18.html','qualification'],['reports/newbrain-query-context-review-2026-11-18.html','source-access']])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('id="'+a+'"'),'Missing Nov18.6 anchor '+f+'#'+a);
@@ -51,7 +63,7 @@ const priorNov184=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proj
 assert.equal(iris.validate(priorNov184),priorNov184,'Keep Nov 18.4 JSON immutable and valid');
 assert.equal(priorNov184.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-fact-order-diagnostic-2026-11-18');
 const latestFocal=data.projects.find(p=>p.id==='newbrain');
-assert.equal(latestFocal.source,'newbrain.html#newbrain-position-diversity-review-2026-11-19');
+assert.equal(latestFocal.source,'newbrain.html#newbrain-inverse-render-review-2026-11-21');
 for(const x of ['2,048','4,096','16,656','18,704','78/128','73/128','54/128','20/32','22/32','9/24','11/24','two of seven','320','619,283','Original12','2/12'])assert.ok(latestFocal.status.includes(x),'Missing latest paired result '+x);
 assert.match(latestFocal.limits,/two of seven/i);
 for(const [file,anchor] of [['newbrain.html','newbrain-focal-objective-review-2026-11-18'],['updates.html','newbrain-focal-objective-review-2026-11-18'],['reports/newbrain-paired-focal-study-2026-11-18.html','reviewed-scope'],['reports/newbrain-paired-focal-study-2026-11-18.html','paired-results'],['reports/newbrain-paired-focal-study-2026-11-18.html','qualification']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Missing focal anchor '+file+'#'+anchor);
@@ -73,7 +85,7 @@ const priorNov182=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proj
 assert.equal(iris.validate(priorNov182),priorNov182);
 assert.equal(priorNov182.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-native-copy-continuation-2026-11-18');
 const rehearsal=data.projects.find(p=>p.id==='newbrain');
-assert.equal(rehearsal.source,'newbrain.html#newbrain-position-diversity-review-2026-11-19');
+assert.equal(rehearsal.source,'newbrain.html#newbrain-inverse-render-review-2026-11-21');
 for(const term of ['2,048','1/16','16/16','26/48','30/48','10/48','11/48','1/32','3/32','5/32','1/24','41/64','45/64','Four of five','Original12','2/12'])assert.ok(rehearsal.status.includes(term),'Latest rehearsal evidence absent: '+term);
 assert.match(rehearsal.limits,/no matched no-replay causal control/);
 for(const [file,anchor] of [['newbrain.html','newbrain-mixed-rehearsal-review-2026-11-18'],['updates.html','newbrain-mixed-rehearsal-review-2026-11-18'],['reports/newbrain-mixed-rehearsal-review-2026-11-18.html','reviewed-scope'],['reports/newbrain-mixed-rehearsal-review-2026-11-18.html','measured-results'],['reports/newbrain-mixed-rehearsal-review-2026-11-18.html','limitations']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Missing November 18.3 anchor '+file+'#'+anchor);
@@ -105,7 +117,7 @@ assert.equal(iris.validate(priorNov171),priorNov171,'Keep the previous November 
 assert.match(priorNov171.projects.find(p=>p.id==='newbrain').limits,/bridge remains unimplemented/);
 assert.equal(iris.validate(priorNov111),priorNov111,'November 11 immutable knowledge remains valid');
 const currentNative=data.projects.find(p=>p.id==='newbrain');
-assert.equal(currentNative.source,'newbrain.html#newbrain-position-diversity-review-2026-11-19');
+assert.equal(currentNative.source,'newbrain.html#newbrain-inverse-render-review-2026-11-21');
 for(const q of ['2,000','18/80','0/16','36/48','Original12','2/12','20 numerical','24 fixed finite-difference','untrained'])assert.ok(currentNative.status.includes(q),'Native status missing '+q);
 assert.ok(fs.readFileSync(path.join(docs,'reports/newbrain-native-context-review-2026-11-17.html'),'utf8').includes('id="bridge-qualification-2026-11-17"'));
 assert.match(currentNative.limits,/no optimizer training/);
@@ -245,7 +257,7 @@ const priorNov44=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(priorNov44),priorNov44,'Preserve previous Nov4.4 reviewed knowledge and original source anchors');
 assert.equal(priorNov44.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v9-pathway-study-2026-11-04');
 assert.equal(priorNov44.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v8-v9-body-v5-2026-11-04');
-for(const [id,src] of [['newbrain','newbrain.html#newbrain-position-diversity-review-2026-11-19'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
+for(const [id,src] of [['newbrain','newbrain.html#newbrain-inverse-render-review-2026-11-21'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
   assert.equal(data.projects.find(p=>p.id===id).source,src,'latest reviewed source for '+id);
   const [page,anchor]=src.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Latest public research anchor missing '+id);
@@ -262,7 +274,7 @@ const priorNov43=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(priorNov43),priorNov43,'Preserve archived Nov4.3 resource and head results');
 assert.equal(priorNov43.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v8v2-admission-2026-11-04');
 assert.equal(priorNov43.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v6-v7-source-review-2026-11-04');
-for(const [id,src] of [['newbrain','newbrain.html#newbrain-position-diversity-review-2026-11-19'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
+for(const [id,src] of [['newbrain','newbrain.html#newbrain-inverse-render-review-2026-11-21'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
   assert.equal(data.projects.find(p=>p.id===id).source,src);
   const [page,fragment]=src.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+fragment+'"'),'Latest public source anchor missing '+id);
@@ -342,7 +354,7 @@ for(const x of ['LATEST NOV01 RETRIEVAL ONLY','800 calls','34/37','23/37','0/37'
 assert.equal(priorNov111.projects.find(p=>p.id==='newbrain').source,'updates.html#kira-world-hardware-and-worldbuilding-2026-11-08');
 for(const [page,anchor] of [['newbrain.html','newbrain-opt-in-context-selection-2026-11-01'],['updates.html','newbrain-historical-context-selection-2026-11-01'],['reports/newbrain-opt-in-historical-context-2026-11-01.html','historical-context-qualification']])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Missing Nov1 anchor '+page);
 // The picture timeline uses a new Nov 6.3 cache key for the two new V68 research milestones.
-assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-08.2'));
+assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-21.1'));
 const priorOct314=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-31-4.json'),'utf8'));
 assert.equal(iris.validate(priorOct314),priorOct314,'Preserve prior Oct31.4 immutable public pack');
 for(const q of ['LATEST OCT31 EXECUTED MEMORY RETRIEVAL','25/30','0/30','24/30','Original12 accepted 2/12'])assert.ok(priorNov111.projects.find(p=>p.id==='newbrain').status.includes(q),'Missing latest retrieval result '+q);
@@ -526,10 +538,10 @@ for(const id of ['newbrain-six-group-rehearsal-2026-11-05','avatar-head-v7-clear
  assert.ok(timelineText.includes('"id": "'+id+'"'),'Current picture timeline missing '+id);
  assert.ok(datedProgress.milestones.some(m=>m.id===id),'Current progress timeline missing '+id);
 }
-assert.ok(timelineText.includes('"prepared_on": "2026-11-19"'),'Current picture timeline review date missing');
+assert.ok(timelineText.includes('"prepared_on": "2026-11-21"'),'Current picture timeline review date missing');
 for(const id of ['newbrain-content-readout-boundary-2026-11-02','avatar-workspace-identity-2026-11-02'])assert.ok(timelineText.includes('"id": "'+id+'"'),'Nov2 picture timeline milestone missing: '+id);
 const timelineData=JSON.parse(timelineText.replace(/^[\s\S]*?window\.KIRA_LABS_TIMELINE\s*=\s*/,'').replace(/;\s*$/,''));
-assert.equal(timelineData.prepared_on,'2026-11-19');
+assert.equal(timelineData.prepared_on,'2026-11-21');
 for(const id of ['newbrain-v3-closed-negative-2026-11-05','avatar-v12-head-v9-body-failed-2026-11-05'])assert.equal(timelineData.milestones.find(m=>m.id===id)?.date,'2026-11-05','Missing Nov5 picture milestone '+id);
 for(const id of ['newbrain-v9-fixed-study-failed-2026-11-04','avatar-v11-rejected-body-v7-2026-11-04'])assert.equal(timelineData.milestones.find(m=>m.id===id)?.date,'2026-11-04','Missing Nov4 picture milestone '+id);
 for(const id of ['newbrain-content-mean-qualification-failed-2026-11-02','newbrain-content-readout-boundary-2026-11-02','avatar-workspace-identity-2026-11-02']){
@@ -540,7 +552,7 @@ assert.match(timelineData.milestones.find(m=>m.id==='avatar-workspace-identity-2
 assert.match(timelineData.milestones.find(m=>m.id==='newbrain-content-mean-qualification-failed-2026-11-02').body,/216 genuine teaching updates/);
 
 const progress=JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8'));
-assert.equal(progress.reviewed_on,'2026-11-19');
+assert.equal(progress.reviewed_on,'2026-11-21');
 for(const milestone of ['avatar-motion-software-2026-10-31','newbrain-native-api-agreement-2026-10-31','newbrain-a108-native-reply-diagnostic-2026-10-31','avatar-source109-connection-2026-10-31'])assert.ok(progress.milestones.some(m=>m.id===milestone),'Missing Oct31 milestone '+milestone);
 assert.ok(progress.milestones.some(m=>m.id==='newbrain-continuing-lesson-a98-persistence-2026-10-30'),'A98 timeline entry missing');
 assert.ok(progress.milestones.some(m=>m.id==='newbrain-word-study-a87-a92-2026-10-30'),'A87/A92 dated milestone missing');
