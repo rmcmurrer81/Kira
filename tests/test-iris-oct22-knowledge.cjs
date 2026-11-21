@@ -141,8 +141,8 @@ assert.equal(currentNative.source,'newbrain.html#newbrain-ranked-copy-review-202
 for(const q of ['2,000','18/80','0/16','36/48','Original12','2/12','20 numerical','24 fixed finite-difference','untrained'])assert.ok(currentNative.status.includes(q),'Native status missing '+q);
 assert.ok(fs.readFileSync(path.join(docs,'reports/newbrain-native-context-review-2026-11-17.html'),'utf8').includes('id="bridge-qualification-2026-11-17"'));
 assert.match(currentNative.limits,/no optimizer training/);
-assert.match(currentNative.evidence,/34\/34 rerun/);
-assert.match(currentNative.technical,/fresh-process cold restor/i);
+assert.match(priorNov212.projects.find(p=>p.id==='newbrain').evidence,/34\/34 rerun/);
+assert.match(priorNov212.projects.find(p=>p.id==='newbrain').technical,/fresh-process cold restor/i);
 for(const [file,anchor] of [['newbrain.html','newbrain-native-context-continuation-2026-11-17'],['updates.html','newbrain-native-context-review-2026-11-17'],['reports/newbrain-native-context-review-2026-11-17.html','reviewed-scope']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Missing new public anchor '+file+'#'+anchor);
 assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(m=>m.id==='newbrain-native-context-review-2026-11-17'));
 assert.ok(fs.readFileSync(path.join(docs,'labs-data.js'),'utf8').includes('"id": "newbrain-native-context-review-2026-11-17"'));
