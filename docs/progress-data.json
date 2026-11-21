@@ -1,8 +1,38 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-21",
-  "default_id": "newbrain-ranked-copy-review-2026-11-21",
+  "default_id": "newbrain-factorized-qualification-2026-11-21",
   "milestones": [
+    {
+      "id": "newbrain-factorized-qualification-2026-11-21",
+      "title": "Factorized selector calibration failed",
+      "date": "2026-11-21",
+      "date_basis": "Completed local 256-update isolated selector training and consumed calibration",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Exact supported answers 2/224→39/224 but correct unsupported responses fell 158/160→98/160; not accepted.",
+      "body": [
+        "An isolated 49,761-parameter selector head completed 256 local FP32 CUDA optimizer updates per matched arm on frozen synthetic fitting examples, without retraining NewBrain's native model. On 224 already-consumed supported calibration questions, exact sourced answers rose from 2/224 (joint control) to 39/224 (factorized treatment). But correct abstentions on 160 unsupported questions fell from 158/160 to 98/160, and wrong supported copies rose from 10/224 to 89/224. Both arms ranked the approved source first on both sides of only 4/64 fact swaps. None of 36 treatment margins passed all unsupported floors. No adoption; accepted Original12 remains 2/12, not rerun.",
+        "Subsequent typed objective checks covered only source, fitting and fabricated CUDA gradients; no model training result."
+      ],
+      "boundary": "No adopted checkpoint or qualified retention. Original12 2/12 not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-factorized-selector-review-2026-11-21.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain research note",
+          "url": "newbrain.html#newbrain-factorized-qualification-2026-11-21"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-factorized-qualification-2026-11-21"
+    },
     {
       "id": "newbrain-ranked-copy-review-2026-11-21",
       "title": "NewBrain ranked binding failed; lexical transfer remained weak",

@@ -25,6 +25,35 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-factorized-qualification-2026-11-21",
+      "title": "NewBrain isolated selector failed its unsupported and source gates",
+      "project": "NewBrain",
+      "track": "Learning · selector-head calibration and typed preflight",
+      "date": "2026-11-21",
+      "reviewed_on": "2026-11-21",
+      "status": "development",
+      "date_basis": "Completed November 21 local-GPU isolated-head fit and consumed calibration",
+      "summary": "39/224 exact sourced treatment copies versus 2/224 control, but unsupported abstentions regressed 158/160 to 98/160.",
+      "body": "An isolated 49,761-parameter selector head completed 256 local FP32 CUDA optimizer updates per matched arm on frozen synthetic fitting examples, without retraining NewBrain's native model. On 224 already-consumed supported calibration questions, exact sourced answers rose from 2/224 (joint control) to 39/224 (factorized treatment). But correct abstentions on 160 unsupported questions fell from 158/160 to 98/160, and wrong supported copies rose from 10/224 to 89/224. Both arms ranked the approved source first on both sides of only 4/64 fact swaps. None of 36 treatment margins passed all unsupported floors. No adoption; accepted Original12 remains 2/12, not rerun.",
+      "boundary": "No accepted model, blind held-out qualification or new typed-loss training; Original12 2/12 not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed public report",
+          "url": "reports/newbrain-factorized-selector-review-2026-11-21.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain dated note",
+          "url": "newbrain.html#newbrain-factorized-qualification-2026-11-21"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-factorized-qualification-2026-11-21"
+    },
+    {
       "id": "newbrain-ranked-copy-review-2026-11-21",
       "title": "Ranked binding and familiar-label transfer failed",
       "project": "NewBrain",
