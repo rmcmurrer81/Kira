@@ -96,7 +96,7 @@ assert.ok(focalReply&&focalReply.answer.includes('19/32')&&focalReply.answer.inc
 const priorNov183=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-18-3.json'),'utf8'));
 assert.equal(iris.validate(priorNov183),priorNov183);
 assert.equal(priorNov183.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-mixed-rehearsal-review-2026-11-18');
-for(const z of ['2,048','14,608','16,656','32/48','22/48','15/48','21/48','39/128','30/32','147','112','35','2,415','96','Original12','2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(z),'Missing new result '+z);
+for(const z of ['2,048','14,608','16,656','32/48','22/48','15/48','21/48','39/128','30/32','147','112','35','2,415','96','Original12','2/12'])assert.ok(priorNov212.projects.find(p=>p.id==='newbrain').status.includes(z),'Prior Nov18 fact-order evidence preserved '+z);
 for(const [p,a] of [['newbrain.html','newbrain-fact-order-diagnostic-2026-11-18'],['updates.html','newbrain-fact-order-diagnostic-2026-11-18'],['reports/newbrain-fact-order-provenance-review-2026-11-18.html','reviewed-scope'],['reports/newbrain-fact-order-provenance-review-2026-11-18.html','read-only'],['reports/newbrain-fact-order-provenance-review-2026-11-18.html','provenance']])assert.ok(fs.readFileSync(path.join(docs,p),'utf8').includes('id="'+a+'"'),'Missing Nov18.4 anchor '+p+'#'+a);
 assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(x=>x.id==='newbrain-fact-order-diagnostic-2026-11-18'));
 assert.ok(fs.readFileSync(path.join(docs,'labs-data.js'),'utf8').includes('"id": "newbrain-fact-order-diagnostic-2026-11-18"'));
@@ -126,7 +126,7 @@ assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the lat
 // Nov 18: failed Native copying studies; preserve all prior immutable packs and baseline checks.
 const priorNov172=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-17-2.json'),'utf8'));
 assert.equal(iris.validate(priorNov172),priorNov172);
-for(const x of ['640','960','0/96','0/64','0/32','9/16','4/16','10/96','2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(x),'Nov18 status missing '+x);
+for(const x of ['640','960','0/96','0/64','0/32','9/16','4/16','10/96','2/12'])assert.ok(priorNov212.projects.find(p=>p.id==='newbrain').status.includes(x),'Prior Nov18 copy evidence preserved '+x);
 for(const [f,a] of [['newbrain.html','newbrain-native-copy-study-2026-11-18'],['updates.html','newbrain-native-copy-study-2026-11-18'],['reports/newbrain-context-copy-study-2026-11-18.html','reviewed-scope'],['reports/newbrain-context-copy-study-2026-11-18.html','paired-curriculum-study']])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('id="'+a+'"'),'Nov18 missing anchor '+f+'#'+a);
 assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(m=>m.id==='newbrain-native-copy-study-2026-11-18'));
 assert.ok(fs.readFileSync(path.join(docs,'labs-data.js'),'utf8').includes('"id": "newbrain-native-copy-study-2026-11-18"'));
