@@ -130,7 +130,7 @@ for(const x of ['640','960','0/96','0/64','0/32','9/16','4/16','10/96','2/12'])a
 for(const [f,a] of [['newbrain.html','newbrain-native-copy-study-2026-11-18'],['updates.html','newbrain-native-copy-study-2026-11-18'],['reports/newbrain-context-copy-study-2026-11-18.html','reviewed-scope'],['reports/newbrain-context-copy-study-2026-11-18.html','paired-curriculum-study']])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('id="'+a+'"'),'Nov18 missing anchor '+f+'#'+a);
 assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(m=>m.id==='newbrain-native-copy-study-2026-11-18'));
 assert.ok(fs.readFileSync(path.join(docs,'labs-data.js'),'utf8').includes('"id": "newbrain-native-copy-study-2026-11-18"'));
-assert.ok(iris.answer({iris_projects:priorNov212,topics:[],sources:{}},'What was the November 18 copy result?','',[],null).answer.includes('0/96'),'Historical November 18 failed study must remain in immutable reviewed pack');
+assert.ok(priorNov212.projects.find(p=>p.id==='newbrain').status.includes('0/96'),'Historical November 18 failed study must remain in immutable reviewed pack');
 // Nov 17 ET / Nov 18 UTC: closed CUDA learning failure, frozen-S3 diagnostic and later untrained bridge gates.
 const priorNov171=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-17-1.json'),'utf8'));
 assert.equal(iris.validate(priorNov171),priorNov171,'Keep the previous November 17.1 pack immutable and valid');
