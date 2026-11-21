@@ -25,6 +25,35 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-ranked-copy-review-2026-11-21",
+      "title": "Ranked binding and familiar-label transfer failed",
+      "project": "NewBrain",
+      "track": "Learning · fact binding / source-copy preflight",
+      "date": "2026-11-21",
+      "reviewed_on": "2026-11-21",
+      "status": "development",
+      "date_basis": "Completed November 21 matched local GPU and read-only follow-up",
+      "summary": "All three checkpoints scored 0/128 complete ownership swaps; later lexical transfer scored 0/192 complete swaps each.",
+      "body": "Two matched local GPU arms each completed 512 updates from step 22,800 to 23,312. The preserved baseline, standard control and ranking arm all scored 0/128 both-correct fact swaps; absent-fact answers were 21/32, 32/32 and 28/32, and earlier correct answers 65/80, 49/80 and 52/80. A separate zero-update lexical test yielded supported exact answers 4/384, 1/384 and 1/384, with complete two-sided swaps 0/192 for all. Unchanged-decoder observer equivalence passed 3/3 GPU development prompts and later CPU literal span framing emitted 627/627 candidates; no selector was trained or adopted. Original12 remains 2/12, not rerun.",
+      "boundary": "Measured failed synthetic model tests are distinct from untrained source-copy checks.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-ranked-copy-review-2026-11-21.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain dated note",
+          "url": "newbrain.html#newbrain-ranked-copy-review-2026-11-21"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-ranked-copy-review-2026-11-21"
+    },
+    {
       "id": "newbrain-binding-diagnostics-2026-11-21",
       "title": "NewBrain reverse-ownership diagnostic remained weak",
       "project": "NewBrain",
