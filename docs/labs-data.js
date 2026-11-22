@@ -25,6 +25,35 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-typed-rank-review-2026-11-21",
+      "title": "NewBrain typed successor and rank/rejection tests failed qualification",
+      "project": "NewBrain",
+      "track": "Learning · two synthetic selector checks",
+      "date": "2026-11-21",
+      "reviewed_on": "2026-11-21",
+      "status": "development",
+      "date_basis": "Fixed 384-case successor and separate 720-case zero-update diagnosis",
+      "summary": "Grounded supported 3/224 vs 1/224, then 11/624 vs 4/624; no adoption.",
+      "body": "A fixed 384-case synthetic successor gate failed with exact supported 3/224 joint versus 1/224 typed, unsupported correct 155/160 versus 158/160, complete swapped ownership 0/64 both. A separate frozen 720-case zero-training diagnostic scored exact grounded supported 11/624 versus 4/624, unsupported correct 90/96 versus 92/96, complete swaps 0/288 both. Later approved-source objective passed only fabricated source and CPU-gradient tests; no real training. Original12 2/12 not rerun.",
+      "boundary": "No accepted model, no new qualified general learning, no Original12 rerun; separate synthetic tests are not blind human validation.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed public report",
+          "url": "reports/newbrain-typed-rank-review-2026-11-21.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain dated notes",
+          "url": "newbrain.html#newbrain-typed-rank-review-2026-11-21"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-factorized-qualification-2026-11-21"
+    },
+    {
       "id": "newbrain-factorized-qualification-2026-11-21",
       "title": "NewBrain isolated selector failed its unsupported and source gates",
       "project": "NewBrain",
