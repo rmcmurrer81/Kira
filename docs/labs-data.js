@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-21",
+  "prepared_on": "2026-11-22",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,35 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-matched-selector-review-2026-11-22",
+      "title": "Matched selector replay failed qualification",
+      "project": "NewBrain",
+      "track": "Learning · isolated selector-head experiment",
+      "date": "2026-11-22",
+      "reviewed_on": "2026-11-22",
+      "status": "development",
+      "date_basis": "Three local 256-update fits and nine cold replay jobs",
+      "summary": "Grounded forward typed 4/112 to approved 19/112, but correct unsupported top 128/160 to approved 109/160.",
+      "body": "Three small local selector-head arms each completed 256 CUDA updates. Nine replay jobs made 3,456 selector forwards with exact fresh-process repetition. Held-out grounded forward typed/top/approved 4/112,12/112,19/112; reverse 2/112,15/112,16/112. Correct unsupported abstentions top 128/160 vs approved 109/160, plus 32 newly wrong sourced replies. Strict gates failed, no adoption; Native model unchanged and accepted Original12 remains 2/12 not rerun. Later rank audit refused without new rates.",
+      "boundary": "Synthetic research, no qualified general learning, Native retraining or production adoption.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-matched-selector-review-2026-11-22.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain note",
+          "url": "newbrain.html#newbrain-matched-selector-review-2026-11-22"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-matched-selector-review-2026-11-22"
+    },
     {
       "id": "newbrain-typed-rank-review-2026-11-21",
       "title": "NewBrain typed successor and rank/rejection tests failed qualification",

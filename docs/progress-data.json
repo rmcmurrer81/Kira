@@ -1,8 +1,38 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-21",
-  "default_id": "newbrain-typed-rank-review-2026-11-21",
+  "reviewed_on": "2026-11-22",
+  "default_id": "newbrain-matched-selector-review-2026-11-22",
   "milestones": [
+    {
+      "id": "newbrain-matched-selector-review-2026-11-22",
+      "title": "Selector-head replays failed safeguards",
+      "date": "2026-11-22",
+      "date_basis": "Matched local 256-update CUDA fits and exact cold synthetic replay",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Grounded forward 4/112 typed vs 19/112 approved; unsupported correct 109/160 approved; no adoption.",
+      "body": [
+        "Three matched selector-only heads completed 256 updates each; nine exact-repeat synthetic replay jobs made 3,456 forwards, without Native retraining.",
+        "Grounded forward typed/top/approved 4/112,12/112,19/112; reverse 2/112,15/112,16/112. Correct unsupported top 128/160 vs approved 109/160; 32 new wrong sourced replies. Gates failed, Original12 2/12 not rerun. Later offline rank audit refused."
+      ],
+      "boundary": "No accepted selector or qualified general language learning.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-matched-selector-review-2026-11-22.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain note",
+          "url": "newbrain.html#newbrain-matched-selector-review-2026-11-22"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-matched-selector-review-2026-11-22"
+    },
     {
       "id": "newbrain-typed-rank-review-2026-11-21",
       "title": "Typed selector and ranking checks failed",
