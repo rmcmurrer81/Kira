@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-11-22-4.json';
+const filename='knowledge/iris-projects-2026-11-22-5.json';
 const priorNov111=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-11-1.json'),'utf8'));
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
@@ -14,14 +14,14 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-11-22.4'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-11-22.4'));
+assert.ok(irisPage.includes('iris.js?v=2026-11-22.5'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-11-22.5'));
 const iris=require('../docs/iris-projects.js');
 // November 22 Native generated-answer and observer-only rank diagnostic; preserve earlier pack.
 const prevNov223=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-22-3.json'),'utf8'));
 assert.equal(iris.validate(prevNov223),prevNov223);
 assert.equal(prevNov223.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-competitive-selector-review-2026-11-22');
-assert.equal(data.content_version,'2026-11-22.4');
+assert.equal(data.content_version,'2026-11-22.5');
 const nativeNov224=data.projects.find(p=>p.id==='newbrain');
 assert.equal(nativeNov224.source,'newbrain.html#newbrain-native-answer-emission-review-2026-11-22');
 for(const n of ['0/144','43/48','23/48','123/128','62/64','61/64','0/128','46/48','38/48','48/48','36/48','2/12'])assert.ok(nativeNov224.status.includes(n),'Missing latest Native metric '+n);
@@ -29,6 +29,8 @@ for(const [file,id] of [['newbrain.html','newbrain-native-answer-emission-review
 for(const file of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('"id": "newbrain-native-answer-emission-review-2026-11-22"'));
 const nativeNov224Answer=iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain result?','',[],null);
 assert.ok(nativeNov224Answer?.answer.includes('0/144')&&nativeNov224Answer.answer.includes('123/128')&&nativeNov224Answer.answer.includes('2/12'));
+const prevNov224=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-22-4.json'),'utf8'));
+assert.equal(iris.validate(prevNov224),prevNov224,'Preserve previous immutable Nov22.4 pack');
 // Existing historical tests follow.
 // Independent competitive trial and retained immutable previous pack.
 const prevNov222=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-22-2.json'),'utf8'));
@@ -85,7 +87,7 @@ assert.ok(selectorAnswer?.answer.includes('39/224')&&selectorAnswer.answer.inclu
 
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-11-22');
-assert.equal(data.content_version,'2026-11-22.4');
+assert.equal(data.content_version,'2026-11-22.5');
 // New November 21 ranked trial, lexical diagnostic and source-copy preflight.
 const priorNov212=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-21-2.json'),'utf8'));
 assert.equal(iris.validate(priorNov212),priorNov212,'Preserve previous immutable Nov21.2 pack');
