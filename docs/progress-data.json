@@ -1,8 +1,38 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-21",
-  "default_id": "newbrain-factorized-qualification-2026-11-21",
+  "default_id": "newbrain-typed-rank-review-2026-11-21",
   "milestones": [
+    {
+      "id": "newbrain-typed-rank-review-2026-11-21",
+      "title": "Typed selector and ranking checks failed",
+      "date": "2026-11-21",
+      "date_basis": "Fixed successor synthetic gate and no-update 720-case diagnosis",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Grounded supported 3/224 vs 1/224, then 11/624 vs 4/624; no adoption.",
+      "body": [
+        "384-case fixed successor: exact grounded supported 3/224 joint versus 1/224 typed and correct unsupported 155/160 versus 158/160; swaps 0/64 both.",
+        "Separate 720-case no-update diagnosis: supported 11/624 versus 4/624, correct unsupported 90/96 versus 92/96, complete swaps 0/288 both. Approved-source loss checks are fabricated only. Original12 remains 2/12, not rerun."
+      ],
+      "boundary": "No selector accepted; synthetic experiments, no new general language evidence or Original12 qualification.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-typed-rank-review-2026-11-21.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain dated note",
+          "url": "newbrain.html#newbrain-typed-rank-review-2026-11-21"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-factorized-qualification-2026-11-21"
+    },
     {
       "id": "newbrain-factorized-qualification-2026-11-21",
       "title": "Factorized selector calibration failed",
