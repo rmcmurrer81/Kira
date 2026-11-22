@@ -85,7 +85,7 @@ assert.ok(selectorAnswer?.answer.includes('39/224')&&selectorAnswer.answer.inclu
 
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-11-22');
-assert.equal(data.content_version,'2026-11-22.3');
+assert.equal(data.content_version,'2026-11-22.4');
 // New November 21 ranked trial, lexical diagnostic and source-copy preflight.
 const priorNov212=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-21-2.json'),'utf8'));
 assert.equal(iris.validate(priorNov212),priorNov212,'Preserve previous immutable Nov21.2 pack');
@@ -440,7 +440,7 @@ for(const x of ['LATEST NOV01 RETRIEVAL ONLY','800 calls','34/37','23/37','0/37'
 assert.equal(priorNov111.projects.find(p=>p.id==='newbrain').source,'updates.html#kira-world-hardware-and-worldbuilding-2026-11-08');
 for(const [page,anchor] of [['newbrain.html','newbrain-opt-in-context-selection-2026-11-01'],['updates.html','newbrain-historical-context-selection-2026-11-01'],['reports/newbrain-opt-in-historical-context-2026-11-01.html','historical-context-qualification']])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Missing Nov1 anchor '+page);
 // The picture timeline uses a new Nov 6.3 cache key for the two new V68 research milestones.
-assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-22.3'));
+assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-22.4'));
 const priorOct314=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-31-4.json'),'utf8'));
 assert.equal(iris.validate(priorOct314),priorOct314,'Preserve prior Oct31.4 immutable public pack');
 for(const q of ['LATEST OCT31 EXECUTED MEMORY RETRIEVAL','25/30','0/30','24/30','Original12 accepted 2/12'])assert.ok(priorNov111.projects.find(p=>p.id==='newbrain').status.includes(q),'Missing latest retrieval result '+q);
