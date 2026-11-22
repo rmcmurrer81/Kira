@@ -1,8 +1,38 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-22",
-  "default_id": "newbrain-competitive-selector-review-2026-11-22",
+  "default_id": "newbrain-native-answer-emission-review-2026-11-22",
   "milestones": [
+    {
+      "id": "newbrain-native-answer-emission-review-2026-11-22",
+      "title": "Native answered 0/144 supported prompts",
+      "date": "2026-11-22",
+      "date_basis": "Frozen complete answer and first-token diagnostics",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Observer ranked 123/128 correct rows, but Native first valid supported tokens were 0/128 and full supported answers 0/144.",
+      "body": [
+        "Unchanged Native generated 0/144 supported exact synthetic answers, and 43/48 forward, 23/48 reverse correct unsupported abstentions.",
+        "Separate restricted observer first-ranked correct row 123/128, but Native began 0/128 valid supported answers. Matched token splits ranked 46/48 vs 38/48 forward, 48/48 vs 36/48 reverse; this did not test generation. No training; Original12 2/12 not rerun."
+      ],
+      "boundary": "Restricted synthetic observer ranks do not qualify Native learning or generation.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept image, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-native-answer-emission-review-2026-11-22.html#first-decision"
+        },
+        {
+          "label": "NewBrain dated note",
+          "url": "newbrain.html#newbrain-native-answer-emission-review-2026-11-22"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-answer-emission-review-2026-11-22"
+    },
     {
       "id": "newbrain-competitive-selector-review-2026-11-22",
       "title": "Competitive selector failed its qualification",

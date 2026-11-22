@@ -25,6 +25,35 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-answer-emission-review-2026-11-22",
+      "title": "Correct source-row rank failed to produce Native answers",
+      "project": "NewBrain",
+      "track": "Learning · read-only Native answer generation",
+      "date": "2026-11-22",
+      "reviewed_on": "2026-11-22",
+      "status": "development",
+      "date_basis": "Frozen exact complete-output GPU test and independent first-token/ranking observations",
+      "summary": "Native correct supported 0/144, observer-ranked right row 123/128, decoder valid supported answer start 0/128.",
+      "body": "Three distinct assistant-authored synthetic studies: unchanged Native full generation 0/144 supported; exact unsupported abstentions 43/48 and 23/48; observer source-position rank 123/128 but 0/128 valid Native supported first tokens; controlled token-split row ranks 46/48 vs 38/48 forward and 48/48 vs 36/48 reverse. No Native optimizer updates or promotion. Evidence-copy training prepared only. Accepted Original12 2/12, not rerun.",
+      "boundary": "Restricted row ranking is not independent model retrieval, generated answers or learning.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept image, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed public report",
+          "url": "reports/newbrain-native-answer-emission-review-2026-11-22.html#native-generated"
+        },
+        {
+          "label": "NewBrain dated record",
+          "url": "newbrain.html#newbrain-native-answer-emission-review-2026-11-22"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-answer-emission-review-2026-11-22"
+    },
+    {
       "id": "newbrain-competitive-selector-review-2026-11-22",
       "title": "Competitive abstention failed frozen selection gate",
       "project": "NewBrain",
