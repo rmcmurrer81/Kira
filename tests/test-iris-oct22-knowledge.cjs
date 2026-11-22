@@ -22,13 +22,13 @@ const prevNov223=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(prevNov223),prevNov223);
 assert.equal(prevNov223.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-competitive-selector-review-2026-11-22');
 assert.equal(data.content_version,'2026-11-22.4');
-const currentNative=data.projects.find(p=>p.id==='newbrain');
-assert.equal(currentNative.source,'newbrain.html#newbrain-native-answer-emission-review-2026-11-22');
-for(const n of ['0/144','43/48','23/48','123/128','62/64','61/64','0/128','46/48','38/48','48/48','36/48','2/12'])assert.ok(currentNative.status.includes(n),'Missing latest Native metric '+n);
+const nativeNov224=data.projects.find(p=>p.id==='newbrain');
+assert.equal(nativeNov224.source,'newbrain.html#newbrain-native-answer-emission-review-2026-11-22');
+for(const n of ['0/144','43/48','23/48','123/128','62/64','61/64','0/128','46/48','38/48','48/48','36/48','2/12'])assert.ok(nativeNov224.status.includes(n),'Missing latest Native metric '+n);
 for(const [file,id] of [['newbrain.html','newbrain-native-answer-emission-review-2026-11-22'],['updates.html','newbrain-native-answer-emission-review-2026-11-22'],['reports/newbrain-native-answer-emission-review-2026-11-22.html','native-generated'],['reports/newbrain-native-answer-emission-review-2026-11-22.html','first-decision'],['reports/newbrain-native-answer-emission-review-2026-11-22.html','segmentation'],['reports/newbrain-native-answer-emission-review-2026-11-22.html','prospective'],['reports/newbrain-native-answer-emission-review-2026-11-22.html','qualification']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+id+'"'),'Missing current Native anchor '+file+'#'+id);
 for(const file of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('"id": "newbrain-native-answer-emission-review-2026-11-22"'));
-const currentNativeAnswer=iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain result?','',[],null);
-assert.ok(currentNativeAnswer?.answer.includes('0/144')&&currentNativeAnswer.answer.includes('123/128')&&currentNativeAnswer.answer.includes('2/12'));
+const nativeNov224Answer=iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain result?','',[],null);
+assert.ok(nativeNov224Answer?.answer.includes('0/144')&&nativeNov224Answer.answer.includes('123/128')&&nativeNov224Answer.answer.includes('2/12'));
 // Existing historical tests follow.
 // Independent competitive trial and retained immutable previous pack.
 const prevNov222=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-22-2.json'),'utf8'));
