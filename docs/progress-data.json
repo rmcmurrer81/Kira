@@ -1,8 +1,38 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-22",
-  "default_id": "newbrain-matched-selector-review-2026-11-22",
+  "default_id": "newbrain-statement-selector-review-2026-11-22",
   "milestones": [
+    {
+      "id": "newbrain-statement-selector-review-2026-11-22",
+      "title": "Statement-end selector failed static gate",
+      "date": "2026-11-22",
+      "date_basis": "Matched local selector-only fits and independent held replay",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Supported 3/224 control versus 0/224 statement-end; unsupported correct 151/160 versus 153/160, no adoption.",
+      "body": [
+        "Two matched local RTX 5060 Ti selector heads trained 256 FP32 CUDA updates each from a common step-512 state, without Native retraining.",
+        "Frozen 384-case supported grounded 3/224 control versus 0/224 statement-end; correct unsupported refusals 151/160 versus 153/160. Forward rank 38/112 to 9/112, reverse 21/112 to 25/112; six held replays reproduced 2,304 forwards. Gate failed, Original12 2/12 not rerun."
+      ],
+      "boundary": "Synthetic only; no accepted selector or qualified new learning.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-statement-selector-review-2026-11-22.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain note",
+          "url": "newbrain.html#newbrain-statement-selector-review-2026-11-22"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-statement-selector-review-2026-11-22"
+    },
     {
       "id": "newbrain-matched-selector-review-2026-11-22",
       "title": "Selector-head replays failed safeguards",

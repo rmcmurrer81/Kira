@@ -25,6 +25,35 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-statement-selector-review-2026-11-22",
+      "title": "Statement-end selector failed its frozen gate",
+      "project": "NewBrain",
+      "track": "Learning · later separate matched selector-only trial",
+      "date": "2026-11-22",
+      "reviewed_on": "2026-11-22",
+      "status": "development",
+      "date_basis": "Two matched local 256-update fits and six independent held replays",
+      "summary": "Grounded supported 3/224 control versus 0/224 treatment; unsupported correct 151/160 versus 153/160, no adoption.",
+      "body": "Two local RTX 5060 Ti selector-only heads trained 256 FP32 CUDA updates each from identical step-512 states; Native unchanged. Frozen 384-case synthetic grounded supported control 3/224 versus statement-end 0/224, correct unsupported abstentions 151/160 versus 153/160, forward rank 38/112 versus 9/112 and reverse rank 21/112 versus 25/112. Exact changed, reordered, wording-only and distractor-removal pairs all failed. Six held replays repeated 2,304 forwards with zero updates. Frozen gate failed; no adoption; Original12 2/12 not rerun.",
+      "boundary": "Assistant-authored synthetic evidence only; no qualified learning, retention, Native retraining or checkpoint promotion.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-statement-selector-review-2026-11-22.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain note",
+          "url": "newbrain.html#newbrain-statement-selector-review-2026-11-22"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-statement-selector-review-2026-11-22"
+    },
+    {
       "id": "newbrain-matched-selector-review-2026-11-22",
       "title": "Matched selector replay failed qualification",
       "project": "NewBrain",
