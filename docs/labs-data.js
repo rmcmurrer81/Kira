@@ -25,6 +25,35 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-competitive-selector-review-2026-11-22",
+      "title": "Competitive abstention failed frozen selection gate",
+      "project": "NewBrain",
+      "track": "Learning · matched selector-only trial",
+      "date": "2026-11-22",
+      "reviewed_on": "2026-11-22",
+      "status": "development",
+      "date_basis": "Two matched 256-update local GPU fits with independent cold replays",
+      "summary": "Supported control 40/224 vs competitive 33/224; unsupported correct 60/160 vs 61/160. No adoption.",
+      "body": "Parent/control/treatment synthetic exact supported 49/224,40/224,33/224 and correct unsupported 36/160,60/160,61/160; both-correct fact swaps 0/64,3/64,1/64; complete supported two-turn 0/32 each. Two matched 256-update CUDA selector-only fits, independent repeated evaluations, unchanged Native old-memory retention 65/80 correct. Failed frozen gate, Native not retrained, accepted Original12 2/12 not rerun.",
+      "boundary": "Assistant-authored synthetic cases; no accepted new learning, production routing or general-language claim.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept image, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-competitive-selector-review-2026-11-22.html#reviewed-scope"
+        },
+        {
+          "label": "NewBrain note",
+          "url": "newbrain.html#newbrain-competitive-selector-review-2026-11-22"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-competitive-selector-review-2026-11-22"
+    },
+    {
       "id": "newbrain-statement-selector-review-2026-11-22",
       "title": "Statement-end selector failed its frozen gate",
       "project": "NewBrain",
