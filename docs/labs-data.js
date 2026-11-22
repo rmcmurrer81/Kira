@@ -25,6 +25,35 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-lexical-role-review-2026-11-22",
+      "title": "Native familiar vocabulary did not generalize to new answer terms",
+      "project": "NewBrain",
+      "track": "Learning · frozen Native lexical diagnostics",
+      "date": "2026-11-22",
+      "reviewed_on": "2026-11-22",
+      "status": "development",
+      "date_basis": "256 context and 512 lexical-role completed read-only GPU cases",
+      "summary": "Current exact 0/256 and 0/512; historical familiar forward 45/48, fresh-answer supported 0/192.",
+      "body": "Two distinct read-only studies: context familiar aligned/swapped 15/16 historically but fresh supported 0/96; lexical-role familiar/familiar forward 45/48 historically but fresh-answer supported and restricted rank 0/192. Current exact answer contract 0/256 and 0/512. Later lexical curriculum is unrun. Zero training, no adoption, Original12 2/12 not rerun.",
+      "boundary": "Historical trailing newline is not present-contract success; forced ranking does not equal generation.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept image, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-native-lexical-role-review-2026-11-22.html#lexical-roles"
+        },
+        {
+          "label": "NewBrain dated record",
+          "url": "newbrain.html#newbrain-native-lexical-role-review-2026-11-22"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-lexical-role-review-2026-11-22"
+    },
+    {
       "id": "newbrain-native-answer-emission-review-2026-11-22",
       "title": "Correct source-row rank failed to produce Native answers",
       "project": "NewBrain",
