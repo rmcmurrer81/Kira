@@ -1,8 +1,43 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-23",
-  "default_id": "newbrain-optional-year-reader-review-2026-11-23",
+  "default_id": "newbrain-absence-relationship-review-2026-11-23",
   "milestones": [
+    {
+      "id": "newbrain-absence-relationship-review-2026-11-23",
+      "title": "NewBrain field/absence trial rejected after retention losses",
+      "date": "2026-11-23",
+      "date_basis": "November 23 source-committed matched CUDA trial and separate read-only diagnosis",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Replay field-plus-absence scored 144/384 supported and 266/384 correct abstentions, but lost 327 previously correct retention replies.",
+      "body": [
+        "Four isolated residuals completed 64 GPU updates each; no derived checkpoint adopted.",
+        "Separate supplied-relationship diagnostic recovered 136/198 wrong copies with zero new forwards or training; a 7/7 CPU and 7/7 GPU fixture had no project-model updates.",
+        "Accepted Original12 remains 2/12, not rerun."
+      ],
+      "boundary": "Synthetic results only; supplied relationship labels are not learned model predictions; private artifacts remain withheld.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept image, not measured model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed matched comparison",
+          "url": "reports/newbrain-absence-relationship-review-2026-11-23.html#trial"
+        },
+        {
+          "label": "Read-only relationship diagnosis",
+          "url": "reports/newbrain-absence-relationship-review-2026-11-23.html#diagnosis"
+        },
+        {
+          "label": "Dated project summary",
+          "url": "newbrain.html#newbrain-absence-relationship-review-2026-11-23"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-absence-relationship-review-2026-11-23"
+    },
     {
       "id": "newbrain-optional-year-reader-review-2026-11-23",
       "title": "Optional-year readers failed to identify the requested field",
