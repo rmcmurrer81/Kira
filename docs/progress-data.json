@@ -4,6 +4,36 @@
   "default_id": "newbrain-native-lexical-role-review-2026-11-22",
   "milestones": [
     {
+      "id": "newbrain-joint-query-transfer-review-2026-11-22",
+      "title": "Query-switch training failed fresh wording and name transfer",
+      "date": "2026-11-22",
+      "date_basis": "Verified stored matched training and frozen transfer summaries",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Seen rank 71/128 paired vs 6/128 plain; two-axis fresh answers 3/384 paired vs 2/384 plain.",
+      "body": [
+        "Two matched reader heads completed 192 GPU updates each; no adopted model.",
+        "Separate zero-update fresh transfer exposed a generalization failure. Original12 remains 2/12, not rerun."
+      ],
+      "boundary": "Synthetic study; engineering fixture not run by model.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept illustration, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed research",
+          "url": "reports/newbrain-query-transfer-review-2026-11-22.html#transfer"
+        },
+        {
+          "label": "Dated update",
+          "url": "newbrain.html#newbrain-joint-query-transfer-review-2026-11-22"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-joint-query-transfer-review-2026-11-22"
+    },
+    {
       "id": "newbrain-native-lexical-role-review-2026-11-22",
       "title": "Frozen Native vocabulary test remained unqualified",
       "date": "2026-11-22",
