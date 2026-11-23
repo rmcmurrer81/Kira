@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-22",
+  "prepared_on": "2026-11-23",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,37 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-optional-year-reader-review-2026-11-23",
+      "title": "Optional-year readers failed to identify the requested field",
+      "date": "2026-11-23",
+      "date_basis": "Source-committed November 23 saved reader and structural fixture summaries",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Year present and replaced: 0/64 each reader; supplied-intent source fixture 512/512, not learned field prediction.",
+      "body": [
+        "512-case read-only holdout on two saved readers, zero optimizer updates; both incorrectly treated all 64 present-year questions as person requests.",
+        "Separate exact supplied-intent fixture passed 512/512 without model forwards or training. Earlier 192-update relationship cue trial improved supported 96/384 to 144/384 but regressed correct abstentions 288/384 to 256/384; failed qualification.",
+        "No model adoption or new Original12 test. Accepted Original12 remains 2/12."
+      ],
+      "boundary": "Synthetic assistant-authored questions; structural fixture receives correct intent; private model and evidence withheld.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept illustration; not an experimental visualization"
+      },
+      "sources": [
+        {
+          "label": "Reviewed November 23 report",
+          "url": "reports/newbrain-optional-year-reader-review-2026-11-23.html#reader"
+        },
+        {
+          "label": "Dated NewBrain update",
+          "url": "newbrain.html#newbrain-optional-year-reader-review-2026-11-23"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-optional-year-reader-review-2026-11-23"
+    },
     {
       "id": "newbrain-joint-query-transfer-review-2026-11-22",
       "title": "Seen question-switch ranking gain failed held transfer",
