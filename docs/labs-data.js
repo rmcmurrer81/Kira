@@ -25,6 +25,31 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-joint-query-transfer-review-2026-11-22",
+      "title": "Seen question-switch ranking gain failed held transfer",
+      "project": "NewBrain",
+      "track": "Learning · synthetic transfer",
+      "date": "2026-11-22",
+      "reviewed_on": "2026-11-22",
+      "status": "development",
+      "date_basis": "Stored 192-update-per-head experiment and subsequent zero-update replay",
+      "summary": "Paired seen direction 71/128 vs 6/128 plain, but both-axis supported exact 3/384 vs 2/384 plain.",
+      "body": "No checkpoint adopted. Neutralized-question fixture is unrun by model; Original12 remains accepted 2/12, not rerun.",
+      "boundary": "Synthetic failures, not an accepted generalization milestone.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept illustration, not experiment output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed report",
+          "url": "reports/newbrain-query-transfer-review-2026-11-22.html#training"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-joint-query-transfer-review-2026-11-22"
+    },
+    {
       "id": "newbrain-native-lexical-role-review-2026-11-22",
       "title": "Native familiar vocabulary did not generalize to new answer terms",
       "project": "NewBrain",
