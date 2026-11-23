@@ -20,6 +20,8 @@ const iris=require('../docs/iris-projects.js');
 // The Nov23 source audit and the fitted readers are different evaluations.
 // Iris must distinguish project-model training from read-only and fabricated tests.
 const nov23Source=data.projects.find(p=>p.id==='newbrain');
+assert.ok(nov23Source.status.length<14000,'NewBrain reviewed Nov23 status exceeds bounded Iris facet');
+assert.equal(iris.validate(data),data,'Current pinned public knowledge must be accepted by the Iris runtime');
 assert.equal(nov23Source.source,'newbrain.html#newbrain-intent-source-diagnostic-2026-11-23');
 for(const n of ['128/384','298/384','247/4,032','56/384','260/384','268/4,032','455/1,920','425/1,920','420/1,920','415/1,920','9/64','2/64','5,504/5,504','64/64','2/12'])assert.ok(nov23Source.status.includes(n),'Nov23 latest source diagnostic missing '+n);
 for(const [file,anchor] of [['newbrain.html','newbrain-intent-source-diagnostic-2026-11-23'],['updates.html','newbrain-intent-source-diagnostic-2026-11-23'],['reports/newbrain-intent-source-diagnostic-2026-11-23.html','joint-training'],['reports/newbrain-intent-source-diagnostic-2026-11-23.html','source-diagnostic'],['reports/newbrain-intent-source-diagnostic-2026-11-23.html','preparation'],['reports/newbrain-intent-source-diagnostic-2026-11-23.html','limits']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Latest Nov23 anchor missing '+file+'#'+anchor);
