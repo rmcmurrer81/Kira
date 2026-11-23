@@ -25,6 +25,41 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-item-scope-review-2026-11-23",
+      "title": "Item and source-scope recoveries failed full qualification",
+      "date": "2026-11-23",
+      "date_basis": "November 23 separately trained GPU item/override heads; frozen source guard readouts and source-only support preparation",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Some item copies improved but the tested heads lost correct abstentions and retained answers; later frozen guards reduced mistakes without qualifying.",
+      "body": [
+        "Separate real GPU fits: item-only 64 updates per reader, binary 64 per reader on distinct baselines. Binary replay item-source exact 20/320 to 95/320, 24 newly wrong unsupported copies, 169 previously correct earlier answers lost.",
+        "Separate zero-update context guard kept balanced 80/320 and replay 85/320 exact items with no fresh wrong unsupported copies but one earlier replay correct abstention lost. Narrow affirmative rule reached 12/64 and 7/64 item answers yet missed abstention floors.",
+        "The 608-case source-only support-veto plan has 256 supported and 352 unsupported; model execution pending. No checkpoint adopted and accepted Original12 2/12, not rerun."
+      ],
+      "boundary": "Assistant-authored synthetic typed evidence and non-comparable banks. Frozen grammar checks are not independent general language learning.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed binary override scores",
+          "url": "reports/newbrain-item-scope-review-2026-11-23.html#binary-override"
+        },
+        {
+          "label": "Frozen source-scope limits",
+          "url": "reports/newbrain-item-scope-review-2026-11-23.html#affirmative-scope"
+        },
+        {
+          "label": "Dated NewBrain summary",
+          "url": "newbrain.html#newbrain-item-scope-review-2026-11-23"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-item-scope-review-2026-11-23"
+    },
+    {
       "id": "newbrain-intent-source-diagnostic-2026-11-23",
       "title": "Source-selection and intent trials remain unqualified",
       "date": "2026-11-23",

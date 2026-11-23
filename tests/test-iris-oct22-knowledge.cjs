@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-11-23-4.json';
+const filename='knowledge/iris-projects-2026-11-23-5.json';
 const priorNov111=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-11-1.json'),'utf8'));
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
@@ -14,24 +14,33 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-11-23.4-fix1'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-11-23.4-fix1'));
+assert.ok(irisPage.includes('iris.js?v=2026-11-23.5'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-11-23.5'));
 const iris=require('../docs/iris-projects.js');
 // The Nov23 source audit and the fitted readers are different evaluations.
 // Iris must distinguish project-model training from read-only and fabricated tests.
 const nov23Source=data.projects.find(p=>p.id==='newbrain');
 assert.ok(nov23Source.status.length<14000,'NewBrain reviewed Nov23 status exceeds bounded Iris facet');
 assert.equal(iris.validate(data),data,'Current pinned public knowledge must be accepted by the Iris runtime');
-assert.equal(nov23Source.source,'newbrain.html#newbrain-intent-source-diagnostic-2026-11-23');
+assert.equal(nov23Source.source,'newbrain.html#newbrain-item-scope-review-2026-11-23');
 for(const n of ['128/384','298/384','247/4,032','56/384','260/384','268/4,032','455/1,920','425/1,920','420/1,920','415/1,920','9/64','2/64','5,504/5,504','64/64','2/12'])assert.ok(nov23Source.status.includes(n),'Nov23 latest source diagnostic missing '+n);
 for(const [file,anchor] of [['newbrain.html','newbrain-intent-source-diagnostic-2026-11-23'],['updates.html','newbrain-intent-source-diagnostic-2026-11-23'],['reports/newbrain-intent-source-diagnostic-2026-11-23.html','joint-training'],['reports/newbrain-intent-source-diagnostic-2026-11-23.html','source-diagnostic'],['reports/newbrain-intent-source-diagnostic-2026-11-23.html','preparation'],['reports/newbrain-intent-source-diagnostic-2026-11-23.html','limits']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Latest Nov23 anchor missing '+file+'#'+anchor);
 for(const f of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('"id": "newbrain-intent-source-diagnostic-2026-11-23"'),'Latest timeline missing '+f);
 assert.ok(fs.existsSync(path.join(docs,'knowledge/iris-projects-2026-11-23-3.json')),'Prior immutable Iris pack must be preserved');
 assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain result?','',[],null)?.answer.includes('455/1,920'),'Iris should mention new source correctness audit');
+// Latest Nov23 item/scope results: real training distinct from source-only tests.
+assert.equal(data.content_version,'2026-11-23.5');
+assert.equal(nov23Source.source,'newbrain.html#newbrain-item-scope-review-2026-11-23');
+assert.ok(fs.existsSync(path.join(docs,'knowledge/iris-projects-2026-11-23-4.json')));
+for(const value of ['65→85/320','70→80/320','70→90/320','20→95/320','123 and 169','60→80/320','45→85/320','9→12/64','1→7/64','254/1,152','269/1,152','608-case','2/12'])assert.ok(nov23Source.status.includes(value),'item/scope result missing '+value);
+for(const [file,anchor] of [['newbrain.html','newbrain-item-scope-review-2026-11-23'],['updates.html','newbrain-item-scope-review-2026-11-23'],['reports/newbrain-item-scope-review-2026-11-23.html','item-only'],['reports/newbrain-item-scope-review-2026-11-23.html','binary-override'],['reports/newbrain-item-scope-review-2026-11-23.html','guard'],['reports/newbrain-item-scope-review-2026-11-23.html','affirmative-scope'],['reports/newbrain-item-scope-review-2026-11-23.html','next-test'],['reports/newbrain-item-scope-review-2026-11-23.html','limits']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Missing item report anchor '+file+'#'+anchor);
+for(const file of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('"id": "newbrain-item-scope-review-2026-11-23"'));
+assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain result?','',[],null)?.answer.includes('20→95/320'));
+
 // Separate November 23 residual and relationship study.
 const laterNov23=data.projects.find(p=>p.id==='newbrain');
 for(const v of ['144/384','136/384','266/384','262/384','327','136/198','7/7','2/12'])assert.ok(laterNov23.status.includes(v),'Later Nov23 status missing '+v);
-assert.equal(laterNov23.source,'newbrain.html#newbrain-intent-source-diagnostic-2026-11-23');
+assert.equal(laterNov23.source,'newbrain.html#newbrain-item-scope-review-2026-11-23');
 for(const [file,anchor] of [['newbrain.html','newbrain-absence-relationship-review-2026-11-23'],['updates.html','newbrain-absence-relationship-review-2026-11-23'],['reports/newbrain-absence-relationship-review-2026-11-23.html','trial'],['reports/newbrain-absence-relationship-review-2026-11-23.html','diagnosis'],['reports/newbrain-absence-relationship-review-2026-11-23.html','fixture'],['reports/newbrain-absence-relationship-review-2026-11-23.html','limits']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Later Nov23 anchor missing '+file+'#'+anchor);
 for(const f of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('"id": "newbrain-absence-relationship-review-2026-11-23"'));
 // November 23: optional-year learned-field gate and separate supplied-intent fixture.
