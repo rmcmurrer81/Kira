@@ -23,7 +23,7 @@ for(const value of ['0/64','32/64','48/64','24/64','32/128','48/128','512/512','
 for(const [file,id] of [['newbrain.html','newbrain-optional-year-reader-review-2026-11-23'],['updates.html','newbrain-optional-year-reader-review-2026-11-23'],['reports/newbrain-optional-year-reader-review-2026-11-23.html','reader'],['reports/newbrain-optional-year-reader-review-2026-11-23.html','fixture'],['reports/newbrain-optional-year-reader-review-2026-11-23.html','earlier-training'],['reports/newbrain-optional-year-reader-review-2026-11-23.html','limits']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+id+'"'),'Nov23 public anchor '+file+'#'+id);
 for(const f of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('"id": "newbrain-optional-year-reader-review-2026-11-23"'));
 assert.equal(iris.validate(data),data);
-assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain result?','',[],null)?.answer.includes('year present 0/64'));
+assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain result?','',[],null)?.answer.includes('Year present 0/64'));
 assert.equal(iris.validate(JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-22-7.json'),'utf8'))).content_version,'2026-11-22.7');
 
 // November 22 query-switch and frozen two-axis transfer: failed synthetic qualification.
