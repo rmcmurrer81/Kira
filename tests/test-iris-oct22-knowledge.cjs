@@ -374,7 +374,7 @@ const priorNov44=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(priorNov44),priorNov44,'Preserve previous Nov4.4 reviewed knowledge and original source anchors');
 assert.equal(priorNov44.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v9-pathway-study-2026-11-04');
 assert.equal(priorNov44.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v8-v9-body-v5-2026-11-04');
-for(const [id,src] of [['newbrain','newbrain.html#newbrain-optional-year-reader-review-2026-11-23'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
+for(const [id,src] of [['newbrain','newbrain.html#newbrain-absence-relationship-review-2026-11-23'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
   assert.equal(data.projects.find(p=>p.id===id).source,src,'latest reviewed source for '+id);
   const [page,anchor]=src.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Latest public research anchor missing '+id);
@@ -391,7 +391,7 @@ const priorNov43=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(priorNov43),priorNov43,'Preserve archived Nov4.3 resource and head results');
 assert.equal(priorNov43.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v8v2-admission-2026-11-04');
 assert.equal(priorNov43.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v6-v7-source-review-2026-11-04');
-for(const [id,src] of [['newbrain','newbrain.html#newbrain-optional-year-reader-review-2026-11-23'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
+for(const [id,src] of [['newbrain','newbrain.html#newbrain-absence-relationship-review-2026-11-23'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
   assert.equal(data.projects.find(p=>p.id===id).source,src);
   const [page,fragment]=src.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+fragment+'"'),'Latest public source anchor missing '+id);
