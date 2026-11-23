@@ -1,8 +1,43 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-23",
-  "default_id": "newbrain-item-scope-review-2026-11-23",
+  "default_id": "newbrain-request-verifier-review-2026-11-23",
   "milestones": [
+    {
+      "id": "newbrain-request-verifier-review-2026-11-23",
+      "title": "A candidate verifier still fails relationship and optional-field switches",
+      "date": "2026-11-23",
+      "date_basis": "November 23 matched local CUDA fit, separate zero-update contrast and source-only controls",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "A matched candidate-source verifier ran 96 CUDA updates per experimental head. On the frozen 200 supported and 200 unsupported requests, the candidate-bound verifier answered 55/200 supported and abstained correctly on 150/200, with 85 wrong of 140 unique copies. Ownership and core-field ranking passed 20/20 each; borrowing and optional-field ranking failed 0/20 each. A separate zero-update compatibility test and unrun crossed source controls do not qualify a checkpoint. Original12 remains 2/12, not rerun.",
+      "body": [
+        "Matched verifier: 96 CUDA updates per head, candidate-bound 55/200 supported, 150/200 correct abstentions; 85 wrong of 140 unique copies.",
+        "Separate read-only contrast ranked 51/96 held pairs correctly; no new retention run.",
+        "Crossed 640-case held bank is source-prepared only. No checkpoint adopted; accepted Original12 2/12, not rerun."
+      ],
+      "boundary": "Distinct synthetic test banks; cold reproduction is not learning qualification; source preparation is not model execution.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed verifier results",
+          "url": "reports/newbrain-request-verifier-review-2026-11-23.html#fit"
+        },
+        {
+          "label": "Separate compatibility diagnostic",
+          "url": "reports/newbrain-request-verifier-review-2026-11-23.html#compatibility"
+        },
+        {
+          "label": "Unrun crossed controls",
+          "url": "reports/newbrain-request-verifier-review-2026-11-23.html#crossed"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-request-verifier-review-2026-11-23"
+    },
     {
       "id": "newbrain-item-scope-review-2026-11-23",
       "title": "Item and source-scope recoveries failed full qualification",
