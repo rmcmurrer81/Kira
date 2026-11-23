@@ -25,6 +25,41 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-intent-source-diagnostic-2026-11-23",
+      "title": "Source-selection and intent trials remain unqualified",
+      "date": "2026-11-23",
+      "date_basis": "November 23 source-committed derivative training, independent zero-update source diagnostic and separate fabricated fixture",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Balanced joint-intent rehearsal scored 128/384 supported and 298/384 correct abstentions but lost 247 previously correct replies; later read-only audit found wrong-record copying.",
+      "body": [
+        "Four relationship/field derivatives completed 512 total local CUDA optimizer updates, with no accepted checkpoint. Replay-only rehearsal regressed to 56/384 supported and 260/384 correct abstentions, losing 268 earlier correct replies.",
+        "Separate read-only audit, zero updates: exact value and source balanced unchanged 455/1,920 versus calibrated 425/1,920, replay 420/1,920 versus 415/1,920. Calibrated readers still failed retention.",
+        "Independent 5,504-case token/source proof and fabricated-score paired-intent training are engineering checks, not project-model learning. Accepted Original12 remains 2/12, not rerun."
+      ],
+      "boundary": "Only assistant-authored aggregate synthetic results; the read-only audit and fabricated objective do not demonstrate qualified learned intent or corrected source selection. Private model artifacts and candidate media withheld.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept image, not recorded model output"
+      },
+      "sources": [
+        {
+          "label": "Matched derivative trial",
+          "url": "reports/newbrain-intent-source-diagnostic-2026-11-23.html#joint-training"
+        },
+        {
+          "label": "Read-only correct-source audit",
+          "url": "reports/newbrain-intent-source-diagnostic-2026-11-23.html#source-diagnostic"
+        },
+        {
+          "label": "Dated NewBrain summary",
+          "url": "newbrain.html#newbrain-intent-source-diagnostic-2026-11-23"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-intent-source-diagnostic-2026-11-23"
+    },
+    {
       "id": "newbrain-absence-relationship-review-2026-11-23",
       "title": "Absence residual gains failed retained answers and abstention gates",
       "date": "2026-11-23",
