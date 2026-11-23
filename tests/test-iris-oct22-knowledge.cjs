@@ -14,8 +14,8 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-11-23.4'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-11-23.4'));
+assert.ok(irisPage.includes('iris.js?v=2026-11-23.4-fix1'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-11-23.4-fix1'));
 const iris=require('../docs/iris-projects.js');
 // The Nov23 source audit and the fitted readers are different evaluations.
 // Iris must distinguish project-model training from read-only and fabricated tests.
