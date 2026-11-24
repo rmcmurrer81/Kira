@@ -1,8 +1,47 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-24",
-  "default_id": "newbrain-native-source-count-review-2026-11-24",
+  "default_id": "newbrain-native-query-readout-review-2026-11-24",
   "milestones": [
+    {
+      "id": "newbrain-native-query-readout-review-2026-11-24",
+      "title": "Matched query readouts recover answers but lose correct abstentions",
+      "date": "2026-11-24",
+      "date_basis": "November 24 committed matched GPU fit, held evaluation and saved-score audit",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two matched readouts completed 128 GPU updates each. On synthetic held questions, the final-token and pooled lookup-term readouts answered 48/128 and 49/128 supported questions exactly, versus 39/128 for the unchanged restricted ranker. Correct abstentions fell from 173/256 to 148/256 and 145/256. Both failed qualification; neither changed the top-ranked candidate on any supported question. A separate saved-score audit found that all extra correct answers came from releasing already top-ranked candidates. No model adopted; accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "Matched GPU fits: 128 updates each; restricted baseline 39/128 supported and 173/256 abstentions, final-token 48/128 and 148/256, pooled 49/128 and 145/256. Both failed.",
+        "Pooled and final-token readouts each completed 10/64 swaps; pooled lost 40 individually correct earlier answers versus the restricted original.",
+        "Offline attribution: unchanged top candidate on all 128 supported questions; 26/28 lost pooled abstentions reproduced by the unique-source term alone. Zero model forwards or updates."
+      ],
+      "boundary": "Synthetic ownership task; no checkpoint qualified or was adopted. Accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Matched held evaluation",
+          "url": "reports/newbrain-native-query-readout-review-2026-11-24.html#trial"
+        },
+        {
+          "label": "Saved-score attribution",
+          "url": "reports/newbrain-native-query-readout-review-2026-11-24.html#audit"
+        },
+        {
+          "label": "Cold replay and engineering checks",
+          "url": "reports/newbrain-native-query-readout-review-2026-11-24.html#verification"
+        },
+        {
+          "label": "Limits",
+          "url": "reports/newbrain-native-query-readout-review-2026-11-24.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-query-readout-review-2026-11-24"
+    },
     {
       "id": "newbrain-native-source-count-review-2026-11-24",
       "title": "Source-count supervision improves abstention but still fails qualification",
