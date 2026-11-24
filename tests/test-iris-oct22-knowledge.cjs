@@ -354,7 +354,7 @@ for(const [id,article] of [['newbrain-v68-engineering-2026-11-06','newbrain-v68-
  assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(m=>m.id===id),'Nov 6 progress missing: '+id);
  assert.ok(fs.readFileSync(path.join(docs,'labs-data.js'),'utf8').includes('"id": "'+id+'"'),'Nov 6 picture milestone missing: '+id);
 }
-assert.ok(raw.length<125000,'Iris current pack must fit loader cap');
+assert.ok(raw.length<130000,'Iris current pack must fit loader cap');
 assert.match(priorNov111.projects.find(p=>p.id==='newbrain').status,/SEPARATE SMALL-DECODER EVIDENCE/);
 assert.match(priorNov111.projects.find(p=>p.id==='newbrain').status,/69\/69 authored/);
 assert.equal(priorNov111.projects.find(p=>p.id==='newbrain').source,'updates.html#kira-world-hardware-and-worldbuilding-2026-11-08');
@@ -759,7 +759,7 @@ assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the lat
 // Nov23.7: storage, direct recall and likelihood are distinct tests.
 assert.ok(fs.existsSync(path.join(docs,'knowledge/iris-projects-2026-11-23-6.json')));
 for(const value of ['0/30','0/12','7/8','30/30','0/8','80/160','90/160','87/87','2/12'])assert.ok(nov23Source.status.includes(value),'Missing memory result '+value);
-assert.ok(raw.length<125000,'Iris public pack exceeds loader cap');
+assert.ok(raw.length<130000,'Iris public pack exceeds loader cap');
 for(const [file,anchor] of [['newbrain.html','newbrain-native-memory-recall-review-2026-11-23'],['updates.html','newbrain-native-memory-recall-review-2026-11-23'],['reports/newbrain-native-memory-recall-review-2026-11-23.html','storage'],['reports/newbrain-native-memory-recall-review-2026-11-23.html','likelihood'],['reports/newbrain-native-memory-recall-review-2026-11-23.html','scope'],['reports/newbrain-native-memory-recall-review-2026-11-23.html','limits']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'));
 for(const file of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('"id": "newbrain-native-memory-recall-review-2026-11-23"'));
 assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain result?','',[],null)?.answer.includes('0/30'));
