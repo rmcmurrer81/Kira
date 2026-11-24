@@ -1,8 +1,51 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-24",
-  "default_id": "newbrain-native-scoped-ownership-review-2026-11-24",
+  "default_id": "newbrain-native-source-count-review-2026-11-24",
   "milestones": [
+    {
+      "id": "newbrain-native-source-count-review-2026-11-24",
+      "title": "Source-count supervision improves abstention but still fails qualification",
+      "date": "2026-11-24",
+      "date_basis": "November 24 committed aggregate matched GPU results, retrospective score audits, fabricated CUDA and tokenizer receipts",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two separate matched 128-update-per-arm GPU studies failed qualification. In the direct source-count fit, supported exact answers fell from 52/128 to 43/128 while correct abstentions rose from 149/256 to 164/256; all nine lost supported answers became unknown. Both heads predicted one source on every held prompt. A later factored objective passed fabricated CUDA checks, and all 768 new synthetic prompts passed real tokenizer admission, but no model forwards, scored responses or model training occurred in that stage. No model adopted; accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "Per-record support fit: 128 updates per arm; supported 27/128 vs 26/128, correct abstentions 208/256 both. Failed.",
+        "Direct source-count fit: supported 52/128 vs 43/128, correct abstentions 149/256 vs 164/256. All nine lost supported answers became unknown.",
+        "Factored objective: 12 fabricated CUDA comparisons; 768/768 real tokenizer admissions, zero model forwards and training."
+      ],
+      "boundary": "Separate assistant-authored synthetic studies; no model adopted. Accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Matched source-count fit",
+          "url": "reports/newbrain-native-source-count-review-2026-11-24.html#trial"
+        },
+        {
+          "label": "Separate per-record fit",
+          "url": "reports/newbrain-native-source-count-review-2026-11-24.html#support"
+        },
+        {
+          "label": "Saved-score diagnosis",
+          "url": "reports/newbrain-native-source-count-review-2026-11-24.html#audit"
+        },
+        {
+          "label": "Factored objective and tokenizer admission",
+          "url": "reports/newbrain-native-source-count-review-2026-11-24.html#preparation"
+        },
+        {
+          "label": "Limits",
+          "url": "reports/newbrain-native-source-count-review-2026-11-24.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-source-count-review-2026-11-24"
+    },
     {
       "id": "newbrain-native-scoped-ownership-review-2026-11-24",
       "title": "Ownership lookup gains answers but still loses correct abstentions",
