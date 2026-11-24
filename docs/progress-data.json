@@ -1,8 +1,51 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-24",
-  "default_id": "newbrain-request-scope-review-2026-11-24",
+  "default_id": "newbrain-native-owner-endpoint-review-2026-11-24",
   "milestones": [
+    {
+      "id": "newbrain-native-owner-endpoint-review-2026-11-24",
+      "title": "Native still fails exact copying and ownership swaps",
+      "date": "2026-11-24",
+      "date_basis": "November 24 committed aggregate summaries from separate frozen local GPU tests, matched onset fits and declared lookup",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "In a frozen 128-request ownership test, selecting the visible owner-name endpoint instead of the question end changed exact supported outputs from 1/64 to 0/64 and correct unsupported abstentions from 63/64 to 64/64. Neither completed a swap (0/32 each). A separate forward evaluation gave 0/64 Native and 2/64 learned exact supported answers; a declared reference gave 64/64. Two separate 64-update onset fits also failed held copying. An opt-in deterministic snapshot lookup passed 96/96 with caller-supplied intent, not learned recall. No checkpoint adopted; accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "Frozen fixed-head endpoint: exact supported 1/64 to 0/64; abstentions 63/64 to 64/64; complete swaps 0/32 both.",
+        "Separate onset training: 64 updates per arm, 0/64 held supported each, three previously correct retention answers lost each despite 65/80 aggregate.",
+        "Deterministic declared lookup 96/96, 12/12 snapshots reopened; caller supplied exact intent, no model training or inference."
+      ],
+      "boundary": "Separate synthetic experiments; no qualified model or general learning. Accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Frozen endpoint comparison",
+          "url": "reports/newbrain-native-owner-endpoint-review-2026-11-24.html#endpoint"
+        },
+        {
+          "label": "Separate source diagnostics",
+          "url": "reports/newbrain-native-owner-endpoint-review-2026-11-24.html#source"
+        },
+        {
+          "label": "Matched onset training",
+          "url": "reports/newbrain-native-owner-endpoint-review-2026-11-24.html#onset"
+        },
+        {
+          "label": "Declared lookup and snapshots",
+          "url": "reports/newbrain-native-owner-endpoint-review-2026-11-24.html#declared"
+        },
+        {
+          "label": "Evidence limits",
+          "url": "reports/newbrain-native-owner-endpoint-review-2026-11-24.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-owner-endpoint-review-2026-11-24"
+    },
     {
       "id": "newbrain-request-scope-review-2026-11-24",
       "title": "Request-scope checks reduce false copies but still lose correct answers",
