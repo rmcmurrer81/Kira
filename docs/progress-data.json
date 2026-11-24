@@ -1,8 +1,51 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-24",
-  "default_id": "newbrain-native-owner-endpoint-review-2026-11-24",
+  "default_id": "newbrain-native-scoped-ownership-review-2026-11-24",
   "milestones": [
+    {
+      "id": "newbrain-native-scoped-ownership-review-2026-11-24",
+      "title": "Ownership lookup gains answers but still loses correct abstentions",
+      "date": "2026-11-24",
+      "date_basis": "November 24 committed aggregate results from separate matched local GPU trials, saved-score replays and fabricated prototype checks",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two matched 128-update auxiliary GPU trials failed qualification. In the later ownership lookup study, supported exact answers improved from 41/128 to 58/128 and complete swaps from 6/64 to 15/64, but correct abstentions fell from 199/256 to 167/256. The treatment lost 52 previously correct archived answers (58 relative to the matched control). Saved-score replay found that 16/17 recovered answers already had the correct source ranked first by the control, which abstained. A separate per-record support prototype passed 14 fabricated checks with no model execution. No model adopted; accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "Later scoped lookup: supported 41/128 to 58/128, abstentions 199/256 to 167/256, complete swaps 6/64 to 15/64; failed retention.",
+        "Separate second-record fit: 128 updates per arm, supported 20/128 to 21/128 and abstentions 159/256 to 156/256; failed.",
+        "Retrospective audit: 16/17 gains were already top-ranked by the control. Per-record support prototype: 14 fabricated checks, zero model execution."
+      ],
+      "boundary": "Separate synthetic experiments, no qualification or adoption; accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Matched scoped ownership trial",
+          "url": "reports/newbrain-native-scoped-ownership-review-2026-11-24.html#trial"
+        },
+        {
+          "label": "Second-record trial",
+          "url": "reports/newbrain-native-scoped-ownership-review-2026-11-24.html#second"
+        },
+        {
+          "label": "Saved-score audit",
+          "url": "reports/newbrain-native-scoped-ownership-review-2026-11-24.html#audit"
+        },
+        {
+          "label": "Untrained support prototype",
+          "url": "reports/newbrain-native-scoped-ownership-review-2026-11-24.html#prototype"
+        },
+        {
+          "label": "Evidence limits",
+          "url": "reports/newbrain-native-scoped-ownership-review-2026-11-24.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-scoped-ownership-review-2026-11-24"
+    },
     {
       "id": "newbrain-native-owner-endpoint-review-2026-11-24",
       "title": "Native still fails exact copying and ownership swaps",
