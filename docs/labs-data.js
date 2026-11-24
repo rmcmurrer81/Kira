@@ -25,6 +25,41 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-memory-recall-review-2026-11-23",
+      "title": "Saved facts survived restart, but Native did not recall them",
+      "date": "2026-11-23",
+      "date_basis": "November 23 saved synthetic memory restore, read-only Native evaluation and separate CUDA scope fit",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two isolated synthetic profiles restored eight saved facts exactly. Native then scored 0/30 exact answers, including 0/12 supported questions, with zero model updates. In a separate fixed-continuation likelihood diagnostic the saved answer ranked below abstention after the write in 8/8 matched cases, with or without a linefeed. A separate 64-update qualifier derivative improved scope classification from 80/160 to 90/160 but failed its gate. No adoption; accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "Eight synthetic facts restored exactly in two isolated profiles; direct Native generation scored 0/30 exact and 0/12 supported, zero updates.",
+        "Fixed likelihood diagnostic reused consumed prompts: stored answer outranked unknown in 0/8 post-write comparisons, bare or with linefeed.",
+        "Separate 64-update qualifier derivative improved scope 80/160 to 90/160; nine false requirements and failed qualification. No adoption."
+      ],
+      "boundary": "Storage is not semantic recall. Restricted likelihood is not a new behavior benchmark; scope is not answer accuracy. Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Synthetic memory restoration and direct answers",
+          "url": "reports/newbrain-native-memory-recall-review-2026-11-23.html#storage"
+        },
+        {
+          "label": "Read-only likelihood diagnostic",
+          "url": "reports/newbrain-native-memory-recall-review-2026-11-23.html#likelihood"
+        },
+        {
+          "label": "Separate qualifier scope fit",
+          "url": "reports/newbrain-native-memory-recall-review-2026-11-23.html#scope"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-memory-recall-review-2026-11-23"
+    },
+    {
       "id": "newbrain-request-verifier-review-2026-11-23",
       "title": "A candidate verifier still fails relationship and optional-field switches",
       "date": "2026-11-23",
