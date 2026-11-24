@@ -1,8 +1,47 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-23",
-  "default_id": "newbrain-native-memory-recall-review-2026-11-23",
+  "reviewed_on": "2026-11-24",
+  "default_id": "newbrain-request-scope-review-2026-11-24",
   "milestones": [
+    {
+      "id": "newbrain-request-scope-review-2026-11-24",
+      "title": "Request-scope checks reduce false copies but still lose correct answers",
+      "date": "2026-11-24",
+      "date_basis": "November 24 committed aggregate results from separate local GPU scope, Native decoder and isolated application tests",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two learned scope heads completed 128 local GPU updates each. On 192 unsupported requests, false copies fell from 96 to 54 (whole-question) or 60 (request-clause), but supported answers fell from 54/96 to 30/96 or 42/96. Earlier supported answers fell from 360/648 to 90/648 or 198/648. Both failed qualification. Separate matched Native decoder training still produced 0/64 supported answers per arm. An isolated application label repair passed 9/9 synthetic identity checks (previously 6/9), not a live model change. Accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "128 GPU updates per scope head: unsupported false copies 96/192 unchanged, 54/192 whole-question, 60/192 clause; supported and retention declined.",
+        "Separate Native decoder reciprocal comparison: 192 updates per arm, 0/64 supported all arms; correct abstentions 0/16, 13/16, 16/16; retention 65/80, 62/80, 53/80. Both rejected.",
+        "Isolated full object-label application candidate: 6/9 to 9/9 identity controls, 7/7 prior regression tests, cold replay; not live deployment."
+      ],
+      "boundary": "Synthetic single-turn results; scope and application tests are not learned recall or general dialogue. No model promoted; accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Matched request-scope experiment",
+          "url": "reports/newbrain-request-scope-review-2026-11-24.html#scope"
+        },
+        {
+          "label": "Separate Native decoder training",
+          "url": "reports/newbrain-request-scope-review-2026-11-24.html#decoder"
+        },
+        {
+          "label": "Isolated application object-label candidate",
+          "url": "reports/newbrain-request-scope-review-2026-11-24.html#application"
+        },
+        {
+          "label": "Earlier attention and scope diagnostics",
+          "url": "reports/newbrain-request-scope-review-2026-11-24.html#diagnostics"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-request-scope-review-2026-11-24"
+    },
     {
       "id": "newbrain-native-memory-recall-review-2026-11-23",
       "title": "Saved facts survived restart, but Native did not recall them",
