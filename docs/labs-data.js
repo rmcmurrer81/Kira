@@ -25,6 +25,46 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-record-selection-review-2026-11-25",
+      "title": "Structured record checks advance; free recall and answer release remain unqualified",
+      "date": "2026-11-25",
+      "date_basis": "November 25 committed structured verifier, directional correction, free-output and all-record selection summaries",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two bounded structured-record components passed frozen gates: a literal verifier improved exact answers from 344/576 to 385/576 without losing correct cases; a learned directional correction reached 358/576 versus 351/576 for its matched control. A separate query-aware selector ranked 96/96 supported records correctly but answered only 54/96. Free Native and two trained adapters each scored 0/32 on fresh supported first answers. No checkpoint adopted; accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "Prompt-derived exact lookup improved absent abstentions from 76/144 to 112/144 and conflict abstentions from 135/144 to 140/144 versus the previous verifier, leaving supported answers at 133/288. It handled 384/576 prompts and deferred 192 paraphrases. A separate typed boundary repair passed six prior and 28 additional fixtures; the live-output gate could not be tested because all 128 time-qualified prompts already yielded unknown.",
+        "Two matched directional corrections ran 96 CUDA updates each on the same 384 fitting prompts. The signed correction improved supported name-to-object from 34/144 to 37/144 and object-to-name from 51/144 to 55/144 compared with the free-intercept arm, without losing previously correct cases in either direction. It passed the structured gate; two-turn explicit follow-up completion was 92/128 versus 91/128 for free intercept and failed the two-direction gate. The separate pronoun-history diagnostic gave 0/128 exact Native follow-ups; wording and decoding route both changed.",
+        "On a distinct 240-case held bank, two record scorers completed 120 CUDA updates each. Query-aware versus record-only exact answers were 170/240 versus 138/240, correct ranking 96/96 versus 34/96, absent abstentions 40/48 versus 46/48, conflict outputs 48/48 in both, and duplicate-value answers 28/48 versus 26/48. Correctly identified conflicts were only 32/48 versus 38/48. Both failed output qualification. Earlier 78/112 exact answers were retained through fallback, not learned in-scope retention.",
+        "Two separate 96-update free-output adapters produced 0/32 correct supported first answers; earlier exact scores fell from 78/112 to 3/112 and 30/112. A zero-update swap diagnostic likewise found 0/64 exact supported free answers in each mode. The subsequent support-state grouping preflight checked 240 fit and 240 held tapes and fabricated CUDA cold restore only; actual decision training has not run."
+      ],
+      "boundary": "Assistant-authored synthetic records with exact-overlap screening, not independent natural-language benchmarks. Cold replay was reported in committed summaries; the website review did not rerun GPU trials or extract private archives. No experimental checkpoint or live routing adopted; accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Bounded component passes",
+          "url": "reports/newbrain-native-record-selection-review-2026-11-25.html#components"
+        },
+        {
+          "label": "All-record selection",
+          "url": "reports/newbrain-native-record-selection-review-2026-11-25.html#ranking"
+        },
+        {
+          "label": "Free recall and preflight",
+          "url": "reports/newbrain-native-record-selection-review-2026-11-25.html#free"
+        },
+        {
+          "label": "Limits",
+          "url": "reports/newbrain-native-record-selection-review-2026-11-25.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-record-selection-review-2026-11-25"
+    },
+    {
       "id": "newbrain-native-visible-record-review-2026-11-25",
       "title": "Visible-record check passes a bounded abstention test; wording sensitivity persists",
       "date": "2026-11-25",
