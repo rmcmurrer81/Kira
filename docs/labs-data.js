@@ -25,6 +25,45 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-held-copy-ranking-review-2026-11-24",
+      "title": "Held candidate ranking transfers, but answer abstention still fails",
+      "date": "2026-11-24",
+      "date_basis": "November 24 committed calibration and cold-replayed synthetic held transfer",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two frozen ranking probes selected the correct candidate on 288/288 supported synthetic held prompts, versus 154/288 for the unchanged conditional rank. Both sides ranked correctly in 128/128 ownership swaps, but after the shared abstention decision only 148/288 supported answers and 102/128 abstentions were correct. Both probes failed qualification; neither was adopted. Accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "Separate calibration: 120 matched GPU updates per ranking probe; both ranked 72/72 supported prompts and 32/32 complete swaps correctly, but only 17/32 swaps were exact after abstention; seven false copies.",
+        "Held transfer: both probes ranked 288/288 supported cases and 128/128 swaps correctly. Final exact 250/416, including 148/288 supported and 102/128 abstentions; complete exact swaps 55/128. The extra swap penalty did not change final decisions.",
+        "Two independent CUDA workers reproduced features and continuation scores exactly; zero training updates during held transfer. Earlier ranker, Native drift and fallback controls remain open."
+      ],
+      "boundary": "Restricted synthetic candidate choices, not unrestricted conversation or established memory retention. No checkpoint adopted; accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Held rank transfer",
+          "url": "reports/newbrain-native-held-copy-ranking-review-2026-11-24.html#held"
+        },
+        {
+          "label": "Separate calibration",
+          "url": "reports/newbrain-native-held-copy-ranking-review-2026-11-24.html#calibration"
+        },
+        {
+          "label": "Earlier support probe",
+          "url": "reports/newbrain-native-held-copy-ranking-review-2026-11-24.html#support"
+        },
+        {
+          "label": "Limits",
+          "url": "reports/newbrain-native-held-copy-ranking-review-2026-11-24.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-held-copy-ranking-review-2026-11-24"
+    },
+    {
       "id": "newbrain-native-query-readout-review-2026-11-24",
       "title": "Matched query readouts recover answers but lose correct abstentions",
       "date": "2026-11-24",
