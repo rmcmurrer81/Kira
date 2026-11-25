@@ -25,6 +25,55 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-prose-transfer-review-2026-11-25",
+      "title": "Structured retrieval reaches 240/240 on a bounded test; fresh transfer and prose learning fail",
+      "date": "2026-11-25",
+      "date_basis": "November 25 committed aggregate structured rank, transfer and prose learning summaries",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "An isolated-span learned scorer passed its initial declared-record gate at 240/240 versus 172/240 for its matched contextual control, then fell to 120/240 on a fresh bank. Two freshly fitted scorers later reached 240/240 each, so the added penalty had no exact gain over matched training. On ordinary prose, two 128-update Native continuations answered 0/48 supported questions and retained only 1/112 and 2/112 earlier exact answers versus 78/112. No checkpoint adopted; accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "Grouping duplicate values recovered 32 duplicate answers but lost 20 previously correct ordinary answers against the ungrouped arm (52/96 versus 70/96). Both failed. A fresh agreement comparison yielded 162/240 in both learned arms versus 164/240 for the fixed threshold. These were separate 120-update-per-arm CUDA trials; neither qualified.",
+        "An input audit identified a token-boundary mismatch and near-literal false support. Standalone span encoding then passed its frozen structured ranking gate: 240/240 versus 172/240 contextual and 192/240 frozen earlier scorer, with all 288 true support rows and zero false positives among 1,152 other rows. On a new bank without training, the same isolated scorer fell to 120/240, falsely accepting 150/240 near distractors; correct rank remained 96/96. It did not qualify for general transfer.",
+        "Separate matched 120-update scorer fits returned 144/240 in both ordered-feature arms, 144/240 aligned versus 120/240 pooled (96 gains and 72 losses), 216/240 combined versus 96/240 pooled, and 216/240 in both lexical-length arms. Each missed its frozen qualification criteria. The strongest-unsupported penalty and its matched control both reached 240/240 versus 228/240 for the frozen predecessor; the penalty changed zero exact answers or support decisions and failed its improvement gate. Free Native scored 0/240 on these structured tasks.",
+        "On 64 fact/question sets across three formats, the frozen strongest-unsupported scorer answered 56/56 admitted declared cases, but admitted no prose cases; both prose formats scored 0/64 through fallback. Actual-answer follow-ups failed, including 0/16 after correct declared first turns. A separate zero-update prose diagnostic showed Native preferred unknown over the visible answer on all 48 answerable prompts and preferred a line feed to the end token in 96/96 shared-prefix contexts. The line-feed pattern was not counted as an exact pass.",
+        "Two matched Native continuations completed 128 CUDA updates each. Answer-only and added-contrast arms scored 0/24 forward and 0/24 reverse fresh supported questions each, 0/24 exact actual-answer follow-ups each, and 5/16 versus 2/16 on seen probes. Exact earlier retention fell from 78/112 to 1/112 and 2/112, respectively; raw content loss was not independently isolated from stopping errors. Both failed qualification. Independent cold replays reproduced saved raw outputs."
+      ],
+      "boundary": "These are separate assistant-authored synthetic evaluations, not a shared benchmark, independent open-language validation or deployed memory. Website review inspected committed aggregate summaries and manifests; no private archive extraction or independent GPU rerun. Initial bounded qualification did not transfer to a fresh bank. No model or live routing adopted; accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Decision grouping and agreement",
+          "url": "reports/newbrain-native-prose-transfer-review-2026-11-25.html#decision"
+        },
+        {
+          "label": "Initial ranking pass and failed fresh transfer",
+          "url": "reports/newbrain-native-prose-transfer-review-2026-11-25.html#rank"
+        },
+        {
+          "label": "Separate lexical-support fits",
+          "url": "reports/newbrain-native-prose-transfer-review-2026-11-25.html#support"
+        },
+        {
+          "label": "Prose and actual-answer history",
+          "url": "reports/newbrain-native-prose-transfer-review-2026-11-25.html#prose"
+        },
+        {
+          "label": "Matched prose learning",
+          "url": "reports/newbrain-native-prose-transfer-review-2026-11-25.html#learning"
+        },
+        {
+          "label": "Limits and evidence",
+          "url": "reports/newbrain-native-prose-transfer-review-2026-11-25.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-prose-transfer-review-2026-11-25"
+    },
+    {
       "id": "newbrain-native-record-selection-review-2026-11-25",
       "title": "Structured record checks advance; free recall and answer release remain unqualified",
       "date": "2026-11-25",
