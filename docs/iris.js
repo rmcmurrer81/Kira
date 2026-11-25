@@ -57,7 +57,7 @@
    const url=new URL(PROJECT_NOTES,location.href).href;
    const response=await nativeFetch(url,{method:'GET',credentials:'omit',cache:'no-store',signal:controller.signal});
    if(!response.ok)throw Error('Current project notes unavailable');
-   const text=await response.text();if(text.length>130000)throw Error('Project notes too large');
+   const text=await response.text();if(text.length>140000)throw Error('Project notes too large');
    const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text))),n=>n.toString(16).padStart(2,'0')).join('');
    if(digest!==PROJECT_SHA256)throw Error('Project notes integrity mismatch');
    return window.KiraIrisProjects.validate(JSON.parse(text));
