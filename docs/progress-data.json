@@ -1,8 +1,47 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-25",
-  "default_id": "newbrain-native-support-calibration-review-2026-11-25",
+  "default_id": "newbrain-native-visible-record-review-2026-11-25",
   "milestones": [
+    {
+      "id": "newbrain-native-visible-record-review-2026-11-25",
+      "title": "Visible-record check passes a bounded abstention test; wording sensitivity persists",
+      "date": "2026-11-25",
+      "date_basis": "November 25 committed CUDA comparison, older greedy controls and separate matched sensitivity diagnosis",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "A fixed visible-record check passed its frozen component gate: exact answers rose from 351/384 to 357/384 and correct abstentions from 184/192 to 190/192, with supported answers unchanged at 167/192 and no loss of prior abstentions or ties. A separate fresh sensitivity test ranked the right candidate first on 192/192 supported cases but answered only 133/192; wording changes improved supported exact answers from 60/96 to 73/96. No checkpoint adopted; accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "The bounded visible-record check used an unchanged Native checkpoint and learned support scores. Forward supported answers stayed 92/96, reverse 75/96. Forward correct abstentions improved 94/96 to 96/96; reverse 90/96 to 94/96. Complete switch counts held at 45/48 forward and 34/48 reverse; outside declared question forms, 122/128 stayed exact. All six repairs were false releases; all 25 supported misses still had the correct candidate ranked first and both support probabilities below 0.5.",
+        "Separate cold processes reproduced raw outputs, feature and conditional journals, copy ranks and state identities before scoring. Each held process performed 48 GPU forwards and each earlier-memory process 487 greedy forwards; zero optimizer updates. Earlier greedy controls stayed 35/44 exact older supported, 30/36 older unsupported and 13/32 reworded. Of 32 matched older/reworded pairs, older questions scored 23/32; 11 correct answers became incorrect and one incorrect became correct with rewording. The original Native route handled all 112 controls, so this is not evidence of in-scope retention.",
+        "In a separate fresh 384-case sensitivity test the unchanged checkpoint and support head scored 312/384 exact: 133/192 supported, 179/192 unsupported. All 59 withheld supported answers ranked the correct candidate first and had both support scores below 0.5 (46/96 name-to-object; 13/96 object-to-name). Wording-only changes across 192 matched pairs moved exact answers 149/192 to 163/192 (18 gains, four losses); supported wording alone 60/96 to 73/96 (15 gains, two losses). Record-order changes 105/128 to 103/128 and one irrelevant record replacement 105/128 to 104/128. CUDA cold runs matched byte-for-byte; no weights or thresholds changed."
+      ],
+      "boundary": "Restricted synthetic component tests, not general text learning, live adoption or qualified in-scope retention. The repository-wide test retry timed out at 235 seconds after a prior discovery-path error; focused evidence is separate. No checkpoint adopted; accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Frozen component comparison",
+          "url": "reports/newbrain-native-visible-record-review-2026-11-25.html#comparison"
+        },
+        {
+          "label": "Earlier controls",
+          "url": "reports/newbrain-native-visible-record-review-2026-11-25.html#retention"
+        },
+        {
+          "label": "Separate matched sensitivity",
+          "url": "reports/newbrain-native-visible-record-review-2026-11-25.html#sensitivity"
+        },
+        {
+          "label": "Limits",
+          "url": "reports/newbrain-native-visible-record-review-2026-11-25.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-visible-record-review-2026-11-25"
+    },
     {
       "id": "newbrain-native-support-calibration-review-2026-11-25",
       "title": "Support calibration remains the bottleneck in two separate held tests",
