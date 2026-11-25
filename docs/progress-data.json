@@ -1,8 +1,51 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-24",
-  "default_id": "newbrain-native-held-copy-ranking-review-2026-11-24",
+  "reviewed_on": "2026-11-25",
+  "default_id": "newbrain-native-matched-query-support-review-2026-11-25",
   "milestones": [
+    {
+      "id": "newbrain-native-matched-query-support-review-2026-11-25",
+      "title": "Matched token-embedding readout ranks all supported candidates, but support errors persist",
+      "date": "2026-11-25",
+      "date_basis": "November 25 committed matched GPU fit, held replay, support diagnosis and tokenizer-admitted preparation",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "In a new 608-case synthetic comparison, a token-embedding interaction ranked 320/320 supported candidates correctly versus 255/320 for the matched contextual interaction. Exact supported answers rose from 74/320 to 176/320 and correct abstentions from 205/288 to 231/288. The treatment lost 13 previously correct supported answers and 27 correct abstentions, so it failed qualification. No checkpoint adopted; accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "Matched auxiliary readouts completed 120 CUDA updates each on the same 456 fit cases, with zero Native decoder updates. Independent cold restoration reproduced all 1,216 calibration logits across both readouts. Two held passes reproduced raw evidence and decisions byte-for-byte; held inference used zero optimizer updates.",
+        "All 144 remaining supported misses had the correct first-ranked candidate but two support scores above 0.5. In 136/144 misses the extra positive was a mismatched ownership record; 8/144 involved borrowing or storage. High-overlap ownership mismatches produced 243/484 false positives versus 0/28 low-overlap. The association does not establish causality.",
+        "A fresh support-only comparison bank has 456 fit, 152 calibration and 608 held cases. Exact tokenizer admission and independent serialized tape readback were recorded; the proposed weighted support comparison, feature capture, training, retention replay and behavioral scores remain open."
+      ],
+      "boundary": "Supplied candidate and query spans on assistant-authored synthetic records are not unrestricted dialogue or proof of neural memory. Earlier 1,152 ranker cases, 80 Native drift cases and eight fallback controls remain unmeasured for these readouts. No model adopted; accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Held comparison",
+          "url": "reports/newbrain-native-matched-query-support-review-2026-11-25.html#held"
+        },
+        {
+          "label": "Matched fit",
+          "url": "reports/newbrain-native-matched-query-support-review-2026-11-25.html#fit"
+        },
+        {
+          "label": "Support diagnosis",
+          "url": "reports/newbrain-native-matched-query-support-review-2026-11-25.html#diagnosis"
+        },
+        {
+          "label": "Prepared follow-up",
+          "url": "reports/newbrain-native-matched-query-support-review-2026-11-25.html#next"
+        },
+        {
+          "label": "Limits",
+          "url": "reports/newbrain-native-matched-query-support-review-2026-11-25.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-matched-query-support-review-2026-11-25"
+    },
     {
       "id": "newbrain-native-held-copy-ranking-review-2026-11-24",
       "title": "Held candidate ranking transfers, but answer abstention still fails",
