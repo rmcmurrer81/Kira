@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-25",
+  "prepared_on": "2026-11-26",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,50 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-native-source-role-review-2026-11-26",
+      "title": "Source selection remains unqualified despite better sentence classification",
+      "date": "2026-11-26",
+      "date_basis": "November 26 ET committed aggregate results",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two matched 144-update-per-arm source-structure trials found 0/144 direct supported report choices in both arms. Structural supervision raised sentence classification from 802/3168 to 1980/3168 in the first comparison; a separate fresh role-weighting comparison rose from 1778/3168 to 1876/3168 but did not improve exact supported selection. Neither trial qualified. Accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "In a separate 192-update-per-arm status-head comparison, ordinary training and signed confirmation scored 194/360 and 198/360 exact statuses, but false confirmations increased from 37 to 53, including possible claims falsely confirmed on 4/72 versus 14/72. Both failed qualification. A frozen diagnostic supplied the correct source boundary: ordinary training scored 135/288 on both reports versus 198/288 with the selected report, and false confirmations fell from 22 to 6. The signed head scored 131/288 versus 176/288, but false confirmations rose from 14 to 18. Supplied source boundaries are a diagnostic control, not learned source selection.",
+        "Both arms fitted the same 576 synthetic cases for 144 FP32 CUDA updates with a matched resume at update 72. On 576 held cases, both scored 0/144 exact supported report choices; typed abstentions were 92/432 versus 91/432 and false selections zero versus one. Correct sentence classes rose from 802/3168 to 1980/3168, but exact alias edges, selector spans and speaker spans all remained zero (0/1152, 0/576 and 0/1152 respectively). An earlier separate source-head comparison also scored 0/36 supported choices per arm on unfamiliar prose, with 16/108 typed abstentions and 35 false selections. Its explicit parser scored 288/288 only on its documented format.",
+        "A retrospective decoder on the consumed 576-case bank used synthetic name-shape and document-route constraints. Structural support improved to 45/144 with 217/432 typed abstentions and 22 false selections; clean tagged cases reached 36/36, while both mixed-layout cells scored 0/36. Supplying true sentence types as an oracle raised the result to 115/144, which is not a deployable result. On 192 original fitting cases, direct supported choices remained 0/48 for both heads; constrained structural decoding reached 21/48, with five false selections. A four-fixture CPU gradient check prepared the subsequent role-weighting comparison.",
+        "Both arms used the same 576 fitting cases and 144 matched FP32 CUDA updates. Fresh held results: direct support 0/144 in both; typed abstentions 83/432 versus 86/432; false selections 53 versus 47; sentence classes 1778/3168 versus 1876/3168. Under constrained diagnostic decoding, supported choices were 40/144 versus 39/144, abstentions 201/432 versus 205/432, and false selections 28 versus 29. Both mixed cells remained 0/36 per arm. Independent cold captures reproduced raw outputs exactly; no checkpoint passed or was promoted. Two preliminary audit/scorer attempts failed for a stored-count type mismatch and a wrong import, then were corrected without changing scoring or retraining."
+      ],
+      "boundary": "Reviewed November 26, 2026. Separate assistant-authored synthetic tests share authoring assumptions. The fresh role-weighting bank passed two tokenizer admission passes (90,080 token IDs); no exact overlap was found by the documented hash and normalized-text checks. The review used committed aggregate summaries and evidence manifests, not private archives or an independent GPU rerun. The 112 fixed Native output records and 144 consumed verdict controls reproduced prior bytes with zero Native updates. No general recall, conversation, deployment or model adoption is established. Accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Evidence-status training and supplied-source diagnosis",
+          "url": "reports/newbrain-native-source-role-review-2026-11-26.html#confirmation"
+        },
+        {
+          "label": "Matched source-structure comparison",
+          "url": "reports/newbrain-native-source-role-review-2026-11-26.html#structure"
+        },
+        {
+          "label": "Read-only source and role diagnosis",
+          "url": "reports/newbrain-native-source-role-review-2026-11-26.html#diagnosis"
+        },
+        {
+          "label": "Fresh sentence-role weighting comparison",
+          "url": "reports/newbrain-native-source-role-review-2026-11-26.html#weighting"
+        },
+        {
+          "label": "Evidence boundaries",
+          "url": "reports/newbrain-native-source-role-review-2026-11-26.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-source-role-review-2026-11-26"
+    },
     {
       "id": "newbrain-native-prose-evidence-review-2026-11-25",
       "title": "Rehearsal reduces retention loss; scoped role extraction improves but fails qualification",
