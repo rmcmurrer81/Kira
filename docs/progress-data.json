@@ -1,8 +1,35 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-26",
-  "default_id": "newbrain-native-registry-review-2026-11-26",
+  "default_id": "newbrain-native-clause-verifier-review-2026-11-26",
   "milestones": [
+    {
+      "id": "newbrain-native-clause-verifier-review-2026-11-26",
+      "title": "Matched clause verification exposes persistent name-binding failures",
+      "date": "2026-11-26",
+      "date_basis": "November 26 ET committed aggregate matched CUDA trials",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two separate local CUDA comparisons failed their frozen gates. The declaration-verifier comparison completed 96 updates per arm but recovered 0/240 exact held ordered edges, 0/96 supported reports and 0/192 typed abstentions in each arm. The later matched clause-loss comparison completed 48 updates per arm but recovered 0/96 complete held name pairs in each arm.",
+      "body": [
+        "A separate request-word trial completed 168 total CUDA updates: held request spans improved from 1/192 to 57/192, but supported answers remained 0/96 in both arms and held request roles remained 0/192. Both failed qualification; the read-only archived endpoint was not an adopted improvement.",
+        "In the later isolated clause-loss comparison, exact alias spans were 4/96 and canonical spans 6/96 in each arm; both sides of matched reversals were correct on 0/48. Raw unrelated roles rose from 12/96 to 32/96, while raw request roles fell from 65/96 to 58/96. True assertion scores beat matched mentions on 48/48 versus 41/48 and denials on 30/48 versus 28/48. Neither arm found a usable calibration cutoff or classified any held role at the fixed 2.0 margin.",
+        "The production tokenizer reproduced 1,408/1,408 frozen clauses, and a separate gradient-only preflight passed five controlled checks without optimizer updates. The actual subsequent clause run completed 48 CUDA FP32 AdamW updates per arm; two independent scoring processes exactly reproduced the saved endpoints and raw scores. The earlier 96-update comparison also had exact cold replay."
+      ],
+      "boundary": "Reviewed November 26, 2026: committed aggregate synthetic summaries and evidence manifests, not an independent GPU rerun. Earlier knowledge retention, general conversation and full-document routing are not qualified. No checkpoint was adopted. Accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed matched clause-verifier results and limits",
+          "url": "reports/newbrain-native-clause-verifier-review-2026-11-26.html#clause"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-clause-verifier-review-2026-11-26"
+    },
     {
       "id": "newbrain-native-registry-review-2026-11-26",
       "title": "Registry and request diagnostics identify a structural supervision gap",
