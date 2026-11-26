@@ -25,6 +25,37 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-report-comparisons-2026-11-26",
+      "title": "Local GPU experiments improve some report selections, but fail qualification",
+      "date": "2026-11-26",
+      "date_basis": "November 26 ET committed aggregate results",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two separate matched CUDA comparisons each used 84 updates per arm on an RTX 5060 Ti. The report-candidate contrast raised fresh supported answers from 8/96 to 19/96; the later paired typed-reason objective raised them from 9/96 to 13/96. Both comparisons failed their frozen acceptance gates; no checkpoint was adopted.",
+      "body": [
+        "The report-candidate comparison held the starting state, optimizer and 504-document batch order fixed. Fresh unknown-signer abstention improved from 0/48 to 16/48 and false selections fell from 240 to 200, but verified-pair ranking fell from 64/96 to 54/96 and true-report-over-absence ranking fell from 91/96 to 63/96.",
+        "The separate paired typed-reason comparison used identical 84-update schedules and 72,119 fit tokens per arm. Fresh known-selector missing-report cases stayed 0/48, unknown-selector abstentions stayed 11/48, and false selections stayed 218. True-report-over-absence ranking moved from 51/96 to 50/96.",
+        "Both comparisons scored 0/144 on their held malformed cases and 0/128 on their supported whole-clause cases. Each experiment reports exact independent cold reopens of the local endpoints, optimizer state, histories and raw scores. Earlier retained-knowledge tests were reserved."
+      ],
+      "boundary": "November 26, 2026: reviewed the committed aggregate summaries and evidence manifests from separate assistant-authored synthetic experiments. No independent GPU rerun, earlier-memory retention qualification, general conversation capability, production adoption or full-model accuracy improvement is established. The accepted Original12 result remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Detailed comparison and evidence limits",
+          "url": "newbrain.html#newbrain-native-report-comparisons-2026-11-26"
+        },
+        {
+          "label": "Workstation memory upgrade",
+          "url": "support.html#hardware"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-report-comparisons-2026-11-26"
+    },
+    {
       "id": "newbrain-native-detached-role-review-2026-11-26",
       "title": "NewBrain source and request experiments expose persistent selection failures",
       "date": "2026-11-26",
