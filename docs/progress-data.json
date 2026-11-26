@@ -1,8 +1,57 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-26",
-  "default_id": "newbrain-native-request-availability-review-2026-11-26",
+  "default_id": "newbrain-native-detached-role-review-2026-11-26",
   "milestones": [
+    {
+      "id": "newbrain-native-detached-role-review-2026-11-26",
+      "title": "NewBrain source and request experiments expose persistent selection failures",
+      "date": "2026-11-26",
+      "date_basis": "November 26 ET committed aggregate results",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Three matched source-switch arms completed 168 GPU updates each but all produced 0/144 supported answers. Later detached request-role fitting improved legacy pair ranking to 559/720 from 514/720 in the matched control, yet recognized only 4/144 legacy and 0/192 presence requests. No checkpoint qualified. Accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "Three matched source-switch arms (ordinary, exact-name and paired contrast) each scored 0/144 supported answers and 96/432 exact typed abstentions with the direct decoder. A separate equal-outcome-weight comparison improved fit supported answers from 0/168 to 12/168 but fresh supported answers stayed 0/144; fresh typed abstentions fell from 96/432 to 0/432 and false selections rose from 0 to 432/432. Each fit used 168 GPU updates per arm with exact independent reopen results.",
+        "A separate matched 168-update report-evidence comparison increased correct raw support ordering from 48/96 to 54/96 held speaker-change pairs, with zero exact answer gains: both direct arms scored 0/144 supported, 96/432 typed abstentions and 0/96 targeted supported requests. The later joint-occurrence comparison stopped at the predetermined 84-update acquisition gate: 1/96 targeted supported fit answers versus 0/96, 0/96 typed absence in both, and 2/96 false selections versus 0/96. No fresh held scoring followed.",
+        "Separate sequence validity calibration on existing synthetic material improved duplicate-request ranking from 21/54 to 40/54 and early-report ranking from 12/39 to 34/39 versus mean-only calibration, but rejected 203/336 valid documents versus 59/336. No NewBrain optimizer update ran; the detached calibration failed its frozen gate.",
+        "Two detached sentence-role readouts completed 84 GPU updates each with the base frozen and identical 420-document fit order. On 492 synthetic fit-side check documents, legacy request ranking was 514/720 for cross-entropy and 559/720 for added ranking; recognition was 2/144 versus 4/144 (frozen base 18/144), and 0/192 for both on presence requests excluded from both fits. The candidate rejected 313/336 valid layouts, and both had 0/144 supported answers and 0/192 exact typed abstentions. Exact independent reopen reproduced both readouts and score packets. No reserved held bank was opened.",
+        "A subsequent zero-update audit found all 144 valid legacy requests used previously represented wording and position while all 192 presence requests used three templates absent from the fit. Across 96 presence pairs with identical request text and position, rank changed in 17 pairs and top role in two. Wording, context and representation are not isolated; a controlled crossed evaluation is a future experiment, not a demonstrated capability."
+      ],
+      "boundary": "Reviewed November 26, 2026. Aggregate synthetic research only: committed summaries and manifests, not an independent GPU rerun or extraction of private evidence archives. Earlier protected Native 112 and verdict 144 replays in the source-switch and report-evidence trials used separate preserved runtimes; they do not establish trial retention. The detached role check uses earlier synthetic material, not fresh natural dialogue. No checkpoint or live routing was adopted; accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Source-switch and outcome weighting",
+          "url": "reports/newbrain-native-detached-role-review-2026-11-26.html#source"
+        },
+        {
+          "label": "Visible report evidence and stopped acquisition",
+          "url": "reports/newbrain-native-detached-role-review-2026-11-26.html#evidence"
+        },
+        {
+          "label": "Separate validity calibration",
+          "url": "reports/newbrain-native-detached-role-review-2026-11-26.html#validity"
+        },
+        {
+          "label": "Frozen-base request-role readouts",
+          "url": "reports/newbrain-native-detached-role-review-2026-11-26.html#roles"
+        },
+        {
+          "label": "Retrospective wording diagnosis",
+          "url": "reports/newbrain-native-detached-role-review-2026-11-26.html#wording"
+        },
+        {
+          "label": "Evidence boundaries",
+          "url": "reports/newbrain-native-detached-role-review-2026-11-26.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-detached-role-review-2026-11-26"
+    },
     {
       "id": "newbrain-native-request-availability-review-2026-11-26",
       "title": "Request ranking improves in isolated tests; ordinary answers still fail",

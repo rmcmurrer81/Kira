@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {createHash}=require('node:crypto');
 const docs=path.join(__dirname,'../docs');
-const filename='knowledge/iris-projects-2026-11-26-2.json';
+const filename='knowledge/iris-projects-2026-11-26-3.json';
 const priorNov111=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-11-1.json'),'utf8'));
 const raw=fs.readFileSync(path.join(docs,filename),'utf8');
 const data=JSON.parse(raw);
@@ -14,23 +14,23 @@ assert.ok(loader.includes("PROJECT_NOTES='"+filename+"'"));
 const expected=loader.match(/const PROJECT_SHA256='([a-f0-9]{64})'/)?.[1];
 assert.ok(expected,'Iris integrity hash must be pinned');
 assert.equal(createHash('sha256').update(raw).digest('hex'),expected,'Iris public pack SHA-256 mismatch');
-assert.ok(irisPage.includes('iris.js?v=2026-11-26.2'));
-assert.ok(irisPage.includes('iris-projects.js?v=2026-11-26.2'));
+assert.ok(irisPage.includes('iris.js?v=2026-11-26.3'));
+assert.ok(irisPage.includes('iris-projects.js?v=2026-11-26.3'));
 const iris=require('../docs/iris-projects.js');
 // The Nov23 source audit and the fitted readers are different evaluations.
 // Iris must distinguish project-model training from read-only and fabricated tests.
 const nov23Source=data.projects.find(p=>p.id==='newbrain');
 assert.ok(nov23Source.status.length<31000,'NewBrain reviewed Nov23 status exceeds bounded Iris facet');
 assert.equal(iris.validate(data),data,'Current pinned public knowledge must be accepted by the Iris runtime');
-assert.equal(nov23Source.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(nov23Source.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const n of ['128/384','298/384','247/4,032','56/384','260/384','268/4,032','455/1,920','425/1,920','420/1,920','415/1,920','9/64','2/64','5,504/5,504','64/64','2/12'])assert.ok(nov23Source.status.includes(n),'Nov23 latest source diagnostic missing '+n);
 for(const [file,anchor] of [['newbrain.html','newbrain-intent-source-diagnostic-2026-11-23'],['updates.html','newbrain-intent-source-diagnostic-2026-11-23'],['reports/newbrain-intent-source-diagnostic-2026-11-23.html','joint-training'],['reports/newbrain-intent-source-diagnostic-2026-11-23.html','source-diagnostic'],['reports/newbrain-intent-source-diagnostic-2026-11-23.html','preparation'],['reports/newbrain-intent-source-diagnostic-2026-11-23.html','limits']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Latest Nov23 anchor missing '+file+'#'+anchor);
 for(const f of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('"id": "newbrain-intent-source-diagnostic-2026-11-23"'),'Latest timeline missing '+f);
 assert.ok(fs.existsSync(path.join(docs,'knowledge/iris-projects-2026-11-23-3.json')),'Prior immutable Iris pack must be preserved');
 assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain result?','',[],null)?.answer.includes('455/1,920'),'Iris should mention new source correctness audit');
 // Latest Nov23 item/scope results: real training distinct from source-only tests.
-assert.equal(data.content_version,'2026-11-26.2');
-assert.equal(nov23Source.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(data.content_version,'2026-11-26.3');
+assert.equal(nov23Source.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 assert.ok(fs.existsSync(path.join(docs,'knowledge/iris-projects-2026-11-23-4.json')));
 for(const value of ['65→85/320','70→80/320','70→90/320','20→95/320','123 and 169','60→80/320','45→85/320','9→12/64','1→7/64','254/1,152','269/1,152','608-case','2/12'])assert.ok(nov23Source.status.includes(value),'item/scope result missing '+value);
 for(const [file,anchor] of [['newbrain.html','newbrain-item-scope-review-2026-11-23'],['updates.html','newbrain-item-scope-review-2026-11-23'],['reports/newbrain-item-scope-review-2026-11-23.html','item-only'],['reports/newbrain-item-scope-review-2026-11-23.html','binary-override'],['reports/newbrain-item-scope-review-2026-11-23.html','guard'],['reports/newbrain-item-scope-review-2026-11-23.html','affirmative-scope'],['reports/newbrain-item-scope-review-2026-11-23.html','next-test'],['reports/newbrain-item-scope-review-2026-11-23.html','limits']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Missing item report anchor '+file+'#'+anchor);
@@ -40,7 +40,7 @@ assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the lat
 // Separate November 23 residual and relationship study.
 const laterNov23=data.projects.find(p=>p.id==='newbrain');
 for(const v of ['144/384','136/384','266/384','262/384','327','136/198','7/7','2/12'])assert.ok(laterNov23.status.includes(v),'Later Nov23 status missing '+v);
-assert.equal(laterNov23.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(laterNov23.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const [file,anchor] of [['newbrain.html','newbrain-absence-relationship-review-2026-11-23'],['updates.html','newbrain-absence-relationship-review-2026-11-23'],['reports/newbrain-absence-relationship-review-2026-11-23.html','trial'],['reports/newbrain-absence-relationship-review-2026-11-23.html','diagnosis'],['reports/newbrain-absence-relationship-review-2026-11-23.html','fixture'],['reports/newbrain-absence-relationship-review-2026-11-23.html','limits']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Later Nov23 anchor missing '+file+'#'+anchor);
 for(const f of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('"id": "newbrain-absence-relationship-review-2026-11-23"'));
 // November 23: optional-year learned-field gate and separate supplied-intent fixture.
@@ -56,7 +56,7 @@ assert.equal(iris.validate(JSON.parse(fs.readFileSync(path.join(docs,'knowledge/
 for(const v of ['192','2,304','3/384','1/384','0/384','6/128','71/128','2/384','3/384','382/384','383/384','1/64','6/64','121/192','407/4,032','458/4,032','2/12'])assert.ok(data.projects.find(p=>p.id==='newbrain').status.includes(v),'Latest query transfer metric '+v);
 for(const [file,a] of [['newbrain.html','newbrain-joint-query-transfer-review-2026-11-22'],['updates.html','newbrain-joint-query-transfer-review-2026-11-22'],['reports/newbrain-query-transfer-review-2026-11-22.html','training'],['reports/newbrain-query-transfer-review-2026-11-22.html','transfer'],['reports/newbrain-query-transfer-review-2026-11-22.html','mechanism'],['reports/newbrain-query-transfer-review-2026-11-22.html','limits']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+a+'"'),'Missing query-transfer anchor '+file+'#'+a);
 for(const f of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('"id": "newbrain-joint-query-transfer-review-2026-11-22"'));
-assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-26.2'));
+assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-26.3'));
 assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain result?','',[],null)?.answer.includes('3/384'));
 const prior225=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-22-5.json'),'utf8'));
 assert.equal(iris.validate(prior225),prior225);
@@ -70,9 +70,9 @@ assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the lat
 const prevNov223=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-22-3.json'),'utf8'));
 assert.equal(iris.validate(prevNov223),prevNov223);
 assert.equal(prevNov223.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-competitive-selector-review-2026-11-22');
-assert.equal(data.content_version,'2026-11-26.2');
+assert.equal(data.content_version,'2026-11-26.3');
 const nativeNov224=data.projects.find(p=>p.id==='newbrain');
-assert.equal(nativeNov224.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(nativeNov224.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const n of ['0/144','43/48','23/48','123/128','62/64','61/64','0/128','46/48','38/48','48/48','36/48','2/12'])assert.ok(nativeNov224.status.includes(n),'Missing latest Native metric '+n);
 for(const [file,id] of [['newbrain.html','newbrain-native-answer-emission-review-2026-11-22'],['updates.html','newbrain-native-answer-emission-review-2026-11-22'],['reports/newbrain-native-answer-emission-review-2026-11-22.html','native-generated'],['reports/newbrain-native-answer-emission-review-2026-11-22.html','first-decision'],['reports/newbrain-native-answer-emission-review-2026-11-22.html','segmentation'],['reports/newbrain-native-answer-emission-review-2026-11-22.html','prospective'],['reports/newbrain-native-answer-emission-review-2026-11-22.html','qualification']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+id+'"'),'Missing current Native anchor '+file+'#'+id);
 for(const file of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('"id": "newbrain-native-answer-emission-review-2026-11-22"'));
@@ -86,7 +86,7 @@ const prevNov222=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(prevNov222),prevNov222);
 assert.equal(prevNov222.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-statement-selector-review-2026-11-22');
 const competitive=data.projects.find(p=>p.id==='newbrain');
-assert.equal(competitive.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(competitive.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const v of ['49/224','40/224','33/224','36/160','60/160','61/160','0/64','3/64','1/64','0/32','65/80','2/12'])assert.ok(competitive.status.includes(v),'Latest competitive evidence '+v);
 for(const [file,id] of [['newbrain.html','newbrain-competitive-selector-review-2026-11-22'],['updates.html','newbrain-competitive-selector-review-2026-11-22'],['reports/newbrain-competitive-selector-review-2026-11-22.html','reviewed-scope'],['reports/newbrain-competitive-selector-review-2026-11-22.html','frozen-results'],['reports/newbrain-competitive-selector-review-2026-11-22.html','replay-and-retention'],['reports/newbrain-competitive-selector-review-2026-11-22.html','qualification']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+id+'"'),'Missing current public anchor '+file+'#'+id);
 for(const file of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('"id": "newbrain-competitive-selector-review-2026-11-22"'),'Missing latest timeline '+file);
@@ -97,7 +97,7 @@ const prevNov221=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(prevNov221),prevNov221);
 assert.equal(prevNov221.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-matched-selector-review-2026-11-22');
 const laterStatic=data.projects.find(p=>p.id==='newbrain');
-assert.equal(laterStatic.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(laterStatic.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const v of ['3/224','0/224','151/160','153/160','38/112','9/112','21/112','25/112','2,304','2/12'])assert.ok(laterStatic.status.includes(v),'Latest static metric '+v);
 for(const [file,id] of [['newbrain.html','newbrain-statement-selector-review-2026-11-22'],['updates.html','newbrain-statement-selector-review-2026-11-22'],['reports/newbrain-statement-selector-review-2026-11-22.html','reviewed-scope'],['reports/newbrain-statement-selector-review-2026-11-22.html','frozen-results'],['reports/newbrain-statement-selector-review-2026-11-22.html','replay'],['reports/newbrain-statement-selector-review-2026-11-22.html','qualification']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+id+'"'),'Missing static review anchor '+file+'#'+id);
 for(const file of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('"id": "newbrain-statement-selector-review-2026-11-22"'));
@@ -106,7 +106,7 @@ assert.ok(iris.answer({iris_projects:data,topics:[],sources:{}},'What is the lat
 const prev215=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-21-5.json'),'utf8'));
 assert.equal(iris.validate(prev215),prev215);
 assert.equal(prev215.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-typed-rank-review-2026-11-21');
-const latest22=data.projects.find(p=>p.id==='newbrain');assert.equal(latest22.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+const latest22=data.projects.find(p=>p.id==='newbrain');assert.equal(latest22.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const value of ['4/112','12/112','19/112','2/112','15/112','16/112','128/160','109/160','3,456','256','32','2/12'])assert.ok(latest22.status.includes(value),'Nov22 metric '+value);
 for(const [file,id] of [['newbrain.html','newbrain-matched-selector-review-2026-11-22'],['updates.html','newbrain-matched-selector-review-2026-11-22'],['reports/newbrain-matched-selector-review-2026-11-22.html','reviewed-scope'],['reports/newbrain-matched-selector-review-2026-11-22.html','matched-results'],['reports/newbrain-matched-selector-review-2026-11-22.html','abstention'],['reports/newbrain-matched-selector-review-2026-11-22.html','qualification']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+id+'"'),'Missing Nov22 anchor '+file+'#'+id);
 for(const file of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('"id": "newbrain-matched-selector-review-2026-11-22"'));
@@ -119,14 +119,14 @@ const previousNov214=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-p
 assert.equal(iris.validate(previousNov214),previousNov214);
 assert.equal(previousNov214.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-factorized-qualification-2026-11-21');
 const latestTyped=data.projects.find(p=>p.id==='newbrain');
-assert.equal(latestTyped.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(latestTyped.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const n of ['3/224','1/224','155/160','158/160','11/624','4/624','90/96','92/96','0/288','2/12'])assert.ok(latestTyped.status.includes(n),'New synthetic selector metric missing '+n);
 for(const [file,id] of [['newbrain.html','newbrain-typed-rank-review-2026-11-21'],['updates.html','newbrain-typed-rank-review-2026-11-21'],['reports/newbrain-typed-rank-review-2026-11-21.html','reviewed-scope'],['reports/newbrain-typed-rank-review-2026-11-21.html','fresh-successor'],['reports/newbrain-typed-rank-review-2026-11-21.html','rank-rejection'],['reports/newbrain-typed-rank-review-2026-11-21.html','source-only'],['reports/newbrain-typed-rank-review-2026-11-21.html','qualification']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+id+'"'),'Missing new report anchor '+file+'#'+id);
 for(const file of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('"id": "newbrain-typed-rank-review-2026-11-21"'));
 const newAnswer=iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain selector result?','',[],null);
 assert.ok(newAnswer?.answer.includes('3/224')&&newAnswer.answer.includes('11/624')&&newAnswer.answer.includes('2/12'),'New Iris answer does not report latest results');
 const factorized=data.projects.find(p=>p.id==='newbrain');
-assert.equal(factorized.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(factorized.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const n of ['2/224','39/224','158/160','98/160','10/224','89/224','0/64','2/64','4/64','256','2,048','2/12'])assert.ok(factorized.status.includes(n),'Missing selector metric '+n);
 assert.ok(factorized.technical.includes('16/16')&&factorized.technical.includes('10/10')&&factorized.technical.includes('UNTRAINED'));
 for(const [file,id] of [['newbrain.html','newbrain-factorized-qualification-2026-11-21'],['updates.html','newbrain-factorized-qualification-2026-11-21'],['reports/newbrain-factorized-selector-review-2026-11-21.html','reviewed-scope'],['reports/newbrain-factorized-selector-review-2026-11-21.html','calibration'],['reports/newbrain-factorized-selector-review-2026-11-21.html','source-ranking'],['reports/newbrain-factorized-selector-review-2026-11-21.html','typed-loss'],['reports/newbrain-factorized-selector-review-2026-11-21.html','qualification']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+id+'"'),'Missing new source anchor '+file+'#'+id);
@@ -136,12 +136,12 @@ assert.ok(selectorAnswer?.answer.includes('39/224')&&selectorAnswer.answer.inclu
 
 assert.equal(iris.validate(data),data,'Iris schema validation should succeed');
 assert.equal(data.reviewed_on,'2026-11-26');
-assert.equal(data.content_version,'2026-11-26.2');
+assert.equal(data.content_version,'2026-11-26.3');
 // New November 21 ranked trial, lexical diagnostic and source-copy preflight.
 const priorNov212=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-21-2.json'),'utf8'));
 assert.equal(iris.validate(priorNov212),priorNov212,'Preserve previous immutable Nov21.2 pack');
 const ranked=data.projects.find(p=>p.id==='newbrain');
-assert.equal(ranked.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(ranked.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const q of ['0/128','21/32','32/32','28/32','65/80','49/80','52/80','4/384','1/384','0/192','3/3','627/627','12/12','2/12'])assert.ok(ranked.status.includes(q),'Missing ranked/lexical metric '+q);
 for(const [p,a] of [['newbrain.html','newbrain-ranked-copy-review-2026-11-21'],['updates.html','newbrain-ranked-copy-review-2026-11-21'],['reports/newbrain-ranked-copy-review-2026-11-21.html','reviewed-scope'],['reports/newbrain-ranked-copy-review-2026-11-21.html','ranked-results'],['reports/newbrain-ranked-copy-review-2026-11-21.html','lexical-transfer'],['reports/newbrain-ranked-copy-review-2026-11-21.html','copy-prototype'],['reports/newbrain-ranked-copy-review-2026-11-21.html','qualification']])assert.ok(fs.readFileSync(path.join(docs,p),'utf8').includes('id="'+a+'"'),'Missing anchor '+p+'#'+a);
 for(const p of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,p),'utf8').includes('"id": "newbrain-ranked-copy-review-2026-11-21"'));
@@ -152,7 +152,7 @@ const priorNov211=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proj
 assert.equal(iris.validate(priorNov211),priorNov211);
 assert.equal(priorNov211.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-inverse-render-review-2026-11-21');
 const binding=data.projects.find(p=>p.id==='newbrain');
-assert.equal(binding.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(binding.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const s of ['23/48','20/48','5/48','4/48','2/32','1/64','2/128','4/128','65/80','62/80','2/12'])assert.ok(binding.status.includes(s),'Binding diagnostic missing '+s);
 for(const [f,id] of [['newbrain.html','newbrain-binding-diagnostics-2026-11-21'],['updates.html','newbrain-binding-diagnostics-2026-11-21'],['reports/newbrain-binding-diagnostics-review-2026-11-21.html','reviewed-scope'],['reports/newbrain-binding-diagnostics-review-2026-11-21.html','measured-results'],['reports/newbrain-binding-diagnostics-review-2026-11-21.html','qualification']])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('id="'+id+'"'),'Binding source anchor '+f+'#'+id);
 assert.ok(JSON.parse(fs.readFileSync(path.join(docs,'progress-data.json'),'utf8')).milestones.some(m=>m.id==='newbrain-binding-diagnostics-2026-11-21'));
@@ -162,7 +162,7 @@ const priorNov191=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proj
 assert.equal(iris.validate(priorNov191),priorNov191);
 assert.equal(priorNov191.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-position-diversity-review-2026-11-19');
 const inverse=data.projects.find(p=>p.id==='newbrain');
-assert.equal(inverse.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(inverse.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const v of ['22,800','24,848','2,048','4,096','63/64','64/64','36/64','9/64','24/64','14/64','16/48','28/48','65/80','2,304','384','Original12','2/12'])assert.ok(inverse.status.includes(v),'Latest result missing '+v);
 assert.ok(inverse.limits.includes('all ten strict gates'));
 for(const [page,fragment] of [['newbrain.html','newbrain-inverse-render-review-2026-11-21'],['updates.html','newbrain-inverse-render-review-2026-11-21'],['reports/newbrain-inverse-render-review-2026-11-21.html','reviewed-scope'],['reports/newbrain-inverse-render-review-2026-11-21.html','paired-results'],['reports/newbrain-inverse-render-review-2026-11-21.html','qualification'],['reports/newbrain-inverse-render-review-2026-11-21.html','boundaries']])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+fragment+'"'),'Source anchor '+page+'#'+fragment);
@@ -187,7 +187,7 @@ const priorNov185=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proj
 assert.equal(iris.validate(priorNov185),priorNov185);
 assert.equal(priorNov185.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-focal-objective-review-2026-11-18');
 const latestQuery=data.projects.find(p=>p.id==='newbrain');
-assert.equal(latestQuery.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(latestQuery.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const z of ['18,704','20,752','2,048','19/32','13/32','14/16','8/16','8/32','29/32','5/16','seven of eight','112','35','147','Original12','2/12'])assert.ok(latestQuery.status.includes(z),'Missing latest query result '+z);
 assert.match(latestQuery.limits,/seven of eight strict families failed/i);
 for(const [f,a] of [['newbrain.html','newbrain-query-context-review-2026-11-18'],['updates.html','newbrain-query-context-review-2026-11-18'],['reports/newbrain-query-context-review-2026-11-18.html','reviewed-scope'],['reports/newbrain-query-context-review-2026-11-18.html','paired-results'],['reports/newbrain-query-context-review-2026-11-18.html','qualification'],['reports/newbrain-query-context-review-2026-11-18.html','source-access']])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('id="'+a+'"'),'Missing Nov18.6 anchor '+f+'#'+a);
@@ -200,7 +200,7 @@ const priorNov184=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proj
 assert.equal(iris.validate(priorNov184),priorNov184,'Keep Nov 18.4 JSON immutable and valid');
 assert.equal(priorNov184.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-fact-order-diagnostic-2026-11-18');
 const latestFocal=data.projects.find(p=>p.id==='newbrain');
-assert.equal(latestFocal.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(latestFocal.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const x of ['2,048','4,096','16,656','18,704','78/128','73/128','54/128','20/32','22/32','9/24','11/24','two of seven','320','619,283','Original12','2/12'])assert.ok(latestFocal.status.includes(x),'Missing latest paired result '+x);
 assert.match(latestFocal.limits,/two of seven/i);
 for(const [file,anchor] of [['newbrain.html','newbrain-focal-objective-review-2026-11-18'],['updates.html','newbrain-focal-objective-review-2026-11-18'],['reports/newbrain-paired-focal-study-2026-11-18.html','reviewed-scope'],['reports/newbrain-paired-focal-study-2026-11-18.html','paired-results'],['reports/newbrain-paired-focal-study-2026-11-18.html','qualification']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Missing focal anchor '+file+'#'+anchor);
@@ -222,7 +222,7 @@ const priorNov182=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proj
 assert.equal(iris.validate(priorNov182),priorNov182);
 assert.equal(priorNov182.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-native-copy-continuation-2026-11-18');
 const rehearsal=data.projects.find(p=>p.id==='newbrain');
-assert.equal(rehearsal.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(rehearsal.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const term of ['2,048','1/16','16/16','26/48','30/48','10/48','11/48','1/32','3/32','5/32','1/24','41/64','45/64','Four of five','Original12','2/12'])assert.ok(rehearsal.status.includes(term),'Latest rehearsal evidence absent: '+term);
 assert.match(rehearsal.limits,/no matched no-replay causal control/);
 for(const [file,anchor] of [['newbrain.html','newbrain-mixed-rehearsal-review-2026-11-18'],['updates.html','newbrain-mixed-rehearsal-review-2026-11-18'],['reports/newbrain-mixed-rehearsal-review-2026-11-18.html','reviewed-scope'],['reports/newbrain-mixed-rehearsal-review-2026-11-18.html','measured-results'],['reports/newbrain-mixed-rehearsal-review-2026-11-18.html','limitations']])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'),'Missing November 18.3 anchor '+file+'#'+anchor);
@@ -254,7 +254,7 @@ assert.equal(iris.validate(priorNov171),priorNov171,'Keep the previous November 
 assert.match(priorNov171.projects.find(p=>p.id==='newbrain').limits,/bridge remains unimplemented/);
 assert.equal(iris.validate(priorNov111),priorNov111,'November 11 immutable knowledge remains valid');
 const currentNative=data.projects.find(p=>p.id==='newbrain');
-assert.equal(currentNative.source,'newbrain.html#newbrain-native-request-availability-review-2026-11-26');
+assert.equal(currentNative.source,'newbrain.html#newbrain-native-detached-role-review-2026-11-26');
 for(const q of ['2,000','18/80','0/16','36/48','Original12','2/12','20 numerical','24 fixed finite-difference','untrained'])assert.ok(currentNative.status.includes(q),'Native status missing '+q);
 assert.ok(fs.readFileSync(path.join(docs,'reports/newbrain-native-context-review-2026-11-17.html'),'utf8').includes('id="bridge-qualification-2026-11-17"'));
 assert.match(currentNative.limits,/no optimizer training/);
@@ -394,7 +394,7 @@ const priorNov44=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(priorNov44),priorNov44,'Preserve previous Nov4.4 reviewed knowledge and original source anchors');
 assert.equal(priorNov44.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v9-pathway-study-2026-11-04');
 assert.equal(priorNov44.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v8-v9-body-v5-2026-11-04');
-for(const [id,src] of [['newbrain','newbrain.html#newbrain-native-request-availability-review-2026-11-26'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
+for(const [id,src] of [['newbrain','newbrain.html#newbrain-native-detached-role-review-2026-11-26'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
   assert.equal(data.projects.find(p=>p.id===id).source,src,'latest reviewed source for '+id);
   const [page,anchor]=src.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Latest public research anchor missing '+id);
@@ -411,7 +411,7 @@ const priorNov43=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-proje
 assert.equal(iris.validate(priorNov43),priorNov43,'Preserve archived Nov4.3 resource and head results');
 assert.equal(priorNov43.projects.find(p=>p.id==='newbrain').source,'newbrain.html#newbrain-v8v2-admission-2026-11-04');
 assert.equal(priorNov43.projects.find(p=>p.id==='avatar-body').source,'kira-world-avatar-builder.html#avatar-builder-v6-v7-source-review-2026-11-04');
-for(const [id,src] of [['newbrain','newbrain.html#newbrain-native-request-availability-review-2026-11-26'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
+for(const [id,src] of [['newbrain','newbrain.html#newbrain-native-detached-role-review-2026-11-26'],['avatar-body','kira-world-avatar-builder.html#avatar-original-v2-review-2026-11-09']]){
   assert.equal(data.projects.find(p=>p.id===id).source,src);
   const [page,fragment]=src.split('#');
   assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+fragment+'"'),'Latest public source anchor missing '+id);
@@ -491,7 +491,7 @@ for(const x of ['LATEST NOV01 RETRIEVAL ONLY','800 calls','34/37','23/37','0/37'
 assert.equal(priorNov111.projects.find(p=>p.id==='newbrain').source,'updates.html#kira-world-hardware-and-worldbuilding-2026-11-08');
 for(const [page,anchor] of [['newbrain.html','newbrain-opt-in-context-selection-2026-11-01'],['updates.html','newbrain-historical-context-selection-2026-11-01'],['reports/newbrain-opt-in-historical-context-2026-11-01.html','historical-context-qualification']])assert.ok(fs.readFileSync(path.join(docs,page),'utf8').includes('id="'+anchor+'"'),'Missing Nov1 anchor '+page);
 // The picture timeline uses a new Nov 6.3 cache key for the two new V68 research milestones.
-assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-26.2'));
+assert.ok(fs.readFileSync(path.join(docs,'progress.html'),'utf8').includes('labs-data.js?v=2026-11-26.3'));
 const priorOct314=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-10-31-4.json'),'utf8'));
 assert.equal(iris.validate(priorOct314),priorOct314,'Preserve prior Oct31.4 immutable public pack');
 for(const q of ['LATEST OCT31 EXECUTED MEMORY RETRIEVAL','25/30','0/30','24/30','Original12 accepted 2/12'])assert.ok(priorNov111.projects.find(p=>p.id==='newbrain').status.includes(q),'Missing latest retrieval result '+q);
@@ -906,3 +906,14 @@ for(const [file,anchor] of [['newbrain.html','newbrain-native-request-availabili
 for(const f of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,f),'utf8').includes('"id": "newbrain-native-request-availability-review-2026-11-26"'));
 const requestAnswer=iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain result?','',[],null);
 assert.ok(requestAnswer?.answer.includes('281/576')&&requestAnswer.answer.includes('70/576')&&requestAnswer.answer.includes('2/12'));
+
+// Nov26.3: frozen-base detached role fitting, no held qualification or model adoption.
+const detachedPrior=JSON.parse(fs.readFileSync(path.join(docs,'knowledge/iris-projects-2026-11-26-2.json'),'utf8'));
+assert.equal(iris.validate(detachedPrior),detachedPrior);
+assert.equal(detachedPrior.content_version,'2026-11-26.2');
+assert.deepEqual(data.projects.filter(p=>p.id!=='newbrain'),detachedPrior.projects.filter(p=>p.id!=='newbrain'));
+for(const v of ['559/720','514/720','4/144','0/192','313/336','432/432','203/336','0/144','2/12'])assert.ok(nov23Source.status.includes(v),'Missing detached role result '+v);
+for(const [file,anchor] of [['newbrain.html','newbrain-native-detached-role-review-2026-11-26'],['updates.html','newbrain-native-detached-role-review-2026-11-26'],...["source","evidence","validity","roles","wording","limits"].map(a=>['reports/newbrain-native-detached-role-review-2026-11-26.html',a])])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('id="'+anchor+'"'));
+for(const file of ['labs-data.js','progress-data.json'])assert.ok(fs.readFileSync(path.join(docs,file),'utf8').includes('"id": "newbrain-native-detached-role-review-2026-11-26"'));
+const detachedAnswer=iris.answer({iris_projects:data,topics:[],sources:{}},'What is the latest NewBrain result?','',[],null);
+assert.ok(detachedAnswer?.answer.includes('559/720')&&detachedAnswer.answer.includes('0/192')&&detachedAnswer.answer.includes('2/12'));
