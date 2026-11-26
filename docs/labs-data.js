@@ -25,6 +25,33 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-registry-review-2026-11-26",
+      "title": "Registry and request diagnostics identify a structural supervision gap",
+      "date": "2026-11-26",
+      "date_basis": "November 26 ET committed aggregate diagnostics",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "A read-only GPU diagnostic of two previously fitted checkpoints on 128 new synthetic cases found 128/128 correct registry sentence roles but 0/128 correct request roles and 0/128 exact registry alias or canonical pointers in each arm. Supported native answers were 0/64 in both. The checkpoints remain rejected.",
+      "body": [
+        "A retrospective replay of 48 matched registered-missing versus unknown-name pairs found 0/48 with both required score signs in either arm. The paired objective raised mean known-minus-unknown scores by about 0.098 in both groups. A fabricated CPU feature distinguished registry from incidental mentions only when supplied correct artificial role predictions; it is not evidence of learned behavior.",
+        "The separate 128-case GPU probe used 64 matched pairs with identical query, reports, phrase inventory and token multiset within pairs. Both checkpoints returned 0/32 correct known-missing responses, 2/32 unknown-name abstentions and 60/64 false report selections on unsupported cases. Two cold processes reproduced raw scores exactly; zero optimizer updates ran.",
+        "A subsequent supervision audit reproduced 504/504 saved inputs, 72,119 token IDs and 3,024 active pointer targets. All 336 valid fit requests occurred in sentence one, and there were no incidental sentences. A proposed 128-case preflight contains 64 fit and 64 held cases with requests distributed over four positions; fabricated CPU gradient checks passed their narrow scope. No model execution or training occurred in this preflight."
+      ],
+      "boundary": "Reviewed November 26, 2026: committed aggregate synthetic summaries and evidence manifests, not an independent GPU rerun. The diagnostic is read-only; the preflight is fixture and gradient validation only. Earlier retained knowledge and general conversation remain unqualified. No checkpoint was adopted. Accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed registry diagnostic and limits",
+          "url": "reports/newbrain-native-registry-review-2026-11-26.html#probe"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-registry-review-2026-11-26"
+    },
+    {
       "id": "newbrain-native-report-comparisons-2026-11-26",
       "title": "Local GPU experiments improve some report selections, but fail qualification",
       "date": "2026-11-26",
