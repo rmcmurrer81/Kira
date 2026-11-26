@@ -25,6 +25,50 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-request-availability-review-2026-11-26",
+      "title": "Request ranking improves in isolated tests; ordinary answers still fail",
+      "date": "2026-11-26",
+      "date_basis": "November 26 ET committed aggregate results",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Separate matched 168-update-per-arm request trials improved conditional sentence ranking but failed ordinary-answer gates. In the later availability comparison, the correct request ranked first among sentences on 281/576 cases versus 74/576 for the control; the actual request decision was correct on only 70/576 versus 0/576. All three arms returned 0/144 exact supported answers. No checkpoint was adopted. Accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "A separate 144-update document-role candidate, compared with the preserved matched mean endpoint, raised correct report-sentence roles from 884/1152 to 984/1152 but request roles stayed 4/576. Both arms scored 0/144 supported selections, with 97/432 versus 98/432 correct typed abstentions. Both graph decoders labeled all valid documents unavailable. The candidate failed qualification.",
+        "Four FP32 CUDA arms completed 168 updates each, resuming at 84, with exact cold reproduction. All four scored 5/144 exact supported answers and 0/72 exact paired report orders. The unchanged, request-only, span-only and combined arms scored respectively 17/432, 12/432, 18/432 and 12/432 correct abstentions, with 354/432, 367/432, 355/432 and 368/432 false selections on unsupported cases. A retrospective ranking excluding the unavailable option found correct request sentences on 65/576, 273/576, 63/576 and 270/576 respectively; all actual request decisions were unavailable. No arm qualified.",
+        "Three arms completed 168 local CUDA updates each, resuming at 84, with exact cold reproduction. The unchanged, flat and factorized objectives all scored 0/144 supported answers and 0/72 paired orders. Correct typed abstentions were 37/432, 28/432 and 37/432; false unsupported selections were 254/432, 304/432 and 260/432. Conditional sentence ranking was 74/576, 238/576 and 281/576; actual request decisions were correct on 0/576, 0/576 and 70/576. Correctly unavailable malformed requests were 96/96, 96/96 and 65/96. The factorized arm falsely chose a request on 31/96 malformed cases and returned unavailable on 440/576 valid cases.",
+        "A zero-update analysis of consumed scores found the right report ranked first on 76/144 supported cases in every availability arm, but the right source name ranked first on 0/144. The factorized graph lacked a valid route on 575/576 valid documents and failed to mark exactly one selector on 563/576. The isolated request improvement did not translate into correct ordinary answers. These retrospective results are not fresh qualification evidence."
+      ],
+      "boundary": "Reviewed November 26, 2026. Separate assistant-authored synthetic evaluations; no independent GPU rerun or private archive extraction by the website review. The committed summaries and evidence manifests record exact cold reproduction and separate unchanged Native 112 and verdict 144 control replays. Those replays do not prove that experimental heads retained user memories. No checkpoint was adopted; no live model or routing change, qualified general learning or conversation is established. Accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Document-role comparison",
+          "url": "reports/newbrain-native-request-availability-review-2026-11-26.html#document"
+        },
+        {
+          "label": "Matched request and span objectives",
+          "url": "reports/newbrain-native-request-availability-review-2026-11-26.html#span"
+        },
+        {
+          "label": "Separate request availability and ranking",
+          "url": "reports/newbrain-native-request-availability-review-2026-11-26.html#availability"
+        },
+        {
+          "label": "Remaining failure",
+          "url": "reports/newbrain-native-request-availability-review-2026-11-26.html#diagnosis"
+        },
+        {
+          "label": "Evidence boundaries",
+          "url": "reports/newbrain-native-request-availability-review-2026-11-26.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-request-availability-review-2026-11-26"
+    },
+    {
       "id": "newbrain-native-source-role-review-2026-11-26",
       "title": "Source selection remains unqualified despite better sentence classification",
       "date": "2026-11-26",
