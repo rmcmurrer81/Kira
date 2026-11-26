@@ -25,6 +25,45 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-prose-evidence-review-2026-11-25",
+      "title": "Rehearsal reduces retention loss; scoped role extraction improves but fails qualification",
+      "date": "2026-11-25",
+      "date_basis": "November 25 ET committed aggregate results; some archives dated November 26 UTC",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "In a matched 128-update-per-arm Native rehearsal trial, earlier exact answers were 62/112 and 66/112 versus 78/112 before training; both arms still answered 0/48 fresh supported questions. In a separate 192-update-per-arm role-extraction comparison, both roles were exact on 257/288 control and 269/288 scope-penalty cases versus 3/288 at baseline. Both trials failed qualification. Accepted Original12 remains 2/12, not rerun.",
+      "body": [
+        "Both arms continued from the same original checkpoint, with 192 new fitting rows and 64 screened rehearsal rows. Both answered 0/48 fresh supported questions and 0/24 exact actual-answer follow-ups. Correct abstentions fell from 23/24 to 6/24 and 0/24; earlier exact answers fell from 78/112 to 62/112 and 66/112. The arms lost 19 and 17 individually correct earlier answers. Prior trained copies retained 1/112 and 2/112 on the same earlier questions; multiple training changes and different fresh held sets prevent attributing the numerical recovery to rehearsal alone. The newly lost earlier answers were not merely trailing-whitespace or stopping differences. Warm and independent cold outputs matched byte for byte; neither copy qualified.",
+        "An earlier 192-update-per-arm status comparison yielded 33/72 versus 41/72 exact statuses but just 12/72 full status-and-role answers for each. On a distinct matched mention-order bank, the newer fixed role extractors scored 0/288 both-role spans. The subsequent matched scope trial restored the same 192-step role-head state and ran 192 further updates per arm. On 288 labeled role cases from a 360-sentence held bank, baseline, control and scope penalty scored 3/288, 257/288 and 269/288. Person-first scores were 3/144, 125/144 and 128/144; object-first scores were 0/144, 132/144 and 141/144. The scope change corrected 17 cases and regressed five; net gains were confined to 2/12 held facts. Duplicate-index errors were already zero in both trained arms. The predeclared comparative gate failed; this is not qualified ordinary-language recall.",
+        "On the scope trial's 360-sentence bank, fixed mean and log-mean-exp status heads scored 88/360 and 95/360 overall, with only 2/72 and 7/72 confirmed carries. A read-only recount found the confirmed-carry margin exceeded that of a matched unrelated statement in 69/72 and 72/72 groups, but exceeded a matched possible carry in just 24/72 and 52/72. A new comparison with 480 fitting and 360 held sentences was prepared; eight fabricated objective/source tests passed and tokenizer authoring made 840 calls. Preparation used zero model forwards and zero optimizer updates; the planned new status-head training has no measured result yet."
+      ],
+      "boundary": "Reviewed November 25, 2026 Eastern time (some archives are dated November 26 UTC). The source records describe separate assistant-authored synthetic experiments and exact independent cold captures, including two original-state replays of 112/112 earlier output records. The public review inspected committed aggregate summaries and manifests, not private evidence archives or an independent GPU rerun. No adopted checkpoint, general learning, ordinary conversation or deployment qualification. Accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Matched Native rehearsal learning",
+          "url": "reports/newbrain-native-prose-evidence-review-2026-11-25.html#rehearsal"
+        },
+        {
+          "label": "Separate evidence and role-extraction experiments",
+          "url": "reports/newbrain-native-prose-evidence-review-2026-11-25.html#roles"
+        },
+        {
+          "label": "Evidence status remains weak; next test prepared",
+          "url": "reports/newbrain-native-prose-evidence-review-2026-11-25.html#status"
+        },
+        {
+          "label": "Evidence boundaries",
+          "url": "reports/newbrain-native-prose-evidence-review-2026-11-25.html#limits"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-prose-evidence-review-2026-11-25"
+    },
+    {
       "id": "newbrain-native-prose-transfer-review-2026-11-25",
       "title": "Structured retrieval reaches 240/240 on a bounded test; fresh transfer and prose learning fail",
       "date": "2026-11-25",
