@@ -1,7 +1,7 @@
 /* Public, readable lab milestones. Original evidence is retained in review/milestone-source-records.json. */
 window.KIRA_LABS_TIMELINE = {
   "schema_version": 1,
-  "prepared_on": "2026-11-26",
+  "prepared_on": "2026-11-27",
   "owner": "Robert McMurrer / Kira Labs",
   "source_snapshot": "5fb345f72852d180b0c4b25a4c1bb83215ace6a7",
   "note": "Public milestone summaries record dated experiments and proposed designs. Pulse, Three.js and NewBrain are not presented as an integrated running system; clinical simulation remains separate from experimental body work.",
@@ -24,6 +24,33 @@ window.KIRA_LABS_TIMELINE = {
     "future": "Future goal"
   },
   "milestones": [
+    {
+      "id": "newbrain-native-factored-boundary-review-2026-11-27",
+      "title": "Factored name-boundary scoring reduces false selections but still rejects correct names",
+      "date": "2026-11-27",
+      "date_basis": "November 27 ET committed aggregate synthetic CUDA fits and saved-score analysis",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Three local synthetic name-selection fits, each using 72 FP32 updates against saved controls, failed qualification. In the latest factored-boundary comparison, complete held supported clauses remained 0/60, selected gold spans fell from 9/96 to 2/96, and gold spans ranked first rose from 9/96 to 15/96. False selections fell from 29 to 0; correct empty clauses rose from 35/36 to 36/36.",
+      "body": [
+        "Earlier model-scored negative sampling retained 1/60 complete held clauses in both arms, improved empty clauses from 32/36 to 34/36 and reduced false selections from 12 to 4, but gold ranking fell from 11/96 to 9/96. A separate paired-span loss on fresh held clauses yielded 0/60 complete answers and 0/96 selected gold spans in both arms; 5/96 ranked first in both, and false selections rose from 8 to 9. These are separate comparisons, not a cumulative score.",
+        "The latest fit replayed all 4,608 saved negative choices; two independent cold restores reproduced eight paired raw score files. A read-only crossed-readout diagnostic used 704 native and 704 crossed clause vectors, with zero optimizer updates. The original five-way readout selected 9/96 versus 7/96 correct names on control versus factored logits; grouped readout selected 1/96 versus 2/96 and zero wrong spans on both. All four cells were 0/60 complete supported clauses and 0/33 single-word names.",
+        "The factored logits' 33 held singleton names all failed the end decision; first-word and membership decisions additionally blocked 29 and 23 respectively. Fixing the end sign alone would clear 0/33, so ending-token coverage alone does not explain failure. This is a saved-score blocker diagnostic, not a learned correction."
+      ],
+      "boundary": "Reviewed November 27, 2026 ET from committed aggregate synthetic evidence and saved-score summaries, not an independent GPU rerun. Both latest endpoints failed calibration and older retention (0/2 previously correct spans retained); no checkpoint was adopted. Accepted Original12 remains 2/12, not rerun. No canonical memory, full-document or general dialogue qualification.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed factored boundary results and limitations",
+          "url": "reports/newbrain-native-factored-boundary-review-2026-11-27.html#fit"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-factored-boundary-review-2026-11-27"
+    },
     {
       "id": "newbrain-native-balanced-role-review-2026-11-26",
       "title": "Balanced name-role learning recovers one-word names but increases false detections",
