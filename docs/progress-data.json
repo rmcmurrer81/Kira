@@ -1,8 +1,35 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-27",
-  "default_id": "newbrain-native-factored-boundary-review-2026-11-27",
+  "default_id": "newbrain-native-frozen-role-transfer-review-2026-11-27",
   "milestones": [
+    {
+      "id": "newbrain-native-frozen-role-transfer-review-2026-11-27",
+      "title": "Frozen role features fit familiar cues but fail held transfer",
+      "date": "2026-11-27",
+      "date_basis": "November 27 ET committed aggregate matched CUDA and frozen-feature results",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two separate matched 60-update CUDA trials failed qualification. In the equal-norm comparison, held supported clauses were 2/84 in both trained arms (unchanged checkpoint 1/84), correct empty clauses 36/36 in both, and natural-style supported clauses 0/24 in both. Correct cue direction rose from 12/36 to 18/36, but both signs were correct in 0/36 pairs.",
+      "body": [
+        "The earlier matched readout trial produced 2/84 versus 0/84 held exact supported clauses for the existing versus paired objective; held true-name ranking was 9/84 versus 10/84 and false clipped spans fell from four to two. Both failed the older name-retention veto (0/2). Independent cold processes reproduced the saved output streams.",
+        "A read-only scalar audit of 744 saved synthetic score packets showed that in either equal-norm arm, a wrong candidate tied or outranked the correct span in 76/84 held supported cases. Only three correct spans ranked strictly first but remained nonpositive; threshold adjustment alone cannot recover the outranked cases. Earlier exact controls fell from 24/24 to 22/24 in both arms.",
+        "A separate frozen contextual-feature probe used two independent CUDA processes, 448 label-free forwards each, with identical raw features and logits. A fit-only affine probe scored 36/36 familiar pairs with both signs correct versus 0/36 for the original head; it scored 0/24 calibration and 0/36 held pairs. Held relative direction fell from 24/36 for the original head to 6/36 for the probe. No probe was inserted into the model and no original optimizer update ran. The probe's failure does not show that the encoder lacks all recoverable contextual information."
+      ],
+      "boundary": "Reviewed November 27, 2026 ET from committed aggregate synthetic summaries and manifests, not an independent GPU rerun. No checkpoint qualified or was adopted. Accepted Original12 remains 2/12, not rerun. These are synthetic component experiments, not general dialogue or personal-memory qualification.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed frozen role-feature transfer and matched trial results",
+          "url": "reports/newbrain-native-frozen-role-transfer-review-2026-11-27.html#trials"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-frozen-role-transfer-review-2026-11-27"
+    },
     {
       "id": "newbrain-native-factored-boundary-review-2026-11-27",
       "title": "Factored name-boundary scoring reduces false selections but still rejects correct names",
