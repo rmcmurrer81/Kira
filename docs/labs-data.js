@@ -25,6 +25,34 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-request-boundary-review-2026-11-27",
+      "title": "NewBrain compares ordered parsing and isolates request-boundary failures",
+      "date": "2026-11-27",
+      "date_basis": "November 27 ET committed aggregate matched CUDA and read-only attribution results",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two trained synthetic parser arms completed 288 CUDA AdamW updates each. On 336 held supported cases, the fixed baseline, order-blind arm and ordered arm scored 0/336, 16/336 and 7/336 exact; correct abstentions were 95/96, 87/96 and 92/96. Neither trained arm qualified; complete fact swaps were 0/96 in every arm.",
+      "body": [
+        "In a separate paired-role comparison, the treatment completed 128 CUDA updates against a saved matched rank-only control. All three arms scored 0/336 supported exact, 24/24 absent and 36/96 earlier exact; strict gold ranks were 4/336, 5/336 and 5/336, with 0/96 complete swaps. Four of seven frozen gates failed. Independent cold processes agreed on 2,088 raw case outputs. The extra treatment response was incorrect.",
+        "The parser comparison initially stopped before model load (zero updates) because an evaluation-policy path was not protected; the corrected access checks preceded the completed trial. A separate restart rehearsal reproduced weights, optimizer state, RNG, history and four raw outputs for each arm. Both trained parser arms later completed 288 updates on 576 synthetic fit cases, with independent cold capture reproducing state and outputs. Earlier supported answers were 0/60 and earlier abstentions 36/36 for all arms. Exact request-window rank was 2/408 order-blind versus 5/408 ordered; complete structure was 0/432 in both. The ordered arm improved abstention relative to the order-blind arm but produced fewer correct supported answers.",
+        "A read-only replay of 432 consumed held cases substituted gold structural fields only for diagnosis. Supplying the request window raised order-blind supported exact from 16/336 to 59/336 and ordered from 7/336 to 46/336; supplying all request fields yielded 100/336 and 81/336. Supplying every correct structural field gave both resolvers 336/336 supported, 96/96 abstentions and 96/96 swaps. These are label-assisted diagnostic outcomes, not learned performance. The exact request range ranked in the top three for 382/408 and 389/408 rows, but ranked first only 2/408 and 5/408.",
+        "The next cue-conditioned request-boundary proposal uses separate left and right word features with learned direction and cue conditioning. Eleven inert source tests passed using simulated tensor inputs, with zero tokenizer cases, numeric model forwards or optimizer updates. A draft with twelve templates per split passed a template-level collision audit; fresh literal/token overlap checks and binding are still required. No training or held evaluation of this new proposal has been executed."
+      ],
+      "boundary": "Reviewed November 27, 2026 ET from committed aggregate synthetic summaries and evidence manifests, not an independent GPU rerun. No checkpoint qualified or was adopted. Accepted Original12 remains 2/12, not rerun. These are synthetic component experiments, label-assisted diagnostics and source-only preparation, not qualified conversation, improved accepted memory or deployed model gains.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed matched parser trials and request-boundary attribution",
+          "url": "reports/newbrain-native-request-boundary-review-2026-11-27.html#trials"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-request-boundary-review-2026-11-27"
+    },
+    {
       "id": "newbrain-native-context-branch-review-2026-11-27",
       "title": "NewBrain tests context-sensitive selection and verifies a disposable branch restart",
       "date": "2026-11-27",
