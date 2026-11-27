@@ -1,8 +1,36 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-27",
-  "default_id": "newbrain-native-request-boundary-review-2026-11-27",
+  "default_id": "newbrain-native-compact-wording-review-2026-11-27",
   "milestones": [
+    {
+      "id": "newbrain-native-compact-wording-review-2026-11-27",
+      "title": "NewBrain improves synthetic fact selection but fails wording-transfer qualification",
+      "date": "2026-11-27",
+      "date_basis": "November 27 ET committed aggregate matched CUDA and wording attribution results",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two compact synthetic fact-lookup arms completed 288 FP32 CUDA updates each from the same starter, varying only the training aliases. In the hardest held cell, combining unseen aliases and request wording, the unchanged baseline, fixed-alias and renamed-alias arms scored 0/336, 97/336 and 81/336 supported exact answers; correct abstentions were 76/96, 81/96 and 85/96; exact fact swaps were 0/96, 27/96 and 23/96. Both experimental arms failed the frozen qualification gate.",
+      "body": [
+        "Across the four held cells, baseline supported scores were all 0/336. Fixed-alias scores were 181/336, 89/336, 203/336 and 97/336; renamed-alias scores were 198/336, 72/336, 205/336 and 81/336, respectively. Each fresh process restored both fitted states and the unchanged original and recorded 7,200 forwards; all 30 corresponding streams matched byte-for-byte. Earlier supported answers remained 0/60 and earlier abstentions 36/36 in all arms. The gate failed on held abstention nonregression, historical veto, strict directional gain, directional support, width swaps and distance.",
+        "An earlier matched request-boundary trial failed: both 288-update arms scored 0/336 held supported exact versus 0/336 baseline, while abstentions rose from 76/96 to 96/96. Fitting supported scores improved from 78/448 to 226/448 between the two scorers, but did not transfer to held cases. All 24 raw output files matched across two cold processes.",
+        "A saved-score replay reproduced 3,456 original fitted-arm grades with eight independently matching proposal streams and zero model calls or optimizer updates. Rewording lost 115 previously correct answers in the fixed-alias arm and 137 in the renamed-alias arm. Supplying correct request cue, window and direction to the fixed decoder recovered 46 and 75 of those lost answers, respectively; across the 336 supported examples in the harder cell it recovered 147 and 164, but introduced four and seven new false selections. These are label-assisted diagnostics, not learned accuracy; exact unaltered scores remain 97/336 and 81/336.",
+        "A new wording-diversity comparison is prepared but not trained. Each schedule contains 288 batches of eight, sharing the first 72 and varying request wording over matched logical examples in the remaining 216. The corpus contains 4,032 record occurrences, 3,864 unique inputs and 1,728 held cases in four cells. Literal, normalized and Native-token audits found zero collisions against 60,202 consumed input identities. The fixed resolver passed authored answer and abstention checks on all 4,032 rows; these tokenizer and resolver checks made zero model calls and zero optimizer updates."
+      ],
+      "boundary": "Reviewed November 27, 2026 ET from committed aggregate summaries and evidence manifests, not an independent GPU rerun. No checkpoint qualified or was adopted. Accepted Original12 remains 2/12, not rerun. Synthetic fact lookup and label-assisted diagnosis do not establish general conversation, qualified memory improvement or deployed model gains. Exact prompts, private assets, per-case grades and checkpoints are not published.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed compact fact-lookup and wording-transfer results",
+          "url": "reports/newbrain-native-compact-wording-review-2026-11-27.html#trials"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-compact-wording-review-2026-11-27"
+    },
     {
       "id": "newbrain-native-request-boundary-review-2026-11-27",
       "title": "NewBrain compares ordered parsing and isolates request-boundary failures",

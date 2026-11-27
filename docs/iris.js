@@ -20,8 +20,8 @@
   'knowledge/projects-2026-09-12-1.json':null
  });
  // Immutable release path: never overwrite a pack needed by a cached loader.
- const PROJECT_NOTES='knowledge/iris-projects-2026-11-27-4.json';
- const PROJECT_SHA256='8b92f2302bb11bce7b45a6429f1a412c768840703d95618685200d9952ccc13a';
+ const PROJECT_NOTES='knowledge/iris-projects-2026-11-27-5.json';
+ const PROJECT_SHA256='2648586eefe7436a0272a3f186965ef6674151b92ba6a06bf18c5b2ed2b271f6';
  const status=document.getElementById('guide-status'),send=document.getElementById('send-question');
  const nativeFetch=window.fetch.bind(window);
  async function blobHash(text){
@@ -57,7 +57,7 @@
    const url=new URL(PROJECT_NOTES,location.href).href;
    const response=await nativeFetch(url,{method:'GET',credentials:'omit',cache:'no-store',signal:controller.signal});
    if(!response.ok)throw Error('Current project notes unavailable');
-   const text=await response.text();if(text.length>175000)throw Error('Project notes too large');
+   const text=await response.text();if(text.length>180000)throw Error('Project notes too large');
    const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text))),n=>n.toString(16).padStart(2,'0')).join('');
    if(digest!==PROJECT_SHA256)throw Error('Project notes integrity mismatch');
    return window.KiraIrisProjects.validate(JSON.parse(text));
