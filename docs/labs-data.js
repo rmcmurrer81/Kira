@@ -25,6 +25,34 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-context-branch-review-2026-11-27",
+      "title": "NewBrain tests context-sensitive selection and verifies a disposable branch restart",
+      "date": "2026-11-27",
+      "date_basis": "November 27 ET committed aggregate matched CUDA and disposable runtime results",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two separate matched 48-update CUDA experiments failed qualification. In the competitive span comparison, unchanged / standard / competitive exact supported selections were 0/240 each; correct abstentions were 45/48, 48/48 and 48/48; strict gold ranks were 6/240, 2/240 and 3/240; earlier exact controls were 36/96 each. Incorrect span selections fell from 242 to 42 to 27, but there was no correct supported selection.",
+      "body": [
+        "In the distinct definition-pair trial, unchanged / standard / paired arms scored 0/240 each on exact supported selections, 43/48, 45/48 and 45/48 on abstention, and 1/240, 5/240 and 5/240 on strict gold rank. Earlier exact controls were 36/96 in all arms; both trained arms made two formerly abstaining supported retention cases select wrong spans. Neither recovered the two missing historical spans or completed both definition reversals in any of 36 paired blocks. Each trained arm in each comparison used 48 optimizer updates. Independent cold processes reproduced recorded outputs; no endpoint qualified.",
+        "A retrospective score audit found every competitive gold span below zero; broad suppression reduced false selections without solving binding. In a separate read-only contextual-feature study, two cold processes each scored 336 cases. Held results were 0/168 supported, 12/12 absent and 2/168 strict gold rank; all 96 earlier controls reproduced. All 24 fixed-cue pairs changed features at both distances, but median response fell 75-fold from two to 21 tokens. Irrelevant swaps also changed features, and no complete both-map reversal occurred. This diagnoses a context signal, not learned selection.",
+        "A new equal-sized 2,600-parameter context branch and rotated-value control passed disposable CUDA initialization and gradient checks after a shared-mode bug was corrected. Two independent processes each ran 360 forwards on 120 development prompts; original role/span output bits and gradients were preserved in both arms. A later scheduled runtime rehearsal used four optimizer steps per arm, plus resumed two-step continuations: 12 total optimizer updates on new disposable weights. Both four-step endpoints matched uninterrupted weights, optimizer state, RNG, history and gradient counts. Wrong schedule prefixes and optimizer counters were denied before restore. Seven mock-score rehearsals passed. The preserved native checkpoint and held labels stayed closed.",
+        "The proposed matched 128-update comparison per arm uses 240 synthetic fit prompts across 16 groups; it has not been executed on the preserved checkpoint. Cold held scoring and retention qualification remain outstanding."
+      ],
+      "boundary": "Reviewed November 27, 2026 ET from committed aggregate synthetic summaries and evidence manifests, not an independent GPU rerun. No checkpoint qualified or was adopted. Accepted Original12 remains 2/12, not rerun. These are bounded synthetic component studies and disposable engineering rehearsals, not qualified conversation, memory improvement or a deployed new brain.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed matched selection trials and context-branch runtime",
+          "url": "reports/newbrain-native-context-branch-review-2026-11-27.html#trials"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-context-branch-review-2026-11-27"
+    },
+    {
       "id": "newbrain-native-frozen-role-transfer-review-2026-11-27",
       "title": "Frozen role features fit familiar cues but fail held transfer",
       "date": "2026-11-27",
