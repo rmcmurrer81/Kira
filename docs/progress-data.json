@@ -1,8 +1,35 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-11-26",
-  "default_id": "newbrain-native-clause-verifier-review-2026-11-26",
+  "default_id": "newbrain-native-balanced-role-review-2026-11-26",
   "milestones": [
+    {
+      "id": "newbrain-native-balanced-role-review-2026-11-26",
+      "title": "Balanced name-role learning recovers one-word names but increases false detections",
+      "date": "2026-11-26",
+      "date_basis": "November 26 ET committed aggregate matched CUDA trial and separate preflight",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "A matched local CUDA FP32 comparison completed 72 updates per arm. At the fixed zero diagnostic cutoff, exact held-out complete names rose from 0/96 to 24/96, all one-word names (0/39 to 24/39). Two-word names remained 0/33 and three-word names 0/24 in both arms. No calibration cutoff met the frozen gates.",
+      "body": [
+        "Held-out no-name clauses with a false acceptance rose from 0/36 to 27/36; false-positive spans rose from 0 to 110. The balanced arm missed all 57 held-out last-word labels and all 57 fit last-word labels, indicating an acquisition failure as well as held-out failure. Two independent read-only restores exactly reproduced all six candidate and role streams.",
+        "A separate negative-role mask GPU qualification matched all 5,092 ordinary and 768 negative scores to a scalar oracle across two independent FP32 runs; 36 no-name gradient checks matched exactly. This verifies numerical behavior, not name selection or learning.",
+        "A fresh synthetic panel comprises 96 fit, 64 calibration and 96 held-out clauses; all 256 round-tripped through the production tokenizer. A fit-only rehearsal wrote its receipt but the CLI exited with a serialization error; an independent report-only check verified the receipt. Zero training updates completed in the fresh phase; no training run was admitted."
+      ],
+      "boundary": "Reviewed November 26, 2026 ET from committed aggregate synthetic summaries and evidence manifests, not an independent GPU rerun. Both fitted arms failed qualification; no checkpoint was adopted. No general dialogue, retained-memory or full-document qualification. Accepted Original12 remains 2/12, not rerun.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed balanced name-role results and limits",
+          "url": "reports/newbrain-native-balanced-role-review-2026-11-26.html#fit"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-balanced-role-review-2026-11-26"
+    },
     {
       "id": "newbrain-native-clause-verifier-review-2026-11-26",
       "title": "Matched clause verification exposes persistent name-binding failures",
