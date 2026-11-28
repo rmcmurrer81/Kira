@@ -25,6 +25,33 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-width-qualification-review-2026-11-27",
+      "title": "NewBrain wording and terminal-window trials fail; width corpus qualifies for preparation",
+      "date": "2026-11-27",
+      "date_basis": "November 27 ET reviewed aggregate matched CUDA trials and source-only corpus qualification",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "Two separate matched synthetic fact-lookup comparisons failed their frozen qualification gates. In the hardest held cell (unseen aliases and wording), repeated versus varied wording scored 81/336 versus 71/336 supported exact answers, 85/96 versus 84/96 correct abstentions and 26/96 versus 18/96 exact swaps (baseline 0/336, 74/96, 0/96). In the subsequent terminal-window comparison, standard cross-entropy versus added ranking scored 43/336 versus 38/336 supported exact answers, 89/96 versus 89/96 abstentions and 9/96 versus 8/96 exact swaps (baseline 0/336, 75/96, 0/96).",
+      "body": [
+        "Each comparison used two matched 288-update FP32 CUDA fits; each cold process performed 7,200 forwards, with 30 corresponding output streams matching exactly per comparison. Earlier supported exact answers remained 0/60 and earlier abstentions 36/36 across both comparisons. No experimental checkpoint qualified. The last terminal-window candidate retained two inherited historical veto misses.",
+        "Read-only attribution supplied the correct question role and then corrected declaration width: all 17 false candidate selections in that diagnostic reverted to abstention, with no new false selections. Correcting request fields alone recovered 67 of 83 wrong supported spans in a separate attribution subset; the supplied fields came from frozen labels. This is a diagnostic intervention, not learned accuracy.",
+        "The revised synthetic corpus passed the unchanged tokenizer gate: width-only comparisons improved from 96/128 to 128/128 and Native geometry groups from 44/56 to 56/56. Independent readback verified all 2,304 token sequences. A separate resolver replay bound all 2,304 authored labels exactly (576 fitting, 1,728 held; 1,792 supported and 512 abstention cases). Both checks used zero model calls and zero optimizer updates. The next step is a matched fitting schedule and gradient-isolation check; model training on the new width corpus has not occurred."
+      ],
+      "boundary": "Reviewed November 27, 2026 ET from committed aggregate summaries and evidence manifests, not an independent GPU rerun. No checkpoint qualified or was adopted. Accepted Original12 remains 2/12, not rerun. The corpus and label checks do not establish learned behavior or general conversation. Private prompts, labels, outputs, code, checkpoints and source assets remain unpublished.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed wording, terminal-window and width corpus results",
+          "url": "reports/newbrain-native-width-qualification-review-2026-11-27.html#trials"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-width-qualification-review-2026-11-27"
+    },
+    {
       "id": "newbrain-native-compact-wording-review-2026-11-27",
       "title": "NewBrain improves synthetic fact selection but fails wording-transfer qualification",
       "date": "2026-11-27",
