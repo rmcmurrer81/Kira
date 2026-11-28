@@ -1,8 +1,35 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-11-27",
-  "default_id": "newbrain-native-width-qualification-review-2026-11-27",
+  "reviewed_on": "2026-11-28",
+  "default_id": "newbrain-native-direction-balanced-review-2026-11-28",
   "milestones": [
+    {
+      "id": "newbrain-native-direction-balanced-review-2026-11-28",
+      "title": "NewBrain paired-direction trial rejected; balanced clause-loss engineering verified",
+      "date": "2026-11-28",
+      "date_basis": "November 28 ET reviewed aggregate matched CUDA trial, fit-only proof and source rehearsal",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "A matched synthetic request-direction trial used 48 FP32 CUDA optimizer updates per arm with identical 96-case fitting schedules. The seeded baseline, ordinary cross-entropy and paired-direction arms each answered 0/32 supported prompts exactly and 0/16 supported pairs fully correctly. Both trained arms scored 8/16 on raw first-endpoint direction versus 0/16 at seed zero; all three scored 16/16 on raw last-endpoint direction.",
+      "body": [
+        "All three endpoints returned empty outputs on 64/64 missing or uncertain prompts but gave 0/64 exact abstention reasons, retained 0/60 earlier supported cases and 36/36 earlier absent cases, and missed both historical veto cases (0/2). Independent cold readings reproduced all raw floats byte for byte. Neither arm qualified.",
+        "A separate fit-only CUDA proof compared ordinary and balanced clause-kind loss: logits matched, cue/window/direction/width gradients were exact, and maximum absolute error against the independent scaled derivative was 1.889513e-09. Before/after state matched exactly; zero optimizer updates. This is a one-batch implementation check, not a learning result.",
+        "The next matched balanced-kind study is fixed to 120 held prompts and 96 earlier controls. Two independent mock cold workers reproduced exact outputs; nine deliberate faults were rejected. Five independent source-checking jobs checked worker roles; the real execution gate remained closed. These rehearsals used zero model calls or optimizer updates; the proposed real fit has not been executed."
+      ],
+      "boundary": "Reviewed November 28, 2026 ET from committed aggregate summaries and manifests, not an independent GPU rerun. No checkpoint qualified or was adopted. Accepted Original12 remains 2/12, not rerun. The synthetic trial and engineering checks do not establish general learned behavior. Private prompts, code, checkpoints, outputs and assets remain unpublished.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed paired-direction and balanced clause-kind results",
+          "url": "reports/newbrain-native-direction-balanced-review-2026-11-28.html#trials"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-direction-balanced-review-2026-11-28"
+    },
     {
       "id": "newbrain-native-width-qualification-review-2026-11-27",
       "title": "NewBrain wording and terminal-window trials fail; width corpus qualifies for preparation",
