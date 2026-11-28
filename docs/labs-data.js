@@ -25,6 +25,33 @@ window.KIRA_LABS_TIMELINE = {
   },
   "milestones": [
     {
+      "id": "newbrain-native-matched-wording-review-2026-11-28",
+      "title": "NewBrain matched wording fits improve some synthetic answers but fail qualification",
+      "date": "2026-11-28",
+      "date_basis": "November 28 ET reviewed aggregate executed CUDA trials, saved-output diagnosis and source-only preparation",
+      "status": "working",
+      "track": "Minds and learning",
+      "summary": "A subsequent matched wording comparison started both arms at the same saved step 288, used 96 logical cases in the same order, and completed 240 CUDA updates per arm to step 528. Starting, fixed and varied wording endpoints scored 1/48, 12/48 and 12/48 exact held supported answers; shared-fact scores were 0/24, 6/24 and 2/24, and new-fact scores 1/24, 6/24 and 10/24. First-window scores were 1/24, 1/24 and 6/24; last-window scores were 0/24, 11/24 and 6/24. Empty unsupported replies fell from 68/72 to 49/72 and 48/72; correct reasons were 19/72, 25/72 and 26/72. Earlier supported exact answers remained 0/60 and earlier absent exact 36/36 in all endpoints. Both historical vetoes failed (2/2 failures). Neither arm qualified. Two independent cold processes matched all 1,296 raw outputs and unchanged state descriptors.",
+      "body": [
+        "November 28 later review: a balanced clause-kind comparison completed 48 CUDA updates per arm. Both returned 0/48 supported exact answers; balanced versus ordinary loss produced 72/72 versus 67/72 empty unsupported replies, but only 12/72 versus 35/72 correct reasons and 2/120 versus 83/120 exact request positions. A compact-data candidate also completed 48 updates and scored 0/48 held supported answers. Its continuation reached 46/48 training supported answers after 240 further updates, but 0/48 fresh supported answers and 0/24 exact width pairs. Fresh unsupported empty replies remained 72/72, while correct zero-request reason and positions fell from 12/12 to 0/12.",
+        "A saved-output diagnostic replayed all 1,296 grades and independently checked 65,520 counterfactual substitutions. Varied wording gained seven and lost seven qualified held answers compared with fixed wording. Removing false request labels corrected 10/10 varied no-request errors; supplying the correct uncertain declaration width restored 14/14 varied uncertain abstentions. These are label-assisted decoder interventions, not learned gains; there were zero model forwards, tokenizer calls or optimizer updates.",
+        "A separate source-only proposal weights uncertain declaration-width supervision 15 times the known-width weight, reflecting the 180 definite and 12 uncertain declarations in the fitting roster. Seven mock tests passed. The proposed matched 240-update arms share the same step-528 start; 120 fresh held prompts and 24 context controls were reserved, with zero full-prompt collisions against 432 previous comparison inputs. Tokenizer qualification and numerical admission remain pending; zero tokenizer calls, model forwards or optimizer updates were performed for this proposal."
+      ],
+      "boundary": "Reviewed November 28, 2026 ET from committed aggregate synthetic summaries and evidence manifests, not an independent GPU rerun. The experiments failed their frozen gates; no checkpoint qualified or was adopted. Accepted Original12 remains 2/12, not rerun. Repeated exact output is not successful retention or general conversation. The synthetic evaluation is consumed. Private research files, inputs, outputs, checkpoints and assets remain unpublished.",
+      "image": {
+        "path": "assets/home-neural-highres-20261020.webp",
+        "alt": "Approved abstract neural research artwork",
+        "caption": "Concept artwork, not model output"
+      },
+      "sources": [
+        {
+          "label": "Reviewed matched wording and uncertain-width research",
+          "url": "reports/newbrain-native-matched-wording-review-2026-11-28.html#trials"
+        }
+      ],
+      "project_page": "newbrain.html#newbrain-native-matched-wording-review-2026-11-28"
+    },
+    {
       "id": "newbrain-native-direction-balanced-review-2026-11-28",
       "title": "NewBrain paired-direction trial rejected; balanced clause-loss engineering verified",
       "date": "2026-11-28",
